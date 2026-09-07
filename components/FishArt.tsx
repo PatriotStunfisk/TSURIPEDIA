@@ -1,3 +1,4 @@
+import s from './FishArt.module.css';
 type Props={slug:string;label?:string};
 
 const colors:Record<string,{body:string;dark:string;light:string;accent:string}>={
@@ -28,5 +29,5 @@ function FishShape({slug}:{slug:string}){
 }
 
 export default function FishArt({slug,label}:Props){
-  return <div className="fishArt" role="img" aria-label={label??slug}><svg viewBox="0 0 520 250" preserveAspectRatio="xMidYMid meet"><FishShape slug={slug}/></svg></div>;
+  return <div className={s.art} role="img" aria-label={label??slug}><svg viewBox="0 0 520 250" preserveAspectRatio="xMidYMid meet"><FishShape slug={slug}/></svg></div>;
 }
