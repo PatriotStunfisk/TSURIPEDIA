@@ -1,4 +1,63 @@
-import {notFound} from 'next/navigation';import Link from 'next/link';import FishViewer from '@/components/FishViewer';import {fish,getFish} from '@/lib/data';
+import {notFound} from 'next/navigation';
+import Link from 'next/link';
+import FishViewer from '@/components/FishViewer';
+import {fish,getFish} from '@/lib/data';
+import t from './tachiuo.module.css';
+
 export function generateStaticParams(){return fish.map(f=>({slug:f.slug}))}
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const f=getFish(slug);return {title:f?`${f.name}｜魚図鑑`:'魚図鑑',description:f?.desc}}
-export default async function Page({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const f=getFish(slug);if(!f)notFound();const tachiuo=f.slug==='tachiuo';return <div className="section pageTop"><div className="breadcrumb"><Link href="/">ホーム</Link> / <Link href="/fish">魚図鑑</Link> / {f.name}</div><section className="fishDetailHero"><div className="fishTitle"><span>FISH No.{String(fish.indexOf(f)+1).padStart(3,'0')}</span><h1>{f.name}</h1><p>{f.en}</p><i>{f.scientific}</i><div className="chips"><span>旬 {f.season}</span><span>{'★'.repeat(f.difficulty)}{'☆'.repeat(5-f.difficulty)}</span><span>⚠ {f.danger}</span></div></div>{tachiuo?<FishViewer/>:<div className="fallbackViewer"><div>🐟</div><small>3Dモデル準備中</small></div>}</section><section className="factsGrid"><article><span>サイズ</span><b>{f.size}</b></article><article><span>水深</span><b>{f.depth}</b></article><article><span>主なエリア</span><b>{f.areas.join('・')}</b></article><article><span>おすすめ</span><b>{f.beginner?'初心者にもおすすめ':'経験者向け'}</b></article></section><section className="detailGrid"><article><span>ABOUT</span><h2>{f.name}ってどんな魚？</h2><p>{f.desc}</p><h3>釣れる時期</h3><div className="months">{Array.from({length:12},(_,i)=>i+1).map(m=><b className={f.months.includes(m)?'on':''} key={m}>{m}月</b>)}</div></article><aside><span>HOW TO CATCH</span><h2>この魚を釣る</h2>{f.methods.map((m,i)=><Link href="/methods" className="methodLink" key={m}><strong>0{i+1}</strong><div><b>{m}</b><small>釣り方・仕掛けを見る</small></div><em>→</em></Link>)}<Link href="/gear" className="gearCta">必要な釣具をまとめて見る →</Link></aside></section><section className="nextActions"><div><span>NEXT STEP</span><h2>次は、ほんものを釣りに行こう。</h2></div><Link href="/spots">📍 釣れる場所を探す</Link><Link href="/gear">🎣 必要な釣具を見る</Link></section></div>}
+
+function TachiuoPage(){
+  const months=Array.from({length:12},(_,i)=>i+1);
+  return <div className={t.page}>
+    <section className={t.hero}>
+      <div className={t.crumb}><Link href="/">ホーム</Link>　›　<Link href="/fish">魚図鑑</Link>　›　タチウオ</div>
+      <div className={t.top}>
+        <aside className={t.summary}>
+          <h1>タチウオ</h1><div className={t.en}>Largehead hairtail</div>
+          <button className={t.sound}>🔊 魚の解説を聞く</button>
+          <div className={t.facts}>
+            <div className={t.row}><span>分類</span><b>タチウオ科 タチウオ属</b></div>
+            <div className={t.row}><span>学名</span><b><i>Trichiurus lepturus</i></b></div>
+            <div className={t.row}><span>別名</span><b>太刀魚</b></div>
+            <div className={t.row}><span>体長</span><b>50〜120cm</b></div>
+            <div className={t.row}><span>旬</span><b>8月〜12月</b></div>
+            <div className={t.row}><span>難易度</span><b className={t.stars}>★★★☆☆</b></div>
+            <div className={t.row}><span>危険度</span><b className={t.stars}>★★★☆☆</b></div>
+          </div>
+          <div className={t.tags}><span>食べて美味しい</span><span>大阪湾の人気魚</span><span>船釣り対応</span></div>
+        </aside>
+
+        <div className={t.stage}>
+          <div className={t.stageTabs}><span className={t.active}>◈ 3D表示</span><span>▧ 画像</span><span>◎ AR予定</span></div>
+          <div className={t.viewerWrap}><FishViewer/></div>
+          <div className={t.thumbs}><div className={`${t.thumb} ${t.active}`}>🐟</div><div className={t.thumb}>↔</div><div className={t.thumb}>↕</div><div className={t.thumb}>◉</div><div className={t.thumb}>⌁</div></div>
+        </div>
+
+        <div className={t.tools}><span>♡<small>お気に入り</small></span><span>🎣<small>釣った！</small></span><span>↗<small>シェア</small></span><span>▣<small>保存</small></span></div>
+      </div>
+
+      <div className={t.cards}>
+        <article className={t.card}><h3>▣ 特徴</h3><div className={t.feature}><p>タチウオは、銀色に輝く細長い体と鋭い歯をもつ海のハンターです。夜行性で、夕方から朝にかけて活発に捕食します。大阪湾では夏後半から冬にかけて特に人気が高く、テンヤ・ジギング・ウキ釣りなど幅広い釣り方で狙えます。</p><div className={t.dangerArt}></div></div></article>
+        <article className={t.card}><h3>🐟 生態</h3><div className={t.list}><div><span>生息域</span><b>沿岸〜沖合</b></div><div><span>水深</span><b>10〜100m</b></div><div><span>エサ</span><b>小魚・甲殻類</b></div><div><span>行動</span><b>夕方〜朝に活発</b></div><div><span>分布</span><b>日本各地</b></div></div></article>
+        <article className={t.card}><h3>🎣 釣り方</h3><div className={t.methods}><Link href="/methods">テンヤ釣り <span>›</span></Link><Link href="/methods">ジギング <span>›</span></Link><Link href="/methods">ウキ釣り <span>›</span></Link><Link href="/methods">引き釣り <span>›</span></Link></div></article>
+        <article className={t.card}><h3>🍽 食べ方</h3><div className={t.foodArt}></div><p>塩焼き、刺身、炙り、蒲焼き、天ぷらまで幅広く楽しめます。脂がのる秋〜冬は特におすすめです。</p></article>
+        <article className={t.card}><h3>◷ 釣れる時期</h3><div className={t.months}>{months.map(m=><span key={m} className={m>=8&&m<=12?t.on:''}>{m}月</span>)}</div></article>
+      </div>
+    </section>
+
+    <section className={t.cta}><div><h2>この魚を釣ってみよう！</h2><p>釣り場・釣り方・釣具をUOLINKでそのまま確認できます。</p></div><Link href="/spots">📍 おすすめの釣り場</Link><Link href="/gear">🧰 必要な釣具</Link><Link href="/methods">🎣 釣り方の詳細</Link><Link className={t.game} href="/game">🎮 ゲームで練習</Link></section>
+
+    <section className={t.lightSection}>
+      <h2>タチウオ釣りを、ここから始める。</h2>
+      <p>UOLINKでは魚の図鑑情報だけでなく、実際に釣るために必要な情報をまとめてつなげます。大阪湾のタチウオ釣りなら、時期・ポイント・テンヤの号数・タックル・釣り方まで順番に確認できるページへ育てていきます。</p>
+      <div className={t.seoGrid}><article className={t.article}><h3>初心者が最初に知っておきたいこと</h3><p>タチウオは歯が非常に鋭いので、魚をつかむときは素手で口元に触れないことが大切です。船テンヤでは船宿指定のオモリ号数を基本にし、周囲と重さを合わせることでオマツリを減らせます。釣れた魚はすぐ冷やし、持ち帰ったら塩焼き・炙り・蒲焼きなどで楽しめます。</p></article><aside className={t.side}><h3>次に見る</h3><Link href="/methods">タチウオテンヤの基本 <span>→</span></Link><Link href="/spots">大阪湾で狙える場所 <span>→</span></Link><Link href="/gear">おすすめタックル <span>→</span></Link><Link href="/game">TSURI QUEST <span>→</span></Link></aside></div>
+    </section>
+  </div>
+}
+
+export default async function Page({params}:{params:Promise<{slug:string}>}){
+  const {slug}=await params;const f=getFish(slug);if(!f)notFound();
+  if(slug==='tachiuo')return <TachiuoPage/>;
+  return <div className="section pageTop"><div className="breadcrumb"><Link href="/">ホーム</Link> / <Link href="/fish">魚図鑑</Link> / {f.name}</div><section className="fishDetailHero"><div className="fishTitle"><span>FISH No.{String(fish.indexOf(f)+1).padStart(3,'0')}</span><h1>{f.name}</h1><p>{f.en}</p><i>{f.scientific}</i><div className="chips"><span>旬 {f.season}</span><span>{'★'.repeat(f.difficulty)}{'☆'.repeat(5-f.difficulty)}</span><span>⚠ {f.danger}</span></div></div><div className="fallbackViewer"><div>🐟</div><small>3Dモデル準備中</small></div></section><section className="factsGrid"><article><span>サイズ</span><b>{f.size}</b></article><article><span>水深</span><b>{f.depth}</b></article><article><span>主なエリア</span><b>{f.areas.join('・')}</b></article><article><span>おすすめ</span><b>{f.beginner?'初心者にもおすすめ':'経験者向け'}</b></article></section><section className="detailGrid"><article><span>ABOUT</span><h2>{f.name}ってどんな魚？</h2><p>{f.desc}</p><h3>釣れる時期</h3><div className="months">{Array.from({length:12},(_,i)=>i+1).map(m=><b className={f.months.includes(m)?'on':''} key={m}>{m}月</b>)}</div></article><aside><span>HOW TO CATCH</span><h2>この魚を釣る</h2>{f.methods.map((m,i)=><Link href="/methods" className="methodLink" key={m}><strong>0{i+1}</strong><div><b>{m}</b><small>釣り方・仕掛けを見る</small></div><em>→</em></Link>)}<Link href="/gear" className="gearCta">必要な釣具をまとめて見る →</Link></aside></section><section className="nextActions"><div><span>NEXT STEP</span><h2>次は、ほんものを釣りに行こう。</h2></div><Link href="/spots">📍 釣れる場所を探す</Link><Link href="/gear">🎣 必要な釣具を見る</Link></section></div>
+}
