@@ -1,62 +1,45 @@
 import Link from 'next/link';
 import {fish,methods} from '@/lib/data';
+import FishArt from '@/components/FishArt';
+import {launchFishSlugs} from '@/lib/launch-fish';
 import s from './home.module.css';
 
 export default function Home(){
+  const featured=launchFishSlugs.map(slug=>fish.find(f=>f.slug===slug)!).filter(Boolean);
   return <div className={s.home}>
     <section className={s.hero}>
-      <div>
-        <div className={s.kicker}>🐟 3D魚図鑑 × 釣り方 × スポット × 釣具</div>
-        <h1>釣りたい魚が、<br/><em>見つかる。わかる。</em></h1>
-        <p className={s.lead}>UOLINKは、魚を調べるだけで終わらない釣り百科事典。魚の特徴から釣り方、狙える場所、必要な釣具までをひとつにつなげます。</p>
-        <div className={s.actions}>
-          <Link className={s.primary} href="/fish">🐟 魚図鑑から探す</Link>
-          <Link className={s.secondary} href="/spots">📍 釣れる場所を探す</Link>
-        </div>
-        <div className={s.proof}><span>✓ 初心者にもわかりやすい</span><span>✓ 親子で使える</span><span>✓ 船釣りまで対応</span></div>
+      <div className={s.heroShade}></div>
+      <div className={s.heroContent}>
+        <div className={s.kicker}>UOLINK — 魚から、釣りへつながる。</div>
+        <h1>釣りが、もっと<br/>好きになる。</h1>
+        <p className={s.heroSub}>魚を知り、釣り方を学び、フィールドへ。</p>
+        <p className={s.lead}>UOLINKは、魚図鑑・釣り方・釣り場・釣具をひとつにつなぐ釣りの総合ガイドです。</p>
+        <div className={s.actions}><Link className={s.primary} href="/fish">魚を探す</Link><Link className={s.secondary} href="/spots">釣り場を探す</Link></div>
       </div>
-      <Link href="/fish/tachiuo" className={s.visual} aria-label="タチウオの魚図鑑を見る">
-        <div className={s.modelTag}>3D MODEL対応</div>
-        <div className={s.fish}><div className={s.body}></div><div className={s.tail}></div></div>
-        <div className={s.fishLabel}><strong>タチウオ</strong><small>Largehead hairtail</small></div>
-        <div className={s.fishFacts}><span>旬 8〜12月</span><span>大阪湾</span><span>テンヤ</span></div>
-      </Link>
+      <div className={s.sun}></div><div className={s.horizon}></div><div className={s.rod}></div>
     </section>
 
     <section className={s.navGrid}>
-      <Link className={s.navCard} href="/fish"><div className={s.navIcon}>🐟</div><b>魚から探す</b><span>旬・サイズ・難易度から</span></Link>
-      <Link className={s.navCard} href="/methods"><div className={s.navIcon}>🎣</div><b>釣り方から探す</b><span>サビキ・テンヤ・タイラバ</span></Link>
-      <Link className={s.navCard} href="/spots"><div className={s.navIcon}>📍</div><b>場所から探す</b><span>魚種・設備・家族向け情報</span></Link>
-      <Link className={s.navCard} href="/gear"><div className={s.navIcon}>🧰</div><b>釣具から探す</b><span>ロッド・リール・仕掛け</span></Link>
+      <Link className={s.navCard} href="/fish"><div className={s.navIcon}>◉</div><b>魚図鑑</b><span>旬・サイズ・見分け方まで</span></Link>
+      <Link className={s.navCard} href="/methods"><div className={s.navIcon}>⌁</div><b>釣り方</b><span>仕掛け・手順・コツを解説</span></Link>
+      <Link className={s.navCard} href="/spots"><div className={s.navIcon}>⌖</div><b>釣りスポット</b><span>魚種・設備・エリアから探す</span></Link>
+      <Link className={s.navCard} href="/gear"><div className={s.navIcon}>▣</div><b>釣具</b><span>ロッド・リール・仕掛け</span></Link>
     </section>
 
     <div className={s.band}>
       <section className={s.section}>
-        <div className={s.head}><div><div className={s.eyebrow}>POPULAR FISH</div><h2>まずは、この魚から。</h2></div><Link href="/fish">魚図鑑をすべて見る →</Link></div>
-        <div className={s.fishGrid}>{fish.slice(0,4).map(f=><Link key={f.slug} className={s.fishCard} href={`/fish/${f.slug}`}><div className={s.thumb} style={{'--tone':f.accent} as React.CSSProperties}><div className={s.thumbIcon}>🐟</div><span className={s.season}>{f.season}</span></div><div className={s.fishInfo}><h3>{f.name}</h3><p>{f.en}</p><div className={s.chips}><span>難易度 {'★'.repeat(f.difficulty)}</span><span>{f.methods[0]}</span><span>{f.areas[0]}</span></div></div></Link>)}</div>
+        <div className={s.head}><div><div className={s.eyebrow}>FEATURED FISH</div><h2>人気の魚図鑑</h2><p className={s.sectionLead}>まずはこの7魚種から、内容と画像を完成させています。</p></div><Link href="/fish">すべての魚図鑑を見る →</Link></div>
+        <div className={s.fishGrid}>{featured.map(f=><Link key={f.slug} className={s.fishCard} href={`/fish/${f.slug}`}><div className={s.thumb} style={{'--tone':f.accent} as React.CSSProperties}><FishArt slug={f.slug} label={f.name}/><span className={s.season}>{f.season}</span></div><div className={s.fishInfo}><h3>{f.name}</h3><p>{f.en}</p><div className={s.chips}><span>{f.methods[0]}</span><span>{f.areas[0]}</span></div></div></Link>)}</div>
       </section>
     </div>
 
     <section className={`${s.section} ${s.flow}`}>
-      <div className={s.flowIntro}><div className={s.eyebrow}>ONE CONNECTED GUIDE</div><h2>「魚を知る」から<br/>「釣りに行く」まで。</h2><p>ページ同士をバラバラにせず、ひとつの魚から必要な情報へ順番につながる設計にします。</p></div>
-      <div className={s.steps}>
-        <Link className={s.step} href="/fish"><span className={s.stepNo}>01</span><div><b>魚を知る</b><p>旬・生態・サイズ・危険ポイント</p></div><span className={s.stepArrow}>→</span></Link>
-        <Link className={s.step} href="/methods"><span className={s.stepNo}>02</span><div><b>釣り方を決める</b><p>仕掛け・誘い方・難易度を確認</p></div><span className={s.stepArrow}>→</span></Link>
-        <Link className={s.step} href="/spots"><span className={s.stepNo}>03</span><div><b>釣れる場所を探す</b><p>エリア・設備・家族向け情報</p></div><span className={s.stepArrow}>→</span></Link>
-        <Link className={s.step} href="/gear"><span className={s.stepNo}>04</span><div><b>必要な釣具をそろえる</b><p>ロッド・リール・ライン・仕掛け</p></div><span className={s.stepArrow}>→</span></Link>
-      </div>
+      <div className={s.flowIntro}><div className={s.eyebrow}>ONE CONNECTED GUIDE</div><h2>魚を調べて、<br/>そのまま釣りへ。</h2><p>図鑑で終わらず、魚ごとに釣り方・ポイント・必要な道具までつなげます。</p></div>
+      <div className={s.steps}><Link className={s.step} href="/fish"><span className={s.stepNo}>01</span><div><b>魚を知る</b><p>見分け方・生態・旬・食べ方</p></div><span className={s.stepArrow}>→</span></Link><Link className={s.step} href="/methods"><span className={s.stepNo}>02</span><div><b>釣り方を選ぶ</b><p>仕掛け・タックル・基本手順</p></div><span className={s.stepArrow}>→</span></Link><Link className={s.step} href="/spots"><span className={s.stepNo}>03</span><div><b>釣り場を探す</b><p>エリア・魚種・設備から検索</p></div><span className={s.stepArrow}>→</span></Link><Link className={s.step} href="/gear"><span className={s.stepNo}>04</span><div><b>釣具をそろえる</b><p>必要な道具を迷わず選ぶ</p></div><span className={s.stepArrow}>→</span></Link></div>
     </section>
 
-    <div className={s.dark}>
-      <section className={s.section}>
-        <div className={s.head}><div><div className={s.eyebrow}>START FISHING</div><h2>初心者でも始めやすい釣り</h2></div><Link href="/methods">釣り方をすべて見る →</Link></div>
-        <div className={s.methodGrid}>{methods.slice(0,3).map(m=><Link href="/methods" className={s.method} key={m.slug}><div className={s.methodIcon}>{m.emoji}</div><small>{m.level} ・ {m.place}</small><h3>{m.name}</h3><p>{m.desc}</p><b>{m.target}を狙う →</b></Link>)}</div>
-      </section>
-    </div>
+    <div className={s.dark}><section className={s.section}><div className={s.head}><div><div className={s.eyebrow}>START FISHING</div><h2>まず覚えたい釣り方</h2></div><Link href="/methods">釣り方をすべて見る →</Link></div><div className={s.methodGrid}>{methods.slice(0,3).map(m=><Link href={`/methods/${m.slug}`} className={s.method} key={m.slug}><small>{m.level} ・ {m.place}</small><h3>{m.name}</h3><p>{m.desc}</p><b>{m.target}を狙う →</b></Link>)}</div></section></div>
 
-    <section className={s.game}>
-      <div className={s.gameCopy}><div className={s.eyebrow}>FOR KIDS</div><h2>遊んで覚える、<br/>もうひとつの魚図鑑。</h2><p>子ども向けのUOLINK QUESTでは、ゲームで魚を釣りながら名前や特徴を覚えられるようにします。将来は本編の魚図鑑と連動予定です。</p><div className={s.ctaRow}><Link className={s.primary} href="/game">🎮 UOLINK QUESTを遊ぶ</Link><Link className={s.secondary} href="/fish">📘 魚図鑑を見る</Link></div></div>
-      <div className={s.gameBox}><div className={s.gameRod}>🎣</div><div className={s.gameFish}>🐟</div><div className={s.score}>アジをつった！ +20pt</div></div>
-    </section>
+    <section className={s.game}><div className={s.gameCopy}><div className={s.eyebrow}>FOR KIDS</div><h2>遊んで覚える、<br/>UOLINK QUEST。</h2><p>ゲームは図鑑とは少し違う、デフォルメした魚で気軽に遊べる方向にします。リアルな魚体は図鑑、かわいさはゲームに分けます。</p><div className={s.ctaRow}><Link className={s.primary} href="/game">ゲームで遊ぶ</Link><Link className={s.secondary} href="/fish">魚図鑑を見る</Link></div></div><div className={s.gameBox}><div className={s.gameWater}></div><div className={s.gameCopyMark}>UOLINK<br/><b>QUEST</b></div><div className={s.score}>つって、あつめて、魚を知ろう。</div></div></section>
   </div>
 }
