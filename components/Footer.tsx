@@ -1,2 +1,2 @@
 import Link from 'next/link';
-export default function Footer(){return <footer className="footer"><div><div className="footerBrand">TSURI<span>PEDIA</span></div><p>魚を知る。釣り方を学ぶ。釣りに行く。</p></div><div className="footerLinks"><Link href="/fish">魚図鑑</Link><Link href="/spots">釣りスポット</Link><Link href="/gear">釣具</Link><Link href="/admin">管理</Link></div><div className="copyright">© 2026 TSURIPEDIA</div></footer>}
+export default function Footer(){return <footer className="footer"><div><div className="footerBrand">UO<span>LINK</span></div><p>魚を知る。釣り方がわかる。釣りに行ける。</p></div><div className="footerLinks"><Link href="/fish">魚図鑑</Link><Link href="/spots">釣りスポット</Link><Link href="/gear">釣具</Link><Link href="/game">ゲーム</Link></div><div className="copyright">© 2026 UOLINK</div></footer>}
