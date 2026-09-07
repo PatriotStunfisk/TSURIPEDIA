@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import {fish,methods} from '@/lib/data';
-import FishArt from '@/components/FishArt';
+import FishVisual from '@/components/FishVisual';
 import {launchFishSlugs} from '@/lib/launch-fish';
 import s from './home.module.css';
 
@@ -16,7 +16,6 @@ export default function Home(){
         <p className={s.lead}>UOLINKは、魚図鑑・釣り方・釣り場・釣具をひとつにつなぐ釣りの総合ガイドです。</p>
         <div className={s.actions}><Link className={s.primary} href="/fish">魚を探す</Link><Link className={s.secondary} href="/spots">釣り場を探す</Link></div>
       </div>
-      <div className={s.sun}></div><div className={s.horizon}></div><div className={s.rod}></div>
     </section>
 
     <section className={s.navGrid}>
@@ -29,7 +28,7 @@ export default function Home(){
     <div className={s.band}>
       <section className={s.section}>
         <div className={s.head}><div><div className={s.eyebrow}>FEATURED FISH</div><h2>人気の魚図鑑</h2><p className={s.sectionLead}>まずはこの7魚種から、内容と画像を完成させています。</p></div><Link href="/fish">すべての魚図鑑を見る →</Link></div>
-        <div className={s.fishGrid}>{featured.map(f=><Link key={f.slug} className={s.fishCard} href={`/fish/${f.slug}`}><div className={s.thumb} style={{'--tone':f.accent} as React.CSSProperties}><FishArt slug={f.slug} label={f.name}/><span className={s.season}>{f.season}</span></div><div className={s.fishInfo}><h3>{f.name}</h3><p>{f.en}</p><div className={s.chips}><span>{f.methods[0]}</span><span>{f.areas[0]}</span></div></div></Link>)}</div>
+        <div className={s.fishGrid}>{featured.map(f=><Link key={f.slug} className={s.fishCard} href={`/fish/${f.slug}`}><div className={s.thumb} style={{'--tone':f.accent} as React.CSSProperties}><FishVisual slug={f.slug} name={f.name}/><span className={s.season}>{f.season}</span></div><div className={s.fishInfo}><h3>{f.name}</h3><p>{f.en}</p><div className={s.chips}><span>{f.methods[0]}</span><span>{f.areas[0]}</span></div></div></Link>)}</div>
       </section>
     </div>
 
