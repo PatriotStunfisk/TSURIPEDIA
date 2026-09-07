@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function Header(){return <header className="header"><Link className="brand" href="/"><span>TSURI</span><b>PEDIA</b><small>釣りが、もっと好きになる。</small></Link><nav><Link href="/fish">魚図鑑</Link><Link href="/methods">釣り方</Link><Link href="/spots">釣りスポット</Link><Link href="/gear">釣具</Link><Link href="/game">ゲーム</Link></nav><div className="headerActions"><Link className="searchBtn" href="/fish">⌕ 検索</Link></div></header>}
