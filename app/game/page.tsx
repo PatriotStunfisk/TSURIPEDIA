@@ -1,0 +1,1 @@
+import Game from '@/components/Game';export const metadata={title:'TSURI QUEST｜釣りゲーム'};export default function Page(){return <div className="section pageTop"><div className="pageHero center"><span>TSURI QUEST mini</span><h1>つって、あつめて、<br/>魚を知ろう。</h1><p>子ども向けの簡単な釣りシミュレーション。</p></div><Game/></div>}
