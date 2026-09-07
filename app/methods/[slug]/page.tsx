@@ -1,0 +1,19 @@
+import Link from 'next/link';
+import {notFound} from 'next/navigation';
+import {methodDetails} from '@/lib/method-details';
+
+export function generateStaticParams(){return Object.keys(methodDetails).map(slug=>({slug}))}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const m=methodDetails[slug];return {title:m?`${m.name}｜釣り方`:'釣り方',description:m?.overview}}
+
+export default async function Page({params}:{params:Promise<{slug:string}>}){
+ const {slug}=await params;const m=methodDetails[slug];if(!m)notFound();
+ return <div className="section pageTop">
+  <div className="breadcrumb"><Link href="/">ホーム</Link> / <Link href="/methods">釣り方</Link> / {m.name}</div>
+  <div className="pageHero"><span>FISHING METHOD</span><h1>{m.name}</h1><p>{m.subtitle}</p></div>
+  <section className="factsGrid"><article><span>対象魚</span><b>{m.target.join('・')}</b></article><article><span>シーズン</span><b>{m.season}</b></article><article><span>場所</span><b>{m.places.join('・')}</b></article><article><span>難易度</span><b>{'★'.repeat(m.difficulty)}{'☆'.repeat(5-m.difficulty)}</b></article></section>
+  <section className="detailGrid"><article><span>OVERVIEW</span><h2>{m.name}とは？</h2><p>{m.overview}</p><h3>タックル</h3><p><b>ロッド：</b>{m.rod}</p><p><b>リール：</b>{m.reel}</p><p><b>ライン：</b>{m.line}</p><p><b>リーダー：</b>{m.leader}</p></article><aside><span>RIG & BAIT</span><h2>仕掛けとエサ</h2><p><b>仕掛け：</b>{m.rig}</p><p><b>エサ：</b>{m.bait}</p><Link href="/gear" className="gearCta">この釣りの釣具を見る →</Link></aside></section>
+  <section className="detailGrid"><article><span>STEP BY STEP</span><h2>基本の手順</h2>{m.steps.map((x,i)=><div className="methodLink" key={x}><strong>{String(i+1).padStart(2,'0')}</strong><div><b>{x}</b></div></div>)}</article><aside><span>KEY POINTS</span><h2>釣果を伸ばすコツ</h2>{m.tips.map(x=><p key={x}>✓ {x}</p>)}</aside></section>
+  <section className="detailGrid"><article><span>COMMON MISTAKES</span><h2>よくある失敗</h2>{m.mistakes.map(x=><p key={x}>・{x}</p>)}</article><aside><span>SAFETY</span><h2>安全ポイント</h2>{m.safety.map(x=><p key={x}>⚠ {x}</p>)}</aside></section>
+  <section className="detailGrid"><article><span>CHECKLIST</span><h2>持ち物チェック</h2><div className="chips">{m.checklist.map(x=><span key={x}>{x}</span>)}</div></article><aside><span>NEXT</span><h2>次に見る</h2><Link href="/fish" className="methodLink"><div><b>狙う魚の図鑑</b><small>生態・旬・食べ方を見る</small></div><em>→</em></Link><Link href="/spots" className="methodLink"><div><b>釣れる場所</b><small>エリア・設備を見る</small></div><em>→</em></Link></aside></section>
+ </div>
+}
