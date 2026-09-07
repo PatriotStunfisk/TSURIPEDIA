@@ -8,7 +8,7 @@ export default function Home(){
       <div>
         <div className={s.kicker}>🐟 3D魚図鑑 × 釣り方 × スポット × 釣具</div>
         <h1>釣りたい魚が、<br/><em>見つかる。わかる。</em></h1>
-        <p className={s.lead}>TSURIPEDIAは、魚を調べるだけで終わらない釣り百科事典。魚の特徴から釣り方、狙える場所、必要な釣具までをひとつにつなげます。</p>
+        <p className={s.lead}>UOLINKは、魚を調べるだけで終わらない釣り百科事典。魚の特徴から釣り方、狙える場所、必要な釣具までをひとつにつなげます。</p>
         <div className={s.actions}>
           <Link className={s.primary} href="/fish">🐟 魚図鑑から探す</Link>
           <Link className={s.secondary} href="/spots">📍 釣れる場所を探す</Link>
@@ -55,7 +55,7 @@ export default function Home(){
     </div>
 
     <section className={s.game}>
-      <div className={s.gameCopy}><div className={s.eyebrow}>FOR KIDS</div><h2>遊んで覚える、<br/>もうひとつの魚図鑑。</h2><p>子ども向けのTSURI QUESTでは、ゲームで魚を釣りながら名前や特徴を覚えられるようにします。将来は本編の魚図鑑と連動予定です。</p><div className={s.ctaRow}><Link className={s.primary} href="/game">🎮 TSURI QUESTを遊ぶ</Link><Link className={s.secondary} href="/fish">📘 魚図鑑を見る</Link></div></div>
+      <div className={s.gameCopy}><div className={s.eyebrow}>FOR KIDS</div><h2>遊んで覚える、<br/>もうひとつの魚図鑑。</h2><p>子ども向けのUOLINK QUESTでは、ゲームで魚を釣りながら名前や特徴を覚えられるようにします。将来は本編の魚図鑑と連動予定です。</p><div className={s.ctaRow}><Link className={s.primary} href="/game">🎮 UOLINK QUESTを遊ぶ</Link><Link className={s.secondary} href="/fish">📘 魚図鑑を見る</Link></div></div>
       <div className={s.gameBox}><div className={s.gameRod}>🎣</div><div className={s.gameFish}>🐟</div><div className={s.score}>アジをつった！ +20pt</div></div>
     </section>
   </div>
