@@ -1,8 +1,8 @@
 import {notFound} from 'next/navigation';
 import Link from 'next/link';
-import FishViewer from '@/components/FishViewer';
 import FishArt from '@/components/FishArt';
 import LaunchFishExtras from '@/components/LaunchFishExtras';
+import TachiuoMedia from '@/components/TachiuoMedia';
 import {fish,getFish} from '@/lib/data';
 import {fishDetails} from '@/lib/fish-details';
 import t from './tachiuo.module.css';
@@ -15,7 +15,7 @@ function TachiuoPage(){
  return <div className={t.page}><section className={t.hero}>
   <div className={t.crumb}><Link href="/">ホーム</Link>　›　<Link href="/fish">魚図鑑</Link>　›　タチウオ</div>
   <div className={t.top}><aside className={t.summary}><h1>タチウオ</h1><div className={t.en}>Largehead hairtail</div><button className={t.sound}>🔊 魚の解説を聞く</button><div className={t.facts}><div className={t.row}><span>分類</span><b>{d.family} {d.genus}</b></div><div className={t.row}><span>学名</span><b><i>{f.scientific}</i></b></div><div className={t.row}><span>別名</span><b>{d.aliases.join('・')}</b></div><div className={t.row}><span>体長</span><b>{f.size}</b></div><div className={t.row}><span>旬</span><b>{f.season}</b></div><div className={t.row}><span>難易度</span><b className={t.stars}>★★★☆☆</b></div><div className={t.row}><span>危険度</span><b className={t.stars}>★★★☆☆</b></div></div><div className={t.tags}><span>食べて美味しい</span><span>大阪湾の人気魚</span><span>船釣り対応</span></div></aside>
-  <div className={t.stage}><div className={t.stageTabs}><span className={t.active}>◈ 3D表示</span><span>▧ 画像</span><span>◎ AR予定</span></div><div className={t.viewerWrap}><FishViewer/></div><div className={t.thumbs}><div className={`${t.thumb} ${t.active}`}>🐟</div><div className={t.thumb}>↔</div><div className={t.thumb}>↕</div><div className={t.thumb}>◉</div><div className={t.thumb}>⌁</div></div></div><div className={t.tools}><span>♡<small>お気に入り</small></span><span>🎣<small>釣った！</small></span><span>↗<small>シェア</small></span><span>▣<small>保存</small></span></div></div>
+  <TachiuoMedia/><div className={t.tools}><span>♡<small>お気に入り</small></span><span>🎣<small>釣った！</small></span><span>↗<small>シェア</small></span><span>▣<small>保存</small></span></div></div>
   <div className={t.cards}><article className={t.card}><h3>▣ 特徴</h3><div className={t.feature}><p>{f.desc} {d.body}</p><div className={t.dangerArt}></div></div></article><article className={t.card}><h3>🐟 生態</h3><div className={t.list}><div><span>生息域</span><b>{d.habitat}</b></div><div><span>水深</span><b>{f.depth}</b></div><div><span>エサ</span><b>{d.diet}</b></div><div><span>行動</span><b>{d.behavior}</b></div><div><span>寿命</span><b>{d.lifespan}</b></div></div></article><article className={t.card}><h3>🎣 釣り方</h3><div className={t.methods}><Link href="/methods/tachiuo-tenya">テンヤ釣り <span>›</span></Link><Link href="/methods">ジギング <span>›</span></Link><Link href="/methods">ウキ釣り <span>›</span></Link><Link href="/methods">引き釣り <span>›</span></Link></div></article><article className={t.card}><h3>🍽 食べ方</h3><div className={t.foodArt}></div><p>{d.taste} {d.cooking.join('・')}</p></article><article className={t.card}><h3>◷ 釣れる時期</h3><div className={t.months}>{months.map(m=><span key={m} className={f.months.includes(m)?t.on:''}>{m}月</span>)}</div></article></div>
  </section><section className={t.cta}><div><h2>この魚を釣ってみよう！</h2><p>釣り場・釣り方・釣具をUOLINKでそのまま確認できます。</p></div><Link href="/spots">📍 おすすめの釣り場</Link><Link href="/gear">🧰 必要な釣具</Link><Link href="/methods/tachiuo-tenya">🎣 テンヤの詳細</Link><Link className={t.game} href="/game">🎮 ゲームで練習</Link></section><section className={t.lightSection}><LaunchFishExtras slug="tachiuo" name="タチウオ"/></section></div>
 }
