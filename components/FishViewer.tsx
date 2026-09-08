@@ -1,80 +1,65 @@
 'use client';
-import {useEffect,useRef,useState} from 'react';
+import {useEffect,useRef} from 'react';
 import * as THREE from 'three';
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 export default function FishViewer(){
   const ref=useRef<HTMLDivElement>(null);
-  const [mode,setMode]=useState<'fallback'|'glb'>('fallback');
 
   useEffect(()=>{
     const el=ref.current;if(!el)return;
     const scene=new THREE.Scene();
-    const camera=new THREE.PerspectiveCamera(34,Math.max(el.clientWidth,1)/Math.max(el.clientHeight,1),.1,100);
-    camera.position.set(0,.05,7.3);
+    const camera=new THREE.PerspectiveCamera(34,1,.1,100);
+    camera.position.set(0,.12,7.2);
     const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
     renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
-    renderer.setSize(Math.max(el.clientWidth,1),Math.max(el.clientHeight,1));
     renderer.outputColorSpace=THREE.SRGBColorSpace;
     renderer.toneMapping=THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure=1.35;
-    el.prepend(renderer.domElement);
+    renderer.domElement.style.width='100%';
+    renderer.domElement.style.height='100%';
+    renderer.domElement.style.display='block';
+    el.appendChild(renderer.domElement);
 
-    scene.add(new THREE.HemisphereLight(0xe8f8ff,0x0c2432,4));
+    scene.add(new THREE.HemisphereLight(0xeaf8ff,0x071a28,3.6));
     const key=new THREE.DirectionalLight(0xffffff,5);key.position.set(4,5,6);scene.add(key);
-    const rim=new THREE.DirectionalLight(0x55d8ff,3.5);rim.position.set(-4,2,-4);scene.add(rim);
-    const fill=new THREE.DirectionalLight(0x9bdcff,2);fill.position.set(0,-3,5);scene.add(fill);
+    const rim=new THREE.DirectionalLight(0x4ad8ff,3.4);rim.position.set(-4,2,-4);scene.add(rim);
+    const fill=new THREE.DirectionalLight(0x8fdfff,1.8);fill.position.set(0,-3,4);scene.add(fill);
 
-    const group=new THREE.Group();scene.add(group);
+    const fish=new THREE.Group();scene.add(fish);
+    const bodyMat=new THREE.MeshPhysicalMaterial({color:0xdde7eb,metalness:.78,roughness:.2,clearcoat:.8,clearcoatRoughness:.14});
+    const darkMat=new THREE.MeshStandardMaterial({color:0x556b76,metalness:.45,roughness:.3});
+    const finMat=new THREE.MeshStandardMaterial({color:0x829daa,transparent:true,opacity:.72,side:THREE.DoubleSide});
 
-    const length=5.7,seg=120,rings=28,verts:number[]=[],idx:number[]=[];
-    for(let i=0;i<=seg;i++){
-      const q=i/seg,x=(q-.5)*length;
-      const taper=Math.pow(Math.sin(Math.PI*q),.42);
-      const belly=.27*taper*(1-.05*q);
-      const width=.075*taper;
-      for(let j=0;j<rings;j++){
-        const a=j/rings*Math.PI*2;
-        verts.push(x,Math.cos(a)*belly,Math.sin(a)*width);
-      }
-    }
-    for(let i=0;i<seg;i++)for(let j=0;j<rings;j++){
-      const a=i*rings+j,b=i*rings+(j+1)%rings,c=(i+1)*rings+(j+1)%rings,d=(i+1)*rings+j;
-      idx.push(a,b,d,b,c,d);
-    }
-    const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.Float32BufferAttribute(verts,3));geo.setIndex(idx);geo.computeVertexNormals();
-    const silver=new THREE.MeshPhysicalMaterial({color:0xd8e3e8,metalness:.82,roughness:.19,clearcoat:.65,clearcoatRoughness:.16});
-    const body=new THREE.Mesh(geo,silver);group.add(body);
-    const head=new THREE.Mesh(new THREE.ConeGeometry(.34,.72,5),silver);head.rotation.z=Math.PI/2;head.scale.set(1,.84,.44);head.position.x=-3.02;group.add(head);
-    const eyeMat=new THREE.MeshPhysicalMaterial({color:0x020407,roughness:.05,clearcoat:1});
-    const eye=new THREE.Mesh(new THREE.SphereGeometry(.095,24,24),eyeMat);eye.position.set(-3.18,.12,.105);group.add(eye);
-    const finMat=new THREE.MeshStandardMaterial({color:0x9ab7c5,side:THREE.DoubleSide,transparent:true,opacity:.7});
-    const finShape=new THREE.Shape();finShape.moveTo(-2.75,.22);for(let i=0;i<=26;i++){const q=i/26;finShape.lineTo(-2.75+5.15*q,.37-.09*q+.035*Math.sin(q*Math.PI));}finShape.lineTo(2.4,.18);finShape.lineTo(-2.75,.18);
-    const finGeo=new THREE.ShapeGeometry(finShape);group.add(new THREE.Mesh(finGeo,finMat));
-    setMode('fallback');
+    const curve=new THREE.CatmullRomCurve3([
+      new THREE.Vector3(-2.9,.02,0),new THREE.Vector3(-1.9,.08,.02),new THREE.Vector3(-.8,.03,0),new THREE.Vector3(.5,-.02,.02),new THREE.Vector3(1.65,-.08,0),new THREE.Vector3(2.55,-.18,-.04),new THREE.Vector3(2.95,-.55,-.12)
+    ]);
+    const tube=new THREE.TubeGeometry(curve,160,.18,24,false);
+    const body=new THREE.Mesh(tube,bodyMat);body.scale.y=1.65;body.scale.z=.58;fish.add(body);
 
-    const loader=new GLTFLoader();
-    loader.load('/models/tachiuo.glb',gltf=>{
-      group.clear();
-      const model=gltf.scene;
-      const box=new THREE.Box3().setFromObject(model);const size=new THREE.Vector3();box.getSize(size);const center=new THREE.Vector3();box.getCenter(center);
-      model.position.sub(center);
-      const longest=Math.max(size.x,size.y,size.z)||1;model.scale.setScalar(5.3/longest);
-      const scaledBox=new THREE.Box3().setFromObject(model);const scaledSize=new THREE.Vector3();scaledBox.getSize(scaledSize);
-      if(scaledSize.y>scaledSize.x)model.rotation.z=-Math.PI/2;
-      model.traverse(obj=>{if(obj instanceof THREE.Mesh){const mats=Array.isArray(obj.material)?obj.material:[obj.material];mats.forEach(m=>{if('roughness' in m)(m as THREE.MeshStandardMaterial).roughness=Math.max(.22,(m as THREE.MeshStandardMaterial).roughness??.5);});}});
-      group.add(model);setMode('glb');
-    },undefined,()=>{});
+    const headGeo=new THREE.SphereGeometry(.42,36,24);const head=new THREE.Mesh(headGeo,bodyMat);head.scale.set(1.35,.72,.42);head.position.set(-3.02,.05,0);fish.add(head);
+    const snout=new THREE.Mesh(new THREE.ConeGeometry(.19,.5,5),bodyMat);snout.rotation.z=Math.PI/2;snout.position.set(-3.42,.03,0);snout.scale.z=.55;fish.add(snout);
+    const eye=new THREE.Mesh(new THREE.SphereGeometry(.09,24,24),new THREE.MeshPhysicalMaterial({color:0x020407,roughness:.03,clearcoat:1}));eye.position.set(-3.18,.16,.13);fish.add(eye);
+    const eyeRing=new THREE.Mesh(new THREE.TorusGeometry(.105,.018,12,30),darkMat);eyeRing.position.set(-3.18,.16,.135);eyeRing.rotation.y=Math.PI/2;fish.add(eyeRing);
 
-    let down=false,lx=0,ly=0,rx=.02,ry=-.12,targetX=rx,targetY=ry;
-    const pd=(e:PointerEvent)=>{down=true;lx=e.clientX;ly=e.clientY;renderer.domElement.setPointerCapture?.(e.pointerId)};
-    const pm=(e:PointerEvent)=>{if(!down)return;targetY+=(e.clientX-lx)*.009;targetX+=(e.clientY-ly)*.005;targetX=Math.max(-.7,Math.min(.7,targetX));lx=e.clientX;ly=e.clientY};
-    const pu=()=>{down=false};
-    renderer.domElement.addEventListener('pointerdown',pd);window.addEventListener('pointermove',pm);window.addEventListener('pointerup',pu);
-    let raf=0;const loop=()=>{ry+=(targetY-ry)*.09;rx+=(targetX-rx)*.09;group.rotation.y=ry;group.rotation.x=rx;renderer.render(scene,camera);raf=requestAnimationFrame(loop)};loop();
-    const resize=()=>{const w=Math.max(el.clientWidth,1),h=Math.max(el.clientHeight,1);camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h)};window.addEventListener('resize',resize);
-    return()=>{cancelAnimationFrame(raf);window.removeEventListener('resize',resize);window.removeEventListener('pointermove',pm);window.removeEventListener('pointerup',pu);renderer.dispose();el.querySelector('canvas')?.remove()};
+    const dorsalShape=new THREE.Shape();
+    dorsalShape.moveTo(-2.72,.27);dorsalShape.bezierCurveTo(-1.4,.55,.5,.48,2.25,.14);dorsalShape.lineTo(2.34,.08);dorsalShape.bezierCurveTo(.6,.22,-1.4,.25,-2.72,.20);dorsalShape.closePath();
+    const dorsal=new THREE.Mesh(new THREE.ShapeGeometry(dorsalShape),finMat);dorsal.position.z=-.01;fish.add(dorsal);
+    const tail=new THREE.Mesh(new THREE.PlaneGeometry(.55,.18),finMat);tail.position.set(2.96,-.55,-.12);tail.rotation.z=-.35;fish.add(tail);
+
+    const mouth=new THREE.Mesh(new THREE.BoxGeometry(.36,.025,.17),darkMat);mouth.position.set(-3.40,-.07,.02);mouth.rotation.z=-.06;fish.add(mouth);
+
+    let down=false,lastX=0,lastY=0,targetY=-.1,targetX=.03,rotY=-.1,rotX=.03;
+    const downFn=(e:PointerEvent)=>{down=true;lastX=e.clientX;lastY=e.clientY;renderer.domElement.setPointerCapture?.(e.pointerId)};
+    const moveFn=(e:PointerEvent)=>{if(!down)return;targetY+=(e.clientX-lastX)*.009;targetX+=(e.clientY-lastY)*.005;targetX=Math.max(-.65,Math.min(.65,targetX));lastX=e.clientX;lastY=e.clientY};
+    const upFn=()=>{down=false};
+    renderer.domElement.addEventListener('pointerdown',downFn);window.addEventListener('pointermove',moveFn);window.addEventListener('pointerup',upFn);
+
+    const resize=()=>{const w=Math.max(el.clientWidth,320),h=Math.max(el.clientHeight,280);camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h,false)};
+    const ro=new ResizeObserver(resize);ro.observe(el);resize();
+    let raf=0;const tick=()=>{rotY+=(targetY-rotY)*.08;rotX+=(targetX-rotX)*.08;fish.rotation.y=rotY;fish.rotation.x=rotX;renderer.render(scene,camera);raf=requestAnimationFrame(tick)};tick();
+
+    return()=>{cancelAnimationFrame(raf);ro.disconnect();window.removeEventListener('pointermove',moveFn);window.removeEventListener('pointerup',upFn);renderer.dispose();renderer.domElement.remove()};
   },[]);
 
-  return <div ref={ref} className="fishViewer"><div className="viewerBadge">{mode==='glb'?'3D MODEL':'3D PREVIEW'}</div><div className="viewerHelp">↔ ドラッグして360°観察</div></div>
+  return <div ref={ref} className="fishViewer" style={{width:'100%',height:'100%',minHeight:300,background:'transparent'}}><div className="viewerBadge">LIGHT 3D</div><div className="viewerHelp">↔ ドラッグして360°観察</div></div>
 }
