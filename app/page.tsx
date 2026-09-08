@@ -4,6 +4,13 @@ import FishVisual from '@/components/FishVisual';
 import {launchFishSlugs} from '@/lib/launch-fish';
 import s from './home.module.css';
 
+const quickLinks=[
+  {href:'/fish',icon:'◉',label:'魚図鑑'},
+  {href:'/methods',icon:'⌁',label:'釣り方'},
+  {href:'/spots',icon:'⌖',label:'釣り場'},
+  {href:'/gear',icon:'▣',label:'釣具'}
+];
+
 export default function Home(){
   const featured=launchFishSlugs.map(slug=>fish.find(f=>f.slug===slug)!).filter(Boolean);
   return <div className={s.home}>
@@ -15,6 +22,7 @@ export default function Home(){
         <p className={s.heroSub}>魚を知り、釣り方を学び、フィールドへ。</p>
         <p className={s.lead}>UOLINKは、魚図鑑・釣り方・釣り場・釣具をひとつにつなぐ釣りの総合ガイドです。</p>
         <div className={s.actions}><Link className={s.primary} href="/fish">魚を探す</Link><Link className={s.secondary} href="/spots">釣り場を探す</Link></div>
+        <nav className={s.heroQuick}>{quickLinks.map(x=><Link href={x.href} key={x.href}><span>{x.icon}</span><b>{x.label}</b></Link>)}</nav>
       </div>
     </section>
 
@@ -40,5 +48,7 @@ export default function Home(){
     <div className={s.dark}><section className={s.section}><div className={s.head}><div><div className={s.eyebrow}>START FISHING</div><h2>まず覚えたい釣り方</h2></div><Link href="/methods">釣り方をすべて見る →</Link></div><div className={s.methodGrid}>{methods.slice(0,3).map(m=><Link href={`/methods/${m.slug}`} className={s.method} key={m.slug}><small>{m.level} ・ {m.place}</small><h3>{m.name}</h3><p>{m.desc}</p><b>{m.target}を狙う →</b></Link>)}</div></section></div>
 
     <section className={s.game}><div className={s.gameCopy}><div className={s.eyebrow}>FOR KIDS</div><h2>遊んで覚える、<br/>UOLINK QUEST。</h2><p>ゲームは図鑑とは少し違う、デフォルメした魚で気軽に遊べる方向にします。リアルな魚体は図鑑、かわいさはゲームに分けます。</p><div className={s.ctaRow}><Link className={s.primary} href="/game">ゲームで遊ぶ</Link><Link className={s.secondary} href="/fish">魚図鑑を見る</Link></div></div><div className={s.gameBox}><div className={s.gameWater}></div><div className={s.gameCopyMark}>UOLINK<br/><b>QUEST</b></div><div className={s.score}>つって、あつめて、魚を知ろう。</div></div></section>
+
+    <section className={s.linkHub}><div><span>EXPLORE UOLINK</span><h2>目的からすぐ探す</h2><p>ページの最後からも、魚・釣り方・釣り場・釣具へすぐ戻れます。</p></div><nav>{quickLinks.map(x=><Link href={x.href} key={x.href}><span>{x.icon}</span><b>{x.label}</b><em>→</em></Link>)}</nav></section>
   </div>
 }
