@@ -1,38 +1,10 @@
 import Link from 'next/link';
 import s from './gear.module.css';
-
 export const metadata={title:'釣具｜UOLINK'};
-
 const targets=[
-  {fish:'タチウオ',icon:'⚔️',href:'/fish/tachiuo',method:'/methods/tachiuo-tenya',methodName:'テンヤ釣り',items:['船竿・テンヤロッド','小型両軸リール','PEライン','テンヤ・リーダー'],note:'大阪湾の定番セットから選ぶ'},
-  {fish:'マアジ',icon:'🐟',href:'/fish/aji',method:'/methods/sabiki',methodName:'サビキ',items:['サビキ竿','スピニングリール','サビキ仕掛け','カゴ・オモリ'],note:'家族釣り・船アジにも展開'},
-  {fish:'マダイ',icon:'🔴',href:'/fish/madai',method:'/methods/tai-rubber',methodName:'タイラバ',items:['タイラバロッド','カウンター付きリール','PE0.6〜1号','タイラバヘッド'],note:'明石・瀬戸内の定番を選ぶ'},
-  {fish:'ブリ',icon:'💨',href:'/fish/buri',method:'/methods/nomase',methodName:'ノマセ',items:['船竿','パワー系両軸リール','PE3〜5号','ハリス・仕掛け'],note:'大型青物向けの強度を重視'}
+ {fish:'タチウオ',icon:'⚔️',href:'/fish/tachiuo',routes:[{place:'🚤 船',method:'/methods/tachiuo-tenya',name:'船テンヤ',items:'専用竿・両軸/電動・PE1.5〜3号・40号前後テンヤ'},{place:'⚓ 堤防',method:'/methods',name:'ウキ・引き釣り',items:'磯/ルアー竿・スピニング・ワイヤー/太ハリス・テンヤ/ウキ'}]},
+ {fish:'マアジ',icon:'🐟',href:'/fish/aji',routes:[{place:'⚓ 堤防',method:'/methods/sabiki',name:'サビキ',items:'万能竿・スピニング・サビキ・カゴ'},{place:'🚤 船',method:'/methods',name:'船アジ',items:'船竿・両軸/電動・胴突き/サビキ・オモリ'}]},
+ {fish:'マダイ',icon:'🔴',href:'/fish/madai',routes:[{place:'🚤 船',method:'/methods/tai-rubber',name:'タイラバ',items:'タイラバ竿・小型両軸・PE0.6〜1号・ヘッド'},{place:'⚓ 堤防',method:'/methods',name:'カゴ・フカセ',items:'磯/遠投竿・スピニング・ウキ・ハリス'}]},
+ {fish:'ブリ',icon:'💨',href:'/fish/buri',routes:[{place:'🚤 船',method:'/methods/nomase',name:'船ノマセ',items:'青物船竿・両軸/電動・PE3号前後・泳がせ仕掛け'},{place:'⚓ 堤防',method:'/methods/nomase',name:'堤防ノマセ',items:'磯/遠投竿・4000〜6000番・PE2〜4号・泳がせ仕掛け'}]}
 ];
-
-const basics=[
-  {icon:'🎣',name:'ロッド',desc:'魚・釣り方・オモリ負荷から選ぶ。まずは専用竿が必要か、汎用竿で対応できるかを整理。',links:[['魚から選ぶ','/fish'],['釣り方から選ぶ','/methods']]},
-  {icon:'⚙️',name:'リール',desc:'番手だけでなく、巻上力・ギア比・糸巻量・カウンター有無まで実釣目線で比較。',links:[['船釣りを見る','/methods'],['対象魚を見る','/fish']]},
-  {icon:'🧵',name:'ライン・リーダー',desc:'PE号数、リーダー素材、太さ、長さを対象魚ごとに整理。結束方法も後から連携予定。',links:[['タチウオを見る','/fish/tachiuo'],['ブリを見る','/fish/buri']]},
-  {icon:'🪝',name:'仕掛け・ルアー',desc:'テンヤ、タイラバ、サビキ、ノマセなど、釣り方から必要な消耗品へ直結。',links:[['釣り方一覧','/methods'],['釣れる魚一覧','/fish']]},
-  {icon:'🧊',name:'クーラー・収納',desc:'釣る魚のサイズと釣行時間から容量を逆算。持ち運びや保冷力も比較できるようにする。',links:[['大型魚を見る','/fish/buri'],['魚図鑑へ','/fish']]},
-  {icon:'🧤',name:'安全・便利グッズ',desc:'フィッシュグリップ、プライヤー、ハサミ、手袋など、危険魚対策も含めて提案。',links:[['タチウオを見る','/fish/tachiuo'],['釣り方を見る','/methods']]}
-];
-
-export default function Page(){return <div className="section pageTop">
-  <div className="pageHero"><span>FISHING GEAR</span><h1>釣具を、魚から選ぶ。</h1><p>「何を買えばいいか分からない」をなくす。UOLINKでは魚 → 釣り方 → 必要な道具の順で迷わずたどれます。</p></div>
-
-  <div className="adNotice">将来ここにAmazon・楽天などのアフィリエイトリンクを追加予定です。今は図鑑・釣り方との導線を先に整えています。</div>
-
-  <div className="sectionTitle"><div><span>BY TARGET</span><h2>狙う魚からセットを探す</h2></div><Link href="/fish">魚図鑑をすべて見る →</Link></div>
-  <div className={s.targetGrid}>{targets.map(x=><article className={s.target} key={x.fish}>
-    <div className={s.targetHead}><span>{x.icon}</span><div><small>FOR {x.fish}</small><h2>{x.fish}の釣具</h2><p>{x.note}</p></div></div>
-    <div className={s.needList}>{x.items.map(v=><span key={v}>✓ {v}</span>)}</div>
-    <div className={s.actions}><Link href={x.href}>魚の特徴を見る</Link><Link className={s.primaryLink} href={x.method}>{x.methodName}から選ぶ →</Link></div>
-  </article>)}</div>
-
-  <div className={`sectionTitle ${s.categoryTitle}`}><div><span>CATEGORY</span><h2>道具の種類から探す</h2></div><Link href="/methods">釣り方から逆引き →</Link></div>
-  <div className="gearGrid">{basics.map(g=><article key={g.name}><div className="gearEmoji">{g.icon}</div><h2>{g.name}</h2><p>{g.desc}</p><div className={s.miniLinks}>{g.links.map(([label,href])=><Link key={label} href={href}>{label} →</Link>)}</div></article>)}</div>
-
-  <section className={s.affiliateReady}><div><span>NEXT</span><h2>あとから商品リンクを差し込める設計</h2><p>各カードに「Amazonで見る」「楽天で見る」を追加するだけで、図鑑から商品購入まで自然につながります。商品を先に押し売りせず、必要な理由を説明してからリンクへ進む形にします。</p></div><Link href="/fish/tachiuo">タチウオ図鑑で導線を見る →</Link></section>
-</div>}
+export default function Page(){return <div className="section pageTop"><div className="pageHero"><span>FISHING GEAR</span><h1>釣具は「魚 × 場所」から選ぶ。</h1><p>同じタチウオでも船テンヤと堤防テンヤでは道具が違います。UOLINKでは船・堤防を最初に分けて、間違ったタックルを選びにくくします。</p></div><div className={s.targetGrid}>{targets.map(x=><article className={s.target} key={x.fish}><div className={s.targetHead}><span>{x.icon}</span><div><small>CHOOSE FIELD FIRST</small><h2>{x.fish}の釣具</h2><p>まず釣る場所を選択</p></div></div>{x.routes.map(r=><div className={s.route} key={r.place}><div><b>{r.place}｜{r.name}</b><p>{r.items}</p></div><Link href={r.method}>この釣り方へ →</Link></div>)}<div className={s.actions}><Link href={x.href}>魚の特徴を見る →</Link></div></article>)}</div><section className={s.affiliateReady}><div><span>UOLINK RULE</span><h2>商品リンクも船・堤防を混ぜない</h2><p>将来Amazon・楽天の商品を載せる際も「船用」「堤防用」を明示し、それぞれの釣法ページから適合する商品だけへつなぎます。</p></div><Link href="/methods">釣り方から探す →</Link></section></div>}
