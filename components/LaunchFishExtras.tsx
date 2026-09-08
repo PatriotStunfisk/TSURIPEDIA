@@ -1,12 +1,10 @@
 import Link from 'next/link';
-import FishGallery from './FishGallery';
 import {launchFish,isLaunchFish} from '@/lib/launch-fish';
 
 export default function LaunchFishExtras({slug,name}:{slug:string;name:string}){
   if(!isLaunchFish(slug))return null;
   const x=launchFish[slug];
   return <>
-    <FishGallery slug={slug} name={name} notes={x.imageNotes}/>
     <section className="detailGrid">
       <article><span>IDENTIFICATION</span><h2>見分けるポイント</h2>{x.identify.map((p,i)=><div className="methodLink" key={p}><strong>{String(i+1).padStart(2,'0')}</strong><div><b>{p}</b></div></div>)}</article>
       <aside><span>FISHING ROUTE</span><h2>この魚を狙う釣り方</h2>{x.methodLinks.map(m=><Link href={m.href} className="methodLink" key={m.label}><div><b>{m.label}</b><small>仕掛け・手順・コツを見る</small></div><em>→</em></Link>)}<h3>主なエリア</h3><p>{x.spotFocus}</p></aside>
