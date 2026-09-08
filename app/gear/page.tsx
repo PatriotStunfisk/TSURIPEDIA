@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import s from './gear.module.css';
 
 export const metadata={title:'釣具｜UOLINK'};
 
@@ -24,14 +25,14 @@ export default function Page(){return <div className="section pageTop">
   <div className="adNotice">将来ここにAmazon・楽天などのアフィリエイトリンクを追加予定です。今は図鑑・釣り方との導線を先に整えています。</div>
 
   <div className="sectionTitle"><div><span>BY TARGET</span><h2>狙う魚からセットを探す</h2></div><Link href="/fish">魚図鑑をすべて見る →</Link></div>
-  <div className="gearTargetGrid">{targets.map(x=><article className="gearTarget" key={x.fish}>
-    <div className="gearTargetHead"><span>{x.icon}</span><div><small>FOR {x.fish}</small><h2>{x.fish}の釣具</h2><p>{x.note}</p></div></div>
-    <div className="gearNeedList">{x.items.map(v=><span key={v}>✓ {v}</span>)}</div>
-    <div className="gearActions"><Link href={x.href}>魚の特徴を見る</Link><Link className="primary" href={x.method}>{x.methodName}から選ぶ →</Link></div>
+  <div className={s.targetGrid}>{targets.map(x=><article className={s.target} key={x.fish}>
+    <div className={s.targetHead}><span>{x.icon}</span><div><small>FOR {x.fish}</small><h2>{x.fish}の釣具</h2><p>{x.note}</p></div></div>
+    <div className={s.needList}>{x.items.map(v=><span key={v}>✓ {v}</span>)}</div>
+    <div className={s.actions}><Link href={x.href}>魚の特徴を見る</Link><Link className={s.primaryLink} href={x.method}>{x.methodName}から選ぶ →</Link></div>
   </article>)}</div>
 
-  <div className="sectionTitle gearTitle"><div><span>CATEGORY</span><h2>道具の種類から探す</h2></div><Link href="/methods">釣り方から逆引き →</Link></div>
-  <div className="gearGrid">{basics.map(g=><article key={g.name}><div className="gearEmoji">{g.icon}</div><h2>{g.name}</h2><p>{g.desc}</p><div className="gearMiniLinks">{g.links.map(([label,href])=><Link key={label} href={href}>{label} →</Link>)}</div></article>)}</div>
+  <div className={`sectionTitle ${s.categoryTitle}`}><div><span>CATEGORY</span><h2>道具の種類から探す</h2></div><Link href="/methods">釣り方から逆引き →</Link></div>
+  <div className="gearGrid">{basics.map(g=><article key={g.name}><div className="gearEmoji">{g.icon}</div><h2>{g.name}</h2><p>{g.desc}</p><div className={s.miniLinks}>{g.links.map(([label,href])=><Link key={label} href={href}>{label} →</Link>)}</div></article>)}</div>
 
-  <section className="gearAffiliateReady"><div><span>NEXT</span><h2>あとから商品リンクを差し込める設計</h2><p>各カードに「Amazonで見る」「楽天で見る」を追加するだけで、図鑑から商品購入まで自然につながります。商品を先に押し売りせず、必要な理由を説明してからリンクへ進む形にします。</p></div><Link href="/fish/tachiuo">タチウオ図鑑で導線を見る →</Link></section>
+  <section className={s.affiliateReady}><div><span>NEXT</span><h2>あとから商品リンクを差し込める設計</h2><p>各カードに「Amazonで見る」「楽天で見る」を追加するだけで、図鑑から商品購入まで自然につながります。商品を先に押し売りせず、必要な理由を説明してからリンクへ進む形にします。</p></div><Link href="/fish/tachiuo">タチウオ図鑑で導線を見る →</Link></section>
 </div>}
