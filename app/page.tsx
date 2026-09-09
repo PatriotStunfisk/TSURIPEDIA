@@ -1,15 +1,8 @@
-import type {Metadata} from 'next';
 import Link from 'next/link';
 import {fish,methods} from '@/lib/data';
 import FishVisual from '@/components/FishVisual';
 import {launchFishSlugs} from '@/lib/launch-fish';
 import s from './home.module.css';
-
-export const metadata:Metadata={
-  title:'UOLINK（ウオリンク）｜魚図鑑・釣り方・釣り場・釣具',
-  description:'UOLINK（ウオリンク）は、魚図鑑・釣り方・釣り場・釣具をひとつにつなぐ釣り総合ガイドです。',
-  alternates:{canonical:'/'}
-};
 
 const quickLinks=[
   {href:'/fish',icon:'◉',label:'魚図鑑'},
@@ -24,10 +17,10 @@ export default function Home(){
     <section className={s.hero}>
       <div className={s.heroShade}></div>
       <div className={s.heroContent}>
-        <div className={s.kicker}>UOLINK（ウオリンク）— 魚から、釣りへつながる。</div>
+        <div className={s.kicker}>UOLINK — 魚から、釣りへつながる。</div>
         <h1>釣りが、もっと<br/>好きになる。</h1>
         <p className={s.heroSub}>魚を知り、釣り方を学び、フィールドへ。</p>
-        <p className={s.lead}>UOLINK（ウオリンク）は、魚図鑑・釣り方・釣り場・釣具をひとつにつなぐ釣りの総合ガイドです。</p>
+        <p className={s.lead}>UOLINKは、魚図鑑・釣り方・釣り場・釣具をひとつにつなぐ釣りの総合ガイドです。</p>
         <div className={s.actions}><Link className={s.primary} href="/fish">魚を探す</Link><Link className={s.secondary} href="/spots">釣り場を探す</Link></div>
         <nav className={s.heroQuick}>{quickLinks.map(x=><Link href={x.href} key={x.href}><span>{x.icon}</span><b>{x.label}</b></Link>)}</nav>
       </div>
@@ -42,7 +35,7 @@ export default function Home(){
 
     <div className={s.band}>
       <section className={s.section}>
-        <div className={s.head}><div><div className={s.eyebrow}>FEATURED FISH</div><h2>人気の魚図鑑</h2><p className={s.sectionLead}>まずはこの7魚種から、内容と画像を完成させています。</p></div><Link href="/fish">すべての魚図鑑を見る →</Link></div>
+        <div className={s.head}><div><div className={s.eyebrow}>FEATURED FISH</div><h2>人気の魚図鑑</h2></div><Link href="/fish">すべての魚図鑑を見る →</Link></div>
         <div className={s.fishGrid}>{featured.map(f=><Link key={f.slug} className={s.fishCard} href={`/fish/${f.slug}`}><div className={s.thumb} style={{'--tone':f.accent} as React.CSSProperties}><FishVisual slug={f.slug} name={f.name}/><span className={s.season}>{f.season}</span></div><div className={s.fishInfo}><h3>{f.name}</h3><p>{f.en}</p><div className={s.chips}><span>{f.methods[0]}</span><span>{f.areas[0]}</span></div></div></Link>)}</div>
       </section>
     </div>
