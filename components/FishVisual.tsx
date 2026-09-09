@@ -17,8 +17,12 @@ export default function FishVisual({slug,name,className=''}:Props){
   const src=slug==='tachiuo'
     ? '/images/fish/tachiuo-real-v2.png'
     : slug==='madai'
-      ? '/images/fish/madai-real-v4.jpg'
+      ? '/images/fish/madai-real-v2.png'
       : `/images/fish/${slug}-real.png`;
+
+  useEffect(()=>{
+    setFailed(false);
+  },[src]);
 
   useEffect(()=>{
     if(slug!=='madai')return;
