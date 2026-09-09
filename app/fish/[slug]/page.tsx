@@ -36,17 +36,17 @@ function TachiuoPage(){
 function AjiPage(){
  const f=getFish('aji')!;const d=fishDetails.aji;const months=Array.from({length:12},(_,i)=>i+1);
  const dishes=[
-  {name:'刺身',desc:'脂の乗った良型は甘みと旨味が強く、生食で魅力が出やすい。'},
-  {name:'たたき',desc:'薬味と合わせる定番。鮮度の良いアジをさっぱり楽しめる。'},
-  {name:'アジフライ',desc:'ふっくらした身と香ばしい衣の相性が良い王道料理。'},
-  {name:'南蛮漬け',desc:'小〜中型を数釣りしたときにも使いやすい定番料理。'}
+  {name:'刺身',src:'/images/fish/aji-sashimi.png',desc:'脂の乗った良型は甘みと旨味が強く、生食で魅力が出やすい。'},
+  {name:'アジフライ',src:'/images/fish/aji-fry.png',desc:'ふっくらした身と香ばしい衣の相性が良い王道料理。'},
+  {name:'なめろう',src:'/images/fish/aji-namero.png',desc:'味噌と薬味でたたく漁師料理。鮮度の良いアジの旨味を濃厚に楽しめる。'},
+  {name:'煮付け',src:'/images/fish/aji-nitsuke.png',desc:'しょうがを効かせて甘辛く。ご飯にも合う家庭料理の定番。'}
  ];
  return <div className={t.page}><section className={t.hero}>
   <div className={t.crumb}><Link href="/">ホーム</Link>　›　<Link href="/fish">魚図鑑</Link>　›　マアジ</div>
   <div className={t.top}><aside className={t.summary}><h1>マアジ</h1><div className={t.en}>Japanese jack mackerel</div><button className={t.sound}>🔊 魚の解説を聞く</button><div className={t.facts}><div className={t.row}><span>分類</span><b>{d.family} {d.genus}</b></div><div className={t.row}><span>学名</span><b><i>{f.scientific}</i></b></div><div className={t.row}><span>別名</span><b>{d.aliases.join('・')}</b></div><div className={t.row}><span>体長</span><b>{f.size}</b></div><div className={t.row}><span>旬</span><b>{f.season}</b></div><div className={t.row}><span>難易度</span><b className={t.stars}>★★☆☆☆</b></div><div className={t.row}><span>危険度</span><b className={t.stars}>★☆☆☆☆</b></div></div><div className={t.tags}><span>初心者におすすめ</span><span>サビキの定番</span><span>食べて美味しい</span></div></aside>
   <div className={t.stage}><div className={t.stageTabs}><span className={t.active}>▧ 2D画像</span><span>3D準備中</span></div><div className={t.viewerWrap}><FishVisual slug="aji" name="マアジ"/></div></div><div className={t.tools}><span>♡<small>お気に入り</small></span><span>🎣<small>釣った！</small></span><span>↗<small>シェア</small></span><span>▣<small>保存</small></span></div></div>
   <div className={t.cards}><article className={t.card}><h3>▣ 特徴</h3><p>{f.desc} {d.body}</p><p><b>見分けるポイント：</b>尾の付け根付近に並ぶ硬いウロコ「ゼイゴ」が代表的です。</p></article><article className={t.card}><h3>🐟 生態</h3><div className={t.list}><div><span>生息域</span><b>{d.habitat}</b></div><div><span>水深</span><b>{f.depth}</b></div><div><span>エサ</span><b>{d.diet}</b></div><div><span>行動</span><b>{d.behavior}</b></div><div><span>寿命</span><b>{d.lifespan}</b></div></div></article><article className={t.card}><h3>🎣 釣り方</h3><div className={t.methods}><Link href="/methods/sabiki">サビキ釣り <span>›</span></Link><Link href="/methods">アジング <span>›</span></Link><Link href="/methods">船の胴突き <span>›</span></Link></div></article><article className={t.card}><h3>◷ 釣れる時期</h3><div className={t.months}>{months.map(m=><span key={m} className={f.months.includes(m)?t.on:''}>{m}月</span>)}</div><p>{d.seasonNote}</p></article></div>
-  <section className={t.foodSection}><div className={t.foodHead}><div><span>TABLE GUIDE</span><h2>マアジをおいしく食べる</h2></div><p>{d.taste} サイズに合わせて生食から揚げ物まで幅広く楽しめます。</p></div><div className={t.dishGrid}>{dishes.map(x=><article key={x.name} className={t.dishCard}><div><b>{x.name}</b><p>{x.desc}</p></div></article>)}</div></section>
+  <section className={t.foodSection}><div className={t.foodHead}><div><span>TABLE GUIDE</span><h2>マアジをおいしく食べる</h2></div><p>{d.taste} サイズに合わせて生食から揚げ物まで幅広く楽しめます。</p></div><div className={t.dishGrid}>{dishes.map(x=><article key={x.name} className={t.dishCard}><div className={t.dishPhoto}><img src={x.src} alt={`マアジの${x.name}`}/></div><div><b>{x.name}</b><p>{x.desc}</p></div></article>)}</div></section>
  </section><section className={t.cta}><div><h2>マアジを釣ってみよう！</h2><p>初めてならサビキから。群れのいる棚を見つければ数釣りも狙えます。</p></div><Link href="/spots">📍 おすすめの釣り場</Link><Link href="/gear">🧰 必要な釣具</Link><Link href="/methods/sabiki">🎣 サビキの詳細</Link><Link className={t.game} href="/game">🎮 ゲームで練習</Link></section><section className={t.lightSection}><LaunchFishExtras slug="aji" name="マアジ"/></section></div>
 }
 
