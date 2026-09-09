@@ -1,35 +1,72 @@
 'use client';
 
-import {useEffect,useRef,useState} from 'react';
+import {useMemo,useState} from 'react';
+import {fishingMapEntries,fishingMapFish,type FishingMapEntry,type MapEntryType} from '@/lib/fishing-map-data';
+import s from './SpotMap.module.css';
 
-type SpotPoint={name:string;area:string;lat:number;lng:number;fish:string};
-
-const points:SpotPoint[]=[
- {name:'武庫川一文字',area:'兵庫県尼崎市・西宮市沖',lat:34.6968,lng:135.3526,fish:'アジ・サバ・タチウオ・青物'},
- {name:'平磯海づり公園',area:'兵庫県神戸市垂水区',lat:34.6255,lng:135.0679,fish:'アジ・マダイ・青物・根魚'},
- {name:'とっとパーク小島',area:'大阪府泉南郡岬町',lat:34.3064,lng:135.0967,fish:'アジ・タチウオ・マダイ・青物'},
- {name:'大阪南港魚つり園護岸',area:'大阪府大阪市住之江区',lat:34.6156,lng:135.4019,fish:'アジ・サバ・タチウオ・青物'},
- {name:'加太港',area:'和歌山県和歌山市',lat:34.2756,lng:135.0714,fish:'アジ・キス・マダイ・青物'}
-];
-
-declare global{interface Window{google:any;__uolinkInitMap?:()=>void}}
+const bounds={minLat:34.15,maxLat:34.82,minLng:134.90,maxLng:135.48};
+function pos(entry:FishingMapEntry){
+  const x=((entry.lng-bounds.minLng)/(bounds.maxLng-bounds.minLng))*100;
+  const y=(1-(entry.lat-bounds.minLat)/(bounds.maxLat-bounds.minLat))*100;
+  return {left:`${Math.max(3,Math.min(97,x))}%`,top:`${Math.max(4,Math.min(96,y))}%`};
+}
 
 export default function SpotMap(){
- const el=useRef<HTMLDivElement>(null);const [error,setError]=useState('');
- useEffect(()=>{
-  const key=process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-  if(!key){setError('Google Maps APIキーを設定すると、ここにUOLINK釣り場マップが表示されます。');return}
-  const draw=()=>{
-   if(!el.current||!window.google)return;
-   const map=new window.google.maps.Map(el.current,{center:{lat:34.55,lng:135.20},zoom:8,mapTypeControl:false,streetViewControl:false,fullscreenControl:true});
-   const info=new window.google.maps.InfoWindow();
-   points.forEach(p=>{const marker=new window.google.maps.Marker({position:{lat:p.lat,lng:p.lng},map,title:p.name});marker.addListener('click',()=>{info.setContent(`<div style="max-width:240px;padding:4px"><strong>${p.name}</strong><br><small>${p.area}</small><p style="margin:8px 0 0">🐟 ${p.fish}</p></div>`);info.open({map,anchor:marker})})});
-  };
-  if(window.google?.maps){draw();return}
-  window.__uolinkInitMap=draw;
-  const existing=document.querySelector('script[data-uolink-maps]');if(existing)return;
-  const script=document.createElement('script');script.dataset.uolinkMaps='true';script.async=true;script.defer=true;script.src=`https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(key)}&callback=__uolinkInitMap&v=weekly`;
-  script.onerror=()=>setError('Google Mapsを読み込めませんでした。APIキーとGoogle Cloudの設定を確認してください。');document.head.appendChild(script);
- },[]);
- return <div style={{margin:'28px 0'}}><div ref={el} style={{height:'min(62vh,620px)',minHeight:420,borderRadius:24,overflow:'hidden',background:'#e8eef1'}}>{error&&<div style={{height:'100%',display:'grid',placeItems:'center',padding:32,textAlign:'center'}}><div><b>UOLINK FISHING MAP</b><p>{error}</p></div></div>}</div><small style={{display:'block',marginTop:10,opacity:.7}}>※釣り場の位置・利用ルール・立入可否は現地の最新情報も確認してください。</small></div>
+  const [kind,setKind]=useState<'all'|MapEntryType>('all');
+  const [fish,setFish]=useState('すべて');
+  const [query,setQuery]=useState('');
+  const [selected,setSelected]=useState(fishingMapEntries[0]?.slug??'');
+
+  const entries=useMemo(()=>fishingMapEntries.filter(e=>{
+    if(kind!=='all'&&e.type!==kind)return false;
+    if(fish!=='すべて'&&!e.fish.includes(fish))return false;
+    if(query&&!`${e.name}${e.area}${e.fish.join('')}${e.methods.join('')}`.toLowerCase().includes(query.toLowerCase()))return false;
+    return true;
+  }),[kind,fish,query]);
+
+  const active=entries.find(e=>e.slug===selected)??entries[0];
+
+  return <section className={s.wrap}>
+    <div className={s.toolbar}>
+      <div className={s.tabs}>
+        <button className={kind==='all'?s.active:''} onClick={()=>setKind('all')}>すべて</button>
+        <button className={kind==='spot'?s.active:''} onClick={()=>setKind('spot')}>🎣 釣り場</button>
+        <button className={kind==='boat'?s.active:''} onClick={()=>setKind('boat')}>🚤 釣船</button>
+      </div>
+      <input aria-label="釣り場を検索" value={query} onChange={e=>setQuery(e.target.value)} placeholder="釣り場・魚・釣り方で検索"/>
+    </div>
+
+    <div className={s.fishFilters}>{fishingMapFish.map(v=><button key={v} onClick={()=>setFish(v)} className={fish===v?s.activeChip:''}>{v}</button>)}</div>
+
+    <div className={s.layout}>
+      <div className={s.mapShell}>
+        <div className={s.mapHeader}><span>UOLINK FISHING MAP</span><small>大阪湾・明石・紀北 β版</small></div>
+        <div className={s.map}>
+          <svg className={s.land} viewBox="0 0 1000 720" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 0H1000V145C910 150 843 190 810 250C770 322 718 360 641 371C565 382 518 420 488 492C456 568 390 611 298 615C200 620 137 666 80 720H0Z"/>
+            <path d="M0 538C112 501 202 482 280 485C354 488 420 522 483 584L430 720H0Z"/>
+            <path d="M785 0H1000V720H885C892 624 868 536 812 460C760 389 747 310 768 224C786 151 792 78 785 0Z"/>
+          </svg>
+          <div className={s.waterLabel}>OSAKA BAY</div>
+          {entries.map(e=><button key={e.slug} className={`${s.pin} ${selected===e.slug?s.pinActive:''}`} style={pos(e)} onClick={()=>setSelected(e.slug)} aria-label={e.name}><span>{e.type==='boat'?'🚤':'🎣'}</span><b>{e.name}</b></button>)}
+          {!entries.length&&<div className={s.empty}>条件に合うスポットがありません</div>}
+        </div>
+        <p className={s.note}>※UOLINK独自の概略マップです。ピン位置・営業情報・立入可否は釣行前に必ず最新情報を確認してください。</p>
+      </div>
+
+      <aside className={s.panel}>
+        {active?<>
+          <div className={s.panelTop}><span>{active.type==='boat'?'釣船':'釣り場'}</span><small>{active.area}</small></div>
+          <h2>{active.name}</h2>
+          <p>{active.note}</p>
+          <dl><div><dt>狙える魚</dt><dd>{active.fish.join('・')}</dd></div><div><dt>主な釣り方</dt><dd>{active.methods.join('・')}</dd></div><div><dt>シーズン</dt><dd>{active.season}</dd></div></dl>
+          <div className={s.badges}>{active.beginner&&<span>初心者向け</span>}{active.kids&&<span>親子向け</span>}{active.parking&&<span>駐車場</span>}{active.toilet&&<span>トイレ</span>}</div>
+          <a className={s.googleLink} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(active.googleQuery)}`} target="_blank" rel="noopener noreferrer">Googleマップで場所を確認 ↗</a>
+          <button className={s.detailButton} disabled>UOLINK詳細ページは準備中</button>
+        </>:<div className={s.panelEmpty}>条件を変えて釣り場を探してください。</div>}
+      </aside>
+    </div>
+
+    <div className={s.cards}>{entries.map(e=><button key={e.slug} onClick={()=>setSelected(e.slug)} className={selected===e.slug?s.cardActive:''}><span>{e.type==='boat'?'🚤':'🎣'} {e.area}</span><strong>{e.name}</strong><small>{e.fish.join('・')}</small></button>)}</div>
+  </section>;
 }
