@@ -12,13 +12,17 @@ const madaiDishImages:Record<string,string>={
   '潮汁':'/images/fish/madai-ushiojiru.jpg'
 };
 
+const v2Fish=new Set(['aji','saba','buri','kisu','kasago']);
+
 export default function FishVisual({slug,name,className=''}:Props){
   const [failed,setFailed]=useState(false);
   const src=slug==='tachiuo'
     ? '/images/fish/tachiuo-real-v2.png'
     : slug==='madai'
       ? '/images/fish/madai-real-v2.png'
-      : `/images/fish/${slug}-real.png`;
+      : v2Fish.has(slug)
+        ? `/images/fish/${slug}-real-v2.png`
+        : `/images/fish/${slug}-real.png`;
 
   useEffect(()=>{
     setFailed(false);
