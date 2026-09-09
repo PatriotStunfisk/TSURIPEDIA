@@ -1,11 +1,16 @@
 'use client';
 
 import {useMemo,useRef,useState} from 'react';
-import {fishingMapEntries,fishingMapFish,type FishingMapEntry,type MapEntryType} from '@/lib/fishing-map-data';
+import {fishingMapEntries,fishingMapFish,type MapEntryType} from '@/lib/fishing-map-data';
 import s from './SpotMap.module.css';
 
+// Coordinates calibrated against the cropped freemap.jp Japan base image.
 const pinPosition:Record<string,{x:number;y:number}>={
- 'mukogawa-ichimonji':{x:45.8,y:63.0},'hira-isoumi':{x:44.6,y:63.4},'tottopark-kojima':{x:44.7,y:64.6},'nanko-fishing-park':{x:45.4,y:63.5},'kada-port':{x:44.5,y:64.8}
+ 'mukogawa-ichimonji':{x:43.05,y:62.45},
+ 'hira-isoumi':{x:42.30,y:62.72},
+ 'tottopark-kojima':{x:42.55,y:63.85},
+ 'nanko-fishing-park':{x:42.90,y:63.15},
+ 'kada-port':{x:42.45,y:64.00}
 };
 
 export default function SpotMap(){
@@ -14,7 +19,7 @@ export default function SpotMap(){
  const entries=useMemo(()=>fishingMapEntries.filter(e=>(kind==='all'||e.type===kind)&&(fish==='すべて'||e.fish.includes(fish))&&(!query||`${e.name}${e.area}${e.fish.join('')}${e.methods.join('')}`.toLowerCase().includes(query.toLowerCase()))),[kind,fish,query]);
  const active=entries.find(e=>e.slug===selected)??entries[0];
  const zoom=(delta:number)=>setView(v=>({...v,scale:Math.max(1,Math.min(8,v.scale+delta))}));
- const focusKansai=()=>setView({x:80,y:-170,scale:4.6});const reset=()=>setView({x:0,y:0,scale:1});
+ const focusKansai=()=>setView({x:165,y:-205,scale:5.2});const reset=()=>setView({x:0,y:0,scale:1});
  const onPointerDown=(e:React.PointerEvent)=>{e.currentTarget.setPointerCapture(e.pointerId);pointers.current.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.current.size===1)drag.current={x:e.clientX,y:e.clientY,vx:view.x,vy:view.y};if(pointers.current.size===2){const a=[...pointers.current.values()];pinch.current={distance:Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y),scale:view.scale}}};
  const onPointerMove=(e:React.PointerEvent)=>{if(!pointers.current.has(e.pointerId))return;pointers.current.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.current.size===2&&pinch.current){const a=[...pointers.current.values()];const d=Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y);setView(v=>({...v,scale:Math.max(1,Math.min(8,pinch.current!.scale*d/pinch.current!.distance))}));return}if(drag.current&&pointers.current.size===1)setView(v=>({...v,x:drag.current!.vx+e.clientX-drag.current!.x,y:drag.current!.vy+e.clientY-drag.current!.y}))};
  const onPointerUp=(e:React.PointerEvent)=>{pointers.current.delete(e.pointerId);drag.current=null;pinch.current=null};
@@ -23,7 +28,7 @@ export default function SpotMap(){
   <div className={s.fishFilters}>{fishingMapFish.map(v=><button key={v} onClick={()=>setFish(v)} className={fish===v?s.activeChip:''}>{v}</button>)}</div>
   <div className={s.layout}><div className={s.mapShell}><div className={s.mapHeader}><div><span>UOLINK FISHING MAP</span><small>ドラッグ・ピンチで移動 / 拡大</small></div><div className={s.mapActions}><button onClick={focusKansai}>関西へ</button><button onClick={reset}>全国</button></div></div>
    <div className={s.viewport} onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onPointerCancel={onPointerUp} onWheel={e=>{e.preventDefault();zoom(e.deltaY<0?.45:-.45)}}>
-    <div className={s.canvas} style={{transform:`translate(${view.x}px,${view.y}px) scale(${view.scale})`}}><img src="/images/maps/uolink-japan-map.jpg" alt="日本全国のUOLINK釣り場マップ" draggable={false}/>{entries.map(e=>{const p=pinPosition[e.slug];if(!p)return null;return <button key={e.slug} className={`${s.pin} ${selected===e.slug?s.pinActive:''}`} style={{left:`${p.x}%`,top:`${p.y}%`}} onPointerDown={ev=>ev.stopPropagation()} onClick={()=>setSelected(e.slug)}><span>{e.type==='boat'?'🚤':'🎣'}</span><b>{e.name}</b></button>})}</div>
+    <div className={s.canvas} style={{transform:`translate(${view.x}px,${view.y}px) scale(${view.scale})`}}><img src="/images/maps/uolink-japan-base-map.jpg" alt="日本全国のUOLINK釣り場マップ" draggable={false}/>{entries.map(e=>{const p=pinPosition[e.slug];if(!p)return null;return <button key={e.slug} className={`${s.pin} ${selected===e.slug?s.pinActive:''}`} style={{left:`${p.x}%`,top:`${p.y}%`}} onPointerDown={ev=>ev.stopPropagation()} onClick={()=>setSelected(e.slug)}><span>{e.type==='boat'?'🚤':'🎣'}</span><b>{e.name}</b></button>})}</div>
     <div className={s.zoom}><button onClick={()=>zoom(.7)}>＋</button><button onClick={()=>zoom(-.7)}>−</button></div>
    </div><p className={s.note}>地図素材：つながる白地図（freemap.jp）をUOLINK用に加工。ピン位置・営業情報・立入可否は釣行前に最新情報を確認してください。</p></div>
    <aside className={s.panel}>{active?<><div className={s.panelTop}><span>{active.type==='boat'?'釣船':'釣り場'}</span><small>{active.area}</small></div><h2>{active.name}</h2><p>{active.note}</p><dl><div><dt>狙える魚</dt><dd>{active.fish.join('・')}</dd></div><div><dt>主な釣り方</dt><dd>{active.methods.join('・')}</dd></div><div><dt>シーズン</dt><dd>{active.season}</dd></div></dl><div className={s.badges}>{active.beginner&&<span>初心者向け</span>}{active.kids&&<span>親子向け</span>}{active.parking&&<span>駐車場</span>}{active.toilet&&<span>トイレ</span>}</div><a className={s.googleLink} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(active.googleQuery)}`} target="_blank" rel="noopener noreferrer">Googleマップで場所を確認 ↗</a></>:<div className={s.panelEmpty}>条件を変えて釣り場を探してください。</div>}</aside></div>
