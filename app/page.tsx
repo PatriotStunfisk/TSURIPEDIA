@@ -1,8 +1,15 @@
+import type {Metadata} from 'next';
 import Link from 'next/link';
 import {fish,methods} from '@/lib/data';
 import FishVisual from '@/components/FishVisual';
 import {launchFishSlugs} from '@/lib/launch-fish';
 import s from './home.module.css';
+
+export const metadata:Metadata={
+  title:'UOLINK（ウオリンク）｜魚図鑑・釣り方・釣り場・釣具',
+  description:'UOLINK（ウオリンク）は、魚図鑑・釣り方・釣り場・釣具をひとつにつなぐ釣り総合ガイドです。',
+  alternates:{canonical:'/'}
+};
 
 const quickLinks=[
   {href:'/fish',icon:'◉',label:'魚図鑑'},
@@ -17,10 +24,10 @@ export default function Home(){
     <section className={s.hero}>
       <div className={s.heroShade}></div>
       <div className={s.heroContent}>
-        <div className={s.kicker}>UOLINK — 魚から、釣りへつながる。</div>
+        <div className={s.kicker}>UOLINK（ウオリンク）— 魚から、釣りへつながる。</div>
         <h1>釣りが、もっと<br/>好きになる。</h1>
         <p className={s.heroSub}>魚を知り、釣り方を学び、フィールドへ。</p>
-        <p className={s.lead}>UOLINKは、魚図鑑・釣り方・釣り場・釣具をひとつにつなぐ釣りの総合ガイドです。</p>
+        <p className={s.lead}>UOLINK（ウオリンク）は、魚図鑑・釣り方・釣り場・釣具をひとつにつなぐ釣りの総合ガイドです。</p>
         <div className={s.actions}><Link className={s.primary} href="/fish">魚を探す</Link><Link className={s.secondary} href="/spots">釣り場を探す</Link></div>
         <nav className={s.heroQuick}>{quickLinks.map(x=><Link href={x.href} key={x.href}><span>{x.icon}</span><b>{x.label}</b></Link>)}</nav>
       </div>
