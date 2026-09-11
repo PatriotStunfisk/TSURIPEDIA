@@ -22,9 +22,11 @@ export default function FishVisual({slug,name,className=''}:Props){
       ? '/images/fish/madai-real-v2.png'
       : slug==='saba'
         ? '/images/fish/saba-real-v2-new.png'
-        : v2Fish.has(slug)
-          ? `/images/fish/${slug}-real-v2.png`
-          : `/images/fish/${slug}-real.png`;
+        : slug==='buri'
+          ? '/images/fish/buri-real-v2.png?v=20260911-2'
+          : v2Fish.has(slug)
+            ? `/images/fish/${slug}-real-v2.png`
+            : `/images/fish/${slug}-real.png`;
 
   useEffect(()=>{
     setFailed(false);
