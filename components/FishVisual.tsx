@@ -1,5 +1,6 @@
 'use client';
 import {useEffect,useState} from 'react';
+import {usePathname} from 'next/navigation';
 import FishArt from './FishArt';
 import BuriMedia from './BuriMedia';
 import s from './FishVisual.module.css';
@@ -16,6 +17,7 @@ const madaiDishImages:Record<string,string>={
 const v2Fish=new Set(['aji','saba','buri','kisu','kasago']);
 
 export default function FishVisual({slug,name,className=''}:Props){
+  const pathname=usePathname();
   const [failed,setFailed]=useState(false);
   const src=slug==='tachiuo'
     ? '/images/fish/tachiuo-real-v2.png'
@@ -54,7 +56,7 @@ export default function FishVisual({slug,name,className=''}:Props){
     return()=>{window.clearTimeout(id);added.forEach(x=>x.remove())};
   },[slug]);
 
-  if(slug==='buri'&&className!=='fishListVisual')return <BuriMedia/>;
+  if(slug==='buri'&&pathname==='/fish/buri')return <BuriMedia/>;
 
   return <div className={`${s.wrap} ${className}`}>
     {!failed?<img src={src} alt={`${name}の図鑑画像`} width={slug==='saba'?1891:undefined} height={slug==='saba'?831:undefined} onError={()=>setFailed(true)}/>:<FishArt slug={slug} label={name}/>} 
