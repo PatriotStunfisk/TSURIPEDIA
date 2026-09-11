@@ -1,1 +1,1 @@
-.wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}.wrap img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(0,20,32,.28))}
+.wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden;transform:none!important}.wrap img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(0,20,32,.28));transform:none!important}
