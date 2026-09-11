@@ -6,9 +6,11 @@ import {extraMethodDetails2} from '@/lib/method-details-extra2';
 import {guideArticles} from '@/lib/guide-articles';
 import {extraGuideArticles} from '@/lib/guide-articles-extra';
 import {extraGuideArticles2} from '@/lib/guide-articles-extra2';
+import {extraGuideArticles3} from '@/lib/guide-articles-extra3';
+import {extraGuideArticles4} from '@/lib/guide-articles-extra4';
 
 const methodDetails={...baseMethodDetails,...extraMethodDetails,...extraMethodDetails2};
-const allGuides=[...guideArticles,...extraGuideArticles,...extraGuideArticles2];
+const allGuides=[...guideArticles,...extraGuideArticles,...extraGuideArticles2,...extraGuideArticles3,...extraGuideArticles4];
 
 export default function sitemap():MetadataRoute.Sitemap{
   const base='https://uolink.vercel.app';
