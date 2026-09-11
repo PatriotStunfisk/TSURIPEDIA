@@ -2,8 +2,9 @@ import Link from 'next/link';
 import {notFound} from 'next/navigation';
 import {methodDetails as baseMethodDetails} from '@/lib/method-details';
 import {extraMethodDetails} from '@/lib/method-details-extra';
+import {extraMethodDetails2} from '@/lib/method-details-extra2';
 
-const methodDetails={...baseMethodDetails,...extraMethodDetails};
+const methodDetails={...baseMethodDetails,...extraMethodDetails,...extraMethodDetails2};
 const TACHIUO_ROD_AMAZON='https://link.amazon/B01XtTirB';
 const amazonSearch=(q:string)=>`https://www.amazon.co.jp/s?k=${encodeURIComponent(q)}`;
 const amazonByMethod:Record<string,{rig:string;bait:string}>={
