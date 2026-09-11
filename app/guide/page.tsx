@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import {guideArticles} from '@/lib/guide-articles';
 import {extraGuideArticles} from '@/lib/guide-articles-extra';
+import {extraGuideArticles2} from '@/lib/guide-articles-extra2';
 
-const allGuides=[...guideArticles,...extraGuideArticles];
+const allGuides=[...guideArticles,...extraGuideArticles,...extraGuideArticles2];
 const catId=(cat:string)=>`guide-${cat.replace(/[\s・/]/g,'-')}`;
 export const metadata={title:'釣りGUIDE｜疑問から探す実践Q&A',description:'PEは何号？オモリは何g？今月何が釣れる？釣り人が検索しやすい疑問に結論から答えるUOLINKの実践ガイド。'};
 
