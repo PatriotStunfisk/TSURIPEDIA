@@ -1,9 +1,12 @@
 import Link from 'next/link';
 import {notFound} from 'next/navigation';
-import {guideArticles,getGuide} from '@/lib/guide-articles';
+import {guideArticles} from '@/lib/guide-articles';
+import {extraGuideArticles} from '@/lib/guide-articles-extra';
 
+const allGuides=[...guideArticles,...extraGuideArticles];
+const getGuide=(slug:string)=>allGuides.find(x=>x.slug===slug);
 const base='https://uolink.vercel.app';
-export function generateStaticParams(){return guideArticles.map(a=>({slug:a.slug}))}
+export function generateStaticParams(){return allGuides.map(a=>({slug:a.slug}))}
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const a=getGuide(slug);if(!a)return {};return {title:a.title,description:a.summary,alternates:{canonical:`/guide/${slug}`},keywords:[a.query,a.category,'釣り','UOLINK','ウオリンク'],openGraph:{title:`${a.title}｜UOLINK（ウオリンク）`,description:a.summary,url:`${base}/guide/${slug}`,type:'article',siteName:'UOLINK（ウオリンク）',locale:'ja_JP'}}}
 
 export default async function GuideArticlePage({params}:{params:Promise<{slug:string}>}){
