@@ -26,9 +26,11 @@ export default function FishVisual({slug,name,className=''}:Props){
           ? '/images/fish/buri-real-v2.png?v=20260911-2'
           : slug==='kisu'
             ? '/images/fish/kisu-real-v2.png?v=20260911-1'
-            : v2Fish.has(slug)
-              ? `/images/fish/${slug}-real-v2.png`
-              : `/images/fish/${slug}-real.png`;
+            : slug==='kasago'
+              ? '/images/fish/kasago-real-v2.png?v=20260911-1'
+              : v2Fish.has(slug)
+                ? `/images/fish/${slug}-real-v2.png`
+                : `/images/fish/${slug}-real.png`;
 
   useEffect(()=>{
     setFailed(false);
