@@ -1,4 +1,5 @@
 import type {Metadata} from 'next';
+import {Analytics} from '@vercel/analytics/next';
 import './globals.css';
 import Header from '@/components/Header';import Footer from '@/components/Footer';
 import FishPageEnhancer from '@/components/FishPageEnhancer';
@@ -23,4 +24,4 @@ export const metadata:Metadata={
   robots:{index:true,follow:true,googleBot:{index:true,follow:true}}
 };
 
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="ja"><body><Header/><FishPageEnhancer/><main>{children}</main><Footer/></body></html>}
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="ja"><body><Header/><FishPageEnhancer/><main>{children}</main><Footer/><Analytics/></body></html>}
