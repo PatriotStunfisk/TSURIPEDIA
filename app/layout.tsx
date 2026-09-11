@@ -12,7 +12,6 @@ export const metadata:Metadata={
   description:'UOLINK（ウオリンク）は、魚図鑑・釣り方・釣り場・釣具をつなぐ釣り総合ガイド。タチウオ、マアジ、マダイ、カサゴ、サバなどの旬・生態・仕掛け・釣り方・必要な釣具を分かりやすく紹介します。',
   keywords:['UOLINK','ウオリンク','魚図鑑','釣り方','釣り場','釣具','カサゴ','サバ','タチウオ','マアジ','マダイ','釣り'],
   applicationName:'UOLINK（ウオリンク）',
-  alternates:{canonical:'/'},
   category:'fishing',
   openGraph:{
     title:'UOLINK（ウオリンク）｜魚から、釣りへつながる',
