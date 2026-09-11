@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import {methods} from '@/lib/data';
-import {methodDetails} from '@/lib/method-details';
+import {methodDetails as baseMethodDetails} from '@/lib/method-details';
+import {extraMethodDetails} from '@/lib/method-details-extra';
 export const metadata={title:'釣り方'};
+const methodDetails={...baseMethodDetails,...extraMethodDetails};
 const placeIcon=(p:string)=>p.includes('船')?'🚤':p.includes('堤防')?'⚓':p.includes('川')?'🏞️':'📍';
 const moreMethods=[
  {slug:'tachiuo-tenya-shore',name:'タチウオテンヤ（堤防）',level:'初〜中級',emoji:'🌙',target:'タチウオ',place:'堤防',desc:'キビナゴやドジョウなどを付けた軽量テンヤを投げ、ただ巻きや誘いでタチウオを狙う。'},
