@@ -1,21 +1,30 @@
 'use client';
 
 import {useEffect,useRef,useState} from 'react';
-import type {CSSProperties,KeyboardEvent} from 'react';
+import type {CSSProperties} from 'react';
 
 type Props={slug:string;name:string;className?:string;variant?:'rail'|'inline'};
 type StoredFish={slug:string;name:string;url:string;updatedAt:string};
 
 const keys={favorite:'uolink:favorites',caught:'uolink:caught'} as const;
+const memoryStore:Record<string,Record<string,StoredFish>>={};
 
 function readStore(key:string):Record<string,StoredFish>{
- try{return JSON.parse(localStorage.getItem(key)||'{}')||{}}catch{return {}}
+ try{
+  const raw=window.localStorage.getItem(key);
+  if(raw)return JSON.parse(raw)||{};
+ }catch{}
+ return memoryStore[key]||{};
+}
+function writeStore(key:string,store:Record<string,StoredFish>){
+ memoryStore[key]=store;
+ try{window.localStorage.setItem(key,JSON.stringify(store))}catch{}
 }
 function hasItem(key:string,slug:string){return !!readStore(key)[slug]}
 function toggleItem(key:string,fish:StoredFish){
- const store=readStore(key);
+ const store={...readStore(key)};
  if(store[fish.slug])delete store[fish.slug];else store[fish.slug]=fish;
- localStorage.setItem(key,JSON.stringify(store));
+ writeStore(key,store);
  window.dispatchEvent(new CustomEvent('uolink:collection-change'));
  return !!store[fish.slug];
 }
@@ -54,10 +63,9 @@ export default function FishActions({slug,name,className='',variant='rail'}:Prop
   window.setTimeout(()=>window.print(),120);
   window.setTimeout(()=>{if(document.body.classList.contains('uolink-pdf-mode'))restore()},5000);
  };
- const keyAction=(fn:()=>void|Promise<void>)=>(e:KeyboardEvent<HTMLSpanElement>)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();void fn()}};
  const inline=variant==='inline';
  const wrapStyle:CSSProperties=inline?{display:'grid',gridTemplateColumns:'repeat(4,minmax(0,1fr))',gap:'0',margin:'16px 0 20px',background:'#061827',border:'1px solid #173c50',borderRadius:'16px',overflow:'hidden',color:'#fff'}:{};
- const itemStyle:CSSProperties=inline?{display:'grid',placeItems:'center',minHeight:'72px',borderRight:'1px solid #173c50',background:'#061827',fontSize:'20px',cursor:'pointer',position:'relative'}:{cursor:'pointer',position:'relative',background:'transparent',color:'inherit'};
+ const itemStyle:CSSProperties=inline?{display:'grid',placeItems:'center',minHeight:'72px',border:'0',borderRight:'1px solid #173c50',background:'#061827',color:'#fff',fontSize:'20px',cursor:'pointer',position:'relative',padding:'0',WebkitTapHighlightColor:'transparent',touchAction:'manipulation'}:{border:'0',padding:'0',cursor:'pointer',position:'relative',background:'transparent',color:'inherit',font:'inherit',WebkitTapHighlightColor:'transparent',touchAction:'manipulation'};
  const lastItemStyle:CSSProperties=inline?{...itemStyle,borderRight:'0'}:itemStyle;
  const smallStyle:CSSProperties=inline?{display:'block',fontSize:'9px',marginTop:'4px',color:'#afc9d7'}:{};
  const activeStyle=(on:boolean):CSSProperties=>on?{...itemStyle,background:'#1687e8',color:'#fff'}:{...itemStyle,background:inline?'#061827':'transparent',color:'inherit'};
@@ -65,10 +73,10 @@ export default function FishActions({slug,name,className='',variant='rail'}:Prop
   <style>{`@media print{body.uolink-pdf-mode{background:#fff!important;color:#132333!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}body.uolink-pdf-mode .header,body.uolink-pdf-mode .footer,body.uolink-pdf-mode [aria-label$="のアクション"],body.uolink-pdf-mode .nextActions{display:none!important}body.uolink-pdf-mode .section{max-width:none!important;padding:18px 22px!important}body.uolink-pdf-mode .pageTop{padding-top:0!important}body.uolink-pdf-mode article,body.uolink-pdf-mode aside,body.uolink-pdf-mode section{break-inside:avoid-page}body.uolink-pdf-mode a{text-decoration:none!important;color:inherit!important}.uolink-print-head{display:flex!important;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #1687e8;padding:0 0 12px;margin:0 0 18px}.uolink-print-head b{font-size:24px;color:#061827}.uolink-print-head span{font-size:12px;color:#667786}}`}</style>
   <div className="uolink-print-head" style={{display:'none'}}><b>UOLINK 魚図鑑</b><span>{name} / {new Date().toLocaleDateString('ja-JP')}</span></div>
   <div className={className} style={wrapStyle} aria-label={`${name}のアクション`}>
-   <span role="button" tabIndex={0} aria-pressed={favorite} aria-label={`${name}をお気に入り${favorite?'から外す':'に追加'}`} onClick={toggleFavorite} onKeyDown={keyAction(toggleFavorite)} style={activeStyle(favorite)}>{favorite?'♥':'♡'}<small style={smallStyle}>お気に入り</small></span>
-   <span role="button" tabIndex={0} aria-pressed={caught} aria-label={`${name}の釣果記録を${caught?'解除':'追加'}`} onClick={toggleCaught} onKeyDown={keyAction(toggleCaught)} style={activeStyle(caught)}>🎣<small style={smallStyle}>釣った！</small></span>
-   <span role="button" tabIndex={0} aria-label={`${name}をシェア`} onClick={()=>void share()} onKeyDown={keyAction(share)} style={itemStyle}>↗<small style={smallStyle}>シェア</small></span>
-   <span role="button" tabIndex={0} aria-label={`${name}をPDFで保存`} onClick={savePdf} onKeyDown={keyAction(savePdf)} style={lastItemStyle}>📄<small style={smallStyle}>PDF保存</small></span>
+   <button type="button" aria-pressed={favorite} aria-label={`${name}をお気に入り${favorite?'から外す':'に追加'}`} onClick={toggleFavorite} style={activeStyle(favorite)}>{favorite?'♥':'♡'}<small style={smallStyle}>お気に入り</small></button>
+   <button type="button" aria-pressed={caught} aria-label={`${name}の釣果記録を${caught?'解除':'追加'}`} onClick={toggleCaught} style={activeStyle(caught)}>🎣<small style={smallStyle}>釣った！</small></button>
+   <button type="button" aria-label={`${name}をシェア`} onClick={()=>void share()} style={itemStyle}>↗<small style={smallStyle}>シェア</small></button>
+   <button type="button" aria-label={`${name}をPDFで保存`} onClick={savePdf} style={lastItemStyle}>📄<small style={smallStyle}>PDF保存</small></button>
    {notice&&<span aria-live="polite" style={{position:'fixed',left:'50%',bottom:'24px',transform:'translateX(-50%)',zIndex:1000,background:'#061827',color:'#fff',padding:'10px 14px',borderRadius:'999px',fontSize:'12px',whiteSpace:'nowrap',boxShadow:'0 8px 30px #0003'}}>{notice}</span>}
   </div>
  </>
