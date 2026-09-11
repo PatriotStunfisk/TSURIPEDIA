@@ -5,8 +5,9 @@ import {extraGuideArticles2} from '@/lib/guide-articles-extra2';
 import {extraGuideArticles3} from '@/lib/guide-articles-extra3';
 import {extraGuideArticles4} from '@/lib/guide-articles-extra4';
 import {extraGuideArticles5} from '@/lib/guide-articles-extra5';
+import {extraGuideArticles6} from '@/lib/guide-articles-extra6';
 
-const allGuides=[...guideArticles,...extraGuideArticles,...extraGuideArticles2,...extraGuideArticles3,...extraGuideArticles4,...extraGuideArticles5];
+const allGuides=[...guideArticles,...extraGuideArticles,...extraGuideArticles2,...extraGuideArticles3,...extraGuideArticles4,...extraGuideArticles5,...extraGuideArticles6];
 const catId=(cat:string)=>`guide-${cat.replace(/[\s・/]/g,'-')}`;
 export const metadata={title:'釣りGUIDE｜疑問から探す実践Q&A',description:'PEは何号？オモリは何g？今月何が釣れる？釣り人が検索しやすい疑問に結論から答えるUOLINKの実践ガイド。'};
 
