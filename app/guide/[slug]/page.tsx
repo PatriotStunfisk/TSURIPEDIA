@@ -5,8 +5,9 @@ import {extraGuideArticles} from '@/lib/guide-articles-extra';
 import {extraGuideArticles2} from '@/lib/guide-articles-extra2';
 import {extraGuideArticles3} from '@/lib/guide-articles-extra3';
 import {extraGuideArticles4} from '@/lib/guide-articles-extra4';
+import {extraGuideArticles5} from '@/lib/guide-articles-extra5';
 
-const allGuides=[...guideArticles,...extraGuideArticles,...extraGuideArticles2,...extraGuideArticles3,...extraGuideArticles4];
+const allGuides=[...guideArticles,...extraGuideArticles,...extraGuideArticles2,...extraGuideArticles3,...extraGuideArticles4,...extraGuideArticles5];
 const getGuide=(slug:string)=>allGuides.find(x=>x.slug===slug);
 const compact=(text:string)=>text.replace(/となります。/g,'となる。').replace(/になります。/g,'になる。').replace(/できます。/g,'できる。').replace(/使えます。/g,'使える。').replace(/狙えます。/g,'狙える。').replace(/変わります。/g,'変わる。').replace(/あります。/g,'ある。').replace(/重要です。/g,'重要。').replace(/基本です。/g,'基本。').replace(/目安です。/g,'目安。').replace(/おすすめです。/g,'おすすめ。').replace(/安心です。/g,'安心。').replace(/有効です。/g,'有効。').replace(/必要です。/g,'必要。');
 const base='https://uolink.vercel.app';
@@ -24,7 +25,10 @@ const categoryAdvice:Record<string,{title:string;body:string;points:string[]}>= 
  'メバル':{title:'表層から探る',body:'夜は浮いている個体も多い。表層→中層→底の順。',points:['スローただ巻き','釣れたレンジを再現','風なら少し重く']},
  'サワラ':{title:'歯対策と点検',body:'高速巻き後はリーダーと金具の傷を確認。',points:['一定の高速巻き','リーダー先端確認','フック・リングも点検']},
  'ヒラメ':{title:'地形と移動を優先',body:'離岸流・ブレイク・ベイトを探しながら歩く。',points:['波の変化を見る','扇状に投げる','反応なければ移動']},
- '初心者':{title:'安全と扱いやすさ優先',body:'専用品を増やす前に安全装備と予備仕掛け。',points:['ライフジャケット','ハサミ・プライヤー','予備仕掛け']}
+ '初心者':{title:'安全と扱いやすさ優先',body:'専用品を増やす前に安全装備と予備仕掛け。',points:['ライフジャケット','ハサミ・プライヤー','予備仕掛け']},
+ '釣行準備':{title:'釣行前に先に確認すること',body:'釣れるかどうか以前に、安全に釣りが成立する条件を確認。風・波・雷・足場・現地ルールの順で見る。',points:['風速だけでなく風向きも確認','雷予報があれば無理をしない','帰宅までの保冷と装備を準備']},
+ '釣具・仕掛け':{title:'数字は釣り方とバランスで決める',body:'PE号数、リーダー、リール番手は単独で決めず、対象魚・ロッド・ルアー重量・釣り場をセットで合わせる。',points:['一番弱い部分を作らない','ロッド適合負荷を超えない','ノットは強度より再現性を優先']},
+ '魚の扱い':{title:'釣った後は「早く冷やす」が基本',body:'締め方に迷っても、鮮度を落とさない共通点は低温維持。魚種とサイズに合わせて処理し、帰宅まで冷却を切らさない。',points:['小型魚は素早く氷締め','大型魚は血抜き後に冷却','溶けた真水へ長時間浸けない']}
 };
 
 export function generateStaticParams(){return allGuides.map(a=>({slug:a.slug}))}
