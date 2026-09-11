@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import {notFound} from 'next/navigation';
-import {methodDetails} from '@/lib/method-details';
+import {methodDetails as baseMethodDetails} from '@/lib/method-details';
+import {extraMethodDetails} from '@/lib/method-details-extra';
 
+const methodDetails={...baseMethodDetails,...extraMethodDetails};
 const TACHIUO_ROD_AMAZON='https://link.amazon/B01XtTirB';
 const amazonSearch=(q:string)=>`https://www.amazon.co.jp/s?k=${encodeURIComponent(q)}`;
 const amazonByMethod:Record<string,{rig:string;bait:string}>={
