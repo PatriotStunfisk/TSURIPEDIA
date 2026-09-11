@@ -21,8 +21,7 @@ export default function LaunchFishExtras({slug,name}:{slug:string;name:string}){
         <aside><span>TACKLE GUIDE</span><h2>釣り方別の基本タックル</h2><h3>サビキ</h3><p>磯竿・万能竿＋スピニングリール。サビキ仕掛け、コマセカゴ、アミエビを用意。</p><h3>アジング</h3><p>軽量アジングロッド＋小型スピニング。細いラインにジグヘッド＋ワームが基本。</p><h3>船</h3><p>船宿指定の竿・リール・仕掛け・オモリを優先。地域や水深で仕様差が大きいため、予約時の確認が確実です。</p><Link href="/gear" className="gearCta">アジ釣りの道具を見る →</Link></aside>
       </section>
       <section className="detailGrid">
-        <article><span>TABLE GUIDE</span><h2>マアジは食べ方の幅も広い</h2><p>刺身・たたき・なめろう・フライ・南蛮漬けまで使いやすい魚です。脂の乗った良型は生食、数釣りした小型は南蛮漬けやフライにも向きます。</p><div className="chips"><span>刺身</span><span>たたき</span><span>なめろう</span><span>アジフライ</span><span>南蛮漬け</span></div></article>
-        <aside><span>IDENTIFICATION TIP</span><h2>「ゼイゴ」を見て覚える</h2><p>尾びれの付け根付近に並ぶ硬いウロコ「ゼイゴ」はアジ類を覚える代表的なポイント。体側の線や体形と合わせて観察すると、図鑑を見る楽しさが増します。</p></aside>
+        <article style={{gridColumn:'1 / -1'}}><span>IDENTIFICATION TIP</span><h2>「ゼイゴ」を見て覚える</h2><p>尾びれの付け根付近に並ぶ硬いウロコ「ゼイゴ」はアジ類を覚える代表的なポイント。体側の線や体形と合わせて観察すると、図鑑を見る楽しさが増します。</p></article>
       </section>
     </>}
     <section className="detailGrid">
