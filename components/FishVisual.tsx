@@ -20,9 +20,11 @@ export default function FishVisual({slug,name,className=''}:Props){
     ? '/images/fish/tachiuo-real-v2.png'
     : slug==='madai'
       ? '/images/fish/madai-real-v2.png'
-      : v2Fish.has(slug)
-        ? `/images/fish/${slug}-real-v2.png`
-        : `/images/fish/${slug}-real.png`;
+      : slug==='saba'
+        ? '/images/fish/saba-real-v2-new.png'
+        : v2Fish.has(slug)
+          ? `/images/fish/${slug}-real-v2.png`
+          : `/images/fish/${slug}-real.png`;
 
   useEffect(()=>{
     setFailed(false);
@@ -53,6 +55,6 @@ export default function FishVisual({slug,name,className=''}:Props){
   },[slug]);
 
   return <div className={`${s.wrap} ${className}`}>
-    {!failed?<img src={src} alt={`${name}の図鑑画像`} onError={()=>setFailed(true)}/>:<FishArt slug={slug} label={name}/>} 
+    {!failed?<img src={src} alt={`${name}の図鑑画像`} width={slug==='saba'?1891:undefined} height={slug==='saba'?831:undefined} onError={()=>setFailed(true)}/>:<FishArt slug={slug} label={name}/>} 
   </div>
 }
