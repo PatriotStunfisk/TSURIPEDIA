@@ -19,7 +19,7 @@ export const metadata={title:'釣りGUIDE｜疑問から探す実践Q&A',descrip
 
 export default function GuidePage(){
  const cats=[...new Set(allGuides.map(a=>a.category))];
- return <div className="section pageTop">
+ return <div id="top" className="section pageTop">
   <div className="pageHero"><span>UOLINK GUIDE</span><h1>釣りGUIDE</h1><p>「何号？」「何g？」「いつ釣れる？」を、まず結論から。魚図鑑と釣り方ページにつながる実践Q&amp;A。</p></div>
 
   <nav aria-label="釣りGUIDEの目次" style={{margin:'24px 0 38px',padding:'22px',borderRadius:20,background:'#eef7fb',border:'1px solid #d8eaf3'}}>
