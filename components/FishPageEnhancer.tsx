@@ -11,6 +11,11 @@ const madaiDishes=[
   ['/images/fish/madai-ushiojiru.jpg','潮汁'],
 ] as const;
 const fishNames:Record<string,string>={tachiuo:'タチウオ',aji:'マアジ',saba:'サバ',buri:'ブリ',kisu:'キス',kasago:'カサゴ',madai:'マダイ'};
+const primaryMethod:Record<string,string>={
+  tachiuo:'tachiuo-tenya',aji:'sabiki',saba:'sabiki',buri:'nomase',kisu:'choinage',kasago:'ana',madai:'tai-rubber',
+  kawahagi:'kawahagi',hirame:'nomase',aoriika:'eging',sawara:'blade-jig',hamachi:'shore-jigging',mebaru:'mebaring',
+  madako:'tako-egi',chinu:'fukase',unagi:'bukkomi'
+};
 
 function setActive(el:HTMLElement,on:boolean){
   el.style.background=on?'#1687e8':'';
@@ -25,6 +30,13 @@ export default function FishPageEnhancer(){
     const slug=pathname.split('/')[2]||'';
     const fishName=fishNames[slug]||document.querySelector('main h1')?.textContent?.trim()||'魚';
     const cleanups:(()=>void)[]=[];
+
+    // 魚ページから一覧ページへ移るリンクは、その魚・代表釣法の位置へ直接ジャンプさせる。
+    document.querySelectorAll<HTMLAnchorElement>('main a[href]').forEach(a=>{
+      const raw=a.getAttribute('href')||'';
+      if(raw==='/gear')a.setAttribute('href',`/gear#${slug}`);
+      if(raw==='/methods'&&primaryMethod[slug])a.setAttribute('href',`/methods#${primaryMethod[slug]}`);
+    });
 
     document.querySelectorAll<HTMLElement>('main [class*="tools"]').forEach(tools=>{
       const buttons=Array.from(tools.children).filter((x):x is HTMLElement=>x instanceof HTMLElement);
