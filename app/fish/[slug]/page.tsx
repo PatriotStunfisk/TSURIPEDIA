@@ -1,6 +1,5 @@
 import {notFound} from 'next/navigation';
 import Link from 'next/link';
-import FishArt from '@/components/FishArt';
 import FishVisual from '@/components/FishVisual';
 import FishActions from '@/components/FishActions';
 import LaunchFishExtras from '@/components/LaunchFishExtras';
@@ -70,7 +69,7 @@ function MadaiPage(){
 
 export default async function Page({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;const f=getFish(slug);if(!f)notFound();if(slug==='tachiuo')return <TachiuoPage/>;if(slug==='aji')return <AjiPage/>;if(slug==='madai')return <MadaiPage/>;const d=fishDetails[slug];
- return <div className="section pageTop"><div className="breadcrumb"><Link href="/">ホーム</Link> / <Link href="/fish">魚図鑑</Link> / {f.name}</div><section className="fishDetailHero"><div className="fishTitle"><span>FISH No.{String(fish.indexOf(f)+1).padStart(3,'0')}</span><h1>{f.name}</h1><p>{f.en}</p><i>{f.scientific}</i><div className="chips"><span>旬 {f.season}</span><span>{'★'.repeat(f.difficulty)}{'☆'.repeat(5-f.difficulty)}</span><span>⚠ {f.danger}</span></div></div><div className="fallbackViewer"><FishArt slug={f.slug} label={`${f.name} 2D illustration`}/><small>2D図鑑イラスト</small></div></section>
+ return <div className={`${t.genericPage} section pageTop`}><div className="breadcrumb"><Link href="/">ホーム</Link> / <Link href="/fish">魚図鑑</Link> / {f.name}</div><section className="fishDetailHero"><div className="fishTitle"><span>FISH No.{String(fish.indexOf(f)+1).padStart(3,'0')}</span><h1>{f.name}</h1><p>{f.en}</p><i>{f.scientific}</i><div className="chips"><span>旬 {f.season}</span><span>{'★'.repeat(f.difficulty)}{'☆'.repeat(5-f.difficulty)}</span><span>⚠ {f.danger}</span></div></div><div className="fallbackViewer"><FishVisual slug={f.slug} name={f.name}/><small>2D図鑑イラスト</small></div></section>
  <FishActions slug={slug} name={f.name} variant="inline"/>
  <section className="factsGrid"><article><span>サイズ</span><b>{f.size}</b></article><article><span>水深</span><b>{f.depth}</b></article><article><span>主なエリア</span><b>{f.areas.join('・')}</b></article><article><span>おすすめ</span><b>{f.beginner?'初心者にもおすすめ':'経験者向け'}</b></article></section>
  <section className="detailGrid"><article><span>ABOUT</span><h2>{f.name}ってどんな魚？</h2><p>{f.desc}</p>{d&&<><h3>体の特徴</h3><p>{d.body}</p><h3>釣れる時期</h3><p>{d.seasonNote}</p></>}<div className="months">{Array.from({length:12},(_,i)=>i+1).map(m=><b className={f.months.includes(m)?'on':''} key={m}>{m}月</b>)}</div></article><aside><span>HOW TO CATCH</span><h2>この魚を釣る</h2>{f.methods.map((m,i)=><Link href="/methods" className="methodLink" key={m}><strong>0{i+1}</strong><div><b>{m}</b><small>釣り方・仕掛けを見る</small></div><em>→</em></Link>)}<Link href="/gear" className="gearCta">必要な釣具をまとめて見る →</Link></aside></section>
