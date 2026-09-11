@@ -22,7 +22,7 @@ const targets=[
  {slug:'aoriika',fish:'アオリイカ',icon:'🦑',href:'/fish/aoriika',routes:[{place:'⚓ 岸',method:'/methods#eging',name:'エギング',items:'8〜9ftエギング竿・2500〜3000番・PE0.6〜0.8号・リーダー1.75〜2.5号・エギ2.5〜3.5号'},{place:'🚤 船',method:'/methods#tiprun',name:'ティップラン',items:'専用竿・2500番・PE0.6〜0.8号・リーダー2号前後・ティップラン用エギ30〜60g'}]}
 ];
 
-export default function Page(){return <div className="section pageTop"><style>{`html{scroll-padding-top:96px}`}</style>
+export default function Page(){return <div className="section pageTop"><style>{`html{scroll-padding-top:96px}`}</style><script dangerouslySetInnerHTML={{__html:`window.addEventListener('DOMContentLoaded',function(){if(location.hash)return;var m=document.referrer.match(/\\/fish\\/([^/?#]+)/);if(!m)return;var el=document.getElementById(m[1]);if(el)setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'})},60);});`}}/>
  <div className="pageHero"><span>FISHING GEAR</span><h1>釣具は「魚 × 釣り方」で選ぶ。</h1><p>ロッド、リール、ライン、仕掛けをばらばらに選ばず、狙う魚と釣り方から一式で考えるページです。</p></div>
  <div className="adNotice">このページにはAmazonアソシエイト等のアフィリエイトリンクを含みます。</div>
 
