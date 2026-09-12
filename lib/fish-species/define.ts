@@ -4,6 +4,9 @@ export function defineFishSpecies(definition:FishSpeciesDefinition):FishSpeciesD
   const {base,cooking,tableGuide}=definition;
   if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(base.slug))throw new Error('Invalid fish slug: '+base.slug);
   const recipes=cooking?.recipes??[];
+  for(const recipe of recipes){
+    if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(recipe.slug))throw new Error('Invalid recipe slug: '+base.slug+'/'+recipe.slug);
+  }
   const recipeSlugs=new Set(recipes.map(recipe=>recipe.slug));
   if(recipeSlugs.size!==recipes.length)throw new Error('Duplicate recipe slug: '+base.slug);
   for(const dish of tableGuide?.dishes??[]){

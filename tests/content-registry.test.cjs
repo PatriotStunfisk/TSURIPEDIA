@@ -131,3 +131,18 @@ test('profile validation prevents duplicate fish, recipes and broken recipe card
   assert.throws(()=>defineFishSpecies({base,tableGuide:{lead:'',dishes:[{name:'test',desc:'test',recipe:'missing'}]}}),/Unknown recipe/);
   assert.throws(()=>defineFishSpecies({base:{...base,slug:'Bad/URL'}}),/Invalid fish slug/);
 });
+
+test('every catalog and detail entry is derived from a species profile',()=>{
+  assert.deepEqual(fish.map(f=>f.slug),fishSpecies.map(s=>s.base.slug));
+  for(let i=0;i<fish.length;i++)assert.equal(fish[i],fishSpecies[i].base);
+  assert.deepEqual(Object.keys(details),fishSpecies.filter(s=>s.detail).map(s=>s.base.slug));
+  for(const species of fishSpecies)assert.equal(details[species.base.slug],species.detail);
+});
+test('recipe slugs cannot create nested or malformed routes',()=>{
+  const base={...fish[0],slug:'test-profile'};
+  const recipe={name:'test',summary:'test',ingredients:[],steps:[],tips:[]};
+  for(const slug of ['', '../recipe', 'nested/recipe', 'Recipe', 'recipe?query', 'recipe#anchor']){
+    assert.throws(()=>defineFishSpecies({base,cooking:{prep:[],recipes:[{...recipe,slug}]}}),/Invalid recipe slug/);
+  }
+  assert.doesNotThrow(()=>defineFishSpecies({base,cooking:{prep:[],recipes:[{...recipe,slug:'valid-recipe-2'}]}}));
+});
