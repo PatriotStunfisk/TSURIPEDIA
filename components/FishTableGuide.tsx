@@ -1,0 +1,39 @@
+type Dish={name:string;src?:string;emoji?:string;desc:string};
+
+const guides:Record<string,{lead:string;dishes:Dish[]}>= {
+ madai:{lead:'上品な白身は生食から汁物まで幅広く、一尾まるごと楽しめる。',dishes:[
+  {name:'刺身',src:'/images/fish/madai-sashimi.jpg',desc:'透明感のある白身と上品な甘みを楽しめる王道。'},
+  {name:'炙り',src:'/images/fish/madai-aburi.jpg',desc:'皮目を香ばしく炙ると旨味と香りが引き立つ。'},
+  {name:'鯛めし',src:'/images/fish/madai-taimeshi.jpg',desc:'骨やアラの出汁まで使えるマダイらしい定番料理。'},
+  {name:'潮汁',src:'/images/fish/madai-ushiojiru.jpg',desc:'アラから出る上品な出汁をシンプルに味わえる。'}]},
+ buri:{lead:'脂の乗りを生かす刺身から、火を入れて旨味を引き出す料理まで相性が良い。',dishes:[
+  {name:'刺身',emoji:'🍣',desc:'脂の乗った身をそのまま味わう定番。腹身は特に濃厚。'},
+  {name:'ぶりしゃぶ',emoji:'🍲',desc:'薄切りをさっと湯にくぐらせ、脂を軽く落として楽しむ。'},
+  {name:'照り焼き',emoji:'🍱',desc:'甘辛いタレと脂の強い身がよく合う王道料理。'},
+  {name:'ぶり大根',emoji:'🥘',desc:'アラの旨味を大根に含ませる冬の定番。'}]},
+ saba:{lead:'脂と旨味が強く、締める・焼く・煮ることでサバらしさが際立つ。',dishes:[
+  {name:'しめ鯖',emoji:'🍣',desc:'酢で締めて脂の甘みを引き立てる代表的な食べ方。'},
+  {name:'塩焼き',emoji:'🐟',desc:'皮を香ばしく焼き、脂の旨味をシンプルに楽しむ。'},
+  {name:'味噌煮',emoji:'🥘',desc:'濃厚な味噌だれがサバの強い旨味と好相性。'},
+  {name:'竜田揚げ',emoji:'🍗',desc:'下味をつけて揚げると香ばしく、食べやすい。'}]},
+ kisu:{lead:'クセの少ない繊細な白身。軽い火入れや揚げ物で上品な甘みが出る。',dishes:[
+  {name:'天ぷら',emoji:'🍤',desc:'ふわっとした白身を楽しめるシロギス料理の王道。'},
+  {name:'刺身',emoji:'🍣',desc:'良型で鮮度が良ければ上品な甘みを生食で楽しめる。'},
+  {name:'塩焼き',emoji:'🐟',desc:'良型はシンプルな塩焼きでも身の香りが立つ。'},
+  {name:'南蛮漬け',emoji:'🥗',desc:'小型も骨ごと食べやすく、数釣りした時にも向く。'}]},
+ kasago:{lead:'旨味の濃い白身と良い出汁が魅力。身だけでなくアラまで使いやすい。',dishes:[
+  {name:'煮付け',emoji:'🥘',desc:'甘辛く煮ると身離れがよく、濃い旨味を楽しめる。'},
+  {name:'唐揚げ',emoji:'🍗',desc:'小〜中型は香ばしく揚げるとヒレ周りまで楽しめる。'},
+  {name:'刺身',emoji:'🍣',desc:'良型の新鮮な個体は締まった白身と甘みが魅力。'},
+  {name:'味噌汁',emoji:'🍲',desc:'アラから濃い出汁が出るため汁物との相性が抜群。'}]}
+};
+
+export default function FishTableGuide({slug,name,taste}:{slug:string;name:string;taste?:string}){
+ const guide=guides[slug];if(!guide)return null;
+ return <section className="fishTableGuide"><div className="fishTableHead"><div><span>TABLE GUIDE</span><h2>{name}をおいしく食べる</h2></div><p>{taste} {guide.lead}</p></div><div className="fishDishGrid">{guide.dishes.map(x=><article key={x.name} className="fishDishCard"><div className="fishDishPhoto">{x.src?<img src={x.src} alt={`${name}の${x.name}`}/>:<div className="fishDishFallback" role="img" aria-label={`${name}の${x.name}`}>{x.emoji}</div>}</div><div><b>{x.name}</b><p>{x.desc}</p></div></article>)}</div><style>{`
+ .fishTableGuide{margin-top:34px;padding:30px;border-radius:24px;background:#0d2d40;color:#fff;border:1px solid #21475c}
+ .fishTableHead{display:grid;grid-template-columns:minmax(240px,.8fr) 1.2fr;gap:28px;align-items:end;margin-bottom:22px}.fishTableHead span{font-size:11px;font-weight:900;letter-spacing:1.8px;color:#69c9f5}.fishTableHead h2{font-size:clamp(24px,3vw,34px);margin:5px 0 0}.fishTableHead p{margin:0;line-height:1.85;color:#d9e8ef}
+ .fishDishGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.fishDishCard{overflow:hidden;border-radius:17px;background:#fff;color:#173449}.fishDishPhoto{height:138px;background:linear-gradient(145deg,#e8f3f7,#c5dce7);overflow:hidden}.fishDishPhoto img{width:100%;height:100%;object-fit:cover;display:block}.fishDishFallback{width:100%;height:100%;display:grid;place-items:center;font-size:62px;background:radial-gradient(circle at 50% 45%,#fff 0 30%,#e9f2f5 31% 58%,#d7e6ec 59%)}.fishDishCard>div:last-child{padding:15px}.fishDishCard b{font-size:18px}.fishDishCard p{font-size:12px;line-height:1.65;margin:6px 0 0;color:#657680}
+ @media(max-width:800px){.fishTableGuide{padding:22px 16px}.fishTableHead{grid-template-columns:1fr;gap:10px}.fishDishGrid{grid-template-columns:repeat(2,1fr)}.fishDishPhoto{height:120px}}
+ `}</style></section>
+}
