@@ -89,7 +89,7 @@ const {defineFishSpecies,uniqueFishSlugs,getSpeciesTableGuide}=require('../lib/f
 const details=require('../lib/fish-details.ts').fishDetails;
 const featured=require('../lib/launch-fish.ts');
 const migratedSnapshots={
-  fish:fish.filter(f=>originalFish.includes(f.slug)).map(f=>{if(!['kawahagi','aoriika','mebaru'].includes(f.slug))return f;const {methodSlugs,relatedSlugs,...original}=f;return original}),
+  fish:fish.filter(f=>originalFish.includes(f.slug)).map(f=>{if(!['kawahagi','aoriika','mebaru','hirame','sawara','madako'].includes(f.slug))return f;const {methodSlugs,relatedSlugs,guideSlugs,...original}=f;return original}),
   details:Object.fromEntries(Object.entries(details).filter(([slug])=>originalFish.includes(slug))),
   launch:Object.fromEntries(featuredFish.map(slug=>[slug,featured.launchFish[slug]])),
   launchSlugs:featured.launchFishSlugs.filter(slug=>featuredFish.includes(slug)),
@@ -190,3 +190,27 @@ test('editing a recipe identity updates editorial cards without duplicate edits'
 });
 
 test('the established seven species retain all user-authored recipes',()=>assert.equal(digest(cookingFish.filter(f=>featuredFish.includes(f.slug))),'a38dc13f0b5bb83190d62d7b3a22799f5490d37cfc8c0cccdf9560aab8ac8506'));
+
+
+test('new full profiles keep four original recipe assets, guides and method routes',()=>{
+ for(const slug of ['hirame','sawara','madako']){
+  const f=registry.getFishProfile(slug),c=getFishConnections(slug);
+  assert.ok(f.media.image);assert.equal(f.cooking.recipes.length,4);assert.ok(f.launch.identify.length>=3);
+  assert.ok(c.methods.length);assert.ok(c.guides.length);assert.ok(c.related.length);
+  for(const r of f.cooking.recipes){assert.ok(r.steps.length>=4);assert.ok(r.ingredients.length>=3);assert.ok(fs.existsSync(path.join(root,'public',r.image)));}
+ }
+});
+test('map IDs and relationships resolve; closed sites are not recommended',()=>{
+ const {fishingMapEntries,getSpotsForFish,getSpotsForMethod}=require('../lib/fishing-map-data.ts');
+ unique(fishingMapEntries.map(e=>e.slug),'spot');
+ for(const e of fishingMapEntries){
+  for(const slug of e.fishSlugs??[])assert.ok(registry.getFishProfile(slug),slug);
+  for(const slug of e.methodSlugs??[])assert.ok(methodDetails[slug],slug);
+  for(const slug of e.guideSlugs??[])assert.ok(allGuides.some(g=>g.slug===slug),slug);
+  for(const source of e.sources??[])assert.equal(new URL(source.url).protocol,'https:');
+ }
+ for(const slug of ['hirame','sawara','madako'])assert.ok(getSpotsForFish(slug).length);
+ assert.ok(!getSpotsForFish('aji').some(e=>e.slug==='nanko-fishing-park'));
+ assert.ok(!getSpotsForMethod('sabiki').some(e=>e.closed));
+ assert.ok(fishingMapEntries.find(e=>e.slug==='miyazu-sea-fishing').closed);
+});

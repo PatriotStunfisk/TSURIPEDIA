@@ -1,3 +1,4 @@
+import {getFishConnections} from '@/lib/fish-connections';
 import Link from 'next/link';
 import TachiuoSchool from './TachiuoSchool';
 import {getFishLaunch} from '@/lib/fish-registry';
@@ -5,6 +6,9 @@ import {getFishLaunch} from '@/lib/fish-registry';
 export default function LaunchFishExtras({slug,name}:{slug:string;name:string}){
   const x=getFishLaunch(slug);
   if(!x)return null;
+  const links=getFishConnections(slug);
+  const methodLinks=x.methodLinks.length?x.methodLinks:(links?.methods??[]).map(m=>({label:m.name,href:`/methods/${m.slug}`}));
+  const related=x.related.length?x.related:(links?.related??[]).map(f=>f.name);
   return <>
     {slug==='tachiuo'&&<TachiuoSchool/>}
     {slug==='aji'&&<>
@@ -26,10 +30,10 @@ export default function LaunchFishExtras({slug,name}:{slug:string;name:string}){
     </>}
     <section className="detailGrid">
       <article><span>IDENTIFICATION</span><h2>見分けるポイント</h2>{x.identify.map((p,i)=><div className="methodLink" key={p}><strong>{String(i+1).padStart(2,'0')}</strong><div><b>{p}</b></div></div>)}</article>
-      <aside><span>FISHING ROUTE</span><h2>この魚を狙う釣り方</h2>{x.methodLinks.map(m=><Link href={m.href} className="methodLink" key={m.label}><div><b>{m.label}</b><small>仕掛け・手順・コツを見る</small></div><em>→</em></Link>)}<h3>主なエリア</h3><p>{x.spotFocus}</p></aside>
+      <aside><span>FISHING ROUTE</span><h2>この魚を狙う釣り方</h2>{methodLinks.map(m=><Link href={m.href} className="methodLink" key={m.label}><div><b>{m.label}</b><small>仕掛け・手順・コツを見る</small></div><em>→</em></Link>)}<h3>主なエリア</h3><p>{x.spotFocus}</p></aside>
     </section>
     <section className="detailGrid">
-      <article><span>RELATED FISH</span><h2>似ている魚・一緒に覚えたい魚</h2><div className="chips">{x.related.map(v=><span key={v}>{v}</span>)}</div></article>
+      <article><span>RELATED FISH</span><h2>似ている魚・一緒に覚えたい魚</h2><div className="chips">{related.map(v=><span key={v}>{v}</span>)}</div></article>
       <aside><span>UOLINK GUIDE</span><h2>{x.catchPhrase}</h2><p>魚の特徴を知ったら、次は釣り方・釣り場・必要な釣具へ。UOLINKでは図鑑情報を実釣までつなげます。</p><Link href="/spots" className="gearCta">釣れる場所を探す →</Link></aside>
     </section>
   </>

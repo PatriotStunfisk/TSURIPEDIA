@@ -1,3 +1,4 @@
+import {methodDetails} from '@/lib/method-registry';
 import Link from 'next/link';
 import MethodTackle from '@/components/MethodTackle';
 import s from './gear.module.css';
@@ -27,6 +28,7 @@ export default async function Page({searchParams}:{searchParams:Promise<{method?
  <div className="pageHero"><span>FISHING GEAR</span><h1>釣具は「魚 × 釣り方」で選ぶ。</h1><p>ロッド、リール、ライン、仕掛けをばらばらに選ばず、狙う魚と釣り方から一式で考えるページです。</p></div>
  <div className="adNotice">このページにはAmazonアソシエイト等のアフィリエイトリンクを含みます。</div>
 
+ <section className={s.guide}><h2>釣り方から道具一式を選ぶ</h2><div className="chips">{Object.values(methodDetails).map(m=><Link key={m.slug} href={`/gear?method=${m.slug}`}>{m.name}</Link>)}</div></section>
  <MethodTackle slug={typeof query.method==='string'?query.method:''}/><section className={s.guide}><div className={s.guideHead}><small>GEAR BASICS</small><h2>まず押さえる4つ</h2><p>迷ったら「ロッド → リール → ライン → 仕掛け」の順で確認。</p></div><div className={s.basicGrid}>{basics.map(x=><article key={x.title}><span>{x.icon}</span><h3>{x.title}</h3><p>{x.text}</p></article>)}</div></section>
 
  <section className={s.quickTips}><div><b>PE号数の目安</b><span>ライトゲーム 0.3〜0.8号</span><span>タイラバ 0.6〜1号</span><span>青物 2〜5号</span></div><div><b>リーダーの目安</b><span>小物 1.5〜3号</span><span>タイラバ 2〜4号</span><span>青物 6〜14号</span></div><div><b>船釣りで最優先</b><span>船宿指定のオモリ号数</span><span>PE号数</span><span>仕掛けの長さ</span></div></section>

@@ -1,5 +1,5 @@
 export type GuideSection={heading:string;body:string;points?:string[]};
-export type GuideArticle={slug:string;title:string;query:string;summary:string;answer:string;category:string;sections:GuideSection[];related:{label:string;href:string}[]};
+export type GuideArticle={sources?:{label:string;url:string}[];verifiedAt?:string;slug:string;title:string;query:string;summary:string;answer:string;category:string;sections:GuideSection[];related:{label:string;href:string}[]};
 
 export const guideArticles:GuideArticle[]=[
  {slug:'osakabay-september-fish',title:'大阪湾で9月に釣れる魚は？初心者向けに狙い目を整理',query:'大阪湾 9月 釣れる魚',summary:'9月の大阪湾で狙いやすい魚を、堤防・船・初心者向けに整理します。',answer:'9月の大阪湾は、アジ・サバ・タチウオ・ハマチなどの青物が狙いやすい時期です。初心者なら堤防サビキ、夕方以降ならタチウオ、船なら青物やタチウオが有力候補です。',category:'季節・釣り場',sections:[{heading:'堤防で狙いやすい魚',body:'水温がまだ高い9月はベイトとなる小魚が沿岸に入りやすく、アジやサバをサビキで狙いやすい季節です。回遊次第ではハマチなどの青物も岸へ寄ります。',points:['アジ：朝夕のサビキが定番','サバ：群れが入れば連発しやすい','タチウオ：夕まずめ〜夜が中心','ハマチ：ベイト回遊時のショアジギング']},{heading:'初心者なら何を選ぶ？',body:'まず釣果を得たいならサビキがおすすめです。夕方まで釣りをするなら、日中にアジを確保してからタチウオやノマセへつなげる組み立てもできます。'},{heading:'9月の注意点',body:'台風や急な天候変化が増える時期です。風速だけでなく波高、雷、渡船や海釣り施設の営業状況も確認してください。'}],related:[{label:'サビキ釣りを見る',href:'/methods/sabiki'},{label:'タチウオ図鑑',href:'/fish/tachiuo'},{label:'ショアジギングを見る',href:'/methods/shore-jigging'}]},

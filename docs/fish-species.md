@@ -62,3 +62,9 @@
 - 新しい料理カードのための `tableGuide` は不要です。既存の編集用カードでも名前・画像はレシピを正として反映し、説明文だけ保持します。
 - `base.methodSlugs` と必要に応じて `base.guideSlugs`・`base.relatedSlugs` で既存のページへ接続。存在しないリンクは追加しません。
 - 記事・画像・料理の適性を確認してから公開し、魚体画像の種判別に自信がない場合は必要画像として報告します。
+
+## 2026年9月の拡充
+
+ヒラメ・サワラ・マダコを既存slugのまま本格プロフィールへ昇格。各4レシピと魚体画像を追加。`launch.methodLinks` / `launch.related` が空なら、共通の釣法・関連魚から表示を補うため、同じ導線を二重入力する必要はありません。
+
+釣り場は `fishing-map-data.ts` / `fishing-map-expansion.ts` の `fishSlugs`・`methodSlugs` から双方向につなぎます。`closed` の項目は魚・釣法からのおすすめ対象に含めません。`verifiedAt` は公式情報を実際に確認した日とし、`sources` に確認先を保存。地域情報と実際の釣り可能地点・営業中の釣船を区別します。GUIDEの `sources` / `verifiedAt` も同じ方針です。
