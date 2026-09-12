@@ -2,6 +2,7 @@
 import {useEffect,useState} from 'react';
 import {usePathname} from 'next/navigation';
 import FishArt from './FishArt';
+import {establishedFishImages} from '@/lib/fish-images';
 import ProfileImage from './ProfileImage';
 import BuriMedia from './BuriMedia';
 import SabaMedia from './SabaMedia';
@@ -13,26 +14,10 @@ import s from './FishVisual.module.css';
 
 type Props={slug:string;name:string;className?:string;imageSrc?:string};
 
-const v2Fish=new Set(['aji','saba','buri','kisu','kasago']);
-
 export default function FishVisual({slug,name,className='',imageSrc}:Props){
   const pathname=usePathname();
   const [failed,setFailed]=useState(false);
-  const src=imageSrc??(slug==='tachiuo'
-    ? '/images/fish/tachiuo-real-v2.png'
-    : slug==='madai'
-      ? '/images/fish/madai-real-v2.png'
-      : slug==='saba'
-        ? '/images/fish/saba-real-v2-new.png'
-        : slug==='buri'
-          ? '/images/fish/buri-real-v2.png?v=20260911-2'
-          : slug==='kisu'
-            ? '/images/fish/kisu-real-v2.png?v=20260911-1'
-            : slug==='kasago'
-              ? '/images/fish/kasago-real-v2.png?v=20260911-1'
-              : v2Fish.has(slug)
-                ? `/images/fish/${slug}-real-v2.png`
-                : `/images/fish/${slug}-real.png`);
+  const src=imageSrc??establishedFishImages[slug]??`/images/fish/${slug}-real.png`;
 
   useEffect(()=>{setFailed(false)},[src]);
 

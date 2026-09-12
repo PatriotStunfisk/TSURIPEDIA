@@ -1,4 +1,5 @@
 'use client';
+import {establishedFishImages} from '@/lib/fish-images';
 import {useState} from 'react';
 import KisuViewer from './KisuViewer';
 
@@ -12,7 +13,7 @@ export default function KisuMedia(){
    <span style={{...button(false),cursor:'default'}}>◎ AR予定</span>
   </div>
   <div style={{position:'absolute',inset:0,padding:'54px 22px 48px',display:'flex',alignItems:'center',justifyContent:'center'}}>
-   {mode==='2d'?<img src="/images/fish/kisu-real-v2.png?v=20260911-1" alt="シロギスの図鑑画像" style={{display:'block',width:'100%',height:'100%',objectFit:'contain',filter:'drop-shadow(0 14px 18px rgba(0,20,32,.28))'}}/>:<KisuViewer/>}
+   {mode==='2d'?<img src={establishedFishImages.kisu} alt="シロギスの図鑑画像" style={{display:'block',width:'100%',height:'100%',objectFit:'contain',filter:'drop-shadow(0 14px 18px rgba(0,20,32,.28))'}}/>:<KisuViewer/>}
   </div>
   <div style={{position:'absolute',left:'50%',bottom:18,transform:'translateX(-50%)',zIndex:6,color:'#c9ebf7',fontSize:10,background:'#06203099',border:'1px solid #2e566b',padding:'6px 10px',borderRadius:999,whiteSpace:'nowrap'}}>{mode==='2d'?'高精細2D図鑑画像':'ドラッグして360°観察'}</div>
  </div>
