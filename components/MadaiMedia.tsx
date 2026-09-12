@@ -2,6 +2,13 @@
 import {useEffect,useRef,useState} from 'react';
 import MadaiViewer from './MadaiViewer';
 
+const dishReplacements=[
+ {from:'マダイの刺身',to:'マダイの刺身',src:'/images/madai-sashimi-new.png'},
+ {from:'マダイの炙り',to:'マダイの塩焼き',src:'/images/madai-shioyaki-new.png',name:'塩焼き',desc:'皮を香ばしく焼き、ふっくらした身をシンプルに楽しむ。'},
+ {from:'マダイの鯛めし',to:'マダイの煮付け',src:'/images/madai-nitsuke-new.png',name:'煮付け',desc:'アラや切り身を甘辛く煮て、濃い旨味を引き出す。'},
+ {from:'マダイの潮汁',to:'マダイの鯛茶漬け',src:'/images/madai-chazuke-new.png',name:'鯛茶漬け',desc:'刺身とだしを合わせて、さっぱりと締める一杯。'}
+];
+
 export default function MadaiMedia(){
  const [mode,setMode]=useState<'2d'|'3d'>('2d');
  const rootRef=useRef<HTMLDivElement>(null);
@@ -12,6 +19,19 @@ export default function MadaiMedia(){
   if(!originalTabs)return;
   const prev=originalTabs.style.display;originalTabs.style.display='none';
   return()=>{originalTabs.style.display=prev};
+ },[]);
+ useEffect(()=>{
+  const timer=window.setTimeout(()=>{
+   dishReplacements.forEach(x=>{
+    const img=document.querySelector<HTMLImageElement>(`img[alt="${x.from}"]`);
+    if(!img)return;
+    img.src=x.src;img.alt=x.to;
+    const card=img.closest('article');
+    if(x.name){const name=card?.querySelector('b');if(name)name.textContent=x.name;}
+    if(x.desc){const desc=card?.querySelector('p');if(desc)desc.textContent=x.desc;}
+   });
+  },0);
+  return()=>window.clearTimeout(timer);
  },[]);
  const button=(active:boolean)=>({padding:'8px 12px',borderRadius:999,border:`1px solid ${active?'#1687e8':'#416377'}`,background:active?'#1687e8':'#0b2434d9',color:active?'#fff':'#cfe7f2',fontSize:10,cursor:'pointer'} as const);
  return <div ref={rootRef} style={{position:'absolute',inset:0,overflow:'hidden'}}>
