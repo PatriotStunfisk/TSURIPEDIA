@@ -43,7 +43,7 @@ export default function Home(){
     <div className={s.band} style={{background:'#e9f5fb'}}>
       <section className={s.section}>
         <div className={s.head}><div><div className={s.eyebrow}>FEATURED FISH</div><h2>人気の魚図鑑</h2></div><Link href="/fish">すべての魚図鑑を見る →</Link></div>
-        <div className={s.fishGrid}>{featured.map(f=><Link key={f.slug} className={s.fishCard} href={`/fish/${f.slug}`}><div className={s.thumb} style={{'--tone':f.accent} as React.CSSProperties}><FishVisual slug={f.slug} name={f.name}/><span className={s.season}>{f.season}</span></div><div className={s.fishInfo}><h3>{f.name}</h3><p>{f.en}</p><div className={s.chips}><span>{f.methods[0]}</span><span>{f.areas[0]}</span></div></div></Link>)}</div>
+        <div className={s.fishGrid}>{featured.map(f=><Link key={f.slug} className={s.fishCard} href={`/fish/${f.slug}`}><div className={s.thumb} style={{'--tone':f.accent} as React.CSSProperties}><FishVisual imageSrc={f.media?.image} slug={f.slug} name={f.name}/><span className={s.season}>{f.season}</span></div><div className={s.fishInfo}><h3>{f.name}</h3><p>{f.en}</p><div className={s.chips}><span>{f.methods[0]}</span><span>{f.areas[0]}</span></div></div></Link>)}</div>
       </section>
     </div>
 

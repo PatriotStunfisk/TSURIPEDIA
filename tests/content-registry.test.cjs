@@ -42,7 +42,7 @@ test('guide reverse links are exact and missing fish do not match',()=>{
 });
 test('only existing related fish and cooking pages are linked',()=>{
   const t=getFishConnections('tachiuo');assert.ok(t.related.some(x=>x.slug==='sawara'));
-  assert.ok(!t.related.some(x=>x.name==='カマス'));assert.equal(t.cooking,undefined);
+  assert.ok(!t.related.some(x=>x.name==='カマス'));assert.equal(t.cooking.recipes.length,4);
   assert.equal(getFishConnections('saba').cooking.recipes.length,4);
   for(const f of fish){const links=getFishConnections(f.slug);for(const other of links.related)assert.notEqual(other.slug,f.slug);for(const m of links.methods)assert.ok(methodDetails[m.slug]);}
 });
@@ -89,7 +89,7 @@ const {defineFishSpecies,uniqueFishSlugs,getSpeciesTableGuide}=require('../lib/f
 const details=require('../lib/fish-details.ts').fishDetails;
 const featured=require('../lib/launch-fish.ts');
 const migratedSnapshots={
-  fish:fish.filter(f=>originalFish.includes(f.slug)),
+  fish:fish.filter(f=>originalFish.includes(f.slug)).map(f=>{if(!['kawahagi','aoriika','mebaru'].includes(f.slug))return f;const {methodSlugs,relatedSlugs,...original}=f;return original}),
   details:Object.fromEntries(Object.entries(details).filter(([slug])=>originalFish.includes(slug))),
   launch:Object.fromEntries(featuredFish.map(slug=>[slug,featured.launchFish[slug]])),
   launchSlugs:featured.launchFishSlugs.filter(slug=>featuredFish.includes(slug)),
@@ -98,11 +98,11 @@ const migratedSnapshots={
 };
 const originalDigests={
   fish:'c86a1f608823bc410c9541664a8e98c2944be70049cd541e138dcd744fddc485',
-  details:'7a9a4922daba327ed6239477da4b38805b83c74c33f83ac1f1204ed6bd5c13f8',
-  launch:'5175b99b2375d6585e2d15fa49a9c833a01044b2a5a79a8dd9806bc978b397dd',
+  details:'1f72f59537a70107e6228a972a3310bc605c8b40f8e32c5c3c64119e30f93f8c',
+  launch:'035a14df86692faa3770972f5dcf4c622e89955ba3aa37026b8a455775640721',
   launchSlugs:'109affa8f8a322f03f9af2a53acd6001574169cdd039aa6e7f101516fab0e706',
   cooking:'9b06856019b55b157bd735946e563667983c39d114fe5181a7247822b2f0302f',
-  tableGuides:'289368179e36275849f39d9afbeaef5dcfbe8af4ef49cdb5b8b93b958efa80be',
+  tableGuides:'73ec5e849118895d164dfc559bcc5f4bd4d2d60e30d1ffab36bc252dd2db4924',
 };
 for(const [section,value] of Object.entries(migratedSnapshots)){
   test('migration preserves existing '+section,()=>assert.equal(digest(value),originalDigests[section]));
@@ -146,3 +146,47 @@ test('recipe slugs cannot create nested or malformed routes',()=>{
   }
   assert.doesNotThrow(()=>defineFishSpecies({base,cooking:{prep:[],recipes:[{...recipe,slug:'valid-recipe-2'}]}}));
 });
+
+test('all recipe cards agree with canonical recipes and existing local assets',()=>{
+ const publicRoot=path.join(root,'public');
+ const exactAsset=src=>{let current=publicRoot;for(const part of src.split('?')[0].split('/').filter(Boolean)){assert.ok(fs.readdirSync(current).includes(part),src);current=path.join(current,part)}assert.ok(fs.statSync(current).isFile(),src)};
+ for(const species of fishSpecies){
+  if(species.media)exactAsset(species.media.image);
+  if(!species.cooking)continue;
+  const cards=getSpeciesTableGuide(species).dishes;
+  assert.equal(cards.length,species.cooking.recipes.length);
+  for(const recipe of species.cooking.recipes){
+   assert.ok(recipe.image);exactAsset(recipe.image);
+   const card=cards.find(card=>card.recipe===recipe.slug);assert.ok(card);
+   assert.equal(card.name,recipe.name);assert.equal(card.src,recipe.image);
+   assert.ok(recipe.ingredients.length&&recipe.steps.length&&recipe.tips.length);
+  }
+ }
+});
+test('three expanded species have a complete connected profile and four recipes',()=>{
+ for(const slug of ['kawahagi','aoriika','mebaru']){
+  const profile=registry.getFishProfile(slug),connections=getFishConnections(slug);
+  assert.ok(profile.media.image);assert.ok(profile.detail.safety);assert.ok(profile.launch.identify.length>=3);
+  assert.equal(profile.cooking.recipes.length,4);assert.ok(connections.methods.length);assert.ok(connections.guides.length);assert.ok(connections.related.length);
+  assert.ok(featured.launchFishSlugs.includes(slug));
+  for(const recipe of profile.cooking.recipes)assert.ok(sitemap().some(x=>x.url.endsWith(`/cooking/${slug}/${recipe.slug}`)));
+ }
+});
+test('a missing model stays 2D and a subsequently added model is discovered',()=>{
+ const os=require('node:os');const temp=fs.mkdtempSync(path.join(os.tmpdir(),'uolink-model-'));
+ const {getSpeciesModelSrc}=require('../lib/fish-media.ts');
+ try{
+  assert.equal(getSpeciesModelSrc('test-model',temp),undefined);
+  fs.mkdirSync(path.join(temp,'models'));fs.writeFileSync(path.join(temp,'models/test-model.glb'),'test-only');
+  assert.equal(getSpeciesModelSrc('test-model',temp),'/models/test-model.glb');
+  assert.equal(getSpeciesModelSrc('../test-model',temp),undefined);
+  fs.writeFileSync(path.join(temp,'models/Upper.glb'),'test-only');assert.equal(getSpeciesModelSrc('upper',temp),undefined);
+ }finally{fs.rmSync(temp,{recursive:true,force:true})}
+});
+
+test('editing a recipe identity updates editorial cards without duplicate edits',()=>{
+ const species={base:fish[0],cooking:{prep:[],recipes:[{slug:'dish',name:'new name',image:'/new.png',summary:'summary',ingredients:[],steps:[],tips:[]}]},tableGuide:{lead:'lead',dishes:[{recipe:'dish',name:'old name',src:'/old.png',desc:'editorial description'}]}};
+ const card=getSpeciesTableGuide(species).dishes[0];assert.equal(card.name,'new name');assert.equal(card.src,'/new.png');assert.equal(card.desc,'editorial description');
+});
+
+test('the established seven species retain all user-authored recipes',()=>assert.equal(digest(cookingFish.filter(f=>featuredFish.includes(f.slug))),'a38dc13f0b5bb83190d62d7b3a22799f5490d37cfc8c0cccdf9560aab8ac8506'));

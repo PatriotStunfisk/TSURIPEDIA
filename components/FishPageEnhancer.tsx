@@ -3,14 +3,6 @@ import {useEffect} from 'react';
 import {usePathname} from 'next/navigation';
 import {primaryMethod} from '@/lib/fish-methods';
 
-const madaiDishes=[
-  ['/images/fish/madai-sashimi.jpg','刺身'],
-  ['/images/fish/madai-carpaccio.jpg','カルパッチョ'],
-  ['/images/fish/madai-shioyaki.jpg','塩焼き'],
-  ['/images/fish/madai-nitsuke.jpg','煮付け'],
-  ['/images/fish/madai-taimeshi.jpg','鯛めし'],
-  ['/images/fish/madai-ushiojiru.jpg','潮汁'],
-] as const;
 const fishNames:Record<string,string>={tachiuo:'タチウオ',aji:'マアジ',saba:'サバ',buri:'ブリ',kisu:'キス',kasago:'カサゴ',madai:'マダイ'};
 // Legacy anchor behavior shares the same editorial choices as fish pages.
 
@@ -65,20 +57,6 @@ export default function FishPageEnhancer(){
       });
     });
 
-    if(slug==='madai'){
-      const grid=document.querySelector<HTMLElement>('main [class*="dishGrid"]');
-      if(grid){
-        const current=Array.from(grid.children) as HTMLElement[];grid.innerHTML='';
-        madaiDishes.forEach(([src,name],i)=>{
-          const card=document.createElement('article');card.style.cssText='background:#102f42;border:1px solid #1f4a60;border-radius:14px;overflow:hidden';
-          const photo=document.createElement('div');photo.style.cssText='height:132px;overflow:hidden;background:#17394c';
-          const img=document.createElement('img');img.src=src;img.alt=`マダイの${name}`;img.style.cssText='width:100%;height:100%;object-fit:cover;display:block';photo.appendChild(img);
-          const body=document.createElement('div');body.style.padding='11px';const b=document.createElement('b');b.textContent=name;b.style.fontSize='13px';body.appendChild(b);
-          const p=document.createElement('p');p.textContent=i===0?'上品な甘みと旨味をそのまま。':i===1?'さっぱり華やかな洋風アレンジ。':i===2?'皮は香ばしく、身はふっくら。':i===3?'アラまで使えて旨味たっぷり。':i===4?'鯛の出汁が染みる定番ご飯。':'アラから出る上品な旨味を楽しむ。';p.style.cssText='margin:4px 0 0;color:#a9c2cf;font-size:10px;line-height:1.6';body.appendChild(p);card.append(photo,body);grid.appendChild(card);
-        });
-        cleanups.push(()=>{grid.innerHTML='';current.forEach(x=>grid.appendChild(x))});
-      }
-    }
     return()=>cleanups.forEach(fn=>fn());
   },[pathname]);
   return null;

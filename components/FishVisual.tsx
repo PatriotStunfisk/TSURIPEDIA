@@ -10,14 +10,14 @@ import KasagoMedia from './KasagoMedia';
 import KisuMedia from './KisuMedia';
 import s from './FishVisual.module.css';
 
-type Props={slug:string;name:string;className?:string};
+type Props={slug:string;name:string;className?:string;imageSrc?:string};
 
 const v2Fish=new Set(['aji','saba','buri','kisu','kasago']);
 
-export default function FishVisual({slug,name,className=''}:Props){
+export default function FishVisual({slug,name,className='',imageSrc}:Props){
   const pathname=usePathname();
   const [failed,setFailed]=useState(false);
-  const src=slug==='tachiuo'
+  const src=imageSrc??(slug==='tachiuo'
     ? '/images/fish/tachiuo-real-v2.png'
     : slug==='madai'
       ? '/images/fish/madai-real-v2.png'
@@ -31,7 +31,7 @@ export default function FishVisual({slug,name,className=''}:Props){
               ? '/images/fish/kasago-real-v2.png?v=20260911-1'
               : v2Fish.has(slug)
                 ? `/images/fish/${slug}-real-v2.png`
-                : `/images/fish/${slug}-real.png`;
+                : `/images/fish/${slug}-real.png`);
 
   useEffect(()=>{setFailed(false)},[src]);
 

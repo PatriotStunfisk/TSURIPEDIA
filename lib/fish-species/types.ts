@@ -31,6 +31,7 @@ export type FishTableGuideData={lead:string;dishes:FishDish[]};
 // A species has one authoritative base record; recipes inherit its slug/name.
 export type FishSpeciesDefinition={
   base:Fish;
+  media?:{image:string};
   detail?:FishDetail;
   launch?:LaunchFishExtra;
   cooking?:Omit<CookingFish,'slug'|'name'>;

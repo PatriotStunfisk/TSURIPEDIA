@@ -6,12 +6,13 @@ import {DRACOLoader} from 'three/addons/loaders/DRACOLoader.js';
 import {KTX2Loader} from 'three/addons/loaders/KTX2Loader.js';
 import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
 
-export default function FishViewer(){
+export default function FishViewer({modelSrc='/models/tachiuo.glb?v=20260912-1'}:{modelSrc?:string}={}){
  const ref=useRef<HTMLDivElement>(null);
  const [status,setStatus]=useState<'loading'|'ready'|'failed'>('loading');
  const [detail,setDetail]=useState('');
  useEffect(()=>{
   const el=ref.current;if(!el)return;
+  setStatus('loading');setDetail('');
   let renderer:THREE.WebGLRenderer|undefined;let raf=0;let ro:ResizeObserver|undefined;let disposed=false;
   const scene=new THREE.Scene();const camera=new THREE.PerspectiveCamera(32,1,.01,1000);
   try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'})}catch{setStatus('failed');setDetail('WebGLを開始できませんでした');return}
@@ -40,16 +41,16 @@ export default function FishViewer(){
   const ktx2=new KTX2Loader();ktx2.setTranscoderPath('https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/libs/basis/');ktx2.detectSupport(renderer);
   const loader=new GLTFLoader();loader.setMeshoptDecoder(MeshoptDecoder);loader.setDRACOLoader(draco);loader.setKTX2Loader(ktx2);
 
-  loader.load('/models/tachiuo.glb?v=20260912-1',g=>{
+  loader.load(modelSrc,g=>{
    if(disposed)return;
    g.scene.traverse(o=>{if((o as THREE.Mesh).isMesh)(o as THREE.Mesh).frustumCulled=false});
    centerAndFit(g.scene);setStatus('ready');setDetail('');
-  },undefined,(err)=>{if(disposed)return;console.error('tachiuo.glb load error',err);setStatus('failed');setDetail(err instanceof Error?err.message.slice(0,120):'GLBの解析に失敗しました')});
+  },undefined,(err)=>{if(disposed)return;console.error('Fish model load error',err);setStatus('failed');setDetail(err instanceof Error?err.message.slice(0,120):'GLBの解析に失敗しました')});
 
   const pd=(e:PointerEvent)=>{down=true;lastX=e.clientX;lastY=e.clientY;renderer?.domElement.setPointerCapture?.(e.pointerId)},pm=(e:PointerEvent)=>{if(!down)return;targetY+=(e.clientX-lastX)*.009;targetX=Math.max(-.65,Math.min(.65,targetX+(e.clientY-lastY)*.006));lastX=e.clientX;lastY=e.clientY},pu=()=>{down=false};renderer.domElement.addEventListener('pointerdown',pd);window.addEventListener('pointermove',pm);window.addEventListener('pointerup',pu);
   const resize=()=>{if(!renderer)return;const w=Math.max(el.clientWidth,280),h=Math.max(el.clientHeight,260);camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h,false)};ro=new ResizeObserver(resize);ro.observe(el);resize();
   const tick=()=>{ry+=(targetY-ry)*.08;rx+=(targetX-rx)*.08;pivot.rotation.y=ry;pivot.rotation.x=rx;renderer?.render(scene,camera);raf=requestAnimationFrame(tick)};tick();
   return()=>{disposed=true;cancelAnimationFrame(raf);ro?.disconnect();window.removeEventListener('pointermove',pm);window.removeEventListener('pointerup',pu);draco.dispose();ktx2.dispose();renderer?.dispose();renderer?.domElement.remove()};
- },[]);
+ },[modelSrc]);
  return <div ref={ref} className="fishViewer" style={{position:'relative',width:'100%',height:'100%',minHeight:360,overflow:'hidden',background:'transparent'}}>{status==='loading'&&<div style={{position:'absolute',inset:0,display:'grid',placeItems:'center',zIndex:2,color:'#d8f5ff'}}>3Dモデルを読み込み中…</div>}{status==='failed'&&<div style={{position:'absolute',inset:0,display:'grid',placeItems:'center',alignContent:'center',gap:8,zIndex:2,color:'#d8f5ff',textAlign:'center',padding:24}}><b>3Dモデルを読み込めませんでした</b>{detail&&<small style={{opacity:.72,fontSize:10,wordBreak:'break-word'}}>{detail}</small>}</div>}</div>
 }

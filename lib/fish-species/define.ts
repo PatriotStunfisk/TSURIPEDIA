@@ -26,7 +26,10 @@ export function uniqueFishSlugs<T extends Fish>(fish:T[]):T[]{
 
 // Existing editorial cards take precedence. New recipes need no second card list.
 export function getSpeciesTableGuide(species:FishSpeciesDefinition):FishTableGuideData|undefined{
-  if(species.tableGuide)return species.tableGuide;
+  if(species.tableGuide)return {...species.tableGuide,dishes:species.tableGuide.dishes.map(dish=>{
+    const recipe=species.cooking?.recipes.find(recipe=>recipe.slug===dish.recipe);
+    return recipe?{...dish,name:recipe.name,src:recipe.image}:dish;
+  })};
   if(!species.cooking?.recipes.length)return undefined;
   return {lead:'',dishes:species.cooking.recipes.map(recipe=>({
     name:recipe.name,src:recipe.image,emoji:'🍽️',desc:recipe.summary,recipe:recipe.slug,
