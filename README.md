@@ -25,14 +25,28 @@ npm run dev
 ## 次工程
 Vercelへデプロイ後、Supabase認証・DB・Storageを接続して `/admin` を実際に編集可能なCMSへ拡張します。
 
-## 魚種追加（第一段階）
-- 基本情報は `lib/data.ts` の `fish` に1件追加します。slugは公開後に変更しません。
-- `fish-registry.ts` を通じて魚図鑑一覧・汎用詳細・metadata・sitemapに反映されます。既存の専用ページは維持します。
-- `methods` の既存釣法名から釣法リンクを取得します。曖昧な場合は同じ魚データに `methodSlugs: ['sabiki']` のように既存釣法slugを指定できます。
-- GUIDEの `related` にある `/fish/<slug>` リンクを逆引きして魚ページへ表示します。追加で紹介したい記事は魚データの `guideSlugs` に既存記事slugを指定します。画面では先頭6件まで表示します。
-- 関連魚は `relatedSlugs` の指定を優先し、既存の重点魚種は `launch-fish.ts` の選定を維持します。それ以外は共通釣法から最大6件表示します。未登録魚はリンク化しません。
-- 料理は `cooking-data.ts` に同じ魚slugの内容がある場合だけ自動接続します。詳しい解説は `fish-details.ts`、重点魚種の見分け方等は `launch-fish.ts` で引き続き管理します。本文やレシピを自動生成する仕組みではありません。
-- 画像・専用デザインの追加は別作業です。既存画像を維持し、参照パスの大文字小文字を一致させます。
+## 魚種追加（第二段階）
+
+重点7魚種は `lib/fish-species/<slug>.ts` に魚種単位でまとめています。
+新しい本格魚種は、このプロフィールを1ファイル作り、`lib/fish-species/index.ts` にimportと配列の1項目を追加します。
+既存の `data.ts`・`fish-details.ts`・`launch-fish.ts`・`cooking-data.ts` に同じ内容を再登録する必要はありません。
+
+- `base`: 基本情報・表示用釣法名・任意の `methodSlugs` / `guideSlugs` / `relatedSlugs`。
+- `detail`: 詳細解説・初心者Tips・安全情報・食味など。
+- `launch`: 見分け方・キャッチコピー・追加解説用情報。
+- `cooking`: 下処理・レシピ。魚名とslugは `base` から自動で引き継ぎます。
+- `tableGuide`: 専用の料理紹介カードが必要な場合だけ指定。省略時はレシピからカードを生成します。
+- `featuredOrder`: トップ掲載順を調整する場合だけ指定。既存の掲載順は維持しています。
+
+一覧・汎用詳細・metadata・sitemap・関連導線・料理ページは従来のレジストリから参照します。
+GUIDEは既存記事の魚リンクも逆引きし、追加指定した記事と重複なくまとめます。
+未登録のリンク先やレシピ本文を自動生成する仕組みではありません。
+
+タチウオ・アジ・マダイの専用本文、専用UI、画像は維持しています。
+残る18魚種の基本情報と16魚種の詳細情報は従来ファイルで管理しており、段階的に移行できます。
+同じslugを旧データと新プロフィールに二重登録するとエラーになるため、移行時は元の基本情報を取り除きます。
+
+詳しい項目と作業手順は [魚種プロフィールの管理](docs/fish-species.md) を参照してください。
 
 検証: `npm run test:content`、`npx tsc --noEmit`、`npm run lint`、`npm run build`。
 `lint` はESLintによる構文・基本ルールの検査です。型とNext.jsの生成はTypeScriptチェックとbuildで検証します。

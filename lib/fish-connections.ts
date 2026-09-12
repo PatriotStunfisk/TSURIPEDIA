@@ -2,7 +2,6 @@ import {fishCatalog,getFishProfile,getFishByName,type FishProfile} from '@/lib/f
 import {getFishMethodSlugs} from '@/lib/fish-methods';
 import {getMethod} from '@/lib/method-registry';
 import {getGuide,getGuidesForFish} from '@/lib/all-guides';
-import {getCookingFish} from '@/lib/cooking-data';
 
 export function getFishConnections(slug:string){
   const fish=getFishProfile(slug);
@@ -19,5 +18,5 @@ export function getFishConnections(slug:string){
       ? fish.launch.related.flatMap(name=>{const related=getFishByName(name);return related?[related]:[]})
       : fishCatalog.filter(other=>other.slug!==slug&&getFishMethodSlugs(other).some(id=>methods.some(method=>method.slug===id)));
   const related=[...new Map(candidates.filter(other=>other.slug!==slug).map(other=>[other.slug,other])).values()];
-  return {methods,guides,cooking:getCookingFish(slug),related,hasEditorialRelated};
+  return {methods,guides,cooking:fish.cooking,related,hasEditorialRelated};
 }

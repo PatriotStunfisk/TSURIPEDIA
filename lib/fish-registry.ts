@@ -1,12 +1,20 @@
 import {fish} from '@/lib/data';
 import {fishDetails,type FishDetail} from '@/lib/fish-details';
 import {launchFish,isLaunchFish} from '@/lib/launch-fish';
+import {getCookingFish} from '@/lib/cooking-data';
+import {getFishSpecies} from '@/lib/fish-species';
+import {getSpeciesTableGuide} from '@/lib/fish-species/define';
 
-export const fishCatalog=fish.map(base=>({
-  ...base,
-  detail:(Object.hasOwn(fishDetails,base.slug)?fishDetails[base.slug]:undefined) as FishDetail|undefined,
-  launch:isLaunchFish(base.slug)?launchFish[base.slug]:undefined,
-}));
+export const fishCatalog=fish.map(base=>{
+  const species=getFishSpecies(base.slug);
+  return {
+    ...base,
+    detail:(Object.hasOwn(fishDetails,base.slug)?fishDetails[base.slug]:undefined) as FishDetail|undefined,
+    launch:isLaunchFish(base.slug)?launchFish[base.slug]:undefined,
+    cooking:getCookingFish(base.slug),
+    tableGuide:species?getSpeciesTableGuide(species):undefined,
+  };
+});
 
 export type FishProfile=(typeof fishCatalog)[number];
 

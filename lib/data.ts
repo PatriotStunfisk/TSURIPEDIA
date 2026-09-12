@@ -1,17 +1,10 @@
-export type Fish = {
-  slug:string; name:string; en:string; scientific:string; season:string; difficulty:number;
-  danger:string; methods:string[]; areas:string[]; depth:string; size:string; desc:string;
-  accent:string; months:number[]; beginner:boolean; kids:boolean;
-  methodSlugs?:string[]; guideSlugs?:string[]; relatedSlugs?:string[];
-};
-export const fish: Fish[] = [
- {slug:'tachiuo',name:'タチウオ',en:'Largehead hairtail',scientific:'Trichiurus lepturus',season:'8〜12月',difficulty:3,danger:'鋭い歯に注意',methods:['テンヤ','ジギング','ウキ釣り','引き釣り'],areas:['大阪湾','明石','和歌山'],depth:'10〜100m',size:'50〜120cm',desc:'銀色に輝く刀のような体が特徴。夕方から朝にかけて活発になり、大阪湾では夏後半〜冬の人気ターゲットです。',accent:'#d9edf7',months:[8,9,10,11,12],beginner:true,kids:false},
- {slug:'aji',name:'マアジ',en:'Japanese horse mackerel',scientific:'Trachurus japonicus',season:'5〜11月',difficulty:1,danger:'低',methods:['サビキ','アジング','船釣り'],areas:['全国の港','大阪湾'],depth:'5〜100m',size:'15〜40cm',desc:'家族釣りの定番。群れに当たれば数釣りが楽しめ、食味も非常に良い魚です。',accent:'#a7d8de',months:[5,6,7,8,9,10,11],beginner:true,kids:true},
- {slug:'madai',name:'マダイ',en:'Red seabream',scientific:'Pagrus major',season:'春・秋',difficulty:3,danger:'低',methods:['タイラバ','ひとつテンヤ','コマセ'],areas:['明石','瀬戸内','和歌山'],depth:'20〜100m',size:'30〜80cm',desc:'日本を代表する人気魚。タイラバなら初心者でも大型魚とのファイトを楽しめます。',accent:'#f3a7a7',months:[3,4,5,9,10,11],beginner:true,kids:false},
- {slug:'buri',name:'ブリ',en:'Japanese amberjack',scientific:'Seriola quinqueradiata',season:'秋〜冬',difficulty:4,danger:'低',methods:['ノマセ','ジギング'],areas:['明石','紀北','日本海'],depth:'20〜100m',size:'60〜100cm',desc:'強烈な引きが魅力の大型青物。生き餌を使うノマセ釣りやジギングで狙います。',accent:'#99b9cf',months:[10,11,12,1,2],beginner:false,kids:false},
- {slug:'kisu',name:'シロギス',en:'Japanese whiting',scientific:'Sillago japonica',season:'5〜10月',difficulty:1,danger:'低',methods:['ちょい投げ','船キス'],areas:['砂浜','湾内'],depth:'2〜30m',size:'15〜30cm',desc:'砂地に暮らす美しい魚。軽い仕掛けで楽しめ、親子の釣りにもおすすめです。',accent:'#e8dfc7',months:[5,6,7,8,9,10],beginner:true,kids:true},
- {slug:'kasago',name:'カサゴ',en:'Marbled rockfish',scientific:'Sebastiscus marmoratus',season:'通年',difficulty:2,danger:'ヒレに注意',methods:['胴突き','穴釣り'],areas:['堤防','岩礁帯'],depth:'2〜50m',size:'15〜30cm',desc:'岩陰に潜む根魚の代表。足元でも狙いやすく、煮付けや唐揚げも絶品です。',accent:'#c7896e',months:[1,2,3,4,5,6,7,8,9,10,11,12],beginner:true,kids:true},
- {slug:'saba',name:'マサバ',en:'Chub mackerel',scientific:'Scomber japonicus',season:'夏〜秋',difficulty:1,danger:'低',methods:['サビキ','ジギング','船釣り'],areas:['大阪湾','紀北','全国沿岸'],depth:'5〜150m',size:'25〜45cm',desc:'群れで回遊する人気魚。引きが強く、サビキでも手軽に狙えます。',accent:'#8fb6cb',months:[6,7,8,9,10],beginner:true,kids:true},
+import {fishSpecies} from '@/lib/fish-species';
+import {uniqueFishSlugs} from '@/lib/fish-species/define';
+import type {Fish} from '@/lib/fish-species/types';
+export type {Fish} from '@/lib/fish-species/types';
+
+export const fish:Fish[]=uniqueFishSlugs([
+ ...fishSpecies.map(species=>species.base),
  {slug:'iwashi',name:'マイワシ',en:'Japanese sardine',scientific:'Sardinops melanostictus',season:'春〜秋',difficulty:1,danger:'低',methods:['サビキ'],areas:['全国の港','大阪湾'],depth:'表層〜50m',size:'10〜25cm',desc:'群れで接岸すると初心者でも数釣りが楽しめます。ノマセ釣りのエサにも使われます。',accent:'#a9ccd9',months:[4,5,6,7,8,9,10],beginner:true,kids:true},
  {slug:'suzuki',name:'スズキ',en:'Japanese seabass',scientific:'Lateolabrax japonicus',season:'春〜秋',difficulty:3,danger:'エラぶたに注意',methods:['ルアー','泳がせ','ウキ釣り'],areas:['河口','港湾','大阪湾'],depth:'1〜30m',size:'40〜90cm',desc:'シーバスの名でも親しまれる大型魚。河口や港湾部でルアー釣りが盛んです。',accent:'#a9bec5',months:[4,5,6,7,8,9,10],beginner:false,kids:false},
  {slug:'chinu',name:'クロダイ',en:'Black seabream',scientific:'Acanthopagrus schlegelii',season:'春〜秋',difficulty:3,danger:'背びれに注意',methods:['フカセ','落とし込み','ダンゴ'],areas:['堤防','河口','湾奥'],depth:'1〜30m',size:'30〜55cm',desc:'都市近郊でも大型が狙える人気魚。警戒心が強く、さまざまな釣法が発達しています。',accent:'#778b91',months:[3,4,5,6,7,8,9,10],beginner:false,kids:false},
@@ -30,7 +23,7 @@ export const fish: Fish[] = [
  {slug:'unagi',name:'ニホンウナギ',en:'Japanese eel',scientific:'Anguilla japonica',season:'夏',difficulty:2,danger:'低',methods:['ぶっこみ釣り'],areas:['河口','汽水域','河川'],depth:'浅場',size:'40〜80cm',desc:'夜に活発になる魚。地域ごとの採捕ルールや禁漁期間の確認が重要です。',accent:'#786b59',months:[6,7,8,9],beginner:false,kids:false},
  {slug:'anago',name:'マアナゴ',en:'Whitespotted conger',scientific:'Conger myriaster',season:'夏',difficulty:2,danger:'歯に注意',methods:['胴突き','ぶっこみ','船釣り'],areas:['大阪湾','東京湾','瀬戸内'],depth:'5〜100m',size:'30〜80cm',desc:'夜釣りや船釣りで人気。天ぷらや煮穴子など食味にも優れます。',accent:'#8b7766',months:[5,6,7,8,9],beginner:true,kids:false},
  {slug:'isaki',name:'イサキ',en:'Chicken grunt',scientific:'Parapristipoma trilineatum',season:'初夏',difficulty:2,danger:'低',methods:['コマセ','船釣り','フカセ'],areas:['和歌山','伊豆','九州'],depth:'20〜80m',size:'25〜45cm',desc:'梅雨時期に旬を迎える人気魚。船からのコマセ釣りで数釣りが楽しめます。',accent:'#9ea487',months:[5,6,7],beginner:true,kids:false}
-];
+]);
 export const methods=[
  {slug:'sabiki',name:'サビキ釣り',level:'はじめて向け',emoji:'🪝',target:'アジ・サバ・イワシ',place:'堤防',desc:'コマセで魚を寄せ、疑似餌のついた複数針で狙う家族釣りの王道。'},
  {slug:'tachiuo-tenya',name:'タチウオテンヤ',level:'初〜中級',emoji:'🌙',target:'タチウオ',place:'船',desc:'イワシなどをテンヤに固定し、誘いと止めを繰り返してタチウオを狙います。'},

@@ -5,12 +5,13 @@
 - Stack: Next.js App Router, React 19, strict TypeScript, and Three.js. See `package.json` for exact versions.
 - `app/`: routes, layouts, metadata, sitemap, robots, global CSS, and page CSS modules. Main sections include fish, methods, spots, gear, guide, cooking, game, and admin.
 - `components/`: reusable UI and browser interactions, including fish viewers and maps; associated CSS modules live alongside components.
-- `lib/`: static content and shared registries. `lib/fish-registry.ts` combines base fish, details, and launch content; `lib/all-guides.ts` combines guide article collections. Prefer these registries when consuming or enumerating content.
+- `lib/`: static content and shared registries. `lib/fish-species/<slug>.ts` is the authoring source for the seven migrated species and new full species; register each in `lib/fish-species/index.ts`. `data.ts`, `fish-details.ts`, `launch-fish.ts`, and `cooking-data.ts` retain compatibility views and remaining legacy data. `lib/fish-registry.ts` combines profile information, and `lib/all-guides.ts` combines guide article collections. Prefer these registries when consuming or enumerating content.
 - `public/`: images, brand assets, and GLB models. Reference them by root-relative URL.
 - `supabase/schema.sql`: proposed CMS schema. The README describes live authentication, database, and storage integration as future work; do not assume the admin UI is a connected CMS.
 
 ## UOLINK product and content architecture
 - Build toward a database-driven site connecting **fish × fishing methods × fishing spots × gear × cooking**, with capacity for 100–300 fish species and hundreds to 1,000+ pages. These are architectural goals, not a claim that the current site already supports automatic propagation.
+- Author a new full species in one profile file plus its index registration; do not duplicate its fields in compatibility views. See `docs/fish-species.md`. Keep profile imports directed toward the shared types/helper, never back toward consumer registries.
 - Make adding one fish species as simple as possible. Aim for one authoritative species data entry, with stable identifiers and relationships supplying the fish index, detail page, SEO metadata, sitemap, identification guidance, related fish, methods, GUIDE articles, recipes, spots, and gear wherever relevant information exists.
 - Maintain the centralized approach of `fish-registry.ts` and `all-guides.ts`. Derive lists, lookups, and relationships from shared data rather than duplicating fish records or per-page registration logic. When practical, consolidate duplicate information and processing incrementally.
 - Keep a reusable baseline for new species with explicit extensions for rich species-specific content and presentation. Preserve the dedicated designs and detailed information already built for タチウオ, アジ, マダイ, and other established pages.
