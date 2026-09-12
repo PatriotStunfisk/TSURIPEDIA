@@ -33,9 +33,11 @@ export default function FishActions({slug,name,className='',variant='rail'}:Prop
  const [favorite,setFavorite]=useState(false);
  const [caught,setCaught]=useState(false);
  const [notice,setNotice]=useState('');
+ const [printDate,setPrintDate]=useState('');
  const timer=useRef<number|undefined>(undefined);
 
  useEffect(()=>{
+  setPrintDate(new Date().toLocaleDateString('ja-JP'));
   setFavorite(hasItem(keys.favorite,slug));
   setCaught(hasItem(keys.caught,slug));
   return()=>{if(timer.current)window.clearTimeout(timer.current)};
@@ -54,6 +56,7 @@ export default function FishActions({slug,name,className='',variant='rail'}:Prop
   }catch(e){if((e as Error)?.name!=='AbortError')flash('シェアできませんでした')}
  };
  const savePdf=()=>{
+  setPrintDate(new Date().toLocaleDateString('ja-JP'));
   const oldTitle=document.title;
   document.title=`UOLINK_${name}_魚図鑑`;
   document.body.classList.add('uolink-pdf-mode');
@@ -71,7 +74,7 @@ export default function FishActions({slug,name,className='',variant='rail'}:Prop
  const activeStyle=(on:boolean):CSSProperties=>on?{...itemStyle,background:'#1687e8',color:'#fff'}:{...itemStyle,background:inline?'#061827':'transparent',color:'inherit'};
  return <>
   <style>{`@media print{body.uolink-pdf-mode{background:#fff!important;color:#132333!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}body.uolink-pdf-mode .header,body.uolink-pdf-mode .footer,body.uolink-pdf-mode [aria-label$="のアクション"],body.uolink-pdf-mode .nextActions{display:none!important}body.uolink-pdf-mode .section{max-width:none!important;padding:18px 22px!important}body.uolink-pdf-mode .pageTop{padding-top:0!important}body.uolink-pdf-mode article,body.uolink-pdf-mode aside,body.uolink-pdf-mode section{break-inside:avoid-page}body.uolink-pdf-mode a{text-decoration:none!important;color:inherit!important}.uolink-print-head{display:flex!important;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #1687e8;padding:0 0 12px;margin:0 0 18px}.uolink-print-head b{font-size:24px;color:#061827}.uolink-print-head span{font-size:12px;color:#667786}}`}</style>
-  <div className="uolink-print-head" style={{display:'none'}}><b>UOLINK 魚図鑑</b><span>{name} / {new Date().toLocaleDateString('ja-JP')}</span></div>
+  <div className="uolink-print-head" style={{display:'none'}}><b>UOLINK 魚図鑑</b><span>{name} / {printDate}</span></div>
   <div className={className} style={wrapStyle} aria-label={`${name}のアクション`}>
    <button type="button" aria-pressed={favorite} aria-label={`${name}をお気に入り${favorite?'から外す':'に追加'}`} onClick={toggleFavorite} style={activeStyle(favorite)}>{favorite?'♥':'♡'}<small style={smallStyle}>お気に入り</small></button>
    <button type="button" aria-pressed={caught} aria-label={`${name}の釣果記録を${caught?'解除':'追加'}`} onClick={toggleCaught} style={activeStyle(caught)}>🎣<small style={smallStyle}>釣った！</small></button>
