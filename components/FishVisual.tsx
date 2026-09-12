@@ -4,6 +4,7 @@ import {usePathname} from 'next/navigation';
 import FishArt from './FishArt';
 import BuriMedia from './BuriMedia';
 import SabaMedia from './SabaMedia';
+import AjiMedia from './AjiMedia';
 import s from './FishVisual.module.css';
 
 type Props={slug:string;name:string;className?:string};
@@ -59,6 +60,7 @@ export default function FishVisual({slug,name,className=''}:Props){
 
   if(slug==='buri'&&pathname==='/fish/buri')return <BuriMedia/>;
   if(slug==='saba'&&pathname==='/fish/saba')return <SabaMedia/>;
+  if(slug==='aji'&&pathname==='/fish/aji')return <AjiMedia/>;
 
   return <div className={`${s.wrap} ${className}`}>
     {!failed?<img src={src} alt={`${name}の図鑑画像`} width={slug==='saba'?1891:undefined} height={slug==='saba'?831:undefined} onError={()=>setFailed(true)}/>:<FishArt slug={slug} label={name}/>} 
