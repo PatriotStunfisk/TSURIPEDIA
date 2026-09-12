@@ -1,6 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  quest: {methods:['shore-jigging','nomase','jigging']},
   "base": {
     "slug": "hamachi",
     "name": "ハマチ",

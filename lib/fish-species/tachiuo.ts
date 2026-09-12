@@ -1,6 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  quest: {"approachSpeed": 14, "biteWindowMs": 3200},
   base: {
     slug: 'tachiuo',
     name: 'タチウオ',

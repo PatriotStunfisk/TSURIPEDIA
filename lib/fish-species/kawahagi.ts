@@ -1,6 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  quest: {"swimSpeed": 0.7, "wariness": 0.65, "biteWindowMs": 1600, "stamina": 50},
   "base": {
     "slug": "kawahagi",
     "name": "カワハギ",

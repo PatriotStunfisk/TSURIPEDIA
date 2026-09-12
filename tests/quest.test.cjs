@@ -44,7 +44,7 @@ test('fight rewards controlled reeling, rejects click spam and handles escape/ti
  r=E.fight(r,'reel',time);assert.equal(E.fight(r,'reel',time+10).progress,r.progress);
  for(let i=0;i<30&&r.phase==='fight';i++){time+=600;r=E.fight(r,r.tension>55?'ease':'reel',time)}
  assert.equal(r.phase,'caught');assert.ok(r.catch.size>=aji.minSize&&r.catch.size<=aji.maxSize);
- assert.equal(E.fight({...hooked,tension:99},'reel',time).phase,'miss');assert.equal(E.advance(hooked,hooked.deadline+1).phase,'miss');
+ assert.equal(E.fight({...hooked,tension:99,lastTick:time},'reel',time).phase,'miss');assert.equal(E.advance(hooked,hooked.deadline+1).phase,'miss');
 });
 test('record-sized rolls and first captures grant bonuses once',()=>{
  const r=E.cast([aji],'osaka-bay-pier','sabiki','a',now,()=>0);assert.equal(r.catch.grade,'record');assert.equal(r.catch.xp,aji.xp+40);
@@ -66,3 +66,40 @@ test('invalid and future saves are detected without replacing the stored string'
 });
 test('profile validation rejects unsafe game parameters',()=>{const base=fishCatalog[0];for(const quest of [{rarity:0},{biteRate:2},{xp:Infinity},{sizeRange:[30,10]}])assert.throws(()=>defineFishSpecies({base,quest}),/Invalid quest/)});
 test('recent history remains bounded while totals and best records survive',()=>{let save=P.emptySave();for(let i=0;i<220;i++)save=P.recordCatch(save,catchOf({id:'bounded-'+i,size:20+i/10}));assert.equal(save.recent.length,200);assert.equal(save.total,220);assert.equal(save.records.aji.count,220);assert.equal(save.records.aji.best,41.9)});
+
+
+test('official fish images are shared with QUEST including tachiuo',()=>{
+ const {getFishImage,establishedFishImages}=require('../lib/fish-images.ts');
+ assert.equal(getFishImage({slug:'constructor'}),undefined);
+ for(const f of questFish){assert.equal(f.image,getFishImage(fishCatalog.find(x=>x.slug===f.slug)));if(f.image)assert.ok(fs.existsSync(path.join(root,'public',f.image.split('?')[0])));}
+ assert.equal(questFish.find(f=>f.slug==='tachiuo').image,establishedFishImages.tachiuo);
+});
+test('sabiki requires the rig to match the visible school depth',()=>{
+ let r=E.cast([aji],'osaka-bay-pier','sabiki','school',now,()=>0);
+ assert.equal(r.targetDepth,0);r=E.advance(r,now+8000);assert.equal(r.phase,'waiting');assert.equal(r.attraction,0);
+ r=E.lure(r,'up',now+8500);r=E.advance(r,now+15000);assert.equal(r.phase,'bite');
+});
+test('eging requires invitations followed by a fall; repeated jerks postpone the bite',()=>{
+ const squid=questFish.find(f=>f.slug==='aoriika');let r=E.cast([squid],'osaka-bay-pier','eging','squid',now,()=>.5);
+ assert.equal(E.advance(r,now+10000).phase,'waiting');
+ r=E.lure(r,'invite',now+1000);r=E.lure(r,'invite',now+2100);
+ assert.equal(E.advance(r,now+4000).phase,'waiting');assert.equal(E.hook(r,now+4000).phase,'miss');
+ r=E.advance(r,now+4500);assert.equal(r.phase,'bite');assert.equal(E.hook(r,now+4600,()=>1).phase,'fight');
+});
+test('kawahagi distinguishes pecks from its shorter swallowing window',()=>{
+ const f=questFish.find(f=>f.slug==='kawahagi');let r=E.cast([f],'osaka-bay-offshore','kawahagi','kawa',now,()=>.5);
+ r=E.lure(r,'invite',now+1000);r=E.lure(r,'invite',now+2100);
+ assert.equal(E.hook(r,now+3000).phase,'miss');r=E.advance(r,now+4000);assert.equal(r.phase,'bite');assert.ok(r.deadline-r.biteAt<=1800);
+ assert.equal(E.hook(r,r.deadline+1).phase,'miss');
+});
+test('strong fish run, lose stamina, and soft drag reduces tension buildup',()=>{
+ const f=questFish.find(f=>f.slug==='buri');const r={...E.emptyRound(),phase:'fight',fish:f,started:now,lastTick:now,deadline:now+60000,stamina:95};
+ const normal=E.advance(r,now+2000),soft=E.advance({...r,drag:'soft'},now+2000);
+ assert.ok(normal.running);assert.ok(normal.tension>soft.tension);assert.ok(normal.stamina<95);
+ assert.ok(E.fight(normal,'reel',now+2100).progress<E.fight({...normal,running:false,started:now-5000},'reel',now+2100).progress);
+});
+test('octopus records use weight without changing the existing save schema',()=>{
+ const f=questFish.find(f=>f.slug==='madako');const {measure}=require('../lib/quest/presentation.ts');
+ assert.equal(f.sizeUnit,'kg');assert.equal(f.sizeLabel,'重量');assert.equal(measure(1.25,f),'1.25kg');
+ const caught=E.cast([f],'akashi','tako-egi','octopus',now,()=>.5).catch;const save=P.recordCatch(P.emptySave(),caught);assert.equal(parseSave(JSON.stringify(save)).status,'ok');assert.equal(save.records.madako.best,caught.size);
+});

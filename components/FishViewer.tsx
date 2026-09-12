@@ -6,7 +6,7 @@ import {DRACOLoader} from 'three/addons/loaders/DRACOLoader.js';
 import {KTX2Loader} from 'three/addons/loaders/KTX2Loader.js';
 import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
 
-export default function FishViewer({modelSrc='/models/tachiuo.glb?v=20260912-1',contain=false}:{modelSrc?:string;contain?:boolean}={}){
+export default function FishViewer({modelSrc='/models/tachiuo.glb?v=20260912-1',contain=false,swim=false}:{modelSrc?:string;contain?:boolean;swim?:boolean}={}){
  const ref=useRef<HTMLDivElement>(null);
  const [status,setStatus]=useState<'loading'|'ready'|'failed'>('loading');
  const [detail,setDetail]=useState('');
@@ -38,20 +38,22 @@ export default function FishViewer({modelSrc='/models/tachiuo.glb?v=20260912-1',
    fitCamera();
   };
 
+  const disposeObject=(object:THREE.Object3D)=>{object.traverse(o=>{const mesh=o as THREE.Mesh;if(!mesh.isMesh)return;mesh.geometry?.dispose();const materials=Array.isArray(mesh.material)?mesh.material:[mesh.material];for(const material of materials){for(const value of Object.values(material)){if(value instanceof THREE.Texture)value.dispose()}material.dispose()}})};
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const draco=new DRACOLoader();draco.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.7/');
   const ktx2=new KTX2Loader();ktx2.setTranscoderPath('https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/libs/basis/');ktx2.detectSupport(renderer);
   const loader=new GLTFLoader();loader.setMeshoptDecoder(MeshoptDecoder);loader.setDRACOLoader(draco);loader.setKTX2Loader(ktx2);
 
   loader.load(modelSrc,g=>{
-   if(disposed)return;
+   if(disposed){disposeObject(g.scene);return;}
    g.scene.traverse(o=>{if((o as THREE.Mesh).isMesh)(o as THREE.Mesh).frustumCulled=false});
    centerAndFit(g.scene);setStatus('ready');setDetail('');
   },undefined,(err)=>{if(disposed)return;console.error('Fish model load error',err);setStatus('failed');setDetail(err instanceof Error?err.message.slice(0,120):'GLBの解析に失敗しました')});
 
   const pd=(e:PointerEvent)=>{down=true;lastX=e.clientX;lastY=e.clientY;renderer?.domElement.setPointerCapture?.(e.pointerId)},pm=(e:PointerEvent)=>{if(!down)return;targetY+=(e.clientX-lastX)*.009;targetX=Math.max(-.65,Math.min(.65,targetX+(e.clientY-lastY)*.006));lastX=e.clientX;lastY=e.clientY},pu=()=>{down=false};renderer.domElement.addEventListener('pointerdown',pd);window.addEventListener('pointermove',pm);window.addEventListener('pointerup',pu);
   const resize=()=>{if(!renderer)return;const w=Math.max(el.clientWidth,contain?1:280),h=Math.max(el.clientHeight,contain?1:260);camera.aspect=w/h;fitCamera();camera.updateProjectionMatrix();renderer.setSize(w,h,false)};ro=new ResizeObserver(resize);ro.observe(el);resize();
-  const tick=()=>{ry+=(targetY-ry)*.08;rx+=(targetX-rx)*.08;pivot.rotation.y=ry;pivot.rotation.x=rx;renderer?.render(scene,camera);raf=requestAnimationFrame(tick)};tick();
-  return()=>{disposed=true;cancelAnimationFrame(raf);ro?.disconnect();window.removeEventListener('pointermove',pm);window.removeEventListener('pointerup',pu);draco.dispose();ktx2.dispose();renderer?.dispose();renderer?.domElement.remove()};
- },[modelSrc,contain]);
+  const tick=()=>{ry+=(targetY-ry)*.08;rx+=(targetX-rx)*.08;pivot.rotation.y=ry;pivot.rotation.x=rx;if(swim&&!reduced){pivot.rotation.y+=Math.sin(performance.now()/700)*.13;pivot.rotation.z=Math.sin(performance.now()/1000)*.025;}renderer?.render(scene,camera);raf=requestAnimationFrame(tick)};tick();
+  return()=>{disposed=true;cancelAnimationFrame(raf);ro?.disconnect();window.removeEventListener('pointermove',pm);window.removeEventListener('pointerup',pu);draco.dispose();ktx2.dispose();disposeObject(scene);renderer?.domElement.removeEventListener('pointerdown',pd);renderer?.dispose();renderer?.domElement.remove()};
+ },[modelSrc,contain,swim]);
  return <div ref={ref} className="fishViewer" style={{position:'relative',width:'100%',height:'100%',minHeight:contain?0:360,overflow:'hidden',background:'transparent'}}>{status==='loading'&&<div style={{position:'absolute',inset:0,display:'grid',placeItems:'center',zIndex:2,color:'#d8f5ff'}}>3Dモデルを読み込み中…</div>}{status==='failed'&&<div style={{position:'absolute',inset:0,display:'grid',placeItems:'center',alignContent:'center',gap:8,zIndex:2,color:'#d8f5ff',textAlign:'center',padding:24}}><b>3Dモデルを読み込めませんでした</b>{detail&&<small style={{opacity:.72,fontSize:10,wordBreak:'break-word'}}>{detail}</small>}</div>}</div>
 }
