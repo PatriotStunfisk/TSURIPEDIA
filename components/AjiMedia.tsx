@@ -2,6 +2,13 @@
 import {useEffect,useRef,useState} from 'react';
 import AjiViewer from './AjiViewer';
 
+const dishReplacements=[
+ {from:'マアジの刺身',to:'マアジの刺身',src:'/images/fish/aji-sashimi-new.png'},
+ {from:'マアジのアジフライ',to:'マアジのアジフライ',src:'/images/fish/aji-fry-new.png'},
+ {from:'マアジのなめろう',to:'マアジのなめろう',src:'/images/fish/aji-namero-new.png'},
+ {from:'マアジの煮付け',to:'マアジの塩焼き',src:'/images/fish/aji-shioyaki.png',name:'塩焼き',desc:'皮を香ばしく焼き、ふっくらした身をシンプルに楽しむ。'}
+];
+
 export default function AjiMedia(){
  const [mode,setMode]=useState<'2d'|'3d'>('2d');
  const rootRef=useRef<HTMLDivElement>(null);
@@ -13,6 +20,23 @@ export default function AjiMedia(){
   const prev=originalTabs.style.display;
   originalTabs.style.display='none';
   return()=>{originalTabs.style.display=prev};
+ },[]);
+ useEffect(()=>{
+  const timer=window.setTimeout(()=>{
+   dishReplacements.forEach(x=>{
+    const img=document.querySelector<HTMLImageElement>(`img[alt="${x.from}"]`);
+    if(!img)return;
+    img.src=x.src;img.alt=x.to;
+    if(x.name){
+      const card=img.closest('article');
+      const name=card?.querySelector('b');
+      const desc=card?.querySelector('p');
+      if(name)name.textContent=x.name;
+      if(desc&&x.desc)desc.textContent=x.desc;
+    }
+   });
+  },0);
+  return()=>window.clearTimeout(timer);
  },[]);
  const button=(active:boolean)=>({padding:'8px 12px',borderRadius:999,border:`1px solid ${active?'#1687e8':'#416377'}`,background:active?'#1687e8':'#0b2434d9',color:active?'#fff':'#cfe7f2',fontSize:10,cursor:'pointer'} as const);
  return <div ref={rootRef} style={{position:'absolute',inset:0,overflow:'hidden'}}>
