@@ -1,6 +1,7 @@
 import Link from 'next/link';
+import MethodTackle from '@/components/MethodTackle';
 import s from './gear.module.css';
-export const metadata={title:'釣具｜UOLINK'};
+export const metadata={title:'釣具',alternates:{canonical:'/gear'}};
 
 const basics=[
  {title:'ロッド',icon:'🎣',text:'釣り方に合う長さ・硬さを選ぶ。船はオモリ負荷、岸は飛距離と操作性を重視。'},
@@ -22,11 +23,11 @@ const targets=[
  {slug:'aoriika',fish:'アオリイカ',icon:'🦑',href:'/fish/aoriika',routes:[{place:'⚓ 岸',method:'/methods#eging',name:'エギング',items:'8〜9ftエギング竿・2500〜3000番・PE0.6〜0.8号・リーダー1.75〜2.5号・エギ2.5〜3.5号'},{place:'🚤 船',method:'/methods#tiprun',name:'ティップラン',items:'専用竿・2500番・PE0.6〜0.8号・リーダー2号前後・ティップラン用エギ30〜60g'}]}
 ];
 
-export default function Page(){return <div className="section pageTop"><style>{`html{scroll-padding-top:96px}`}</style><script dangerouslySetInnerHTML={{__html:`window.addEventListener('DOMContentLoaded',function(){if(location.hash)return;var m=document.referrer.match(/\\/fish\\/([^/?#]+)/);if(!m)return;var el=document.getElementById(m[1]);if(el)setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'})},60);});`}}/>
+export default async function Page({searchParams}:{searchParams:Promise<{method?:string}>}){const query=await searchParams;return <div className="section pageTop"><style>{`html{scroll-padding-top:96px}`}</style><script dangerouslySetInnerHTML={{__html:`window.addEventListener('DOMContentLoaded',function(){if(location.hash)return;var m=document.referrer.match(/\\/fish\\/([^/?#]+)/);if(!m)return;var el=document.getElementById(m[1]);if(el)setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'})},60);});`}}/>
  <div className="pageHero"><span>FISHING GEAR</span><h1>釣具は「魚 × 釣り方」で選ぶ。</h1><p>ロッド、リール、ライン、仕掛けをばらばらに選ばず、狙う魚と釣り方から一式で考えるページです。</p></div>
  <div className="adNotice">このページにはAmazonアソシエイト等のアフィリエイトリンクを含みます。</div>
 
- <section className={s.guide}><div className={s.guideHead}><small>GEAR BASICS</small><h2>まず押さえる4つ</h2><p>迷ったら「ロッド → リール → ライン → 仕掛け」の順で確認。</p></div><div className={s.basicGrid}>{basics.map(x=><article key={x.title}><span>{x.icon}</span><h3>{x.title}</h3><p>{x.text}</p></article>)}</div></section>
+ <MethodTackle slug={typeof query.method==='string'?query.method:''}/><section className={s.guide}><div className={s.guideHead}><small>GEAR BASICS</small><h2>まず押さえる4つ</h2><p>迷ったら「ロッド → リール → ライン → 仕掛け」の順で確認。</p></div><div className={s.basicGrid}>{basics.map(x=><article key={x.title}><span>{x.icon}</span><h3>{x.title}</h3><p>{x.text}</p></article>)}</div></section>
 
  <section className={s.quickTips}><div><b>PE号数の目安</b><span>ライトゲーム 0.3〜0.8号</span><span>タイラバ 0.6〜1号</span><span>青物 2〜5号</span></div><div><b>リーダーの目安</b><span>小物 1.5〜3号</span><span>タイラバ 2〜4号</span><span>青物 6〜14号</span></div><div><b>船釣りで最優先</b><span>船宿指定のオモリ号数</span><span>PE号数</span><span>仕掛けの長さ</span></div></section>
 

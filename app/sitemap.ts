@@ -16,7 +16,10 @@ export default function sitemap():MetadataRoute.Sitemap{
     {path:'/spots',priority:.8,changeFrequency:'weekly' as const},
     {path:'/gear',priority:.85,changeFrequency:'weekly' as const},
     {path:'/cooking',priority:.88,changeFrequency:'weekly' as const},
-    {path:'/game',priority:.5,changeFrequency:'monthly' as const}
+    {path:'/game',priority:.5,changeFrequency:'monthly' as const},
+    {path:'/quest',priority:.7,changeFrequency:'monthly' as const},
+    {path:'/quest/play',priority:.6,changeFrequency:'monthly' as const},
+    {path:'/quest/missions',priority:.5,changeFrequency:'monthly' as const}
   ];
   const staticEntries=staticPages.map(x=>({url:base+x.path,lastModified:now,changeFrequency:x.changeFrequency,priority:x.priority}));
   const fishEntries=fishCatalog.map(f=>({url:`${base}/fish/${f.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.9}));

@@ -4,10 +4,10 @@ import {useMemo,useState} from 'react';
 import {fishingMapEntries,fishingMapFish,type MapEntryType} from '@/lib/fishing-map-data';
 import s from './SpotMap.module.css';
 
-export default function SpotMap(){
+export default function SpotMap({initialQuery=''}:{initialQuery?:string}){
  const [kind,setKind]=useState<'all'|MapEntryType>('all');
  const [fish,setFish]=useState('すべて');
- const [query,setQuery]=useState('');
+ const [query,setQuery]=useState(initialQuery);
  const [selected,setSelected]=useState(fishingMapEntries[0]?.slug??'');
  const entries=useMemo(()=>fishingMapEntries.filter(e=>(kind==='all'||e.type===kind)&&(fish==='すべて'||e.fish.includes(fish))&&(!query||`${e.name}${e.area}${e.fish.join('')}${e.methods.join('')}${e.bestFor.join('')}`.toLowerCase().includes(query.toLowerCase()))),[kind,fish,query]);
  const active=entries.find(e=>e.slug===selected)??entries[0];

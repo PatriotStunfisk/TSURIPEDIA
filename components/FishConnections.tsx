@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import {getFishConnections} from '@/lib/fish-connections';
+import {questFish} from '@/lib/quest/catalog';
 
 export default function FishConnections({slug}:{slug:string}){
   const links=getFishConnections(slug);
@@ -11,6 +12,7 @@ export default function FishConnections({slug}:{slug:string}){
       <span>FISHING &amp; GUIDE</span><h2>釣り方と実践ガイド</h2>
       {methods.length>0&&<><h3>釣り方を詳しく見る</h3>{methods.map(method=><Link key={method.slug} href={`/methods/${method.slug}`} className="methodLink"><div><b>{method.name}</b><small>{method.subtitle}</small></div><em>→</em></Link>)}</>}
       {guides.length>0&&<><h3>この魚の釣りGUIDE</h3>{guides.slice(0,6).map(guide=><Link key={guide.slug} href={`/guide/${guide.slug}`} className="methodLink"><div><b>{guide.title}</b></div><em>→</em></Link>)}{guides.length>6&&<Link href="/guide" className="gearCta">釣りGUIDEの一覧を見る →</Link>}</>}
+      {questFish.some(f=>f.slug===slug)&&<Link href={`/quest/play?fish=${slug}`} className="gearCta">この魚をQUESTで狙う →</Link>}
     </article>}
     {(cooking||related.length>0)&&<aside>
       {cooking&&<><span>COOKING</span><h2>捌き方と料理</h2><Link href={`/cooking/${slug}`} className="gearCta">{cooking.name}の捌き方・料理を見る →</Link>{cooking.recipes.map(recipe=><Link key={recipe.slug} href={`/cooking/${slug}/${recipe.slug}`} className="methodLink"><div><b>{recipe.name}</b></div><em>→</em></Link>)}</>}

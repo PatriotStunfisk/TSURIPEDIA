@@ -3,6 +3,13 @@ import type {Fish,FishSpeciesDefinition,FishTableGuideData} from './types';
 export function defineFishSpecies(definition:FishSpeciesDefinition):FishSpeciesDefinition{
   const {base,cooking,tableGuide}=definition;
   if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(base.slug))throw new Error('Invalid fish slug: '+base.slug);
+  const q=definition.quest;
+  if(q){
+    for(const [key,min,max] of [['rarity',1,5],['fightPower',1,100],['biteRate',0,1],['escapeRate',0,1],['xp',1,10000]] as const){
+      const value=q[key];if(value!==undefined&&(!Number.isFinite(value)||value<min||value>max))throw new Error('Invalid quest '+key+': '+base.slug);
+    }
+    if(q.sizeRange&&(!q.sizeRange.every(v=>Number.isFinite(v)&&v>0)||q.sizeRange[1]<q.sizeRange[0]))throw new Error('Invalid quest size range: '+base.slug);
+  }
   const recipes=cooking?.recipes??[];
   for(const recipe of recipes){
     if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(recipe.slug))throw new Error('Invalid recipe slug: '+base.slug+'/'+recipe.slug);

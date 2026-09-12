@@ -3,7 +3,7 @@
 ## Project and structure
 - The GitHub repository is named **TSURIPEDIA**; the public service is **UOLINK（ウオリンク）**, a comprehensive fishing information site for Japanese anglers. Preserve the UOLINK branding; the README and example URL still use the older name.
 - Stack: Next.js App Router, React 19, strict TypeScript, and Three.js. See `package.json` for exact versions.
-- `app/`: routes, layouts, metadata, sitemap, robots, global CSS, and page CSS modules. Main sections include fish, methods, spots, gear, guide, cooking, game, and admin.
+- `app/`: routes, layouts, metadata, sitemap, robots, global CSS, and page CSS modules. Main sections include fish, methods, spots, gear, guide, cooking, quest, legacy game, and admin.
 - `components/`: reusable UI and browser interactions, including fish viewers and maps; associated CSS modules live alongside components.
 - `lib/`: static content and shared registries. `lib/fish-species/<slug>.ts` is the authoring source for all existing species and new species; register each in `lib/fish-species/index.ts`. `data.ts`, `fish-details.ts`, `launch-fish.ts`, and `cooking-data.ts` retain derived compatibility views. `lib/fish-registry.ts` combines profile information, and `lib/all-guides.ts` combines guide article collections. Prefer these registries when consuming or enumerating content.
 - `public/`: images, brand assets, and GLB models. Reference them by root-relative URL.
@@ -22,7 +22,7 @@
 - Run `npm run build` for production validation and `npm run start` to serve a completed build.
 - With dependencies installed, run `npx tsc --noEmit` for a TypeScript check. The config includes generated `.next/types`, so route type validation also depends on Next.js generation/build.
 - Run `npm run lint` for ESLint syntax and basic correctness checks. TypeScript and build provide type and route validation.
-- Run `npm run test:content` for content registry and relationship regression tests. For behavioral changes, verify the affected routes and interactions in a browser at desktop and mobile sizes; check console errors and asset loading. For 3D changes, check dragging, resizing, and fallback behavior.
+- Run `npm test` for content registry and QUEST regression tests (`npm run test:content` and `npm run test:quest` run each suite separately). For behavioral changes, verify the affected routes and interactions in a browser at desktop and mobile sizes; check console errors and asset loading. For 3D changes, check dragging, resizing, and fallback behavior.
 - After code changes, run TypeScript checks, build, lint, and checks of related pages wherever feasible. Investigate and fix errors encountered; do not report the work as complete while known errors remain. If a check cannot run or an error cannot be resolved within the authorized scope, clearly report the cause and outstanding work rather than claiming success.
 - Documentation-only changes do not require installing dependencies or running a build. Report checks actually performed and any limitations.
 
@@ -62,3 +62,10 @@
 - Full profiles should include identification, beginner/safety information, linked methods/GUIDE, preparation, and normally four suitable recipes. Recipe cards must render directly from profile/recipe data, with matching names, images and slugs, and whole-card recipe links. Never rewrite cooking cards with DOM manipulation.
 - New species images must be original or explicitly authorized; never fill gaps with another species or unknown-rights images. Verify real filenames and case. New profiles set `media.image`; adding `public/models/<slug>.glb` enables the shared viewer on the next build. Missing models leave a working 2D view. Preserve the existing seven viewers until a separately tested migration is justified.
 - Validate mobile layout, images/models, every recipe link, metadata and sitemap in addition to TypeScript, lint, tests and build. Check the Git-linked deployment status after an authorized push when available.
+
+## QUEST integration
+- Use `lib/quest/catalog.ts` to derive playable species from the existing fish profiles and method registry. Do not create a second fish database. Optional profile `quest` settings tune gameplay; see `docs/quest.md`.
+- Keep gameplay rules and save/mission logic in pure helpers with deterministic tests. Keep the browser provider responsible for local persistence and schema validation; preserve unreadable or newer saves rather than overwriting them.
+- Model availability uses the same case-sensitive `/models/<slug>.glb` lookup as fish pages. QUEST uses opt-in contained framing; do not change the existing seven viewer defaults during unrelated work.
+- Preserve `/game`. Public QUEST entry routes are indexable; personal collection/profile routes are noindex and excluded from sitemap. Test fish/method/gear/spot/cooking/GUIDE links and mobile gameplay, rewards, reload persistence, and collection synchronization before publishing.
+- QUEST habitat names describe game environments, not verified permission to fish at a real location. Keep real spot access restrictions and verification dates in the spot data when extending the map.

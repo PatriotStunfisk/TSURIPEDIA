@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "test:content": "node --test tests/content-registry.test.cjs"
+    "test:content": "node --test tests/content-registry.test.cjs",
+    "test:quest": "node --test tests/quest.test.cjs",
+    "test": "node --test tests/*.test.cjs"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
