@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import TachiuoSchool from './TachiuoSchool';
-import {launchFish,isLaunchFish} from '@/lib/launch-fish';
+import {getFishLaunch} from '@/lib/fish-registry';
 
 export default function LaunchFishExtras({slug,name}:{slug:string;name:string}){
-  if(!isLaunchFish(slug))return null;
-  const x=launchFish[slug];
+  const x=getFishLaunch(slug);
+  if(!x)return null;
   return <>
     {slug==='tachiuo'&&<TachiuoSchool/>}
     {slug==='aji'&&<>
