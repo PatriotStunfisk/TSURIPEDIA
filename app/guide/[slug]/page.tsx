@@ -3,17 +3,8 @@ import {notFound} from 'next/navigation';
 import GuideProductCards from '@/components/GuideProductCards';
 import GuideAffiliatePicks from '@/components/GuideAffiliatePicks';
 import GuideAffiliateExtras from '@/components/GuideAffiliateExtras';
-import {guideArticles} from '@/lib/guide-articles';
-import {extraGuideArticles} from '@/lib/guide-articles-extra';
-import {extraGuideArticles2} from '@/lib/guide-articles-extra2';
-import {extraGuideArticles3} from '@/lib/guide-articles-extra3';
-import {extraGuideArticles4} from '@/lib/guide-articles-extra4';
-import {extraGuideArticles5} from '@/lib/guide-articles-extra5';
-import {extraGuideArticles6} from '@/lib/guide-articles-extra6';
-import {extraGuideArticles7} from '@/lib/guide-articles-extra7';
+import {allGuides,getGuide} from '@/lib/all-guides';
 
-const allGuides=[...guideArticles,...extraGuideArticles,...extraGuideArticles2,...extraGuideArticles3,...extraGuideArticles4,...extraGuideArticles5,...extraGuideArticles6,...extraGuideArticles7];
-const getGuide=(slug:string)=>allGuides.find(x=>x.slug===slug);
 const compact=(text:string)=>text.replace(/となります。/g,'となる。').replace(/になります。/g,'になる。').replace(/できます。/g,'できる。').replace(/使えます。/g,'使える。').replace(/狙えます。/g,'狙える。').replace(/変わります。/g,'変わる。').replace(/あります。/g,'ある。').replace(/重要です。/g,'重要。').replace(/基本です。/g,'基本。').replace(/目安です。/g,'目安。').replace(/おすすめです。/g,'おすすめ。').replace(/安心です。/g,'安心。').replace(/有効です。/g,'有効。').replace(/必要です。/g,'必要。');
 const base='https://uolink.vercel.app';
 const categoryAdvice:Record<string,{title:string;body:string;points:string[]}>= {
