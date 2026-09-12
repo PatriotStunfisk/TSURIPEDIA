@@ -11,6 +11,7 @@ import {extraGuideArticles4} from '@/lib/guide-articles-extra4';
 import {extraGuideArticles5} from '@/lib/guide-articles-extra5';
 import {extraGuideArticles6} from '@/lib/guide-articles-extra6';
 import {extraGuideArticles7} from '@/lib/guide-articles-extra7';
+import {cookingFish} from '@/lib/cooking-data';
 
 const methodDetails={...baseMethodDetails,...extraMethodDetails,...extraMethodDetails2};
 const allGuides=[...guideArticles,...extraGuideArticles,...extraGuideArticles2,...extraGuideArticles3,...extraGuideArticles4,...extraGuideArticles5,...extraGuideArticles6,...extraGuideArticles7];
@@ -25,11 +26,16 @@ export default function sitemap():MetadataRoute.Sitemap{
     {path:'/guide',priority:.92,changeFrequency:'weekly' as const},
     {path:'/spots',priority:.8,changeFrequency:'weekly' as const},
     {path:'/gear',priority:.85,changeFrequency:'weekly' as const},
+    {path:'/cooking',priority:.88,changeFrequency:'weekly' as const},
     {path:'/game',priority:.5,changeFrequency:'monthly' as const}
   ];
   const staticEntries=staticPages.map(x=>({url:base+x.path,lastModified:now,changeFrequency:x.changeFrequency,priority:x.priority}));
   const fishEntries=fish.map(f=>({url:`${base}/fish/${f.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.9}));
   const methodEntries=Object.keys(methodDetails).map(slug=>({url:`${base}/methods/${slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.85}));
   const guideEntries=allGuides.map(a=>({url:`${base}/guide/${a.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.88}));
-  return [...staticEntries,...fishEntries,...methodEntries,...guideEntries];
+  const cookingEntries=cookingFish.flatMap(f=>[
+    {url:`${base}/cooking/${f.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.84},
+    ...f.recipes.map(r=>({url:`${base}/cooking/${f.slug}/${r.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.82}))
+  ]);
+  return [...staticEntries,...fishEntries,...methodEntries,...guideEntries,...cookingEntries];
 }
