@@ -12,7 +12,7 @@ const quickLinks=[
   {href:'/guide',icon:'?',label:'GUIDE'},
   {href:'/spots',icon:'⌖',label:'釣り場'},
   {href:'/gear',icon:'▣',label:'釣具'},
-  {href:'/cooking',icon:'♨',label:'魚料理'}
+  {href:'/cooking',icon:'◇',label:'魚料理'}
 ];
 
 export default function Home(){
@@ -37,7 +37,7 @@ export default function Home(){
       <Link className={s.navCard} href="/guide"><div className={s.navIcon}>?</div><b>釣りGUIDE</b><span>何号？何g？いつ釣れる？</span></Link>
       <Link className={s.navCard} href="/spots"><div className={s.navIcon}>⌖</div><b>釣りスポット</b><span>魚種・設備・エリアから探す</span></Link>
       <Link className={s.navCard} href="/gear"><div className={s.navIcon}>▣</div><b>釣具</b><span>ロッド・リール・仕掛け</span></Link>
-      <Link className={s.navCard} href="/cooking"><div className={s.navIcon}>♨</div><b>魚料理</b><span>捌き方・下処理・レシピ</span></Link>
+      <Link className={s.navCard} href="/cooking"><div className={s.navIcon}>◇</div><b>魚料理</b><span>捌き方・下処理・レシピ</span></Link>
     </section>
 
     <div className={s.band} style={{background:'#e9f5fb'}}>
