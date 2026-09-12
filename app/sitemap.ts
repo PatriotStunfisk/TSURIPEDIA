@@ -3,18 +3,10 @@ import {fish} from '@/lib/data';
 import {methodDetails as baseMethodDetails} from '@/lib/method-details';
 import {extraMethodDetails} from '@/lib/method-details-extra';
 import {extraMethodDetails2} from '@/lib/method-details-extra2';
-import {guideArticles} from '@/lib/guide-articles';
-import {extraGuideArticles} from '@/lib/guide-articles-extra';
-import {extraGuideArticles2} from '@/lib/guide-articles-extra2';
-import {extraGuideArticles3} from '@/lib/guide-articles-extra3';
-import {extraGuideArticles4} from '@/lib/guide-articles-extra4';
-import {extraGuideArticles5} from '@/lib/guide-articles-extra5';
-import {extraGuideArticles6} from '@/lib/guide-articles-extra6';
-import {extraGuideArticles7} from '@/lib/guide-articles-extra7';
+import {allGuides} from '@/lib/all-guides';
 import {cookingFish} from '@/lib/cooking-data';
 
 const methodDetails={...baseMethodDetails,...extraMethodDetails,...extraMethodDetails2};
-const allGuides=[...guideArticles,...extraGuideArticles,...extraGuideArticles2,...extraGuideArticles3,...extraGuideArticles4,...extraGuideArticles5,...extraGuideArticles6,...extraGuideArticles7];
 
 export default function sitemap():MetadataRoute.Sitemap{
   const base='https://uolink.vercel.app';
