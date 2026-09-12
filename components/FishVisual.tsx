@@ -2,6 +2,7 @@
 import {useEffect,useState} from 'react';
 import {usePathname} from 'next/navigation';
 import FishArt from './FishArt';
+import ProfileImage from './ProfileImage';
 import BuriMedia from './BuriMedia';
 import SabaMedia from './SabaMedia';
 import AjiMedia from './AjiMedia';
@@ -43,6 +44,6 @@ export default function FishVisual({slug,name,className='',imageSrc}:Props){
   if(slug==='kisu'&&pathname==='/fish/kisu')return <KisuMedia/>;
 
   return <div className={`${s.wrap} ${className}`}>
-    {!failed?<img src={src} alt={`${name}の図鑑画像`} width={slug==='saba'?1891:undefined} height={slug==='saba'?831:undefined} onError={()=>setFailed(true)}/>:<FishArt slug={slug} label={name}/>} 
+    {!failed?<ProfileImage optimized={!!imageSrc} sizes="(max-width: 600px) 50vw, (max-width: 1000px) 33vw, 25vw" src={src} alt={`${name}の図鑑画像`} width={slug==='saba'?1891:undefined} height={slug==='saba'?831:undefined} onError={()=>setFailed(true)}/>:<FishArt slug={slug} label={name}/>}
   </div>
 }
