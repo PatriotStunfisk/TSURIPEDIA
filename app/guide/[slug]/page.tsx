@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import {notFound} from 'next/navigation';
 import GuideProductCards from '@/components/GuideProductCards';
+import GuideAffiliatePicks from '@/components/GuideAffiliatePicks';
 import {guideArticles} from '@/lib/guide-articles';
 import {extraGuideArticles} from '@/lib/guide-articles-extra';
 import {extraGuideArticles2} from '@/lib/guide-articles-extra2';
@@ -49,6 +50,7 @@ export default async function GuideArticlePage({params}:{params:Promise<{slug:st
   <nav style={{margin:'20px 0 0',padding:'18px 20px',borderRadius:14,background:'#f4f8fa'}}><b style={{display:'block',marginBottom:8}}>この記事のポイント</b><div style={{display:'flex',gap:10,flexWrap:'wrap'}}>{a.sections.map((s,i)=><a key={s.heading} href={`#p${i+1}`} style={{fontSize:12,fontWeight:800,color:'#087bc4'}}>0{i+1} {s.heading}</a>)}</div></nav>
   <div style={{display:'grid',gap:18,marginTop:28}}>{a.sections.map((s,i)=><section id={`p${i+1}`} key={s.heading} style={{padding:'24px',border:'1px solid #e0e8ed',borderRadius:18,background:'#fff',scrollMarginTop:90}}><span style={{fontSize:12,fontWeight:900,letterSpacing:1.2,color:'#087bc4'}}>POINT {String(i+1).padStart(2,'0')}</span><h2 style={{margin:'6px 0 10px'}}>{s.heading}</h2><p style={{lineHeight:1.9,margin:0}}>{s.body}</p>{s.points&&<div style={{display:'grid',gap:8,marginTop:14}}>{s.points.map(p=><div key={p} style={{padding:'10px 12px',background:'#f4f8fa',borderRadius:10,fontWeight:700}}>✓ {p}</div>)}</div>}</section>)}</div>
   {advice&&<section style={{margin:'20px 0 0',padding:'24px',borderRadius:18,background:'#fff8e8',border:'1px solid #f0ddb1'}}><span style={{fontSize:12,fontWeight:900,color:'#9a6b00'}}>PRACTICAL NOTE</span><h2 style={{margin:'6px 0 10px'}}>{advice.title}</h2><p style={{lineHeight:1.9}}>{advice.body}</p><div style={{display:'grid',gap:8}}>{advice.points.map(p=><div key={p} style={{padding:'10px 12px',background:'#fff',borderRadius:10,fontWeight:800}}>・{p}</div>)}</div></section>}
+  <GuideAffiliatePicks slug={slug}/>
   <GuideProductCards slug={slug}/>
   <section style={{margin:'34px 0 10px',padding:'24px',borderRadius:20,background:'#edf6fb'}}><span style={{fontSize:12,fontWeight:900,color:'#087bc4'}}>RELATED</span><h2 style={{margin:'5px 0 14px'}}>次に見る</h2><div style={{display:'grid',gap:10}}>{a.related.map(r=><Link key={r.href} href={r.href} className="methodLink"><div><b>{r.label}</b><small>UOLINK内で詳しく見る</small></div><em>→</em></Link>)}</div></section>
   <p style={{fontSize:12,lineHeight:1.7,opacity:.62,marginTop:22}}>※季節・魚種・仕掛けは海況や地域で変わる。現地ルールと直近情報を優先。</p>
