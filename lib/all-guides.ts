@@ -19,3 +19,9 @@ export const allGuides=[
 ];
 
 export const getGuide=(slug:string)=>allGuides.find(x=>x.slug===slug);
+
+// Existing article → fish links also supply the fish → article direction.
+export function getGuidesForFish(slug:string){
+  const href=`/fish/${slug}`;
+  return allGuides.filter(guide=>guide.related.some(link=>link.href.split(/[?#]/)[0]===href));
+}

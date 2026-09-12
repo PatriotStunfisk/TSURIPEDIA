@@ -1,6 +1,7 @@
 'use client';
 import {useEffect} from 'react';
 import {usePathname} from 'next/navigation';
+import {primaryMethod} from '@/lib/fish-methods';
 
 const madaiDishes=[
   ['/images/fish/madai-sashimi.jpg','刺身'],
@@ -11,11 +12,8 @@ const madaiDishes=[
   ['/images/fish/madai-ushiojiru.jpg','潮汁'],
 ] as const;
 const fishNames:Record<string,string>={tachiuo:'タチウオ',aji:'マアジ',saba:'サバ',buri:'ブリ',kisu:'キス',kasago:'カサゴ',madai:'マダイ'};
-const primaryMethod:Record<string,string>={
-  tachiuo:'tachiuo-tenya',aji:'sabiki',saba:'sabiki',buri:'nomase',kisu:'choinage',kasago:'ana',madai:'tai-rubber',
-  kawahagi:'kawahagi',hirame:'nomase',aoriika:'eging',sawara:'blade-jig',hamachi:'shore-jigging',mebaru:'mebaring',
-  madako:'tako-egi',chinu:'fukase',unagi:'bukkomi'
-};
+// Legacy anchor behavior shares the same editorial choices as fish pages.
+
 
 function setActive(el:HTMLElement,on:boolean){
   el.style.background=on?'#1687e8':'';

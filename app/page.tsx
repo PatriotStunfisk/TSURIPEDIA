@@ -1,12 +1,11 @@
 import Link from 'next/link';
-import {fish,methods} from '@/lib/data';
-import {guideArticles} from '@/lib/guide-articles';
-import {extraGuideArticles} from '@/lib/guide-articles-extra';
+import {methods} from '@/lib/data';
+import {getFishProfile} from '@/lib/fish-registry';
+import {allGuides} from '@/lib/all-guides';
 import FishVisual from '@/components/FishVisual';
 import {launchFishSlugs} from '@/lib/launch-fish';
 import s from './home.module.css';
 
-const allGuides=[...guideArticles,...extraGuideArticles];
 const quickLinks=[
   {href:'/fish',icon:'◉',label:'魚図鑑'},
   {href:'/methods',icon:'⌁',label:'釣り方'},
@@ -17,7 +16,7 @@ const quickLinks=[
 ];
 
 export default function Home(){
-  const featured=launchFishSlugs.map(slug=>fish.find(f=>f.slug===slug)!).filter(Boolean);
+  const featured=launchFishSlugs.map(slug=>getFishProfile(slug)!).filter(Boolean);
   const guidePicks=allGuides.slice(0,6);
   return <div className={s.home}>
     <section className={s.hero}>

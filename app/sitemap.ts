@@ -1,12 +1,9 @@
 import type {MetadataRoute} from 'next';
 import {fishCatalog} from '@/lib/fish-registry';
-import {methodDetails as baseMethodDetails} from '@/lib/method-details';
-import {extraMethodDetails} from '@/lib/method-details-extra';
-import {extraMethodDetails2} from '@/lib/method-details-extra2';
+import {methodDetails} from '@/lib/method-registry';
 import {allGuides} from '@/lib/all-guides';
 import {cookingFish} from '@/lib/cooking-data';
 
-const methodDetails={...baseMethodDetails,...extraMethodDetails,...extraMethodDetails2};
 
 export default function sitemap():MetadataRoute.Sitemap{
   const base='https://uolink.vercel.app';

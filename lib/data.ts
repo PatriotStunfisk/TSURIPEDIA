@@ -2,6 +2,7 @@ export type Fish = {
   slug:string; name:string; en:string; scientific:string; season:string; difficulty:number;
   danger:string; methods:string[]; areas:string[]; depth:string; size:string; desc:string;
   accent:string; months:number[]; beginner:boolean; kids:boolean;
+  methodSlugs?:string[]; guideSlugs?:string[]; relatedSlugs?:string[];
 };
 export const fish: Fish[] = [
  {slug:'tachiuo',name:'タチウオ',en:'Largehead hairtail',scientific:'Trichiurus lepturus',season:'8〜12月',difficulty:3,danger:'鋭い歯に注意',methods:['テンヤ','ジギング','ウキ釣り','引き釣り'],areas:['大阪湾','明石','和歌山'],depth:'10〜100m',size:'50〜120cm',desc:'銀色に輝く刀のような体が特徴。夕方から朝にかけて活発になり、大阪湾では夏後半〜冬の人気ターゲットです。',accent:'#d9edf7',months:[8,9,10,11,12],beginner:true,kids:false},

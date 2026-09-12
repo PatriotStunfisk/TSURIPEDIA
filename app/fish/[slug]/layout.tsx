@@ -1,5 +1,5 @@
 import type {Metadata} from 'next';
-import {getFish} from '@/lib/data';
+import {getFishProfile as getFish} from '@/lib/fish-registry';
 
 const base='https://uolink.vercel.app';
 
