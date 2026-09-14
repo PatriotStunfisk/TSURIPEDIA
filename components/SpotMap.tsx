@@ -4,7 +4,8 @@ import Link from 'next/link';
 import {useMemo,useState} from 'react';
 import {fishingMapEntries,fishingMapFish,type MapEntryType} from '@/lib/fishing-map-data';
 import s from './SpotMap.module.css';
-import SpotLocationMap from './SpotLocationMap';
+import InteractiveSpotMap from './InteractiveSpotMap';
+import {distanceKm,hasCoordinates,sortByDistance,type Coordinates} from '@/lib/spot-distance';
 
 export default function SpotMap({initialQuery='',fishNames={},methodNames={}}:{initialQuery?:string;fishNames?:Record<string,string>;methodNames?:Record<string,string>}){
  const [kind,setKind]=useState<'all'|MapEntryType>('all');
@@ -12,7 +13,16 @@ export default function SpotMap({initialQuery='',fishNames={},methodNames={}}:{i
  const [query,setQuery]=useState(initialQuery);
  const [showClosed,setShowClosed]=useState(false);
  const [selected,setSelected]=useState(fishingMapEntries[0]?.slug??'');
- const entries=useMemo(()=>fishingMapEntries.filter(e=>(showClosed||!e.closed)&&(kind==='all'||e.type===kind)&&(fish==='すべて'||e.fish.includes(fish))&&(!query||`${e.name}${e.area}${e.fish.join('')}${e.methods.join('')}${e.bestFor.join('')}`.toLowerCase().includes(query.toLowerCase()))),[kind,fish,query,showClosed]);
+ const [origin,setOrigin]=useState<Coordinates|null>(null);
+ const [locating,setLocating]=useState(false);
+ const [locationMessage,setLocationMessage]=useState('');
+ function locate(){
+  if(!navigator.geolocation){setLocationMessage('このブラウザは現在地検索に対応していません。地域名で検索してください。');return;}
+  setLocating(true);setLocationMessage('現在地の取得を待っています…');
+  navigator.geolocation.getCurrentPosition(p=>{const point={lat:p.coords.latitude,lng:p.coords.longitude};setLocating(false);if(!hasCoordinates(point)){setLocationMessage('位置を確認できませんでした。地域名で検索してください。');return;}setOrigin(point);setSelected('');setLocationMessage('現在の検索条件で、位置登録のある釣り場を近い順に表示しています。距離は直線距離です。');},error=>{setLocating(false);setLocationMessage(error.code===1?'現在地の利用が許可されませんでした。地域名で検索できます。':'現在地を取得できませんでした。屋外で試すか、地域名で検索してください。');},{enableHighAccuracy:false,timeout:10000,maximumAge:60000});
+ }
+ const filteredEntries=useMemo(()=>fishingMapEntries.filter(e=>(showClosed||!e.closed)&&(kind==='all'||e.type===kind)&&(fish==='すべて'||e.fish.includes(fish))&&(!query||`${e.name}${e.area}${e.fish.join('')}${e.methods.join('')}${e.bestFor.join('')}`.toLowerCase().includes(query.toLowerCase()))),[kind,fish,query,showClosed]);
+ const entries=useMemo(()=>origin?sortByDistance(filteredEntries,origin):filteredEntries,[filteredEntries,origin]);
  const active=entries.find(e=>e.slug===selected)??entries[0];
  return <section className={s.wrap}>
   <div className={s.toolbar}>
@@ -24,10 +34,11 @@ export default function SpotMap({initialQuery='',fishNames={},methodNames={}}:{i
    <label><input type="checkbox" checked={showClosed} onChange={e=>setShowClosed(e.target.checked)}/>休業・閉鎖情報も表示</label><input aria-label="釣り場を検索" value={query} onChange={e=>setQuery(e.target.value)} placeholder="釣り場・魚・釣り方で検索"/>
   </div>
   <div className={s.fishFilters}>{fishingMapFish.map(v=><button key={v} onClick={()=>setFish(v)} className={fish===v?s.activeChip:''}>{v}</button>)}</div>
-  {active?.lat!==undefined&&active?.lng!==undefined?<SpotLocationMap key={active.slug} name={active.name} lat={active.lat} lng={active.lng}/>:<p>位置は各項目の公式アクセス案内・地図検索から確認できます。</p>}
+  <div className={s.locationControls}><button disabled={locating} onClick={locate}>{locating?'現在地を取得中…':'⌖ 現在地から近い順に探す'}</button>{origin&&<button onClick={()=>{setOrigin(null);setLocationMessage('');}}>現在地の利用をやめる</button>}<p>現在地は許可した場合だけ取得し、この画面で距離計算に使います。位置情報を保存したり、サーバーへ送信したりしません。位置未登録の項目は一覧の最後に表示します。</p><p role="status">{locationMessage}</p></div>
+  <InteractiveSpotMap entries={entries} selected={active?.slug} onSelect={setSelected}/>
   <div className={s.contentGrid}>
    <div className={s.spotList}>{entries.length?entries.map(e=><button key={e.slug} className={`${s.spotCard} ${active?.slug===e.slug?s.selected:''}`} onClick={()=>setSelected(e.slug)}>
-    <div><span>{e.type==='area'?'釣行エリア':e.type==='boat'?'釣船':'釣り場'}</span><small>{e.area}</small></div><strong>{e.name}</strong><p>{e.note}</p><div className={s.miniFish}>{e.fish.slice(0,5).map(f=><em key={f}>{f}</em>)}</div>
+    <div><span>{e.type==='area'?'釣行エリア':e.type==='boat'?'釣船':'釣り場'}</span><small>{e.area}</small></div><strong>{e.name}</strong>{origin&&<small>{hasCoordinates(e)?`現在地から約${distanceKm(origin,e).toFixed(1)}km（直線）`:'位置未登録・距離不明'}</small>}<p>{e.note}</p><div className={s.miniFish}>{e.fish.slice(0,5).map(f=><em key={f}>{f}</em>)}</div>
    </button>):<div className={s.empty}>条件に合う釣り場はありません。休業・閉鎖情報を探す場合は「休業・閉鎖情報も表示」を選んでください。</div>}</div>
    <aside className={s.panel}>{active?<>
     <div className={s.panelTop}><span>{active.type==='area'?'釣行エリア':active.type==='boat'?'釣船':'釣り場'}</span><small>{active.area}</small></div>

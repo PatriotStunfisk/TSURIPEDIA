@@ -13,18 +13,20 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
+    "leaflet": "1.9.4",
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "three": "0.180.0"
   },
   "devDependencies": {
+    "@types/leaflet": "1.9.21",
     "@types/node": "24.3.0",
     "@types/react": "19.1.12",
     "@types/react-dom": "19.1.9",
     "@types/three": "0.180.0",
-    "typescript": "5.9.2",
+    "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^10.10.0",
-    "@typescript-eslint/parser": "^8.0.0"
+    "typescript": "5.9.2"
   }
 }

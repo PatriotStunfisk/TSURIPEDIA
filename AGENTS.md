@@ -38,6 +38,7 @@
 ## SEO and future monetization
 - Consider title, description, canonical URLs, sitemap coverage, useful internal links, mobile presentation, and Core Web Vitals when changing pages. Prioritize helpful content and performance; do not mass-generate low-quality pages solely for SEO.
 - Make the path **fish → fishing method → required gear → product** easy to express through reusable data relationships. Allow for future Amazon/Rakuten product affiliate links, display advertising, fishing-boat bookings, fishing-gear services, and direct advertising from boat operators and tackle shops.
+- On 2026-09-15 the user explicitly authorized relevant Amazon Associates product links with public store ID `uolink-22`. Keep product selection in `lib/affiliate-products.ts`, show PR and the required affiliate disclosure, and use sponsored links. Never store account credentials. This authorization does not extend to other ad networks.
 - Do not add advertising code without explicit user authorization. Future monetization plans do not authorize implementing ad or affiliate integrations now.
 
 ## Scope, preservation, and configuration

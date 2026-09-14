@@ -1,3 +1,4 @@
+import AffiliateProducts from '@/components/AffiliateProducts';
 import {methodDetails} from '@/lib/method-registry';
 import Link from 'next/link';
 import MethodTackle from '@/components/MethodTackle';
@@ -31,7 +32,7 @@ export default async function Page({searchParams}:{searchParams:Promise<{method?
  <section className={s.guide}><h2>釣り方から道具一式を選ぶ</h2><div className="chips">{Object.values(methodDetails).map(m=><Link key={m.slug} href={`/gear?method=${m.slug}`}>{m.name}</Link>)}</div></section>
  <MethodTackle slug={typeof query.method==='string'?query.method:''}/><section className={s.guide}><div className={s.guideHead}><small>GEAR BASICS</small><h2>まず押さえる4つ</h2><p>迷ったら「ロッド → リール → ライン → 仕掛け」の順で確認。</p></div><div className={s.basicGrid}>{basics.map(x=><article key={x.title}><span>{x.icon}</span><h3>{x.title}</h3><p>{x.text}</p></article>)}</div></section>
 
- <section className={s.quickTips}><div><b>PE号数の目安</b><span>ライトゲーム 0.3〜0.8号</span><span>タイラバ 0.6〜1号</span><span>青物 2〜5号</span></div><div><b>リーダーの目安</b><span>小物 1.5〜3号</span><span>タイラバ 2〜4号</span><span>青物 6〜14号</span></div><div><b>船釣りで最優先</b><span>船宿指定のオモリ号数</span><span>PE号数</span><span>仕掛けの長さ</span></div></section>
+ <AffiliateProducts methods={query.method?[query.method]:undefined} limit={12}/><section className={s.quickTips}><div><b>PE号数の目安</b><span>ライトゲーム 0.3〜0.8号</span><span>タイラバ 0.6〜1号</span><span>青物 2〜5号</span></div><div><b>リーダーの目安</b><span>小物 1.5〜3号</span><span>タイラバ 2〜4号</span><span>青物 6〜14号</span></div><div><b>船釣りで最優先</b><span>船宿指定のオモリ号数</span><span>PE号数</span><span>仕掛けの長さ</span></div></section>
 
  <div className={s.sectionHead}><div><small>BY TARGET</small><h2>魚別タックル早見</h2></div><p>岸と船で道具が大きく変わる魚は分けて掲載しています。</p></div>
  <div className={s.targetGrid}>{targets.map(x=><article id={x.slug} style={{scrollMarginTop:96}} className={s.target} key={x.fish}><div className={s.targetHead}><span>{x.icon}</span><div><small>TACKLE GUIDE</small><h2>{x.fish}の釣具</h2><p>釣り方に合う道具をチェック</p></div></div>{x.routes.map(r=><div className={s.route} key={r.place+r.name}><div><b>{r.place}｜{r.name}</b><p>{r.items}</p></div><Link href={r.method}>釣り方を見る →</Link></div>)}{'amazon' in x&&x.amazon&&<a className={s.amazonCard} href={x.amazon} target="_blank" rel="sponsored noopener noreferrer"><div className={s.amazonVisual}>🎣</div><div><small>Amazon</small><b>船タチウオテンヤ用ロッド</b><span>商品を見る →</span></div></a>}<div className={s.actions}><Link href={x.href}>{x.fish}の特徴を見る →</Link></div></article>)}</div>
