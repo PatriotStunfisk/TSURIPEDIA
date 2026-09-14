@@ -89,9 +89,13 @@ const {fishSpecies}=require('../lib/fish-species/index.ts');
 const {defineFishSpecies,uniqueFishSlugs,getSpeciesTableGuide}=require('../lib/fish-species/define.ts');
 const details=require('../lib/fish-details.ts').fishDetails;
 const featured=require('../lib/launch-fish.ts');
+// The user removed the duplicate public gashira entry in b7e5d83. Keep its archived
+// base in this historical comparison, so all existing snapshot hashes remain useful.
+const archivedGashira=require('../lib/fish-species/gashira.ts').default;
+const historicalFish=originalFish.map(slug=>fish.find(f=>f.slug===slug)??(slug==='gashira'?archivedGashira.base:undefined));
 const migratedSnapshots={
-  fish:fish.filter(f=>originalFish.includes(f.slug)).map(f=>{if(!['kawahagi','aoriika','mebaru','hirame','sawara','madako','suzuki','chinu','iwashi','kanpachi','isaki','anago','ayu','nijimasu','amago'].includes(f.slug))return f;const {methodSlugs,relatedSlugs,guideSlugs,...original}=f;return original}),
-  details:Object.fromEntries(Object.entries(details).filter(([slug])=>originalFish.includes(slug)&&!['anago','isaki'].includes(slug))),
+  fish:historicalFish.map(f=>{if(!['kawahagi','aoriika','mebaru','hirame','sawara','madako','suzuki','chinu','iwashi','kanpachi','isaki','anago','ayu','nijimasu','amago'].includes(f.slug))return f;const {methodSlugs,relatedSlugs,guideSlugs,...original}=f;return original}),
+  details:Object.fromEntries(Object.entries({...details,...(archivedGashira.detail?{gashira:archivedGashira.detail}:{})}).filter(([slug])=>originalFish.includes(slug)&&!['anago','isaki'].includes(slug))),
   launch:Object.fromEntries(featuredFish.map(slug=>[slug,featured.launchFish[slug]])),
   launchSlugs:featured.launchFishSlugs.filter(slug=>featuredFish.includes(slug)),
   cooking:cookingFish.filter(f=>f.slug==='saba'),
@@ -227,5 +231,7 @@ test('ten promoted/new profiles connect four recipes, guides, methods and QUEST'
   assert.ok(questFish.find(f=>f.slug===slug)?.fightProfile,slug);
   for(const r of f.cooking.recipes){assert.ok(r.steps.length>=4&&r.ingredients.length>=3,r.slug);assert.ok(r.image.includes('/'+slug+'-'),r.slug)}
  }
- assert.equal(fish.filter(f=>f.slug==='chinu').length,1);assert.ok(!fish.some(f=>['kurodai','mejina','gure'].includes(f.slug)));
+ assert.equal(fish.filter(f=>f.slug==='chinu').length,1);assert.ok(!fish.some(f=>['kurodai','gure'].includes(f.slug)));
 });
+
+test('user-removed gashira alias is not reintroduced into the public catalog',()=>{assert.equal(registry.getFishProfile('gashira'),undefined);assert.ok(registry.getFishProfile('kasago'));});
