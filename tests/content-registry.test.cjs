@@ -235,3 +235,16 @@ test('ten promoted/new profiles connect four recipes, guides, methods and QUEST'
 });
 
 test('user-removed gashira alias is not reintroduced into the public catalog',()=>{assert.equal(registry.getFishProfile('gashira'),undefined);assert.ok(registry.getFishProfile('kasago'));});
+
+test('coastal batch supplies full profiles, original images, four recipes and playable QUEST entries',()=>{
+ const {questFish}=require('../lib/quest/catalog.ts');
+ for(const slug of ['mejina','haze','ainame','kijihata','akahata','oomonhata','houbo','itoyoridai','kouika','yariika']){
+  const f=registry.getFishProfile(slug),links=getFishConnections(slug);
+  assert.ok(f.detail.body&&f.detail.safety&&f.detail.beginnerTip,slug);assert.equal(f.cooking.recipes.length,4,slug);assert.ok(f.launch.identify.length>=3,slug);
+  assert.ok(links.guides.length&&links.methods.length&&links.related.length,slug);
+  assert.ok(questFish.some(f=>f.slug===slug&&f.fightProfile&&f.habitats.length),slug);
+  for(const r of f.cooking.recipes){assert.ok(r.steps.length>=4&&r.ingredients.length>=3);assert.ok(fs.existsSync(path.join(root,'public',r.image)),r.image);}
+ }
+ assert.equal(fish.filter(f=>f.name==='メジナ').length,1);
+ const {affiliateProducts}=require('../lib/affiliate-products.ts');for(const p of affiliateProducts)for(const slug of p.methods)assert.ok(methodDetails[slug],slug);
+});

@@ -29,7 +29,9 @@ test('a new base profile automatically enters QUEST without a separate game fish
  try{delete require.cache[require.resolve('../lib/quest/catalog.ts')];const fresh=require('../lib/quest/catalog.ts').questFish.find(f=>f.slug===fixture.slug);assert.ok(fresh);assert.equal(fresh.name,fixture.name);assert.ok(fresh.methods.includes('sabiki'));assert.equal(fresh.modelSrc,undefined)}finally{fishCatalog.pop();delete require.cache[require.resolve('../lib/quest/catalog.ts')]}
 });
 test('method and habitat compatibility prevents impossible casts',()=>{
- assert.deepEqual(E.eligibleFish(questFish,'osaka-bay-pier','eging').map(f=>f.slug),['aoriika']);
+ const squid=E.eligibleFish(questFish,'osaka-bay-pier','eging');
+ assert.ok(squid.some(f=>f.slug==='aoriika'));assert.ok(squid.some(f=>f.slug==='kouika'));
+ assert.ok(squid.every(f=>f.methods.includes('eging')&&f.habitats.includes('osaka-bay-pier')));
  assert.deepEqual(E.eligibleFish(questFish,'osaka-bay-pier','tiprun'),[]);
  assert.equal(E.cast(questFish,'unknown','sabiki','a',now).phase,'miss');
  for(const m of ['sabiki','ana','kawahagi','nomase','tai-rubber'])assert.ok(questHabitats.some(h=>E.eligibleFish(questFish,h.slug,m).length));
