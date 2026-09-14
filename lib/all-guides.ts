@@ -1,3 +1,4 @@
+import {batchGuides} from './guide-articles-batch';
 import {expansionGuides} from '@/lib/guide-articles-expansion';
 import {guideArticles} from '@/lib/guide-articles';
 import {extraGuideArticles} from '@/lib/guide-articles-extra';
@@ -9,6 +10,7 @@ import {extraGuideArticles6} from '@/lib/guide-articles-extra6';
 import {extraGuideArticles7} from '@/lib/guide-articles-extra7';
 
 export const allGuides=[
+  ...batchGuides,
   ...expansionGuides,
   ...guideArticles,
   ...extraGuideArticles,

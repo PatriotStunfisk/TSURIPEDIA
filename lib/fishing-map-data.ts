@@ -1,3 +1,4 @@
+import {batchSpots} from './fishing-map-batch';
 import {expansionSpots} from './fishing-map-expansion';
 export type MapEntryType='spot'|'boat'|'area';
 
@@ -33,6 +34,7 @@ export type FishingMapEntry={
 };
 
 export const fishingMapEntries:FishingMapEntry[]=[
+  ...batchSpots,
   ...expansionSpots,
   {
     slug:'mukogawa-ichimonji',fishSlugs:['aji','saba','tachiuo','buri'],methodSlugs:['sabiki','shore-jigging','nomase'],type:'spot',name:'武庫川一文字',area:'兵庫・大阪湾',lat:34.699,lng:135.353,

@@ -1,0 +1,305 @@
+[
+  {
+    "asset": "/images/fish/suzuki-real.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Scientific fish cutout: Japanese seabass Lateolabrax japonicus, elongated silver body, large mouth, two separate dorsal fins, slight olive back",
+    "sha256": "ef4cca1edfed98ea397a1401ce081d737b8f882c20cc8712ce789d2d5a8941c8"
+  },
+  {
+    "asset": "/images/fish/iwashi-real.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Scientific fish cutout: Japanese sardine Sardinops melanostictus, slender silver body, blue green back, row of several dark spots along flank, small mouth, single dorsal fin",
+    "sha256": "8285db3292a85c49db1a522d1c07c4ce78052cbdcad392a673720ee948d4cf61"
+  },
+  {
+    "asset": "/images/fish/chinu-real.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Scientific fish cutout: black sea bream Acanthopagrus schlegelii, deep compressed silver grey body, dark vertical bars subtly visible, spiny dorsal fin, blunt snout",
+    "sha256": "876a50d3f2d03cc7c67e5a643b26fe94a5b81f105a913e614eb438e24b6eac7a"
+  },
+  {
+    "asset": "/images/fish/kanpachi-real.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Scientific-educational original fish encyclopedia asset for UOLINK. Single greater amberjack Seriola dumerili, robust streamlined body, amber lateral stripe, diagonal dark band across eye toward forehead, forked tail, NOT yellowtail. Photorealistic natural anatomy and scale detail. Entire fish facing LEFT in side view, all fins and tail fully visible, generous margin. Transparent alpha background, no scene, no water, no shadow, no text or logo. Landscape 1536x1024.",
+    "sha256": "bbe921e031957889b03a1a89bc8ec5f8b04d64eb4025c43362b96e9f3c8e93c9"
+  },
+  {
+    "asset": "/images/fish/isaki-real.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Scientific-educational original fish encyclopedia asset for UOLINK. Single chicken grunt Parapristipoma trilineatum adult, olive bronze oval body, faint three longitudinal stripes, small mouth, spiny dorsal fin. Photorealistic natural anatomy and scale detail. Entire fish facing LEFT in side view, all fins and tail fully visible, generous margin. Transparent alpha background, no scene, no water, no shadow, no text or logo. Landscape 1536x1024.",
+    "sha256": "1775df5120fd0d529ef6a0512abd3ec0256eb6f88f3d84590980c7aac92fdb07"
+  },
+  {
+    "asset": "/images/fish/anago-real.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Scientific-educational original fish encyclopedia asset for UOLINK. Single white spotted conger eel Conger myriaster, very long slender brown grey eel body, continuous dorsal caudal anal fin, regular small white pores along lateral line, no pelvic fins. Photorealistic natural anatomy and scale detail. Entire fish facing LEFT in side view, all fins and tail fully visible, generous margin. Transparent alpha background, no scene, no water, no shadow, no text or logo. Landscape 1536x1024.",
+    "sha256": "19eaaf10c95fc0a1c1ad8caa5f7ee315e7c168803719a6f883eb9fc76e326307"
+  },
+  {
+    "asset": "/images/fish/nijimasu-real.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Scientific-educational original fish encyclopedia asset for UOLINK. Single rainbow trout Oncorhynchus mykiss, silver body broad subtle pink lateral band, black spots on back and tail, adipose fin. Photorealistic natural anatomy and scale detail. Entire fish facing LEFT in side view, all fins and tail fully visible, generous margin. Transparent alpha background, no scene, no water, no shadow, no text or logo. Landscape 1536x1024.",
+    "sha256": "23ce7adb664cd0608e13b7d705afe54aaa2c33b737b050adfc3f0f50334d8808"
+  },
+  {
+    "asset": "/images/fish/ayu-real.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Scientific-educational original fish encyclopedia asset for UOLINK. Single sweetfish Plecoglossus altivelis, slim olive back silver body, golden patch behind gill, small adipose fin, forked tail. Photorealistic natural anatomy and scale detail. Entire fish facing LEFT in side view, all fins and tail fully visible, generous margin. Transparent alpha background, no scene, no water, no shadow, no text or logo. Landscape 1536x1024.",
+    "sha256": "13c162a7db00d01446302e6cc351c09a03e9cb7c05e79021e9a8169d3f0baa96"
+  },
+  {
+    "asset": "/images/fish/amago-real.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Scientific-educational original fish encyclopedia asset for UOLINK. Single red spotted masu trout Oncorhynchus masou ishikawae, distinct dark oval parr marks and small red orange spots along silver flank, adipose fin. Photorealistic natural anatomy and scale detail. Entire fish facing LEFT in side view, all fins and tail fully visible, generous margin. Transparent alpha background, no scene, no water, no shadow, no text or logo. Landscape 1536x1024.",
+    "sha256": "cd01eece5b0f3dc9062fa56685cfd20bcef6443beea9e9e3267c10b23c54cecf"
+  },
+  {
+    "asset": "/images/fish/magochi-real.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Scientific-educational original fish encyclopedia asset for UOLINK. Single bartail flathead Platycephalus sp.2 Japanese magochi, very broad flattened head, eyes atop head, brown mottled tapered elongated body, large fan pectoral fins, two dorsal fins, NOT flounder. Photorealistic natural anatomy and scale detail. Entire fish facing LEFT in side view, all fins and tail fully visible, generous margin. Transparent alpha background, no scene, no water, no shadow, no text or logo. Landscape 1536x1024.",
+    "sha256": "e685c6cf5b3800a077f6ed4c3c80676bd991079c5667587f8faec559b978f5de"
+  },
+  {
+    "asset": "/images/fish/suzuki-meuniere.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: Japanese seabass fillets pan fried with butter and lemon. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "191aca3ad8bd0141a27c49e7dd528d3daaf629ccfcc07ea4b63632ac7845dcc1"
+  },
+  {
+    "asset": "/images/fish/suzuki-aquapazza.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: Japanese seabass fillets simmered in clear tomato clam olive sauce, acqua pazza. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "1942e0fa22c5b4c654248feb6be63008a700e5874aa02449a046f15b1859cba0"
+  },
+  {
+    "asset": "/images/fish/suzuki-fry.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: Japanese seabass golden breaded fillet fry with shredded cabbage. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "633a79f9175ce7f0dacfa755e2bf72018b40b147c99d208610b9959974490c7d"
+  },
+  {
+    "asset": "/images/fish/suzuki-sakamushi.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: Japanese seabass fillets gently steamed with sake, kombu and spring onion. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "0fd8cec490a60d9d2a52851bed4bf74f2de2fec8eda53ef25f2c50d11732544e"
+  },
+  {
+    "asset": "/images/fish/chinu-shioyaki.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: black sea bream grilled skin-on fillet with salt and lemon. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "0d9f1dee0a27f4181b2385fa1db4b6ad816ad121d4c35a81a0748939debd598f"
+  },
+  {
+    "asset": "/images/fish/chinu-nitsuke.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: black sea bream skin-on fillet simmered in ginger soy broth. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "46ab62a853c3e0a844ffca6f6d789cbccafc6796926003245c5ec9dcfe3232fe"
+  },
+  {
+    "asset": "/images/fish/chinu-takikomi.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: cooked rice topped with boneless flaked black sea bream, ginger. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "441e99883b483bacf1f899e65cd8c8450aa8f01c484cfc920ade59c2caaa12ca"
+  },
+  {
+    "asset": "/images/fish/iwashi-tsumire.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: Japanese sardine minced fish balls in clear soup with daikon and spring onion. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "2cec792298e66c38294128f2e977a7cf44e1f93b864ca91cb7ad5c52d0c5c4c9"
+  },
+  {
+    "asset": "/images/fish/chinu-karaage.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: bite size black sea bream white fish karaage fried pieces. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "0208b220e19693b60b3a49406ed2cc5b6803cdc5383e5ef1b46a25c0347bbdfb"
+  },
+  {
+    "asset": "/images/fish/iwashi-fry.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: two butterfly opened Japanese sardines in golden panko crumb coating with cabbage. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "0f8e715dcea2db523c42af0a1427e9a9f17c90aa0d44b632e993c3c5f8f3c1f7"
+  },
+  {
+    "asset": "/images/fish/iwashi-ume-ni.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: whole cleaned Japanese sardines simmered with umeboshi plums and ginger soy sauce. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "b688e63f70ed2bb8618d3a40c70d500dd4b3e4e0d7d1164d87777b30655bf6cc",
+    "correction": "Recipe matched: headless sardines or boneless fillet karaage. Original generated draft retained outside repository."
+  },
+  {
+    "asset": "/images/fish/kanpachi-teriyaki.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: greater amberjack thick fish steaks pan grilled in teriyaki glaze. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "2a18769a988f2a658aa2bfbfa28dbc65ceb2051798cb1d09374f6e1901737360"
+  },
+  {
+    "asset": "/images/fish/iwashi-kabayaki.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: butterflied deboned Japanese sardines grilled with glossy sweet soy glaze over rice. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "f132b6ab5d079246478e37a3c812c0db989d5dc4bd4b9dd4f2b9b4249d3beb3b"
+  },
+  {
+    "asset": "/images/fish/kanpachi-shioyaki.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: greater amberjack skin on thick fillet grilled with salt and grated daikon. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "465bc8c187ba94b142e2a8a3a94afa5a5975469399ebac3f05f930fe4457909a"
+  },
+  {
+    "asset": "/images/fish/kanpachi-ara-ni.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: greater amberjack cleaned fish collar pieces simmered in ginger soy broth. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "3e0ca1228e79f4ee24223dddcb3b73655143ed74dec1ddbaefcf7c3508159429"
+  },
+  {
+    "asset": "/images/fish/kanpachi-tatsuta.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: greater amberjack fish bite size pieces in crisp light starch coating with lemon. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "5a39a9f3e75b82ff3e970daed32909fb39a1305862900cf90579752ae2ba1dad"
+  },
+  {
+    "asset": "/images/fish/isaki-shioyaki.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: one small whole cleaned Japanese chicken grunt isaki grilled with salt, no skewers. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "7883fdba8aa6c5a5d0d8b74c6f4660577e4bd80838efa94b3d5a6893f7aba898"
+  },
+  {
+    "asset": "/images/fish/isaki-aquapazza.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: Japanese chicken grunt fillets simmered with cherry tomatoes clams and olive oil. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "f97a5e7090dfc0168ea03d2095907ba4b7017b58b330e9d5fe4096399a90d703"
+  },
+  {
+    "asset": "/images/fish/isaki-sakamushi.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: Japanese chicken grunt skin on fillets sake steamed with kombu and green onion. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "bfc74c5c9ccd43013103469458d2251a5140bbdd4956a7acf303d60842250fc0"
+  },
+  {
+    "asset": "/images/fish/isaki-fry.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: Japanese chicken grunt white fish fillets in crisp golden bread crumbs. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "fe10c202fd6aa9566ab1a6efba55263bb649095189036b89893f74377effd874"
+  },
+  {
+    "asset": "/images/fish/anago-kabayaki.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: opened boneless conger eel grilled glossy sweet soy sauce strips over rice. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "88ad1b329c56d5d2cec0b15ee18a8c6d7cc7ff89d091ab438874da66aed50f41"
+  },
+  {
+    "asset": "/images/fish/anago-ni-anago.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: tender cooked conger eel boneless strips simmered in light sweet soy stock. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "451c165de8cacb78bcd336c25575cf1806dbf6fc0bd7264b7e6c12646a67bd26"
+  },
+  {
+    "asset": "/images/fish/anago-tempura.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: opened conger eel fillets in delicate pale gold tempura batter, with grated daikon. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "35e06d4c155acf363a88395821f47211246641cb10ad14433bb1bf044aa0e333"
+  },
+  {
+    "asset": "/images/fish/anago-tamagotoji.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: cooked conger eel pieces simmered with fully set egg and spring onion. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "0cc1f1869a9c62bad976ec243edbec0760412795781920ca5b71c3c5b6d612b2"
+  },
+  {
+    "asset": "/images/fish/ayu-shioyaki.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: two whole sweetfish ayu salt grilled with lightly browned silver olive skins, on ceramic plate. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "fab33c2ae312f1642855bdf1fbe6029c0f53f84d2d4114d3f0bd64547c30ec1c"
+  },
+  {
+    "asset": "/images/fish/ayu-kanroni.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: whole cleaned sweetfish ayu simmered in glossy dark sweet soy sauce. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "522c35b3e322f416582767041c0206bbbbec59ea5367430754b49d7853cf75fa"
+  },
+  {
+    "asset": "/images/fish/ayu-ayu-meshi.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: Japanese rice with boneless flaked cooked sweetfish ayu and ginger in a rice bowl. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "adbaf2a5fb9ac63b71e0a439c6662ca2918b0dcd61113e6db6114561c8768d5e"
+  },
+  {
+    "asset": "/images/fish/nijimasu-foil-yaki.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: rainbow trout fillets foil baked with mushrooms and onion, open foil parcel. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "b2feb63aa7709a86b9bd66b433d768cb7cf3049b41eef6e8b3c1285f43481f16"
+  },
+  {
+    "asset": "/images/fish/ayu-karaage.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: small whole cleaned sweetfish ayu cut into sections for deep frying in light starch coating. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "b5dfb1d05fc6417b6155a5dd88cf4f410bbec318be303566082be7d68dcf0299",
+    "correction": "Recipe matched: headless sardines or boneless fillet karaage. Original generated draft retained outside repository."
+  },
+  {
+    "asset": "/images/fish/nijimasu-fry.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: rainbow trout fillets in golden panko breadcrumbs, cabbage. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "fc5f0cf6591f537d0214394b61e0f0a4cf8b5760363913c24ad34cfa5252033c"
+  },
+  {
+    "asset": "/images/fish/nijimasu-shioyaki.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: whole small rainbow trout salt grilled on ceramic plate, natural spotted skin. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "806b2ae6ea32223910f91bd94e57eb7178f3b9e2d5596c987d97eb460c374eb1"
+  },
+  {
+    "asset": "/images/fish/amago-kanroni.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: small cleaned red spotted masu trout amago simmered in sweet dark soy glaze. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "4ec063788f74452f434db42aa708cd55097572a99c808d99376014451588707f"
+  },
+  {
+    "asset": "/images/fish/nijimasu-meuniere.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: rainbow trout fillets pan fried in butter and lemon, cooked opaque pale pink flesh. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "185c9cfaf025888058938ce5f9999ceeb77f9c2e8b852aa297542b6d5e6ede0d"
+  },
+  {
+    "asset": "/images/fish/amago-shioyaki.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: two small red spotted masu trout amago whole salt grilled on ceramic plate. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "27496b9beae28a96f81ee562e66808961239898fd4c15e35cb3d8486ba1cf2cc"
+  },
+  {
+    "asset": "/images/fish/amago-karaage.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: small cleaned amago trout cut into pieces lightly coated in starch and deep fried. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "2af9c63d88dd40c12e6652c76c7cb1a98c6ac69cee08b82be6d210264c4c9576",
+    "correction": "Recipe matched: headless sardines or boneless fillet karaage. Original generated draft retained outside repository."
+  },
+  {
+    "asset": "/images/fish/amago-nanban.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: fried boneless amago trout pieces marinated with onion carrot and mild vinegar sauce. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "c10265b1e77cb8fea14b80291a56cd8c905248a593995036bab10c3df8f8bbce"
+  },
+  {
+    "asset": "/images/fish/magochi-karaage.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: Japanese flathead magochi white fish bite size pieces fried in thin crisp starch coating. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "81bcec882c86ccab1a69568f85c8bdde42701750181b0eeb2458f807d47e1f78"
+  },
+  {
+    "asset": "/images/fish/magochi-chiri-nabe.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: Japanese flathead magochi skin on white fish pieces in clear hot pot with tofu napa cabbage and mushrooms. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "6232e69eb4bcf60d4aefbe49dae7563bb843f9c869457686dee50504b7620cd1"
+  },
+  {
+    "asset": "/images/fish/magochi-nitsuke.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: Japanese flathead magochi white fish thick skin on pieces in ginger soy broth. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "38367df249ce963b1e34469b4c880fd11eef3152d0f465256f563624e0a19a03"
+  },
+  {
+    "asset": "/images/fish/magochi-meuniere.png",
+    "origin": "OpenAI image generation, original UOLINK asset",
+    "prompt": "Original photorealistic Japanese home cooking editorial food photograph for UOLINK recipe. Dish: Japanese flathead magochi boneless thick white fish fillets pan fried with lemon butter. One complete realistic serving on tasteful Japanese ceramic tableware, warm natural daylight, 3/4 overhead view, rustic pale wooden table, food appetizing and fully cooked. No raw fish. Entire plate in frame, restrained garnish matching described ingredients, no hands, no text, no logos. Landscape 1536x1024. This is a single standalone dish image, not a collage.",
+    "sha256": "c60b54c217928aca90a57f5b200c912ccba3dbd0201a741f67b6aebd6a2fd36d"
+  }
+]

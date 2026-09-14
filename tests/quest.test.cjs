@@ -116,6 +116,18 @@ test('fish must be reeled to the surface and survive a final run before explicit
  r=E.land(r,time);assert.equal(r.phase,'landing');assert.equal(E.advance(r,r.deadline-1).phase,'landing');assert.equal(E.advance(r,r.deadline).phase,'caught');
 });
 
+test('freshwater species stay out of sea habitats and ayu uses territorial pursuit',()=>{
+ for(const slug of ['ayu','amago','nijimasu']){const f=questFish.find(f=>f.slug===slug);assert.ok(f);assert.ok(f.habitats.every(h=>['clear-river','trout-pond'].includes(h)));assert.equal(E.eligibleFish([f],'osaka-bay-pier','sabiki').length,0)}
+ let r=E.cast(questFish,'clear-river','ayu-tomozuri','ayu-test',now,()=>.5);assert.equal(r.fish.slug,'ayu');assert.equal(r.style,'ayu');r=E.hook(r,r.biteAt,()=>1);assert.equal(r.phase,'fight');assert.equal(r.fishDepth,1.5);
+});
+test('larger fish take more reeling and bottom profiles resist early lift',()=>{
+ const f=questFish.find(f=>f.slug==='suzuki');let r=E.cast([f],'osaka-bay-pier','seabass-lure','size-test',now,()=>.5);r=E.hook(r,r.biteAt,()=>1);
+ const small={...r,catch:{...r.catch,size:f.minSize}},big={...r,catch:{...r.catch,size:f.maxSize}};
+ assert.ok(E.fight(small,'reel',r.started).progress>E.fight(big,'reel',r.started).progress);
+ assert.ok(E.fight({...small,fish:{...f,fightProfile:'bottom'}},'reel',r.started).progress<E.fight(small,'reel',r.started).progress);
+ const diver=E.advance({...r,fish:{...f,fightProfile:'diver'},progress:50},r.started+2000);const runner=E.advance({...r,fish:{...f,fightProfile:'runner'},progress:50},r.started+2000);assert.ok(diver.fishDepth>runner.fishDepth);
+});
+
 test('model presentation comes from the fish profile and rejects invalid angles',()=>{
  const f=questFish.find(f=>f.slug==='hirame');assert.equal(f.modelTilt,Math.PI/2);
  assert.equal(questFish.find(f=>f.slug==='aji').modelTilt,undefined);

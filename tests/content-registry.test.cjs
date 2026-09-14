@@ -47,7 +47,8 @@ test('only existing related fish and cooking pages are linked',()=>{
   for(const f of fish){const links=getFishConnections(f.slug);for(const other of links.related)assert.notEqual(other.slug,f.slug);for(const m of links.methods)assert.ok(methodDetails[m.slug]);}
 });
 test('broad method names do not invent unrelated routes',()=>{
-  assert.equal(getFishConnections('amago').methods.length,0);
+  assert.deepEqual(getFishConnections('amago').methods.map(m=>m.slug),['freshwater-bait','trout-lure']);
+  assert.deepEqual(require('../lib/fish-methods.ts').getFishMethodSlugs({methods:['船釣り','ルアー','渓流']}),[]);
   assert.ok(!getFishConnections('madako').methods.some(x=>x.slug==='tachiuo-tenya'));
 });
 test('unknown slugs, including object prototype keys, have no profile',()=>{
@@ -89,8 +90,8 @@ const {defineFishSpecies,uniqueFishSlugs,getSpeciesTableGuide}=require('../lib/f
 const details=require('../lib/fish-details.ts').fishDetails;
 const featured=require('../lib/launch-fish.ts');
 const migratedSnapshots={
-  fish:fish.filter(f=>originalFish.includes(f.slug)).map(f=>{if(!['kawahagi','aoriika','mebaru','hirame','sawara','madako'].includes(f.slug))return f;const {methodSlugs,relatedSlugs,guideSlugs,...original}=f;return original}),
-  details:Object.fromEntries(Object.entries(details).filter(([slug])=>originalFish.includes(slug))),
+  fish:fish.filter(f=>originalFish.includes(f.slug)).map(f=>{if(!['kawahagi','aoriika','mebaru','hirame','sawara','madako','suzuki','chinu','iwashi','kanpachi','isaki','anago','ayu','nijimasu','amago'].includes(f.slug))return f;const {methodSlugs,relatedSlugs,guideSlugs,...original}=f;return original}),
+  details:Object.fromEntries(Object.entries(details).filter(([slug])=>originalFish.includes(slug)&&!['anago','isaki'].includes(slug))),
   launch:Object.fromEntries(featuredFish.map(slug=>[slug,featured.launchFish[slug]])),
   launchSlugs:featured.launchFishSlugs.filter(slug=>featuredFish.includes(slug)),
   cooking:cookingFish.filter(f=>f.slug==='saba'),
@@ -213,4 +214,18 @@ test('map IDs and relationships resolve; closed sites are not recommended',()=>{
  assert.ok(!getSpotsForFish('aji').some(e=>e.slug==='nanko-fishing-park'));
  assert.ok(!getSpotsForMethod('sabiki').some(e=>e.closed));
  assert.ok(fishingMapEntries.find(e=>e.slug==='miyazu-sea-fishing').closed);
+});
+
+// Expansion must add usable content, not only route names.
+test('ten promoted/new profiles connect four recipes, guides, methods and QUEST',()=>{
+ const {questFish}=require('../lib/quest/catalog.ts');
+ for(const slug of ['suzuki','chinu','iwashi','kanpachi','isaki','anago','ayu','nijimasu','amago','magochi']){
+  const f=registry.getFishProfile(slug),c=getFishConnections(slug);
+  assert.ok(f.detail.body&&f.detail.safety&&f.detail.beginnerTip,slug);
+  assert.ok(f.launch.identify.length>=3,slug);assert.equal(f.cooking.recipes.length,4,slug);
+  assert.ok(c.guides.some(g=>g.slug===slug+'-field-notes'),slug);assert.ok(c.methods.length&&c.related.length,slug);
+  assert.ok(questFish.find(f=>f.slug===slug)?.fightProfile,slug);
+  for(const r of f.cooking.recipes){assert.ok(r.steps.length>=4&&r.ingredients.length>=3,r.slug);assert.ok(r.image.includes('/'+slug+'-'),r.slug)}
+ }
+ assert.equal(fish.filter(f=>f.slug==='chinu').length,1);assert.ok(!fish.some(f=>['kurodai','mejina','gure'].includes(f.slug)));
 });
