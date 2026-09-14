@@ -1,7 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
-  quest: {"swimSpeed": 2, "stamina": 85, "runPower": 90},
+  quest: {fightProfile: 'runner', "swimSpeed": 2, "stamina": 85, "runPower": 90},
   "base": {
     "slug": "sawara",
     "name": "サワラ",

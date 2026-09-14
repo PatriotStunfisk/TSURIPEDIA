@@ -32,7 +32,7 @@ export type FishTableGuideData={lead:string;dishes:FishDish[]};
 export type FishSpeciesDefinition={
   base:Fish;
   quest?:import('../quest/types').QuestParameters;
-  media?:{image:string};
+  media?:{image:string;modelTilt?:number};
   detail?:FishDetail;
   launch?:LaunchFishExtra;
   cooking?:Omit<CookingFish,'slug'|'name'>;

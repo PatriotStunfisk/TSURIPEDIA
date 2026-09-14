@@ -6,7 +6,7 @@ import {DRACOLoader} from 'three/addons/loaders/DRACOLoader.js';
 import {KTX2Loader} from 'three/addons/loaders/KTX2Loader.js';
 import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
 
-export default function FishViewer({modelSrc='/models/tachiuo.glb?v=20260912-1',contain=false,swim=false}:{modelSrc?:string;contain?:boolean;swim?:boolean}={}){
+export default function FishViewer({modelSrc='/models/tachiuo.glb?v=20260912-1',contain=false,swim=false,modelTilt=0}:{modelSrc?:string;contain?:boolean;swim?:boolean;modelTilt?:number}={}){
  const ref=useRef<HTMLDivElement>(null);
  const [status,setStatus]=useState<'loading'|'ready'|'failed'>('loading');
  const [detail,setDetail]=useState('');
@@ -26,6 +26,7 @@ export default function FishViewer({modelSrc='/models/tachiuo.glb?v=20260912-1',
   let targetY=0,targetX=0,ry=0,rx=0,down=false,lastX=0,lastY=0;
 
   const centerAndFit=(obj:THREE.Object3D)=>{
+   obj.rotation.x+=modelTilt;
    normalized.add(obj);
    obj.updateMatrixWorld(true);
    const box=new THREE.Box3().setFromObject(obj);
@@ -54,6 +55,6 @@ export default function FishViewer({modelSrc='/models/tachiuo.glb?v=20260912-1',
   const resize=()=>{if(!renderer)return;const w=Math.max(el.clientWidth,contain?1:280),h=Math.max(el.clientHeight,contain?1:260);camera.aspect=w/h;fitCamera();camera.updateProjectionMatrix();renderer.setSize(w,h,false)};ro=new ResizeObserver(resize);ro.observe(el);resize();
   const tick=()=>{ry+=(targetY-ry)*.08;rx+=(targetX-rx)*.08;pivot.rotation.y=ry;pivot.rotation.x=rx;if(swim&&!reduced){pivot.rotation.y+=Math.sin(performance.now()/700)*.13;pivot.rotation.z=Math.sin(performance.now()/1000)*.025;}renderer?.render(scene,camera);raf=requestAnimationFrame(tick)};tick();
   return()=>{disposed=true;cancelAnimationFrame(raf);ro?.disconnect();window.removeEventListener('pointermove',pm);window.removeEventListener('pointerup',pu);draco.dispose();ktx2.dispose();disposeObject(scene);renderer?.domElement.removeEventListener('pointerdown',pd);renderer?.dispose();renderer?.domElement.remove()};
- },[modelSrc,contain,swim]);
+ },[modelSrc,contain,swim,modelTilt]);
  return <div ref={ref} className="fishViewer" style={{position:'relative',width:'100%',height:'100%',minHeight:contain?0:360,overflow:'hidden',background:'transparent'}}>{status==='loading'&&<div style={{position:'absolute',inset:0,display:'grid',placeItems:'center',zIndex:2,color:'#d8f5ff'}}>3Dモデルを読み込み中…</div>}{status==='failed'&&<div style={{position:'absolute',inset:0,display:'grid',placeItems:'center',alignContent:'center',gap:8,zIndex:2,color:'#d8f5ff',textAlign:'center',padding:24}}><b>3Dモデルを読み込めませんでした</b>{detail&&<small style={{opacity:.72,fontSize:10,wordBreak:'break-word'}}>{detail}</small>}</div>}</div>
 }

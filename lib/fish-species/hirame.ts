@@ -1,7 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
-  quest: {"swimSpeed": 0.55, "stamina": 75, "runPower": 65},
+  quest: {fightProfile: 'bottom', "swimSpeed": 0.55, "stamina": 75, "runPower": 65},
   "base": {
     "slug": "hirame",
     "name": "ヒラメ",
@@ -73,7 +73,8 @@ export default defineFishSpecies({
     "trivia": "一般に「左ヒラメ、右カレイ」と覚えられますが、例外もあります。"
   },
   "media": {
-    "image": "/images/fish/hirame-real.png"
+    "image": "/images/fish/hirame-real.png",
+    "modelTilt": 1.5707963267948966
   },
   "launch": {
     "catchPhrase": "砂底にひそむ白身の王道。小さな前アタリから食い込みを読む",

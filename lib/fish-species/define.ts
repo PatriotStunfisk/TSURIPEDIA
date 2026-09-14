@@ -3,8 +3,11 @@ import type {Fish,FishSpeciesDefinition,FishTableGuideData} from './types';
 export function defineFishSpecies(definition:FishSpeciesDefinition):FishSpeciesDefinition{
   const {base,cooking,tableGuide}=definition;
   if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(base.slug))throw new Error('Invalid fish slug: '+base.slug);
+  const tilt=definition.media?.modelTilt;
+  if(tilt!==undefined&&(!Number.isFinite(tilt)||Math.abs(tilt)>Math.PI*2))throw new Error('Invalid model tilt: '+base.slug);
   const q=definition.quest;
   if(q){
+    if(q.fightProfile&&!['balanced','runner','diver','jumper','bottom','jet'].includes(q.fightProfile))throw new Error('Invalid quest fight profile: '+base.slug);
     for(const [key,min,max] of [['rarity',1,5],['fightPower',1,100],['biteRate',0,1],['escapeRate',0,1],['xp',1,10000],['swimSpeed',.1,3],['wariness',0,1],['approachSpeed',5,50],['biteWindowMs',800,10000],['stamina',20,100],['runPower',1,100]] as const){
       const value=q[key];if(value!==undefined&&(!Number.isFinite(value)||value<min||value>max))throw new Error('Invalid quest '+key+': '+base.slug);
     }

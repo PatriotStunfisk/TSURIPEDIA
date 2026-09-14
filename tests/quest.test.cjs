@@ -42,7 +42,8 @@ test('waiting, early hook, missed bite and resumed background tab all terminate 
 test('fight rewards controlled reeling, rejects click spam and handles escape/timeouts',()=>{
  let r=E.cast([aji],'osaka-bay-pier','sabiki','a',now,()=>.5);r=E.hook(r,r.biteAt,()=>1);assert.equal(r.phase,'fight');const hooked=r;let time=r.biteAt;
  r=E.fight(r,'reel',time);assert.equal(E.fight(r,'reel',time+10).progress,r.progress);
- for(let i=0;i<30&&r.phase==='fight';i++){time+=600;r=E.fight(r,r.tension>55?'ease':'reel',time)}
+ for(let i=0;i<130&&r.phase==='fight';i++){time+=600;r=E.fight(r,r.tension>45?'ease':'reel',time);if(E.canLand(r))r=E.land(r,time)}
+ assert.equal(r.phase,'landing');r=E.advance(r,r.deadline);
  assert.equal(r.phase,'caught');assert.ok(r.catch.size>=aji.minSize&&r.catch.size<=aji.maxSize);
  assert.equal(E.fight({...hooked,tension:99,lastTick:time},'reel',time).phase,'miss');assert.equal(E.advance(hooked,hooked.deadline+1).phase,'miss');
 });
@@ -102,4 +103,21 @@ test('octopus records use weight without changing the existing save schema',()=>
  const f=questFish.find(f=>f.slug==='madako');const {measure}=require('../lib/quest/presentation.ts');
  assert.equal(f.sizeUnit,'kg');assert.equal(f.sizeLabel,'重量');assert.equal(measure(1.25,f),'1.25kg');
  const caught=E.cast([f],'akashi','tako-egi','octopus',now,()=>.5).catch;const save=P.recordCatch(P.emptySave(),caught);assert.equal(parseSave(JSON.stringify(save)).status,'ok');assert.equal(save.records.madako.best,caught.size);
+});
+
+test('fish must be reeled to the surface and survive a final run before explicit landing',()=>{
+ let r=E.cast([aji],'osaka-bay-pier','sabiki','surface',now,()=>.5);r=E.hook(r,r.biteAt,()=>1);let time=r.started;
+ const depth=r.fishDepth;assert.ok(depth>0&&r.distance>0);assert.equal(E.land(r,time).phase,'fight');
+ const rested=E.advance(r,time+1000);assert.ok(rested.fishDepth>=depth);
+ let sawFinal=false;
+ for(let i=0;i<150&&r.phase==='fight';i++){time+=600;r=E.fight(r,r.tension>45?'ease':'reel',time);sawFinal ||= r.finalRunDone;if(E.canLand(r))break;}
+ assert.ok(sawFinal);assert.ok(r.fishDepth<.8);assert.ok(r.distance<1.5);assert.equal(r.phase,'fight');
+ assert.equal(E.land({...r,tension:80,lastTick:time},time).phase,'fight');
+ r=E.land(r,time);assert.equal(r.phase,'landing');assert.equal(E.advance(r,r.deadline-1).phase,'landing');assert.equal(E.advance(r,r.deadline).phase,'caught');
+});
+
+test('model presentation comes from the fish profile and rejects invalid angles',()=>{
+ const f=questFish.find(f=>f.slug==='hirame');assert.equal(f.modelTilt,Math.PI/2);
+ assert.equal(questFish.find(f=>f.slug==='aji').modelTilt,undefined);
+ assert.throws(()=>defineFishSpecies({base:fishCatalog[0],media:{image:'/fish.png',modelTilt:NaN}}),/Invalid model tilt/);
 });
