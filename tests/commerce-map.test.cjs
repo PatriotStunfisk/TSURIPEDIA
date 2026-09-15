@@ -22,6 +22,14 @@ test('affiliate links point to verified product IDs with the authorized store ta
  assert.equal(productsForMethods(['sabiki','eging']).filter(p=>p.asin==='B0DCKBP14Z').length,1);
  assert.ok(!productsForMethods(['tiprun']).some(p=>p.asin==='B078ZW65R7'));
 });
+test('legacy QUEST records merge without losing catches rewards or best size',()=>{
+ const {canonicalizeQuestSave}=require('../lib/quest/species-migration.ts');
+ const save={version:1,xp:100,total:5,records:{buri:{count:2,best:90,firstAt:20,lastAt:40},hamachi:{count:3,best:55,firstAt:10,lastAt:50}},methods:{},methodFish:{jigging:['hamachi','buri']},habitatFish:{sea:['hamachi']},daily:{'2026-09-15':{count:5,fish:['buri','hamachi']}},claimed:['first'],recent:[{slug:'hamachi',id:'x',size:55,xp:30}]};
+ const migrated=canonicalizeQuestSave(save);
+ assert.deepEqual(migrated.records.buri,{count:5,best:90,firstAt:10,lastAt:50});assert.equal(migrated.records.hamachi,undefined);
+ assert.equal(migrated.xp,100);assert.equal(migrated.total,5);assert.deepEqual(migrated.methodFish.jigging,['buri']);assert.deepEqual(migrated.daily['2026-09-15'].fish,['buri']);
+ assert.equal(migrated.recent[0].slug,'buri');assert.equal(save.recent[0].slug,'hamachi');assert.deepEqual(canonicalizeQuestSave(migrated),migrated);
+});
 test('Amazon category searches encode terms and retain the public tracking ID',()=>{
  const {amazonSearchUrl}=require('../lib/affiliate-products.ts');const url=new URL(amazonSearchUrl('PE 0.8号 & リーダー'));
  assert.equal(url.hostname,'www.amazon.co.jp');assert.equal(url.searchParams.get('k'),'PE 0.8号 & リーダー');assert.equal(url.searchParams.get('tag'),'uolink-22');

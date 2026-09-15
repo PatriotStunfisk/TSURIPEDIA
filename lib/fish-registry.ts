@@ -1,3 +1,4 @@
+import {additionalFishNames} from './fish-aliases';
 import {fish} from '@/lib/data';
 import {fishDetails,type FishDetail} from '@/lib/fish-details';
 import {launchFish,isLaunchFish} from '@/lib/launch-fish';
@@ -29,7 +30,7 @@ export function getFishProfile(slug:string){return fishBySlug.get(slug)}
 export function getFishByName(name:string){
   const exact=fishCatalog.find(f=>f.name===name);
   if(exact)return exact;
-  const matches=fishCatalog.filter(f=>f.detail?.aliases.includes(name));
+  const matches=fishCatalog.filter(f=>f.detail?.aliases.includes(name)||additionalFishNames[f.slug]?.includes(name));
   return matches.length===1?matches[0]:undefined;
 }
 

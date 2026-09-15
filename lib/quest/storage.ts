@@ -1,3 +1,4 @@
+import {canonicalizeQuestSave} from './species-migration';
 import {emptySave} from './progress';
 import type {QuestSave} from './types';
 
@@ -24,6 +25,6 @@ export function parseSave(raw:string|null):{save:QuestSave;status:'empty'|'ok'|'
    &&Array.isArray(v.claimed)&&v.claimed.length<=5000&&v.claimed.every(x=>typeof x==='string'&&/^[a-z0-9:-]+$/.test(x)&&x.length<=100)
    &&Array.isArray(v.recent)&&v.recent.length<=200&&v.recent.every(x=>object(x)&&typeof x.id==='string'&&x.id.length<=100&&key(x.slug)&&key(x.method)&&key(x.habitat)&&timestamp(x.at)&&number(x.size)&&number(x.xp)&&['regular','big','record'].includes(String(x.grade)));
   if(!valid)throw new Error('schema');
-  return {save:v as unknown as QuestSave,status:'ok'};
+  return {save:canonicalizeQuestSave(v as unknown as QuestSave),status:'ok'};
  }catch{return {save:emptySave(),status:'invalid'}}
 }

@@ -1,3 +1,4 @@
+import {canonicalFishSlug} from './fish-aliases';
 import {fishCatalog,getFishProfile,getFishByName,type FishProfile} from '@/lib/fish-registry';
 import {getFishMethodSlugs} from '@/lib/fish-methods';
 import {getMethod} from '@/lib/method-registry';
@@ -13,7 +14,7 @@ export function getFishConnections(slug:string){
   ].map(guide=>[guide.slug,guide])).values()];
   const hasEditorialRelated=fish.relatedSlugs!==undefined||fish.launch!==undefined;
   const candidates:FishProfile[]=fish.relatedSlugs!==undefined
-    ? fish.relatedSlugs.flatMap(id=>{const related=getFishProfile(id);return related?[related]:[]})
+    ? fish.relatedSlugs.flatMap(id=>{const related=getFishProfile(canonicalFishSlug(id));return related?[related]:[]})
     : fish.launch
       ? fish.launch.related.flatMap(name=>{const related=getFishByName(name);return related?[related]:[]})
       : fishCatalog.filter(other=>other.slug!==slug&&getFishMethodSlugs(other).some(id=>methods.some(method=>method.slug===id)));

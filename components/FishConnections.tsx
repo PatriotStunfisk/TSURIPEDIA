@@ -11,7 +11,7 @@ export default function FishConnections({slug}:{slug:string}){
   if(!links)return null;
   const {methods,guides,cooking,related,hasEditorialRelated}=links;
   if(!methods.length&&!guides.length&&!cooking&&!related.length)return null;
-  return <><section className="detailGrid" aria-label="関連する釣り情報">
+  return <>{slug==='buri'&&<section className="detailGrid"><article><h2>成長による呼び名</h2><p>ハマチは別種ではなくブリの成長段階を表す呼び名です。</p><h3>関西での呼び名の例</h3><p>ツバス → ハマチ → メジロ → ブリ</p><h3>関東での呼び名の例</h3><p>ワカシ → イナダ → ワラサ → ブリ</p></article><aside><h3>地域や市場によって異なります</h3><p>呼称や切り替わる大きさは全国一律ではありません。若魚は比較的脂が控えめで、夏から秋にも岸や船で狙われます。ブリとハマチを別の生物種として数えません。</p><Link href="/methods/shore-jigging" className="gearCta">岸から若魚を狙うショアジギング →</Link><a href="https://www.daiwa.com/jp/column/fish_field_guide/sea/040" target="_blank" rel="noopener noreferrer">出典：DAIWA 魚種図鑑 ブリ</a></aside></section>}<section className="detailGrid" aria-label="関連する釣り情報">
     {(methods.length>0||guides.length>0)&&<article>
       <span>FISHING &amp; GUIDE</span><h2>釣り方と実践ガイド</h2>
       {methods.length>0&&<><h3>釣り方を詳しく見る</h3>{methods.map(method=><Link key={method.slug} href={`/methods/${method.slug}`} className="methodLink"><div><b>{method.name}</b><small>{method.subtitle}</small></div><em>→</em></Link>)}</>}

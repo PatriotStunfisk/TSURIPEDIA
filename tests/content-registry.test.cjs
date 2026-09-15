@@ -92,10 +92,11 @@ const featured=require('../lib/launch-fish.ts');
 // The user removed the duplicate public gashira entry in b7e5d83. Keep its archived
 // base in this historical comparison, so all existing snapshot hashes remain useful.
 const archivedGashira=require('../lib/fish-species/gashira.ts').default;
-const historicalFish=originalFish.map(slug=>fish.find(f=>f.slug===slug)??(slug==='gashira'?archivedGashira.base:undefined));
+const archivedHamachi=require('../lib/fish-species/hamachi.ts').default;
+const historicalFish=originalFish.map(slug=>fish.find(f=>f.slug===slug)??(slug==='gashira'?archivedGashira.base:slug==='hamachi'?archivedHamachi.base:undefined));
 const migratedSnapshots={
   fish:historicalFish.map(f=>{if(!['kawahagi','aoriika','mebaru','hirame','sawara','madako','suzuki','chinu','iwashi','kanpachi','isaki','anago','ayu','nijimasu','amago'].includes(f.slug))return f;const {methodSlugs,relatedSlugs,guideSlugs,...original}=f;return original}),
-  details:Object.fromEntries(Object.entries({...details,...(archivedGashira.detail?{gashira:archivedGashira.detail}:{})}).filter(([slug])=>originalFish.includes(slug)&&!['anago','isaki'].includes(slug))),
+  details:Object.fromEntries(Object.entries({...details,hamachi:archivedHamachi.detail,...(archivedGashira.detail?{gashira:archivedGashira.detail}:{})}).filter(([slug])=>originalFish.includes(slug)&&!['anago','isaki'].includes(slug))),
   launch:Object.fromEntries(featuredFish.map(slug=>[slug,featured.launchFish[slug]])),
   launchSlugs:featured.launchFishSlugs.filter(slug=>featuredFish.includes(slug)),
   cooking:cookingFish.filter(f=>f.slug==='saba'),
@@ -247,4 +248,20 @@ test('coastal batch supplies full profiles, original images, four recipes and pl
  }
  assert.equal(fish.filter(f=>f.name==='メジナ').length,1);
  const {affiliateProducts}=require('../lib/affiliate-products.ts');for(const p of affiliateProducts)for(const slug of p.methods)assert.ok(methodDetails[slug],slug);
+});
+
+test('biological species are unique while old names remain searchable',async()=>{
+ const {fishMatchesSearch,canonicalFishSlug}=require('../lib/fish-aliases.ts');
+ unique(registry.fishCatalog.map(f=>f.scientific.trim().toLowerCase()),'scientific name');
+ for(const [name,slug] of [['はまち','buri'],['ﾂﾊﾞｽ','buri'],['がしら','kasago'],['ちぬ','chinu']]){
+  assert.deepEqual(registry.fishCatalog.filter(f=>fishMatchesSearch(f,name)).map(f=>f.slug),[slug]);
+ }
+ assert.ok(!registry.fishSlugs.includes('hamachi'));
+ assert.equal(canonicalFishSlug('constructor'),'constructor');
+ const redirects=await require('../next.config.ts').default.redirects();
+ for(const [alias,slug] of [['hamachi','buri'],['gashira','kasago'],['kurodai','chinu']])assert.ok(redirects.some(r=>r.source===`/fish/${alias}`&&r.destination===`/fish/${slug}`&&r.permanent));
+ assert.ok(!sitemap().some(r=>r.url.endsWith('/fish/hamachi')));
+ assert.ok(!require('../lib/quest/catalog.ts').questFish.some(f=>f.slug==='hamachi'));
+ assert.ok(require('../lib/quest/catalog.ts').questFish.find(f=>f.slug==='buri').methods.includes('shore-jigging'));
+ assert.ok(require('../lib/all-guides.ts').getGuidesForFish('buri').some(g=>g.slug==='shore-jigging-jig-weight'));
 });
