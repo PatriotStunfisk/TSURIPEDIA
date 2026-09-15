@@ -67,7 +67,7 @@ export default defineFishSpecies({
     "trivia": "レンコダイなどの呼び名もありますが、別名を別の生物種として数えません。"
   },
   "media": {
-    "image": "/images/fish/kidai-real.png"
+    "image": "/images/fish/kidai-real.png?v=20260915-alpha"
   },
   "quest": {
     "fightProfile": "balanced",

@@ -69,7 +69,7 @@ export default defineFishSpecies({
     "trivia": "シロイカなどの呼び名もありますが、別名を別の生物種として数えません。"
   },
   "media": {
-    "image": "/images/fish/kensakiika-real.png"
+    "image": "/images/fish/kensakiika-real.png?v=20260915-alpha"
   },
   "quest": {
     "fightProfile": "jet",

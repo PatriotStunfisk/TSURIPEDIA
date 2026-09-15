@@ -67,7 +67,7 @@ export default defineFishSpecies({
     "trivia": "資料では Engraulis japonicus の学名も使われます。BISMaLで受容されている Engraulis japonica と同じカタクチイワシを指します。"
   },
   "media": {
-    "image": "/images/fish/katakuchi-real.png"
+    "image": "/images/fish/katakuchi-real.png?v=20260915-alpha"
   },
   "quest": {
     "fightProfile": "runner",

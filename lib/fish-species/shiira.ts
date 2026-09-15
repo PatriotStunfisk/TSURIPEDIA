@@ -64,7 +64,7 @@ export default defineFishSpecies({
     "trivia": "マンビキなどの呼び名もありますが、別名を別の生物種として数えません。"
   },
   "media": {
-    "image": "/images/fish/shiira-real.png"
+    "image": "/images/fish/shiira-real.png?v=20260915-alpha"
   },
   "quest": {
     "fightProfile": "jumper",

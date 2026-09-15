@@ -72,7 +72,7 @@ export default defineFishSpecies({
     "trivia": "イナなどの呼び名もありますが、別名を別の生物種として数えません。"
   },
   "media": {
-    "image": "/images/fish/bora-real.png"
+    "image": "/images/fish/bora-real.png?v=20260915-alpha"
   },
   "quest": {
     "fightProfile": "runner",

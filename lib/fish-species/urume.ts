@@ -66,7 +66,7 @@ export default defineFishSpecies({
     "trivia": "旧資料では Etrumeus teres とされる場合がありますが、日本のウルメイワシには Etrumeus micropus を用います。"
   },
   "media": {
-    "image": "/images/fish/urume-real.png"
+    "image": "/images/fish/urume-real.png?v=20260915-alpha"
   },
   "quest": {
     "fightProfile": "runner",
