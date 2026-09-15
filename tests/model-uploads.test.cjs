@@ -9,10 +9,14 @@ test('uploaded aliases retain exact case and canonical model files take preceden
  const dir=fs.mkdtempSync(path.join(require('node:os').tmpdir(),'uolink-alias-'));
  try{fs.mkdirSync(path.join(dir,'models'));fs.writeFileSync(path.join(dir,'models/kurodai.glb'),'test');assert.equal(getSpeciesModelSrc('chinu',dir),'/models/kurodai.glb');fs.writeFileSync(path.join(dir,'models/chinu.glb'),'test');assert.equal(getSpeciesModelSrc('chinu',dir),'/models/chinu.glb');assert.equal(getSpeciesModelSrc('iwashi',dir),undefined);fs.writeFileSync(path.join(dir,'models/maiwashi.glb'),'test');assert.equal(getSpeciesModelSrc('iwashi',dir),'/models/maiwashi.glb');}finally{fs.rmSync(dir,{recursive:true});}
 });
-test('calibration filtering cannot affect the established seven or unknown models',()=>{
+test('calibration filtering stays limited to visually verified models',()=>{
  const {modelCalibrationNodes}=require('../lib/model-presentation.ts');
  assert.deepEqual(modelCalibrationNodes('/models/suzuki.glb'),['Cube_2']);
- for(const slug of ['tachiuo','aji','madai','buri','kisu','kasago','saba','unknown','amago'])assert.deepEqual(modelCalibrationNodes(`/models/${slug}.glb`),[]);
+ assert.deepEqual(modelCalibrationNodes('/models/aji.glb'),['Cube_2']);
+ const bytes=fs.readFileSync(path.resolve(__dirname,'../public/models/aji.glb'));const model=JSON.parse(bytes.toString('utf8',20,20+bytes.readUInt32LE(12)));
+ const cube=model.nodes.find(n=>n.name==='Cube_2');assert.ok(cube?.children.length);
+ const mesh=model.meshes[model.nodes[cube.children[0]].mesh];const positions=model.accessors[mesh.primitives[0].attributes.POSITION];assert.deepEqual(positions.min,[-1,-1,-1]);assert.deepEqual(positions.max,[1,1,1]);
+ for(const slug of ['tachiuo','madai','buri','kisu','kasago','saba','unknown','amago'])assert.deepEqual(modelCalibrationNodes(`/models/${slug}.glb`),[]);
  const {modelInitialYaw}=require('../lib/model-presentation.ts');assert.equal(modelInitialYaw('/models/nijimasu.glb'),-Math.PI/2);assert.equal(modelInitialYaw('/models/tachiuo.glb'),0);
 });
 
