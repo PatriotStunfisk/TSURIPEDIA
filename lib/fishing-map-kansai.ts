@@ -3,7 +3,7 @@ export const kansaiSpots:FishingMapEntry[]=[
   {
     "slug": "amagasaki-uoturi",
     "name": "尼崎市立魚つり公園",
-    "area": "兵庫・尼崎",
+    "prefecture": "兵庫県", "terrain": "pier", "area": "兵庫・尼崎",
     "lat": 34.6834,
     "lng": 135.369,
     "fish": [
@@ -67,7 +67,7 @@ export const kansaiSpots:FishingMapEntry[]=[
   {
     "slug": "maizuru-shinkai",
     "name": "舞鶴親海公園",
-    "area": "京都北部・舞鶴",
+    "prefecture": "京都府", "terrain": "pier", "area": "京都北部・舞鶴",
     "lat": 35.5142706,
     "lng": 135.3418639,
     "fish": [],
@@ -116,7 +116,7 @@ export const kansaiSpots:FishingMapEntry[]=[
   {
     "slug": "minamiawaji-megafloat",
     "name": "南あわじ市海釣り公園メガフロート",
-    "area": "淡路島・南あわじ",
+    "prefecture": "兵庫県", "terrain": "pier", "area": "淡路島・南あわじ",
     "fish": [],
     "methods": [
       "利用不可"

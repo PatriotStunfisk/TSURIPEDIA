@@ -5,7 +5,7 @@ export const expansionSpots:FishingMapEntry[]=[
     "lat": 34.69260157292251, "lng": 135.35601867652042,
     "type": "spot",
     "name": "鳴尾浜臨海公園 海づり広場",
-    "area": "兵庫・阪神・西宮",
+    "prefecture": "兵庫県", "terrain": "pier", "area": "兵庫・阪神・西宮",
     "fish": [
       "アジ",
       "サバ",
@@ -66,7 +66,7 @@ export const expansionSpots:FishingMapEntry[]=[
     "slug": "akashi-offshore-planning",
     "type": "area",
     "name": "明石・沖の船釣りエリア",
-    "area": "兵庫・明石・淡路島周辺",
+    "prefecture": "兵庫県", "terrain": "boat", "area": "兵庫・明石・淡路島周辺",
     "fish": [
       "マダコ",
       "サワラ",
@@ -141,7 +141,7 @@ export const expansionSpots:FishingMapEntry[]=[
     "slug": "miyazu-sea-fishing",
     "type": "spot",
     "name": "宮津市海洋つり場",
-    "area": "京都北部・宮津",
+    "prefecture": "京都府", "terrain": "pier", "area": "京都北部・宮津",
     "fish": [],
     "fishSlugs": [],
     "methods": [],

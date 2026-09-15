@@ -1,6 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+import {japanRegions,prefectures,type JapanRegion} from '@/lib/japan-regions';
+import {matchesSpot} from '@/lib/spot-filters';
 import {useMemo,useState} from 'react';
 import {fishingMapEntries,fishingMapFish,type MapEntryType} from '@/lib/fishing-map-data';
 import s from './SpotMap.module.css';
@@ -9,6 +11,7 @@ import {distanceKm,hasCoordinates,sortByDistance,type Coordinates} from '@/lib/s
 
 export default function SpotMap({initialQuery='',fishNames={},methodNames={}}:{initialQuery?:string;fishNames?:Record<string,string>;methodNames?:Record<string,string>}){
  const [kind,setKind]=useState<'all'|MapEntryType>('all');
+ const [region,setRegion]=useState('');const [prefecture,setPrefecture]=useState('');const [method,setMethod]=useState('');const [terrain,setTerrain]=useState('');const [beginner,setBeginner]=useState(false);const [family,setFamily]=useState(false);
  const [fish,setFish]=useState('すべて');
  const [query,setQuery]=useState(initialQuery);
  const [showClosed,setShowClosed]=useState(false);
@@ -21,10 +24,18 @@ export default function SpotMap({initialQuery='',fishNames={},methodNames={}}:{i
   setLocating(true);setLocationMessage('現在地の取得を待っています…');
   navigator.geolocation.getCurrentPosition(p=>{const point={lat:p.coords.latitude,lng:p.coords.longitude};setLocating(false);if(!hasCoordinates(point)){setLocationMessage('位置を確認できませんでした。地域名で検索してください。');return;}setOrigin(point);setSelected('');setLocationMessage('現在の検索条件で、位置登録のある釣り場を近い順に表示しています。距離は直線距離です。');},error=>{setLocating(false);setLocationMessage(error.code===1?'現在地の利用が許可されませんでした。地域名で検索できます。':'現在地を取得できませんでした。屋外で試すか、地域名で検索してください。');},{enableHighAccuracy:false,timeout:10000,maximumAge:60000});
  }
- const filteredEntries=useMemo(()=>fishingMapEntries.filter(e=>(showClosed||!e.closed)&&(kind==='all'||e.type===kind)&&(fish==='すべて'||e.fish.includes(fish))&&(!query||`${e.name}${e.area}${e.fish.join('')}${e.methods.join('')}${e.bestFor.join('')}`.toLowerCase().includes(query.toLowerCase()))),[kind,fish,query,showClosed]);
+ const filteredEntries=useMemo(()=>fishingMapEntries.filter(e=>matchesSpot(e,{region,prefecture,method,terrain,beginner,family,showClosed,kind,fish,query})),[region,prefecture,method,terrain,beginner,family,showClosed,kind,fish,query]);
  const entries=useMemo(()=>origin?sortByDistance(filteredEntries,origin):filteredEntries,[filteredEntries,origin]);
  const active=entries.find(e=>e.slug===selected)??entries[0];
  return <section className={s.wrap}>
+  <div className={s.nationalFilters}>
+   <label>地方<select value={region} onChange={e=>{setRegion(e.target.value);setPrefecture('');}}><option value="">日本全国</option>{Object.keys(japanRegions).map(r=><option key={r} value={r}>{r}</option>)}</select></label>
+   <label>都道府県<select value={prefecture} onChange={e=>setPrefecture(e.target.value)}><option value="">すべての都道府県</option>{(region?japanRegions[region as JapanRegion]:prefectures).map(p=><option key={p} value={p}>{p}</option>)}</select></label>
+   <label>釣法<select value={method} onChange={e=>setMethod(e.target.value)}><option value="">すべての釣法</option>{Object.entries(methodNames).map(([slug,name])=><option key={slug} value={slug}>{name}</option>)}</select></label>
+   <label>足場・フィールド<select value={terrain} onChange={e=>setTerrain(e.target.value)}><option value="">すべてのフィールド</option>{[['pier','堤防・桟橋'],['shore','海岸・護岸'],['beach','砂浜'],['rock','磯'],['boat','船'],['raft','イカダ'],['river','川'],['pond','管理池']].map(([v,n])=><option value={v} key={v}>{n}</option>)}</select></label>
+   <label><input type="checkbox" checked={beginner} onChange={e=>setBeginner(e.target.checked)}/>初心者向け</label><label><input type="checkbox" checked={family} onChange={e=>setFamily(e.target.checked)}/>ファミリー向け</label>
+   <button onClick={()=>{setRegion('');setPrefecture('');setMethod('');setTerrain('');setBeginner(false);setFamily(false);setFish('すべて');setQuery('');setKind('all');setShowClosed(false);}}>絞り込みをリセット</button>
+  </div><p className={s.resultCount} role="status">登録情報から {entries.length} 件。未登録の地域は順次追加しています。</p>
   <div className={s.toolbar}>
    <div className={s.tabs}>
     <button className={kind==='all'?s.active:''} onClick={()=>setKind('all')}>すべて</button>
@@ -44,13 +55,14 @@ export default function SpotMap({initialQuery='',fishNames={},methodNames={}}:{i
     <div className={s.panelTop}><span>{active.type==='area'?'釣行エリア':active.type==='boat'?'釣船':'釣り場'}</span><small>{active.area}</small></div>
     <h2>{active.name}</h2>
     {active.status&&<div className={s.status}>{active.status}</div>}
-    <p className={s.lead}>{active.note}</p><p>公式情報確認日：{active.verifiedAt??'未確認（釣行前に要確認）'}</p>{active.sources?.map(source=><p key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a></p>)}
+    <p className={s.lead}>{active.note}</p><p>公式情報確認日：{active.verifiedAt??'未確認（釣行前に要確認）'}</p>{active.sourceUpdatedAt&&<p>参照元の更新日：{active.sourceUpdatedAt}</p>}{active.sources?.map(source=><p key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a></p>)}
     <dl>
      <div><dt>狙える魚</dt><dd>{active.fish.join('・')||(active.closed?'休業・休園中':'最新の対象魚は現地の釣果情報を確認')}</dd></div>
      <div><dt>主な釣り方</dt><dd>{active.methods.join('・')}</dd></div>
      <div><dt>シーズン</dt><dd>{active.season}</dd></div>
      <div><dt>アクセス・利用</dt><dd>{active.access}</dd></div>
      <div><dt>釣り場の特徴</dt><dd>{active.field}</dd></div>
+     {active.waterDepth&&<div><dt>水深の目安</dt><dd>{active.waterDepth}</dd></div>}{active.nightFishing&&<div><dt>夜釣り</dt><dd>{active.nightFishing}</dd></div>}
      <div><dt>狙い目</dt><dd>{active.timing}</dd></div>
     </dl>
     <div className={s.badges}>{active.beginner&&<span>初心者向け</span>}{active.kids&&<span>親子向け</span>}{active.parking&&<span>駐車場</span>}{active.toilet&&<span>トイレ</span>}</div>

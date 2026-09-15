@@ -10,7 +10,7 @@ export const batchSpots:FishingMapEntry[]=[
     "slug": "hidakagawa-planning",
     "type": "area",
     "name": "日高川水系・アユとアマゴの釣行計画",
-    "area": "和歌山・日高川",
+    "prefecture": "和歌山県", "terrain": "river", "area": "和歌山・日高川",
     "fish": [
       "アユ",
       "アマゴ"
@@ -66,7 +66,7 @@ export const batchSpots:FishingMapEntry[]=[
     "slug": "akutagawa-trout",
     "type": "spot",
     "name": "芥川 清・渓流魚釣り場",
-    "area": "大阪・高槻",
+    "prefecture": "大阪府", "terrain": "pond", "area": "大阪・高槻",
     "fish": [
       "ニジマス",
       "アユ"
@@ -122,7 +122,7 @@ export const batchSpots:FishingMapEntry[]=[
     "slug": "saikazaki-seapark",
     "type": "spot",
     "name": "雑賀崎シーパーク",
-    "area": "和歌山・和歌山市",
+    "prefecture": "和歌山県", "terrain": "pier", "area": "和歌山・和歌山市",
     "fish": [
       "カンパチ",
       "マダイ"

@@ -17,7 +17,7 @@ export default function InteractiveSpotMap({entries,selected,onSelect}:Props){
   let cancelled=false;let observer:ResizeObserver|undefined;
   import('leaflet').then(L=>{
    if(cancelled||!root.current)return;
-   const instance=L.map(root.current,{scrollWheelZoom:false}).setView([34.5,135.1],9);map.current=instance;
+   const instance=L.map(root.current,{scrollWheelZoom:false}).setView([36.5,137.5],5);map.current=instance;
    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'}).on('tileerror',()=>setFailed(true)).addTo(instance);
    markers.current=L.layerGroup().addTo(instance);
    observer=new ResizeObserver(()=>instance.invalidateSize());observer.observe(root.current);setReady(true);
