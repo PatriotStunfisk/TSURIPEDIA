@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "akakamas",
+    "prompt": "Create one original accurate natural-history fish encyclopedia illustration for UOLINK. Subject Sphyraena pinguis red barracuda, elongated silver bronze body, pointed large jaw, two widely separated dorsal fins, yellowish longitudinal stripe. Entire single animal fully visible, horizontal side profile facing left (squid horizontal mantle right, arms left). Photorealistic detailed scientific illustration, anatomically plausible, all fins clear, generous margin, no lettering, no watermark, no other animals, isolated on dark navy #102637 background. Landscape composition.",
+    "file": "public/images/fish/akakamas-real.png",
+    "generator": "image_gen",
+    "sha256": "7a1b07fe9e7c2a2e3b950515c9cb61db7d6ef9741a76e65fe89d8692a233a9c7"
+  },
+  {
+    "slug": "katakuchi",
+    "prompt": "Create one original accurate natural-history fish encyclopedia illustration for UOLINK. Subject Engraulis japonicus Japanese anchovy, tiny slender silver body blue back, very large mouth extends far behind eye, blunt projecting upper snout. Entire single animal fully visible, horizontal side profile facing left (squid horizontal mantle right, arms left). Photorealistic detailed scientific illustration, anatomically plausible, all fins clear, generous margin, no lettering, no watermark, no other animals, isolated on dark navy #102637 background. Landscape composition.",
+    "file": "public/images/fish/katakuchi-real.png",
+    "generator": "image_gen",
+    "sha256": "68e29796ed0309283fbb51e3cdc9f3da2ba9d10f1a3ec4be3e99c953cb17064b"
+  },
+  {
+    "slug": "urume",
+    "prompt": "Create one original accurate natural-history fish encyclopedia illustration for UOLINK. Subject Etrumeus teres round herring, round slender silver body dark blue back, large round eye, no dark spots on flank. Entire single animal fully visible, horizontal side profile facing left (squid horizontal mantle right, arms left). Photorealistic detailed scientific illustration, anatomically plausible, all fins clear, generous margin, no lettering, no watermark, no other animals, isolated on dark navy #102637 background. Landscape composition.",
+    "file": "public/images/fish/urume-real.png",
+    "generator": "image_gen",
+    "sha256": "ca6fbf5cbae646085ef0c258a7512af7ff3e75558e918051646063399243dfa1"
+  },
+  {
+    "slug": "konoshiro",
+    "prompt": "Create one original accurate natural-history fish encyclopedia illustration for UOLINK. Subject Konosirus punctatus dotted gizzard shad, deep silver body, dark shoulder spot and rows of tiny flank dots, last dorsal ray extends as thin long filament. Entire single animal fully visible, horizontal side profile facing left (squid horizontal mantle right, arms left). Photorealistic detailed scientific illustration, anatomically plausible, all fins clear, generous margin, no lettering, no watermark, no other animals, isolated on dark navy #102637 background. Landscape composition.",
+    "file": "public/images/fish/konoshiro-real.png",
+    "generator": "image_gen",
+    "sha256": "df86d5ad42b2c33e39ac0cc7148d632c3bbd90e40ec350382f187981033fdc84"
+  },
+  {
+    "slug": "bora",
+    "prompt": "Create one original accurate natural-history fish encyclopedia illustration for UOLINK. Subject Mugil cephalus flathead grey mullet, broad blunt head, cylindrical silver grey body, dark horizontal rows, two separated dorsal fins. Entire single animal fully visible, horizontal side profile facing left (squid horizontal mantle right, arms left). Photorealistic detailed scientific illustration, anatomically plausible, all fins clear, generous margin, no lettering, no watermark, no other animals, isolated on dark navy #102637 background. Landscape composition.",
+    "file": "public/images/fish/bora-real.png",
+    "generator": "image_gen",
+    "sha256": "b885fd625b9432602a2403366b43409d20b8ffe0e213226f4704053509f35c81"
+  },
+  {
+    "slug": "shiira",
+    "prompt": "Create one original accurate natural-history fish encyclopedia illustration for UOLINK. Subject Coryphaena hippurus adult male dolphinfish, high blunt forehead, long continuous dorsal fin, bright blue green back golden yellow flank, deeply forked tail. Entire single animal fully visible, horizontal side profile facing left (squid horizontal mantle right, arms left). Photorealistic detailed scientific illustration, anatomically plausible, all fins clear, generous margin, no lettering, no watermark, no other animals, isolated on dark navy #102637 background. Landscape composition.",
+    "file": "public/images/fish/shiira-real.png",
+    "generator": "image_gen",
+    "sha256": "c43077c4408d266f4f5af367fb58aac9a73f86b9dc7030243cbdf41e3a079eb2"
+  },
+  {
+    "slug": "makogarei",
+    "prompt": "Create one original accurate natural-history fish encyclopedia illustration for UOLINK. Subject Pseudopleuronectes yokohamae marbled flounder, oval flattened brown mottled body, both eyes on right side, small mouth, show eyed side facing viewer whole body. Entire single animal fully visible, horizontal side profile facing left (squid horizontal mantle right, arms left). Photorealistic detailed scientific illustration, anatomically plausible, all fins clear, generous margin, no lettering, no watermark, no other animals, isolated on dark navy #102637 background. Landscape composition.",
+    "file": "public/images/fish/makogarei-real.png",
+    "generator": "image_gen",
+    "sha256": "1861e23cdb4a7cd87667e067307e90c25cccad936f005c1efc9dd5f0f1fd7bcd"
+  },
+  {
+    "slug": "umazurahagi",
+    "prompt": "Create one original accurate natural-history fish encyclopedia illustration for UOLINK. Subject Thamnaconus modestus black scraper filefish, elongated oval compressed grey body, long horse-like head small mouth, first dorsal spine, blue green fins. Entire single animal fully visible, horizontal side profile facing left (squid horizontal mantle right, arms left). Photorealistic detailed scientific illustration, anatomically plausible, all fins clear, generous margin, no lettering, no watermark, no other animals, isolated on dark navy #102637 background. Landscape composition.",
+    "file": "public/images/fish/umazurahagi-real.png",
+    "generator": "image_gen",
+    "sha256": "db15fd017acba284d1064222f4976c6a38b85d27c1f2603cde7c3fb1a2232fd3"
+  },
+  {
+    "slug": "kidai",
+    "prompt": "Create one original accurate natural-history fish encyclopedia illustration for UOLINK. Subject Dentex hypselosomus yellowback seabream, oval pink red body, yellow upper flank patches, yellowish snout and fins, big eye, forked tail. Entire single animal fully visible, horizontal side profile facing left (squid horizontal mantle right, arms left). Photorealistic detailed scientific illustration, anatomically plausible, all fins clear, generous margin, no lettering, no watermark, no other animals, isolated on dark navy #102637 background. Landscape composition.",
+    "file": "public/images/fish/kidai-real.png",
+    "generator": "image_gen",
+    "sha256": "e089d6a654143fc8fa8684a91f0cdbb80d48c19cebdfad08c06b740076276214"
+  },
+  {
+    "slug": "kensakiika",
+    "prompt": "Create one original accurate natural-history fish encyclopedia illustration for UOLINK. Subject Uroteuthis edulis swordtip squid, slender tapered reddish translucent mantle, large diamond fins extending over more than half mantle, eight short arms plus two longer tentacles. Entire single animal fully visible, horizontal side profile facing left (squid horizontal mantle right, arms left). Photorealistic detailed scientific illustration, anatomically plausible, all fins clear, generous margin, no lettering, no watermark, no other animals, isolated on dark navy #102637 background. Landscape composition.",
+    "file": "public/images/fish/kensakiika-real.png",
+    "generator": "image_gen",
+    "sha256": "3fc650659c77521d33a59bcb58d27f50464b0e6755b911164f1004c1b7f306d8"
+  }
+]

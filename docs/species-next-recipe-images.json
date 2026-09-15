@@ -1,0 +1,282 @@
+[
+  {
+    "slug": "akakamas-shioyaki",
+    "file": "public/images/fish/akakamas-shioyaki.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe アカカマスの塩焼き. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：アカカマス 下処理した小型2尾（計約250g）; 塩 魚の重量の約1%; 大根おろし・レモン 好みで. Preparation: 下処理した魚の水気を拭く。厚い切り身は厚さをそろえる。; 塩を全体に振り、10分ほど置いて出た水分を拭く。; 予熱したグリルで両面を焼き、焦げそうなら火を弱める。; 身の中心まで十分に火が通ったことを確認し、大根おろしを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "b069cb6cee0e773dd244bdee5f5f0bcbf834bf0e63744e39c8b392ec654f4fea"
+  },
+  {
+    "slug": "akakamas-fry",
+    "file": "public/images/fish/akakamas-fry.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe アカカマスのフライ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：アカカマス 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 小麦粉 大さじ2・卵1個・パン粉適量; キャベツ・レモン 好みで. Preparation: 水気を拭き、厚さをそろえて塩を振る。; 小麦粉、溶き卵、パン粉の順に衣をつける。; 170℃を目安に返しながら揚げる。厚い部分まで十分に火を通す。; 油を切ってキャベツとレモンを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "227d627d736c34f34dd47828df26590a6f2108fb403fc73d60c4ba5961b7f087"
+  },
+  {
+    "slug": "akakamas-karaage",
+    "file": "public/images/fish/akakamas-karaage.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe アカカマスの唐揚げ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：アカカマス 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 片栗粉 大さじ3; 醤油・酒 各大さじ1; すりおろししょうが 小さじ1. Preparation: 骨を確認し、身を一口大に切る。; 醤油・酒・しょうがを合わせて魚を10分ほど漬け、汁気を拭く。; 片栗粉を薄くまぶし、170℃の油で中心まで十分に火を通す。; 油を切って盛る。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "e6d175877c3d083fce73385ef71c75c79debff6172e31d9cdd438d9a679b1e36"
+  },
+  {
+    "slug": "akakamas-nitsuke",
+    "file": "public/images/fish/akakamas-nitsuke.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe アカカマスの煮付け. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：アカカマス 骨を除いた切り身250g; 水150ml・酒100ml; 醤油・みりん 各大さじ2; 砂糖 大さじ1; しょうが 薄切り4枚. Preparation: 下処理した魚に熱湯をかけ、表面の汚れを落として水気を拭く。; 鍋で水・酒・調味料・しょうがを煮立てる。; 魚を重ねず入れ、落とし蓋をして弱めの中火で煮る。10〜20分を目安に、厚い身の中心まで加熱する。; 魚を崩さず盛り、煮汁を好みの濃さに煮詰めてかける。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "fa2a995f0f716bb0c3f80a6697ee67491cafeaa036bfd7132734036af237d3fb"
+  },
+  {
+    "slug": "katakuchi-karaage",
+    "file": "public/images/fish/katakuchi-karaage.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe カタクチイワシの唐揚げ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：カタクチイワシ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 片栗粉 大さじ3; 醤油・酒 各大さじ1; すりおろししょうが 小さじ1. Preparation: 骨を確認し、身を一口大に切る。; 醤油・酒・しょうがを合わせて魚を10分ほど漬け、汁気を拭く。; 片栗粉を薄くまぶし、170℃の油で中心まで十分に火を通す。; 油を切って盛る。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "0f61f6b73aa3cd7a36cad5558e4c23e2eb37a0be8f7c4b1346f59b877d724b48"
+  },
+  {
+    "slug": "katakuchi-nanban",
+    "file": "public/images/fish/katakuchi-nanban.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe カタクチイワシの南蛮漬け. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：カタクチイワシ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 片栗粉 大さじ3; 醤油・酒 各大さじ1; すりおろししょうが 小さじ1; 玉ねぎ1/4個・にんじん1/4本; 酢・水 各50ml・砂糖大さじ1. Preparation: 骨を確認し、身を一口大に切る。; 醤油・酒・しょうがを合わせて魚を10分ほど漬け、汁気を拭く。; 片栗粉を薄くまぶし、170℃の油で中心まで十分に火を通す。; 酢・水・砂糖をひと煮立ちさせ、薄切り玉ねぎと細切りにんじんを加える。揚げた魚を漬け、粗熱が取れたら冷蔵する。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "165b9a546fcaab2c2fc8705f2fe58cfd2dc831d290b29a2d18f2a58357a759de"
+  },
+  {
+    "slug": "katakuchi-fry",
+    "file": "public/images/fish/katakuchi-fry.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe カタクチイワシのフライ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：カタクチイワシ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 小麦粉 大さじ2・卵1個・パン粉適量; キャベツ・レモン 好みで. Preparation: 水気を拭き、厚さをそろえて塩を振る。; 小麦粉、溶き卵、パン粉の順に衣をつける。; 170℃を目安に返しながら揚げる。厚い部分まで十分に火を通す。; 油を切ってキャベツとレモンを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "1ac74d482d3e66653a6b088dd3cc38db0dd9852fb23ac970fcf8fe2710ae1c15"
+  },
+  {
+    "slug": "katakuchi-tsumire",
+    "file": "public/images/fish/katakuchi-tsumire.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe カタクチイワシのつみれ汁. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：カタクチイワシ 頭・内臓・中骨・腹骨を除いた身250g; 味噌・片栗粉 各大さじ1; しょうが小さじ1・長ねぎ1/3本; だし600ml・大根100g; 醤油 小さじ2. Preparation: 魚の身を包丁で細かくたたく。残った骨は除く。; 味噌・片栗粉・しょうが・みじん切りねぎを混ぜる。; だしで薄切り大根を煮て、魚をスプーンで丸めながら落とす。; つみれの中心まで十分に加熱し、醤油で味を整える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "fd7d31a5d0add87e1b648b8aa99a60cfbc31f382d6db3c55b491d9344d24fa1c"
+  },
+  {
+    "slug": "urume-shioyaki",
+    "file": "public/images/fish/urume-shioyaki.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ウルメイワシの塩焼き. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ウルメイワシ 下処理した小型2尾（計約250g）; 塩 魚の重量の約1%; 大根おろし・レモン 好みで. Preparation: 下処理した魚の水気を拭く。厚い切り身は厚さをそろえる。; 塩を全体に振り、10分ほど置いて出た水分を拭く。; 予熱したグリルで両面を焼き、焦げそうなら火を弱める。; 身の中心まで十分に火が通ったことを確認し、大根おろしを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "dd131f244be620f9958474f8c4805635b94ee41f6194a759b684ab25c9dbf1e6"
+  },
+  {
+    "slug": "urume-karaage",
+    "file": "public/images/fish/urume-karaage.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ウルメイワシの唐揚げ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ウルメイワシ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 片栗粉 大さじ3; 醤油・酒 各大さじ1; すりおろししょうが 小さじ1. Preparation: 骨を確認し、身を一口大に切る。; 醤油・酒・しょうがを合わせて魚を10分ほど漬け、汁気を拭く。; 片栗粉を薄くまぶし、170℃の油で中心まで十分に火を通す。; 油を切って盛る。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "c89c7c2b457f3aac00030757b243d9ce4da33bcb1ceb74cf83fa3bc42cc0b20f"
+  },
+  {
+    "slug": "urume-nanban",
+    "file": "public/images/fish/urume-nanban.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ウルメイワシの南蛮漬け. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ウルメイワシ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 片栗粉 大さじ3; 醤油・酒 各大さじ1; すりおろししょうが 小さじ1; 玉ねぎ1/4個・にんじん1/4本; 酢・水 各50ml・砂糖大さじ1. Preparation: 骨を確認し、身を一口大に切る。; 醤油・酒・しょうがを合わせて魚を10分ほど漬け、汁気を拭く。; 片栗粉を薄くまぶし、170℃の油で中心まで十分に火を通す。; 酢・水・砂糖をひと煮立ちさせ、薄切り玉ねぎと細切りにんじんを加える。揚げた魚を漬け、粗熱が取れたら冷蔵する。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "a3552d1ea0331e69060837a05d0937da7a90d76eff8f1a782d43983ca27dbd3a"
+  },
+  {
+    "slug": "urume-fry",
+    "file": "public/images/fish/urume-fry.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ウルメイワシのフライ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ウルメイワシ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 小麦粉 大さじ2・卵1個・パン粉適量; キャベツ・レモン 好みで. Preparation: 水気を拭き、厚さをそろえて塩を振る。; 小麦粉、溶き卵、パン粉の順に衣をつける。; 170℃を目安に返しながら揚げる。厚い部分まで十分に火を通す。; 油を切ってキャベツとレモンを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "e3d2ff7df132e02bce29704f1e22164add539e984d27978e37afb25a931b55f1"
+  },
+  {
+    "slug": "konoshiro-fry",
+    "file": "public/images/fish/konoshiro-fry.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe コノシロのフライ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：コノシロ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 小麦粉 大さじ2・卵1個・パン粉適量; キャベツ・レモン 好みで. Preparation: 水気を拭き、厚さをそろえて塩を振る。; 小麦粉、溶き卵、パン粉の順に衣をつける。; 170℃を目安に返しながら揚げる。厚い部分まで十分に火を通す。; 油を切ってキャベツとレモンを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "5f62ac75cec1c26dc61e286d95c03fe7389a803c8e4944912067a049185498d7"
+  },
+  {
+    "slug": "konoshiro-karaage",
+    "file": "public/images/fish/konoshiro-karaage.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe コノシロの唐揚げ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：コノシロ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 片栗粉 大さじ3; 醤油・酒 各大さじ1; すりおろししょうが 小さじ1. Preparation: 骨を確認し、身を一口大に切る。; 醤油・酒・しょうがを合わせて魚を10分ほど漬け、汁気を拭く。; 片栗粉を薄くまぶし、170℃の油で中心まで十分に火を通す。; 油を切って盛る。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "31ba651e505a7029db880750b2b770de3153532e6806e630187182178c24dd2b"
+  },
+  {
+    "slug": "konoshiro-nanban",
+    "file": "public/images/fish/konoshiro-nanban.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe コノシロの南蛮漬け. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：コノシロ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 片栗粉 大さじ3; 醤油・酒 各大さじ1; すりおろししょうが 小さじ1; 玉ねぎ1/4個・にんじん1/4本; 酢・水 各50ml・砂糖大さじ1. Preparation: 骨を確認し、身を一口大に切る。; 醤油・酒・しょうがを合わせて魚を10分ほど漬け、汁気を拭く。; 片栗粉を薄くまぶし、170℃の油で中心まで十分に火を通す。; 酢・水・砂糖をひと煮立ちさせ、薄切り玉ねぎと細切りにんじんを加える。揚げた魚を漬け、粗熱が取れたら冷蔵する。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "e137a6059f34654df8e032a3a294d20c5ab237b0fc6b490891b19aa645a6d2ad"
+  },
+  {
+    "slug": "konoshiro-tsumire",
+    "file": "public/images/fish/konoshiro-tsumire.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe コノシロのつみれ汁. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：コノシロ 頭・内臓・中骨・腹骨を除いた身250g; 味噌・片栗粉 各大さじ1; しょうが小さじ1・長ねぎ1/3本; だし600ml・大根100g; 醤油 小さじ2. Preparation: 魚の身を包丁で細かくたたく。残った骨は除く。; 味噌・片栗粉・しょうが・みじん切りねぎを混ぜる。; だしで薄切り大根を煮て、魚をスプーンで丸めながら落とす。; つみれの中心まで十分に加熱し、醤油で味を整える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "5070ec5adec917a773e273b5c216a0ff19f3719a3817f383c5ec2a0ba7edc793"
+  },
+  {
+    "slug": "bora-fry",
+    "file": "public/images/fish/bora-fry.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ボラのフライ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ボラ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 小麦粉 大さじ2・卵1個・パン粉適量; キャベツ・レモン 好みで. Preparation: 水気を拭き、厚さをそろえて塩を振る。; 小麦粉、溶き卵、パン粉の順に衣をつける。; 170℃を目安に返しながら揚げる。厚い部分まで十分に火を通す。; 油を切ってキャベツとレモンを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "f159f1aec9ed16d857542f6bb787a3a43de45213efebb7f4961603a45ce4701d"
+  },
+  {
+    "slug": "bora-shioyaki",
+    "file": "public/images/fish/bora-shioyaki.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ボラの塩焼き. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ボラ 下処理した小型2尾（計約250g）; 塩 魚の重量の約1%; 大根おろし・レモン 好みで. Preparation: 下処理した魚の水気を拭く。厚い切り身は厚さをそろえる。; 塩を全体に振り、10分ほど置いて出た水分を拭く。; 予熱したグリルで両面を焼き、焦げそうなら火を弱める。; 身の中心まで十分に火が通ったことを確認し、大根おろしを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "37bcdd8c3b595ef8ecbd9ce706a08dad1cd765a87ff75b6276519d2328ad1bd2"
+  },
+  {
+    "slug": "bora-karaage",
+    "file": "public/images/fish/bora-karaage.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ボラの唐揚げ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ボラ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 片栗粉 大さじ3; 醤油・酒 各大さじ1; すりおろししょうが 小さじ1. Preparation: 骨を確認し、身を一口大に切る。; 醤油・酒・しょうがを合わせて魚を10分ほど漬け、汁気を拭く。; 片栗粉を薄くまぶし、170℃の油で中心まで十分に火を通す。; 油を切って盛る。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "0a12ac048e68dfa3a548e493de89fb1aa037427e5070b8cd2b19a03894c1c25d"
+  },
+  {
+    "slug": "bora-nitsuke",
+    "file": "public/images/fish/bora-nitsuke.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ボラの煮付け. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ボラ 骨を除いた切り身250g; 水150ml・酒100ml; 醤油・みりん 各大さじ2; 砂糖 大さじ1; しょうが 薄切り4枚. Preparation: 下処理した魚に熱湯をかけ、表面の汚れを落として水気を拭く。; 鍋で水・酒・調味料・しょうがを煮立てる。; 魚を重ねず入れ、落とし蓋をして弱めの中火で煮る。10〜20分を目安に、厚い身の中心まで加熱する。; 魚を崩さず盛り、煮汁を好みの濃さに煮詰めてかける。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "f47a0e5055a24f2787802bcf2d32d8c129789196b9e6fe72b9fc1c6fa2026877"
+  },
+  {
+    "slug": "shiira-fry",
+    "file": "public/images/fish/shiira-fry.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe シイラのフライ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：シイラ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 小麦粉 大さじ2・卵1個・パン粉適量; キャベツ・レモン 好みで. Preparation: 水気を拭き、厚さをそろえて塩を振る。; 小麦粉、溶き卵、パン粉の順に衣をつける。; 170℃を目安に返しながら揚げる。厚い部分まで十分に火を通す。; 油を切ってキャベツとレモンを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "d9177aeba837c42a3c9804c554380f2f9fb132fa2ccf360c913e246e241fb41f"
+  },
+  {
+    "slug": "shiira-meuniere",
+    "file": "public/images/fish/shiira-meuniere.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe シイラのムニエル. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：シイラ 骨を除いた切り身250g; 塩・こしょう 少々; 小麦粉 大さじ1; 油 大さじ1/2・バター15g; レモン汁 小さじ2・パセリ適量. Preparation: 水気を拭いて塩こしょうを振り、小麦粉を薄くまぶす。; 油を熱して皮側から焼き、焼き面が固まったら返す。火を弱めて厚い部分まで十分に加熱する。; 魚を取り出し、弱火でバターとレモン汁を合わせる。; 魚へソースをかけ、パセリを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "62ff044d2fdbb324304ebcd218415ef519de267c1f62fb8f277098aaff57373c"
+  },
+  {
+    "slug": "shiira-karaage",
+    "file": "public/images/fish/shiira-karaage.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe シイラの唐揚げ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：シイラ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 片栗粉 大さじ3; 醤油・酒 各大さじ1; すりおろししょうが 小さじ1. Preparation: 骨を確認し、身を一口大に切る。; 醤油・酒・しょうがを合わせて魚を10分ほど漬け、汁気を拭く。; 片栗粉を薄くまぶし、170℃の油で中心まで十分に火を通す。; 油を切って盛る。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "b2a76a0ebceb1917fa97614fd55406642f83e0c810b68602673f60473f054276"
+  },
+  {
+    "slug": "shiira-nitsuke",
+    "file": "public/images/fish/shiira-nitsuke.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe シイラの煮付け. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：シイラ 骨を除いた切り身250g; 水150ml・酒100ml; 醤油・みりん 各大さじ2; 砂糖 大さじ1; しょうが 薄切り4枚. Preparation: 下処理した魚に熱湯をかけ、表面の汚れを落として水気を拭く。; 鍋で水・酒・調味料・しょうがを煮立てる。; 魚を重ねず入れ、落とし蓋をして弱めの中火で煮る。10〜20分を目安に、厚い身の中心まで加熱する。; 魚を崩さず盛り、煮汁を好みの濃さに煮詰めてかける。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "5a0be9b726b02a8355a6d53b6d278711e1266f9c8ade242519630282840c613d"
+  },
+  {
+    "slug": "makogarei-nitsuke",
+    "file": "public/images/fish/makogarei-nitsuke.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe マコガレイの煮付け. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：マコガレイ 骨を除いた切り身250g; 水150ml・酒100ml; 醤油・みりん 各大さじ2; 砂糖 大さじ1; しょうが 薄切り4枚. Preparation: 下処理した魚に熱湯をかけ、表面の汚れを落として水気を拭く。; 鍋で水・酒・調味料・しょうがを煮立てる。; 魚を重ねず入れ、落とし蓋をして弱めの中火で煮る。10〜20分を目安に、厚い身の中心まで加熱する。; 魚を崩さず盛り、煮汁を好みの濃さに煮詰めてかける。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "6c10dd75793a3511bf3dc8fb243fd9345e16403c8ba2e10c37c4d75ad1c1ff00"
+  },
+  {
+    "slug": "makogarei-karaage",
+    "file": "public/images/fish/makogarei-karaage.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe マコガレイの唐揚げ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：マコガレイ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 片栗粉 大さじ3; 醤油・酒 各大さじ1; すりおろししょうが 小さじ1. Preparation: 骨を確認し、身を一口大に切る。; 醤油・酒・しょうがを合わせて魚を10分ほど漬け、汁気を拭く。; 片栗粉を薄くまぶし、170℃の油で中心まで十分に火を通す。; 油を切って盛る。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "e7b6deccdc799550d569a0790e48054a8ffc943b5fad709aedcc450a6745756f"
+  },
+  {
+    "slug": "makogarei-meuniere",
+    "file": "public/images/fish/makogarei-meuniere.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe マコガレイのムニエル. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：マコガレイ 骨を除いた切り身250g; 塩・こしょう 少々; 小麦粉 大さじ1; 油 大さじ1/2・バター15g; レモン汁 小さじ2・パセリ適量. Preparation: 水気を拭いて塩こしょうを振り、小麦粉を薄くまぶす。; 油を熱して皮側から焼き、焼き面が固まったら返す。火を弱めて厚い部分まで十分に加熱する。; 魚を取り出し、弱火でバターとレモン汁を合わせる。; 魚へソースをかけ、パセリを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "f2c51db11daa83593edca9c9f5f404bfd6b2a2f23283aec965c2f72f97dd9d61"
+  },
+  {
+    "slug": "makogarei-shioyaki",
+    "file": "public/images/fish/makogarei-shioyaki.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe マコガレイの塩焼き. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：マコガレイ 下処理した小型2尾（計約250g）; 塩 魚の重量の約1%; 大根おろし・レモン 好みで. Preparation: 下処理した魚の水気を拭く。厚い切り身は厚さをそろえる。; 塩を全体に振り、10分ほど置いて出た水分を拭く。; 予熱したグリルで両面を焼き、焦げそうなら火を弱める。; 身の中心まで十分に火が通ったことを確認し、大根おろしを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "edbcfae501298151a2fa3f14b7fb2b682111b1a79715ca52424a3b6aa0a82038"
+  },
+  {
+    "slug": "umazurahagi-nitsuke",
+    "file": "public/images/fish/umazurahagi-nitsuke.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ウマヅラハギの煮付け. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ウマヅラハギ 骨を除いた切り身250g; 水150ml・酒100ml; 醤油・みりん 各大さじ2; 砂糖 大さじ1; しょうが 薄切り4枚. Preparation: 下処理した魚に熱湯をかけ、表面の汚れを落として水気を拭く。; 鍋で水・酒・調味料・しょうがを煮立てる。; 魚を重ねず入れ、落とし蓋をして弱めの中火で煮る。10〜20分を目安に、厚い身の中心まで加熱する。; 魚を崩さず盛り、煮汁を好みの濃さに煮詰めてかける。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "76d826e2ac3f8ed669187b7f3487b0d9695cd8bdf3e4212730c99ccbcfed5349"
+  },
+  {
+    "slug": "umazurahagi-karaage",
+    "file": "public/images/fish/umazurahagi-karaage.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ウマヅラハギの唐揚げ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ウマヅラハギ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 片栗粉 大さじ3; 醤油・酒 各大さじ1; すりおろししょうが 小さじ1. Preparation: 骨を確認し、身を一口大に切る。; 醤油・酒・しょうがを合わせて魚を10分ほど漬け、汁気を拭く。; 片栗粉を薄くまぶし、170℃の油で中心まで十分に火を通す。; 油を切って盛る。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "85955961d2390821227a4d7671f9c63445ad183b1b1fd0ee222cc73a5344d7b0"
+  },
+  {
+    "slug": "umazurahagi-chiri-nabe",
+    "file": "public/images/fish/umazurahagi-chiri-nabe.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ウマヅラハギのちり鍋. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ウマヅラハギ 骨を除いた切り身250g; 豆腐1/2丁・白菜2枚・しめじ1/2パック; 昆布だし600ml・酒50ml; ぽん酢 好みで. Preparation: 骨を確認した魚を一口大に切り、熱湯をかけて汚れを落とす。; 鍋でだしと酒を温め、白菜・きのこを煮る。; 魚と豆腐を加えて煮る。魚の厚い部分まで十分に火を通す。; ぽん酢を添えて取り分ける。骨に気をつけて食べる。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "c4caefc48b7bd93b6b433b88af315e2b137b2b84915043d7b08ac7fa277cd352"
+  },
+  {
+    "slug": "umazurahagi-fry",
+    "file": "public/images/fish/umazurahagi-fry.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ウマヅラハギのフライ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ウマヅラハギ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 小麦粉 大さじ2・卵1個・パン粉適量; キャベツ・レモン 好みで. Preparation: 水気を拭き、厚さをそろえて塩を振る。; 小麦粉、溶き卵、パン粉の順に衣をつける。; 170℃を目安に返しながら揚げる。厚い部分まで十分に火を通す。; 油を切ってキャベツとレモンを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "27a190e087fe23c7c2d8298d78b3694789305d60d06c87a2b101d5111d8a87c4"
+  },
+  {
+    "slug": "kidai-shioyaki",
+    "file": "public/images/fish/kidai-shioyaki.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe キダイの塩焼き. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：キダイ 下処理した小型2尾（計約250g）; 塩 魚の重量の約1%; 大根おろし・レモン 好みで. Preparation: 下処理した魚の水気を拭く。厚い切り身は厚さをそろえる。; 塩を全体に振り、10分ほど置いて出た水分を拭く。; 予熱したグリルで両面を焼き、焦げそうなら火を弱める。; 身の中心まで十分に火が通ったことを確認し、大根おろしを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "043a8d253adccd8c54ea69a09efecbe361d04472a157bc624e33a332b03621e0"
+  },
+  {
+    "slug": "kidai-nitsuke",
+    "file": "public/images/fish/kidai-nitsuke.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe キダイの煮付け. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：キダイ 骨を除いた切り身250g; 水150ml・酒100ml; 醤油・みりん 各大さじ2; 砂糖 大さじ1; しょうが 薄切り4枚. Preparation: 下処理した魚に熱湯をかけ、表面の汚れを落として水気を拭く。; 鍋で水・酒・調味料・しょうがを煮立てる。; 魚を重ねず入れ、落とし蓋をして弱めの中火で煮る。10〜20分を目安に、厚い身の中心まで加熱する。; 魚を崩さず盛り、煮汁を好みの濃さに煮詰めてかける。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "2aa9abbf4fdc95ffc00603f49a74dbfd600aaf0e8670631fc11db6ae4c82215b"
+  },
+  {
+    "slug": "kidai-takikomi",
+    "file": "public/images/fish/kidai-takikomi.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe キダイの炊き込みご飯. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：キダイ 骨を除いた切り身250g; 米2合; 酒・醤油 各大さじ1; 塩 小さじ1/3; 昆布5cm角1枚・しょうが1片. Preparation: 米を洗って30分ほど浸水し、水を切る。魚は下処理して軽く焼く。; 炊飯器に米・調味料を入れ、2合の目盛りまで水を加える。昆布・千切りしょうが・魚を載せる。; 通常炊飯し、魚の中心まで火が通っていることを確認する。; 魚を一度取り出し、頭・中骨・ひれ・小骨を除いてから身だけをご飯へ戻し、混ぜる。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "fdbe940383ecefb065ee406b7132e413649b72d83b43cfbeb2c623bbb15d5633"
+  },
+  {
+    "slug": "kidai-karaage",
+    "file": "public/images/fish/kidai-karaage.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe キダイの唐揚げ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：キダイ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 片栗粉 大さじ3; 醤油・酒 各大さじ1; すりおろししょうが 小さじ1. Preparation: 骨を確認し、身を一口大に切る。; 醤油・酒・しょうがを合わせて魚を10分ほど漬け、汁気を拭く。; 片栗粉を薄くまぶし、170℃の油で中心まで十分に火を通す。; 油を切って盛る。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "7430968dd78eeda01b607ddf86103d4634110aab5781b2a5f600f2411acd6adb"
+  },
+  {
+    "slug": "kensakiika-tempura",
+    "file": "public/images/fish/kensakiika-tempura.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ケンサキイカの天ぷら. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ケンサキイカ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 市販天ぷら粉50g・冷水は製品指定量; 大根おろし・天つゆ 好みで. Preparation: 開いた身を食べやすい長さに切り、水気をしっかり拭く。; 製品表示どおりに冷水と粉を混ぜ、薄く衣をつける。; 170〜180℃を目安に少量ずつ揚げ、中心まで十分に加熱する。; 油を切り、大根おろしと天つゆを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "f1d9d3f6d8bc107d028a2bdfa4535255f8e37303898f42f9e04616bb983f6052"
+  },
+  {
+    "slug": "kensakiika-butter-yaki",
+    "file": "public/images/fish/kensakiika-butter-yaki.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ケンサキイカのバター醤油焼き. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ケンサキイカ 下処理した胴と腕250g; バター15g; 醤油・酒 各小さじ2; 細ねぎ 適量. Preparation: 甲または軟骨、内臓、目、口を除き、胴と腕を洗って水気を拭く。胴は食べやすい短冊か輪切りにする。; フライパンを中火で温めてバターを溶かし、イカを広げる。; 酒を加えて返しながら炒め、厚い部分まで十分に火を通す。; 醤油を鍋肌から加えて絡め、細ねぎを添える。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "3293d1e940b721d4d1a3e88d8e09c2aede3fde81882b5513ba6f497088f7f64a"
+  },
+  {
+    "slug": "kensakiika-nitsuke",
+    "file": "public/images/fish/kensakiika-nitsuke.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ケンサキイカの煮付け. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ケンサキイカ 骨を除いた切り身250g; 水150ml・酒100ml; 醤油・みりん 各大さじ2; 砂糖 大さじ1; しょうが 薄切り4枚. Preparation: 下処理した魚に熱湯をかけ、表面の汚れを落として水気を拭く。; 鍋で水・酒・調味料・しょうがを煮立てる。; 魚を重ねず入れ、落とし蓋をして弱めの中火で煮る。10〜20分を目安に、厚い身の中心まで加熱する。; 魚を崩さず盛り、煮汁を好みの濃さに煮詰めてかける。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "210ee617b7d41125604f0c0063cab6bafe1969f1d1a7ead6b94acc54590cc45d"
+  },
+  {
+    "slug": "kensakiika-karaage",
+    "file": "public/images/fish/kensakiika-karaage.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking editorial photograph for UOLINK recipe ケンサキイカの唐揚げ. Accurately represent this cooked dish made with the named species, not a different fish. Ingredients: 2人分：ケンサキイカ 骨・内臓を除いた身250g; 塩 少々; 揚げ油 適量; 片栗粉 大さじ3; 醤油・酒 各大さじ1; すりおろししょうが 小さじ1. Preparation: 骨を確認し、身を一口大に切る。; 醤油・酒・しょうがを合わせて魚を10分ほど漬け、汁気を拭く。; 片栗粉を薄くまぶし、170℃の油で中心まで十分に火を通す。; 油を切って盛る。. Single beautiful plated serving, no text, no labels, no hands, natural window light, Japanese ceramic plate, neutral wood tabletop, landscape 3:2 framing, whole dish visible. Not a collage.",
+    "sha256": "057afa15db9f0451be673cb08dbd605b7f61d571d7e5ef2ba2778a778e918cda"
+  }
+]

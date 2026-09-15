@@ -8,7 +8,7 @@ export const questHabitats:QuestHabitat[]=[
  {slug:'sandy-beach',name:'砂浜',description:'砂地を探るちょい投げとサーフのルアーゲーム。',methods:['choinage','surf-lure','bukkomi'],mapQuery:'砂浜'},
  {slug:'rocky-shore',name:'岩礁帯',description:'根の周りで待つ魚を、穴釣り・メバリングで探す。',methods:['ana','mebaring','eging','fukase','douzuki','rockfish-lure'],mapQuery:'和歌山'},
  {slug:'akashi',name:'明石・沖',description:'タイラバ、ノマセ、タコエギ。釣法の違いを楽しもう。',methods:['tai-rubber','nomase','jigging','tako-egi','hitotsu-tenya'],mapQuery:'明石'},
- {slug:'wakayama',name:'和歌山・沿岸',description:'エギングから船釣りまで、幅広い組み合わせを試す。',methods:['eging','tiprun','sabiki','kawahagi','jigging','boat-kisu','casting','fukase','otoshikomi','isaki-komase','rockfish-lure','ika-sutte'],mapQuery:'和歌山'},
+ {slug:'wakayama',name:'和歌山・沿岸',description:'エギングから船釣りまで、幅広い組み合わせを試す。',methods:['eging','tiprun','sabiki','kawahagi','jigging','boat-kisu','casting','fukase','otoshikomi','isaki-komase','rockfish-lure','ika-sutte','ika-metal','kamasu-lure'],mapQuery:'和歌山'},
  {slug:'clear-river',name:'清流',description:'流れを読むアマゴ釣りと、おとりを送るアユ友釣り。実際の入川には遊漁規則の確認が必要です。',methods:['ayu-tomozuri','freshwater-bait','trout-lure'],mapQuery:'日高川'},
  {slug:'trout-pond',name:'管理池',description:'スプーンや餌でマスを誘う。深さと速度をそろえて反応を探す。',methods:['trout-lure','freshwater-bait'],mapQuery:'マス'},
 ];

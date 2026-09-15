@@ -265,3 +265,10 @@ test('biological species are unique while old names remain searchable',async()=>
  assert.ok(require('../lib/quest/catalog.ts').questFish.find(f=>f.slug==='buri').methods.includes('shore-jigging'));
  assert.ok(require('../lib/all-guides.ts').getGuidesForFish('buri').some(g=>g.slug==='shore-jigging-jig-weight'));
 });
+test('the next ten species have full profiles recipes guides and playable methods',()=>{
+ for(const slug of ['akakamas','katakuchi','urume','konoshiro','bora','shiira','makogarei','umazurahagi','kidai','kensakiika']){
+  const p=registry.getFishProfile(slug);assert.ok(p?.detail?.beginnerTip);assert.equal(p.cooking.recipes.length,4);assert.equal(p.launch.identify.length,3);
+  const links=getFishConnections(slug);assert.ok(links.methods.length);assert.ok(links.guides.length);
+  assert.ok(require('../lib/quest/catalog.ts').questFish.some(f=>f.slug===slug));
+ }
+});
