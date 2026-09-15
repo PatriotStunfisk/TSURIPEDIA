@@ -23,6 +23,12 @@ export const tackleCategories=[['rod','ロッド'],['reel','リール'],['line',
 export function amazonSearchUrl(query:string){return `https://www.amazon.co.jp/s?k=${encodeURIComponent(query)}&tag=${amazonStoreId}`;}
 
 export const tackleSearchTerms:Readonly<Record<string,Partial<Record<typeof tackleCategories[number][0],string>>>>={
+ 'sayori-uki':{rig:'サヨリ ウキ 仕掛け',bait:'サヨリ オキアミ'},
+ 'ishidai-bottom':{rod:'イシダイ 専用竿',reel:'イシダイ 両軸リール',rig:'イシダイ 底物 仕掛け'},
+ 'nage':{rod:'カレイ 投げ竿',reel:'投げ釣り リール',line:'投げ釣り 道糸 力糸',rig:'カレイ 天秤 仕掛け'},
+ 'amadai-tenbin':{rod:'アマダイ 船竿',rig:'アマダイ 天秤 仕掛け',bait:'アマダイ オキアミ'},
+ 'deepsea-douzuki':{rod:'中深場 深場 竿',reel:'深場 電動リール',rig:'中深場 胴突き 仕掛け'},
+ 'medai-komase':{rod:'メダイ 船竿',rig:'メダイ 天秤 ビシ 仕掛け',bait:'メダイ オキアミ'},
  'eging':{line:'エギング PE 0.6 0.8号',rig:'エギング スナップ',bait:'エギ 2.5号 3.5号'},
  'sabiki':{rig:'サビキ仕掛け カゴ オモリ',bait:'サビキ アミエビ'},
  'ika-metal':{rig:'イカメタル リーダー ドロッパー',bait:'イカメタル 鉛スッテ'},
