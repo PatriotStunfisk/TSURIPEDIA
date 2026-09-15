@@ -272,3 +272,10 @@ test('the next ten species have full profiles recipes guides and playable method
   assert.ok(require('../lib/quest/catalog.ts').questFish.some(f=>f.slug===slug));
  }
 });
+
+test('map facilities are unique and verified closures are excluded from normal recommendations',()=>{
+ const {fishingMapEntries,getSpotsForFish}=require('../lib/fishing-map-data.ts');
+ unique(fishingMapEntries.map(s=>s.slug),'spot slug');unique(fishingMapEntries.map(s=>s.name),'spot name');
+ for(const s of fishingMapEntries.filter(s=>s.closed))assert.ok(!getSpotsForFish('aji').includes(s));
+ assert.ok(fishingMapEntries.find(s=>s.slug==='minamiawaji-megafloat').closed);
+});

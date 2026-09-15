@@ -1,3 +1,4 @@
+import {kansaiSpots} from './fishing-map-kansai';
 import {batchSpots} from './fishing-map-batch';
 import {expansionSpots} from './fishing-map-expansion';
 export type MapEntryType='spot'|'boat'|'area';
@@ -34,6 +35,7 @@ export type FishingMapEntry={
 };
 
 export const fishingMapEntries:FishingMapEntry[]=[
+  ...kansaiSpots,
   ...batchSpots,
   ...expansionSpots,
   {

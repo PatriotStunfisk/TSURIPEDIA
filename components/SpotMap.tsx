@@ -46,7 +46,7 @@ export default function SpotMap({initialQuery='',fishNames={},methodNames={}}:{i
     {active.status&&<div className={s.status}>{active.status}</div>}
     <p className={s.lead}>{active.note}</p><p>公式情報確認日：{active.verifiedAt??'未確認（釣行前に要確認）'}</p>{active.sources?.map(source=><p key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a></p>)}
     <dl>
-     <div><dt>狙える魚</dt><dd>{active.fish.join('・')}</dd></div>
+     <div><dt>狙える魚</dt><dd>{active.fish.join('・')||(active.closed?'休業・休園中':'最新の対象魚は現地の釣果情報を確認')}</dd></div>
      <div><dt>主な釣り方</dt><dd>{active.methods.join('・')}</dd></div>
      <div><dt>シーズン</dt><dd>{active.season}</dd></div>
      <div><dt>アクセス・利用</dt><dd>{active.access}</dd></div>
@@ -58,7 +58,7 @@ export default function SpotMap({initialQuery='',fishNames={},methodNames={}}:{i
     <section className={s.detailBlock}><h3>攻略メモ</h3><ul>{active.tips.map(v=><li key={v}>{v}</li>)}</ul></section>
     <section className={s.detailBlock}><h3>注意点</h3><ul>{active.caution.map(v=><li key={v}>{v}</li>)}</ul></section>
     <section className={s.detailBlock}><h3>魚・釣法・料理につなぐ</h3><div className={s.bestFor}>{active.fishSlugs?.map(slug=><Link key={slug} href={`/fish/${slug}`}>{fishNames[slug]??slug}の図鑑</Link>)}{active.methodSlugs?.map(slug=><Link key={slug} href={`/methods/${slug}`}>{methodNames[slug]??slug}</Link>)}</div></section>
-    <a className={s.googleLink} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(active.googleQuery)}`} target="_blank" rel="noopener noreferrer">Googleマップで場所を確認 ↗</a>
+    <div className={s.bestFor}>{active.guideSlugs?.map(slug=><Link key={slug} href={`/guide/${slug}`}>釣行準備のGUIDE →</Link>)}</div><a className={s.googleLink} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(active.googleQuery)}`} target="_blank" rel="noopener noreferrer">Googleマップで場所を確認 ↗</a>
    </>:<div className={s.panelEmpty}>条件を変えて釣り場を探してください。</div>}</aside>
   </div>
  </section>
