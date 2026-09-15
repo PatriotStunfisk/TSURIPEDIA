@@ -1,3 +1,4 @@
+import MethodTackle from '@/components/MethodTackle';
 import AffiliateProducts from '@/components/AffiliateProducts';
 import {getSpotsForMethod} from '@/lib/fishing-map-data';
 import {fishCatalog} from '@/lib/fish-registry';
@@ -31,5 +32,5 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   <section className="detailGrid"><article><span>COMMON MISTAKES</span><h2>よくある失敗</h2>{m.mistakes.map(x=><p key={x}>・{x}</p>)}</article><aside><span>SAFETY</span><h2>安全ポイント</h2>{m.safety.map(x=><p key={x}>⚠ {x}</p>)}</aside></section>
   <section className="detailGrid"><article><span>CHECKLIST</span><h2>持ち物チェック</h2><div className="chips">{m.checklist.map(x=><span key={x}>{x}</span>)}</div></article><aside><span>NEXT</span><h2>次に見る</h2><Link href="/fish" className="methodLink"><div><b>狙う魚の図鑑</b><small>生態・旬・食べ方を見る</small></div><em>→</em></Link><Link href="/spots" className="methodLink"><div><b>釣れる場所</b><small>エリア・設備を見る</small></div><em>→</em></Link></aside></section>
  <section className="detailGrid"><article><h2>この釣法で狙う魚</h2>{fishCatalog.filter(f=>getFishMethodSlugs(f).includes(slug)).map(f=><p key={f.slug}><Link href={`/fish/${f.slug}`}>{f.name}の図鑑</Link>{f.cooking&&<> · <Link href={`/cooking/${f.slug}`}>捌き方と料理</Link></>}</p>)}</article><aside><h2>理解を深めるGUIDE</h2>{allGuides.filter(g=>g.related.some(r=>r.href.split(/[?#]/)[0]===`/methods/${slug}`)).slice(0,6).map(g=><p key={g.slug}><Link href={`/guide/${g.slug}`}>{g.title}</Link></p>)}{getSpotsForMethod(slug).slice(0,3).map(spot=><p key={spot.slug}><Link href={`/spots?q=${encodeURIComponent(spot.name)}`}>{spot.name}の利用条件を見る</Link></p>)}<Link href={`/quest/play?method=${slug}`}>QUESTで釣法を試す →</Link></aside></section>
- <AffiliateProducts methods={[slug]}/></div>
+ <MethodTackle slug={slug}/><AffiliateProducts methods={[slug]}/></div>
 }

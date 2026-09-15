@@ -22,3 +22,7 @@ test('affiliate links point to verified product IDs with the authorized store ta
  assert.equal(productsForMethods(['sabiki','eging']).filter(p=>p.asin==='B0DCKBP14Z').length,1);
  assert.ok(!productsForMethods(['tiprun']).some(p=>p.asin==='B078ZW65R7'));
 });
+test('Amazon category searches encode terms and retain the public tracking ID',()=>{
+ const {amazonSearchUrl}=require('../lib/affiliate-products.ts');const url=new URL(amazonSearchUrl('PE 0.8号 & リーダー'));
+ assert.equal(url.hostname,'www.amazon.co.jp');assert.equal(url.searchParams.get('k'),'PE 0.8号 & リーダー');assert.equal(url.searchParams.get('tag'),'uolink-22');
+});

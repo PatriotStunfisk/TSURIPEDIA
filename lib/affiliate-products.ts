@@ -17,3 +17,17 @@ export function amazonProductUrl(asin:string){
  return `https://www.amazon.co.jp/dp/${asin}/ref=nosim?tag=${amazonStoreId}`;
 }
 export function productsForMethods(methods:readonly string[]){return affiliateProducts.filter(p=>p.methods.some(m=>methods.includes(m)));}
+
+// Category searches complement checked products; never pretend a search result is a verified SKU.
+export const tackleCategories=[['rod','ロッド'],['reel','リール'],['line','ライン'],['leader','リーダー'],['rig','仕掛け'],['bait','餌・ルアー']] as const;
+export function amazonSearchUrl(query:string){return `https://www.amazon.co.jp/s?k=${encodeURIComponent(query)}&tag=${amazonStoreId}`;}
+
+export const tackleSearchTerms:Readonly<Record<string,Partial<Record<typeof tackleCategories[number][0],string>>>>={
+ 'eging':{line:'エギング PE 0.6 0.8号',rig:'エギング スナップ',bait:'エギ 2.5号 3.5号'},
+ 'sabiki':{rig:'サビキ仕掛け カゴ オモリ',bait:'サビキ アミエビ'},
+ 'ika-metal':{rig:'イカメタル リーダー ドロッパー',bait:'イカメタル 鉛スッテ'},
+ 'kamasu-lure':{bait:'カマス 小型ミノー'},
+ 'tachiuo-tenya':{rig:'船 タチウオ テンヤ',bait:'タチウオ テンヤ イワシ'},
+ 'choinage':{rig:'キス 天秤 仕掛け オモリ',bait:'キス 釣り 餌'}
+};
+export const tachiuoRodSearch=amazonSearchUrl('船 タチウオ テンヤ ロッド');

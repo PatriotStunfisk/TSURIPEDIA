@@ -1,19 +1,22 @@
+import {tachiuoRodSearch} from '@/lib/affiliate-products';
 import AffiliateProducts from '@/components/AffiliateProducts';
-import {methodDetails} from '@/lib/method-registry';
+import {getMethod,methodDetails} from '@/lib/method-registry';
 import Link from 'next/link';
 import MethodTackle from '@/components/MethodTackle';
 import s from './gear.module.css';
 export const metadata={title:'釣具',alternates:{canonical:'/gear'}};
 
 const basics=[
- {title:'ロッド',icon:'🎣',text:'釣り方に合う長さ・硬さを選ぶ。船はオモリ負荷、岸は飛距離と操作性を重視。'},
- {title:'リール',icon:'⚙️',text:'スピニングか両軸かを釣法で決める。青物や深場では糸巻量とドラグ力も重要。'},
- {title:'ライン',icon:'〰️',text:'PEは感度と強度、フロロは擦れへの強さが特徴。号数は魚種・水深・潮で調整。'},
- {title:'仕掛け・小物',icon:'🪝',text:'針、ハリス、オモリ、スナップ、プライヤーまで含めて一式で考えると忘れ物が減る。'}
+ {title:'安全装備',icon:'🦺',text:'ライフジャケット、滑りにくい靴、帽子。船では乗船先が指定する適合品を事前に確認します。'},
+ {title:'魚を扱う',icon:'🐟',text:'魚つかみ、針外し用プライヤー、タオル。魚の大きさに合うタモも用意し、道具があっても毒魚には触れません。'},
+ {title:'仕掛けを作る',icon:'✂️',text:'使用する糸を切れるハサミ、プライヤー、予備のライン・リーダー・針。現場で結び直せる分を用意します。'},
+ {title:'持ち帰る',icon:'🧊',text:'クーラーボックス、氷・保冷剤、魚用袋。持ち帰る量に合う容量を選び、飲食物と魚を分けて収納します。'},
+ {title:'暑さ・日差し・雨',icon:'🧢',text:'帽子、偏光グラス、日焼け止め、飲料、雨具、防水バッグ。天候に応じて準備し、無理な釣行は避けます。'},
+ {title:'夜釣りと足元',icon:'🔦',text:'ヘッドライトと予備電池、手元用の明かり。水汲みバケツは使える場所を確認し、ロープを通路に放置しません。'}
 ];
 
 const targets=[
- {slug:'tachiuo',fish:'タチウオ',icon:'⚔️',href:'/fish/tachiuo',routes:[{place:'🚤 船',method:'/methods/tachiuo-tenya',name:'船テンヤ',items:'専用竿 7:3〜8:2調子・両軸/電動・PE1.5〜3号・リーダー6〜10号・40号前後テンヤ'},{place:'⚓ 堤防',method:'/methods#tachiuo-tenya-shore',name:'ウキ・引き釣り',items:'磯/ルアー竿・3000〜4000番・PE1〜2号・太ハリス/ワイヤー・電気ウキ/テンヤ'}],amazon:'https://link.amazon/B01XtTirB'},
+ {slug:'tachiuo',fish:'タチウオ',icon:'⚔️',href:'/fish/tachiuo',routes:[{place:'🚤 船',method:'/methods/tachiuo-tenya',name:'船テンヤ',items:'専用竿 7:3〜8:2調子・両軸/電動・PE1.5〜3号・リーダー6〜10号・40号前後テンヤ'},{place:'⚓ 堤防',method:'/methods#tachiuo-tenya-shore',name:'ウキ・引き釣り',items:'磯/ルアー竿・3000〜4000番・PE1〜2号・太ハリス/ワイヤー・電気ウキ/テンヤ'}]},
  {slug:'aji',fish:'マアジ',icon:'🐟',href:'/fish/aji',routes:[{place:'⚓ 堤防',method:'/methods/sabiki',name:'サビキ',items:'3〜4m万能竿・2000〜3000番・ナイロン2〜3号・サビキ4〜8号・コマセカゴ'},{place:'🚤 船',method:'/methods#douzuki',name:'船アジ',items:'7:3調子船竿・小型両軸・PE0.8〜2号・胴突き/サビキ・船指定オモリ'}]},
  {slug:'madai',fish:'マダイ',icon:'🔴',href:'/fish/madai',routes:[{place:'🚤 船',method:'/methods/tai-rubber',name:'タイラバ',items:'タイラバ竿・小型両軸・PE0.6〜1号・リーダー2〜4号・ヘッド45〜150g'},{place:'⚓ 堤防',method:'/methods#fukase',name:'カゴ・フカセ',items:'磯/遠投竿・2500〜4000番・ナイロン/PE・ウキ・ハリス1.5〜3号'}]},
  {slug:'buri',fish:'ブリ',icon:'💨',href:'/fish/buri',routes:[{place:'🚤 船',method:'/methods/nomase',name:'船ノマセ',items:'青物船竿・両軸/電動・PE3〜5号・リーダー8〜14号・泳がせ仕掛け'},{place:'⚓ 堤防',method:'/methods/nomase',name:'堤防ノマセ',items:'磯/遠投竿・4000〜6000番・PE2〜4号・リーダー6〜10号・泳がせ仕掛け'}]},
@@ -25,17 +28,17 @@ const targets=[
  {slug:'aoriika',fish:'アオリイカ',icon:'🦑',href:'/fish/aoriika',routes:[{place:'⚓ 岸',method:'/methods#eging',name:'エギング',items:'8〜9ftエギング竿・2500〜3000番・PE0.6〜0.8号・リーダー1.75〜2.5号・エギ2.5〜3.5号'},{place:'🚤 船',method:'/methods#tiprun',name:'ティップラン',items:'専用竿・2500番・PE0.6〜0.8号・リーダー2号前後・ティップラン用エギ30〜60g'}]}
 ];
 
-export default async function Page({searchParams}:{searchParams:Promise<{method?:string}>}){const query=await searchParams;return <div className="section pageTop"><style>{`html{scroll-padding-top:96px}`}</style><script dangerouslySetInnerHTML={{__html:`window.addEventListener('DOMContentLoaded',function(){if(location.hash)return;var m=document.referrer.match(/\\/fish\\/([^/?#]+)/);if(!m)return;var el=document.getElementById(m[1]);if(el)setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'})},60);});`}}/>
- <div className="pageHero"><span>FISHING GEAR</span><h1>釣具は「魚 × 釣り方」で選ぶ。</h1><p>ロッド、リール、ライン、仕掛けをばらばらに選ばず、狙う魚と釣り方から一式で考えるページです。</p></div>
+export default async function Page({searchParams}:{searchParams:Promise<{method?:string}>}){const query=await searchParams;const selectedMethod=typeof query.method==='string'?getMethod(query.method):undefined;return <div className="section pageTop"><style>{`html{scroll-padding-top:96px}`}</style><script dangerouslySetInnerHTML={{__html:`window.addEventListener('DOMContentLoaded',function(){if(location.hash)return;var m=document.referrer.match(/\\/fish\\/([^/?#]+)/);if(!m)return;var el=document.getElementById(m[1]);if(el)setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'})},60);});`}}/>
+ <div className="pageHero"><span>FISHING GEAR</span><h1>釣りに行く前に、道具をそろえよう。</h1><p>まず安全装備と共通の持ち物を確認。竿・リール・仕掛けは、その後に狙う魚と釣り方に合わせて選びます。</p></div>
  <div className="adNotice">このページにはAmazonアソシエイト等のアフィリエイトリンクを含みます。</div>
 
- <section className={s.guide}><h2>釣り方から道具一式を選ぶ</h2><div className="chips">{Object.values(methodDetails).map(m=><Link key={m.slug} href={`/gear?method=${m.slug}`}>{m.name}</Link>)}</div></section>
- <MethodTackle slug={typeof query.method==='string'?query.method:''}/><section className={s.guide}><div className={s.guideHead}><small>GEAR BASICS</small><h2>まず押さえる4つ</h2><p>迷ったら「ロッド → リール → ライン → 仕掛け」の順で確認。</p></div><div className={s.basicGrid}>{basics.map(x=><article key={x.title}><span>{x.icon}</span><h3>{x.title}</h3><p>{x.text}</p></article>)}</div></section>
+<section className={s.guide}><div className={s.guideHead}><small>GEAR BASICS</small><h2>まず用意したい基本装備</h2><p>すべてを一度に買う必要はありません。釣り場の貸出品や手持ちの道具も確認してください。</p></div><div className={s.basicGrid}>{basics.map(x=><article key={x.title}><span>{x.icon}</span><h3>{x.title}</h3><p>{x.text}</p></article>)}</div></section> <section className={s.guide}><h2>釣り方から道具一式を選ぶ</h2><div className="chips">{Object.values(methodDetails).map(m=><Link key={m.slug} href={`/gear?method=${m.slug}`}>{m.name}</Link>)}</div></section>
+ <MethodTackle slug={typeof query.method==='string'?query.method:''}/>
 
- <AffiliateProducts methods={query.method?[query.method]:undefined} limit={12}/><section className={s.quickTips}><div><b>PE号数の目安</b><span>ライトゲーム 0.3〜0.8号</span><span>タイラバ 0.6〜1号</span><span>青物 2〜5号</span></div><div><b>リーダーの目安</b><span>小物 1.5〜3号</span><span>タイラバ 2〜4号</span><span>青物 6〜14号</span></div><div><b>船釣りで最優先</b><span>船宿指定のオモリ号数</span><span>PE号数</span><span>仕掛けの長さ</span></div></section>
+ {selectedMethod&&<AffiliateProducts methods={[selectedMethod.slug]} title={`${selectedMethod.name}の商品候補`} limit={6}/>}<section className={s.quickTips}><div><b>PE号数の目安</b><span>ライトゲーム 0.3〜0.8号</span><span>タイラバ 0.6〜1号</span><span>青物 2〜5号</span></div><div><b>リーダーの目安</b><span>小物 1.5〜3号</span><span>タイラバ 2〜4号</span><span>青物 6〜14号</span></div><div><b>船釣りで最優先</b><span>船宿指定のオモリ号数</span><span>PE号数</span><span>仕掛けの長さ</span></div></section>
 
- <div className={s.sectionHead}><div><small>BY TARGET</small><h2>魚別タックル早見</h2></div><p>岸と船で道具が大きく変わる魚は分けて掲載しています。</p></div>
- <div className={s.targetGrid}>{targets.map(x=><article id={x.slug} style={{scrollMarginTop:96}} className={s.target} key={x.fish}><div className={s.targetHead}><span>{x.icon}</span><div><small>TACKLE GUIDE</small><h2>{x.fish}の釣具</h2><p>釣り方に合う道具をチェック</p></div></div>{x.routes.map(r=><div className={s.route} key={r.place+r.name}><div><b>{r.place}｜{r.name}</b><p>{r.items}</p></div><Link href={r.method}>釣り方を見る →</Link></div>)}{'amazon' in x&&x.amazon&&<a className={s.amazonCard} href={x.amazon} target="_blank" rel="sponsored noopener noreferrer"><div className={s.amazonVisual}>🎣</div><div><small>Amazon</small><b>船タチウオテンヤ用ロッド</b><span>商品を見る →</span></div></a>}<div className={s.actions}><Link href={x.href}>{x.fish}の特徴を見る →</Link></div></article>)}</div>
+ <section className={s.guide}><h2>準備を詳しく知る</h2><div className="chips"><Link href="/guide/fishing-first-checklist">初めての釣り：買う前に決める持ち物チェックリスト</Link><Link href="/guide/pliers-fishgrip-basics">プライヤーと魚つかみ：役割を分けて針を外す</Link><Link href="/guide/fishing-cooler-plan">釣った魚の持ち帰り：クーラーと氷を先に準備</Link><Link href="/guide/night-fishing-kit">夜釣りの装備：明かりと帰り道を先に決める</Link></div></section><div className={s.sectionHead}><div><small>BY TARGET</small><h2>魚別タックル早見</h2></div><p>岸と船で道具が大きく変わる魚は分けて掲載しています。</p></div>
+ <div className={s.targetGrid}>{targets.map(x=><article id={x.slug} style={{scrollMarginTop:96}} className={s.target} key={x.fish}><div className={s.targetHead}><span>{x.icon}</span><div><small>TACKLE GUIDE</small><h2>{x.fish}の釣具</h2><p>釣り方に合う道具をチェック</p></div></div>{x.routes.map(r=><div className={s.route} key={r.place+r.name}><div><b>{r.place}｜{r.name}</b><p>{r.items}</p></div><Link href={r.method}>釣り方を見る →</Link></div>)}{x.slug==='tachiuo'&&<a className={s.amazonCard} href={tachiuoRodSearch} target="_blank" rel="sponsored noopener noreferrer"><div className={s.amazonVisual}>🎣</div><div><small>Amazon</small><b>船タチウオテンヤ用ロッドの候補</b><span>Amazonで探す →</span></div></a>}<div className={s.actions}><Link href={x.href}>{x.fish}の特徴を見る →</Link></div></article>)}</div>
 
  <section className={s.checklist}><div><small>BEFORE YOU GO</small><h2>釣行前の持ち物チェック</h2></div><div className={s.checkGrid}><span>□ プライヤー</span><span>□ フィッシュグリップ</span><span>□ ハサミ</span><span>□ 予備リーダー</span><span>□ 予備仕掛け</span><span>□ オモリ予備</span><span>□ タオル</span><span>□ クーラー</span><span>□ 氷・保冷剤</span><span>□ ライフジャケット</span></div></section>
  </div>}
