@@ -71,7 +71,7 @@ export default defineFishSpecies({
   "media": {
     "image": "/images/fish/kensakiika-real.png?v=20260915-alpha"
   },
-  "quest": {
+  "quest": {hook: {kind:'embrace',mouthAnchor:{x:0.3,y:0.5},modelAnchor:{x:0.3,y:0.5,z:.5}},
     "fightProfile": "jet",
     "stamina": 70,
     "runPower": 66,

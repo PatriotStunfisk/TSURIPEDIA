@@ -1,7 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
-  quest: {fightProfile: 'jet', "swimSpeed": 0.65, "wariness": 0.4, "biteWindowMs": 4000, "runPower": 50},
+  quest: {hook: {kind:'embrace',mouthAnchor:{x:0.25,y:0.52},modelAnchor:{x:0.25,y:0.48,z:.5}},fightProfile: 'jet', "swimSpeed": 0.65, "wariness": 0.4, "biteWindowMs": 4000, "runPower": 50},
   "base": {
     "slug": "aoriika",
     "name": "アオリイカ",

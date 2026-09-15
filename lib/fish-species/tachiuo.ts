@@ -1,7 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
-  quest: {fightProfile: 'runner', "approachSpeed": 14, "biteWindowMs": 3200},
+  quest: {hook: {kind:'mouth',mouthAnchor:{x:0.025,y:0.38},modelAnchor:{x:0.025,y:0.62,z:.5}},fightProfile: 'runner', "approachSpeed": 14, "biteWindowMs": 3200},
   base: {
     slug: 'tachiuo',
     name: 'タチウオ',

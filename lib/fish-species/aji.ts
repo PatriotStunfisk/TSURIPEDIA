@@ -1,7 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
-  quest: {"swimSpeed": 1.1, "stamina": 45, "runPower": 25, "wariness": 0.1},
+  quest: {hook: {kind:'mouth',mouthAnchor:{x:0.025,y:0.52},modelAnchor:{x:0.025,y:0.48,z:.5}},"swimSpeed": 1.1, "stamina": 45, "runPower": 25, "wariness": 0.1},
   base: {
     slug: 'aji', name: 'マアジ', en: 'Japanese horse mackerel', scientific: 'Trachurus japonicus',
     season: '5〜11月', difficulty: 1, danger: '低', methods: ['サビキ','アジング','船釣り'],

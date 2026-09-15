@@ -1,7 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
-  quest: {fightProfile: 'bottom', "swimSpeed": 0.55, "stamina": 75, "runPower": 65},
+  quest: {hook: {kind:'mouth',mouthAnchor:{x:0.04,y:0.53},modelAnchor:{x:0.04,y:0.47,z:.5}},fightProfile: 'bottom', "swimSpeed": 0.55, "stamina": 75, "runPower": 65},
   "base": {
     "slug": "hirame",
     "name": "ヒラメ",

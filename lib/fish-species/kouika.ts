@@ -74,7 +74,7 @@ export default defineFishSpecies({
     "image": "/images/fish/kouika-real.png"
   },
   "featuredOrder": 31,
-  "quest": {
+  "quest": {hook: {kind:'embrace',mouthAnchor:{x:0.25,y:0.52},modelAnchor:{x:0.25,y:0.48,z:.5}},
     "fightProfile": "jet",
     "runPower": 42,
     "stamina": 54,

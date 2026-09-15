@@ -1,7 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
-  quest: {"swimSpeed": 0.7, "wariness": 0.65, "biteWindowMs": 1600, "stamina": 50},
+  quest: {hook: {kind:'mouth',mouthAnchor:{x:0.045,y:0.57},modelAnchor:{x:0.045,y:0.43000000000000005,z:.5}},"swimSpeed": 0.7, "wariness": 0.65, "biteWindowMs": 1600, "stamina": 50},
   "base": {
     "slug": "kawahagi",
     "name": "カワハギ",

@@ -9,3 +9,5 @@
 @media(min-width:761px){.water[data-phase=fight]{position:sticky;top:80px;z-index:5;height:280px;box-shadow:0 4px 12px #082a3e33}.water[data-phase=fight] .fish,.water[data-phase=landing] .fish{height:120px}}
 
 @media(min-width:761px){.water[data-phase=landing]{height:280px}}
+
+.hookAnchor{position:absolute;width:0;height:0;pointer-events:none}.line{z-index:2}.bait{z-index:3}.bait[data-attached=true]{transition:none;animation:none;font-size:16px}

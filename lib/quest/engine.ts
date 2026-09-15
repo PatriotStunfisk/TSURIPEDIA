@@ -73,7 +73,7 @@ export function hook(round:Round,now:number,random:()=>number=Math.random):Round
  if(current.phase==='waiting')return {...current,phase:'miss',reason:current.style==='eging'?'まだ抱いていません。しゃくった後のフォールで腕が伸びるのを待とう。':current.style==='kawahagi'?'まだ餌をつついています。誘いを止め、持ち込む動きで合わせよう。':current.style==='ayu'?'まだ追い払っていません。おとりへ突進する動きを待とう。':'魚がまだ餌を食べていません。食い込みとラインの動きを待とう。'};
  if(current.phase!=='bite')return current;
  if(random()<(current.fish?.escapeRate??0))return {...current,phase:'miss',reason:'針に掛かりきりませんでした。もう一度チャレンジ。'};
- const initialDepth=current.catch?.habitat==='clear-river'?1.5:current.catch?.habitat==='trout-pond'?3.5:current.catch?.habitat.includes('offshore')?28:current.catch?.habitat==='akashi'?24:6+current.targetDepth*5;
+ const initialDepth=questHabitats.find(h=>h.slug===current.catch?.habitat)?.fightDepth??(current.catch?.habitat==='clear-river'?1.5:current.catch?.habitat==='trout-pond'?3.5:current.catch?.habitat.includes('offshore')?28:current.catch?.habitat==='akashi'?24:6+current.targetDepth*5);
  const initialDistance=initialDepth*1.3+10;
  return {...current,phase:'fight',deadline:now+100000,started:now,lastTick:now,lastAction:0,initialDepth,initialDistance,fishDepth:initialDepth,distance:initialDistance,landingMode:(current.catch?.size??0)>45||current.fish?.sizeUnit==='kg'?'net':'lift'};
 }

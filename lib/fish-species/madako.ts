@@ -1,7 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
-  quest: {fightProfile: 'bottom', "swimSpeed": 0.3, "stamina": 85, "runPower": 30},
+  quest: {hook: {kind:'cover',mouthAnchor:{x:0.3,y:0.65},modelAnchor:{x:0.3,y:0.35,z:.5}},fightProfile: 'bottom', "swimSpeed": 0.3, "stamina": 85, "runPower": 30},
   "base": {
     "slug": "madako",
     "name": "マダコ",

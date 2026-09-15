@@ -70,7 +70,7 @@ export default defineFishSpecies({
     "image": "/images/fish/yariika-real.png"
   },
   "featuredOrder": 32,
-  "quest": {
+  "quest": {hook: {kind:'embrace',mouthAnchor:{x:0.25,y:0.5},modelAnchor:{x:0.25,y:0.5,z:.5}},
     "fightProfile": "jet",
     "runPower": 37,
     "stamina": 47,

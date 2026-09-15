@@ -1,6 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  quest: {hook: {kind:'mouth',mouthAnchor:{x:.03,y:0.58},modelAnchor:{x:.03,y:0.42000000000000004,z:.5}}},
   base: {
     slug: 'madai',
     name: 'マダイ',
