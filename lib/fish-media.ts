@@ -7,7 +7,7 @@ export function getSpeciesModelSrc(slug:string,publicRoot=join(process.cwd(),'pu
   if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug))return undefined;
   const directory=join(publicRoot,'models');
   if(!existsSync(directory))return undefined;
-  const aliases:Record<string,string>={chinu:'kurodai',iwashi:'maiwashi'};
+  const aliases:Record<string,string>={chinu:'kurodai',iwashi:'maiwashi',haze:'mahaze',houbo:'houbou'};
   const names=readdirSync(directory);
   const filename=[`${slug}.glb`,...(Object.hasOwn(aliases,slug)?[`${aliases[slug]}.glb`]:[])].find(name=>names.includes(name)&&existsSync(join(directory,name)));
   // The uploaded isaki.glb is byte-identical to the visually verified kanpachi.

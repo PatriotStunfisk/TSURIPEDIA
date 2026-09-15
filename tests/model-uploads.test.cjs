@@ -15,3 +15,19 @@ test('calibration filtering cannot affect the established seven or unknown model
  for(const slug of ['tachiuo','aji','madai','buri','kisu','kasago','saba','unknown','amago'])assert.deepEqual(modelCalibrationNodes(`/models/${slug}.glb`),[]);
  const {modelInitialYaw}=require('../lib/model-presentation.ts');assert.equal(modelInitialYaw('/models/nijimasu.glb'),-Math.PI/2);assert.equal(modelInitialYaw('/models/tachiuo.glb'),0);
 });
+
+const root=path.resolve(__dirname,'..');
+test('uploaded coastal models resolve with their exact original filenames',()=>{
+ const {getSpeciesModelSrc}=require('../lib/fish-media.ts');
+ for(const [slug,file] of Object.entries({mejina:'mejina',haze:'mahaze',ainame:'ainame',kijihata:'kijihata',akahata:'akahata',oomonhata:'oomonhata',houbo:'houbou',itoyoridai:'itoyoridai',kouika:'kouika',yariika:'yariika'})){
+  assert.equal(getSpeciesModelSrc(slug),`/models/${file}.glb`);
+  const bytes=fs.readFileSync(path.join(root,'public/models',`${file}.glb`));assert.equal(bytes.toString('utf8',0,4),'glTF');assert.equal(bytes.readUInt32LE(4),2);assert.equal(bytes.readUInt32LE(8),bytes.length);
+ }
+});
+
+test('verified model presentation hides only calibration nodes and starts front-facing uploads side-on',()=>{
+ const {modelCalibrationNodes,modelInitialYaw}=require('../lib/model-presentation.ts');
+ assert.deepEqual(modelCalibrationNodes('/models/mahaze.glb'),['Cube_2']);assert.deepEqual(modelCalibrationNodes('/models/unknown.glb'),[]);
+ for(const slug of ['ainame','oomonhata','yariika'])assert.equal(modelInitialYaw(`/models/${slug}.glb`),-Math.PI/2);
+ assert.equal(modelInitialYaw('/models/tachiuo.glb'),0);
+});
