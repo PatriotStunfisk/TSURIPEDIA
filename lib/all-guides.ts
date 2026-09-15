@@ -1,3 +1,4 @@
+import {nationalSpeciesGuides} from './guide-articles-national-species';
 import {tackleGuides} from './guide-articles-tackle';
 import {canonicalFishSlug} from './fish-aliases';
 import {gearBasicsGuides} from './guide-articles-gear-basics';
@@ -15,6 +16,7 @@ import {extraGuideArticles6} from '@/lib/guide-articles-extra6';
 import {extraGuideArticles7} from '@/lib/guide-articles-extra7';
 
 export const allGuides=[
+  ...nationalSpeciesGuides,
   ...tackleGuides,
   ...gearBasicsGuides,
   ...nextSpeciesGuides,

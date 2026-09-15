@@ -65,6 +65,14 @@
 
 ## 2026年9月の拡充
 
+2026-09-15：サヨリからメダイまで10魚種を追加。新規の加熱料理は `cooked-recipes.ts` の基本手順を使い、各プロフィールで料理4品・切り身の状態・魚種固有の下処理と注意点を選ぶ。既存レシピは移行しない。図鑑画像は真のRGBA透過PNG、料理写真は料理に合う背景付き画像として分ける。生成プロンプト・ハッシュは `species-national-images.json`、前回10種の透過版は `species-next-images.json` に記録する。
+
+画像差し替え時は `media.image` の更新番号も変え、最適化キャッシュの古い画像を残さない。`next.config.ts` は魚画像ディレクトリに限り更新番号付きの最適化を許可する。新しい10種のGLBは未提供であり、2D表示を使う。
+
+釣法の模式図は `lib/method-tackle.ts` の `tackleRigs` へ追加する。竿などの仕様は既存methodデータを参照し、別データへ複製しない。ウキの下や天秤の先にハリスが来る構成は `leaderInRig` を使って接続順を明示する。
+
+全国MAPは `japan-regions.ts` で47都道府県を扱い、地点の `prefecture` と `terrain` を登録する。`sources`・`verifiedAt` は公式確認の根拠、`sourceUpdatedAt` は参照元に明記された更新日。座標が確認できない施設は一覧と公式リンクを表示し、推測でピンを置かない。
+
 ヒラメ・サワラ・マダコを既存slugのまま本格プロフィールへ昇格。各4レシピと魚体画像を追加。`launch.methodLinks` / `launch.related` が空なら、共通の釣法・関連魚から表示を補うため、同じ導線を二重入力する必要はありません。
 
 釣り場は `fishing-map-data.ts` / `fishing-map-expansion.ts` の `fishSlugs`・`methodSlugs` から双方向につなぎます。`closed` の項目は魚・釣法からのおすすめ対象に含めません。`verifiedAt` は公式情報を実際に確認した日とし、`sources` に確認先を保存。地域情報と実際の釣り可能地点・営業中の釣船を区別します。GUIDEの `sources` / `verifiedAt` も同じ方針です。

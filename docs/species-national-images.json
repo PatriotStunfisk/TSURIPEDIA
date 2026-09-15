@@ -1,0 +1,502 @@
+[
+  {
+    "slug": "sayori",
+    "kind": "fish",
+    "recipe": null,
+    "file": "public/images/fish/sayori-real.png",
+    "generator": "image_gen",
+    "prompt": "Scientific-educational original fish encyclopedia cutout for UOLINK. Hyporhamphus sajori Japanese halfbeak. Slender silver elongated cylindrical body, dark green back, distinctive very long thin LOWER jaw projecting forward with red tip, short upper jaw, small fins far back near forked tail. Do not draw both jaws long like a needlefish. One complete anatomically accurate photorealistic specimen, horizontal facing LEFT, entire fins and tail visible, centered, body occupies 88% canvas width, wide landscape 1536x1024. TRUE TRANSPARENT PNG alpha background, isolated specimen with clean fin edges. No water, scenery, floor, shadow, navy rectangle, checkerboard drawing, text, logos, border. Natural colors, detailed scales and fins.",
+    "sha256": "448f1e3c6bcac9fed82874086094003a99568832b39fd438723679ea9de113ae",
+    "transparentPixelFraction": 0.8937333424886068
+  },
+  {
+    "slug": "sayori",
+    "kind": "cooking",
+    "recipe": "tempura",
+    "file": "public/images/fish/sayori-tempura.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Hyporhamphus sajori Japanese halfbeak prepared as delicate pale golden Japanese tempura boneless fish strips, shiso, tentsuyu dipping bowl. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "2b87b8c5fb5a70e78466b075f5c2b033ec49b8ddbaf9b1265071c646439cca29",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "sayori",
+    "kind": "cooking",
+    "recipe": "nanban",
+    "file": "public/images/fish/sayori-nanban.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Hyporhamphus sajori Japanese halfbeak prepared as small fried boneless fish fillets marinated in vinegar sauce with fine sliced onion carrot and pepper. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "f69d0d44ab6abee9a60c06507fbd98458a719c3e0aea14c084dc1391aa77d2a2",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "sayori",
+    "kind": "cooking",
+    "recipe": "shioyaki",
+    "file": "public/images/fish/sayori-shioyaki.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Hyporhamphus sajori Japanese halfbeak prepared as Japanese salt-grilled skin-on fish fillets, appetizing lightly browned skin, daikon and lemon. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "805250ccb0dcce7b3d0669c7d495ae7eecfbba2c15f4f6a13925f17f739858c3",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "sayori",
+    "kind": "cooking",
+    "recipe": "fry",
+    "file": "public/images/fish/sayori-fry.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Hyporhamphus sajori Japanese halfbeak prepared as crisp panko breaded fish fillets cut to show fully cooked white flesh, cabbage and tartar sauce. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "a0aff5d5134438e6d2818e19be41a27afe38545f06358dc5f7e9378cf3a5957b",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "gomasaba",
+    "kind": "fish",
+    "recipe": null,
+    "file": "public/images/fish/gomasaba-real.png",
+    "generator": "image_gen",
+    "prompt": "Scientific-educational original fish encyclopedia cutout for UOLINK. Scomber australasicus blue mackerel. Torpedo-shaped silver fish, blue-green wavy marked back, many distinct small black spots on lower sides and belly, small finlets before forked tail. One complete anatomically accurate photorealistic specimen, horizontal facing LEFT, entire fins and tail visible, centered, body occupies 88% canvas width, wide landscape 1536x1024. TRUE TRANSPARENT PNG alpha background, isolated specimen with clean fin edges. No water, scenery, floor, shadow, navy rectangle, checkerboard drawing, text, logos, border. Natural colors, detailed scales and fins.",
+    "sha256": "5b6dca5e90ee18c674c67f71277a8e4f96e699116ee3624c9519a8055a071d8e",
+    "transparentPixelFraction": 0.7664750417073568
+  },
+  {
+    "slug": "gomasaba",
+    "kind": "cooking",
+    "recipe": "misoni",
+    "file": "public/images/fish/gomasaba-misoni.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Scomber australasicus blue mackerel prepared as Japanese mackerel fillets simmered in thick brown miso sauce with ginger. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "683a072bcdf172486d9b00c95f3e32c626df178538ac142c863a3fc021c58a3e",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "gomasaba",
+    "kind": "cooking",
+    "recipe": "tatsuta",
+    "file": "public/images/fish/gomasaba-tatsuta.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Scomber australasicus blue mackerel prepared as golden crisp ginger soy marinated fish bite-size tatsuta-age. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "bb31d18bc7c0e80828f0cb257ab2810dcc572eeb509f3152ebfa36422bd01aac",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "gomasaba",
+    "kind": "cooking",
+    "recipe": "shioyaki",
+    "file": "public/images/fish/gomasaba-shioyaki.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Scomber australasicus blue mackerel prepared as Japanese salt-grilled skin-on fish fillets, appetizing lightly browned skin, daikon and lemon. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "dbb3d544c126285eba2c9bd8c91aed9ee8b8d6eaddaf673a808ea3b3ef7203a4",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "gomasaba",
+    "kind": "cooking",
+    "recipe": "tomato",
+    "file": "public/images/fish/gomasaba-tomato.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Scomber australasicus blue mackerel prepared as cooked mackerel fillets simmered in bright tomato onion sauce. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "0e09cd52997771de28f01998f22cd5e9380a9b206fe945ee290da1b44ef259e3",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "kurosoi",
+    "kind": "fish",
+    "recipe": null,
+    "file": "public/images/fish/kurosoi-real.png",
+    "generator": "image_gen",
+    "prompt": "Scientific-educational original fish encyclopedia cutout for UOLINK. Sebastes schlegelii black rockfish. Robust grey-black mottled stocky body, large mouth, spiny continuous dorsal fin, fan tail, small spines below front of eye. One complete anatomically accurate photorealistic specimen, horizontal facing LEFT, entire fins and tail visible, centered, body occupies 88% canvas width, wide landscape 1536x1024. TRUE TRANSPARENT PNG alpha background, isolated specimen with clean fin edges. No water, scenery, floor, shadow, navy rectangle, checkerboard drawing, text, logos, border. Natural colors, detailed scales and fins.",
+    "sha256": "3b127a79f17a763134d6a465b23b15888296f911ae2a18d620d730fccd4a0b4a",
+    "transparentPixelFraction": 0.5687548319498698
+  },
+  {
+    "slug": "kurosoi",
+    "kind": "cooking",
+    "recipe": "nitsuke",
+    "file": "public/images/fish/kurosoi-nitsuke.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Sebastes schlegelii black rockfish prepared as Japanese simmered skin-on fish fillets in glossy soy ginger broth. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "a40538cb352d3eb26ce3ae6884096a2818661fc52f86780c748c1ba6d52f53f1",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "kurosoi",
+    "kind": "cooking",
+    "recipe": "karaage",
+    "file": "public/images/fish/kurosoi-karaage.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Sebastes schlegelii black rockfish prepared as boneless fish chunks fried in light potato starch coating with lemon. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "dfebb3cd0419c57d8e638c566d25201e0da4db8a7b662f6c19c4fa300e5c5511",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "kurosoi",
+    "kind": "cooking",
+    "recipe": "sakamushi",
+    "file": "public/images/fish/kurosoi-sakamushi.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Sebastes schlegelii black rockfish prepared as Japanese sake steamed fish fillets on kombu with mushrooms and green onion. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "f66ab76ce85271392e752a203c8b3a22f37eb1f4ed64f49ab86461487a1e0e9c",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "kurosoi",
+    "kind": "cooking",
+    "recipe": "ushiojiru",
+    "file": "public/images/fish/kurosoi-ushiojiru.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Sebastes schlegelii black rockfish prepared as clear Japanese fish soup with cooked boneless flesh, daikon, spring onion, no raw fish. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "368a6db89b39d62cee1cc2925c8e3fac04182352c830c299d629122ecfda4ff1",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "ishidai",
+    "kind": "fish",
+    "recipe": null,
+    "file": "public/images/fish/ishidai-real.png",
+    "generator": "image_gen",
+    "prompt": "Scientific-educational original fish encyclopedia cutout for UOLINK. Oplegnathus fasciatus barred knifejaw. Deep compressed silver oval fish, seven bold vertical black bars on silver body, fused beaklike teeth, thick lips. Subadult with clear bars. One complete anatomically accurate photorealistic specimen, horizontal facing LEFT, entire fins and tail visible, centered, body occupies 88% canvas width, wide landscape 1536x1024. TRUE TRANSPARENT PNG alpha background, isolated specimen with clean fin edges. No water, scenery, floor, shadow, navy rectangle, checkerboard drawing, text, logos, border. Natural colors, detailed scales and fins.",
+    "sha256": "61cb8bccf1325d778357fc6e670b4fe4b34f5278772c9bf5466b7cae6e1e6a24",
+    "transparentPixelFraction": 0.4875253041585286
+  },
+  {
+    "slug": "ishidai",
+    "kind": "cooking",
+    "recipe": "shioyaki",
+    "file": "public/images/fish/ishidai-shioyaki.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Oplegnathus fasciatus barred knifejaw prepared as Japanese salt-grilled skin-on fish fillets, appetizing lightly browned skin, daikon and lemon. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "65562f4b28bf2a26b93dad52aca6b65a26083b0c8626faf6096886e1cd3534ca",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "ishidai",
+    "kind": "cooking",
+    "recipe": "nitsuke",
+    "file": "public/images/fish/ishidai-nitsuke.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Oplegnathus fasciatus barred knifejaw prepared as Japanese simmered skin-on fish fillets in glossy soy ginger broth. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "d08868dfabb52b6d3fdf14fa1bf50c9d7a9ed5ab3e18fa2c607cd0cb742c3e89",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "ishidai",
+    "kind": "cooking",
+    "recipe": "meuniere",
+    "file": "public/images/fish/ishidai-meuniere.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Oplegnathus fasciatus barred knifejaw prepared as boneless fish fillets pan-fried butter meuniere, golden surface parsley lemon. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "a41ee5caef56324b56bb4e1092af899677f4a371b54936f6bc6dcb696067ce77",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "ishidai",
+    "kind": "cooking",
+    "recipe": "ushiojiru",
+    "file": "public/images/fish/ishidai-ushiojiru.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Oplegnathus fasciatus barred knifejaw prepared as clear Japanese fish soup with cooked boneless flesh, daikon, spring onion, no raw fish. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "0d5af70443cffe03ccd47528e0e97fe886af742f787e8030ff79ab8d08e31a09",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "ishigarei",
+    "kind": "fish",
+    "recipe": null,
+    "file": "public/images/fish/ishigarei-real.png",
+    "generator": "image_gen",
+    "prompt": "Scientific-educational original fish encyclopedia cutout for UOLINK. Kareius bicoloratus stone flounder. Flattened oval brown fish seen from eyed side, both eyes on RIGHT side in natural anatomy, head left within image, conspicuous small hard bony tubercles in longitudinal rows along back and near dorsal and anal fin bases. No ordinary scales. Broad rounded tail. One complete anatomically accurate photorealistic specimen, horizontal facing LEFT, entire fins and tail visible, centered, body occupies 88% canvas width, wide landscape 1536x1024. TRUE TRANSPARENT PNG alpha background, isolated specimen with clean fin edges. No water, scenery, floor, shadow, navy rectangle, checkerboard drawing, text, logos, border. Natural colors, detailed scales and fins.",
+    "sha256": "21ea1c5fced692f1c1dadd2742cef8dcc48df1fb26969c1297e8d7a6ee60dc0b",
+    "transparentPixelFraction": 0.5087776184082031
+  },
+  {
+    "slug": "ishigarei",
+    "kind": "cooking",
+    "recipe": "nitsuke",
+    "file": "public/images/fish/ishigarei-nitsuke.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Kareius bicoloratus stone flounder prepared as Japanese simmered skin-on fish fillets in glossy soy ginger broth. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "22b913a3fb5693bc84270360c8e880f170bd50c931c4679c85cdf4344805908d",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "ishigarei",
+    "kind": "cooking",
+    "recipe": "karaage",
+    "file": "public/images/fish/ishigarei-karaage.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Kareius bicoloratus stone flounder prepared as boneless fish chunks fried in light potato starch coating with lemon. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "56a38af0c300ab2e40115f2af0da0651f7915c63edf7015bf2058433b05e58e6",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "ishigarei",
+    "kind": "cooking",
+    "recipe": "meuniere",
+    "file": "public/images/fish/ishigarei-meuniere.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Kareius bicoloratus stone flounder prepared as boneless fish fillets pan-fried butter meuniere, golden surface parsley lemon. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "0d243b0e0f0bd7f3c9e00c003dfc845d50b78fa16edfb2e839fb274ed4485de4",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "ishigarei",
+    "kind": "cooking",
+    "recipe": "sakamushi",
+    "file": "public/images/fish/ishigarei-sakamushi.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Kareius bicoloratus stone flounder prepared as Japanese sake steamed fish fillets on kombu with mushrooms and green onion. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "cfdec0a4ba52d69926de5b81d0e0face5fc260fcc8f37be427b2632e8f3fdb4e",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "akaamadai",
+    "kind": "fish",
+    "recipe": null,
+    "file": "public/images/fish/akaamadai-real.png",
+    "generator": "image_gen",
+    "prompt": "Scientific-educational original fish encyclopedia cutout for UOLINK. Branchiostegus japonicus red tilefish. Long pink-red body, high squared steep forehead, blunt short snout, pale triangular cheek mark beneath eye, yellow marking on tail, single long dorsal. One complete anatomically accurate photorealistic specimen, horizontal facing LEFT, entire fins and tail visible, centered, body occupies 88% canvas width, wide landscape 1536x1024. TRUE TRANSPARENT PNG alpha background, isolated specimen with clean fin edges. No water, scenery, floor, shadow, navy rectangle, checkerboard drawing, text, logos, border. Natural colors, detailed scales and fins.",
+    "sha256": "a486a9b5e5f442f1313085b1b66be9486208b8049b77a171092dab215681588f",
+    "transparentPixelFraction": 0.6094608306884766
+  },
+  {
+    "slug": "akaamadai",
+    "kind": "cooking",
+    "recipe": "shioyaki",
+    "file": "public/images/fish/akaamadai-shioyaki.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Branchiostegus japonicus red tilefish prepared as Japanese salt-grilled skin-on fish fillets, appetizing lightly browned skin, daikon and lemon. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "364964a64a0b32e5218e4fc721ee25aede6ad3f31be2641b29bc297e7ff8faf7",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "akaamadai",
+    "kind": "cooking",
+    "recipe": "sakamushi",
+    "file": "public/images/fish/akaamadai-sakamushi.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Branchiostegus japonicus red tilefish prepared as Japanese sake steamed fish fillets on kombu with mushrooms and green onion. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "d4e5e3d376a28c3e685d9ffe9df632de67ba775da8ac935659053ef37a0f64ed",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "akaamadai",
+    "kind": "cooking",
+    "recipe": "tempura",
+    "file": "public/images/fish/akaamadai-tempura.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Branchiostegus japonicus red tilefish prepared as delicate pale golden Japanese tempura boneless fish strips, shiso, tentsuyu dipping bowl. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "a21f6b219f912e8d5a6f6a6e12b93e488fd2aa2007268afaa102b9e256f35474",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "akaamadai",
+    "kind": "cooking",
+    "recipe": "takikomi",
+    "file": "public/images/fish/akaamadai-takikomi.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Branchiostegus japonicus red tilefish prepared as Japanese rice cooked with fish, cooked flaked boneless fish stirred into ginger rice in a ceramic rice pot. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "9f99860860ecb4f11900a2a9d5fbd89bdf636fa8529472fe7f095be330932290",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "kinmedai",
+    "kind": "fish",
+    "recipe": null,
+    "file": "public/images/fish/kinmedai-real.png",
+    "generator": "image_gen",
+    "prompt": "Scientific-educational original fish encyclopedia cutout for UOLINK. Beryx splendens splendid alfonsino. Bright scarlet red deep compressed fish, very large golden reflective eye, forked red tail, short dorsal fin with high front, very long anal fin along underside. One complete anatomically accurate photorealistic specimen, horizontal facing LEFT, entire fins and tail visible, centered, body occupies 88% canvas width, wide landscape 1536x1024. TRUE TRANSPARENT PNG alpha background, isolated specimen with clean fin edges. No water, scenery, floor, shadow, navy rectangle, checkerboard drawing, text, logos, border. Natural colors, detailed scales and fins.",
+    "sha256": "9914800311b7069267248e0c4f66f59bb274dcd39811a39c474ca39467965fc7",
+    "transparentPixelFraction": 0.6169827779134115
+  },
+  {
+    "slug": "kinmedai",
+    "kind": "cooking",
+    "recipe": "nitsuke",
+    "file": "public/images/fish/kinmedai-nitsuke.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Beryx splendens splendid alfonsino prepared as Japanese simmered skin-on fish fillets in glossy soy ginger broth. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "a205c2d083fb70ce29c25b5f60695dc588dcc0e064a1dbc153397deec6f05cf4",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "kinmedai",
+    "kind": "cooking",
+    "recipe": "shioyaki",
+    "file": "public/images/fish/kinmedai-shioyaki.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Beryx splendens splendid alfonsino prepared as Japanese salt-grilled skin-on fish fillets, appetizing lightly browned skin, daikon and lemon. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "f958330b60b938e5a4890fb48e70f7ea5950dc11f9ea4b7e8962a3eeb07f0588",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "kinmedai",
+    "kind": "cooking",
+    "recipe": "sakamushi",
+    "file": "public/images/fish/kinmedai-sakamushi.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Beryx splendens splendid alfonsino prepared as Japanese sake steamed fish fillets on kombu with mushrooms and green onion. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "963119b74f82ab5af84faf5fc95c7857cff128dbd8914212356c2601b062c30b",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "kinmedai",
+    "kind": "cooking",
+    "recipe": "takikomi",
+    "file": "public/images/fish/kinmedai-takikomi.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Beryx splendens splendid alfonsino prepared as Japanese rice cooked with fish, cooked flaked boneless fish stirred into ginger rice in a ceramic rice pot. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "679ec8803fd05af1d521e2f1f887c28cd42cccea49cc3c6c472fbc29de65a42f",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "akamutsu",
+    "kind": "fish",
+    "recipe": null,
+    "file": "public/images/fish/akamutsu-real.png",
+    "generator": "image_gen",
+    "prompt": "Scientific-educational original fish encyclopedia cutout for UOLINK. Doederleinia berycoides blackthroat seaperch. Pink-red back, silver-pink lower sides, large eye, broad mouth showing a small glimpse of dark inner mouth, dorsal fin divided spiny and soft portions, tail slightly forked. One complete anatomically accurate photorealistic specimen, horizontal facing LEFT, entire fins and tail visible, centered, body occupies 88% canvas width, wide landscape 1536x1024. TRUE TRANSPARENT PNG alpha background, isolated specimen with clean fin edges. No water, scenery, floor, shadow, navy rectangle, checkerboard drawing, text, logos, border. Natural colors, detailed scales and fins.",
+    "sha256": "cae8d665a217dad7c7a199d9817a3d4f8ae2cda09eafe162efc5962a67115610",
+    "transparentPixelFraction": 0.6148808797200521
+  },
+  {
+    "slug": "akamutsu",
+    "kind": "cooking",
+    "recipe": "nitsuke",
+    "file": "public/images/fish/akamutsu-nitsuke.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Doederleinia berycoides blackthroat seaperch prepared as Japanese simmered skin-on fish fillets in glossy soy ginger broth. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "fd1697d6e58cd47ca70e6e9109c63a7bf5bd0a9cdfbb19a6c84cb9817e718354",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "akamutsu",
+    "kind": "cooking",
+    "recipe": "shioyaki",
+    "file": "public/images/fish/akamutsu-shioyaki.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Doederleinia berycoides blackthroat seaperch prepared as Japanese salt-grilled skin-on fish fillets, appetizing lightly browned skin, daikon and lemon. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "789ebdc94ad18dd8a597e3514c364d1fb9d06bcd5637b8f208594d75b99f34fc",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "akamutsu",
+    "kind": "cooking",
+    "recipe": "sakamushi",
+    "file": "public/images/fish/akamutsu-sakamushi.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Doederleinia berycoides blackthroat seaperch prepared as Japanese sake steamed fish fillets on kombu with mushrooms and green onion. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "28df06c3008805bf9cf7f878a9047eb011f9c4f843472a090b258c95e94b3e22",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "akamutsu",
+    "kind": "cooking",
+    "recipe": "takikomi",
+    "file": "public/images/fish/akamutsu-takikomi.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Doederleinia berycoides blackthroat seaperch prepared as Japanese rice cooked with fish, cooked flaked boneless fish stirred into ginger rice in a ceramic rice pot. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "d4d79525c15e7163b765b1f718a59b4008e8e6d3ab256985599e29b3ef023fb2",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "kuromutsu",
+    "kind": "fish",
+    "recipe": null,
+    "file": "public/images/fish/kuromutsu-real.png",
+    "generator": "image_gen",
+    "prompt": "TRANSPARENT PNG RGBA CUTOUT ASSET. Generate one isolated Japanese クロムツ (Scombrops gilberti) for UOLINK's fish encyclopedia, a real Japanese marine food fish, not a monster or fantasy fish. Natural side view facing LEFT. Closed mouth, no exposed fangs. Dark brown-grey scaled body, large round but normally proportioned eye, two separate dorsal fins and forked tail. Realistic adult proportions: body length roughly 3.5 times body depth, moderately deep fusiform shape, no exaggerated teeth. The entire silhouette including fins must fit comfortably inside canvas with 7% clear margins. Accurate detailed scientific specimen illustration with natural realistic shading on the fish only. ALL empty area must be actual alpha=0 transparency, NOT a painted checkerboard, NOT white, NOT black, NOT vignette. No scene, no floor, no shadow, no water, no text, no framing. Produce a clean transparent-background asset as genuine RGBA PNG.",
+    "sha256": "bb07de47c24590c1889f95d370500cac343497cd755d56d7935aecb9db88b425",
+    "transparentPixelFraction": 0.5969973397528372
+  },
+  {
+    "slug": "kuromutsu",
+    "kind": "cooking",
+    "recipe": "nitsuke",
+    "file": "public/images/fish/kuromutsu-nitsuke.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Scombrops gilberti black gnomefish prepared as Japanese simmered skin-on fish fillets in glossy soy ginger broth. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "b3f758f3d7960f9fb772a683e628729b7253783b33ca0b582b32e509e3c5bf8a",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "kuromutsu",
+    "kind": "cooking",
+    "recipe": "shioyaki",
+    "file": "public/images/fish/kuromutsu-shioyaki.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Scombrops gilberti black gnomefish prepared as Japanese salt-grilled skin-on fish fillets, appetizing lightly browned skin, daikon and lemon. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "d2c833389a18818dabfa51703f6568d1d89af1dc8d7c00fdc60b57dc07c29513",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "kuromutsu",
+    "kind": "cooking",
+    "recipe": "karaage",
+    "file": "public/images/fish/kuromutsu-karaage.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Scombrops gilberti black gnomefish prepared as boneless fish chunks fried in light potato starch coating with lemon. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "2487235ffca1c26db04a1c7028216099389a9239ceb3e6efb721c53bd9b9a57d",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "kuromutsu",
+    "kind": "cooking",
+    "recipe": "ushiojiru",
+    "file": "public/images/fish/kuromutsu-ushiojiru.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Scombrops gilberti black gnomefish prepared as clear Japanese fish soup with cooked boneless flesh, daikon, spring onion, no raw fish. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "f36136e5807fea976f41deeb1b52b3549c75791399a3917a0c465c19178d441e",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "medai",
+    "kind": "fish",
+    "recipe": null,
+    "file": "public/images/fish/medai-real.png",
+    "generator": "image_gen",
+    "prompt": "Scientific-educational original fish encyclopedia cutout for UOLINK. Hyperoglyphe japonica Japanese butterfish. Large dark brownish-silver stocky elongated oval fish, rounded blunt snout, large eye, small mouth, long low dorsal and anal fins and forked tail, smooth glossy slimy skin. One complete anatomically accurate photorealistic specimen, horizontal facing LEFT, entire fins and tail visible, centered, body occupies 88% canvas width, wide landscape 1536x1024. TRUE TRANSPARENT PNG alpha background, isolated specimen with clean fin edges. No water, scenery, floor, shadow, navy rectangle, checkerboard drawing, text, logos, border. Natural colors, detailed scales and fins.",
+    "sha256": "4471e97671a931ee3743b894488ec96706a6409ae3b0ae45cdfb188c63f6b641",
+    "transparentPixelFraction": 0.647131601969401
+  },
+  {
+    "slug": "medai",
+    "kind": "cooking",
+    "recipe": "misozuke",
+    "file": "public/images/fish/medai-misozuke.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Hyperoglyphe japonica Japanese butterfish prepared as miso-marinated fish fillets grilled golden brown with daikon garnish. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "df9d8dd7e68cb5ffe3186ffee0480139247c62460fb6d3f422dc0d356892683f",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "medai",
+    "kind": "cooking",
+    "recipe": "teriyaki",
+    "file": "public/images/fish/medai-teriyaki.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Hyperoglyphe japonica Japanese butterfish prepared as boneless fish fillets cooked in glossy teriyaki glaze with green vegetables. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "0a4d3b57cfec8bbcc9cac21f0a4e6d5b48717410c8803ceb6eee49da63901c56",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "medai",
+    "kind": "cooking",
+    "recipe": "meuniere",
+    "file": "public/images/fish/medai-meuniere.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Hyperoglyphe japonica Japanese butterfish prepared as boneless fish fillets pan-fried butter meuniere, golden surface parsley lemon. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "bda1009afcf99f27b5ff2352821784edb0cbaa29d3b3e24ab1225a899a928d5c",
+    "transparentPixelFraction": null
+  },
+  {
+    "slug": "medai",
+    "kind": "cooking",
+    "recipe": "fry",
+    "file": "public/images/fish/medai-fry.png",
+    "generator": "image_gen",
+    "prompt": "Original realistic Japanese home-cooking food photograph for UOLINK recipe page. Hyperoglyphe japonica Japanese butterfish prepared as crisp panko breaded fish fillets cut to show fully cooked white flesh, cabbage and tartar sauce. Cooked portions consistent with this fish's size and skin color, two-person serving, no whole raw specimen, all flesh cooked. Beautiful ceramic dish on clean neutral table, natural window light, editorial food photography, 3/4 overhead close view, landscape. No text, logos, watermark, collage. This is a cooking photo with opaque photographic background, NOT a transparent encyclopedia cutout.",
+    "sha256": "b2d4eb2935d66c22cd0ac3016f88898b30d4d5185d98f2a6474e125e669ce646",
+    "transparentPixelFraction": null
+  }
+]

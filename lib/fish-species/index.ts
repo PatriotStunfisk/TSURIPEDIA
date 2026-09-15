@@ -1,3 +1,13 @@
+import sayori from './sayori';
+import gomasaba from './gomasaba';
+import kurosoi from './kurosoi';
+import ishidai from './ishidai';
+import ishigarei from './ishigarei';
+import akaamadai from './akaamadai';
+import kinmedai from './kinmedai';
+import akamutsu from './akamutsu';
+import kuromutsu from './kuromutsu';
+import medai from './medai';
 import akakamas from './akakamas';
 import katakuchi from './katakuchi';
 import urume from './urume';
@@ -47,7 +57,7 @@ import type {FishSpeciesDefinition} from './types';
 
 // Add one import and one entry here for a new full species profile.
 // Keep this order stable: it is also the encyclopedia order for all species.
-export const fishSpecies:FishSpeciesDefinition[]=[tachiuo,aji,madai,buri,kisu,kasago,saba,iwashi,suzuki,chinu,kawahagi,hirame,mebaru,aoriika,madako,kanpachi,sawara,amago,nijimasu,ayu,unagi,anago,isaki,magochi,mejina,haze,ainame,kijihata,akahata,oomonhata,houbo,itoyoridai,kouika,yariika,akakamas,katakuchi,urume,konoshiro,bora,shiira,makogarei,umazurahagi,kidai,kensakiika];
+export const fishSpecies:FishSpeciesDefinition[]=[tachiuo,aji,madai,buri,kisu,kasago,saba,iwashi,suzuki,chinu,kawahagi,hirame,mebaru,aoriika,madako,kanpachi,sawara,amago,nijimasu,ayu,unagi,anago,isaki,magochi,mejina,haze,ainame,kijihata,akahata,oomonhata,houbo,itoyoridai,kouika,yariika,akakamas,katakuchi,urume,konoshiro,bora,shiira,makogarei,umazurahagi,kidai,kensakiika,sayori,gomasaba,kurosoi,ishidai,ishigarei,akaamadai,kinmedai,akamutsu,kuromutsu,medai];
 uniqueFishSlugs(fishSpecies.map(species=>species.base));
 const speciesBySlug=new Map(fishSpecies.map(species=>[species.base.slug,species]));
 export function getFishSpecies(slug:string){return speciesBySlug.get(slug)}
