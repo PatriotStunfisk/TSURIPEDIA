@@ -1,3 +1,4 @@
+import {tripPlanningGuides} from './guide-articles-trip-planning';
 import {safetyGuides} from './guide-articles-safety';
 import {practicalGuides} from './guide-articles-practical';
 import {nationalSpeciesGuides} from './guide-articles-national-species';
@@ -18,6 +19,7 @@ import {extraGuideArticles6} from '@/lib/guide-articles-extra6';
 import {extraGuideArticles7} from '@/lib/guide-articles-extra7';
 
 export const allGuides=[
+  ...tripPlanningGuides,
   ...practicalGuides,
   ...safetyGuides,
   ...nationalSpeciesGuides,

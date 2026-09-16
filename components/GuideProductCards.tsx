@@ -1,3 +1,4 @@
+import {amazonSearchUrl,affiliateDisclosure} from '@/lib/affiliate-products';
 import Link from 'next/link';
 
 type Card={badge:string;title:string;desc:string;href:string;external?:boolean;cta?:string};
@@ -71,7 +72,7 @@ const cards:Record<string,Card[]>={
   {badge:'確認ポイント',title:'オモリ負荷適合モデル',desc:'対象魚より先に仕掛け重量を確認。',href:gear('buri')}
  ],
  'tachiuo-tenya-rod-choice':[
-  {badge:'Amazon',title:'船タチウオテンヤ用ロッド',desc:'40号前後のテンヤを操作できる専用竿。',href:'https://link.amazon/B01XtTirB',external:true,cta:'Amazonで見る'},
+  {badge:'Amazon',title:'船タチウオテンヤ用ロッド',desc:'40号前後のテンヤを操作できる専用竿。',href:amazonSearchUrl('船タチウオテンヤ用ロッド'),external:true,cta:'Amazonで見る'},
   {badge:'扱いやすい',title:'8:2調子テンヤロッド',desc:'食い込みと操作性のバランス。',href:gear('tachiuo')},
   {badge:'掛け重視',title:'9:1調子テンヤロッド',desc:'積極的に掛ける釣りを好む人向け。',href:gear('tachiuo')}
  ],
@@ -167,8 +168,8 @@ const cards:Record<string,Card[]>={
  ]
 };
 
-export default function GuideProductCards({slug}:{slug:string}){
- const items=cards[slug];
+export default function GuideProductCards({slug,hideExternal=false}:{slug:string;hideExternal?:boolean}){
+ const items=cards[slug]?.filter(item=>!hideExternal||!item.external);
  if(!items?.length)return null;
  return <section style={{margin:'26px 0 0',padding:'24px',border:'1px solid #d8e7ef',borderRadius:20,background:'#f8fbfd'}}>
   <span style={{fontSize:12,fontWeight:900,letterSpacing:1.2,color:'#087bc4'}}>GEAR PICKS</span>
@@ -180,6 +181,6 @@ export default function GuideProductCards({slug}:{slug:string}){
    <p style={{margin:'0 0 16px',fontSize:13,lineHeight:1.7,color:'#607682'}}>{x.desc}</p>
    {x.external?<a href={x.href} target="_blank" rel="sponsored noopener noreferrer" style={{marginTop:'auto',display:'inline-flex',justifyContent:'center',padding:'11px 12px',borderRadius:10,background:'#ff9900',color:'#111',fontWeight:900,fontSize:13}}>{x.cta||'商品を見る →'}</a>:<Link href={x.href} style={{marginTop:'auto',display:'inline-flex',justifyContent:'center',padding:'11px 12px',borderRadius:10,background:'#0e2f43',color:'#fff',fontWeight:900,fontSize:13}}>釣具ページで候補を見る →</Link>}
   </article>)}</div>
-  <small style={{display:'block',marginTop:12,color:'#82939d',lineHeight:1.6}}>※Amazonへの外部リンクがあるカードにはアフィリエイトリンクを含む場合があります。その他はUOLINK内の釣具ページへ移動します。</small>
+  <small style={{display:'block',marginTop:12,color:'#82939d',lineHeight:1.6}}>{affiliateDisclosure}</small>
  </section>
 }

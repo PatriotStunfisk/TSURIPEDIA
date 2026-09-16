@@ -18,7 +18,7 @@ async function main(){
  const font=fs.readFileSync(fontFile);
  for(const d of socialDrafts){
   const file=path.join(root,'public',d.image.split('?')[0]);if(!fs.existsSync(file))throw Error('Missing fish image '+d.image);
-  const image='data:image/'+(file.endsWith('.webp')?'webp':'png')+';base64,'+fs.readFileSync(file).toString('base64');
+  const image='data:image/'+(file.endsWith('.svg')?'svg+xml':file.endsWith('.webp')?'webp':'png')+';base64,'+fs.readFileSync(file).toString('base64');
   const element=h('div',{style:{display:'flex',flexDirection:'column',width:'100%',height:'100%',background:'#eaf5f7',color:'#113849',padding:'46px 60px',fontFamily:'Noto',fontWeight:700}},
    h('div',{style:{display:'flex',justifyContent:'space-between',fontSize:30}},h('span',null,'UOLINK'),h('span',{style:{color:'#147c9a'}},'GUIDE')),
    h('div',{style:{display:'flex',alignItems:'center',flex:1,gap:28}},

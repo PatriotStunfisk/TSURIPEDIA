@@ -37,3 +37,16 @@ export const tackleSearchTerms:Readonly<Record<string,Partial<Record<typeof tack
  'choinage':{rig:'キス 天秤 仕掛け オモリ',bait:'キス 釣り 餌'}
 };
 export const tachiuoRodSearch=amazonSearchUrl('船 タチウオ テンヤ ロッド');
+
+export const tripTools:Readonly<Record<string,{name:string;reason:string;check:string;query:string}>>={
+ cooler:{name:'魚と氷を一緒に入れるクーラー',reason:'釣った後すぐ冷やし、帰宅まで低温を保つために使います。容量だけでなく内寸も確認します。',check:'狙う魚の長さ、氷を入れた残りの容量、車まで運べる重量で比較。最初の小物釣りなら手持ちの物で足りる場合もあります。',query:'釣り クーラーボックス 内寸'},
+ pliers:{name:'針外し用ロングノーズプライヤー',reason:'指を針先や魚の歯へ近づけずに針を外すための道具です。',check:'針を挟める先端形状と耐食性を確認。毒棘のある魚を安全に扱える保証にはなりません。',query:'釣り ロングノーズ プライヤー'},
+ scissors:{name:'PEライン対応ハサミ',reason:'仕掛け交換の際、細いPEをほつれにくく切るために使います。',check:'普通のハサミでは切りにくいPEがあります。対応糸と刃先の収納方法を確認してください。',query:'PEライン ハサミ 釣り'},
+ bag:{name:'魚用の丈夫な持ち帰り袋',reason:'魚と溶けた氷水を分け、クーラー内を整理しやすくします。',check:'魚が収まる長さと耐冷性を確認。袋に入れるだけでは冷却できないため、氷と保冷容器が必要です。',query:'魚 持ち帰り 袋 厚手'}
+};
+export const guideTripTools:Readonly<Record<string,readonly string[]>>={
+ 'fishing-first-checklist':['pliers','scissors','cooler'],
+ 'fishing-cooler-plan':['cooler','bag'],
+ 'first-charter-boat-reservation':['cooler','pliers'],
+ 'pliers-fishgrip-basics':['pliers','scissors']
+};
