@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import {methods} from '@/lib/data';
-import {getFishProfile} from '@/lib/fish-registry';
+import {selectHomeFish} from '@/lib/home-selection';
 import {allGuides} from '@/lib/all-guides';
 import FishVisual from '@/components/FishVisual';
-import {launchFishSlugs} from '@/lib/launch-fish';
 import s from './home.module.css';
+
+export const metadata={alternates:{canonical:'/'}};
+export const revalidate=86400;
 
 const quickLinks=[
   {href:'/fish',icon:'◉',label:'魚図鑑'},
@@ -17,7 +19,7 @@ const quickLinks=[
 ];
 
 export default function Home(){
-  const featured=launchFishSlugs.map(slug=>getFishProfile(slug)!).filter(Boolean);
+  const featured=selectHomeFish(new Date().getUTCMonth()+1);
   const guidePicks=allGuides.slice(0,6);
   return <div className={s.home}>
     <section className={s.hero}>
@@ -43,13 +45,13 @@ export default function Home(){
 
     <div className={s.band} style={{background:'#e9f5fb'}}>
       <section className={s.section}>
-        <div className={s.head}><div><div className={s.eyebrow}>FEATURED FISH</div><h2>人気の魚図鑑</h2></div><Link href="/fish">すべての魚図鑑を見る →</Link></div>
-        <div className={s.fishGrid}>{featured.map(f=><Link key={f.slug} className={s.fishCard} href={`/fish/${f.slug}`}><div className={s.thumb} style={{'--tone':f.accent} as React.CSSProperties}><FishVisual imageSrc={f.media?.image} slug={f.slug} name={f.name}/><span className={s.season}>{f.season}</span></div><div className={s.fishInfo}><h3>{f.name}</h3><p>{f.en}</p><div className={s.chips}><span>{f.methods[0]}</span><span>{f.areas[0]}</span></div></div></Link>)}</div>
+        <div className={s.head}><div><div className={s.eyebrow}>FEATURED FISH</div><h2>定番と季節の魚図鑑</h2></div><Link href="/fish">すべての魚図鑑を見る →</Link></div>
+        <p>編集部の定番セレクトと、季節の魚から8魚種をご紹介。アクセス数のランキングではありません。</p><p><Link href="/fish?hazard=1">釣れた魚を触る前に：危険魚を確認 →</Link></p><div className={s.fishGrid}>{featured.map(f=><Link key={f.slug} className={s.fishCard} href={`/fish/${f.slug}`}><div className={s.thumb} style={{'--tone':f.accent} as React.CSSProperties}><FishVisual imageSrc={f.media?.image} slug={f.slug} name={f.name}/><span className={s.season}>{f.season}</span></div><div className={s.fishInfo}><h3>{f.name}</h3><p>{f.en}</p><div className={s.chips}><span>{f.methods[0]}</span><span>{f.areas[0]}</span></div></div></Link>)}</div>
       </section>
     </div>
 
     <section className={s.section}>
-      <div className={s.head}><div><div className={s.eyebrow}>SEARCH GUIDE</div><h2>釣行前によく調べる疑問</h2></div><Link href="/guide">釣りGUIDEをすべて見る →</Link></div>
+      <div className={s.head}><div><div className={s.eyebrow}>SEARCH GUIDE</div><h2>釣りに行くための実践GUIDE</h2></div><Link href="/guide">釣りGUIDEをすべて見る →</Link></div>
       <div className={s.guideGrid}>{guidePicks.map(a=><Link key={a.slug} href={`/guide/${a.slug}`} className={s.guideCard}><small>{a.query}</small><h3>{a.title}</h3><p>{a.answer}</p><b>答えを見る →</b></Link>)}</div>
     </section>
 

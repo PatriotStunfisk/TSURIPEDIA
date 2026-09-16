@@ -279,3 +279,51 @@ test('map facilities are unique and verified closures are excluded from normal r
  for(const s of fishingMapEntries.filter(s=>s.closed))assert.ok(!getSpotsForFish('aji').includes(s));
  assert.ok(fishingMapEntries.find(s=>s.slug==='minamiawaji-megafloat').closed);
 });
+
+test('hazard cooking policy controls all registries and sitemap, including direct routes',()=>{
+ const danger=registry.fishCatalog.filter(f=>f.hazard);assert.equal(danger.length,7);
+ const paths=sitemap().map(x=>new URL(x.url).pathname);
+ for(const f of danger){
+  assert.ok(f.hazard.sources.length);assert.ok(f.hazard.identify.length>=3);
+  assert.equal(getFishConnections(f.slug).methods.length,0);
+  assert.ok(paths.includes('/fish/'+f.slug));
+  if(!f.hazard.cookingEnabled){assert.equal(f.cooking,undefined);assert.equal(f.tableGuide,undefined);assert.ok(!paths.some(p=>p.startsWith('/cooking/'+f.slug)));}
+ }
+ assert.equal(registry.getFishProfile('aigo').cooking.recipes.length,4);
+ const f=fishSpecies.find(f=>f.base.slug==='kusafugu');
+ assert.throws(()=>defineFishSpecies({...f,cooking:{prep:['unsafe'],recipes:[]}}),/Cooking disabled/);
+ assert.equal(getSpeciesTableGuide({...f,cooking:{prep:[],recipes:[]},tableGuide:{lead:'unsafe',dishes:[]}}),undefined);
+ const catalog=require('../lib/quest/catalog.ts').questFish;
+ assert.ok(danger.every(f=>!catalog.some(q=>q.slug===f.slug)));
+});
+test('practical guides expose valid diagrams, tables and reverse links without duplicate routes',()=>{
+ const practical=require('../lib/guide-articles-practical.ts').practicalGuides;
+ assert.equal(practical.length,11);
+ for(const a of practical){
+  assert.equal(allGuides.filter(g=>g.slug===a.slug).length,1,a.slug);
+  assert.ok(a.sections.some(s=>s.steps?.length>=5));assert.ok(a.sections.some(s=>s.table));
+  for(const section of a.sections){if(section.table)assert.ok(section.table.rows.every(row=>row.length===section.table.headers.length));if(section.tackleMethod)assert.ok(methodDetails[section.tackleMethod]);}
+  const f=a.related.find(l=>l.href.startsWith('/fish/')).href.split('/').pop();
+  assert.ok(getFishConnections(f).guides.slice(0,6).some(g=>g.slug===a.slug));
+ }
+ const {getRelatedGuides}=require('../lib/all-guides.ts');assert.equal(getRelatedGuides('missing').length,0);
+ assert.ok(getRelatedGuides('aji-sabiki-depth').every(g=>g.slug!=='aji-sabiki-depth'));
+});
+test('home selection is bounded, unique and excludes identification-only dangerous fish',()=>{
+ const {selectHomeFish}=require('../lib/home-selection.ts');
+ for(let month=1;month<=12;month++){
+  const f=selectHomeFish(month);assert.equal(f.length,8);unique(f.map(x=>x.slug),'home fish');assert.ok(f.every(x=>!x.hazard?.identificationOnly));assert.deepEqual(selectHomeFish(month),f);
+ }
+ assert.equal(selectHomeFish(9,6).length,6);
+});
+
+test('GUIDE related links resolve to public routes, including historical fish aliases',()=>{
+ const routes=new Set(sitemap().map(x=>new URL(x.url).pathname));
+ const {canonicalFishSlug}=require('../lib/fish-aliases.ts');
+ for(const guide of allGuides)for(const link of guide.related){
+  if(!link.href.startsWith('/'))continue;
+  let pathname=new URL(link.href,'https://uolink.vercel.app').pathname;
+  pathname=pathname.replace(/^\/fish\/([^/]+)$/,(_,slug)=>'/fish/'+canonicalFishSlug(slug));
+  assert.ok(routes.has(pathname),`${guide.slug}: ${link.href}`);
+ }
+});
