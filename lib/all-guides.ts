@@ -1,3 +1,4 @@
+import {freshwaterGuides} from './guide-articles-freshwater';
 import {quickGuides} from './guide-articles-quick';
 import {guideEditorial} from './guide-editorial';
 import {guideReadingMinutes,type ClassifiedGuide} from './guide-taxonomy';
@@ -22,6 +23,7 @@ import {extraGuideArticles6} from '@/lib/guide-articles-extra6';
 import {extraGuideArticles7} from '@/lib/guide-articles-extra7';
 
 const sourceGuides=[
+  ...freshwaterGuides,
   ...quickGuides,
   ...tripPlanningGuides,
   ...practicalGuides,

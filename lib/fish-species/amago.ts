@@ -1,5 +1,4 @@
 import {defineFishSpecies} from './define';
-
 export default defineFishSpecies({
   "base": {
     "slug": "amago",
@@ -43,6 +42,9 @@ export default defineFishSpecies({
     ],
     "guideSlugs": [
       "amago-field-notes"
+    ],
+    "waterTypes": [
+      "fresh"
     ]
   },
   "detail": {
@@ -203,5 +205,11 @@ export default defineFishSpecies({
         ]
       }
     ]
-  }
+  },
+  "representativeRecipes": [
+    "shioyaki",
+    "kanroni",
+    "karaage",
+    "nanban"
+  ]
 });

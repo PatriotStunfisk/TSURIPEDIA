@@ -3,6 +3,7 @@ import {cookedRecipe} from './cooked-recipes';
 // Species reference: https://www.hro.or.jp/fisheries/h3mfcd0000000gsj/o7u1kr000000019q/o7u1kr000000d4fu/o7u1kr000000bq9o.html (checked 2026-09-15)
 const fish={slug:"kurosoi",name:"クロソイ"};
 export default defineFishSpecies({
+  representativeRecipes: ["sashimi","nitsuke","karaage","sakamushi"],
   "base": {
     "slug": "kurosoi",
     "name": "クロソイ",
@@ -128,6 +129,27 @@ export default defineFishSpecies({
       "三枚におろし、腹骨・小骨を除いて切り分けます。",
       "生魚に使った器具を洗い、加熱した料理とは分けます。"
     ],
-    "recipes": ["nitsuke","karaage","sakamushi","ushiojiru"].map(slug=>cookedRecipe(fish,slug,"骨を除いた皮付きの身","頭やひれの棘を避けて下処理し、骨のない身で食べやすく仕上げます。"))
+    "recipes": [...(["nitsuke","karaage","sakamushi","ushiojiru"].map(slug=>cookedRecipe(fish,slug,"骨を除いた皮付きの身","頭やひれの棘を避けて下処理し、骨のない身で食べやすく仕上げます。"))),{
+  "slug": "sashimi",
+  "name": "刺身",
+  "preparation": "raw",
+  "summary": "大きめの個体の身を薄造りにし、歯応えを楽しみます。皮と小骨を除いて切ります。",
+  "ingredients": [
+    "2人分：生食用として処理・管理されたクロソイの柵 150〜200g",
+    "大葉・薬味 適量",
+"しょうゆ 適量"
+  ],
+  "steps": [
+    "生食用の表示・処理条件と消費期限を確認。不明なら加熱料理へ変更する。",
+    "清潔な包丁・まな板を用意し、調理直前まで冷蔵する。",
+    "皮・骨を確認し、冷たい身を一方向に引いて食べやすい厚さに切る。",
+    "冷やした皿に盛り、薬味を添えてすぐに食べる。"
+  ],
+  "tips": [
+    "釣った直後・見た目・匂いだけで安全は判断できません。内臓を生で添えません。",
+    "酢・塩・わさび・表面の炙りは寄生虫対策になりません。",
+    "寄生虫対策済みでも衛生管理は必要です。購入先に処理条件を確認してください。"
+  ]
+}]
   }
 });

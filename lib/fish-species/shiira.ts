@@ -197,5 +197,11 @@ export default defineFishSpecies({
         ]
       }
     ]
-  }
+  },
+  "representativeRecipes": [
+    "fry",
+    "meuniere",
+    "karaage",
+    "nitsuke"
+  ]
 });

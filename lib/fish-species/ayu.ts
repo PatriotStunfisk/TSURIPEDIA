@@ -1,5 +1,4 @@
 import {defineFishSpecies} from './define';
-
 export default defineFishSpecies({
   "base": {
     "slug": "ayu",
@@ -40,6 +39,9 @@ export default defineFishSpecies({
     ],
     "guideSlugs": [
       "ayu-field-notes"
+    ],
+    "waterTypes": [
+      "fresh"
     ]
   },
   "detail": {
@@ -197,5 +199,11 @@ export default defineFishSpecies({
         ]
       }
     ]
-  }
+  },
+  "representativeRecipes": [
+    "shioyaki",
+    "kanroni",
+    "ayu-meshi",
+    "karaage"
+  ]
 });

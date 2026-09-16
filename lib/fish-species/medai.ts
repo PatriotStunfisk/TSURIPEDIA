@@ -3,6 +3,7 @@ import {cookedRecipe} from './cooked-recipes';
 // Species reference: https://www.pref.kyoto.jp/kaiyo/medai.html (checked 2026-09-15)
 const fish={slug:"medai",name:"メダイ"};
 export default defineFishSpecies({
+  representativeRecipes: ["sashimi","misozuke","teriyaki","meuniere"],
   "base": {
     "slug": "medai",
     "name": "メダイ",
@@ -121,6 +122,27 @@ export default defineFishSpecies({
       "腹骨・小骨を除いて厚みをそろえた切り身にします。",
       "生魚に使った器具を洗い、加熱した料理とは分けます。"
     ],
-    "recipes": ["misozuke","teriyaki","meuniere","fry"].map(slug=>cookedRecipe(fish,slug,"粘液・鱗・骨を除いた切り身","身の厚みをそろえ、皮や小骨の残りを確認してから調理します。"))
+    "recipes": [...(["misozuke","teriyaki","meuniere","fry"].map(slug=>cookedRecipe(fish,slug,"粘液・鱗・骨を除いた切り身","身の厚みをそろえ、皮や小骨の残りを確認してから調理します。"))),{
+  "slug": "sashimi",
+  "name": "刺身",
+  "preparation": "raw",
+  "summary": "厚い身を切りやすい柵に整え、繊維を断つ方向に切ります。加熱とは違う弾力を楽しめます。",
+  "ingredients": [
+    "2人分：生食用として処理・管理されたメダイの柵 150〜200g",
+    "大葉・薬味 適量",
+"しょうゆ 適量"
+  ],
+  "steps": [
+    "生食用の表示・処理条件と消費期限を確認。不明なら加熱料理へ変更する。",
+    "清潔な包丁・まな板を用意し、調理直前まで冷蔵する。",
+    "皮・骨を確認し、冷たい身を一方向に引いて食べやすい厚さに切る。",
+    "冷やした皿に盛り、薬味を添えてすぐに食べる。"
+  ],
+  "tips": [
+    "釣った直後・見た目・匂いだけで安全は判断できません。内臓を生で添えません。",
+    "酢・塩・わさび・表面の炙りは寄生虫対策になりません。",
+    "寄生虫対策済みでも衛生管理は必要です。購入先に処理条件を確認してください。"
+  ]
+}]
   }
 });

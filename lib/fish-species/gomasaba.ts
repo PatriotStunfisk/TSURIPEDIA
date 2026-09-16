@@ -3,6 +3,7 @@ import {cookedRecipe} from './cooked-recipes';
 // Species reference: https://www.pref.kanagawa.jp/docs/mx7/cnt/f430693/zukan-gomasaba.html (checked 2026-09-15)
 const fish={slug:"gomasaba",name:"ゴマサバ"};
 export default defineFishSpecies({
+  representativeRecipes: ["misoni","tatsuta","shioyaki","tomato"],
   "base": {
     "slug": "gomasaba",
     "name": "ゴマサバ",

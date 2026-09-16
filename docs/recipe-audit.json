@@ -1,0 +1,2264 @@
+{
+  "verifiedAt": "2026-09-17",
+  "speciesCount": 63,
+  "addedRecipeCount": 48,
+  "sources": [
+    "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000042953.html",
+    "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/parasite.html"
+  ],
+  "species": [
+    {
+      "slug": "tachiuo",
+      "name": "タチウオ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "tempura",
+          "name": "天ぷら",
+          "raw": false
+        },
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "shioyaki",
+        "tempura",
+        "nitsuke"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "aji",
+      "name": "マアジ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "aji-fry",
+          "name": "アジフライ",
+          "raw": false
+        },
+        {
+          "slug": "namero",
+          "name": "なめろう",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "shioyaki",
+        "aji-fry",
+        "namero"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "madai",
+      "name": "マダイ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "chazuke",
+          "name": "鯛茶漬け",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "shioyaki",
+        "nitsuke",
+        "chazuke"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "buri",
+      "name": "ブリ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        },
+        {
+          "slug": "teriyaki",
+          "name": "照り焼き",
+          "raw": false
+        },
+        {
+          "slug": "shabu",
+          "name": "ぶりしゃぶ",
+          "raw": false
+        },
+        {
+          "slug": "daikon",
+          "name": "ぶり大根",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "teriyaki",
+        "shabu",
+        "daikon"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "kisu",
+      "name": "シロギス",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "tempura",
+          "name": "天ぷら",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "nanbanzuke",
+          "name": "南蛮漬け",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "tempura",
+        "sashimi",
+        "shioyaki",
+        "nanbanzuke"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "kasago",
+      "name": "カサゴ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        },
+        {
+          "slug": "misoshiru",
+          "name": "味噌汁",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "nitsuke",
+        "karaage",
+        "sashimi",
+        "misoshiru"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "saba",
+      "name": "マサバ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "shimesaba",
+          "name": "しめ鯖",
+          "raw": true
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "misoni",
+          "name": "味噌煮",
+          "raw": false
+        },
+        {
+          "slug": "tatsutaage",
+          "name": "竜田揚げ",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "shimesaba",
+        "shioyaki",
+        "misoni",
+        "tatsutaage"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "iwashi",
+      "name": "マイワシ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "ume-ni",
+          "name": "梅煮",
+          "raw": false
+        },
+        {
+          "slug": "kabayaki",
+          "name": "蒲焼き",
+          "raw": false
+        },
+        {
+          "slug": "tsumire",
+          "name": "つみれ汁",
+          "raw": false
+        },
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "ume-ni",
+        "kabayaki",
+        "tsumire"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "suzuki",
+      "name": "スズキ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "meuniere",
+          "name": "ムニエル",
+          "raw": false
+        },
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "aquapazza",
+          "name": "アクアパッツァ",
+          "raw": false
+        },
+        {
+          "slug": "sakamushi",
+          "name": "酒蒸し",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "meuniere",
+        "fry",
+        "aquapazza"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "chinu",
+      "name": "クロダイ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "takikomi",
+          "name": "炊き込みご飯",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "shioyaki",
+        "nitsuke",
+        "takikomi"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "kawahagi",
+      "name": "カワハギ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "nabe",
+          "name": "ちり鍋",
+          "raw": false
+        },
+        {
+          "slug": "misoshiru",
+          "name": "味噌汁",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身・薄造り",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "nitsuke",
+        "karaage",
+        "nabe"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "hirame",
+      "name": "ヒラメ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "meuniere",
+          "name": "ムニエル",
+          "raw": false
+        },
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "sakamushi",
+          "name": "酒蒸し",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身・薄造り",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "meuniere",
+        "nitsuke",
+        "fry"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "mebaru",
+      "name": "メバル",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "aquapazza",
+          "name": "アクアパッツァ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "nitsuke",
+        "shioyaki",
+        "karaage"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "aoriika",
+      "name": "アオリイカ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        },
+        {
+          "slug": "tempura",
+          "name": "天ぷら",
+          "raw": false
+        },
+        {
+          "slug": "butter",
+          "name": "バター醤油炒め",
+          "raw": false
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "tempura",
+        "butter",
+        "shioyaki"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "madako",
+      "name": "マダコ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "yudedako",
+          "name": "茹でダコ",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "takomeshi",
+          "name": "たこ飯",
+          "raw": false
+        },
+        {
+          "slug": "yawarakani",
+          "name": "柔らか煮",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "yudedako",
+        "karaage",
+        "takomeshi",
+        "yawarakani"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "kanpachi",
+      "name": "カンパチ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "teriyaki",
+          "name": "照り焼き",
+          "raw": false
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "ara-ni",
+          "name": "あら煮",
+          "raw": false
+        },
+        {
+          "slug": "tatsuta",
+          "name": "竜田揚げ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "teriyaki",
+        "shioyaki",
+        "ara-ni"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "sawara",
+      "name": "サワラ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "saikyo",
+          "name": "西京焼き",
+          "raw": false
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "teriyaki",
+          "name": "照り焼き",
+          "raw": false
+        },
+        {
+          "slug": "tatsuta",
+          "name": "竜田揚げ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "saikyo",
+        "shioyaki",
+        "teriyaki"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "amago",
+      "name": "アマゴ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "kanroni",
+          "name": "甘露煮",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "nanban",
+          "name": "南蛮漬け",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "shioyaki",
+        "kanroni",
+        "karaage",
+        "nanban"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "nijimasu",
+      "name": "ニジマス",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "meuniere",
+          "name": "ムニエル",
+          "raw": false
+        },
+        {
+          "slug": "foil-yaki",
+          "name": "ホイル焼き",
+          "raw": false
+        },
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "shioyaki",
+        "meuniere",
+        "foil-yaki",
+        "fry"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "ayu",
+      "name": "アユ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "kanroni",
+          "name": "甘露煮",
+          "raw": false
+        },
+        {
+          "slug": "ayu-meshi",
+          "name": "鮎ご飯",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "shioyaki",
+        "kanroni",
+        "ayu-meshi",
+        "karaage"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "unagi",
+      "name": "ニホンウナギ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "kabayaki-don",
+          "name": "蒲焼き丼",
+          "raw": false
+        },
+        {
+          "slug": "shirayaki",
+          "name": "白焼き",
+          "raw": false
+        },
+        {
+          "slug": "umaki",
+          "name": "う巻き",
+          "raw": false
+        },
+        {
+          "slug": "uzaku",
+          "name": "うざく",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "kabayaki-don",
+        "shirayaki",
+        "umaki",
+        "uzaku"
+      ],
+      "addedRecipes": [
+        "kabayaki-don",
+        "shirayaki",
+        "umaki",
+        "uzaku"
+      ]
+    },
+    {
+      "slug": "anago",
+      "name": "マアナゴ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "kabayaki",
+          "name": "蒲焼き",
+          "raw": false
+        },
+        {
+          "slug": "ni-anago",
+          "name": "煮穴子",
+          "raw": false
+        },
+        {
+          "slug": "tempura",
+          "name": "天ぷら",
+          "raw": false
+        },
+        {
+          "slug": "tamagotoji",
+          "name": "卵とじ",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "kabayaki",
+        "ni-anago",
+        "tempura",
+        "tamagotoji"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "isaki",
+      "name": "イサキ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "aquapazza",
+          "name": "アクアパッツァ",
+          "raw": false
+        },
+        {
+          "slug": "sakamushi",
+          "name": "酒蒸し",
+          "raw": false
+        },
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "shioyaki",
+        "aquapazza",
+        "sakamushi"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "magochi",
+      "name": "マゴチ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "chiri-nabe",
+          "name": "ちり鍋",
+          "raw": false
+        },
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "meuniere",
+          "name": "ムニエル",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身・薄造り",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "karaage",
+        "chiri-nabe",
+        "nitsuke"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "mejina",
+      "name": "メジナ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "sakamushi",
+          "name": "酒蒸し",
+          "raw": false
+        },
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "nitsuke",
+        "shioyaki",
+        "sakamushi"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "haze",
+      "name": "マハゼ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "tempura",
+          "name": "天ぷら",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "nanban",
+          "name": "南蛮漬け",
+          "raw": false
+        },
+        {
+          "slug": "takikomi",
+          "name": "炊き込みご飯",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "tempura",
+        "karaage",
+        "nanban",
+        "takikomi"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "ainame",
+      "name": "アイナメ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "meuniere",
+          "name": "ムニエル",
+          "raw": false
+        },
+        {
+          "slug": "chiri-nabe",
+          "name": "ちり鍋",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "nitsuke",
+        "karaage",
+        "meuniere"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "kijihata",
+      "name": "キジハタ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "sakamushi",
+          "name": "酒蒸し",
+          "raw": false
+        },
+        {
+          "slug": "chiri-nabe",
+          "name": "ちり鍋",
+          "raw": false
+        },
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "sakamushi",
+        "chiri-nabe",
+        "nitsuke"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "akahata",
+      "name": "アカハタ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "sakamushi",
+          "name": "酒蒸し",
+          "raw": false
+        },
+        {
+          "slug": "aquapazza",
+          "name": "アクアパッツァ",
+          "raw": false
+        },
+        {
+          "slug": "chiri-nabe",
+          "name": "ちり鍋",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "nitsuke",
+        "sakamushi",
+        "aquapazza"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "oomonhata",
+      "name": "オオモンハタ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "aquapazza",
+          "name": "アクアパッツァ",
+          "raw": false
+        },
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "sakamushi",
+          "name": "酒蒸し",
+          "raw": false
+        },
+        {
+          "slug": "chiri-nabe",
+          "name": "ちり鍋",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "aquapazza",
+        "fry",
+        "sakamushi"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "houbo",
+      "name": "ホウボウ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "aquapazza",
+          "name": "アクアパッツァ",
+          "raw": false
+        },
+        {
+          "slug": "sakamushi",
+          "name": "酒蒸し",
+          "raw": false
+        },
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "chiri-nabe",
+          "name": "ちり鍋",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "aquapazza",
+        "sakamushi",
+        "nitsuke"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "itoyoridai",
+      "name": "イトヨリダイ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "sakamushi",
+          "name": "酒蒸し",
+          "raw": false
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "aquapazza",
+          "name": "アクアパッツァ",
+          "raw": false
+        },
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "sakamushi",
+        "shioyaki",
+        "aquapazza"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "kouika",
+      "name": "コウイカ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "butter-yaki",
+          "name": "バター醤油焼き",
+          "raw": false
+        },
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "tempura",
+          "name": "天ぷら",
+          "raw": false
+        },
+        {
+          "slug": "yasai-itame",
+          "name": "野菜炒め",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "butter-yaki",
+        "nitsuke",
+        "tempura"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "yariika",
+      "name": "ヤリイカ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "butter-yaki",
+          "name": "バター醤油焼き",
+          "raw": false
+        },
+        {
+          "slug": "takikomi",
+          "name": "炊き込みご飯",
+          "raw": false
+        },
+        {
+          "slug": "yasai-itame",
+          "name": "野菜炒め",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "nitsuke",
+        "butter-yaki",
+        "takikomi"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "akakamas",
+      "name": "アカカマス",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "shioyaki",
+        "fry",
+        "karaage"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "katakuchi",
+      "name": "カタクチイワシ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "nanban",
+          "name": "南蛮漬け",
+          "raw": false
+        },
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "tsumire",
+          "name": "つみれ汁",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "karaage",
+        "nanban",
+        "fry"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "urume",
+      "name": "ウルメイワシ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "nanban",
+          "name": "南蛮漬け",
+          "raw": false
+        },
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "shioyaki",
+        "karaage",
+        "nanban"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "konoshiro",
+      "name": "コノシロ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "nanban",
+          "name": "南蛮漬け",
+          "raw": false
+        },
+        {
+          "slug": "tsumire",
+          "name": "つみれ汁",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "fry",
+        "karaage",
+        "nanban",
+        "tsumire"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "bora",
+      "name": "ボラ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "fry",
+        "shioyaki",
+        "karaage"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "shiira",
+      "name": "シイラ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "meuniere",
+          "name": "ムニエル",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "fry",
+        "meuniere",
+        "karaage",
+        "nitsuke"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "makogarei",
+      "name": "マコガレイ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "meuniere",
+          "name": "ムニエル",
+          "raw": false
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身・薄造り",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "nitsuke",
+        "karaage",
+        "meuniere"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "umazurahagi",
+      "name": "ウマヅラハギ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "chiri-nabe",
+          "name": "ちり鍋",
+          "raw": false
+        },
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身・薄造り",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "nitsuke",
+        "karaage",
+        "chiri-nabe"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "kidai",
+      "name": "キダイ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "takikomi",
+          "name": "炊き込みご飯",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "shioyaki",
+        "nitsuke",
+        "takikomi"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "kensakiika",
+      "name": "ケンサキイカ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "tempura",
+          "name": "天ぷら",
+          "raw": false
+        },
+        {
+          "slug": "butter-yaki",
+          "name": "バター醤油焼き",
+          "raw": false
+        },
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "tempura",
+        "butter-yaki",
+        "nitsuke"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "sayori",
+      "name": "サヨリ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "tempura",
+          "name": "天ぷら",
+          "raw": false
+        },
+        {
+          "slug": "nanban",
+          "name": "南蛮漬け",
+          "raw": false
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "tempura",
+        "nanban",
+        "shioyaki"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "gomasaba",
+      "name": "ゴマサバ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "misoni",
+          "name": "味噌煮",
+          "raw": false
+        },
+        {
+          "slug": "tatsuta",
+          "name": "竜田揚げ",
+          "raw": false
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "tomato",
+          "name": "トマト煮",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "misoni",
+        "tatsuta",
+        "shioyaki",
+        "tomato"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "kurosoi",
+      "name": "クロソイ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "sakamushi",
+          "name": "酒蒸し",
+          "raw": false
+        },
+        {
+          "slug": "ushiojiru",
+          "name": "潮汁",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "nitsuke",
+        "karaage",
+        "sakamushi"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "ishidai",
+      "name": "イシダイ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "meuniere",
+          "name": "ムニエル",
+          "raw": false
+        },
+        {
+          "slug": "ushiojiru",
+          "name": "潮汁",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身・薄造り",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "shioyaki",
+        "nitsuke",
+        "meuniere"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "ishigarei",
+      "name": "イシガレイ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "meuniere",
+          "name": "ムニエル",
+          "raw": false
+        },
+        {
+          "slug": "sakamushi",
+          "name": "酒蒸し",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "nitsuke",
+        "karaage",
+        "meuniere"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "akaamadai",
+      "name": "アカアマダイ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "sakamushi",
+          "name": "酒蒸し",
+          "raw": false
+        },
+        {
+          "slug": "tempura",
+          "name": "天ぷら",
+          "raw": false
+        },
+        {
+          "slug": "takikomi",
+          "name": "炊き込みご飯",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "shioyaki",
+        "sakamushi",
+        "tempura"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "kinmedai",
+      "name": "キンメダイ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "sakamushi",
+          "name": "酒蒸し",
+          "raw": false
+        },
+        {
+          "slug": "takikomi",
+          "name": "炊き込みご飯",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "nitsuke",
+        "shioyaki",
+        "sakamushi"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "akamutsu",
+      "name": "アカムツ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "sakamushi",
+          "name": "酒蒸し",
+          "raw": false
+        },
+        {
+          "slug": "takikomi",
+          "name": "炊き込みご飯",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "nitsuke",
+        "shioyaki",
+        "sakamushi"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "kuromutsu",
+      "name": "クロムツ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "ushiojiru",
+          "name": "潮汁",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "nitsuke",
+        "shioyaki",
+        "karaage"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "medai",
+      "name": "メダイ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "misozuke",
+          "name": "味噌漬け焼き",
+          "raw": false
+        },
+        {
+          "slug": "teriyaki",
+          "name": "照り焼き",
+          "raw": false
+        },
+        {
+          "slug": "meuniere",
+          "name": "ムニエル",
+          "raw": false
+        },
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "sashimi",
+          "name": "刺身",
+          "raw": true
+        }
+      ],
+      "representativeRecipes": [
+        "sashimi",
+        "misozuke",
+        "teriyaki",
+        "meuniere"
+      ],
+      "addedRecipes": [
+        "sashimi"
+      ]
+    },
+    {
+      "slug": "kusafugu",
+      "name": "クサフグ",
+      "cookingEnabled": false,
+      "recipes": [],
+      "representativeRecipes": [],
+      "addedRecipes": []
+    },
+    {
+      "slug": "aigo",
+      "name": "アイゴ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "nitsuke",
+          "name": "煮付け",
+          "raw": false
+        },
+        {
+          "slug": "fry",
+          "name": "フライ",
+          "raw": false
+        },
+        {
+          "slug": "meuniere",
+          "name": "ムニエル",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "shioyaki",
+        "nitsuke",
+        "fry",
+        "meuniere"
+      ],
+      "addedRecipes": []
+    },
+    {
+      "slug": "gonzui",
+      "name": "ゴンズイ",
+      "cookingEnabled": false,
+      "recipes": [],
+      "representativeRecipes": [],
+      "addedRecipes": []
+    },
+    {
+      "slug": "haokoze",
+      "name": "ハオコゼ",
+      "cookingEnabled": false,
+      "recipes": [],
+      "representativeRecipes": [],
+      "addedRecipes": []
+    },
+    {
+      "slug": "oniokoze",
+      "name": "オニオコゼ",
+      "cookingEnabled": false,
+      "recipes": [],
+      "representativeRecipes": [],
+      "addedRecipes": []
+    },
+    {
+      "slug": "minokasago",
+      "name": "ミノカサゴ",
+      "cookingEnabled": false,
+      "recipes": [],
+      "representativeRecipes": [],
+      "addedRecipes": []
+    },
+    {
+      "slug": "akaei",
+      "name": "アカエイ",
+      "cookingEnabled": false,
+      "recipes": [],
+      "representativeRecipes": [],
+      "addedRecipes": []
+    },
+    {
+      "slug": "yamame",
+      "name": "ヤマメ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "shioyaki",
+          "name": "塩焼き",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "nanban",
+          "name": "南蛮漬け",
+          "raw": false
+        },
+        {
+          "slug": "meuniere",
+          "name": "ムニエル",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "shioyaki",
+        "karaage",
+        "nanban",
+        "meuniere"
+      ],
+      "addedRecipes": [
+        "shioyaki",
+        "karaage",
+        "nanban",
+        "meuniere"
+      ]
+    },
+    {
+      "slug": "wakasagi",
+      "name": "ワカサギ",
+      "cookingEnabled": true,
+      "recipes": [
+        {
+          "slug": "tempura",
+          "name": "天ぷら",
+          "raw": false
+        },
+        {
+          "slug": "karaage",
+          "name": "唐揚げ",
+          "raw": false
+        },
+        {
+          "slug": "nanban",
+          "name": "南蛮漬け",
+          "raw": false
+        },
+        {
+          "slug": "kanroni",
+          "name": "甘露煮",
+          "raw": false
+        }
+      ],
+      "representativeRecipes": [
+        "tempura",
+        "karaage",
+        "nanban",
+        "kanroni"
+      ],
+      "addedRecipes": [
+        "tempura",
+        "karaage",
+        "nanban",
+        "kanroni"
+      ]
+    }
+  ]
+}

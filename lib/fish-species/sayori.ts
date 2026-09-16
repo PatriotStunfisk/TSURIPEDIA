@@ -3,6 +3,7 @@ import {cookedRecipe} from './cooked-recipes';
 // Species reference: https://zukan.com/fish/internal80 (checked 2026-09-15)
 const fish={slug:"sayori",name:"サヨリ"};
 export default defineFishSpecies({
+  representativeRecipes: ["sashimi","tempura","nanban","shioyaki"],
   "base": {
     "slug": "sayori",
     "name": "サヨリ",
@@ -123,6 +124,27 @@ export default defineFishSpecies({
       "細い中骨に沿って開き、腹骨と残った小骨を除きます。",
       "生魚に使った器具を洗い、加熱した料理とは分けます。"
     ],
-    "recipes": ["tempura","nanban","shioyaki","fry"].map(slug=>cookedRecipe(fish,slug,"骨を除いて開いた身","薄く繊細な身なので小骨を丁寧に除き、加熱しすぎて乾かないよう確認します。"))
+    "recipes": [...(["tempura","nanban","shioyaki","fry"].map(slug=>cookedRecipe(fish,slug,"骨を除いて開いた身","薄く繊細な身なので小骨を丁寧に除き、加熱しすぎて乾かないよう確認します。"))),{
+  "slug": "sashimi",
+  "name": "刺身",
+  "preparation": "raw",
+  "summary": "細長い身を開き、腹の黒い膜と小骨を除くと上品な味わいになります。",
+  "ingredients": [
+    "2人分：生食用として処理・管理されたサヨリの柵 150〜200g",
+    "大葉・薬味 適量",
+"しょうゆ 適量"
+  ],
+  "steps": [
+    "生食用の表示・処理条件と消費期限を確認。不明なら加熱料理へ変更する。",
+    "清潔な包丁・まな板を用意し、調理直前まで冷蔵する。",
+    "皮・骨を確認し、冷たい身を一方向に引いて食べやすい厚さに切る。",
+    "冷やした皿に盛り、薬味を添えてすぐに食べる。"
+  ],
+  "tips": [
+    "釣った直後・見た目・匂いだけで安全は判断できません。内臓を生で添えません。",
+    "酢・塩・わさび・表面の炙りは寄生虫対策になりません。",
+    "寄生虫対策済みでも衛生管理は必要です。購入先に処理条件を確認してください。"
+  ]
+}]
   }
 });

@@ -3,6 +3,7 @@ import {cookedRecipe} from './cooked-recipes';
 // Species reference: https://www.knsk-osaka.jp/zukan/zukan_database/tansui/2550b2c26477834/5850b5aa3293272.html (checked 2026-09-15)
 const fish={slug:"ishigarei",name:"イシガレイ"};
 export default defineFishSpecies({
+  representativeRecipes: ["sashimi","nitsuke","karaage","meuniere"],
   "base": {
     "slug": "ishigarei",
     "name": "イシガレイ",
@@ -122,6 +123,27 @@ export default defineFishSpecies({
       "腹骨と小骨を除きます。骨板を包丁で無理に押し切らず、魚店の下処理も利用します。",
       "生魚に使った器具を洗い、加熱した料理とは分けます。"
     ],
-    "recipes": ["nitsuke","karaage","meuniere","sakamushi"].map(slug=>cookedRecipe(fish,slug,"骨板・皮・骨を除いた身","骨板が残らないように皮を除いた身を使い、薄い部分の加熱しすぎを防ぎます。"))
+    "recipes": [...(["nitsuke","karaage","meuniere","sakamushi"].map(slug=>cookedRecipe(fish,slug,"骨板・皮・骨を除いた身","骨板が残らないように皮を除いた身を使い、薄い部分の加熱しすぎを防ぎます。"))),{
+  "slug": "sashimi",
+  "name": "刺身",
+  "preparation": "raw",
+  "summary": "硬い骨板のある皮を外した柵を薄く切ります。皮の処理と細かな骨の確認は販売店や専門家に任せます。",
+  "ingredients": [
+    "2人分：生食用として処理・管理されたイシガレイの柵 150〜200g",
+    "大葉・薬味 適量",
+"しょうゆ 適量"
+  ],
+  "steps": [
+    "生食用の表示・処理条件と消費期限を確認。不明なら加熱料理へ変更する。",
+    "清潔な包丁・まな板を用意し、調理直前まで冷蔵する。",
+    "皮・骨を確認し、冷たい身を一方向に引いて食べやすい厚さに切る。",
+    "冷やした皿に盛り、薬味を添えてすぐに食べる。"
+  ],
+  "tips": [
+    "釣った直後・見た目・匂いだけで安全は判断できません。内臓を生で添えません。",
+    "酢・塩・わさび・表面の炙りは寄生虫対策になりません。",
+    "寄生虫対策済みでも衛生管理は必要です。購入先に処理条件を確認してください。"
+  ]
+}]
   }
 });

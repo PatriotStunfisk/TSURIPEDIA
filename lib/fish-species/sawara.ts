@@ -1,6 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  representativeRecipes: ["sashimi","saikyo","shioyaki","teriyaki"],
   quest: {fightProfile: 'runner', "swimSpeed": 2, "stamina": 85, "runPower": 90},
   "base": {
     "slug": "sawara",
@@ -193,7 +194,30 @@ export default defineFishSpecies({
         ],
         "image": "/images/fish/sawara-tatsuta.png"
       }
-    ]
+    ,
+{
+  "slug": "sashimi",
+  "name": "刺身",
+  "preparation": "raw",
+  "summary": "やわらかく崩れやすい身は冷たい状態で切ります。生食は鮮度・寄生虫対策を管理した専用の食材に限ります。",
+  "ingredients": [
+    "2人分：生食用として処理・管理されたサワラの柵 150〜200g",
+    "大葉・薬味 適量",
+"しょうゆ 適量"
+  ],
+  "steps": [
+    "生食用の表示・処理条件と消費期限を確認。不明なら加熱料理へ変更する。",
+    "清潔な包丁・まな板を用意し、調理直前まで冷蔵する。",
+    "皮・骨を確認し、冷たい身を一方向に引いて食べやすい厚さに切る。",
+    "冷やした皿に盛り、薬味を添えてすぐに食べる。"
+  ],
+  "tips": [
+    "釣った直後・見た目・匂いだけで安全は判断できません。内臓を生で添えません。",
+    "酢・塩・わさび・表面の炙りは寄生虫対策になりません。",
+    "寄生虫対策済みでも衛生管理は必要です。購入先に処理条件を確認してください。"
+  ]
+}
+]
   },
   "featuredOrder": 11
 });

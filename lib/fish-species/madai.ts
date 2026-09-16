@@ -1,6 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  representativeRecipes: ["sashimi","shioyaki","nitsuke","chazuke"],
   quest: {hook: {kind:'mouth',mouthAnchor:{x:.03,y:0.58},modelAnchor:{x:.03,y:0.42000000000000004,z:.5}}},
   base: {
     slug: 'madai',
@@ -57,7 +58,7 @@ export default defineFishSpecies({
       '刺身は皮を引くか湯霜・炙りにし、加熱料理は切り身やアラを用途に合わせて使う'
     ],
     recipes: [
-      {
+      {preparation:'raw',
         slug:'sashimi',name:'刺身',image:'/images/madai-sashimi-new.png',
         summary:'透明感のある白身と上品な甘みを楽しむ、マダイの王道。',
         ingredients:['新鮮なマダイ 適量','大葉','大根のつま','わさび','醤油'],

@@ -195,5 +195,11 @@ export default defineFishSpecies({
         ]
       }
     ]
-  }
+  },
+  "representativeRecipes": [
+    "kabayaki",
+    "ni-anago",
+    "tempura",
+    "tamagotoji"
+  ]
 });

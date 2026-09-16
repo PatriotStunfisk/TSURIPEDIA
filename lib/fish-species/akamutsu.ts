@@ -3,6 +3,7 @@ import {cookedRecipe} from './cooked-recipes';
 // Species reference: https://www.pref.kyoto.jp/kaiyo/akamutsu.html (checked 2026-09-15)
 const fish={slug:"akamutsu",name:"アカムツ"};
 export default defineFishSpecies({
+  representativeRecipes: ["sashimi","nitsuke","shioyaki","sakamushi"],
   "base": {
     "slug": "akamutsu",
     "name": "アカムツ",
@@ -127,6 +128,27 @@ export default defineFishSpecies({
       "腹骨と小骨を除き、脂のある皮を残して切り分けます。",
       "生魚に使った器具を洗い、加熱した料理とは分けます。"
     ],
-    "recipes": ["nitsuke","shioyaki","sakamushi","takikomi"].map(slug=>cookedRecipe(fish,slug,"鱗と骨を除いた皮付きの切り身","皮を残して脂を生かし、柔らかい身を崩さないように扱います。"))
+    "recipes": [...(["nitsuke","shioyaki","sakamushi","takikomi"].map(slug=>cookedRecipe(fish,slug,"鱗と骨を除いた皮付きの切り身","皮を残して脂を生かし、柔らかい身を崩さないように扱います。"))),{
+  "slug": "sashimi",
+  "name": "刺身",
+  "preparation": "raw",
+  "summary": "脂の多い白身を小さめに切り、重くなりすぎないよう薬味を添えます。表面の炙りだけで安全にはなりません。",
+  "ingredients": [
+    "2人分：生食用として処理・管理されたアカムツの柵 150〜200g",
+    "大葉・薬味 適量",
+"しょうゆ 適量"
+  ],
+  "steps": [
+    "生食用の表示・処理条件と消費期限を確認。不明なら加熱料理へ変更する。",
+    "清潔な包丁・まな板を用意し、調理直前まで冷蔵する。",
+    "皮・骨を確認し、冷たい身を一方向に引いて食べやすい厚さに切る。",
+    "冷やした皿に盛り、薬味を添えてすぐに食べる。"
+  ],
+  "tips": [
+    "釣った直後・見た目・匂いだけで安全は判断できません。内臓を生で添えません。",
+    "酢・塩・わさび・表面の炙りは寄生虫対策になりません。",
+    "寄生虫対策済みでも衛生管理は必要です。購入先に処理条件を確認してください。"
+  ]
+}]
   }
 });

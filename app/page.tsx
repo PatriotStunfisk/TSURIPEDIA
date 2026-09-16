@@ -1,10 +1,11 @@
+import {pageSharing} from '@/lib/page-sharing';
 import Link from 'next/link';
 import {methods} from '@/lib/data';
 import {selectHomeFish,selectHomeGuides} from '@/lib/home-selection';
 import FishVisual from '@/components/FishVisual';
 import s from './home.module.css';
 
-export const metadata={alternates:{canonical:'/'}};
+export const metadata=pageSharing("/","UOLINK｜魚から、釣りへつながる","魚を知る、釣り方を学ぶ、釣り場を探す。魚図鑑・GUIDE・MAP・料理・釣具をつなぐ釣り総合ガイド。");
 export const revalidate=86400;
 
 const quickLinks=[

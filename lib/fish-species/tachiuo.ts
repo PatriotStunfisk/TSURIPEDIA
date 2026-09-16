@@ -1,6 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  representativeRecipes: ["sashimi","shioyaki","tempura","nitsuke"],
   quest: {hook: {kind:'mouth',mouthAnchor:{x:0.025,y:0.38},modelAnchor:{x:0.025,y:0.62,z:.5}},fightProfile: 'runner', "approachSpeed": 14, "biteWindowMs": 3200},
   base: {
     slug: 'tachiuo',
@@ -57,7 +58,7 @@ export default defineFishSpecies({
       '刺身にする場合は鮮度と寄生虫リスクを確認し、皮目を残して銀皮の風味を活かす'
     ],
     recipes: [
-      {
+      {preparation:'raw',
         slug:'sashimi',name:'刺身',image:'/images/fish/tachiuo-sashimi.png',
         summary:'銀皮の美しさと上品な脂を楽しむ、鮮度の良いタチウオならではの食べ方。',
         ingredients:['新鮮なタチウオ 適量','大葉','大根のつま','わさび・醤油'],

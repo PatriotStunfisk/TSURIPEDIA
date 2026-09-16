@@ -1,6 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  representativeRecipes: ["nitsuke","karaage","sashimi","misoshiru"],
   base:{slug:'kasago',name:'カサゴ',en:'Marbled rockfish',scientific:'Sebastiscus marmoratus',season:'通年',difficulty:2,danger:'ヒレに注意',methods:['胴突き','穴釣り'],areas:['堤防','岩礁帯'],depth:'2〜50m',size:'15〜30cm',desc:'岩陰に潜む根魚の代表。足元でも狙いやすく、煮付けや唐揚げも絶品です。',accent:'#c7896e',months:[1,2,3,4,5,6,7,8,9,10,11,12],beginner:true,kids:true},
   detail:{family:'メバル科',genus:'カサゴ属',aliases:['ガシラ','アラカブ'],habitat:'岩礁・テトラ・堤防際・根周り',diet:'小魚、エビ、カニなど',behavior:'障害物の近くで待ち伏せし、目の前のエサに素早く反応する',lifespan:'10年前後になる個体もいる',taste:'白身で旨味が強く、煮付けや汁物に向く',cooking:['煮付け','唐揚げ','刺身','味噌汁','塩焼き'],seasonNote:'一年中狙えるが、冬〜春も安定したターゲット。',beginnerTip:'仕掛けを底から離しすぎず、根掛かりしない範囲で障害物の際を丁寧に探る。',safety:'背びれやエラ周りの棘が鋭いので、素手で強く握らない。',body:'大きな口とまだら模様の体色が特徴。岩や海藻に紛れやすい保護色を持ちます。',fishing:'穴釣り、胴突き、ブラクリなどで足元から狙えるため、根魚入門として人気があります。',trivia:'関西では「ガシラ」、九州の一部では「アラカブ」と呼ばれるなど地方名が豊富です。'},
   launch:{catchPhrase:'足元の岩陰に潜む、根魚の定番。',identify:['大きな口と頭部','赤褐色〜茶色のまだら模様','背びれに鋭い棘','岩に紛れる凹凸のある体表'],imageNotes:['全身：大きな頭と根魚体型','背びれ：鋭い棘を確認','生息：岩礁・テトラ・根周りに定位','食味：煮付け・唐揚げ・汁物が絶品'],related:['メバル','ソイ','ハタ類'],methodLinks:[{label:'胴突き釣り',href:'/methods'},{label:'穴釣り',href:'/methods'}],spotFocus:'堤防・テトラ・岩礁帯'},
@@ -9,7 +10,7 @@ export default defineFishSpecies({
     recipes:[
       {slug:'nitsuke',name:'煮付け',image:'/images/kasago-nitsuke.png',summary:'旨味の濃い白身を甘辛い煮汁で味わう、カサゴ料理の定番。',ingredients:['カサゴ','醤油','酒','みりん','砂糖','しょうが'],steps:['ウロコ・エラ・内臓を処理して水気を拭く','酒・みりん・砂糖・しょうがを煮立てる','カサゴを入れて落とし蓋をし、中火で火を通す','醤油を加え、煮汁をかけながら照りよく仕上げる'],tips:['身崩れを防ぐため何度も裏返さない','煮汁を上からかけながら仕上げる']},
       {slug:'karaage',name:'唐揚げ',image:'/images/kasago-karaage.png',summary:'香ばしく揚げて、身だけでなくヒレ周りまで楽しむ人気料理。',ingredients:['カサゴ','塩・こしょう','片栗粉','揚げ油','レモン'],steps:['ウロコ・エラ・内臓を取り、水気をよく拭く','火が通りやすいよう身の厚い部分に切れ目を入れる','全体に薄く片栗粉をまぶす','低めの温度で火を通し、最後に温度を上げてカリッと揚げる'],tips:['棘があるので食べる時も注意する','二度揚げすると骨やヒレが香ばしくなりやすい']},
-      {slug:'sashimi',name:'刺身',image:'/images/kasago-sashimi.png',summary:'良型の新鮮な個体で楽しむ、締まった白身と上品な甘み。',ingredients:['刺身用カサゴ','大葉','大根のつま','わさび','醤油'],steps:['三枚おろしにして腹骨と小骨を取り除く','皮を引き、水分をしっかり拭く','食べやすい薄さに切り付ける','冷やした器に盛り、薬味を添える'],tips:['白身の食感を活かして薄造りにも向く','生食は鮮度管理と安全対策を徹底する']},
+      {preparation:'raw',slug:'sashimi',name:'刺身',image:'/images/kasago-sashimi.png',summary:'良型の新鮮な個体で楽しむ、締まった白身と上品な甘み。',ingredients:['刺身用カサゴ','大葉','大根のつま','わさび','醤油'],steps:['三枚おろしにして腹骨と小骨を取り除く','皮を引き、水分をしっかり拭く','食べやすい薄さに切り付ける','冷やした器に盛り、薬味を添える'],tips:['白身の食感を活かして薄造りにも向く','生食は鮮度管理と安全対策を徹底する']},
       {slug:'misoshiru',name:'味噌汁',image:'/images/kasago-misoshiru.png',summary:'頭やアラから出る濃い旨味を味噌でまとめる、根魚らしい汁物。',ingredients:['カサゴまたはアラ','水','味噌','豆腐','ねぎ','好みでわかめ'],steps:['アラに熱湯をかけて霜降りし、血や汚れを洗う','水からアラを煮て、アクを取りながら出汁を出す','豆腐などの具を加えて火を通す','火を弱めて味噌を溶き、ねぎを添える'],tips:['味噌を入れた後は強く沸騰させない','アラを丁寧に下処理すると澄んだ旨味になる']}
     ]
   },

@@ -1,6 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  representativeRecipes: ["sashimi","nitsuke","karaage","nabe"],
   quest: {hook: {kind:'mouth',mouthAnchor:{x:0.045,y:0.57},modelAnchor:{x:0.045,y:0.43000000000000005,z:.5}},"swimSpeed": 0.7, "wariness": 0.65, "biteWindowMs": 1600, "stamina": 50},
   "base": {
     "slug": "kawahagi",
@@ -204,7 +205,30 @@ export default defineFishSpecies({
         ],
         "image": "/images/fish/kawahagi-misoshiru.png"
       }
-    ]
+    ,
+{
+  "slug": "sashimi",
+  "name": "刺身・薄造り",
+  "preparation": "raw",
+  "summary": "薄皮を丁寧に除いた身を薄く引くと、弾力と淡い甘みが分かります。肝を生で添えず、身だけの薄造りとして紹介します。",
+  "ingredients": [
+    "2人分：生食用として処理・管理されたカワハギの柵 150〜200g",
+    "大葉・薬味 適量",
+"しょうゆ 適量"
+  ],
+  "steps": [
+    "生食用の表示・処理条件と消費期限を確認。不明なら加熱料理へ変更する。",
+    "清潔な包丁・まな板を用意し、調理直前まで冷蔵する。",
+    "皮・骨を確認し、冷たい身を一方向に引いて食べやすい厚さに切る。",
+    "冷やした皿に盛り、薬味を添えてすぐに食べる。"
+  ],
+  "tips": [
+    "釣った直後・見た目・匂いだけで安全は判断できません。内臓を生で添えません。",
+    "酢・塩・わさび・表面の炙りは寄生虫対策になりません。",
+    "寄生虫対策済みでも衛生管理は必要です。購入先に処理条件を確認してください。"
+  ]
+}
+]
   },
   "featuredOrder": 7
 });

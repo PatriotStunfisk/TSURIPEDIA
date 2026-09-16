@@ -1,6 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  representativeRecipes: ["shimesaba","shioyaki","misoni","tatsutaage"],
   quest: {hook: {kind:'mouth',mouthAnchor:{x:.03,y:0.52},modelAnchor:{x:.03,y:0.48,z:.5}}},
   "base": {
     "slug": "saba",
@@ -104,7 +105,7 @@ export default defineFishSpecies({
       "生食はアニサキス対策を前提にし、目視だけに頼らない"
     ],
     "recipes": [
-      {
+      {preparation:'raw',
         "slug": "shimesaba",
         "name": "しめ鯖",
         "image": "/images/fish/saba-shimesaba.png",

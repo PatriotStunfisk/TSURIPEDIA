@@ -1,6 +1,7 @@
 import {defineFishSpecies} from './define';
 import {cookedRecipe} from './cooked-recipes';
 export default defineFishSpecies({
+  representativeRecipes: ["shioyaki","nitsuke","fry","meuniere"],
   "base": {
     "slug": "aigo",
     "name": "アイゴ",

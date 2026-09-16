@@ -1,5 +1,5 @@
 export type Fish = {
-  slug:string; name:string; en:string; scientific:string; season:string; difficulty:number;
+  slug:string; waterTypes?:('sea'|'brackish'|'fresh')[]; name:string; en:string; scientific:string; season:string; difficulty:number;
   danger:string; methods:string[]; areas:string[]; depth:string; size:string; desc:string;
   accent:string; months:number[]; beginner:boolean; kids:boolean;
   methodSlugs?:string[]; guideSlugs?:string[]; relatedSlugs?:string[];
@@ -21,7 +21,7 @@ export type LaunchFishExtra={
   spotFocus:string;
 };
 
-export type Recipe={slug:string;name:string;image?:string;summary:string;ingredients:string[];steps:string[];tips:string[]};
+export type Recipe={preparation?:'raw'|'cooked';slug:string;name:string;image?:string;summary:string;ingredients:string[];steps:string[];tips:string[]};
 export type CookingFish={slug:string;name:string;prep:string[];recipes:Recipe[]};
 
 
@@ -31,6 +31,7 @@ export type FishTableGuideData={lead:string;dishes:FishDish[]};
 // A species has one authoritative base record; recipes inherit its slug/name.
 export type FishSpeciesDefinition={
   base:Fish;
+  representativeRecipes?:string[];
   hazard?:FishHazard;
   quest?:import('../quest/types').QuestParameters;
   media?:{image:string;modelTilt?:number};

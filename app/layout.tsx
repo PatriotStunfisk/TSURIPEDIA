@@ -1,3 +1,4 @@
+import {pageSharing} from '@/lib/page-sharing';
 import type {Metadata} from 'next';
 import {Analytics} from '@vercel/analytics/next';
 import './globals.css';
@@ -7,21 +8,13 @@ import FishPageEnhancer from '@/components/FishPageEnhancer';
 const siteUrl='https://uolink.vercel.app';
 
 export const metadata:Metadata={
+  ...pageSharing('/','UOLINK｜魚から、釣りへつながる','魚図鑑・釣り方・釣り場・料理・釣具をつなぐ釣り総合ガイド。'),
   metadataBase:new URL(siteUrl),
   title:{default:'UOLINK（ウオリンク）｜魚図鑑・釣り方・釣り場・釣具',template:'%s｜UOLINK（ウオリンク）'},
   description:'UOLINK（ウオリンク）は、魚図鑑・釣り方・釣り場・釣具をつなぐ釣り総合ガイド。タチウオ、マアジ、マダイ、カサゴ、サバなどの旬・生態・仕掛け・釣り方・必要な釣具を分かりやすく紹介します。',
   keywords:['UOLINK','ウオリンク','魚図鑑','釣り方','釣り場','釣具','カサゴ','サバ','タチウオ','マアジ','マダイ','釣り'],
   applicationName:'UOLINK（ウオリンク）',
   category:'fishing',
-  openGraph:{
-    title:'UOLINK（ウオリンク）｜魚から、釣りへつながる',
-    description:'魚図鑑から釣り方・釣り場・釣具へつながる釣り総合ガイド。',
-    url:siteUrl,
-    siteName:'UOLINK（ウオリンク）',
-    type:'website',
-    locale:'ja_JP'
-  },
-  twitter:{card:'summary_large_image',title:'UOLINK（ウオリンク）',description:'魚から、釣りへつながる。魚図鑑・釣り方・釣り場・釣具の総合ガイド。'},
   robots:{index:true,follow:true,googleBot:{index:true,follow:true,'max-image-preview':'large','max-snippet':-1,'max-video-preview':-1}}
 };
 

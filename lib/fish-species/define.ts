@@ -26,6 +26,7 @@ export function defineFishSpecies(definition:FishSpeciesDefinition):FishSpeciesD
   }
   const recipeSlugs=new Set(recipes.map(recipe=>recipe.slug));
   if(recipeSlugs.size!==recipes.length)throw new Error('Duplicate recipe slug: '+base.slug);
+  if(definition.representativeRecipes&&(definition.representativeRecipes.length>4||new Set(definition.representativeRecipes).size!==definition.representativeRecipes.length||definition.representativeRecipes.some(s=>!recipeSlugs.has(s))))throw new Error('Invalid representative recipes: '+base.slug);
   for(const dish of tableGuide?.dishes??[]){
     if(dish.recipe&&!recipeSlugs.has(dish.recipe))throw new Error('Unknown recipe '+dish.recipe+' for '+base.slug);
   }
@@ -44,12 +45,11 @@ export function uniqueFishSlugs<T extends Fish>(fish:T[]):T[]{
 // Existing editorial cards take precedence. New recipes need no second card list.
 export function getSpeciesTableGuide(species:FishSpeciesDefinition):FishTableGuideData|undefined{
   if(species.hazard?.cookingEnabled===false)return undefined;
-  if(species.tableGuide)return {...species.tableGuide,dishes:species.tableGuide.dishes.map(dish=>{
-    const recipe=species.cooking?.recipes.find(recipe=>recipe.slug===dish.recipe);
-    return recipe?{...dish,name:recipe.name,src:recipe.image}:dish;
+  if(species.representativeRecipes?.length)return {lead:species.tableGuide?.lead??'',dishes:species.representativeRecipes.map(slug=>{
+    const recipe=species.cooking!.recipes.find(r=>r.slug===slug)!;const original=species.tableGuide?.dishes.find(d=>d.recipe===slug);
+    return original?{...original,name:recipe.name,src:recipe.image}:{name:recipe.name,src:recipe.image,emoji:'🍽️',desc:recipe.summary,recipe:slug};
   })};
+  if(species.tableGuide)return {...species.tableGuide,dishes:species.tableGuide.dishes.slice(0,4).map(dish=>{const recipe=species.cooking?.recipes.find(r=>r.slug===dish.recipe);return recipe?{...dish,name:recipe.name,src:recipe.image}:dish;})};
   if(!species.cooking?.recipes.length)return undefined;
-  return {lead:'',dishes:species.cooking.recipes.map(recipe=>({
-    name:recipe.name,src:recipe.image,emoji:'🍽️',desc:recipe.summary,recipe:recipe.slug,
-  }))};
+  return {lead:'',dishes:species.cooking.recipes.slice(0,4).map(recipe=>({name:recipe.name,src:recipe.image,emoji:'🍽️',desc:recipe.summary,recipe:recipe.slug}))};
 }

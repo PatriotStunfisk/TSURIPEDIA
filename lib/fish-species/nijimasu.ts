@@ -1,5 +1,4 @@
 import {defineFishSpecies} from './define';
-
 export default defineFishSpecies({
   "base": {
     "slug": "nijimasu",
@@ -49,6 +48,9 @@ export default defineFishSpecies({
     ],
     "guideSlugs": [
       "nijimasu-field-notes"
+    ],
+    "waterTypes": [
+      "fresh"
     ]
   },
   "detail": {
@@ -205,5 +207,11 @@ export default defineFishSpecies({
         ]
       }
     ]
-  }
+  },
+  "representativeRecipes": [
+    "shioyaki",
+    "meuniere",
+    "foil-yaki",
+    "fry"
+  ]
 });

@@ -1,6 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  representativeRecipes: ["sashimi","tempura","butter","shioyaki"],
   quest: {hook: {kind:'embrace',mouthAnchor:{x:0.25,y:0.52},modelAnchor:{x:0.25,y:0.48,z:.5}},fightProfile: 'jet', "swimSpeed": 0.65, "wariness": 0.4, "biteWindowMs": 4000, "runPower": 50},
   "base": {
     "slug": "aoriika",
@@ -108,7 +109,7 @@ export default defineFishSpecies({
       "生食は鮮度だけで安全と判断しません。アニサキス対策として中心まで−20℃で24時間以上の冷凍等が必要です。家庭の冷凍条件が確認できない場合は加熱料理を選び、内臓は食べません。"
     ],
     "recipes": [
-      {
+      {preparation:'raw',
         "slug": "sashimi",
         "name": "刺身",
         "summary": "薄く切った胴の、甘みと歯切れを楽しむ一皿。生食用として適切に処理した身を使います。",

@@ -3,6 +3,7 @@ import {cookedRecipe} from './cooked-recipes';
 // Species reference: https://www.daiwa.com/jp/column/fish_field_guide/sea/009 (checked 2026-09-15)
 const fish={slug:"ishidai",name:"イシダイ"};
 export default defineFishSpecies({
+  representativeRecipes: ["sashimi","shioyaki","nitsuke","meuniere"],
   "base": {
     "slug": "ishidai",
     "name": "イシダイ",
@@ -124,6 +125,27 @@ export default defineFishSpecies({
       "大きい個体は無理に骨を断たず、魚店へ下処理を依頼する方法もあります。三枚におろして骨を除きます。",
       "生魚に使った器具を洗い、加熱した料理とは分けます。"
     ],
-    "recipes": ["shioyaki","nitsuke","meuniere","ushiojiru"].map(slug=>cookedRecipe(fish,slug,"骨を除いた切り身","厚い身は大きさをそろえ、表面だけでなく中心まで火を通します。"))
+    "recipes": [...(["shioyaki","nitsuke","meuniere","ushiojiru"].map(slug=>cookedRecipe(fish,slug,"骨を除いた切り身","厚い身は大きさをそろえ、表面だけでなく中心まで火を通します。"))),{
+  "slug": "sashimi",
+  "name": "刺身・薄造り",
+  "preparation": "raw",
+  "summary": "弾力の強い身を薄く切ると歯切れがよくなります。厚切りにしすぎないのが食べやすさのポイントです。",
+  "ingredients": [
+    "2人分：生食用として処理・管理されたイシダイの柵 150〜200g",
+    "大葉・薬味 適量",
+"しょうゆ 適量"
+  ],
+  "steps": [
+    "生食用の表示・処理条件と消費期限を確認。不明なら加熱料理へ変更する。",
+    "清潔な包丁・まな板を用意し、調理直前まで冷蔵する。",
+    "皮・骨を確認し、冷たい身を一方向に引いて食べやすい厚さに切る。",
+    "冷やした皿に盛り、薬味を添えてすぐに食べる。"
+  ],
+  "tips": [
+    "釣った直後・見た目・匂いだけで安全は判断できません。内臓を生で添えません。",
+    "酢・塩・わさび・表面の炙りは寄生虫対策になりません。",
+    "寄生虫対策済みでも衛生管理は必要です。購入先に処理条件を確認してください。"
+  ]
+}]
   }
 });

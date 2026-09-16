@@ -201,5 +201,11 @@ export default defineFishSpecies({
         ]
       }
     ]
-  }
+  },
+  "representativeRecipes": [
+    "tempura",
+    "karaage",
+    "nanban",
+    "takikomi"
+  ]
 });

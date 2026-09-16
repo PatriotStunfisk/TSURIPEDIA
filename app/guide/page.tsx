@@ -1,3 +1,4 @@
+import {pageSharing} from '@/lib/page-sharing';
 import Link from 'next/link';
 import {allGuides} from '@/lib/all-guides';
 import {fish} from '@/lib/data';
@@ -5,7 +6,7 @@ import {methodDetails} from '@/lib/method-registry';
 import {canonicalFishSlug} from '@/lib/fish-aliases';
 import {guideTopics,guideGearTags,filterGuides} from '@/lib/guide-taxonomy';
 import s from './page.module.css';
-export const metadata={title:'釣りガイド｜釣り方の基本から具体的な疑問まで',alternates:{canonical:'/guide'},description:'体系的に学べるGUIDEと、疑問に答えるQUICK GUIDEをまとめて検索。目的・魚・釣法・道具から必要な記事を探せます。'};
+export const metadata=pageSharing("/guide","釣りガイド｜基本から具体的な疑問まで","GUIDEとQUICK GUIDEを魚・釣法・道具から検索。実際の釣行に役立つ仕掛け、誘い、釣れないときの対処を解説。");
 type Params={q?:string;fish?:string;method?:string;gear?:string;type?:string;topic?:string;page?:string};
 export default async function GuidePage({searchParams}:{searchParams:Promise<Params>}){
  const raw=await searchParams;const params=Object.fromEntries(Object.entries(raw).filter(([,v])=>typeof v==='string').map(([k,v])=>[k,v.slice(0,100)])) as Params;

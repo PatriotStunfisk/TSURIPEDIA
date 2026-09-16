@@ -204,5 +204,11 @@ export default defineFishSpecies({
         ]
       }
     ]
-  }
+  },
+  "representativeRecipes": [
+    "fry",
+    "karaage",
+    "nanban",
+    "tsumire"
+  ]
 });
