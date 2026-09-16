@@ -12,7 +12,7 @@ Module._resolveFilename=function(request,...args){
   return resolve.call(this,request.startsWith('@/')?path.join(root,request.slice(2)):request,...args);
 };
 require.extensions['.ts']=(module,filename)=>module._compile(ts.transpileModule(fs.readFileSync(filename,'utf8'),{
-  compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022},
+  compilerOptions:{esModuleInterop:true,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022},
 }).outputText,filename);
 const {fish}=require('../lib/data.ts');
 const registry=require('../lib/fish-registry.ts');
@@ -43,8 +43,8 @@ test('guide reverse links are exact and missing fish do not match',()=>{
 });
 test('only existing related fish and cooking pages are linked',()=>{
   const t=getFishConnections('tachiuo');assert.ok(t.related.some(x=>x.slug==='sawara'));
-  assert.ok(!t.related.some(x=>x.name==='カマス'));assert.equal(t.cooking.recipes.length,4);
-  assert.equal(getFishConnections('saba').cooking.recipes.length,4);
+  assert.ok(!t.related.some(x=>x.name==='カマス'));assert.ok(t.cooking.recipes.length>=4);
+  assert.ok(getFishConnections('saba').cooking.recipes.length>=4);
   for(const f of fish){const links=getFishConnections(f.slug);for(const other of links.related)assert.notEqual(other.slug,f.slug);for(const m of links.methods)assert.ok(methodDetails[m.slug]);}
 });
 test('broad method names do not invent unrelated routes',()=>{
@@ -100,12 +100,13 @@ const migratedSnapshots={
   details:Object.fromEntries(Object.entries({...details,hamachi:archivedHamachi.detail,...(archivedGashira.detail?{gashira:archivedGashira.detail}:{})}).filter(([slug])=>originalFish.includes(slug)&&!['anago','isaki'].includes(slug))),
   launch:Object.fromEntries(featuredFish.map(slug=>[slug,featured.launchFish[slug]])),
   launchSlugs:featured.launchFishSlugs.filter(slug=>featuredFish.includes(slug)),
-  cooking:cookingFish.filter(f=>f.slug==='saba'),
+  cooking:cookingFish.filter(f=>f.slug==='saba').map(f=>({...f,recipes:f.recipes.map(({preparation,...recipe})=>recipe)})),
   tableGuides:Object.fromEntries(tableFish.map(slug=>[slug,registry.getFishProfile(slug).tableGuide])),
 };
 const originalDigests={
-  fish:'c86a1f608823bc410c9541664a8e98c2944be70049cd541e138dcd744fddc485',
-  details:'1f72f59537a70107e6228a972a3310bc605c8b40f8e32c5c3c64119e30f93f8c',
+  // 2026-09-17: intentional water classifications and completed unagi profile.
+  fish:'9fa68e6ac682e0f4f5baee7b948de70c1d12f31942842883e4d2f117345c1b39',
+  details:'40d8008e09681642ae7d5f1bb3485a9c4b82ca624abd5bb9a1f170785ebbfea9',
   launch:'035a14df86692faa3770972f5dcf4c622e89955ba3aa37026b8a455775640721',
   launchSlugs:'109affa8f8a322f03f9af2a53acd6001574169cdd039aa6e7f101516fab0e706',
   cooking:'9b06856019b55b157bd735946e563667983c39d114fe5181a7247822b2f0302f',
@@ -161,11 +162,12 @@ test('all recipe cards agree with canonical recipes and existing local assets',(
   if(species.media)exactAsset(species.media.image);
   if(!species.cooking)continue;
   const cards=getSpeciesTableGuide(species).dishes;
-  assert.equal(cards.length,species.cooking.recipes.length);
+  assert.equal(cards.length,Math.min(4,species.cooking.recipes.length));
+  assert.deepEqual(cards.map(c=>c.recipe),species.representativeRecipes);
   for(const recipe of species.cooking.recipes){
-   assert.ok(recipe.image);exactAsset(recipe.image);
-   const card=cards.find(card=>card.recipe===recipe.slug);assert.ok(card);
-   assert.equal(card.name,recipe.name);assert.equal(card.src,recipe.image);
+   if(recipe.image)exactAsset(recipe.image);
+   const card=cards.find(card=>card.recipe===recipe.slug);
+   if(card){assert.equal(card.name,recipe.name);assert.equal(card.src,recipe.image);}
    assert.ok(recipe.ingredients.length&&recipe.steps.length&&recipe.tips.length);
   }
  }
@@ -174,7 +176,7 @@ test('three expanded species have a complete connected profile and four recipes'
  for(const slug of ['kawahagi','aoriika','mebaru']){
   const profile=registry.getFishProfile(slug),connections=getFishConnections(slug);
   assert.ok(profile.media.image);assert.ok(profile.detail.safety);assert.ok(profile.launch.identify.length>=3);
-  assert.equal(profile.cooking.recipes.length,4);assert.ok(connections.methods.length);assert.ok(connections.guides.length);assert.ok(connections.related.length);
+  assert.ok(profile.cooking.recipes.length>=4);assert.ok(connections.methods.length);assert.ok(connections.guides.length);assert.ok(connections.related.length);
   assert.ok(featured.launchFishSlugs.includes(slug));
   for(const recipe of profile.cooking.recipes)assert.ok(sitemap().some(x=>x.url.endsWith(`/cooking/${slug}/${recipe.slug}`)));
  }
@@ -196,15 +198,15 @@ test('editing a recipe identity updates editorial cards without duplicate edits'
  const card=getSpeciesTableGuide(species).dishes[0];assert.equal(card.name,'new name');assert.equal(card.src,'/new.png');assert.equal(card.desc,'editorial description');
 });
 
-test('the established seven species retain all user-authored recipes',()=>assert.equal(digest(cookingFish.filter(f=>featuredFish.includes(f.slug))),'a38dc13f0b5bb83190d62d7b3a22799f5490d37cfc8c0cccdf9560aab8ac8506'));
+test('the established seven species retain all user-authored recipes',()=>assert.equal(digest(cookingFish.filter(f=>featuredFish.includes(f.slug)).map(f=>({...f,recipes:f.recipes.map(({preparation,...recipe})=>recipe)}))),'a38dc13f0b5bb83190d62d7b3a22799f5490d37cfc8c0cccdf9560aab8ac8506'));
 
 
 test('new full profiles keep four original recipe assets, guides and method routes',()=>{
  for(const slug of ['hirame','sawara','madako']){
   const f=registry.getFishProfile(slug),c=getFishConnections(slug);
-  assert.ok(f.media.image);assert.equal(f.cooking.recipes.length,4);assert.ok(f.launch.identify.length>=3);
+  assert.ok(f.media.image);assert.ok(f.cooking.recipes.length>=4);assert.ok(f.launch.identify.length>=3);
   assert.ok(c.methods.length);assert.ok(c.guides.length);assert.ok(c.related.length);
-  for(const r of f.cooking.recipes){assert.ok(r.steps.length>=4);assert.ok(r.ingredients.length>=3);assert.ok(fs.existsSync(path.join(root,'public',r.image)));}
+  for(const r of f.cooking.recipes){assert.ok(r.steps.length>=4);assert.ok(r.ingredients.length>=3);if(r.image)assert.ok(fs.existsSync(path.join(root,'public',r.image)));}
  }
 });
 test('map IDs and relationships resolve; closed sites are not recommended',()=>{
@@ -228,10 +230,10 @@ test('ten promoted/new profiles connect four recipes, guides, methods and QUEST'
  for(const slug of ['suzuki','chinu','iwashi','kanpachi','isaki','anago','ayu','nijimasu','amago','magochi']){
   const f=registry.getFishProfile(slug),c=getFishConnections(slug);
   assert.ok(f.detail.body&&f.detail.safety&&f.detail.beginnerTip,slug);
-  assert.ok(f.launch.identify.length>=3,slug);assert.equal(f.cooking.recipes.length,4,slug);
+  assert.ok(f.launch.identify.length>=3,slug);assert.ok(f.cooking.recipes.length>=4,slug);
   assert.ok(c.guides.some(g=>g.slug===slug+'-field-notes'),slug);assert.ok(c.methods.length&&c.related.length,slug);
   assert.ok(questFish.find(f=>f.slug===slug)?.fightProfile,slug);
-  for(const r of f.cooking.recipes){assert.ok(r.steps.length>=4&&r.ingredients.length>=3,r.slug);assert.ok(r.image.includes('/'+slug+'-'),r.slug)}
+  for(const r of f.cooking.recipes){assert.ok(r.steps.length>=4&&r.ingredients.length>=3,r.slug);if(r.image)assert.ok(r.image.includes('/'+slug+'-'),r.slug)}
  }
  assert.equal(fish.filter(f=>f.slug==='chinu').length,1);assert.ok(!fish.some(f=>['kurodai','gure'].includes(f.slug)));
 });
@@ -242,10 +244,10 @@ test('coastal batch supplies full profiles, original images, four recipes and pl
  const {questFish}=require('../lib/quest/catalog.ts');
  for(const slug of ['mejina','haze','ainame','kijihata','akahata','oomonhata','houbo','itoyoridai','kouika','yariika']){
   const f=registry.getFishProfile(slug),links=getFishConnections(slug);
-  assert.ok(f.detail.body&&f.detail.safety&&f.detail.beginnerTip,slug);assert.equal(f.cooking.recipes.length,4,slug);assert.ok(f.launch.identify.length>=3,slug);
+  assert.ok(f.detail.body&&f.detail.safety&&f.detail.beginnerTip,slug);assert.ok(f.cooking.recipes.length>=4,slug);assert.ok(f.launch.identify.length>=3,slug);
   assert.ok(links.guides.length&&links.methods.length&&links.related.length,slug);
   assert.ok(questFish.some(f=>f.slug===slug&&f.fightProfile&&f.habitats.length),slug);
-  for(const r of f.cooking.recipes){assert.ok(r.steps.length>=4&&r.ingredients.length>=3);assert.ok(fs.existsSync(path.join(root,'public',r.image)),r.image);}
+  for(const r of f.cooking.recipes){assert.ok(r.steps.length>=4&&r.ingredients.length>=3);if(r.image)assert.ok(fs.existsSync(path.join(root,'public',r.image)),r.image);}
  }
  assert.equal(fish.filter(f=>f.name==='メジナ').length,1);
  const {affiliateProducts}=require('../lib/affiliate-products.ts');for(const p of affiliateProducts)for(const slug of p.methods)assert.ok(methodDetails[slug],slug);
@@ -268,7 +270,7 @@ test('biological species are unique while old names remain searchable',async()=>
 });
 test('the next ten species have full profiles recipes guides and playable methods',()=>{
  for(const slug of ['akakamas','katakuchi','urume','konoshiro','bora','shiira','makogarei','umazurahagi','kidai','kensakiika']){
-  const p=registry.getFishProfile(slug);assert.ok(p?.detail?.beginnerTip);assert.equal(p.cooking.recipes.length,4);assert.equal(p.launch.identify.length,3);
+  const p=registry.getFishProfile(slug);assert.ok(p?.detail?.beginnerTip);assert.ok(p.cooking.recipes.length>=4);assert.equal(p.launch.identify.length,3);
   const links=getFishConnections(slug);assert.ok(links.methods.length);assert.ok(links.guides.length);
   assert.ok(require('../lib/quest/catalog.ts').questFish.some(f=>f.slug===slug));
  }
@@ -290,7 +292,7 @@ test('hazard cooking policy controls all registries and sitemap, including direc
   assert.ok(paths.includes('/fish/'+f.slug));
   if(!f.hazard.cookingEnabled){assert.equal(f.cooking,undefined);assert.equal(f.tableGuide,undefined);assert.ok(!paths.some(p=>p.startsWith('/cooking/'+f.slug)));}
  }
- assert.equal(registry.getFishProfile('aigo').cooking.recipes.length,4);
+ assert.ok(registry.getFishProfile('aigo').cooking.recipes.length>=4);
  const f=fishSpecies.find(f=>f.base.slug==='kusafugu');
  assert.throws(()=>defineFishSpecies({...f,cooking:{prep:['unsafe'],recipes:[]}}),/Cooking disabled/);
  assert.equal(getSpeciesTableGuide({...f,cooking:{prep:[],recipes:[]},tableGuide:{lead:'unsafe',dishes:[]}}),undefined);

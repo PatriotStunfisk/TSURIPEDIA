@@ -1,0 +1,1379 @@
+{
+  "verifiedAt": "2026-09-17",
+  "count": 79,
+  "entries": [
+    {
+      "slug": "higashi-ogishima-west",
+      "name": "東扇島西公園 釣り施設",
+      "type": "facility",
+      "terrain": "park",
+      "features": [
+        "公園"
+      ],
+      "sources": [
+        {
+          "label": "川崎市：釣り施設と利用ルール",
+          "url": "https://www.city.kawasaki.jp/580/page/0000001598.html"
+        },
+        {
+          "label": "川崎市：公園案内",
+          "url": "https://www.city.kawasaki.jp/580/page/0000001336.html"
+        },
+        {
+          "label": "公園位置の照合",
+          "url": "https://mapcarta.com/de/W88498413"
+        }
+      ]
+    },
+    {
+      "slug": "hekinan-fishing",
+      "name": "碧南釣り広場",
+      "type": "facility",
+      "terrain": "shore",
+      "features": [
+        "護岸・海岸",
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "西三河広域観光推進協議会：施設・MAP",
+          "url": "https://nishimikawanavi.jp/spots/detail/579/"
+        }
+      ]
+    },
+    {
+      "slug": "shumarinai-wakasagi",
+      "name": "朱鞠内湖 ワカサギ釣りエリア",
+      "type": "fresh",
+      "terrain": "lake",
+      "features": [],
+      "sources": [
+        {
+          "label": "運営者：アイスフィッシング",
+          "url": "https://www.shumarinai.jp/fishing/icefishing/"
+        },
+        {
+          "label": "国土地理院：地名集の湖代表点",
+          "url": "https://www.gsi.go.jp/common/000238259.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "hibara-wakasagi",
+      "name": "桧原湖 ワカサギ釣りエリア",
+      "type": "fresh",
+      "terrain": "lake",
+      "features": [],
+      "sources": [
+        {
+          "label": "裏磐梯観光協会：ワカサギ施設一覧",
+          "url": "https://www.urabandai-inf.com/?page_id=28186"
+        },
+        {
+          "label": "裏磐梯観光協会：桧原湖MAP",
+          "url": "https://www.urabandai-inf.com/?page_id=24968"
+        }
+      ]
+    },
+    {
+      "slug": "misaki-sea-pond",
+      "name": "海上釣堀 岬",
+      "type": "facility",
+      "terrain": "sea-pond",
+      "features": [
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "施設公式：営業・釣果",
+          "url": "https://www.osaka-misaki.com/"
+        },
+        {
+          "label": "施設公式：アクセス",
+          "url": "https://www.osaka-misaki.com/access/"
+        },
+        {
+          "label": "岬町観光協会：設備",
+          "url": "https://www.misakicho-kanko.com/spot/43/"
+        }
+      ]
+    },
+    {
+      "slug": "boat-cranes-okinawa",
+      "name": "クレーンズ沖縄 鶴丸",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [],
+      "sources": [
+        {
+          "label": "船宿公式",
+          "url": "https://kajikitsuri.com/"
+        },
+        {
+          "label": "沖縄観光情報WEBサイト：釣り物・MAP",
+          "url": "https://www.okinawastory.jp/spot/600001553"
+        }
+      ]
+    },
+    {
+      "slug": "tomakomai-ippon",
+      "name": "苫小牧港海釣り施設 一本防波堤",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋",
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "運営者：利用案内",
+          "url": "https://ippon-b.com/guide/"
+        },
+        {
+          "label": "公式アクセス",
+          "url": "https://ippon-b.com/access/"
+        }
+      ]
+    },
+    {
+      "slug": "asamushi-umizuri",
+      "name": "浅虫海づり公園",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "青森市：施設・対象魚・利用条件",
+          "url": "https://www.city.aomori.aomori.jp/bunka_sports_kankou/kankou/1005230/1005243/1005246.html"
+        }
+      ]
+    },
+    {
+      "slug": "honmoku-fishing",
+      "name": "本牧海づり施設",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋",
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "横浜市：設備情報",
+          "url": "https://www.city.yokohama.lg.jp/kenko-iryo-fukushi/fukushi-kaigo/fuku-machi/barrierfree/shisetsu/shisetsu/06094.html"
+        },
+        {
+          "label": "施設公式サイト",
+          "url": "https://yokohama-fishingpiers.jp/honmoku/"
+        }
+      ]
+    },
+    {
+      "slug": "niigata-happyfishing",
+      "name": "新潟東港第2東防波堤 管理釣り場",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋"
+      ],
+      "sources": [
+        {
+          "label": "運営者：開放状況・釣果",
+          "url": "https://happyfishing.jp/"
+        },
+        {
+          "label": "新潟県：開放区間と立入禁止",
+          "url": "https://www.pref.niigata.lg.jp/sec/niigata_kouwan/1356860445805.html"
+        },
+        {
+          "label": "公式アクセス",
+          "url": "https://happyfishing.jp/access/"
+        }
+      ]
+    },
+    {
+      "slug": "atami-port-fishing",
+      "name": "熱海港海釣り施設",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋",
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "熱海市：設備・対象魚",
+          "url": "https://www.city.atami.lg.jp/shisetsu/bunka/1002029/1002032.html"
+        },
+        {
+          "label": "運営者：最新ルール・休園情報",
+          "url": "https://www5d.biglobe.ne.jp/atami/"
+        }
+      ]
+    },
+    {
+      "slug": "shimonoseki-fishing",
+      "name": "下関フィッシングパーク",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋"
+      ],
+      "sources": [
+        {
+          "label": "施設公式：利用・アクセス",
+          "url": "https://shimonoseki-fishingpark.com/index.html"
+        }
+      ]
+    },
+    {
+      "slug": "naruto-okazaki",
+      "name": "岡崎海岸（釣り）",
+      "type": "shore",
+      "terrain": "shore",
+      "features": [
+        "護岸・海岸",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "徳島県観光情報 阿波ナビ",
+          "url": "https://www.awanavi.jp/archives/spot/1527"
+        }
+      ]
+    },
+    {
+      "slug": "kamoike-umizuri",
+      "name": "鴨池海づり公園",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋",
+        "駐車場"
+      ],
+      "sources": [
+        {
+          "label": "鹿児島市：対象魚・仕掛け・禁止事項",
+          "url": "https://www.city.kagoshima.lg.jp/seisanryutu/shisetsu/kanko/017.html"
+        }
+      ]
+    },
+    {
+      "slug": "motobu-ikada",
+      "name": "本部釣りイカダ",
+      "type": "facility",
+      "terrain": "raft",
+      "features": [
+        "イカダ",
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "沖縄北部公式観光サイト：施設情報",
+          "url": "https://yambaru-tour.net/spot/1230/"
+        }
+      ]
+    },
+    {
+      "slug": "abashiri-yobito-wakasagi",
+      "name": "網走湖 呼人浦ワカサギ釣り会場",
+      "type": "fresh",
+      "terrain": "lake",
+      "features": [
+        "駐車場"
+      ],
+      "sources": [
+        {
+          "label": "網走市観光協会：会場案内",
+          "url": "https://visit-abashiri.jp/play/f862280e62c9e298c6a293df59a7202507fa8fb3.html"
+        },
+        {
+          "label": "観光協会：2026年営業終了",
+          "url": "https://visit-abashiri.jp/news/news/c1f05fc94d8d98504eadd50c27f80ac404529d69.html"
+        }
+      ]
+    },
+    {
+      "slug": "yura-yamagata-fishing",
+      "name": "由良海洋釣り堀",
+      "type": "facility",
+      "terrain": "sea-pond",
+      "features": [],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://www.yura-yamagata.jp/"
+        }
+      ]
+    },
+    {
+      "slug": "oi-nagisa-fishing",
+      "name": "大井ふ頭中央海浜公園 なぎさの森",
+      "type": "park",
+      "terrain": "shore",
+      "features": [
+        "護岸・海岸"
+      ],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://tokyo-south-seaside-parks.com/oi-park/"
+        }
+      ]
+    },
+    {
+      "slug": "yokosuka-umibe",
+      "name": "横須賀市 海辺つり公園",
+      "type": "park",
+      "terrain": "park",
+      "features": [
+        "公園"
+      ],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://www.kanagawaparks.com/umibeturi/"
+        }
+      ]
+    },
+    {
+      "slug": "shimizu-port-park",
+      "name": "清水港海づり公園",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋"
+      ],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://www.city.shizuoka.lg.jp/s7524/s013047.html"
+        }
+      ]
+    },
+    {
+      "slug": "tainai-fishing-park",
+      "name": "胎内フィッシングパーク",
+      "type": "fresh",
+      "terrain": "pond",
+      "features": [],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://www.city.tainai.niigata.jp/sangyo/kanko/fishingpark.html"
+        }
+      ]
+    },
+    {
+      "slug": "mikata-sea-fishing",
+      "name": "海釣り公園みかた",
+      "type": "facility",
+      "terrain": "sea-pond",
+      "features": [],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://www.umitsurikouen.com/sp/"
+        }
+      ]
+    },
+    {
+      "slug": "yura-wakayama-park",
+      "name": "由良海つり公園＆釣堀ランド",
+      "type": "facility",
+      "terrain": "raft",
+      "features": [
+        "イカダ"
+      ],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://yura-wakayama-kanko.jp/tsurikouen"
+        }
+      ]
+    },
+    {
+      "slug": "meda-forest-pond",
+      "name": "目田森林公園 目田池",
+      "type": "fresh",
+      "terrain": "pond",
+      "features": [
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "島根県観光連盟：施設・設備",
+          "url": "https://www.kankou-shimane.com/destination/20422"
+        },
+        {
+          "label": "公園公式：営業期間",
+          "url": "https://www.meda-park.com/"
+        }
+      ]
+    },
+    {
+      "slug": "waita-fishing-pier",
+      "name": "脇田海釣り桟橋",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋",
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://www.crossroadfukuoka.jp/spot/13136"
+        }
+      ]
+    },
+    {
+      "slug": "sakurajima-umizuri",
+      "name": "桜島海づり公園",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋",
+        "駐車場"
+      ],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://www.city.kagoshima.lg.jp/seisanryutu/shisetsu/kanko/018.html"
+        }
+      ]
+    },
+    {
+      "slug": "takashima-tobishima",
+      "name": "高島飛島磯釣り公園",
+      "type": "facility",
+      "terrain": "rock",
+      "features": [
+        "磯"
+      ],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://www.city.nagasaki.lg.jp/page/1693.html"
+        }
+      ]
+    },
+    {
+      "slug": "iioka-sachimaru",
+      "name": "幸丸（飯岡）",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://cb-sachimaru.com/"
+        }
+      ]
+    },
+    {
+      "slug": "takasu-sachimaru",
+      "name": "幸丸（鷹巣）",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://sachimaru.net/"
+        }
+      ]
+    },
+    {
+      "slug": "numazu-koshomaru",
+      "name": "第八幸松丸",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://numazu-koshomaru.com/"
+        }
+      ]
+    },
+    {
+      "slug": "toba-nakasamaru",
+      "name": "仲佐丸",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://www.nakasa-maru.com/"
+        }
+      ]
+    },
+    {
+      "slug": "miyazu-issinmaru",
+      "name": "一心丸",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://www.issinmaru.com/"
+        }
+      ]
+    },
+    {
+      "slug": "naha-fishing-cooperative",
+      "name": "那覇新港釣船協同組合",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [
+        "駐車場"
+      ],
+      "sources": [
+        {
+          "label": "運営者・自治体・観光協会の施設案内",
+          "url": "https://www.okinawatsuribune.com/"
+        }
+      ]
+    },
+    {
+      "slug": "akita-north",
+      "name": "秋田港北防波堤",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋"
+      ],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://www.pa.thr.mlit.go.jp/akita/100/20200101002000.html"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A7%8B%E7%94%B0%E7%9C%8C%E7%A7%8B%E7%94%B0%E5%B8%82%E5%9C%9F%E5%B4%8E%E6%B8%AF%E8%A5%BF%E4%B8%80%E4%B8%81%E7%9B%AE"
+        }
+      ]
+    },
+    {
+      "slug": "shinchi-park",
+      "name": "新地町海釣り公園",
+      "type": "facility",
+      "terrain": "park",
+      "features": [
+        "公園"
+      ],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://www.shinchi-fishing.com/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E6%96%B0%E5%9C%B0%E7%94%BA%E4%BB%8A%E6%B3%89"
+        }
+      ]
+    },
+    {
+      "slug": "kashima-fishing",
+      "name": "鹿島港魚釣園",
+      "type": "facility",
+      "terrain": "park",
+      "features": [
+        "公園",
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://kashima-fa.com/access/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E8%8C%A8%E5%9F%8E%E7%9C%8C%E9%B9%BF%E5%B6%8B%E5%B8%82%E6%96%B0%E6%B5%9C"
+        }
+      ]
+    },
+    {
+      "slug": "wakasu-fishing",
+      "name": "若洲海浜公園 海釣り施設",
+      "type": "facility",
+      "terrain": "park",
+      "features": [
+        "公園"
+      ],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://www.tptc.co.jp/park/03_10/fishing"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B1%9F%E6%9D%B1%E5%8C%BA%E8%8B%A5%E6%B4%B2%E4%B8%89%E4%B8%81%E7%9B%AE"
+        }
+      ]
+    },
+    {
+      "slug": "daikoku-fishing",
+      "name": "大黒海づり施設",
+      "type": "facility",
+      "terrain": "park",
+      "features": [
+        "公園"
+      ],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://yokohama-fishingpiers.jp/daikoku/facility-guide/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%A4%A7%E9%BB%92%E3%81%B5%E9%A0%AD"
+        }
+      ]
+    },
+    {
+      "slug": "isogo-fishing",
+      "name": "磯子海づり施設",
+      "type": "facility",
+      "terrain": "park",
+      "features": [
+        "公園"
+      ],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://www.city.yokohama.lg.jp/kanko-bunka/minato/taikan/asobu/spot/umizuri.html"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E7%A3%AF%E5%AD%90%E5%8C%BA%E6%96%B0%E7%A3%AF%E5%AD%90%E7%94%BA"
+        }
+      ]
+    },
+    {
+      "slug": "ichihara-fishing",
+      "name": "オリジナルメーカー海づり公園",
+      "type": "facility",
+      "terrain": "park",
+      "features": [
+        "公園"
+      ],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://ichihara-umizuri.com/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E4%BA%94%E4%BA%95%E5%8D%97%E6%B5%B7%E5%B2%B8"
+        }
+      ]
+    },
+    {
+      "slug": "ishida-fisherina",
+      "name": "石田フィッシャリーナ つり桟橋",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋"
+      ],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://fisyarina.webes.jp/sanbashi_jyouhou.php"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%AF%8C%E5%B1%B1%E7%9C%8C%E9%BB%92%E9%83%A8%E5%B8%82%E6%B5%9C%E7%9F%B3%E7%94%B0"
+        }
+      ]
+    },
+    {
+      "slug": "shinmaiko-fishing",
+      "name": "新舞子マリンパーク 魚釣り施設",
+      "type": "facility",
+      "terrain": "park",
+      "features": [
+        "公園",
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://www.port-of-nagoya.jp/kanko/kankoshisetsu/1000895.html"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E7%9F%A5%E5%A4%9A%E5%B8%82%E7%B7%91%E6%B5%9C%E7%94%BA"
+        }
+      ]
+    },
+    {
+      "slug": "toyohama-pier",
+      "name": "豊浜漁港 釣桟橋",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋"
+      ],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://www.pref.aichi.jp/soshiki/kowan/0000039903.html"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%8D%97%E7%9F%A5%E5%A4%9A%E7%94%BA%E8%B1%8A%E6%B5%9C"
+        }
+      ]
+    },
+    {
+      "slug": "arai-benten",
+      "name": "新居弁天海釣公園",
+      "type": "facility",
+      "terrain": "park",
+      "features": [
+        "公園",
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://hamanako-kosai.jp/location/2330/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E9%9D%99%E5%B2%A1%E7%9C%8C%E6%B9%96%E8%A5%BF%E5%B8%82%E6%96%B0%E5%B1%85%E7%94%BA%E6%96%B0%E5%B1%85"
+        }
+      ]
+    },
+    {
+      "slug": "suma-fishing",
+      "name": "須磨海づり公園",
+      "type": "facility",
+      "terrain": "park",
+      "features": [
+        "公園",
+        "駐車場"
+      ],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://sumasakana-park.com/guide/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%85%B5%E5%BA%AB%E7%9C%8C%E7%A5%9E%E6%88%B8%E5%B8%82%E9%A0%88%E7%A3%A8%E5%8C%BA%E4%B8%80%E3%83%8E%E8%B0%B7%E7%94%BA%E4%BA%94%E4%B8%81%E7%9B%AE"
+        }
+      ]
+    },
+    {
+      "slug": "yumeminato-park",
+      "name": "夢みなと公園",
+      "type": "park",
+      "terrain": "shore",
+      "features": [
+        "護岸・海岸",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://www.yumeminatotower.gr.jp/access/area/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E9%B3%A5%E5%8F%96%E7%9C%8C%E5%A2%83%E6%B8%AF%E5%B8%82%E7%AB%B9%E5%86%85%E5%9B%A3%E5%9C%B0"
+        }
+      ]
+    },
+    {
+      "slug": "fukuoka-fishing",
+      "name": "福岡市海づり公園",
+      "type": "facility",
+      "terrain": "park",
+      "features": [
+        "公園",
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://yokanavi.com/spots/77822"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E8%A5%BF%E5%8C%BA%E5%B0%8F%E7%94%B0"
+        },
+        {
+          "label": "管理者：最新の開園案内",
+          "url": "https://umizuri.com/"
+        }
+      ]
+    },
+    {
+      "slug": "kehi-beach",
+      "name": "気比の浜・河口周辺",
+      "type": "estuary",
+      "terrain": "estuary",
+      "features": [],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://toyooka-tourism.com/spot/kehi-beach/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%85%B5%E5%BA%AB%E7%9C%8C%E8%B1%8A%E5%B2%A1%E5%B8%82%E6%B0%97%E6%AF%94"
+        }
+      ]
+    },
+    {
+      "slug": "yamanaka-lake",
+      "name": "山中湖・釣行計画",
+      "type": "fresh",
+      "terrain": "lake",
+      "features": [],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://www.lake-yamanaka.net/fishing-info"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E6%A2%A8%E7%9C%8C%E5%B1%B1%E4%B8%AD%E6%B9%96%E6%9D%91%E5%B9%B3%E9%87%8E"
+        }
+      ]
+    },
+    {
+      "slug": "chuzenji-lake",
+      "name": "中禅寺湖・釣行計画",
+      "type": "fresh",
+      "terrain": "lake",
+      "features": [],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://www.chuzenjiko.or.jp/fishing_map.html"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E6%A0%83%E6%9C%A8%E7%9C%8C%E6%97%A5%E5%85%89%E5%B8%82%E4%B8%AD%E5%AE%AE%E7%A5%A0"
+        }
+      ]
+    },
+    {
+      "slug": "kizaki-lake",
+      "name": "木崎湖・釣行計画",
+      "type": "fresh",
+      "terrain": "lake",
+      "features": [],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://www.city.omachi.nagano.jp/shisei/shokai/sonota/lmrm0ok3bqgclr2s5wzss0i6"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E9%95%B7%E9%87%8E%E7%9C%8C%E5%A4%A7%E7%94%BA%E5%B8%82%E5%B9%B3"
+        }
+      ]
+    },
+    {
+      "slug": "gujo-nagara",
+      "name": "長良川・郡上漁協管内",
+      "type": "fresh",
+      "terrain": "river",
+      "features": [],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://www.gujo-fc.or.jp/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B2%90%E9%98%9C%E7%9C%8C%E9%83%A1%E4%B8%8A%E5%B8%82%E5%85%AB%E5%B9%A1%E7%94%BA%E7%A8%B2%E6%88%90"
+        }
+      ]
+    },
+    {
+      "slug": "shimanto-river",
+      "name": "四万十川・釣行計画",
+      "type": "fresh",
+      "terrain": "river",
+      "features": [],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://www.shimantogawa-gyoren.com/get-involved"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E9%AB%98%E7%9F%A5%E7%9C%8C%E5%9B%9B%E4%B8%87%E5%8D%81%E5%B8%82%E8%A5%BF%E5%9C%9F%E4%BD%90%E6%B1%9F%E5%B7%9D%E5%B4%8E"
+        }
+      ]
+    },
+    {
+      "slug": "yumigahama-surf",
+      "name": "弓ヶ浜（鳥取）・サーフ釣行計画",
+      "type": "beach",
+      "terrain": "beach",
+      "features": [],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://fishingeventjp.shimano.com/2026/japan_cup/nage/1153/result/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E9%B3%A5%E5%8F%96%E7%9C%8C%E7%B1%B3%E5%AD%90%E5%B8%82%E5%AF%8C%E7%9B%8A%E7%94%BA"
+        }
+      ]
+    },
+    {
+      "slug": "aburatsubo-rock",
+      "name": "油壺湾・磯釣り計画",
+      "type": "rock",
+      "terrain": "rock",
+      "features": [
+        "磯"
+      ],
+      "sources": [
+        {
+          "label": "公式・運営者の利用案内",
+          "url": "https://www.city.miura.kanagawa.jp/material/files/group/27/miurakankoumapR4.pdf"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E4%B8%89%E6%B5%A6%E5%B8%82%E4%B8%89%E5%B4%8E%E7%94%BA%E5%B0%8F%E7%B6%B2%E4%BB%A3"
+        }
+      ]
+    },
+    {
+      "slug": "boat-kamimaru",
+      "name": "釣船 上丸",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [],
+      "sources": [
+        {
+          "label": "船宿公式：利用・アクセス・釣果",
+          "url": "https://www.kamimaru.jp/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%A4%A7%E9%98%AA%E5%BA%9C%E6%B3%89%E4%BD%90%E9%87%8E%E5%B8%82%E4%BD%8F%E5%90%89%E7%94%BA"
+        }
+      ]
+    },
+    {
+      "slug": "boat-uoe",
+      "name": "釣り船 魚英",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [],
+      "sources": [
+        {
+          "label": "船宿公式：利用・アクセス・釣果",
+          "url": "https://uoe.jp/syoukai"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%85%B5%E5%BA%AB%E7%9C%8C%E6%98%8E%E7%9F%B3%E5%B8%82%E6%B8%AF%E7%94%BA"
+        }
+      ]
+    },
+    {
+      "slug": "boat-sanpomaru",
+      "name": "三邦丸",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [],
+      "sources": [
+        {
+          "label": "船宿公式：利用・アクセス・釣果",
+          "url": "https://sanpomaru.com/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%92%8C%E6%AD%8C%E5%B1%B1%E7%9C%8C%E5%92%8C%E6%AD%8C%E5%B1%B1%E5%B8%82%E5%8A%A0%E5%A4%AA"
+        },
+        {
+          "label": "公式アクセス",
+          "url": "https://sanpomaru.com/access/"
+        },
+        {
+          "label": "和歌山県観光：対象魚と初心者の乗船体験",
+          "url": "https://www.wakayama-kanko.or.jp/features/detail_685.html"
+        }
+      ]
+    },
+    {
+      "slug": "boat-niraikanai",
+      "name": "ニライカナイ",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "船宿公式：利用・アクセス・釣果",
+          "url": "https://www.niraikanai.net/infomation/index.html"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E6%84%9B%E5%AA%9B%E7%9C%8C%E6%9D%BE%E5%B1%B1%E5%B8%82%E5%8C%97%E5%90%89%E7%94%B0%E7%94%BA"
+        },
+        {
+          "label": "DAIWA船宿情報：北吉田港・対象釣法",
+          "url": "https://www.daiwa.com/jp/partner/fishingmap/fishingboat/list/detail?ship=1190781_4178"
+        }
+      ]
+    },
+    {
+      "slug": "boat-happiness2",
+      "name": "ハピネス2",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [],
+      "sources": [
+        {
+          "label": "船宿公式：利用・アクセス・釣果",
+          "url": "https://happiness2.jp/access"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E4%BA%AC%E9%83%BD%E5%BA%9C%E5%AE%AE%E6%B4%A5%E5%B8%82%E5%B2%A9%E3%82%B1%E9%BC%BB"
+        },
+        {
+          "label": "公式：イカメタル釣果",
+          "url": "https://happiness2.jp/blog/54596"
+        }
+      ]
+    },
+    {
+      "slug": "boat-cyueimaru",
+      "name": "忠栄丸",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [
+        "駐車場"
+      ],
+      "sources": [
+        {
+          "label": "船宿公式：利用・アクセス・釣果",
+          "url": "https://cyueimaru.com/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%8D%97%E7%9F%A5%E5%A4%9A%E7%94%BA%E7%89%87%E5%90%8D"
+        }
+      ]
+    },
+    {
+      "slug": "boat-tsurikou",
+      "name": "つり幸",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [
+        "駐車場"
+      ],
+      "sources": [
+        {
+          "label": "船宿公式：利用・アクセス・釣果",
+          "url": "https://www.tsurikou.com/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E5%B7%9D%E5%B4%8E%E5%B8%82%E5%B7%9D%E5%B4%8E%E5%8C%BA%E6%B1%A0%E4%B8%8A%E7%94%BA"
+        },
+        {
+          "label": "公式アクセス・集合場所",
+          "url": "https://www.tsurikou.com/page/Detail/map/"
+        }
+      ]
+    },
+    {
+      "slug": "boat-shouzaburo",
+      "name": "庄三郎丸",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [],
+      "sources": [
+        {
+          "label": "船宿公式：利用・アクセス・釣果",
+          "url": "https://www.shouzaburo.com/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E5%B9%B3%E5%A1%9A%E5%B8%82%E5%8D%83%E7%9F%B3%E6%B2%B3%E5%B2%B8"
+        }
+      ]
+    },
+    {
+      "slug": "boat-voyager",
+      "name": "VOYAGER",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [],
+      "sources": [
+        {
+          "label": "船宿公式：利用・アクセス・釣果",
+          "url": "https://www.voyager789.com/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E8%A5%BF%E5%8C%BA%E6%84%9B%E5%AE%95%E6%B5%9C"
+        }
+      ]
+    },
+    {
+      "slug": "boat-northstar",
+      "name": "Northstar",
+      "type": "boat",
+      "terrain": "boat",
+      "features": [],
+      "sources": [
+        {
+          "label": "船宿公式：利用・アクセス・釣果",
+          "url": "https://northstar2.jp/"
+        },
+        {
+          "label": "位置の出典：国土地理院住所検索（町域代表点）",
+          "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%8C%97%E6%B5%B7%E9%81%93%E7%95%99%E8%90%8C%E5%B8%82%E6%B8%AF%E7%94%BA"
+        }
+      ]
+    },
+    {
+      "slug": "amagasaki-uoturi",
+      "name": "尼崎市立魚つり公園",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋",
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "尼崎市の施設・地図案内",
+          "url": "https://www.city.amagasaki.hyogo.jp/map/1000380/1000422/1000849.html"
+        },
+        {
+          "label": "運営者の営業・釣果案内",
+          "url": "https://amagasaki-uoturikouen.com/index.html"
+        }
+      ]
+    },
+    {
+      "slug": "maizuru-shinkai",
+      "name": "舞鶴親海公園",
+      "type": "park",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋",
+        "駐車場",
+        "トイレ"
+      ],
+      "sources": [
+        {
+          "label": "舞鶴市：施設・休場日案内",
+          "url": "https://www.city.maizuru.kyoto.jp/kurashi/0000009016.html"
+        },
+        {
+          "label": "海の京都：所在地・地図",
+          "url": "https://www.uminokyoto.jp/spot/detail.php?sid=168"
+        }
+      ]
+    },
+    {
+      "slug": "minamiawaji-megafloat",
+      "name": "南あわじ市海釣り公園メガフロート",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋"
+      ],
+      "sources": [
+        {
+          "label": "南あわじ市：利用・工事案内",
+          "url": "https://www.city.minamiawaji.hyogo.jp/soshiki/suisan/umidurikouen-mega.html"
+        }
+      ]
+    },
+    {
+      "slug": "hidakagawa-planning",
+      "name": "日高川水系・アユとアマゴの釣行計画",
+      "type": "fresh",
+      "terrain": "river",
+      "features": [],
+      "sources": [
+        {
+          "label": "日高川漁業協同組合：アユ・アマゴ、遊漁券、河川情報",
+          "url": "https://www.zb.ztv.ne.jp/hidagyo/"
+        }
+      ]
+    },
+    {
+      "slug": "akutagawa-trout",
+      "name": "芥川 清・渓流魚釣り場",
+      "type": "fresh",
+      "terrain": "pond",
+      "features": [],
+      "sources": [
+        {
+          "label": "高槻市観光協会：摂津峡のスポット案内",
+          "url": "https://www.takatsuki-kankou.org/settsukyo/html/spots.html"
+        }
+      ]
+    },
+    {
+      "slug": "saikazaki-seapark",
+      "name": "雑賀崎シーパーク",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋"
+      ],
+      "sources": [
+        {
+          "label": "雑賀崎シーパーク公式：利用案内・予約・釣果",
+          "url": "https://saikazaki-seapark.com/"
+        }
+      ]
+    },
+    {
+      "slug": "naruohama",
+      "name": "鳴尾浜臨海公園 海づり広場",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋"
+      ],
+      "sources": [
+        {
+          "label": "鳴尾浜臨海公園：海づり広場の利用案内・釣果",
+          "url": "https://www.naruohama-park.com/umizuri/"
+        }
+      ]
+    },
+    {
+      "slug": "akashi-offshore-planning",
+      "name": "明石・沖の船釣りエリア",
+      "type": "area",
+      "terrain": "boat",
+      "features": [],
+      "sources": [
+        {
+          "label": "明石市漁業組合連合会：2026年版タコ釣りルール（PDF）",
+          "url": "https://www.npo-uwh.jp/marine/img/takorule2026.pdf"
+        },
+        {
+          "label": "水産庁：遊漁の部屋",
+          "url": "https://www.jfa.maff.go.jp/j/enoki/yugyo/"
+        }
+      ]
+    },
+    {
+      "slug": "miyazu-sea-fishing",
+      "name": "宮津市海洋つり場",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋"
+      ],
+      "sources": [
+        {
+          "label": "宮津市：令和8年度から当面休業のお知らせ",
+          "url": "https://www.city.miyazu.kyoto.jp/site/turiba/index.html"
+        }
+      ]
+    },
+    {
+      "slug": "mukogawa-ichimonji",
+      "name": "武庫川一文字",
+      "type": "pier",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋",
+        "駐車場"
+      ]
+    },
+    {
+      "slug": "hira-isoumi",
+      "name": "平磯海づり公園",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋",
+        "駐車場",
+        "トイレ"
+      ]
+    },
+    {
+      "slug": "tottopark-kojima",
+      "name": "とっとパーク小島",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋",
+        "駐車場",
+        "トイレ"
+      ]
+    },
+    {
+      "slug": "nanko-fishing-park",
+      "name": "大阪南港魚つり園護岸",
+      "type": "facility",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋"
+      ],
+      "sources": [
+        {
+          "label": "大阪市：閉鎖について",
+          "url": "https://www.city.osaka.lg.jp/seisakukikakushitsu/page/0000672627.html"
+        }
+      ]
+    },
+    {
+      "slug": "kada-port",
+      "name": "加太港",
+      "type": "port",
+      "terrain": "pier",
+      "features": [
+        "堤防・桟橋",
+        "駐車場",
+        "トイレ"
+      ]
+    }
+  ]
+}

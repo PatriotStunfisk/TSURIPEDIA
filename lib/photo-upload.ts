@@ -1,0 +1,5 @@
+// Decode and re-encode in a canvas: uploaded bytes do not retain GPS/EXIF metadata.
+export async function preparePhoto(file:File):Promise<string>{
+ if(!file.type.startsWith('image/')||file.size>20_000_000)throw Error('20MB以下の画像を選んでください。');
+ const url=URL.createObjectURL(file);try{const img=new Image();img.src=url;await img.decode();const ratio=Math.min(1,1200/Math.max(img.width,img.height));const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.width*ratio));canvas.height=Math.max(1,Math.round(img.height*ratio));const ctx=canvas.getContext('2d');if(!ctx)throw Error('画像の処理に対応していません。');ctx.fillStyle='#fff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);let data=canvas.toDataURL('image/jpeg',.78);if(data.length>650000)data=canvas.toDataURL('image/jpeg',.5);if(data.length>650000)throw Error('写真を小さくして再試行してください。');return data;}catch(e){throw e instanceof Error?e:Error('画像を読み取れません。JPEGやPNGをお試しください。');}finally{URL.revokeObjectURL(url);}
+}

@@ -7,7 +7,7 @@ const ts=require('typescript');
 const root=path.resolve(__dirname,'..');
 const resolve=Module._resolveFilename;
 Module._resolveFilename=function(request,...args){return resolve.call(this,request.startsWith('@/')?path.join(root,request.slice(2)):request,...args)};
-require.extensions['.ts']=(module,filename)=>module._compile(ts.transpileModule(fs.readFileSync(filename,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,filename);
+require.extensions['.ts']=(module,filename)=>module._compile(ts.transpileModule(fs.readFileSync(filename,'utf8'),{compilerOptions:{esModuleInterop:true,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,filename);
 const {questFish,questMethods}=require('../lib/quest/catalog.ts');
 const {questHabitats}=require('../lib/quest/habitats.ts');
 const {fishCatalog}=require('../lib/fish-registry.ts');

@@ -1,7 +1,7 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('fs'),path=require('path'),Module=require('module'),ts=require('typescript');
 const root=path.resolve(__dirname,'..'),resolve=Module._resolveFilename;
 Module._resolveFilename=function(s,...args){return resolve.call(this,s.startsWith('@/')?path.join(root,s.slice(2)):s,...args)};
-require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,f);
+require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{esModuleInterop:true,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,f);
 const {allGuides,getGuide,getParentGuide,getGuideQuestions,getGuidesForFish}=require('../lib/all-guides.ts');
 const {guideTopics,filterGuides,guideReadingMinutes}=require('../lib/guide-taxonomy.ts');
 const {fish}=require('../lib/data.ts'),{methodDetails}=require('../lib/method-registry.ts');

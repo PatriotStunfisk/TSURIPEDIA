@@ -3,7 +3,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
 const ts=require('typescript');
-require.extensions['.ts']=(module,filename)=>module._compile(ts.transpileModule(fs.readFileSync(filename,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,filename);
+require.extensions['.ts']=(module,filename)=>module._compile(ts.transpileModule(fs.readFileSync(filename,'utf8'),{compilerOptions:{esModuleInterop:true,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,filename);
 const {distanceKm,hasCoordinates,sortByDistance}=require('../lib/spot-distance.ts');
 const {affiliateProducts,productsForMethods,amazonProductUrl}=require('../lib/affiliate-products.ts');
 test('nearby ranking is stable, never mutates catalog and puts missing positions last',()=>{

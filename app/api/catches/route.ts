@@ -1,0 +1,11 @@
+import {fishSlugs} from '@/lib/fish-registry';
+import {fishingMapEntries} from '@/lib/fishing-map-data';
+import {methodDetails} from '@/lib/method-registry';
+import {parseCatch,validDeleteToken} from '@/lib/catches/types';
+import {catchStoreReady,publishCatch,recentCatches,removePublicCatch,takeQuota} from '@/lib/server/catch-store';
+import {sameOrigin,limitedJson,apiError,cleanJpeg,HttpError} from '@/lib/server/request';
+export const runtime='nodejs';
+const allowed={fish:new Set(fishSlugs),spots:new Set(fishingMapEntries.filter(s=>!s.closed).map(s=>s.slug)),methods:new Set(Object.keys(methodDetails))};
+export async function GET(request:Request){try{if(!catchStoreReady())return Response.json({available:false,reports:[]},{headers:{'Cache-Control':'no-store'}});const url=new URL(request.url),spot=url.searchParams.get('spot')??'',offset=Number(url.searchParams.get('offset')??0);if(!allowed.spots.has(spot)||!Number.isInteger(offset)||offset<0||offset>10000)throw new HttpError(400,'釣り場・表示位置が不正です。');return Response.json({available:true,reports:await recentCatches(spot,offset)},{headers:{'Cache-Control':'no-store'}});}catch(e){return apiError(e)}}
+export async function POST(request:Request){try{sameOrigin(request);if(!catchStoreReady())throw new HttpError(503,'公開釣果は準備中です。');const v=await limitedJson(request) as Record<string,unknown>;if(v.website||v.consent!==true||!validDeleteToken(v.deleteToken))throw new HttpError(400,'公開条件を確認してください。');let report;try{report=parseCatch(v.report,allowed);}catch(e){throw new HttpError(400,(e as Error).message)}await takeQuota(request,'catch-post',5);const photo=report.photo?cleanJpeg(report.photo):undefined;const status=await publishCatch(report,v.deleteToken,photo);return Response.json({status},{status:202});}catch(e){return apiError(e)}}
+export async function DELETE(request:Request){try{sameOrigin(request);if(!catchStoreReady())throw new HttpError(503,'公開釣果は準備中です。');const v=await limitedJson(request,2000) as Record<string,unknown>;if(!validDeleteToken(v.id)||!validDeleteToken(v.deleteToken))throw new HttpError(400,'削除情報が不正です。');await takeQuota(request,'catch-delete',20);await removePublicCatch(v.id,v.deleteToken);return Response.json({deleted:true});}catch(e){return apiError(e)}}

@@ -2,7 +2,7 @@ const assert=require('node:assert/strict');
 const test=require('node:test');
 const fs=require('node:fs');
 const ts=require('typescript');
-require.extensions['.ts']=(module,filename)=>module._compile(ts.transpileModule(fs.readFileSync(filename,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,filename);
+require.extensions['.ts']=(module,filename)=>module._compile(ts.transpileModule(fs.readFileSync(filename,'utf8'),{compilerOptions:{esModuleInterop:true,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,filename);
 const {containedAnchor,fightCameraDistance}=require('../lib/quest/hook-anchor.ts');
 const {defineFishSpecies}=require('../lib/fish-species/define.ts');
 test('fight camera contains the fish at desktop and narrow aspect ratios',()=>{

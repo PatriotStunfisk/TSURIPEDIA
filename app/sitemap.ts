@@ -1,3 +1,4 @@
+import {fishingMapEntries} from '@/lib/fishing-map-data';
 import type {MetadataRoute} from 'next';
 import {fishCatalog} from '@/lib/fish-registry';
 import {methodDetails} from '@/lib/method-registry';
@@ -10,6 +11,7 @@ export default function sitemap():MetadataRoute.Sitemap{
   const now=new Date();
   const staticPages=[
     {path:'',priority:1,changeFrequency:'weekly' as const},
+    {path:'/identify',priority:.7,changeFrequency:'monthly' as const},
     {path:'/fish',priority:.95,changeFrequency:'weekly' as const},
     {path:'/methods',priority:.9,changeFrequency:'weekly' as const},
     {path:'/guide',priority:.92,changeFrequency:'weekly' as const},
@@ -28,5 +30,5 @@ export default function sitemap():MetadataRoute.Sitemap{
     {url:`${base}/cooking/${f.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.84},
     ...f.recipes.map(r=>({url:`${base}/cooking/${f.slug}/${r.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.82}))
   ]);
-  return [...staticEntries,...fishEntries,...methodEntries,...guideEntries,...cookingEntries];
+  return [...fishingMapEntries.map(s=>({url:`${base}/spots/${s.slug}`,lastModified:s.verifiedAt?new Date(s.verifiedAt):now,changeFrequency:'weekly' as const,priority:.7})),...staticEntries,...fishEntries,...methodEntries,...guideEntries,...cookingEntries];
 }

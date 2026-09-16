@@ -1,3 +1,5 @@
+import {platformMapExpansion} from './fishing-map-20260917';
+import {classifySpot,type SpotPrimaryType} from './spot-classification';
 import {verifiedMapExpansion} from './fishing-map-20260916';
 import {nationwideExpansion} from './fishing-map-nationwide-expansion';
 import {nationalSpots} from './fishing-map-national';
@@ -8,6 +10,8 @@ import {expansionSpots} from './fishing-map-expansion';
 export type MapEntryType='spot'|'boat'|'area';
 
 export type FishingMapEntry={
+  primaryType?:SpotPrimaryType;
+  features?:string[];
   slug:string;
   type:MapEntryType;
   name:string;
@@ -46,7 +50,8 @@ export type FishingMapEntry={
   caution:string[];
 };
 
-export const fishingMapEntries:FishingMapEntry[]=[
+const sourceEntries:FishingMapEntry[]=[
+  ...platformMapExpansion,
   ...nationalSpots,
   ...verifiedMapExpansion,
   ...nationwideExpansion,
@@ -109,6 +114,8 @@ export const fishingMapEntries:FishingMapEntry[]=[
     caution:['漁船・ロープ・荷揚げ作業を最優先','立入禁止や釣り禁止表示に従う','駐車場所は現地ルールを確認']
   }
 ];
+
+export const fishingMapEntries:FishingMapEntry[]=sourceEntries.map(classifySpot);
 
 export const fishingMapFish=['すべて',...new Set(fishingMapEntries.flatMap(e=>e.fish))];
 export const getSpotsForFish=(slug:string)=>fishingMapEntries.filter(e=>!e.closed&&e.fishSlugs?.includes(slug));

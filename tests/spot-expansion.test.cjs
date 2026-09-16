@@ -1,7 +1,7 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),Module=require('node:module'),ts=require('typescript');
 const root=path.resolve(__dirname,'..'),resolve=Module._resolveFilename;
 Module._resolveFilename=function(s,...a){return resolve.call(this,s.startsWith('@/')?path.join(root,s.slice(2)):s,...a)};
-require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,f);
+require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{esModuleInterop:true,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,f);
 const {fishingMapEntries}=require('../lib/fishing-map-data.ts'),{nationwideExpansion}=require('../lib/fishing-map-nationwide-expansion.ts');
 const {markerKind,clusterPoints}=require('../lib/spot-markers.ts'),{matchesSpot}=require('../lib/spot-filters.ts');
 const {fishCatalog}=require('../lib/fish-registry.ts'),{methodDetails}=require('../lib/method-registry.ts'),{getGuide}=require('../lib/all-guides.ts');
@@ -28,8 +28,8 @@ test('new verified places have sources, intentional reference pins and valid rel
 });
 test('medium zoom separates markers earlier while wide zoom remains clustered',()=>{
  const {clusterCellSize}=require('../lib/spot-markers.ts');
- const nearby=[{slug:'a',x:1,y:1},{slug:'b',x:32,y:1}];
- assert.equal(clusterPoints(nearby,p=>p,undefined,clusterCellSize(6)).length,1);
+ const nearby=[{slug:'a',x:1,y:1},{slug:'b',x:18,y:1}];
+ assert.equal(clusterPoints(nearby,p=>p,undefined,clusterCellSize(5)).length,1);
  assert.equal(clusterPoints(nearby,p=>p,undefined,clusterCellSize(8)).length,2);
  assert.ok(clusterCellSize(11)<clusterCellSize(8));
 });

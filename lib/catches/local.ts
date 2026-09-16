@@ -1,0 +1,6 @@
+import type {LocalCatch} from './types';
+const name='uolink-real-catches-v1';
+function open(){return new Promise<IDBDatabase>((resolve,reject)=>{const r=indexedDB.open(name,1);r.onupgradeneeded=()=>r.result.createObjectStore('reports',{keyPath:'id'});r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(Error('端末内の保存領域を開けません。'));});}
+export async function saveLocalCatch(report:LocalCatch){const db=await open();try{await new Promise<void>((resolve,reject)=>{const tx=db.transaction('reports','readwrite');tx.objectStore('reports').put(report);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(Error('保存容量が不足している可能性があります。写真を小さくして再試行してください。'));});}finally{db.close();}}
+export async function localCatches(){const db=await open();try{return await new Promise<LocalCatch[]>((resolve,reject)=>{const r=db.transaction('reports').objectStore('reports').getAll();r.onsuccess=()=>resolve((r.result as LocalCatch[]).filter(x=>x.source==='real').sort((a,b)=>b.date.localeCompare(a.date)));r.onerror=()=>reject(Error('端末内の記録を読めません。'));});}finally{db.close();}}
+export async function deleteLocalCatch(id:string){const db=await open();try{await new Promise<void>((resolve,reject)=>{const tx=db.transaction('reports','readwrite');tx.objectStore('reports').delete(id);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(Error('削除できません。'));});}finally{db.close();}}

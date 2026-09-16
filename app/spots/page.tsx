@@ -1,10 +1,11 @@
+import {pageSharing} from '@/lib/page-sharing';
 import {allGuides} from '@/lib/all-guides';
 import {getFishSpecies} from '@/lib/fish-species';
 import {fishCatalog} from '@/lib/fish-registry';
 import {methodDetails} from '@/lib/method-registry';
 import SpotMap from '@/components/SpotMap';
 
-export const metadata={title:'釣り場マップ',alternates:{canonical:'/spots'},description:'全国の釣り場・釣船・船宿を地方・都道府県・魚・釣法から検索。現在地からの距離と公式情報の確認日を見ながら釣行を計画できます。'};
+export const metadata=pageSharing("/spots","全国の釣り場・船宿MAP","全国の釣り場と船宿を地域・魚・釣法・施設タイプから検索。公式案内と最近の釣果を確認して釣行を計画。");
 
 export default async function Page({searchParams}:{searchParams:Promise<{q?:string;type?:string}>}){
   const query=await searchParams;
