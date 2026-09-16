@@ -1,3 +1,6 @@
+import {quickGuides} from './guide-articles-quick';
+import {guideEditorial} from './guide-editorial';
+import {guideReadingMinutes,type ClassifiedGuide} from './guide-taxonomy';
 import {tripPlanningGuides} from './guide-articles-trip-planning';
 import {safetyGuides} from './guide-articles-safety';
 import {practicalGuides} from './guide-articles-practical';
@@ -18,7 +21,8 @@ import {extraGuideArticles5} from '@/lib/guide-articles-extra5';
 import {extraGuideArticles6} from '@/lib/guide-articles-extra6';
 import {extraGuideArticles7} from '@/lib/guide-articles-extra7';
 
-export const allGuides=[
+const sourceGuides=[
+  ...quickGuides,
   ...tripPlanningGuides,
   ...practicalGuides,
   ...safetyGuides,
@@ -39,16 +43,28 @@ export const allGuides=[
   ...extraGuideArticles7,
 ];
 
+const directTags=(guide:typeof sourceGuides[number],kind:'fish'|'methods')=>[...new Set(guide.related.flatMap(link=>{const match=link.href.split(/[?#]/)[0].match(new RegExp(`^/${kind}/([^/]+)$`));return match?[kind==='fish'?canonicalFishSlug(match[1]):match[1]]:[]}))];
+export const allGuides:ClassifiedGuide[]=sourceGuides.map(guide=>{
+ const editorial=guide.editorial??guideEditorial[guide.slug];
+ if(!editorial)throw new Error(`GUIDE editorial classification missing: ${guide.slug}`);
+ const parent=editorial.parentGuide?sourceGuides.find(g=>g.slug===editorial.parentGuide):undefined;
+ const referenced=guide.related.flatMap(r=>{const slug=r.href.match(/^\/guide\/([^/?#]+)$/)?.[1];const found=sourceGuides.find(g=>g.slug===slug);return found?[found]:[]});
+ const context=parent??referenced.find(g=>directTags(g,'methods').length||directTags(g,'fish').length);
+ return {...guide,...editorial,fishTags:directTags(guide,'fish').length?directTags(guide,'fish'):context?directTags(context,'fish'):[],methodTags:directTags(guide,'methods').length?directTags(guide,'methods'):context?directTags(context,'methods'):[],readingMinutes:guideReadingMinutes(guide)};
+});
 export const getGuide=(slug:string)=>allGuides.find(x=>x.slug===slug);
-
-// Existing article → fish links also supply the fish → article direction.
-export function getGuidesForFish(slug:string){
-  return allGuides.filter(guide=>guide.related.some(link=>{const match=link.href.split(/[?#]/)[0].match(/^\/fish\/([^/]+)$/);return match&&canonicalFishSlug(match[1])===canonicalFishSlug(slug);}));
+export function getGuidesForFish(slug:string){return allGuides.filter(g=>g.fishTags.includes(canonicalFishSlug(slug)));}
+function relationScore(a:ClassifiedGuide,b:ClassifiedGuide){
+ return a.methodTags.filter(s=>b.methodTags.includes(s)).length*4+a.fishTags.filter(s=>b.fishTags.includes(s)).length*3+(a.topic===b.topic?1:0)+(a.related.some(r=>r.href===`/guide/${b.slug}`)?6:0);
 }
-
-// Shared, exact fish/method relationships; unrelated category matches do not qualify.
+export function getParentGuide(slug:string){
+ const current=getGuide(slug);if(!current||current.articleType!=='QUICK GUIDE')return undefined;
+ if(current.parentGuide)return getGuide(current.parentGuide);
+ return allGuides.filter(g=>g.articleType==='GUIDE'&&g.slug!==slug&&(!current.fishTags.length||!g.fishTags.length||g.fishTags.some(f=>current.fishTags.includes(f))))
+ .map(g=>({g,score:relationScore(current,g)})).filter(x=>x.score>=3).sort((a,b)=>b.score-a.score||Number(!!b.g.featured)-Number(!!a.g.featured))[0]?.g;
+}
+export function getGuideQuestions(slug:string,limit=6){return allGuides.filter(g=>g.articleType==='QUICK GUIDE'&&getParentGuide(g.slug)?.slug===slug).sort((a,b)=>Number(b.parentGuide===slug)-Number(a.parentGuide===slug)).slice(0,limit);}
 export function getRelatedGuides(slug:string,limit=4){
  const current=getGuide(slug);if(!current)return [];
- const targets=new Set(current.related.map(x=>x.href.split(/[?#]/)[0]).filter(x=>/^\/(fish|methods)\/[^/]+$/.test(x)));
- return allGuides.filter(a=>a.slug!==slug).map(a=>({a,score:a.related.filter(x=>targets.has(x.href.split(/[?#]/)[0])).length})).filter(x=>x.score>0).sort((a,b)=>Number(!!b.a.featured)-Number(!!a.a.featured)||b.score-a.score).slice(0,limit).map(x=>x.a);
+ return allGuides.filter(g=>g.slug!==slug).map(g=>({g,score:relationScore(current,g)})).filter(x=>x.score>=3).sort((a,b)=>b.score-a.score||Number(!!b.g.featured)-Number(!!a.g.featured)).slice(0,limit).map(x=>x.g);
 }

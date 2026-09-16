@@ -1,3 +1,6 @@
+import {guideTopics} from '@/lib/guide-taxonomy';
+import {getFish} from '@/lib/data';
+import {getMethod} from '@/lib/method-registry';
 import AffiliateProducts from '@/components/AffiliateProducts';
 import {guideTripTools} from '@/lib/affiliate-products';
 import {guideSharing} from '@/lib/guide-sharing';
@@ -8,7 +11,7 @@ import {notFound} from 'next/navigation';
 import GuideProductCards from '@/components/GuideProductCards';
 import GuideAffiliatePicks,{hasAffiliatePicks} from '@/components/GuideAffiliatePicks';
 import GuideAffiliateExtras,{hasAffiliateExtras} from '@/components/GuideAffiliateExtras';
-import {allGuides,getGuide,getRelatedGuides} from '@/lib/all-guides';
+import {allGuides,getGuide,getRelatedGuides,getParentGuide,getGuideQuestions} from '@/lib/all-guides';
 
 
 const base='https://uolink.vercel.app';
@@ -37,21 +40,25 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
 
 export default async function GuideArticlePage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;const a=getGuide(slug);if(!a)notFound();const advice=categoryAdvice[a.category];
- const guideMethods=a.related.filter(r=>r.href.startsWith('/methods/')).map(r=>r.href.split('/')[2]);
+ const guideMethods=a.methodTags;
+ const parent=getParentGuide(slug);const questions=getGuideQuestions(slug);
  const customTools=!!guideTripTools[slug]?.length;
  const curatedTools=hasAffiliatePicks(slug)||hasAffiliateExtras(slug);
- const breadcrumb={'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'ホーム',item:base},{'@type':'ListItem',position:2,name:'釣りGUIDE',item:`${base}/guide`},{'@type':'ListItem',position:3,name:a.title,item:`${base}/guide/${slug}`}]};
- const article={'@context':'https://schema.org','@type':'Article',headline:a.title,description:a.summary,inLanguage:'ja-JP',mainEntityOfPage:`${base}/guide/${slug}`,publisher:{'@id':`${base}/#organization`},isPartOf:{'@id':`${base}/#website`}};
+ const breadcrumb={'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'ホーム',item:base},{'@type':'ListItem',position:2,name:'釣りガイド',item:`${base}/guide`},{'@type':'ListItem',position:3,name:a.title,item:`${base}/guide/${slug}`}]};
+ const article={'@context':'https://schema.org','@type':'Article',headline:a.title,description:a.summary,inLanguage:'ja-JP',articleSection:guideTopics[a.topic],genre:a.articleType,timeRequired:`PT${a.readingMinutes}M`,mainEntityOfPage:`${base}/guide/${slug}`,publisher:{'@id':`${base}/#organization`},isPartOf:{'@id':`${base}/#website`}};
  return <div className="section pageTop">
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumb)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(article)}}/>
-  <div className="breadcrumb"><Link href="/">ホーム</Link> / <Link href="/guide">釣りGUIDE</Link> / {a.category}</div>
-  <div className="pageHero"><span>UOLINK GUIDE</span><h1>{a.title}</h1><p>{a.summary}</p></div>
+  <div className="breadcrumb"><Link href="/">ホーム</Link> / <Link href="/guide">釣りガイド</Link> / {a.category}</div>
+  <div className="pageHero"><span>{a.articleType} · 約{a.readingMinutes}分</span><h1>{a.title}</h1><p>{a.summary}</p></div>
   <section style={{margin:'24px 0',padding:'26px 28px',borderRadius:20,background:'#0e2f43',color:'#fff',border:'1px solid #1d4c66'}}><span style={{display:'inline-flex',padding:'5px 9px',borderRadius:999,background:'#fff',color:'#0e2f43',fontSize:11,fontWeight:900}}>結論</span><p style={{fontSize:'clamp(18px,2.3vw,23px)',lineHeight:1.7,fontWeight:900,margin:'13px 0 0'}}>{a.answer}</p></section>
-  <section className="factsGrid"><article><span>検索テーマ</span><b>{a.query}</b></article><article><span>カテゴリ</span><b>{a.category}</b></article><article><span>読む目安</span><b>約{Math.max(3,Math.ceil(JSON.stringify(a.sections).length/600))}分</b></article><article><span>UOLINK</span><b>釣行前の疑問解決</b></article></section>
+  <section className="factsGrid"><article><span>検索テーマ</span><b>{a.query}</b></article><article><span>カテゴリ</span><b>{guideTopics[a.topic]}</b></article><article><span>読む目安</span><b>約{a.readingMinutes}分</b></article><article><span>UOLINK</span><b>釣行前の疑問解決</b></article></section>
   <nav style={{margin:'20px 0 0',padding:'18px 20px',borderRadius:14,background:'#f4f8fa'}}><b style={{display:'block',marginBottom:8}}>この記事のポイント</b><div style={{display:'flex',gap:10,flexWrap:'wrap'}}>{a.sections.map((s,i)=><a key={s.heading} href={`#p${i+1}`} style={{fontSize:12,fontWeight:800,color:'#087bc4'}}>0{i+1} {s.heading}</a>)}</div></nav>
   <div style={{display:'grid',gap:18,marginTop:28}}>{a.sections.map((section,index)=><GuideSection key={section.heading} section={section} index={index}/>)}</div>
-  {advice&&!a.featured&&<section style={{margin:'20px 0 0',padding:'24px',borderRadius:18,background:'#fff8e8',border:'1px solid #f0ddb1'}}><span style={{fontSize:12,fontWeight:900,color:'#9a6b00'}}>PRACTICAL NOTE</span><h2 style={{margin:'6px 0 10px'}}>{advice.title}</h2><p style={{lineHeight:1.9}}>{advice.body}</p><div style={{display:'grid',gap:8}}>{advice.points.map(p=><div key={p} style={{padding:'10px 12px',background:'#fff',borderRadius:10,fontWeight:800}}>・{p}</div>)}</div></section>}
+  {advice&&!a.featured&&a.articleType==='GUIDE'&&<section style={{margin:'20px 0 0',padding:'24px',borderRadius:18,background:'#fff8e8',border:'1px solid #f0ddb1'}}><span style={{fontSize:12,fontWeight:900,color:'#9a6b00'}}>PRACTICAL NOTE</span><h2 style={{margin:'6px 0 10px'}}>{advice.title}</h2><p style={{lineHeight:1.9}}>{advice.body}</p><div style={{display:'grid',gap:8}}>{advice.points.map(p=><div key={p} style={{padding:'10px 12px',background:'#fff',borderRadius:10,fontWeight:800}}>・{p}</div>)}</div></section>}
   {a.sources?.length&&<section className="detailGrid"><article><h2>参考・確認先</h2><p>確認日：{a.verifiedAt}。営業・採捕ルールは釣行前に最新情報を確認してください。</p>{a.sources.map(source=><p key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a></p>)}</article></section>}
+  {parent&&<section className="detailGrid"><article><h2>このテーマを最初から知りたい方へ</h2><Link href={`/guide/${parent.slug}`}>{parent.title} →</Link></article></section>}
+  {questions.length>0&&<section className="detailGrid"><article><h2>このテーマのよくある疑問</h2>{questions.map(g=><p key={g.slug}><Link href={`/guide/${g.slug}`}>{g.title}</Link> <small>QUICK GUIDE · 約{g.readingMinutes}分</small></p>)}<Link href={`/guide?type=QUICK+GUIDE${a.methodTags[0]?`&method=${a.methodTags[0]}`:a.fishTags[0]?`&fish=${a.fishTags[0]}`:`&topic=${a.topic}`}`}>関連する疑問を探す →</Link></article></section>}
+  {(a.fishTags.length>0||a.methodTags.length>0)&&<section className="detailGrid"><article><h2>魚・釣り方から釣行へ</h2><div className="chips">{a.fishTags.slice(0,6).map(f=>{const fish=getFish(f);return fish?<Link key={f} href={`/fish/${f}`}>{fish.name}の図鑑</Link>:null})}{a.methodTags.slice(0,4).map(m=>{const method=getMethod(m);return method?<Link key={m} href={`/methods/${m}`}>{method.name}</Link>:null})}</div><p><Link href={a.fishTags[0]?`/spots?q=${encodeURIComponent(getFish(a.fishTags[0])?.name??'')}`:'/spots'}>この魚が対象の釣り場を探す →</Link></p></article></section>}
   {getRelatedGuides(slug).length>0&&<section className="detailGrid"><article><h2>あわせて読みたいGUIDE</h2>{getRelatedGuides(slug).map(g=><p key={g.slug}><Link href={`/guide/${g.slug}`}>{g.title} →</Link></p>)}</article></section>}
   {customTools?<GuideTripTools slug={slug}/>:hasAffiliatePicks(slug)?<GuideAffiliatePicks slug={slug}/>:hasAffiliateExtras(slug)?<GuideAffiliateExtras slug={slug}/>:<AffiliateProducts methods={guideMethods} limit={2} title="この記事の釣り方に合う道具候補"/>}
   <GuideProductCards slug={slug} hideExternal={customTools||curatedTools}/>

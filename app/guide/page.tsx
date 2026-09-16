@@ -1,19 +1,40 @@
 import Link from 'next/link';
-import {allGuides,getGuidesForFish} from '@/lib/all-guides';
-
-const catId=(cat:string)=>`guide-${cat.replace(/[\s・/]/g,'-')}`;
-export const metadata={title:'釣りGUIDE｜疑問から探す実践Q&A',alternates:{canonical:'/guide'},description:'PEは何号？オモリは何g？今月何が釣れる？釣り人が検索しやすい疑問に結論から答えるUOLINKの実践ガイド。'};
-
-export default async function GuidePage({searchParams}:{searchParams:Promise<{q?:string;fish?:string}>}){
- const params=await searchParams;const q=typeof params.q==='string'?params.q.trim():'';
- const pool=typeof params.fish==='string'?getGuidesForFish(params.fish):allGuides;
- const results=pool.filter(a=>`${a.title} ${a.query} ${a.summary} ${a.category}`.toLowerCase().includes(q.toLowerCase()));
- const cats=[...new Set(results.map(a=>a.category))];
- return <div id="top" className="section pageTop">
-  <style>{`.guideList article{grid-template-columns:42px 1fr;align-items:start}.guideList .guideCta{grid-column:2;justify-self:start;margin-top:2px}@media(max-width:700px){.guideList article{grid-template-columns:34px 1fr!important;gap:12px!important;padding:20px 16px!important}.guideList .guideCta{grid-column:2!important;width:auto!important;margin-top:4px!important;padding:10px 16px!important}.guideList h3{font-size:21px!important;line-height:1.45!important}.guideList p{line-height:1.7!important}}`}</style>
-  <div className="pageHero"><span>UOLINK GUIDE</span><h1>釣りGUIDE</h1><p>「何号？」「何g？」「いつ・どこで釣れる？」を、まず結論から。魚図鑑と釣り方ページにつながる実践Q&amp;A。</p></div>
-  <form action="/guide" className="filterBar"><input name="q" aria-label="魚名・釣り方・疑問からGUIDEを検索" defaultValue={q} placeholder="アジ・棚・仕掛け・危険魚など"/>{params.fish&&<input type="hidden" name="fish" value={params.fish}/>}<button type="submit">検索</button><Link href="/guide">すべて表示</Link></form><p role="status">{results.length}記事{q&&`：「${q}」の検索結果`}</p>{!results.length&&<p>一致する記事がありません。短い言葉で検索してください。</p>}
-  <details style={{marginBottom:24}}><summary style={{cursor:"pointer",fontWeight:800,padding:12}}>魚種・カテゴリから探す（{cats.length}カテゴリ）</summary><nav aria-label="釣りGUIDEの目次" style={{margin:'24px 0 38px',padding:'22px',borderRadius:20,background:'#eef7fb',border:'1px solid #d8eaf3'}}><span style={{display:'block',fontSize:12,fontWeight:900,letterSpacing:1.3,color:'#087bc4',marginBottom:7}}>CONTENTS</span><b style={{display:'block',fontSize:20,marginBottom:14}}>気になる項目へすぐ移動</b><div style={{display:'flex',gap:8,flexWrap:'wrap'}}>{cats.map(cat=><a key={cat} href={`#${catId(cat)}`} style={{display:'inline-flex',alignItems:'center',minHeight:40,padding:'8px 13px',borderRadius:999,background:'#fff',border:'1px solid #cfe2ec',fontSize:13,fontWeight:800,color:'#173449'}}>{cat} ↓</a>)}</div></nav></details>
-  {cats.map(cat=><section id={catId(cat)} key={cat} style={{margin:'36px 0',scrollMarginTop:90}}><div style={{marginBottom:14}}><span style={{fontSize:12,fontWeight:900,letterSpacing:1.4,color:'#087bc4'}}>SEARCH GUIDE</span><h2 style={{margin:'4px 0 0'}}>{cat}</h2></div><div className="listCards guideList">{results.filter(a=>a.category===cat).map((a,i)=><article key={a.slug}><div className="number">{String(i+1).padStart(2,'0')}</div><div><div className="chips"><span>{a.query}</span>{a.featured&&<span>図解付き実践GUIDE</span>}</div><h3 style={{fontSize:22,margin:'9px 0 8px'}}>{a.title}</h3><p>{a.summary}</p></div><Link href={`/guide/${a.slug}`} className="searchBtn guideCta">詳しく読む →</Link></article>)}</div><div style={{textAlign:'right',marginTop:12}}><a href="#top" style={{fontSize:12,fontWeight:800,color:'#087bc4'}}>ページ上部へ ↑</a></div></section>)}
- </div>
+import {allGuides} from '@/lib/all-guides';
+import {fish} from '@/lib/data';
+import {methodDetails} from '@/lib/method-registry';
+import {canonicalFishSlug} from '@/lib/fish-aliases';
+import {guideTopics,guideGearTags,filterGuides} from '@/lib/guide-taxonomy';
+import s from './page.module.css';
+export const metadata={title:'釣りガイド｜釣り方の基本から具体的な疑問まで',alternates:{canonical:'/guide'},description:'体系的に学べるGUIDEと、疑問に答えるQUICK GUIDEをまとめて検索。目的・魚・釣法・道具から必要な記事を探せます。'};
+type Params={q?:string;fish?:string;method?:string;gear?:string;type?:string;topic?:string;page?:string};
+export default async function GuidePage({searchParams}:{searchParams:Promise<Params>}){
+ const raw=await searchParams;const params=Object.fromEntries(Object.entries(raw).filter(([,v])=>typeof v==='string').map(([k,v])=>[k,v.slice(0,100)])) as Params;
+ const filters={...params,fish:params.fish?canonicalFishSlug(params.fish):undefined};
+ const labels=Object.fromEntries([...fish.map(f=>[f.slug,f.name]),...Object.values(methodDetails).map(m=>[m.slug,m.name])]);
+ const results=filterGuides(allGuides,filters,labels);const pages=Math.max(1,Math.ceil(results.length/24));const page=Math.max(1,Math.min(pages,Number.parseInt(params.page??'1',10)||1));
+ const pageHref=(n:number)=>{const p=new URLSearchParams(Object.entries(params).filter(([k,v])=>k!=='page'&&!!v) as [string,string][]);p.set('page',String(n));return `/guide?${p}`;};
+ const fishes=fish.filter(f=>allGuides.some(g=>g.fishTags.includes(f.slug)));
+ const methods=Object.values(methodDetails).filter(m=>allGuides.some(g=>g.methodTags.includes(m.slug)));
+ return <div className="section pageTop">
+  <div className="pageHero"><span>UOLINK GUIDE</span><h1>釣りガイド</h1><p>釣り方を最初から学ぶ。今の疑問をすぐ解決する。どちらもここから探せます。</p></div>
+  <form action="/guide" className={s.search}>
+   <label className={s.searchText}>知りたいこと<input name="q" defaultValue={params.q??''} placeholder="アジ・棚・仕掛け・結び目など"/></label>
+   <button type="submit" className="searchBtn">検索</button><Link href="/guide">条件をクリア</Link>
+   <details className={s.filters} open={!!(params.topic||params.type||params.fish||params.method||params.gear)}><summary>目的・魚・釣法・道具で絞り込む</summary><div className={s.filterGrid}>
+    <label>目的<select name="topic" defaultValue={params.topic??''}><option value="">すべての目的</option>{Object.entries(guideTopics).map(([id,name])=><option value={id} key={id}>{name}</option>)}</select></label>
+    <label>記事タイプ<select name="type" defaultValue={params.type??''}><option value="">両方を表示</option><option value="GUIDE">GUIDE · 体系的に学ぶ</option><option value="QUICK GUIDE">QUICK GUIDE · 疑問を解決</option></select></label>
+    <label>魚<select name="fish" defaultValue={filters.fish??''}><option value="">すべての魚</option>{fishes.map(f=><option value={f.slug} key={f.slug}>{f.name}</option>)}</select></label>
+    <label>釣法<select name="method" defaultValue={params.method??''}><option value="">すべての釣法</option>{methods.map(m=><option value={m.slug} key={m.slug}>{m.name}</option>)}</select></label>
+    <label>道具<select name="gear" defaultValue={params.gear??''}><option value="">すべての道具</option>{Object.entries(guideGearTags).map(([id,name])=><option value={id} key={id}>{name}</option>)}</select></label>
+   </div><button type="submit" className="searchBtn">この条件で探す</button></details>
+  </form>
+  <p className={s.hint}>GUIDEは体系的な解説、QUICK GUIDEは具体的な疑問への回答です。読了時間は本文量からの目安です。</p>
+  <p role="status">{results.length}記事{params.q&&`：「${params.q}」`}{pages>1&&` · ${page} / ${pages}ページ`}</p>
+  {!results.length&&<p>一致する記事がありません。短い言葉に変えるか、絞り込みを減らしてください。</p>}
+  <div className={s.cards}>{results.slice((page-1)*24,page*24).map(a=><article key={a.slug}>
+   <div className="chips"><span>{a.articleType}</span><span>約{a.readingMinutes}分</span><span>{guideTopics[a.topic]}</span></div>
+   <h2><Link href={`/guide/${a.slug}`}>{a.title}</Link></h2><p>{a.summary}</p><Link className={s.read} href={`/guide/${a.slug}`}>読む →</Link>
+  </article>)}</div>
+  {pages>1&&<nav aria-label="釣りガイドのページ" className={s.pagination}>{page>1&&<Link href={pageHref(page-1)}>← 前へ</Link>}<span>{page} / {pages}</span>{page<pages&&<Link href={pageHref(page+1)}>次へ →</Link>}</nav>}
+ </div>;
 }

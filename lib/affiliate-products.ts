@@ -39,12 +39,17 @@ export const tackleSearchTerms:Readonly<Record<string,Partial<Record<typeof tack
 export const tachiuoRodSearch=amazonSearchUrl('船 タチウオ テンヤ ロッド');
 
 export const tripTools:Readonly<Record<string,{name:string;reason:string;check:string;query:string}>>={
+ shortSabiki:{name:'短い全長のサビキ仕掛け',reason:'短い竿で魚とカゴを手元へ寄せやすくするために使います。針数より仕掛け全長を先に確認します。',check:'竿先の金具を巻き込まず、安全な足場で回収できる長さか確認。針・ハリスの号数も対象魚に合わせて選びます。',query:'ショート サビキ 仕掛け'},
+ tenya:{name:'船宿指定の号数のタチウオテンヤ',reason:'船内で沈下速度をそろえ、指定棚を探るために使用します。40号・50号を独断で替える前に船長へ確認します。',check:'予約時に指定号数と予備の必要数を確認。竿のオモリ負荷に適合するものを選んでください。',query:'船 タチウオ テンヤ 40号 50号'},
  cooler:{name:'魚と氷を一緒に入れるクーラー',reason:'釣った後すぐ冷やし、帰宅まで低温を保つために使います。容量だけでなく内寸も確認します。',check:'狙う魚の長さ、氷を入れた残りの容量、車まで運べる重量で比較。最初の小物釣りなら手持ちの物で足りる場合もあります。',query:'釣り クーラーボックス 内寸'},
  pliers:{name:'針外し用ロングノーズプライヤー',reason:'指を針先や魚の歯へ近づけずに針を外すための道具です。',check:'針を挟める先端形状と耐食性を確認。毒棘のある魚を安全に扱える保証にはなりません。',query:'釣り ロングノーズ プライヤー'},
  scissors:{name:'PEライン対応ハサミ',reason:'仕掛け交換の際、細いPEをほつれにくく切るために使います。',check:'普通のハサミでは切りにくいPEがあります。対応糸と刃先の収納方法を確認してください。',query:'PEライン ハサミ 釣り'},
  bag:{name:'魚用の丈夫な持ち帰り袋',reason:'魚と溶けた氷水を分け、クーラー内を整理しやすくします。',check:'魚が収まる長さと耐冷性を確認。袋に入れるだけでは冷却できないため、氷と保冷容器が必要です。',query:'魚 持ち帰り 袋 厚手'}
 };
 export const guideTripTools:Readonly<Record<string,readonly string[]>>={
+ 'sabiki-rig-too-long':['shortSabiki'],
+ 'leader-knot-catching-guide':['scissors'],
+ 'tachiuo-tenya-40-vs-50':['tenya'],
  'fishing-first-checklist':['pliers','scissors','cooler'],
  'fishing-cooler-plan':['cooler','bag'],
  'first-charter-boat-reservation':['cooler','pliers'],

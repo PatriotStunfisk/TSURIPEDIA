@@ -29,7 +29,7 @@ export default function Home(){
         <h1>釣りが、もっと<br/>好きになる。</h1>
         <p className={s.heroSub}>魚を知り、釣り方を学び、フィールドへ。</p>
         <p className={s.lead}>UOLINKは、魚図鑑・釣り方・釣り場・釣具・魚料理をひとつにつなぐ釣りの総合ガイドです。</p>
-        <div className={s.actions}><Link className={s.primary} href="/fish">魚を探す</Link><Link className={s.secondary} href="/guide">釣りGUIDEを見る</Link></div>
+        <div className={s.actions}><Link className={s.primary} href="/fish">魚を探す</Link><Link className={s.secondary} href="/guide">釣りガイドを見る</Link></div>
         <nav className={s.heroQuick}>{quickLinks.map(x=><Link href={x.href} key={x.href}><span>{x.icon}</span><b>{x.label}</b></Link>)}</nav>
       </div>
     </section>
@@ -37,7 +37,7 @@ export default function Home(){
     <section className={s.navGrid}>
       <Link className={s.navCard} href="/fish"><div className={s.navIcon}>◉</div><b>魚図鑑</b><span>旬・サイズ・見分け方まで</span></Link>
       <Link className={s.navCard} href="/methods"><div className={s.navIcon}>⌁</div><b>釣り方</b><span>仕掛け・手順・コツを解説</span></Link>
-      <Link className={s.navCard} href="/guide"><div className={s.navIcon}>?</div><b>釣りGUIDE</b><span>何号？何g？いつ釣れる？</span></Link>
+      <Link className={s.navCard} href="/guide"><div className={s.navIcon}>?</div><b>釣りガイド</b><span>何号？何g？いつ釣れる？</span></Link>
       <Link className={s.navCard} href="/spots"><div className={s.navIcon}>⌖</div><b>釣りスポット</b><span>魚種・設備・エリアから探す</span></Link>
       <Link className={s.navCard} href="/gear"><div className={s.navIcon}>▣</div><b>釣具</b><span>ロッド・リール・仕掛け</span></Link>
       <Link className={s.navCard} href="/cooking"><div className={s.navIcon}>◇</div><b>魚料理</b><span>捌き方・下処理・レシピ</span></Link>
@@ -51,7 +51,7 @@ export default function Home(){
     </div>
 
     <section className={s.section}>
-      <div className={s.head}><div><div className={s.eyebrow}>SEARCH GUIDE</div><h2>釣りに行くための実践GUIDE</h2></div><Link href="/guide">釣りGUIDEをすべて見る →</Link></div>
+      <div className={s.head}><div><div className={s.eyebrow}>SEARCH GUIDE</div><h2>釣りに行くための実践GUIDE</h2></div><Link href="/guide">釣りガイドをすべて見る →</Link></div>
       <p>{month}月の釣行準備に役立つ編集セレクト。時期は地域・水温で前後するため、直近の釣果と現地ルールを確認してください。</p><div className={s.guideGrid}>{guidePicks.map(a=><Link key={a.slug} href={`/guide/${a.slug}`} className={s.guideCard}><small>{a.query}</small><h3>{a.title}</h3><p>{a.answer}</p><b>答えを見る →</b></Link>)}</div>
     </section>
 
