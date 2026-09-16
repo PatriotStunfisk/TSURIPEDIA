@@ -310,9 +310,9 @@ test('practical guides expose valid diagrams, tables and reverse links without d
  assert.ok(getRelatedGuides('aji-sabiki-depth').every(g=>g.slug!=='aji-sabiki-depth'));
 });
 test('home selection is bounded, unique and excludes identification-only dangerous fish',()=>{
- const {selectHomeFish}=require('../lib/home-selection.ts');
+ const {selectHomeFish,selectHomeGuides}=require('../lib/home-selection.ts');
  for(let month=1;month<=12;month++){
-  const f=selectHomeFish(month);assert.equal(f.length,8);unique(f.map(x=>x.slug),'home fish');assert.ok(f.every(x=>!x.hazard?.identificationOnly));assert.deepEqual(selectHomeFish(month),f);
+  const f=selectHomeFish(month);assert.deepEqual(f.map(x=>x.slug),['tachiuo','aji','saba','buri','kisu','kasago','madai','kawahagi','aoriika','mebaru']);assert.equal(selectHomeGuides(month).length,6);unique(f.map(x=>x.slug),'home fish');assert.ok(f.every(x=>!x.hazard?.identificationOnly));assert.deepEqual(selectHomeFish(month),f);
  }
  assert.equal(selectHomeFish(9,6).length,6);
 });

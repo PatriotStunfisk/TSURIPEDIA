@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import {methods} from '@/lib/data';
-import {selectHomeFish} from '@/lib/home-selection';
-import {allGuides} from '@/lib/all-guides';
+import {selectHomeFish,selectHomeGuides} from '@/lib/home-selection';
 import FishVisual from '@/components/FishVisual';
 import s from './home.module.css';
 
@@ -19,8 +18,9 @@ const quickLinks=[
 ];
 
 export default function Home(){
-  const featured=selectHomeFish(new Date().getUTCMonth()+1);
-  const guidePicks=allGuides.slice(0,6);
+  const month=Number(new Intl.DateTimeFormat('en',{timeZone:'Asia/Tokyo',month:'numeric'}).format(new Date()));
+  const featured=selectHomeFish(month);
+  const guidePicks=selectHomeGuides(month);
   return <div className={s.home}>
     <section className={s.hero}>
       <div className={s.heroShade}></div>
@@ -45,14 +45,14 @@ export default function Home(){
 
     <div className={s.band} style={{background:'#e9f5fb'}}>
       <section className={s.section}>
-        <div className={s.head}><div><div className={s.eyebrow}>FEATURED FISH</div><h2>定番と季節の魚図鑑</h2></div><Link href="/fish">すべての魚図鑑を見る →</Link></div>
-        <p>編集部の定番セレクトと、季節の魚から8魚種をご紹介。アクセス数のランキングではありません。</p><p><Link href="/fish?hazard=1">釣れた魚を触る前に：危険魚を確認 →</Link></p><div className={s.fishGrid}>{featured.map(f=><Link key={f.slug} className={s.fishCard} href={`/fish/${f.slug}`}><div className={s.thumb} style={{'--tone':f.accent} as React.CSSProperties}><FishVisual imageSrc={f.media?.image} slug={f.slug} name={f.name}/><span className={s.season}>{f.season}</span></div><div className={s.fishInfo}><h3>{f.name}</h3><p>{f.en}</p><div className={s.chips}><span>{f.methods[0]}</span><span>{f.areas[0]}</span></div></div></Link>)}</div>
+        <div className={s.head}><div><div className={s.eyebrow}>FEATURED FISH</div><h2>まず知りたい基本10魚種</h2></div><Link href="/fish">すべての魚図鑑を見る →</Link></div>
+        <p>図鑑・釣り方・料理をまとめて読める基本10魚種をご紹介。すべての魚は魚図鑑一覧から探せます。</p><p><Link href="/fish?hazard=1">釣れた魚を触る前に：危険魚を確認 →</Link></p><div className={s.fishGrid}>{featured.map(f=><Link key={f.slug} className={s.fishCard} href={`/fish/${f.slug}`}><div className={s.thumb} style={{'--tone':f.accent} as React.CSSProperties}><FishVisual imageSrc={f.media?.image} slug={f.slug} name={f.name}/><span className={s.season}>{f.season}</span></div><div className={s.fishInfo}><h3>{f.name}</h3><p>{f.en}</p><div className={s.chips}><span>{f.methods[0]}</span><span>{f.areas[0]}</span></div></div></Link>)}</div>
       </section>
     </div>
 
     <section className={s.section}>
       <div className={s.head}><div><div className={s.eyebrow}>SEARCH GUIDE</div><h2>釣りに行くための実践GUIDE</h2></div><Link href="/guide">釣りGUIDEをすべて見る →</Link></div>
-      <div className={s.guideGrid}>{guidePicks.map(a=><Link key={a.slug} href={`/guide/${a.slug}`} className={s.guideCard}><small>{a.query}</small><h3>{a.title}</h3><p>{a.answer}</p><b>答えを見る →</b></Link>)}</div>
+      <p>{month}月の釣行準備に役立つ編集セレクト。時期は地域・水温で前後するため、直近の釣果と現地ルールを確認してください。</p><div className={s.guideGrid}>{guidePicks.map(a=><Link key={a.slug} href={`/guide/${a.slug}`} className={s.guideCard}><small>{a.query}</small><h3>{a.title}</h3><p>{a.answer}</p><b>答えを見る →</b></Link>)}</div>
     </section>
 
     <section className={`${s.section} ${s.flow}`}>
