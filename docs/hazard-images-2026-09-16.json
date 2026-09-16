@@ -1,0 +1,76 @@
+{
+  "mode": "builtin",
+  "tool": "image_gen.imagegen",
+  "date": "2026-09-16",
+  "fishPrompt": "Realistic scientific encyclopedia illustration, one complete fish facing left with margins, no text, no shadow or glow, genuine transparent RGBA PNG, 2:1 landscape. Preserve species-specific anatomy. Japanese prompt reiterated alpha 0 background; painted white/checkerboard versions rejected.",
+  "recipePrompt": "Original realistic food photograph of the specified cooked rabbitfish boneless fillet dish on a plate. No whole fish, venomous spines or raw preparation.",
+  "validation": "Original generated files copied byte-for-byte. All seven fish are RGBA 1774×887, alpha ranges 0–255. Species illustrations aid identification but are not sufficient for food safety decisions.",
+  "assets": [
+    {
+      "slug": "kusafugu",
+      "output": "public/images/fish/kusafugu.png",
+      "generatedFile": "exec-e7ab4d56-43dd-4a73-ad05-1cc57e67d3d6.png",
+      "subject": "Japanese grass puffer Takifugu alboplumbeus (クサフグ), non-inflated natural body, blunt head small beak mouth, dark olive back densely small pale spots, clear white belly, small fins near rear, rounded tail"
+    },
+    {
+      "slug": "aigo",
+      "output": "public/images/fish/aigo.png",
+      "generatedFile": "exec-0e9d765a-83fc-40ec-b186-c3e7941dce4d.png",
+      "subject": "Siganus fuscescens (アイゴ) mottled rabbitfish, deep laterally compressed oval olive-brown body with small pale flecks, tiny rabbitlike mouth, long continuous dorsal spiny fin, spiny pelvic and anal fins, moderately forked tail"
+    },
+    {
+      "slug": "gonzui",
+      "output": "public/images/fish/gonzui.png",
+      "generatedFile": "exec-b6cc3732-fbc3-4b4a-a7eb-1125b1d33e24.png",
+      "subject": "Japanese striped eel catfish Plotosus japonicus (ゴンズイ), elongated dark brown body with TWO narrow golden yellow longitudinal stripes on visible side, four pairs barbels totaling eight around mouth, dorsal spine, paired pectoral fins, tapering eel-like tail united with lower fin"
+    },
+    {
+      "slug": "haokoze",
+      "output": "public/images/fish/haokoze.png",
+      "generatedFile": "exec-6815aa0c-0ab4-4948-94f8-0722f3777cf4.png",
+      "subject": "Hypodytes rubripinnis (ハオコゼ), tiny Japanese redfin velvetfish, stocky mottled reddish brown body, disproportionately tall jagged continuous dorsal fin beginning above head, large fan pectoral fins, blunt face, short rounded tail"
+    },
+    {
+      "slug": "oniokoze",
+      "output": "public/images/fish/oniokoze.png",
+      "generatedFile": "exec-3039fc80-d08f-4aa0-bdc7-caa1efee4730.png",
+      "subject": "Inimicus japonicus (オニオコゼ), devil stinger, squat mottled brown knobbly camouflaged body, upturned broad head eyes on top, jagged dorsal venom spines, broad fan pectoral fins with separate lower finger rays visible, rounded tail"
+    },
+    {
+      "slug": "minokasago",
+      "output": "public/images/fish/minokasago.png",
+      "generatedFile": "exec-ac8b9190-1f09-4f6e-a70a-fcd6d5ec0e50.png",
+      "subject": "Pterois lunulata ミノカサゴ。褐色と白の縞模様の体、長い背ビレと大きな胸ビレ。尾ビレと尻ビレに黒い水玉模様は無い。尾ビレは無斑の半透明。下あごから腹部前方も無斑。"
+    },
+    {
+      "slug": "akaei",
+      "output": "public/images/fish/akaei.png",
+      "generatedFile": "exec-cdee39fa-14f8-4f6f-9c58-c092242762cb.png",
+      "subject": "Hemitrygon akajei (アカエイ), red stingray TOP VIEW slightly three quarter, brown rhombic disc with rounded corners and pointed snout, eyes and spiracles on top, very long slender whip tail entire visible curving gently, one small backwards pointing spine on tail near disc, pale reddish disc edges"
+    },
+    {
+      "slug": "aigo-shioyaki",
+      "output": "public/images/fish/aigo-shioyaki.png",
+      "generatedFile": "exec-3983469f-ea00-45ed-b781-16425bd563b2.png",
+      "subject": "salt grilled boneless rabbitfish fillets with golden browned skin and lemon, on ceramic plate"
+    },
+    {
+      "slug": "aigo-nitsuke",
+      "output": "public/images/fish/aigo-nitsuke.png",
+      "generatedFile": "exec-383a3067-ab95-44b2-a3cb-83e0fd5740b3.png",
+      "subject": "Japanese simmered rabbitfish boneless fillets in glossy soy ginger broth in shallow ceramic bowl"
+    },
+    {
+      "slug": "aigo-fry",
+      "output": "public/images/fish/aigo-fry.png",
+      "generatedFile": "exec-432507d5-2518-410f-9957-4968b91d10b8.png",
+      "subject": "golden panko breaded boneless rabbitfish fillet fry, cabbage and tartar sauce, plate"
+    },
+    {
+      "slug": "aigo-meuniere",
+      "output": "public/images/fish/aigo-meuniere.png",
+      "generatedFile": "exec-6aadabcd-82b8-4d86-bd85-44c19452a072.png",
+      "subject": "pan fried rabbitfish boneless fillet meuniere with browned butter lemon parsley, plate"
+    }
+  ]
+}

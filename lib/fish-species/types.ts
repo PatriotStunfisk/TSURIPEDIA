@@ -31,6 +31,7 @@ export type FishTableGuideData={lead:string;dishes:FishDish[]};
 // A species has one authoritative base record; recipes inherit its slug/name.
 export type FishSpeciesDefinition={
   base:Fish;
+  hazard?:FishHazard;
   quest?:import('../quest/types').QuestParameters;
   media?:{image:string;modelTilt?:number};
   detail?:FishDetail;
@@ -39,4 +40,12 @@ export type FishSpeciesDefinition={
   tableGuide?:FishTableGuideData;
   // Preserve the existing home-page selection order independently of catalog order.
   featuredOrder?:number;
+};
+
+// Edibility and display policy are separate: an edible species can require expert handling.
+export type FishHazard={
+ hazardLevel:'high'|'critical'; edible:'professional-only'|'processed-only'|'not-recommended';
+ cookingEnabled:boolean; identificationOnly:boolean; headline:string;
+ parts:{name:string;detail:string}[]; bareHands:string; handling:string[];
+ foodAdvice:string; identify:string[]; sources:{label:string;url:string}[];verifiedAt:string;
 };

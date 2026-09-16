@@ -11,7 +11,7 @@ export function getFishConnections(slug:string){
   const guides=[...new Map([
     ...(fish.guideSlugs??[]).flatMap(id=>{const guide=getGuide(id);return guide?[guide]:[]}),
     ...getGuidesForFish(slug),
-  ].map(guide=>[guide.slug,guide])).values()];
+  ].map(guide=>[guide.slug,guide])).values()].sort((a,b)=>Number(!!b.featured)-Number(!!a.featured));
   const hasEditorialRelated=fish.relatedSlugs!==undefined||fish.launch!==undefined;
   const candidates:FishProfile[]=fish.relatedSlugs!==undefined
     ? fish.relatedSlugs.flatMap(id=>{const related=getFishProfile(canonicalFishSlug(id));return related?[related]:[]})

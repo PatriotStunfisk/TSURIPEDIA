@@ -2,6 +2,12 @@ import type {Fish,FishSpeciesDefinition,FishTableGuideData} from './types';
 
 export function defineFishSpecies(definition:FishSpeciesDefinition):FishSpeciesDefinition{
   const {base,cooking,tableGuide}=definition;
+  if(definition.hazard){
+    const h=definition.hazard;
+    if(!h.cookingEnabled&&(cooking||tableGuide))throw new Error('Cooking disabled for hazardous fish: '+base.slug);
+    if(h.edible==='professional-only'&&h.cookingEnabled)throw new Error('No home recipes for professional-only fish: '+base.slug);
+    if(h.identificationOnly&&definition.quest?.enabled!==false)throw new Error('Identification-only fish must opt out of QUEST: '+base.slug);
+  }
   if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(base.slug))throw new Error('Invalid fish slug: '+base.slug);
   const tilt=definition.media?.modelTilt;
   if(tilt!==undefined&&(!Number.isFinite(tilt)||Math.abs(tilt)>Math.PI*2))throw new Error('Invalid model tilt: '+base.slug);
@@ -37,6 +43,7 @@ export function uniqueFishSlugs<T extends Fish>(fish:T[]):T[]{
 
 // Existing editorial cards take precedence. New recipes need no second card list.
 export function getSpeciesTableGuide(species:FishSpeciesDefinition):FishTableGuideData|undefined{
+  if(species.hazard?.cookingEnabled===false)return undefined;
   if(species.tableGuide)return {...species.tableGuide,dishes:species.tableGuide.dishes.map(dish=>{
     const recipe=species.cooking?.recipes.find(recipe=>recipe.slug===dish.recipe);
     return recipe?{...dish,name:recipe.name,src:recipe.image}:dish;
