@@ -47,10 +47,23 @@ test('every allowlisted cube is a separate unit cube; fish meshes stay visible',
   const mesh=j.meshes[child.mesh];assert.equal(mesh.primitives.length,1,file);
   const positions=j.accessors[mesh.primitives[0].attributes.POSITION];assert.deepEqual(positions.min,[-1,-1,-1],file);assert.deepEqual(positions.max,[1,1,1],file);assert.ok([14,24].includes(positions.count),file);
  }
- assert.equal(count,28);
+ assert.equal(count,44);
  const scene=new THREE.Group(),helper=new THREE.Group();helper.name='Cube_2';helper.add(new THREE.Mesh(new THREE.BoxGeometry(2,2,2),new THREE.MeshBasicMaterial()));scene.add(helper);
  assert.deepEqual(getModelCalibrationHelpers(scene,'/models/aji.glb'),[helper]);
  assert.deepEqual(getModelCalibrationHelpers(scene,'/models/amago.glb'),[]);
  helper.children[0].geometry=new THREE.SphereGeometry(1);
  assert.deepEqual(getModelCalibrationHelpers(scene,'/models/aji.glb'),[],'same-name noncube must stay');
 });
+
+test('all 27 September uploads are valid GLB assets and resolve from canonical species',()=>{
+ const {getSpeciesModelSrc}=require('../lib/fish-media.ts');
+ const aliases={akakamasu:'akakamas',katakuchiiwashi:'katakuchi',urumeiwashi:'urume'};
+ for(const name of ["aigo", "akaamadai", "akaei", "akakamasu", "akamutsu", "bora", "gomasaba", "gonzui", "haokoze", "ishidai", "ishigarei", "katakuchiiwashi", "kensakiika", "kidai", "kinmedai", "konoshiro", "kuromutsu", "kurosoi", "kusafugu", "makogarei", "medai", "minokasago", "oniokoze", "sayori", "shiira", "umazurahagi", "urumeiwashi"]){
+  const file=`/models/${name}.glb`,b=fs.readFileSync(path.join(root,'public',file));
+  assert.equal(b.toString('utf8',0,4),'glTF');assert.equal(b.readUInt32LE(4),2);assert.equal(b.readUInt32LE(8),b.length);
+  const j=JSON.parse(b.toString('utf8',20,20+b.readUInt32LE(12)));assert.ok(j.meshes.length);assert.ok(j.buffers.every(b=>!b.uri));assert.ok((j.images??[]).every(i=>!i.uri));
+  assert.equal(getSpeciesModelSrc(aliases[name]??name),file);
+ }
+});
+
+test('new front-facing and flatfish uploads start in readable orientations',()=>{const {modelInitialYaw,modelInitialPitch}=require('../lib/model-presentation.ts');for(const f of ['aigo','akamutsu','gomasaba','gonzui','haokoze','katakuchiiwashi','kinmedai','kurosoi','medai','shiira','umazurahagi'])assert.equal(modelInitialYaw(`/models/${f}.glb`),-Math.PI/2);for(const f of ['ishigarei','makogarei'])assert.equal(modelInitialPitch(`/models/${f}.glb`),Math.PI/2);assert.equal(modelInitialPitch('/models/aji.glb'),0);});

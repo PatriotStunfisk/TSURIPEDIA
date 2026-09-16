@@ -38,7 +38,8 @@ test('dedicated fish retain detailed and launch content',()=>{
 test('guide reverse links are exact and missing fish do not match',()=>{
   assert.ok(getGuidesForFish('aji').length);
   assert.equal(getGuidesForFish('aj').length,0);
-  for(const guide of getGuidesForFish('aji'))assert.ok(guide.related.some(x=>x.href.split(/[?#]/)[0]==='/fish/aji'));
+  for(const guide of getGuidesForFish('aji'))assert.ok(guide.fishTags.includes('aji'));
+  assert.ok(!getGuidesForFish('aji').some(g=>g.fishTags.includes('aj')&&!g.fishTags.includes('aji')));
 });
 test('only existing related fish and cooking pages are linked',()=>{
   const t=getFishConnections('tachiuo');assert.ok(t.related.some(x=>x.slug==='sawara'));
@@ -326,4 +327,10 @@ test('GUIDE related links resolve to public routes, including historical fish al
   pathname=pathname.replace(/^\/fish\/([^/]+)$/,(_,slug)=>'/fish/'+canonicalFishSlug(slug));
   assert.ok(routes.has(pathname),`${guide.slug}: ${link.href}`);
  }
+});
+
+test('uploaded model spelling aliases preserve canonical fish slugs',()=>{
+ const fs=require('node:fs'),os=require('node:os'),path=require('node:path');const dir=fs.mkdtempSync(path.join(os.tmpdir(),'uolink-model-alias-'));
+ try{fs.mkdirSync(path.join(dir,'models'));for(const [slug,file] of [['akakamas','akakamasu'],['katakuchi','katakuchiiwashi'],['urume','urumeiwashi']]){fs.writeFileSync(path.join(dir,'models',`${file}.glb`),'fixture');assert.equal(require('../lib/fish-media.ts').getSpeciesModelSrc(slug,dir),`/models/${file}.glb`);}}
+ finally{fs.rmSync(dir,{recursive:true,force:true});}
 });

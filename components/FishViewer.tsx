@@ -6,7 +6,7 @@ import {DRACOLoader} from 'three/addons/loaders/DRACOLoader.js';
 import {KTX2Loader} from 'three/addons/loaders/KTX2Loader.js';
 import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
 import {defaultModelAnchor,fightCameraDistance,type ModelHookAnchor} from '@/lib/quest/hook-anchor';
-import {getModelCalibrationHelpers,modelInitialYaw} from '@/lib/model-presentation';
+import {getModelCalibrationHelpers,modelInitialYaw,modelInitialPitch} from '@/lib/model-presentation';
 
 export default function FishViewer({modelSrc='/models/tachiuo.glb?v=20260912-1',contain=false,swim=false,modelTilt=0,hookAnchor,hookMarkerRef}:{modelSrc?:string;contain?:boolean;swim?:boolean;modelTilt?:number;hookAnchor?:ModelHookAnchor;hookMarkerRef?:{current:HTMLElement|null}}={}){
  const ref=useRef<HTMLDivElement>(null);
@@ -31,7 +31,7 @@ export default function FishViewer({modelSrc='/models/tachiuo.glb?v=20260912-1',
   let anchorNode:THREE.Object3D|undefined;
   const projectedAnchor=new THREE.Vector3();
   const centerAndFit=(obj:THREE.Object3D)=>{
-   obj.rotation.x+=modelTilt;
+   obj.rotation.x+=modelTilt+modelInitialPitch(modelSrc);
    obj.rotation.y+=modelInitialYaw(modelSrc);
    normalized.add(obj);
    obj.updateMatrixWorld(true);
