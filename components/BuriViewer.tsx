@@ -1,4 +1,5 @@
 'use client';
+import {hideModelCalibrationHelpers} from '@/lib/model-presentation';
 import {useEffect,useRef,useState} from 'react';
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
@@ -43,7 +44,7 @@ export default function BuriViewer(){
   loader.load('/models/fish/buri.glb?v=20260912-3',g=>{
    if(disposed)return;
    g.scene.traverse(o=>{if((o as THREE.Mesh).isMesh)(o as THREE.Mesh).frustumCulled=false});
-   centerAndFit(g.scene);setStatus('ready');setDetail('');
+   centerAndFit(g.scene);hideModelCalibrationHelpers(g.scene,'/models/buri.glb');setStatus('ready');setDetail('');
   },undefined,(err)=>{if(disposed)return;console.error('buri.glb load error',err);setStatus('failed');setDetail(err instanceof Error?err.message.slice(0,120):'GLBの解析に失敗しました')});
 
   const pd=(e:PointerEvent)=>{down=true;lastX=e.clientX;lastY=e.clientY;renderer?.domElement.setPointerCapture?.(e.pointerId)},pm=(e:PointerEvent)=>{if(!down)return;targetY+=(e.clientX-lastX)*.009;targetX=Math.max(-.65,Math.min(.65,targetX+(e.clientY-lastY)*.006));lastX=e.clientX;lastY=e.clientY},pu=()=>{down=false};renderer.domElement.addEventListener('pointerdown',pd);window.addEventListener('pointermove',pm);window.addEventListener('pointerup',pu);

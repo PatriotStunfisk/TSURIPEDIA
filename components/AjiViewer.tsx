@@ -1,7 +1,7 @@
 'use client';
 import {useEffect,useRef,useState} from 'react';
 import * as THREE from 'three';
-import {modelCalibrationNodes} from '@/lib/model-presentation';
+import {hideModelCalibrationHelpers} from '@/lib/model-presentation';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {DRACOLoader} from 'three/addons/loaders/DRACOLoader.js';
 import {KTX2Loader} from 'three/addons/loaders/KTX2Loader.js';
@@ -35,7 +35,7 @@ export default function AjiViewer(){
   const ktx2=new KTX2Loader();ktx2.setTranscoderPath('https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/libs/basis/');ktx2.detectSupport(renderer);
   const loader=new GLTFLoader();loader.setMeshoptDecoder(MeshoptDecoder);loader.setDRACOLoader(draco);loader.setKTX2Loader(ktx2);
   loader.load('/models/aji.glb?v=20260912-1',g=>{
-   if(disposed)return;g.scene.traverse(o=>{if((o as THREE.Mesh).isMesh)(o as THREE.Mesh).frustumCulled=false});centerAndFit(g.scene);for(const name of modelCalibrationNodes('/models/aji.glb')){const helper=g.scene.getObjectByName(name);if(helper)helper.visible=false;}setStatus('ready');setDetail('');
+   if(disposed)return;g.scene.traverse(o=>{if((o as THREE.Mesh).isMesh)(o as THREE.Mesh).frustumCulled=false});centerAndFit(g.scene);hideModelCalibrationHelpers(g.scene,'/models/aji.glb');setStatus('ready');setDetail('');
   },undefined,(err)=>{if(disposed)return;console.error('aji.glb load error',err);setStatus('failed');setDetail(err instanceof Error?err.message.slice(0,120):'GLBの解析に失敗しました')});
 
   const pd=(e:PointerEvent)=>{down=true;lastX=e.clientX;lastY=e.clientY;renderer?.domElement.setPointerCapture?.(e.pointerId)},pm=(e:PointerEvent)=>{if(!down)return;targetY+=(e.clientX-lastX)*.009;targetX=Math.max(-.65,Math.min(.65,targetX+(e.clientY-lastY)*.006));lastX=e.clientX;lastY=e.clientY},pu=()=>{down=false};renderer.domElement.addEventListener('pointerdown',pd);window.addEventListener('pointermove',pm);window.addEventListener('pointerup',pu);

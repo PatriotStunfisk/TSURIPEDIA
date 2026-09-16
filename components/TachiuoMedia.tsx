@@ -15,7 +15,7 @@ export default function TachiuoMedia(){
         <span>◎ AR予定</span>
       </div>
       <div className={s.media}>
-        {mode==='2d'?<FishVisual slug="tachiuo" name="タチウオ" className={s.realFish}/>:<FishViewer/>}
+        {mode==='2d'?<FishVisual slug="tachiuo" name="タチウオ" className={s.realFish}/>:<FishViewer contain/>}
       </div>
       <div className={s.note}>{mode==='2d'?'高精細2D図鑑画像':'ドラッグして360°観察'}</div>
     </div>
