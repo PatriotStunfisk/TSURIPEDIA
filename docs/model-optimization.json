@@ -1,0 +1,302 @@
+[
+  {
+    "file": "aigo.glb",
+    "original": 9529252,
+    "optimized": 3753128
+  },
+  {
+    "file": "ainame.glb",
+    "original": 24408088,
+    "optimized": 5616772
+  },
+  {
+    "file": "aji.glb",
+    "original": 8052108,
+    "optimized": 3145484
+  },
+  {
+    "file": "akaamadai.glb",
+    "original": 21698860,
+    "optimized": 4257244
+  },
+  {
+    "file": "akaei.glb",
+    "original": 11813328,
+    "optimized": 4931680
+  },
+  {
+    "file": "akahata.glb",
+    "original": 12972480,
+    "optimized": 5707812
+  },
+  {
+    "file": "akakamasu.glb",
+    "original": 19187448,
+    "optimized": 3412400
+  },
+  {
+    "file": "akamutsu.glb",
+    "original": 8567520,
+    "optimized": 3439716
+  },
+  {
+    "file": "anago.glb",
+    "original": 19549828,
+    "optimized": 3731088
+  },
+  {
+    "file": "aoriika.glb",
+    "original": 16782528,
+    "optimized": 9927316
+  },
+  {
+    "file": "ayu.glb",
+    "original": 12486436,
+    "optimized": 3350152
+  },
+  {
+    "file": "bora.glb",
+    "original": 8895848,
+    "optimized": 3961932
+  },
+  {
+    "file": "buri.glb",
+    "original": 11640312,
+    "optimized": 4904316
+  },
+  {
+    "file": "fish/buri.glb",
+    "original": 11640312,
+    "optimized": 4904316
+  },
+  {
+    "file": "gomasaba.glb",
+    "original": 6833812,
+    "optimized": 2204984
+  },
+  {
+    "file": "gonzui.glb",
+    "original": 7139560,
+    "optimized": 2400052
+  },
+  {
+    "file": "haokoze.glb",
+    "original": 10807948,
+    "optimized": 4788048
+  },
+  {
+    "file": "hirame.glb",
+    "original": 20724056,
+    "optimized": 4577492
+  },
+  {
+    "file": "houbou.glb",
+    "original": 21726724,
+    "optimized": 4218044
+  },
+  {
+    "file": "isaki.glb",
+    "original": 9708088,
+    "optimized": 4755820
+  },
+  {
+    "file": "ishidai.glb",
+    "original": 18914184,
+    "optimized": 4912052
+  },
+  {
+    "file": "ishigarei.glb",
+    "original": 15649908,
+    "optimized": 7349648
+  },
+  {
+    "file": "itoyoridai.glb",
+    "original": 9171976,
+    "optimized": 3981700
+  },
+  {
+    "file": "kanpachi.glb",
+    "original": 22332844,
+    "optimized": 5965444
+  },
+  {
+    "file": "kasago.glb",
+    "original": 9204572,
+    "optimized": 4208404
+  },
+  {
+    "file": "katakuchiiwashi.glb",
+    "original": 6419692,
+    "optimized": 1763588
+  },
+  {
+    "file": "kawahagi.glb",
+    "original": 7775052,
+    "optimized": 2909232
+  },
+  {
+    "file": "kensakiika.glb",
+    "original": 11510216,
+    "optimized": 6375780
+  },
+  {
+    "file": "kidai.glb",
+    "original": 20847640,
+    "optimized": 3729188
+  },
+  {
+    "file": "kijihata.glb",
+    "original": 14264468,
+    "optimized": 6712076
+  },
+  {
+    "file": "kinmedai.glb",
+    "original": 8337396,
+    "optimized": 3185428
+  },
+  {
+    "file": "kisu.glb",
+    "original": 8719240,
+    "optimized": 3667616
+  },
+  {
+    "file": "konoshiro.glb",
+    "original": 8259636,
+    "optimized": 3158572
+  },
+  {
+    "file": "kouika.glb",
+    "original": 9823204,
+    "optimized": 4947348
+  },
+  {
+    "file": "kurodai.glb",
+    "original": 21603108,
+    "optimized": 4684364
+  },
+  {
+    "file": "kuromutsu.glb",
+    "original": 8438324,
+    "optimized": 3413700
+  },
+  {
+    "file": "kurosoi.glb",
+    "original": 9894056,
+    "optimized": 3939160
+  },
+  {
+    "file": "kusafugu.glb",
+    "original": 8192856,
+    "optimized": 3387580
+  },
+  {
+    "file": "madai.glb",
+    "original": 7998144,
+    "optimized": 3190952
+  },
+  {
+    "file": "madako.glb",
+    "original": 11766896,
+    "optimized": 5007248
+  },
+  {
+    "file": "magochi.glb",
+    "original": 13526104,
+    "optimized": 6270092
+  },
+  {
+    "file": "mahaze.glb",
+    "original": 11395904,
+    "optimized": 2026836
+  },
+  {
+    "file": "maiwashi.glb",
+    "original": 18366028,
+    "optimized": 3585220
+  },
+  {
+    "file": "makogarei.glb",
+    "original": 9894500,
+    "optimized": 4786196
+  },
+  {
+    "file": "mebaru.glb",
+    "original": 7989288,
+    "optimized": 3469492
+  },
+  {
+    "file": "medai.glb",
+    "original": 7997240,
+    "optimized": 2646728
+  },
+  {
+    "file": "mejina.glb",
+    "original": 18911128,
+    "optimized": 4196184
+  },
+  {
+    "file": "minokasago.glb",
+    "original": 20676112,
+    "optimized": 3842172
+  },
+  {
+    "file": "nijimasu.glb",
+    "original": 2896892,
+    "optimized": 1875168
+  },
+  {
+    "file": "oniokoze.glb",
+    "original": 13741308,
+    "optimized": 6296604
+  },
+  {
+    "file": "oomonhata.glb",
+    "original": 8909376,
+    "optimized": 3277412
+  },
+  {
+    "file": "saba.glb",
+    "original": 8334808,
+    "optimized": 3592532
+  },
+  {
+    "file": "sawara.glb",
+    "original": 20830108,
+    "optimized": 5446224
+  },
+  {
+    "file": "sayori.glb",
+    "original": 17706136,
+    "optimized": 10050008
+  },
+  {
+    "file": "shiira.glb",
+    "original": 7030616,
+    "optimized": 2436032
+  },
+  {
+    "file": "suzuki.glb",
+    "original": 19381024,
+    "optimized": 3580220
+  },
+  {
+    "file": "tachiuo.glb",
+    "original": 8275520,
+    "optimized": 3885244
+  },
+  {
+    "file": "umazurahagi.glb",
+    "original": 8562852,
+    "optimized": 2827364
+  },
+  {
+    "file": "urumeiwashi.glb",
+    "original": 9973612,
+    "optimized": 1717548
+  },
+  {
+    "file": "yariika.glb",
+    "original": 6496548,
+    "optimized": 1919416
+  }
+]

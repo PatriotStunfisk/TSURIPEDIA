@@ -1,4 +1,5 @@
 'use client';
+import {modelAssetUrl} from '@/lib/model-assets';
 import {useEffect,useRef,useState} from 'react';
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
@@ -58,7 +59,7 @@ export default function FishViewer({modelSrc='/models/tachiuo.glb?v=20260912-1',
   const ktx2=new KTX2Loader();ktx2.setTranscoderPath('https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/libs/basis/');ktx2.detectSupport(renderer);
   const loader=new GLTFLoader();loader.setMeshoptDecoder(MeshoptDecoder);loader.setDRACOLoader(draco);loader.setKTX2Loader(ktx2);
 
-  loader.load(modelSrc,g=>{
+  loader.load(modelAssetUrl(modelSrc),g=>{
    if(disposed){disposeObject(g.scene);return;}
    for(const helper of getModelCalibrationHelpers(g.scene,modelSrc)){helper.removeFromParent();disposeObject(helper);}
    g.scene.traverse(o=>{if((o as THREE.Mesh).isMesh)(o as THREE.Mesh).frustumCulled=false});

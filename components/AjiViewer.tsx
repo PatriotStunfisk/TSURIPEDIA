@@ -1,4 +1,5 @@
 'use client';
+import {modelAssetUrl} from '@/lib/model-assets';
 import {useEffect,useRef,useState} from 'react';
 import * as THREE from 'three';
 import {hideModelCalibrationHelpers} from '@/lib/model-presentation';
@@ -34,7 +35,7 @@ export default function AjiViewer(){
   const draco=new DRACOLoader();draco.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.7/');
   const ktx2=new KTX2Loader();ktx2.setTranscoderPath('https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/libs/basis/');ktx2.detectSupport(renderer);
   const loader=new GLTFLoader();loader.setMeshoptDecoder(MeshoptDecoder);loader.setDRACOLoader(draco);loader.setKTX2Loader(ktx2);
-  loader.load('/models/aji.glb?v=20260912-1',g=>{
+  loader.load(modelAssetUrl('/models/aji.glb?v=20260912-1'),g=>{
    if(disposed)return;g.scene.traverse(o=>{if((o as THREE.Mesh).isMesh)(o as THREE.Mesh).frustumCulled=false});centerAndFit(g.scene);hideModelCalibrationHelpers(g.scene,'/models/aji.glb');setStatus('ready');setDetail('');
   },undefined,(err)=>{if(disposed)return;console.error('aji.glb load error',err);setStatus('failed');setDetail(err instanceof Error?err.message.slice(0,120):'GLBの解析に失敗しました')});
 
