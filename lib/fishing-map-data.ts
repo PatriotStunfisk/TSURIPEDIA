@@ -1,3 +1,4 @@
+import {verifiedMapExpansion} from './fishing-map-20260916';
 import {nationwideExpansion} from './fishing-map-nationwide-expansion';
 import {nationalSpots} from './fishing-map-national';
 import type {Prefecture} from './japan-regions';
@@ -12,7 +13,7 @@ export type FishingMapEntry={
   name:string;
   area:string;
   prefecture?:Prefecture;
-  terrain?:'pier'|'shore'|'beach'|'rock'|'boat'|'river'|'pond'|'raft'|'park'|'estuary'|'lake'|'port';
+  terrain?:'pier'|'shore'|'beach'|'rock'|'boat'|'river'|'pond'|'raft'|'park'|'estuary'|'lake'|'port'|'sea-pond';
   port?:string;
   officialUrl?:string;
   positionNote?:string;
@@ -47,6 +48,7 @@ export type FishingMapEntry={
 
 export const fishingMapEntries:FishingMapEntry[]=[
   ...nationalSpots,
+  ...verifiedMapExpansion,
   ...nationwideExpansion,
   ...kansaiSpots,
   ...batchSpots,

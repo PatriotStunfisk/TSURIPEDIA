@@ -19,3 +19,17 @@ test('cluster grouping preserves thousands of entries including coincident point
  assert.equal(clusterPoints([],p=>p).length,0);
  assert.notEqual(markerKind({type:'boat',terrain:'boat'}),markerKind({type:'area',terrain:'boat'}));
 });
+
+test('new verified places have sources, intentional reference pins and valid relationships',()=>{
+ const {verifiedMapExpansion}=require('../lib/fishing-map-20260916.ts');
+ assert.equal(verifiedMapExpansion.filter(e=>e.type==='spot').length,12);assert.equal(verifiedMapExpansion.filter(e=>e.type==='boat').length,6);
+ for(const e of verifiedMapExpansion){assert.ok(e.sources.length&&e.verifiedAt);assert.ok(e.positionNote&&e.lat&&e.lng);for(const slug of e.fishSlugs??[])assert.ok(fishCatalog.some(f=>f.slug===slug),slug);for(const slug of e.methodSlugs??[])assert.ok(methodDetails[slug],slug);for(const slug of e.guideSlugs??[])assert.ok(getGuide(slug),slug)}
+ assert.ok(!matchesSpot(verifiedMapExpansion.find(e=>e.slug==='abashiri-yobito-wakasagi'),{}));
+});
+test('medium zoom separates markers earlier while wide zoom remains clustered',()=>{
+ const {clusterCellSize}=require('../lib/spot-markers.ts');
+ const nearby=[{slug:'a',x:1,y:1},{slug:'b',x:32,y:1}];
+ assert.equal(clusterPoints(nearby,p=>p,undefined,clusterCellSize(6)).length,1);
+ assert.equal(clusterPoints(nearby,p=>p,undefined,clusterCellSize(8)).length,2);
+ assert.ok(clusterCellSize(11)<clusterCellSize(8));
+});

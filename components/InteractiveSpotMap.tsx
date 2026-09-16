@@ -4,7 +4,7 @@ import type * as Leaflet from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import {hasCoordinates} from '@/lib/spot-distance';
 import type {FishingMapEntry} from '@/lib/fishing-map-data';
-import {markerKinds,markerKind,clusterPoints} from '@/lib/spot-markers';
+import {markerKinds,markerKind,clusterPoints,clusterCellSize} from '@/lib/spot-markers';
 import s from './SpotMap.module.css';
 
 type Props={entries:FishingMapEntry[];selected?:string;onSelect:(slug:string)=>void};
@@ -33,7 +33,10 @@ export default function InteractiveSpotMap({entries,selected,onSelect}:Props){
    if(cancelled||!map.current||!markers.current)return;
    markers.current.clearLayers();const points=entries.filter(hasCoordinates);
    const instance=map.current,layer=markers.current;
-   const groups=clusterPoints(points,p=>instance.project([p.lat,p.lng],instance.getZoom()),selected);
+   const pointKey=points.map(e=>`${e.slug}:${e.lat}:${e.lng}`).sort().join('|');
+   // Fit before projecting clusters; cancel an older zoom when filters change.
+   if(points.length&&pointKey!==fittedPoints.current){fittedPoints.current=pointKey;instance.stop();instance.fitBounds(L.latLngBounds(points.map(e=>[e.lat,e.lng])),{padding:[30,30],maxZoom:13,animate:false});}
+   const groups=clusterPoints(points,p=>instance.project([p.lat,p.lng],instance.getZoom()),selected,clusterCellSize(instance.getZoom()));
    for(const group of groups){
     if(group.length>1){
      const center=L.latLngBounds(group.map(e=>[e.lat,e.lng])).getCenter();
@@ -48,8 +51,6 @@ export default function InteractiveSpotMap({entries,selected,onSelect}:Props){
     const marker=L.marker([entry.lat,entry.lng],{title:text.textContent,alt:text.textContent,zIndexOffset:chosen?1000:0,icon:L.divIcon({className:`${s.mapPin} ${chosen?s.selectedPin:''}`,html:`<span style="display:block;border-radius:50%;background:${kind.color}">${kind.symbol}</span>`,iconSize:[30,30],iconAnchor:[15,15]})}).bindTooltip(text).on('click',()=>callback.current(entry.slug)).addTo(layer);
     marker.getElement()?.setAttribute('aria-label',text.textContent);
    }
-   const pointKey=points.map(e=>`${e.slug}:${e.lat}:${e.lng}`).sort().join('|');
-   if(points.length&&pointKey!==fittedPoints.current){map.current.fitBounds(L.latLngBounds(points.map(e=>[e.lat,e.lng])),{padding:[30,30],maxZoom:13});fittedPoints.current=pointKey;}
   });return ()=>{cancelled=true};
  },[entries,ready,selected,revision]);
  return <div className={s.mapFrame}><div ref={root} className={s.liveMap} aria-label="釣り場の地図"/>{failed&&<p role="status">地図を読み込めない部分があります。下の一覧と公式アクセス案内からも探せます。</p>}{!entries.some(hasCoordinates)&&<p role="status">現在の条件には位置登録のある地点がありません。下の一覧で地域と公式案内を確認できます。</p>}<div className={s.legend} aria-label="地図の凡例">{Object.entries(markerKinds).map(([id,k])=><span key={id}><i style={{background:k.color}}>{k.symbol}</i>{k.label}</span>)}</div><p>数字の丸印は近接地点の一覧を開きます。黒枠は選択中。マーカーは登録地点の参考位置です。釣り可能範囲や入場口を示すものではありません。地図を拡大しても未登録の釣り場は表示されません。</p></div>;
