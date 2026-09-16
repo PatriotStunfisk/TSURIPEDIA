@@ -20,3 +20,17 @@ test('invalid anchor coordinates are rejected before entering the renderer',()=>
  for(const value of [-.1,1.1,NaN,Infinity])assert.throws(()=>defineFishSpecies({base:{slug:'test'},quest:{hook:{mouthAnchor:{x:value,y:.5}}}}),/hook anchor/);
  assert.throws(()=>defineFishSpecies({base:{slug:'test'},quest:{hook:{modelAnchor:{x:.1,y:.5,z:2}}}}),/hook anchor/);
 });
+
+test('approach brings the rendered mouth to stationary bait across species and viewports',()=>{
+ const {approachFraction,contactOffset,easeOffset}=require('../lib/quest/hook-anchor.ts');
+ for(const style of ['standard','sabiki','eging','kawahagi']){
+  assert.equal(approachFraction(0,style),0);assert.equal(approachFraction(100,style),1);
+  if(['eging','kawahagi'].includes(style))assert.equal(approachFraction(65,style),1);
+  for(const anchor of [{x:40,y:150},{x:330,y:30},{x:180,y:400}]){
+   const bait={x:160,y:220};let offset={x:0,y:0};
+   for(let n=0;n<90;n++){const mouth={x:anchor.x+offset.x,y:anchor.y+offset.y};offset=easeOffset(offset,contactOffset(mouth,bait,offset,1),16);}
+   assert.ok(Math.abs(anchor.x+offset.x-bait.x)<.01);assert.ok(Math.abs(anchor.y+offset.y-bait.y)<.01);
+   const release=easeOffset(offset,{x:0,y:0},16);assert.ok(Math.abs(release.x)<Math.abs(offset.x));
+  }
+ }
+});

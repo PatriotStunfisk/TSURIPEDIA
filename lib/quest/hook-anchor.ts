@@ -17,3 +17,17 @@ export function containedAnchor(width:number,height:number,imageWidth:number,ima
  const w=imageWidth*scale,h=imageHeight*scale;
  return {x:(width-w)/2+w*anchor.x,y:(height-h)/2+h*anchor.y};
 }
+
+// Contact is resolved against the rendered mouth (including 3D projection and
+// contain letterboxing), not the image center. Keep the bait fixed until hooked.
+export function approachFraction(attraction:number,style:string){
+ const threshold=style==='eging'||style==='kawahagi'?65:95;
+ const t=Math.max(0,Math.min(1,attraction/threshold));return t*t*(3-2*t);
+}
+export function contactOffset(mouth:MouthAnchor,bait:MouthAnchor,current:MouthAnchor,progress:number){
+ return {x:(bait.x-mouth.x+current.x)*progress,y:(bait.y-mouth.y+current.y)*progress};
+}
+export function easeOffset(current:MouthAnchor,target:MouthAnchor,elapsedMs:number){
+ const alpha=1-Math.exp(-Math.max(0,Math.min(100,elapsedMs))/65);
+ return {x:current.x+(target.x-current.x)*alpha,y:current.y+(target.y-current.y)*alpha};
+}
