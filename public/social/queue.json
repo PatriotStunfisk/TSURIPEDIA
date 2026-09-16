@@ -1,0 +1,371 @@
+{
+  "account": "uo_link",
+  "mode": "draft-only",
+  "campaign": "guide-launch-202609",
+  "drafts": [
+    {
+      "id": "aji-sabiki-depth--points",
+      "guideSlug": "aji-sabiki-depth",
+      "guideTitle": "アジのサビキは何mの棚？仕掛け・コマセ・釣れない時の探し方",
+      "headline": "アジが釣れない？まず棚を変える",
+      "topic": "points",
+      "tips": [
+        "撒き餌と仕掛けを同じ棚へ",
+        "一度に大きく変えず、1mほどずつ探る"
+      ],
+      "text": "アジが釣れない？まず棚を変える\n\n・撒き餌と仕掛けを同じ棚へ\n・一度に大きく変えず、1mほどずつ探る\n\n詳しい手順・注意点はこちら\nhttps://uolink.vercel.app/guide/aji-sabiki-depth?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1\n#釣り",
+      "url": "https://uolink.vercel.app/guide/aji-sabiki-depth?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1",
+      "image": "/images/fish/aji-real-v2.png",
+      "fishName": "マアジ",
+      "thumbnail": "/social/aji-sabiki-depth--points.png",
+      "thumbnailVariant": "fish-v1",
+      "alt": "UOLINK GUIDE：アジが釣れない？まず棚を変える。マアジのイラスト。",
+      "sources": [
+        {
+          "label": "Honda釣り倶楽部：アジのサビキ道具",
+          "url": "https://www.honda.co.jp/fishing/enjoy/season/season-201906/tool/"
+        },
+        {
+          "label": "シマノ：特徴と釣り方",
+          "url": "https://fish.shimano.com/ja-JP/content/beginners/fish/aji/index.html"
+        }
+      ],
+      "status": "draft",
+      "dayOffset": 0,
+      "suggestedTime": "07:30",
+      "timezone": "Asia/Tokyo",
+      "maxWeightedLength": 163
+    },
+    {
+      "id": "dangerous-fish-first-check--points",
+      "guideSlug": "dangerous-fish-first-check",
+      "guideTitle": "釣れた魚を触る前に：危険魚の見分け方・毒棘・食用の判断",
+      "headline": "知らない魚は触る前に確認",
+      "topic": "points",
+      "tips": [
+        "鋭い棘・歯・長い尾がないか",
+        "魚の名前を確実に判断できるか"
+      ],
+      "text": "知らない魚は触る前に確認\n\n・鋭い棘・歯・長い尾がないか\n・魚の名前を確実に判断できるか\n\n詳しい手順・注意点はこちら\nhttps://uolink.vercel.app/guide/dangerous-fish-first-check?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1\n#釣り",
+      "url": "https://uolink.vercel.app/guide/dangerous-fish-first-check?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1",
+      "image": "/images/fish/kusafugu.png",
+      "fishName": "クサフグ",
+      "thumbnail": "/social/dangerous-fish-first-check--points.png",
+      "thumbnailVariant": "fish-v1",
+      "alt": "UOLINK GUIDE：知らない魚は触る前に確認。クサフグのイラスト。",
+      "sources": [
+        {
+          "label": "厚生労働省：フグの素人調理は危険",
+          "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000090748.html"
+        },
+        {
+          "label": "日本中毒情報センター：魚刺傷について",
+          "url": "https://www.j-poison-ic.jp/report/160831/"
+        },
+        {
+          "label": "シマノ：危険な魚",
+          "url": "https://fish.shimano.com/ja-JP/content/beginners/fishing/poison/index.html"
+        }
+      ],
+      "status": "draft",
+      "dayOffset": 0,
+      "suggestedTime": "15:00",
+      "timezone": "Asia/Tokyo",
+      "maxWeightedLength": 151
+    },
+    {
+      "id": "tachiuo-tenya-action--points",
+      "guideSlug": "tachiuo-tenya-action",
+      "guideTitle": "タチウオテンヤの誘い方：棚合わせ・前アタリ・掛けるまでの実践手順",
+      "headline": "タチウオの前アタリで慌てない",
+      "topic": "points",
+      "tips": [
+        "イワシを曲げずに固定し、誘い後に止める",
+        "前アタリを即合わせせず、引き込みを見て掛ける"
+      ],
+      "text": "タチウオの前アタリで慌てない\n\n・イワシを曲げずに固定し、誘い後に止める\n・前アタリを即合わせせず、引き込みを見て掛ける\n\n詳しい手順・注意点はこちら\nhttps://uolink.vercel.app/guide/tachiuo-tenya-action?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1\n#釣り",
+      "url": "https://uolink.vercel.app/guide/tachiuo-tenya-action?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1",
+      "image": "/images/fish/tachiuo-real-v2.png",
+      "fishName": "タチウオ",
+      "thumbnail": "/social/tachiuo-tenya-action--points.png",
+      "thumbnailVariant": "fish-v1",
+      "alt": "UOLINK GUIDE：タチウオの前アタリで慌てない。タチウオのイラスト。",
+      "sources": [
+        {
+          "label": "Honda釣り倶楽部：テンヤの誘いと掛け方",
+          "url": "https://www.honda.co.jp/fishing/enjoy/season/season-202009/step-3/"
+        }
+      ],
+      "status": "draft",
+      "dayOffset": 0,
+      "suggestedTime": "20:30",
+      "timezone": "Asia/Tokyo",
+      "maxWeightedLength": 183
+    },
+    {
+      "id": "saba-sabiki-cooling--points",
+      "guideSlug": "saba-sabiki-cooling",
+      "guideTitle": "堤防のサバ釣り：サビキの棚・横走りへの対応・保冷の手順",
+      "headline": "サバは釣る前から保冷の準備",
+      "topic": "points",
+      "tips": [
+        "氷を釣り開始前に用意する",
+        "1匹掛かったら早めに回収"
+      ],
+      "text": "サバは釣る前から保冷の準備\n\n・氷を釣り開始前に用意する\n・1匹掛かったら早めに回収\n\n詳しい手順・注意点はこちら\nhttps://uolink.vercel.app/guide/saba-sabiki-cooling?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1\n#釣り",
+      "url": "https://uolink.vercel.app/guide/saba-sabiki-cooling?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1",
+      "image": "/images/fish/saba-real-v2-new.png",
+      "fishName": "マサバ",
+      "thumbnail": "/social/saba-sabiki-cooling--points.png",
+      "thumbnailVariant": "fish-v1",
+      "alt": "UOLINK GUIDE：サバは釣る前から保冷の準備。マサバのイラスト。",
+      "sources": [
+        {
+          "label": "シマノ：特徴と釣り方",
+          "url": "https://fish.shimano.com/ja-JP/content/beginners/fish/saba/index.html"
+        },
+        {
+          "label": "厚生労働省：ヒスタミンによる食中毒",
+          "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000130677.html"
+        }
+      ],
+      "status": "draft",
+      "dayOffset": 1,
+      "suggestedTime": "07:30",
+      "timezone": "Asia/Tokyo",
+      "maxWeightedLength": 147
+    },
+    {
+      "id": "eging-shakuri-count--points",
+      "guideSlug": "eging-shakuri-count",
+      "guideTitle": "エギングは何回しゃくる？アオリイカが抱くフォールと合わせの実践",
+      "headline": "イカが抱くのは止めた後",
+      "topic": "points",
+      "tips": [
+        "底が分かるエギを選ぶ",
+        "しゃくりの後は静かに沈める"
+      ],
+      "text": "イカが抱くのは止めた後\n\n・底が分かるエギを選ぶ\n・しゃくりの後は静かに沈める\n\n詳しい手順・注意点はこちら\nhttps://uolink.vercel.app/guide/eging-shakuri-count?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1\n#釣り",
+      "url": "https://uolink.vercel.app/guide/eging-shakuri-count?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1",
+      "image": "/images/fish/aoriika-real.png",
+      "fishName": "アオリイカ",
+      "thumbnail": "/social/eging-shakuri-count--points.png",
+      "thumbnailVariant": "fish-v1",
+      "alt": "UOLINK GUIDE：イカが抱くのは止めた後。アオリイカのイラスト。",
+      "sources": [
+        {
+          "label": "シマノ：エギング実釣編",
+          "url": "https://fish.shimano.com/ja-JP/content/fishingstyle/article/salt_beginner/eging/fishing.html"
+        }
+      ],
+      "status": "draft",
+      "dayOffset": 1,
+      "suggestedTime": "15:00",
+      "timezone": "Asia/Tokyo",
+      "maxWeightedLength": 141
+    },
+    {
+      "id": "tairaba-bottom-contact--points",
+      "guideSlug": "tairaba-bottom-contact",
+      "guideTitle": "タイラバの着底を見逃さない：道具・即巻き・食い込みの基本",
+      "headline": "タイラバは着底からが勝負",
+      "topic": "points",
+      "tips": [
+        "着底の一瞬に集中する",
+        "最初のコツコツで止めずに巻く"
+      ],
+      "text": "タイラバは着底からが勝負\n\n・着底の一瞬に集中する\n・最初のコツコツで止めずに巻く\n\n詳しい手順・注意点はこちら\nhttps://uolink.vercel.app/guide/tairaba-bottom-contact?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1\n#釣り",
+      "url": "https://uolink.vercel.app/guide/tairaba-bottom-contact?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1",
+      "image": "/images/fish/madai-real-v2.png",
+      "fishName": "マダイ",
+      "thumbnail": "/social/tairaba-bottom-contact--points.png",
+      "thumbnailVariant": "fish-v1",
+      "alt": "UOLINK GUIDE：タイラバは着底からが勝負。マダイのイラスト。",
+      "sources": [
+        {
+          "label": "DAIWA：タイラバの釣り方",
+          "url": "https://www.daiwa.com/jp/special/products/tairubber"
+        }
+      ],
+      "status": "draft",
+      "dayOffset": 1,
+      "suggestedTime": "20:30",
+      "timezone": "Asia/Tokyo",
+      "maxWeightedLength": 145
+    },
+    {
+      "id": "kisu-retrieve-speed--points",
+      "guideSlug": "kisu-retrieve-speed",
+      "guideTitle": "シロギスはどの速さで引く？ちょい投げの餌・地形・アタリの探し方",
+      "headline": "キスのアタリが出た距離を覚える",
+      "topic": "points",
+      "tips": [
+        "砂地を選び、底を引きすぎない",
+        "アタリが出た距離と角度を再現する"
+      ],
+      "text": "キスのアタリが出た距離を覚える\n\n・砂地を選び、底を引きすぎない\n・アタリが出た距離と角度を再現する\n\n詳しい手順・注意点はこちら\nhttps://uolink.vercel.app/guide/kisu-retrieve-speed?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1\n#釣り",
+      "url": "https://uolink.vercel.app/guide/kisu-retrieve-speed?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1",
+      "image": "/images/fish/kisu-real-v2.png?v=20260911-1",
+      "fishName": "シロギス",
+      "thumbnail": "/social/kisu-retrieve-speed--points.png",
+      "thumbnailVariant": "fish-v1",
+      "alt": "UOLINK GUIDE：キスのアタリが出た距離を覚える。シロギスのイラスト。",
+      "sources": [
+        {
+          "label": "シマノ：シロギス引き釣りの手順",
+          "url": "https://fish.shimano.com/ja-JP/content/fishingstyle/article/nage-iroha/hioki/hikitsuri-04.html"
+        }
+      ],
+      "status": "draft",
+      "dayOffset": 2,
+      "suggestedTime": "07:30",
+      "timezone": "Asia/Tokyo",
+      "maxWeightedLength": 163
+    },
+    {
+      "id": "shore-jigging-jig-weight--points",
+      "guideSlug": "shore-jigging-jig-weight",
+      "guideTitle": "ショアジギングのジグは何g？青物を探す重さ・棚・誘いの選び方",
+      "headline": "青物が釣れないときの泳層",
+      "topic": "points",
+      "tips": [
+        "竿の適合重量内で底を把握する",
+        "ジグを替える前に泳層を変える"
+      ],
+      "text": "青物が釣れないときの泳層\n\n・竿の適合重量内で底を把握する\n・ジグを替える前に泳層を変える\n\n詳しい手順・注意点はこちら\nhttps://uolink.vercel.app/guide/shore-jigging-jig-weight?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1\n#釣り",
+      "url": "https://uolink.vercel.app/guide/shore-jigging-jig-weight?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1",
+      "image": "/images/fish/buri-real-v2.png?v=20260911-2",
+      "fishName": "ブリ",
+      "thumbnail": "/social/shore-jigging-jig-weight--points.png",
+      "thumbnailVariant": "fish-v1",
+      "alt": "UOLINK GUIDE：青物が釣れないときの泳層。ブリのイラスト。",
+      "sources": [
+        {
+          "label": "シマノ：特徴と釣り方",
+          "url": "https://fish.shimano.com/ja-JP/content/beginners/fish/buri/index.html"
+        }
+      ],
+      "status": "draft",
+      "dayOffset": 2,
+      "suggestedTime": "15:00",
+      "timezone": "Asia/Tokyo",
+      "maxWeightedLength": 153
+    },
+    {
+      "id": "hirame-livebait-observation--points",
+      "guideSlug": "hirame-livebait-observation",
+      "guideTitle": "ヒラメの泳がせ釣り：前アタリ・食い込み・合わせを判断する",
+      "headline": "ヒラメの合わせは変化を読む",
+      "topic": "points",
+      "tips": [
+        "餌を元気な状態で投入する",
+        "小刻みな震えから持続する重みへの変化を見る"
+      ],
+      "text": "ヒラメの合わせは変化を読む\n\n・餌を元気な状態で投入する\n・小刻みな震えから持続する重みへの変化を見る\n\n詳しい手順・注意点はこちら\nhttps://uolink.vercel.app/guide/hirame-livebait-observation?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1\n#釣り",
+      "url": "https://uolink.vercel.app/guide/hirame-livebait-observation?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1",
+      "image": "/images/fish/hirame-real.png",
+      "fishName": "ヒラメ",
+      "thumbnail": "/social/hirame-livebait-observation--points.png",
+      "thumbnailVariant": "fish-v1",
+      "alt": "UOLINK GUIDE：ヒラメの合わせは変化を読む。ヒラメのイラスト。",
+      "sources": [
+        {
+          "label": "シマノ：特徴と釣り方",
+          "url": "https://fish.shimano.com/ja-JP/content/beginners/fish/hirame/index.html"
+        }
+      ],
+      "status": "draft",
+      "dayOffset": 2,
+      "suggestedTime": "20:30",
+      "timezone": "Asia/Tokyo",
+      "maxWeightedLength": 165
+    },
+    {
+      "id": "kasago-ana-rig--points",
+      "guideSlug": "kasago-ana-rig",
+      "guideTitle": "カサゴの穴釣り仕掛け：ブラクリ・餌・根掛かりを減らす探り方",
+      "headline": "カサゴを掛けたら底から離す",
+      "topic": "points",
+      "tips": [
+        "穴を探して危険な消波ブロックへ乗らない",
+        "掛かった最初に底から離す"
+      ],
+      "text": "カサゴを掛けたら底から離す\n\n・穴を探して危険な消波ブロックへ乗らない\n・掛かった最初に底から離す\n\n詳しい手順・注意点はこちら\nhttps://uolink.vercel.app/guide/kasago-ana-rig?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1\n#釣り",
+      "url": "https://uolink.vercel.app/guide/kasago-ana-rig?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1",
+      "image": "/images/fish/kasago-real-v2.png?v=20260911-1",
+      "fishName": "カサゴ",
+      "thumbnail": "/social/kasago-ana-rig--points.png",
+      "thumbnailVariant": "fish-v1",
+      "alt": "UOLINK GUIDE：カサゴを掛けたら底から離す。カサゴのイラスト。",
+      "sources": [
+        {
+          "label": "シマノ：特徴と釣り方",
+          "url": "https://fish.shimano.com/ja-JP/content/beginners/fish/kasago/index.html"
+        }
+      ],
+      "status": "draft",
+      "dayOffset": 3,
+      "suggestedTime": "07:30",
+      "timezone": "Asia/Tokyo",
+      "maxWeightedLength": 161
+    },
+    {
+      "id": "chinu-field-notes--points",
+      "guideSlug": "chinu-field-notes",
+      "guideTitle": "クロダイのフカセ釣り：棚と撒き餌を合わせ、掛けた後に根から離す",
+      "headline": "クロダイは餌と撒き餌を同じ流れへ",
+      "topic": "points",
+      "tips": [
+        "開始前に底と取り込み場所を調べる",
+        "付け餌と撒き餌を同じ流れへ"
+      ],
+      "text": "クロダイは餌と撒き餌を同じ流れへ\n\n・開始前に底と取り込み場所を調べる\n・付け餌と撒き餌を同じ流れへ\n\n詳しい手順・注意点はこちら\nhttps://uolink.vercel.app/guide/chinu-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1\n#釣り",
+      "url": "https://uolink.vercel.app/guide/chinu-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1",
+      "image": "/images/fish/chinu-real.png",
+      "fishName": "クロダイ",
+      "thumbnail": "/social/chinu-field-notes--points.png",
+      "thumbnailVariant": "fish-v1",
+      "alt": "UOLINK GUIDE：クロダイは餌と撒き餌を同じ流れへ。クロダイのイラスト。",
+      "sources": [
+        {
+          "label": "Honda釣り倶楽部：クロダイの仕掛け",
+          "url": "https://www.honda.co.jp/fishing/picture-book/kurodai/trap01/"
+        }
+      ],
+      "status": "draft",
+      "dayOffset": 3,
+      "suggestedTime": "15:00",
+      "timezone": "Asia/Tokyo",
+      "maxWeightedLength": 163
+    },
+    {
+      "id": "suzuki-field-notes--points",
+      "guideSlug": "suzuki-field-notes",
+      "guideTitle": "シーバスのルアー釣り：泳層・流れ・エラ洗いから取り込みまで",
+      "headline": "シーバスは投げる前に流れを見る",
+      "topic": "points",
+      "tips": [
+        "投げる前に流れと取り込み場所を見る",
+        "表層から順に泳層を下げる"
+      ],
+      "text": "シーバスは投げる前に流れを見る\n\n・投げる前に流れと取り込み場所を見る\n・表層から順に泳層を下げる\n\n詳しい手順・注意点はこちら\nhttps://uolink.vercel.app/guide/suzuki-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1\n#釣り",
+      "url": "https://uolink.vercel.app/guide/suzuki-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1",
+      "image": "/images/fish/suzuki-real.png",
+      "fishName": "スズキ",
+      "thumbnail": "/social/suzuki-field-notes--points.png",
+      "thumbnailVariant": "fish-v1",
+      "alt": "UOLINK GUIDE：シーバスは投げる前に流れを見る。スズキのイラスト。",
+      "sources": [
+        {
+          "label": "シマノ：特徴と釣り方",
+          "url": "https://fish.shimano.com/ja-JP/content/beginners/fish/suzuki/index.html"
+        }
+      ],
+      "status": "draft",
+      "dayOffset": 3,
+      "suggestedTime": "20:30",
+      "timezone": "Asia/Tokyo",
+      "maxWeightedLength": 161
+    }
+  ]
+}
