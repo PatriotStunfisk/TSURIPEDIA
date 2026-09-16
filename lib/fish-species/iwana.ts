@@ -87,9 +87,9 @@ export default defineFishSpecies({
       "生息環境"
     ],
     "related": [
-      "yamame",
-      "amago",
-      "nijimasu"
+      "ヤマメ",
+      "アマゴ",
+      "ニジマス"
     ],
     "methodLinks": [
       {

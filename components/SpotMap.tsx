@@ -6,22 +6,23 @@ import Link from 'next/link';
 import {japanRegions,prefectures,type JapanRegion} from '@/lib/japan-regions';
 import {matchesSpot} from '@/lib/spot-filters';
 import {useMemo,useState,useRef} from 'react';
-import {fishingMapEntries,fishingMapFish,type MapEntryType} from '@/lib/fishing-map-data';
+import type {FishingMapEntry,MapEntryType} from '@/lib/fishing-map-data';
 import s from './SpotMap.module.css';
 import InteractiveSpotMap from './InteractiveSpotMap';
 import {distanceKm,hasCoordinates,sortByDistance,type Coordinates} from '@/lib/spot-distance';
 
-export default function SpotMap({initialQuery='',initialKind='all',fishNames={},methodNames={},guideNames={},cookingSlugs=[]}:{initialKind?:'all'|MapEntryType;initialQuery?:string;fishNames?:Record<string,string>;methodNames?:Record<string,string>;guideNames?:Record<string,string>;cookingSlugs?:string[]}){
+export default function SpotMap({mapEntries,initialQuery='',initialKind='all',fishNames={},methodNames={},guideNames={},cookingSlugs=[]}:{mapEntries:FishingMapEntry[];initialKind?:'all'|MapEntryType;initialQuery?:string;fishNames?:Record<string,string>;methodNames?:Record<string,string>;guideNames?:Record<string,string>;cookingSlugs?:string[]}){
  const [selectedTypes,setSelectedTypes]=useState<SpotPrimaryType[]>(Object.keys(markerKinds) as SpotPrimaryType[]);
  const detailRef=useRef<HTMLElement>(null);
  const [listLimit,setListLimit]=useState(20);
  const selectSpot=(slug:string)=>{setSelected(slug);requestAnimationFrame(()=>detailRef.current?.scrollIntoView({block:'start',behavior:'smooth'}));};
  const [kind,setKind]=useState<'all'|MapEntryType>(initialKind);
  const [region,setRegion]=useState('');const [prefecture,setPrefecture]=useState('');const [method,setMethod]=useState('');const [terrain,setTerrain]=useState('');const [beginner,setBeginner]=useState(false);const [family,setFamily]=useState(false);
+ const fishingMapFish=useMemo(()=>['すべて',...new Set(mapEntries.flatMap(e=>e.fish))],[mapEntries]);
  const [fish,setFish]=useState('すべて');
  const [query,setQuery]=useState(initialQuery);
  const [showClosed,setShowClosed]=useState(false);
- const [selected,setSelected]=useState(fishingMapEntries[0]?.slug??'');
+ const [selected,setSelected]=useState(mapEntries[0]?.slug??'');
  const [origin,setOrigin]=useState<Coordinates|null>(null);
  const [locating,setLocating]=useState(false);
  const [locationMessage,setLocationMessage]=useState('');
@@ -30,7 +31,7 @@ export default function SpotMap({initialQuery='',initialKind='all',fishNames={},
   setLocating(true);setLocationMessage('現在地の取得を待っています…');
   navigator.geolocation.getCurrentPosition(p=>{const point={lat:p.coords.latitude,lng:p.coords.longitude};setLocating(false);if(!hasCoordinates(point)){setLocationMessage('位置を確認できませんでした。地域名で検索してください。');return;}setOrigin(point);setSelected('');setLocationMessage('現在の検索条件で、位置登録のある釣り場を近い順に表示しています。距離は直線距離です。');},error=>{setLocating(false);setLocationMessage(error.code===1?'現在地の利用が許可されませんでした。地域名で検索できます。':'現在地を取得できませんでした。屋外で試すか、地域名で検索してください。');},{enableHighAccuracy:false,timeout:10000,maximumAge:60000});
  }
- const filteredEntries=useMemo(()=>fishingMapEntries.filter(e=>selectedTypes.includes(markerKind(e))&&matchesSpot(e,{region,prefecture,method,terrain,beginner,family,showClosed,kind,fish,query})),[selectedTypes,region,prefecture,method,terrain,beginner,family,showClosed,kind,fish,query]);
+ const filteredEntries=useMemo(()=>mapEntries.filter(e=>selectedTypes.includes(markerKind(e))&&matchesSpot(e,{region,prefecture,method,terrain,beginner,family,showClosed,kind,fish,query})),[mapEntries,selectedTypes,region,prefecture,method,terrain,beginner,family,showClosed,kind,fish,query]);
  const entries=useMemo(()=>origin?sortByDistance(filteredEntries,origin):filteredEntries,[filteredEntries,origin]);
  const active=entries.find(e=>e.slug===selected)??entries[0];
  return <section className={s.wrap}>

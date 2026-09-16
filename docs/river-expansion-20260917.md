@@ -26,3 +26,6 @@ TypeScript・lint・build成功。104/104テスト成功。HTTPで703ページ�
 - https://susaki.fishing/price/
 - https://www.city.susaki.lg.jp/life/detail.php?hdnKey=5953
 - https://www.japan47go.travel/en/detail/539dfd71-6b57-4403-82af-76645430ad5e
+
+## 公開後の最終調整
+`9e0303c` / Vercel `GebottTdy6fB3ih14BxVoVk8P8di` はProduction Ready。本番イワナ・船宿検索を確認。MAPのデータ集約をサーバー側で実行し、クライアントへ必要な地点データだけを渡す形へ変更。イワナの関連魚ラベルを日本語に修正。最終build成功、MAPの船宿検索・イワナ検索・関連リンクを実ブラウザで確認しconsole errorなし。
