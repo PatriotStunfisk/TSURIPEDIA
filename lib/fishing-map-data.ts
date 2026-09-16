@@ -1,3 +1,5 @@
+import {riverMapExpansion} from './fishing-map-river-expansion';
+import {fishSpecies} from './fish-species';
 import {platformMapExpansion} from './fishing-map-20260917';
 import {classifySpot,type SpotPrimaryType} from './spot-classification';
 import {verifiedMapExpansion} from './fishing-map-20260916';
@@ -51,7 +53,7 @@ export type FishingMapEntry={
 };
 
 const sourceEntries:FishingMapEntry[]=[
-  ...platformMapExpansion,
+  ...platformMapExpansion,...riverMapExpansion,
   ...nationalSpots,
   ...verifiedMapExpansion,
   ...nationwideExpansion,
@@ -115,7 +117,8 @@ const sourceEntries:FishingMapEntry[]=[
   }
 ];
 
-export const fishingMapEntries:FishingMapEntry[]=sourceEntries.map(classifySpot);
+const exactFishNames=new Map(fishSpecies.map(f=>[f.base.name,f.base.slug]));
+export const fishingMapEntries:FishingMapEntry[]=sourceEntries.map(e=>classifySpot({...e,fishSlugs:[...new Set([...(e.fishSlugs??[]),...e.fish.flatMap(name=>exactFishNames.has(name)?[exactFishNames.get(name)!]:[])])]}));
 
 export const fishingMapFish=['すべて',...new Set(fishingMapEntries.flatMap(e=>e.fish))];
 export const getSpotsForFish=(slug:string)=>fishingMapEntries.filter(e=>!e.closed&&e.fishSlugs?.includes(slug));

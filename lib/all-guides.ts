@@ -1,3 +1,4 @@
+import {riverExpansionGuides} from './guide-articles-river-expansion';
 import {freshwaterGuides} from './guide-articles-freshwater';
 import {quickGuides} from './guide-articles-quick';
 import {guideEditorial} from './guide-editorial';
@@ -23,7 +24,7 @@ import {extraGuideArticles6} from '@/lib/guide-articles-extra6';
 import {extraGuideArticles7} from '@/lib/guide-articles-extra7';
 
 const sourceGuides=[
-  ...freshwaterGuides,
+  ...freshwaterGuides,...riverExpansionGuides,
   ...quickGuides,
   ...tripPlanningGuides,
   ...practicalGuides,

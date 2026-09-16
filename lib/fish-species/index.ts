@@ -1,3 +1,4 @@
+import iwana from './iwana';
 import yamame from './yamame';
 import wakasagi from './wakasagi';
 import kusafugu from './kusafugu';
@@ -66,7 +67,7 @@ import type {FishSpeciesDefinition} from './types';
 
 // Add one import and one entry here for a new full species profile.
 // Keep this order stable: it is also the encyclopedia order for all species.
-export const fishSpecies:FishSpeciesDefinition[]=[tachiuo,aji,madai,buri,kisu,kasago,saba,iwashi,suzuki,chinu,kawahagi,hirame,mebaru,aoriika,madako,kanpachi,sawara,amago,nijimasu,ayu,unagi,anago,isaki,magochi,mejina,haze,ainame,kijihata,akahata,oomonhata,houbo,itoyoridai,kouika,yariika,akakamas,katakuchi,urume,konoshiro,bora,shiira,makogarei,umazurahagi,kidai,kensakiika,sayori,gomasaba,kurosoi,ishidai,ishigarei,akaamadai,kinmedai,akamutsu,kuromutsu,medai,kusafugu,aigo,gonzui,haokoze,oniokoze,minokasago,akaei,yamame,wakasagi];
+export const fishSpecies:FishSpeciesDefinition[]=[tachiuo,aji,madai,buri,kisu,kasago,saba,iwashi,suzuki,chinu,kawahagi,hirame,mebaru,aoriika,madako,kanpachi,sawara,amago,nijimasu,ayu,unagi,anago,isaki,magochi,mejina,haze,ainame,kijihata,akahata,oomonhata,houbo,itoyoridai,kouika,yariika,akakamas,katakuchi,urume,konoshiro,bora,shiira,makogarei,umazurahagi,kidai,kensakiika,sayori,gomasaba,kurosoi,ishidai,ishigarei,akaamadai,kinmedai,akamutsu,kuromutsu,medai,kusafugu,aigo,gonzui,haokoze,oniokoze,minokasago,akaei,yamame,wakasagi,iwana];
 uniqueFishSlugs(fishSpecies.map(species=>species.base));
 const speciesBySlug=new Map(fishSpecies.map(species=>[species.base.slug,species]));
 export function getFishSpecies(slug:string){return speciesBySlug.get(slug)}
