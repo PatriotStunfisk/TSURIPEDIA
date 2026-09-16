@@ -1,3 +1,4 @@
+import {nationalMapGrowth} from './fishing-map-national-growth';
 import {riverMapExpansion} from './fishing-map-river-expansion';
 import {fishSpecies} from './fish-species';
 import {platformMapExpansion} from './fishing-map-20260917';
@@ -53,7 +54,7 @@ export type FishingMapEntry={
 };
 
 const sourceEntries:FishingMapEntry[]=[
-  ...platformMapExpansion,...riverMapExpansion,
+  ...platformMapExpansion,...riverMapExpansion,...nationalMapGrowth,
   ...nationalSpots,
   ...verifiedMapExpansion,
   ...nationwideExpansion,
