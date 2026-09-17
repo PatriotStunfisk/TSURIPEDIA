@@ -1078,8 +1078,8 @@ export const boatMapGrowth:FishingMapEntry[]=[
     "type": "boat",
     "primaryType": "boat",
     "terrain": "boat",
-    "lat": 34.25484979377512,
-    "lng": 134.71398600082398,
+    "lat": 34.2541615,
+    "lng": 134.7115399,
     "fish": [
       "マダイ"
     ],
@@ -1093,8 +1093,8 @@ export const boatMapGrowth:FishingMapEntry[]=[
     "googleQuery": "明陽丸 福良港",
     "officialUrl": "https://meiyoumaru.jp/",
     "verifiedAt": "2026-09-17",
-    "positionNote": "DAIWAの船着き場マーカー。集合場所は予約した便の船宿案内を優先し、周辺岸壁での釣り許可とは区別してください。",
-    "access": "福良港の船宿指定場所へ。受付・駐車位置は予約時に確認。",
+    "positionNote": "船宿公式アクセス地図の案内位置。集合場所は予約した便の船宿案内を優先し、周辺岸壁での釣り許可とは区別してください。",
+    "access": "公式案内の係留地は福良港内・波戸の浜。受付・駐車位置は予約時に確認。",
     "field": "淡路島の福良港から鳴門海峡方面へ出る遊漁船。ジギングやタイラバの便に合わせ、潮に対応する重さを準備します。",
     "bestFor": [
       "マダイの船釣り"
@@ -1131,8 +1131,8 @@ export const boatMapGrowth:FishingMapEntry[]=[
     "type": "boat",
     "primaryType": "boat",
     "terrain": "boat",
-    "lat": 34.25484979377512,
-    "lng": 134.71398600082398,
+    "lat": 34.2543721,
+    "lng": 134.7125208,
     "fish": [
       "メバル",
       "マアジ",
@@ -1148,9 +1148,9 @@ export const boatMapGrowth:FishingMapEntry[]=[
     "kids": false,
     "note": "福良漁港を拠点に鳴門海峡の釣りを案内する船宿。餌釣りとルアー釣りでは装備が変わるため、釣り物を決めて相談します。",
     "googleQuery": "戎丸 福良漁港",
-    "officialUrl": "https://ameblo.jp/evisu7/",
+    "officialUrl": "https://ebisu-maru.jp/",
     "verifiedAt": "2026-09-17",
-    "positionNote": "DAIWAの船着き場マーカー。集合場所は予約した便の船宿案内を優先し、周辺岸壁での釣り許可とは区別してください。",
+    "positionNote": "船宿公式アクセス地図の戎丸マーカー。集合場所は予約した便の船宿案内を優先し、周辺岸壁での釣り許可とは区別してください。",
     "access": "福良漁港の船宿指定場所へ。受付・駐車位置は予約時に確認。",
     "field": "福良漁港を拠点に鳴門海峡の釣りを案内する船宿。餌釣りとルアー釣りでは装備が変わるため、釣り物を決めて相談します。",
     "bestFor": [
@@ -1175,7 +1175,7 @@ export const boatMapGrowth:FishingMapEntry[]=[
     "sources": [
       {
         "label": "船宿公式：営業・釣り物・予約",
-        "url": "https://ameblo.jp/evisu7/"
+        "url": "https://ebisu-maru.jp/"
       },
       {
         "label": "DAIWA：船宿・船着き場位置",
