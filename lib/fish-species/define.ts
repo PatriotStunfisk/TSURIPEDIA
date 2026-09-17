@@ -2,6 +2,8 @@ import type {Fish,FishSpeciesDefinition,FishTableGuideData} from './types';
 
 export function defineFishSpecies(definition:FishSpeciesDefinition):FishSpeciesDefinition{
   const {base,cooking,tableGuide}=definition;
+  if(definition.cookingOmission&&(cooking||tableGuide))throw new Error('Recipes conflict with cooking omission: '+base.slug);
+  if(definition.cookingOmission&&(!definition.cookingOmission.note.trim()||!definition.cookingOmission.sources.length))throw new Error('Cooking omission needs a reason and sources: '+base.slug);
   if(definition.hazard){
     const h=definition.hazard;
     if(!h.cookingEnabled&&(cooking||tableGuide))throw new Error('Cooking disabled for hazardous fish: '+base.slug);
@@ -44,7 +46,7 @@ export function uniqueFishSlugs<T extends Fish>(fish:T[]):T[]{
 
 // Existing editorial cards take precedence. New recipes need no second card list.
 export function getSpeciesTableGuide(species:FishSpeciesDefinition):FishTableGuideData|undefined{
-  if(species.hazard?.cookingEnabled===false)return undefined;
+  if(species.cookingOmission||species.hazard?.cookingEnabled===false)return undefined;
   if(species.representativeRecipes?.length)return {lead:species.tableGuide?.lead??'',dishes:species.representativeRecipes.map(slug=>{
     const recipe=species.cooking!.recipes.find(r=>r.slug===slug)!;const original=species.tableGuide?.dishes.find(d=>d.recipe===slug);
     return original?{...original,name:recipe.name,src:recipe.image}:{name:recipe.name,src:recipe.image,emoji:'🍽️',desc:recipe.summary,recipe:slug};

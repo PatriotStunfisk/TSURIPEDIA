@@ -1,0 +1,266 @@
+[
+  {
+    "slug": "maeso",
+    "kind": "fish",
+    "image": "/images/fish/maeso-profile.webp",
+    "sha256": "9039895d2143f4b7444f18b2c3aa2b7f5d886f2673bc38b4655d5c5872efd428",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "datsu",
+    "kind": "fish",
+    "image": "/images/fish/datsu-profile.webp",
+    "sha256": "44aefe02bc9fb96fecc8d60cd6ca15e18a86a872af3964de6d36d19bf0689a4f",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "blackbass",
+    "kind": "fish",
+    "image": "/images/fish/blackbass-profile.webp",
+    "sha256": "d57cd7501c6bb0b1022ee072721b484f2798cf6b8a16cdbe40e4ccfb421859d9",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "bluegill",
+    "kind": "fish",
+    "image": "/images/fish/bluegill-profile.webp",
+    "sha256": "6c2a01c7dd8632d031c50512c29172f02f896a2f3a11a9f29018fd35dcd96d1f",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "rouninaji",
+    "kind": "fish",
+    "image": "/images/fish/rouninaji-profile.webp",
+    "sha256": "f8f32112e7d0ede219a3d9b49cb4126687d5193d448e202f1d21438cd5b7506e",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "kihada",
+    "kind": "fish",
+    "image": "/images/fish/kihada-profile.webp",
+    "sha256": "38dea32aad1db3e0b9b848309866a998e3bd76bbebda68ab960ee8e07f21f3a6",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "itou",
+    "kind": "fish",
+    "image": "/images/fish/itou-profile.webp",
+    "sha256": "788ba37f084b60a6c80f16f129d05fbed5e3f3c56a237cb439562c9623004e49",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "akame",
+    "kind": "fish",
+    "image": "/images/fish/akame-profile.webp",
+    "sha256": "01a4e35d951bb24291180081d9e8334be76f94321d2468ddd890aa502814579f",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "kurokajiki",
+    "kind": "fish",
+    "image": "/images/fish/kurokajiki-profile.webp",
+    "sha256": "a040ea41450931242c388096faa697ba98633b2b1ed1666494a76f177b195ac3",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "maeso-satsumaage",
+    "kind": "recipe",
+    "image": "/images/cooking/maeso-satsumaage.webp",
+    "sha256": "6a88cae46bf0d8ff200dc0c233762e679f4c1d6428ad95db9a04d0abbf52d3e8",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "maeso-tsumire",
+    "kind": "recipe",
+    "image": "/images/cooking/maeso-tsumire.webp",
+    "sha256": "2d29d04e9dc4a205996eec7e7780ec785528485c452000110fba802caadc908e",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "maeso-kamaboko",
+    "kind": "recipe",
+    "image": "/images/cooking/maeso-kamaboko.webp",
+    "sha256": "f5233f059aa4563fb6ee5c55ec77f6f643b8d7ddc64b79ad15c17d752e65d3c3",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "maeso-shinjo",
+    "kind": "recipe",
+    "image": "/images/cooking/maeso-shinjo.webp",
+    "sha256": "03943bf94e8034dded8354b0413adf227ad78bd2fc1aa648da0d993fcd94fa6e",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "blackbass-fry",
+    "kind": "recipe",
+    "image": "/images/cooking/blackbass-fry.webp",
+    "sha256": "a96892180d7f12dae9e61cc629599b58409302cf66aba9c8209e1e3cf222bb47",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "blackbass-karaage",
+    "kind": "recipe",
+    "image": "/images/cooking/blackbass-karaage.webp",
+    "sha256": "9b3660a1ba09338978d15d11b2a2d686147eb138ca1c31833fead80098a2cd94",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "blackbass-meuniere",
+    "kind": "recipe",
+    "image": "/images/cooking/blackbass-meuniere.webp",
+    "sha256": "0d3879b03c74eb6c6a9ed33000714a0daa07d4bdccbaaa7df371db2b10dbd8aa",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "blackbass-tomato",
+    "kind": "recipe",
+    "image": "/images/cooking/blackbass-tomato.webp",
+    "sha256": "9f376f63f003fad592389726be35c93e2b04f5a6f774169c0b9e2ef453e11561",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "bluegill-fry",
+    "kind": "recipe",
+    "image": "/images/cooking/bluegill-fry.webp",
+    "sha256": "6e72b886d23c0d5106dc59c170c2ba5f540eceb6b5d06b34de5a73a77a6965e4",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "bluegill-karaage",
+    "kind": "recipe",
+    "image": "/images/cooking/bluegill-karaage.webp",
+    "sha256": "3ae363e78e3f6737342cbd3dc721f52137fe567b192c958ab6542921471ccf99",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "bluegill-meuniere",
+    "kind": "recipe",
+    "image": "/images/cooking/bluegill-meuniere.webp",
+    "sha256": "abed42829017d054f75b685135d55a7dea80c5d307676959fac676cd2bd15c61",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "bluegill-nanban",
+    "kind": "recipe",
+    "image": "/images/cooking/bluegill-nanban.webp",
+    "sha256": "9e9491bd71749c9debfb932bd3e5d0590f2188066572fff4e655e4f195733add",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "datsu-fry",
+    "kind": "recipe",
+    "image": "/images/cooking/datsu-fry.webp",
+    "sha256": "afd66d2f833f1026f9e78013c01a8d273ef24c41cac129adc36bc442db844358",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "datsu-nanban",
+    "kind": "recipe",
+    "image": "/images/cooking/datsu-nanban.webp",
+    "sha256": "cf430a9606620bb17fc8b16bee40496850309772622e3a0f9ca78bc1b6c47c0e",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "datsu-shioyaki",
+    "kind": "recipe",
+    "image": "/images/cooking/datsu-shioyaki.webp",
+    "sha256": "8d46ccac18fdd6df417472c399861306c6bc3c62d52d8974073dfa8c409b4e86",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "datsu-tempura",
+    "kind": "recipe",
+    "image": "/images/cooking/datsu-tempura.webp",
+    "sha256": "d046a983fcc2421bcf9224d6154bba14b4c6ccf6665bfd422ecc01f1792037bd",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "kihada-sashimi",
+    "kind": "recipe",
+    "image": "/images/cooking/kihada-sashimi.webp",
+    "sha256": "f9df2f8b44056bfe8766696b28a5a0c319b515c29a6eefcd93a830e2f2d5e197",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "kihada-steak",
+    "kind": "recipe",
+    "image": "/images/cooking/kihada-steak.webp",
+    "sha256": "e88b2eb851fb24a926d6b9bb28347afd0c4892efbb9cce37465e7425f8a57998",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "kihada-tatsuta",
+    "kind": "recipe",
+    "image": "/images/cooking/kihada-tatsuta.webp",
+    "sha256": "825b2f0fa5da8b4c9b2ff944bd83447a7a22180ea9fba58ead4c7e1c9437dcea",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "kihada-zuke",
+    "kind": "recipe",
+    "image": "/images/cooking/kihada-zuke.webp",
+    "sha256": "d8c1d06dd972b81294a4724c0ba3891f5d83a45bcefc10379e3f47467d51292c",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "kurokajiki-fry",
+    "kind": "recipe",
+    "image": "/images/cooking/kurokajiki-fry.webp",
+    "sha256": "415e5c33f7231b3e742bf8dcd5d3bdd31cc8981f01c9380947b22bde4f3d8fea",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "kurokajiki-meuniere",
+    "kind": "recipe",
+    "image": "/images/cooking/kurokajiki-meuniere.webp",
+    "sha256": "a676e68841c74f83e8fc6e71220a5d7befbf4476781652fee12099220c66bd8e",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "kurokajiki-sashimi",
+    "kind": "recipe",
+    "image": "/images/cooking/kurokajiki-sashimi.webp",
+    "sha256": "6bef63890229e675c4b521bb640d294f7b53d1fad9c1eaf864c7f9974d4245c5",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  },
+  {
+    "slug": "kurokajiki-teriyaki",
+    "kind": "recipe",
+    "image": "/images/cooking/kurokajiki-teriyaki.webp",
+    "sha256": "f5d84e9f3856b57e97de29837ded058d135b69566cfe6936491f8f46561ad22a",
+    "origin": "Original AI-generated illustration, reviewed for this species or dish",
+    "generatedAt": "2026-09-18"
+  }
+]

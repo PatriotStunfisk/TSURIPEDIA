@@ -33,6 +33,7 @@ export type FishSpeciesDefinition={
   base:Fish;
   representativeRecipes?:string[];
   hazard?:FishHazard;
+  cookingOmission?:{reason:'conservation'|'food-safety';note:string;sources:{label:string;url:string}[]};
   quest?:import('../quest/types').QuestParameters;
   media?:{image:string;modelTilt?:number};
   detail?:FishDetail;

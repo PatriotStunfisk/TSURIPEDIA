@@ -76,3 +76,9 @@
 ヒラメ・サワラ・マダコを既存slugのまま本格プロフィールへ昇格。各4レシピと魚体画像を追加。`launch.methodLinks` / `launch.related` が空なら、共通の釣法・関連魚から表示を補うため、同じ導線を二重入力する必要はありません。
 
 釣り場は `fishing-map-data.ts` / `fishing-map-expansion.ts` の `fishSlugs`・`methodSlugs` から双方向につなぎます。`closed` の項目は魚・釣法からのおすすめ対象に含めません。`verifiedAt` は公式情報を実際に確認した日とし、`sources` に確認先を保存。地域情報と実際の釣り可能地点・営業中の釣船を区別します。GUIDEの `sources` / `verifiedAt` も同じ方針です。
+
+## 保全・食用リスクによる料理の非掲載
+
+`cookingOmission` は毒魚の `hazard` とは別の掲載方針です。`reason`（`conservation` / `food-safety`）、具体的な `note`、公式の `sources` を登録します。料理・料理カードとの同時登録はエラーにし、料理ページと料理sitemapを生成しません。保全対象のイトウ・アカメはQUESTも `enabled:false`。ロウニンアジは食用リスクを説明し、釣りの情報は維持します。
+
+2026-09-18追加：マエソ、ダツ、ブラックバス（オオクチバス）、ブルーギル、ロウニンアジ、キハダ、イトウ、アカメ、クロカジキ。マグロ・カジキの総称を単一種として扱わず、種を明示しています。新規GLBは未提供のため透過2D画像を表示します。

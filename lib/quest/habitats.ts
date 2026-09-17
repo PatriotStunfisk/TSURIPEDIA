@@ -3,7 +3,8 @@ import type {QuestHabitat} from './types';
 // Play environments, not permissions or forecasts for an actual fishing location.
 // Methods are shared public slugs; adding a compatible fish needs no habitat edit.
 export const questHabitats:QuestHabitat[]=[
- {slug:'lake-pier',name:'湖の桟橋',description:'小さな穂先の動きと群れの棚を追う。実際の利用は施設の営業規則を確認。',methods:['wakasagi'],mapQuery:'ワカサギ',fightDepth:8},
+ {slug:'warm-ocean',name:'暖海・外洋',description:'GTの突進、キハダの長い走り、カジキのジャンプ。実釣は専門船の安全指示と地域規則を優先。',methods:['offshore-casting','marlin-trolling'],mapQuery:'船',fightDepth:25},
+ {slug:'lake-pier',name:'湖の桟橋',description:'ワカサギの小さなアタリ、バスの追尾、ウキの沈みを見分ける。実釣は施設規則・外来魚の扱いを確認。',methods:['wakasagi','bass-lure','freshwater-float'],mapQuery:'ワカサギ',fightDepth:8},
  {slug:'osaka-bay-pier',name:'大阪湾・堤防',description:'サビキで群れを探す。小さなアタリを見つける最初のフィールド。',methods:['sabiki','ajing','mebaring','ana','eging','nomase','fukase','douzuki','shore-jigging','seabass-lure','chinning'],mapQuery:'大阪湾'},
  {slug:'osaka-bay-offshore',name:'大阪湾・沖',description:'棚を意識した船釣り。テンヤやジギングで大きな魚に挑む。',methods:['tachiuo-tenya','jigging','nomase','kawahagi','blade-jig','douzuki'],mapQuery:'大阪湾'},
  {slug:'sandy-beach',name:'砂浜',description:'砂地を探るちょい投げとサーフのルアーゲーム。',methods:['choinage','surf-lure','bukkomi','nage'],mapQuery:'砂浜'},

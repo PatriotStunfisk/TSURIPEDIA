@@ -1,3 +1,12 @@
+import maeso from './maeso';
+import datsu from './datsu';
+import blackbass from './blackbass';
+import bluegill from './bluegill';
+import rouninaji from './rouninaji';
+import kihada from './kihada';
+import itou from './itou';
+import akame from './akame';
+import kurokajiki from './kurokajiki';
 import shimaaji from './shimaaji';
 import hiramasa from './hiramasa';
 import kaiwari from './kaiwari';
@@ -77,7 +86,7 @@ import type {FishSpeciesDefinition} from './types';
 
 // Add one import and one entry here for a new full species profile.
 // Keep this order stable: it is also the encyclopedia order for all species.
-export const fishSpecies:FishSpeciesDefinition[]=[tachiuo,aji,madai,buri,kisu,kasago,saba,iwashi,suzuki,chinu,kawahagi,hirame,mebaru,aoriika,madako,kanpachi,sawara,amago,nijimasu,ayu,unagi,anago,isaki,magochi,mejina,haze,ainame,kijihata,akahata,oomonhata,houbo,itoyoridai,kouika,yariika,akakamas,katakuchi,urume,konoshiro,bora,shiira,makogarei,umazurahagi,kidai,kensakiika,sayori,gomasaba,kurosoi,ishidai,ishigarei,akaamadai,kinmedai,akamutsu,kuromutsu,medai,kusafugu,aigo,gonzui,haokoze,oniokoze,minokasago,akaei,yamame,wakasagi,iwana,shimaaji,hiramasa,kaiwari,maruaji,takabe,shiroamadai,suma,hirasouda,marusouda,usubahagi];
+export const fishSpecies:FishSpeciesDefinition[]=[tachiuo,aji,madai,buri,kisu,kasago,saba,iwashi,suzuki,chinu,kawahagi,hirame,mebaru,aoriika,madako,kanpachi,sawara,amago,nijimasu,ayu,unagi,anago,isaki,magochi,mejina,haze,ainame,kijihata,akahata,oomonhata,houbo,itoyoridai,kouika,yariika,akakamas,katakuchi,urume,konoshiro,bora,shiira,makogarei,umazurahagi,kidai,kensakiika,sayori,gomasaba,kurosoi,ishidai,ishigarei,akaamadai,kinmedai,akamutsu,kuromutsu,medai,kusafugu,aigo,gonzui,haokoze,oniokoze,minokasago,akaei,yamame,wakasagi,iwana,shimaaji,hiramasa,kaiwari,maruaji,takabe,shiroamadai,suma,hirasouda,marusouda,usubahagi,maeso,datsu,blackbass,bluegill,rouninaji,kihada,itou,akame,kurokajiki];
 uniqueFishSlugs(fishSpecies.map(species=>species.base));
 const speciesBySlug=new Map(fishSpecies.map(species=>[species.base.slug,species]));
 export function getFishSpecies(slug:string){return speciesBySlug.get(slug)}
