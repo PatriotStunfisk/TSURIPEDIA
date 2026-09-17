@@ -104,8 +104,8 @@ const migratedSnapshots={
   tableGuides:Object.fromEntries(tableFish.map(slug=>[slug,registry.getFishProfile(slug).tableGuide])),
 };
 const originalDigests={
-  // 2026-09-17: intentional water classifications and completed unagi profile.
-  fish:'9fa68e6ac682e0f4f5baee7b948de70c1d12f31942842883e4d2f117345c1b39',
+  // 2026-09-17: intentional water classifications, unagi profile and requested ayuing label.
+  fish:'a395b1040d0526313d1f07a961d8109059d48deb8e2984809ea4ee22e9635d33',
   // 2026-09-17: user-requested duplicate raw-food notice removal; other historical sections unchanged.
   details:'638fbc4b6240b6ad8c84c798dbea52b1ae031f7bf691918c8e216522226f1f05',
   launch:'035a14df86692faa3770972f5dcf4c622e89955ba3aa37026b8a455775640721',

@@ -10,6 +10,7 @@ export default defineFishSpecies({
     "danger": "低",
     "methods": [
       "友釣り",
+      "アユイング",
       "毛バリ",
       "コロガシ"
     ],
@@ -31,7 +32,8 @@ export default defineFishSpecies({
     "beginner": false,
     "kids": false,
     "methodSlugs": [
-      "ayu-tomozuri"
+      "ayu-tomozuri",
+      "ayuing"
     ],
     "relatedSlugs": [
       "amago",
