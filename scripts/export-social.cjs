@@ -4,6 +4,7 @@ const root=path.resolve(__dirname,'..'),resolve=Module._resolveFilename;
 Module._resolveFilename=function(s,...a){return resolve.call(this,s.startsWith('@/')?path.join(root,s.slice(2)):s,...a)};
 require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,f);
 const {socialDrafts}=require('../lib/guide-social.ts');
+const sharp=require(process.env.SHARP_MODULE||'sharp');
 const {ImageResponse}=require('next/og'),{createElement:h}=require('react');
 async function main(){
  const out=path.join(root,'public/social');fs.mkdirSync(out,{recursive:true});
@@ -26,10 +27,12 @@ async function main(){
     h('img',{src:image,width:430,height:300,style:{objectFit:'contain'}})),
    h('div',{style:{display:'flex',justifyContent:'space-between',fontSize:24,borderTop:'2px solid #b7d5df',paddingTop:20}},h('span',null,d.fishName),h('span',null,'@uo_link')));
   const png=new ImageResponse(element,{width:1200,height:630,fonts:[{name:'Noto',data:font,weight:700,style:'normal'}]});
-  fs.writeFileSync(path.join(out,d.id+'.png'),Buffer.from(await png.arrayBuffer()));
+  const bytes=Buffer.from(await png.arrayBuffer());
+  // Explicit JPEG attachments avoid relying on X link-card caching or PNG processing.
+  fs.writeFileSync(path.join(out,d.id+'.jpg'),await sharp(bytes).flatten({background:'#eaf5f7'}).jpeg({quality:90,chromaSubsampling:'4:4:4'}).toBuffer());
  }
  fs.writeFileSync(path.join(out,'queue.json'),JSON.stringify({account:'uo_link',mode:'draft-only',campaign:'guide-launch-202609',drafts:socialDrafts},null,2)+'\n');
  fs.writeFileSync(path.join(out,'queue.md'),'# UOLINK X 投稿下書き\n\n自動投稿はしません。画像を添付し、リンク先・内容を確認して投稿してください。\n\n'+socialDrafts.map(d=>`## ${d.dayOffset+1}日目 ${d.suggestedTime} JST：${d.headline}\n\n${d.text}\n\n画像：${d.thumbnail}\n代替テキスト：${d.alt}\n`).join('\n'));
- console.log(`Exported ${socialDrafts.length} GUIDE drafts and 1200×630 PNG thumbnails.`);
+ console.log(`Exported ${socialDrafts.length} GUIDE drafts and 1200×630 JPEG thumbnails.`);
 }
 main().catch(e=>{console.error(e);process.exitCode=1});

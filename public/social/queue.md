@@ -13,7 +13,7 @@
 https://uolink.vercel.app/guide/aji-sabiki-depth?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/aji-sabiki-depth--points.png
+画像：/social/aji-sabiki-depth--points.jpg
 代替テキスト：UOLINK GUIDE：アジが釣れない？まず棚を変える。マアジのイラスト。
 
 ## 1日目 15:00 JST：知らない魚は触る前に確認
@@ -27,7 +27,7 @@ https://uolink.vercel.app/guide/aji-sabiki-depth?utm_source=x&utm_medium=social&
 https://uolink.vercel.app/guide/dangerous-fish-first-check?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/dangerous-fish-first-check--points.png
+画像：/social/dangerous-fish-first-check--points.jpg
 代替テキスト：UOLINK GUIDE：知らない魚は触る前に確認。クサフグのイラスト。
 
 ## 1日目 20:30 JST：タチウオの前アタリで慌てない
@@ -41,7 +41,7 @@ https://uolink.vercel.app/guide/dangerous-fish-first-check?utm_source=x&utm_medi
 https://uolink.vercel.app/guide/tachiuo-tenya-action?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/tachiuo-tenya-action--points.png
+画像：/social/tachiuo-tenya-action--points.jpg
 代替テキスト：UOLINK GUIDE：タチウオの前アタリで慌てない。タチウオのイラスト。
 
 ## 2日目 07:30 JST：サバは釣る前から保冷の準備
@@ -55,7 +55,7 @@ https://uolink.vercel.app/guide/tachiuo-tenya-action?utm_source=x&utm_medium=soc
 https://uolink.vercel.app/guide/saba-sabiki-cooling?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/saba-sabiki-cooling--points.png
+画像：/social/saba-sabiki-cooling--points.jpg
 代替テキスト：UOLINK GUIDE：サバは釣る前から保冷の準備。マサバのイラスト。
 
 ## 2日目 15:00 JST：イカが抱くのは止めた後
@@ -69,7 +69,7 @@ https://uolink.vercel.app/guide/saba-sabiki-cooling?utm_source=x&utm_medium=soci
 https://uolink.vercel.app/guide/eging-shakuri-count?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/eging-shakuri-count--points.png
+画像：/social/eging-shakuri-count--points.jpg
 代替テキスト：UOLINK GUIDE：イカが抱くのは止めた後。アオリイカのイラスト。
 
 ## 2日目 20:30 JST：タイラバは着底からが勝負
@@ -83,7 +83,7 @@ https://uolink.vercel.app/guide/eging-shakuri-count?utm_source=x&utm_medium=soci
 https://uolink.vercel.app/guide/tairaba-bottom-contact?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/tairaba-bottom-contact--points.png
+画像：/social/tairaba-bottom-contact--points.jpg
 代替テキスト：UOLINK GUIDE：タイラバは着底からが勝負。マダイのイラスト。
 
 ## 3日目 07:30 JST：キスのアタリが出た距離を覚える
@@ -97,7 +97,7 @@ https://uolink.vercel.app/guide/tairaba-bottom-contact?utm_source=x&utm_medium=s
 https://uolink.vercel.app/guide/kisu-retrieve-speed?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/kisu-retrieve-speed--points.png
+画像：/social/kisu-retrieve-speed--points.jpg
 代替テキスト：UOLINK GUIDE：キスのアタリが出た距離を覚える。シロギスのイラスト。
 
 ## 3日目 15:00 JST：青物が釣れないときの泳層
@@ -111,7 +111,7 @@ https://uolink.vercel.app/guide/kisu-retrieve-speed?utm_source=x&utm_medium=soci
 https://uolink.vercel.app/guide/shore-jigging-jig-weight?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/shore-jigging-jig-weight--points.png
+画像：/social/shore-jigging-jig-weight--points.jpg
 代替テキスト：UOLINK GUIDE：青物が釣れないときの泳層。ブリのイラスト。
 
 ## 3日目 20:30 JST：ヒラメの合わせは変化を読む
@@ -125,7 +125,7 @@ https://uolink.vercel.app/guide/shore-jigging-jig-weight?utm_source=x&utm_medium
 https://uolink.vercel.app/guide/hirame-livebait-observation?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/hirame-livebait-observation--points.png
+画像：/social/hirame-livebait-observation--points.jpg
 代替テキスト：UOLINK GUIDE：ヒラメの合わせは変化を読む。ヒラメのイラスト。
 
 ## 4日目 07:30 JST：カサゴを掛けたら底から離す
@@ -139,7 +139,7 @@ https://uolink.vercel.app/guide/hirame-livebait-observation?utm_source=x&utm_med
 https://uolink.vercel.app/guide/kasago-ana-rig?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/kasago-ana-rig--points.png
+画像：/social/kasago-ana-rig--points.jpg
 代替テキスト：UOLINK GUIDE：カサゴを掛けたら底から離す。カサゴのイラスト。
 
 ## 4日目 15:00 JST：クロダイは餌と撒き餌を同じ流れへ
@@ -153,7 +153,7 @@ https://uolink.vercel.app/guide/kasago-ana-rig?utm_source=x&utm_medium=social&ut
 https://uolink.vercel.app/guide/chinu-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/chinu-field-notes--points.png
+画像：/social/chinu-field-notes--points.jpg
 代替テキスト：UOLINK GUIDE：クロダイは餌と撒き餌を同じ流れへ。クロダイのイラスト。
 
 ## 4日目 20:30 JST：シーバスは投げる前に流れを見る
@@ -167,7 +167,7 @@ https://uolink.vercel.app/guide/chinu-field-notes?utm_source=x&utm_medium=social
 https://uolink.vercel.app/guide/suzuki-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/suzuki-field-notes--points.png
+画像：/social/suzuki-field-notes--points.jpg
 代替テキスト：UOLINK GUIDE：シーバスは投げる前に流れを見る。スズキのイラスト。
 
 ## 5日目 07:30 JST：サビキ針は数字だけで選ばない
@@ -181,7 +181,7 @@ https://uolink.vercel.app/guide/suzuki-field-notes?utm_source=x&utm_medium=socia
 https://uolink.vercel.app/guide/aji-sabiki-hook-size?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/aji-sabiki-hook-size--points.png
+画像：/social/aji-sabiki-hook-size--points.jpg
 代替テキスト：UOLINK GUIDE：サビキ針は数字だけで選ばない。マアジのイラスト。
 
 ## 5日目 15:00 JST：タイラバの糸は長さも大事
@@ -195,7 +195,7 @@ https://uolink.vercel.app/guide/aji-sabiki-hook-size?utm_source=x&utm_medium=soc
 https://uolink.vercel.app/guide/tairaba-pe?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/tairaba-pe--points.png
+画像：/social/tairaba-pe--points.jpg
 代替テキスト：UOLINK GUIDE：タイラバの糸は長さも大事。マダイのイラスト。
 
 ## 5日目 20:30 JST：リーダーは傷と結び目を確認
@@ -209,7 +209,7 @@ https://uolink.vercel.app/guide/tairaba-pe?utm_source=x&utm_medium=social&utm_ca
 https://uolink.vercel.app/guide/tairaba-leader?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/tairaba-leader--points.png
+画像：/social/tairaba-leader--points.jpg
 代替テキスト：UOLINK GUIDE：リーダーは傷と結び目を確認。マダイのイラスト。
 
 ## 6日目 07:30 JST：テンヤの重さは船宿指定で
@@ -223,7 +223,7 @@ https://uolink.vercel.app/guide/tairaba-leader?utm_source=x&utm_medium=social&ut
 https://uolink.vercel.app/guide/tachiuo-tenya-40-vs-50?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/tachiuo-tenya-40-vs-50--points.png
+画像：/social/tachiuo-tenya-40-vs-50--points.jpg
 代替テキスト：UOLINK GUIDE：テンヤの重さは船宿指定で。タチウオのイラスト。
 
 ## 6日目 15:00 JST：餌だけ取られるときの確認
@@ -237,7 +237,7 @@ https://uolink.vercel.app/guide/tachiuo-tenya-40-vs-50?utm_source=x&utm_medium=s
 https://uolink.vercel.app/guide/kawahagi-hook?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/kawahagi-hook--points.png
+画像：/social/kawahagi-hook--points.jpg
 代替テキスト：UOLINK GUIDE：餌だけ取られるときの確認。カワハギのイラスト。
 
 ## 6日目 20:30 JST：エギングの糸、先端は大丈夫？
@@ -251,7 +251,7 @@ https://uolink.vercel.app/guide/kawahagi-hook?utm_source=x&utm_medium=social&utm
 https://uolink.vercel.app/guide/eging-leader?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/eging-leader--points.png
+画像：/social/eging-leader--points.jpg
 代替テキスト：UOLINK GUIDE：エギングの糸、先端は大丈夫？。アオリイカのイラスト。
 
 ## 7日目 07:30 JST：初めての釣りは準備から
@@ -265,7 +265,7 @@ https://uolink.vercel.app/guide/eging-leader?utm_source=x&utm_medium=social&utm_
 https://uolink.vercel.app/guide/fishing-first-checklist?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/fishing-first-checklist--points.png
+画像：/social/fishing-first-checklist--points.jpg
 代替テキスト：UOLINK GUIDE：初めての釣りは準備から。釣り竿とクーラーの図。
 
 ## 7日目 15:00 JST：釣る前に持ち帰りを計画
@@ -279,7 +279,7 @@ https://uolink.vercel.app/guide/fishing-first-checklist?utm_source=x&utm_medium=
 https://uolink.vercel.app/guide/fishing-cooler-plan?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/fishing-cooler-plan--points.png
+画像：/social/fishing-cooler-plan--points.jpg
 代替テキスト：UOLINK GUIDE：釣る前に持ち帰りを計画。釣り竿とクーラーの図。
 
 ## 7日目 20:30 JST：地図のピンは釣り許可ではない
@@ -293,7 +293,7 @@ https://uolink.vercel.app/guide/fishing-cooler-plan?utm_source=x&utm_medium=soci
 https://uolink.vercel.app/guide/fishing-map-permission-check?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/fishing-map-permission-check--points.png
+画像：/social/fishing-map-permission-check--points.jpg
 代替テキスト：UOLINK GUIDE：地図のピンは釣り許可ではない。釣り竿とクーラーの図。
 
 ## 8日目 07:30 JST：初めての釣り船、予約で聞くこと
@@ -307,7 +307,7 @@ https://uolink.vercel.app/guide/fishing-map-permission-check?utm_source=x&utm_me
 https://uolink.vercel.app/guide/first-charter-boat-reservation?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
-画像：/social/first-charter-boat-reservation--points.png
+画像：/social/first-charter-boat-reservation--points.jpg
 代替テキスト：UOLINK GUIDE：初めての釣り船、予約で聞くこと。マダイのイラスト。
 
 ## 8日目 15:00 JST：シーズン・時間帯と釣行前の持ち物
@@ -321,7 +321,7 @@ https://uolink.vercel.app/guide/first-charter-boat-reservation?utm_source=x&utm_
 https://uolink.vercel.app/guide/aji-sabiki-depth?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/aji-sabiki-depth--checklist.png
+画像：/social/aji-sabiki-depth--checklist.jpg
 代替テキスト：UOLINK GUIDE：シーズン・時間帯と釣行前の持ち物。マアジのイラスト。
 
 ## 8日目 20:30 JST：食用になる魚でも自己処理できるとは限らない
@@ -335,7 +335,7 @@ https://uolink.vercel.app/guide/aji-sabiki-depth?utm_source=x&utm_medium=social&
 https://uolink.vercel.app/guide/dangerous-fish-first-check?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/dangerous-fish-first-check--checklist.png
+画像：/social/dangerous-fish-first-check--checklist.jpg
 代替テキスト：UOLINK GUIDE：食用になる魚でも自己処理できるとは限らない。クサフグのイラスト。
 
 ## 9日目 07:30 JST：シーズン・時間帯と釣行前の持ち物
@@ -349,7 +349,7 @@ https://uolink.vercel.app/guide/dangerous-fish-first-check?utm_source=x&utm_medi
 https://uolink.vercel.app/guide/tachiuo-tenya-action?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/tachiuo-tenya-action--checklist.png
+画像：/social/tachiuo-tenya-action--checklist.jpg
 代替テキスト：UOLINK GUIDE：シーズン・時間帯と釣行前の持ち物。タチウオのイラスト。
 
 ## 9日目 15:00 JST：シーズン・時間帯と釣行前の持ち物
@@ -363,7 +363,7 @@ https://uolink.vercel.app/guide/tachiuo-tenya-action?utm_source=x&utm_medium=soc
 https://uolink.vercel.app/guide/saba-sabiki-cooling?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/saba-sabiki-cooling--checklist.png
+画像：/social/saba-sabiki-cooling--checklist.jpg
 代替テキスト：UOLINK GUIDE：シーズン・時間帯と釣行前の持ち物。マサバのイラスト。
 
 ## 9日目 20:30 JST：シーズン・時間帯と釣行前の持ち物
@@ -377,7 +377,7 @@ https://uolink.vercel.app/guide/saba-sabiki-cooling?utm_source=x&utm_medium=soci
 https://uolink.vercel.app/guide/eging-shakuri-count?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/eging-shakuri-count--checklist.png
+画像：/social/eging-shakuri-count--checklist.jpg
 代替テキスト：UOLINK GUIDE：シーズン・時間帯と釣行前の持ち物。アオリイカのイラスト。
 
 ## 10日目 07:30 JST：シーズン・時間帯と釣行前の持ち物
@@ -391,7 +391,7 @@ https://uolink.vercel.app/guide/eging-shakuri-count?utm_source=x&utm_medium=soci
 https://uolink.vercel.app/guide/tairaba-bottom-contact?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/tairaba-bottom-contact--checklist.png
+画像：/social/tairaba-bottom-contact--checklist.jpg
 代替テキスト：UOLINK GUIDE：シーズン・時間帯と釣行前の持ち物。マダイのイラスト。
 
 ## 10日目 15:00 JST：シーズン・時間帯と釣行前の持ち物
@@ -405,7 +405,7 @@ https://uolink.vercel.app/guide/tairaba-bottom-contact?utm_source=x&utm_medium=s
 https://uolink.vercel.app/guide/kisu-retrieve-speed?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/kisu-retrieve-speed--checklist.png
+画像：/social/kisu-retrieve-speed--checklist.jpg
 代替テキスト：UOLINK GUIDE：シーズン・時間帯と釣行前の持ち物。シロギスのイラスト。
 
 ## 10日目 20:30 JST：シーズン・時間帯と釣行前の持ち物
@@ -419,7 +419,7 @@ https://uolink.vercel.app/guide/kisu-retrieve-speed?utm_source=x&utm_medium=soci
 https://uolink.vercel.app/guide/shore-jigging-jig-weight?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/shore-jigging-jig-weight--checklist.png
+画像：/social/shore-jigging-jig-weight--checklist.jpg
 代替テキスト：UOLINK GUIDE：シーズン・時間帯と釣行前の持ち物。ブリのイラスト。
 
 ## 11日目 07:30 JST：シーズン・時間帯と釣行前の持ち物
@@ -433,7 +433,7 @@ https://uolink.vercel.app/guide/shore-jigging-jig-weight?utm_source=x&utm_medium
 https://uolink.vercel.app/guide/hirame-livebait-observation?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/hirame-livebait-observation--checklist.png
+画像：/social/hirame-livebait-observation--checklist.jpg
 代替テキスト：UOLINK GUIDE：シーズン・時間帯と釣行前の持ち物。ヒラメのイラスト。
 
 ## 11日目 15:00 JST：シーズン・時間帯と釣行前の持ち物
@@ -447,7 +447,7 @@ https://uolink.vercel.app/guide/hirame-livebait-observation?utm_source=x&utm_med
 https://uolink.vercel.app/guide/kasago-ana-rig?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/kasago-ana-rig--checklist.png
+画像：/social/kasago-ana-rig--checklist.jpg
 代替テキスト：UOLINK GUIDE：シーズン・時間帯と釣行前の持ち物。カサゴのイラスト。
 
 ## 11日目 20:30 JST：シーズン・時間帯と釣行前の持ち物
@@ -461,7 +461,7 @@ https://uolink.vercel.app/guide/kasago-ana-rig?utm_source=x&utm_medium=social&ut
 https://uolink.vercel.app/guide/chinu-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/chinu-field-notes--checklist.png
+画像：/social/chinu-field-notes--checklist.jpg
 代替テキスト：UOLINK GUIDE：シーズン・時間帯と釣行前の持ち物。クロダイのイラスト。
 
 ## 12日目 07:30 JST：シーズン・時間帯と釣行前の持ち物
@@ -475,7 +475,7 @@ https://uolink.vercel.app/guide/chinu-field-notes?utm_source=x&utm_medium=social
 https://uolink.vercel.app/guide/suzuki-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/suzuki-field-notes--checklist.png
+画像：/social/suzuki-field-notes--checklist.jpg
 代替テキスト：UOLINK GUIDE：シーズン・時間帯と釣行前の持ち物。スズキのイラスト。
 
 ## 12日目 15:00 JST：出発前に3つだけ再確認
@@ -489,7 +489,7 @@ https://uolink.vercel.app/guide/suzuki-field-notes?utm_source=x&utm_medium=socia
 https://uolink.vercel.app/guide/fishing-first-checklist?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/fishing-first-checklist--checklist.png
+画像：/social/fishing-first-checklist--checklist.jpg
 代替テキスト：UOLINK GUIDE：出発前に3つだけ再確認。釣り竿とクーラーの図。
 
 ## 12日目 20:30 JST：よくある失敗を先に防ぐ
@@ -503,7 +503,7 @@ https://uolink.vercel.app/guide/fishing-first-checklist?utm_source=x&utm_medium=
 https://uolink.vercel.app/guide/fishing-cooler-plan?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/fishing-cooler-plan--checklist.png
+画像：/social/fishing-cooler-plan--checklist.jpg
 代替テキスト：UOLINK GUIDE：よくある失敗を先に防ぐ。釣り竿とクーラーの図。
 
 ## 13日目 07:30 JST：移動前のチェックリスト
@@ -517,7 +517,7 @@ https://uolink.vercel.app/guide/fishing-cooler-plan?utm_source=x&utm_medium=soci
 https://uolink.vercel.app/guide/fishing-map-permission-check?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/fishing-map-permission-check--checklist.png
+画像：/social/fishing-map-permission-check--checklist.jpg
 代替テキスト：UOLINK GUIDE：移動前のチェックリスト。釣り竿とクーラーの図。
 
 ## 13日目 15:00 JST：初回に買いすぎないためのチェック
@@ -531,5 +531,5 @@ https://uolink.vercel.app/guide/fishing-map-permission-check?utm_source=x&utm_me
 https://uolink.vercel.app/guide/first-charter-boat-reservation?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
-画像：/social/first-charter-boat-reservation--checklist.png
+画像：/social/first-charter-boat-reservation--checklist.jpg
 代替テキスト：UOLINK GUIDE：初回に買いすぎないためのチェック。マダイのイラスト。

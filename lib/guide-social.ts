@@ -46,7 +46,7 @@ export function createSocialDraft(slug:string,headline:string,index=0,variant?:{
  let text=compose();let maxWeightedLength=Array.from(text.replace(url,'')).length*2+23;
  if(maxWeightedLength>280){tips=tips.slice(0,1);text=compose();maxWeightedLength=Array.from(text.replace(url,'')).length*2+23;}
  if(maxWeightedLength>280)throw new Error(`Social draft is too long: ${slug} (${maxWeightedLength})`);
- return {id,guideSlug:slug,guideTitle:guide.title,headline,topic,tips,text,url,image,fishName:fish?.name??'釣行準備',thumbnail:`/social/${id}.png`,thumbnailVariant:'fish-v1',alt:`UOLINK GUIDE：${headline}。${fish?fish.name+'のイラスト':'釣り竿とクーラーの図'}。`,sources:guide.sources??[],status:'draft' as const,dayOffset:Math.floor(index/3),suggestedTime:['07:30','15:00','20:30'][index%3],timezone:'Asia/Tokyo',maxWeightedLength};
+ return {id,guideSlug:slug,guideTitle:guide.title,headline,topic,tips,text,url,image,fishName:fish?.name??'釣行準備',thumbnail:`/social/${id}.jpg`,thumbnailVariant:'fish-v1',alt:`UOLINK GUIDE：${headline}。${fish?fish.name+'のイラスト':'釣り竿とクーラーの図'}。`,sources:guide.sources??[],status:'draft' as const,dayOffset:Math.floor(index/3),suggestedTime:['07:30','15:00','20:30'][index%3],timezone:'Asia/Tokyo',maxWeightedLength};
 }
 const primaryDrafts=topics.map(([slug,title],i)=>createSocialDraft(slug,title,i));
 const followups=topics.flatMap(([slug])=>{
