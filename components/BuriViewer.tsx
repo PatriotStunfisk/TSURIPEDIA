@@ -1,4 +1,6 @@
 'use client';
+import ViewerControls from './ViewerControls';
+import {createViewerNavigation,type ViewerNavigation} from '@/lib/viewer-navigation';
 import {modelAssetUrl} from '@/lib/model-assets';
 import {hideModelCalibrationHelpers} from '@/lib/model-presentation';
 import {useEffect,useRef,useState} from 'react';
@@ -9,7 +11,7 @@ import {KTX2Loader} from 'three/addons/loaders/KTX2Loader.js';
 import {MeshoptDecoder} from 'three/addons/libs/meshopt_decoder.module.js';
 
 export default function BuriViewer(){
- const ref=useRef<HTMLDivElement>(null);
+ const ref=useRef<HTMLDivElement>(null);const navigation=useRef<ViewerNavigation|null>(null);
  const [status,setStatus]=useState<'loading'|'ready'|'failed'>('loading');
  const [detail,setDetail]=useState('');
  useEffect(()=>{
@@ -23,7 +25,7 @@ export default function BuriViewer(){
 
   const pivot=new THREE.Group();scene.add(pivot);
   const normalized=new THREE.Group();pivot.add(normalized);
-  let targetY=0,targetX=0,ry=0,rx=0,down=false,lastX=0,lastY=0;
+  let targetY=0,targetX=0,ry=0,rx=0;
 
   const centerAndFit=(obj:THREE.Object3D)=>{
    normalized.add(obj);
@@ -48,10 +50,10 @@ export default function BuriViewer(){
    centerAndFit(g.scene);hideModelCalibrationHelpers(g.scene,'/models/buri.glb');setStatus('ready');setDetail('');
   },undefined,(err)=>{if(disposed)return;console.error('buri.glb load error',err);setStatus('failed');setDetail(err instanceof Error?err.message.slice(0,120):'GLBの解析に失敗しました')});
 
-  const pd=(e:PointerEvent)=>{down=true;lastX=e.clientX;lastY=e.clientY;renderer?.domElement.setPointerCapture?.(e.pointerId)},pm=(e:PointerEvent)=>{if(!down)return;targetY+=(e.clientX-lastX)*.009;targetX=Math.max(-.65,Math.min(.65,targetX+(e.clientY-lastY)*.006));lastX=e.clientX;lastY=e.clientY},pu=()=>{down=false};renderer.domElement.addEventListener('pointerdown',pd);window.addEventListener('pointermove',pm);window.addEventListener('pointerup',pu);
+  const nav=createViewerNavigation(camera,renderer.domElement,pivot,(dx,dy)=>{targetY+=dx*.009;targetX=Math.max(-.65,Math.min(.65,targetX+dy*.006));},()=>{targetY=targetX=ry=rx=0;pivot.rotation.set(0,0,0);});navigation.current=nav;
   const resize=()=>{if(!renderer)return;const w=Math.max(el.clientWidth,280),h=Math.max(el.clientHeight,260);camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h,false)};ro=new ResizeObserver(resize);ro.observe(el);resize();
   const tick=()=>{ry+=(targetY-ry)*.08;rx+=(targetX-rx)*.08;pivot.rotation.y=ry;pivot.rotation.x=rx;renderer?.render(scene,camera);raf=requestAnimationFrame(tick)};tick();
-  return()=>{disposed=true;cancelAnimationFrame(raf);ro?.disconnect();window.removeEventListener('pointermove',pm);window.removeEventListener('pointerup',pu);draco.dispose();ktx2.dispose();renderer?.dispose();renderer?.domElement.remove()};
+  return()=>{disposed=true;nav?.dispose();navigation.current=null;cancelAnimationFrame(raf);ro?.disconnect();draco.dispose();ktx2.dispose();renderer?.dispose();renderer?.domElement.remove()};
  },[]);
- return <div ref={ref} className="fishViewer" style={{position:'relative',width:'100%',height:'100%',minHeight:260,overflow:'hidden',background:'transparent'}}>{status==='loading'&&<div style={{position:'absolute',inset:0,display:'grid',placeItems:'center',zIndex:2,color:'#d8f5ff'}}>3Dモデルを読み込み中…</div>}{status==='failed'&&<div style={{position:'absolute',inset:0,display:'grid',placeItems:'center',alignContent:'center',gap:8,zIndex:2,color:'#d8f5ff',textAlign:'center',padding:24}}><b>3Dモデルを読み込めませんでした</b>{detail&&<small style={{opacity:.72,fontSize:10,wordBreak:'break-word'}}>{detail}</small>}</div>}</div>
+ return <div ref={ref} className="fishViewer" style={{position:'relative',width:'100%',height:'100%',minHeight:260,overflow:'hidden',background:'transparent'}}>{status==='ready'&&<ViewerControls navigation={navigation}/>}{status==='loading'&&<div style={{position:'absolute',inset:0,display:'grid',placeItems:'center',zIndex:2,color:'#d8f5ff'}}>3Dモデルを読み込み中…</div>}{status==='failed'&&<div style={{position:'absolute',inset:0,display:'grid',placeItems:'center',alignContent:'center',gap:8,zIndex:2,color:'#d8f5ff',textAlign:'center',padding:24}}><b>3Dモデルを読み込めませんでした</b>{detail&&<small style={{opacity:.72,fontSize:10,wordBreak:'break-word'}}>{detail}</small>}</div>}</div>
 }
