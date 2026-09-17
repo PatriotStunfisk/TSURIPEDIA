@@ -1,3 +1,4 @@
+import {favoritesMapGrowth} from './fishing-map-favorites-growth';
 import {shoreReviewExpansion} from './fishing-map-shore-review';
 import {regionalMapGrowth} from './fishing-map-regional-growth';
 import {facilityMapExpansion} from './fishing-map-facility-expansion';
@@ -61,6 +62,7 @@ export type FishingMapEntry={
 };
 
 const sourceEntries:FishingMapEntry[]=[
+  ...favoritesMapGrowth,
   ...shoreReviewExpansion,
   ...regionalMapGrowth,
   ...facilityMapExpansion,

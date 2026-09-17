@@ -28,3 +28,26 @@ test('new managed spots participate in the existing method filters',()=>{
  const lure=managedMapGrowth.find(e=>e.slug==='managed-akashi-kamikawa'),bait=managedMapGrowth.find(e=>e.slug==='managed-taisetsu-tsuribori');
  assert.ok(matchesSpot(lure,{method:'trout-lure'}));assert.ok(matchesSpot(bait,{method:'freshwater-bait'}));assert.equal(matchesSpot(bait,{method:'trout-lure'}),false);
 });
+
+test('September map additions are distinct, linked, and keep unverified amenities unset',()=>{
+ const {favoritesMapGrowth}=require('../lib/fishing-map-favorites-growth.ts');
+ const {methodDetails}=require('../lib/method-registry.ts');
+ const ids=new Set(favoritesMapGrowth.map(e=>e.slug));
+ assert.equal(ids.size,favoritesMapGrowth.length);
+ assert.deepEqual(validateFishingMap(fishingMapEntries).filter(i=>i.slugs.some(s=>ids.has(s))),[]);
+ for(const e of favoritesMapGrowth){
+  assert.ok(e.sources.length>=2&&e.positionNote,e.slug);
+  for(const slug of e.methodSlugs)assert.ok(methodDetails[slug],`${e.slug}: ${slug}`);
+  for(const slug of e.guideSlugs)assert.ok(getGuide(slug),`${e.slug}: ${slug}`);
+  assert.equal(e.parking,undefined);assert.equal(e.toilet,undefined);
+  if(e.closed){assert.ok(e.status);assert.equal(matchesSpot(e,{}),false);}
+ }
+});
+test('new sea access guidance distinguishes boarding bases from fishing areas and preserves restrictions',()=>{
+ const get=slug=>fishingMapEntries.find(e=>e.slug==='growth-'+slug);
+ assert.equal(get('monkey-toba-pond').type,'boat');assert.match(get('monkey-toba-pond').positionNote,/沖の釣座ではありません/);
+ assert.equal(get('hiroshima-kaiyu').primaryType,'sea-pond');
+ assert.equal(get('naoshima-fishing-park').primaryType,'sea-park');assert.match(get('naoshima-fishing-park').caution.join(''),/東側.*利用不可/);
+ assert.match(get('takozaki-kushimoto').caution.join(''),/水没/);
+ for(const slug of ['syakudai-stream','kogaki-stream','kitatahara-trout','azuma-farm','arima-stream','aokiya-achi','river-runs-tsunokawa'])assert.equal(matchesSpot(get(slug),{}),false,slug);
+});
