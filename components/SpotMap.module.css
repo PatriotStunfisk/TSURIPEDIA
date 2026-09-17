@@ -17,3 +17,5 @@
 .placeLabel{max-width:170px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px;line-height:1.4;padding:3px 6px;border-radius:6px;pointer-events:none;box-shadow:0 1px 4px #16384926}
 
 .currentLocation{display:grid;place-items:center;background:transparent;border:0}.currentLocation span{display:block;width:16px;height:16px;box-sizing:border-box;border:3px solid #fff;border-radius:50%;background:#1677ff;box-shadow:0 0 0 1px #1677ff,0 2px 6px #0005}
+
+.favoriteBadge{position:absolute;right:-7px;top:-8px;display:grid;place-items:center;width:17px;height:17px;border:1px solid #fff;border-radius:50%;background:#fff4c2;color:#805600;font-size:12px;line-height:1;box-shadow:0 1px 3px #0005;pointer-events:none}.legend .favoriteChip{color:#73510c;border-color:#c8aa69}.legend .favoriteChip[aria-pressed=true]{background:#fff4d7;border-color:#a47711}.favoriteChip small{margin-left:auto}
