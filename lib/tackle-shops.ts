@@ -1,8 +1,10 @@
+import {expandedTackleShops} from './tackle-shops-expansion';
 import type {Prefecture} from './japan-regions';
 import {distanceKm,type Coordinates} from './spot-distance';
 // Retail locations have their own registry: never count them as fishing spots.
 export type TackleShop={id:string;name:string;prefecture:Prefecture;address:string;lat:number;lng:number;officialUrl:string;verifiedAt:string;hours?:string;closedDays?:string;parking?:boolean;baits?:{live?:boolean;frozen?:boolean;other?:boolean};earlyMorning?:boolean;open24Hours?:boolean;status:'open'|'temporarily-closed'|'closed';note?:string;sources:{label:string;url:string}[]};
 export const tackleShops:TackleShop[]=[
+  ...expandedTackleShops,
   {
     "id": "johshuya-10",
     "name": "上州屋 仙台新港店",
