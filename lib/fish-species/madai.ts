@@ -51,6 +51,7 @@ export default defineFishSpecies({
     spotFocus: '明石・瀬戸内・和歌山'
   },
   cooking: {
+    prepImages: [{"step":0,"src":"/images/preparation/madai-scaling.webp","alt":"マダイを固定し、尾から頭の方向へウロコを落とす工程"}],
     prep: [
       'ウロコを尾から頭方向へしっかり落とし、胸びれの後ろから頭を落とす',
       '腹を開いて内臓を取り、血合いを冷水で手早く洗って水気を完全に拭く',

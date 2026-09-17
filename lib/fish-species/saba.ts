@@ -98,6 +98,7 @@ export default defineFishSpecies({
     "spotFocus": "大阪湾・紀北・全国沿岸"
   },
   "cooking": {
+    prepImages: [{"step":1,"src":"/images/preparation/saba-bloodline.webp","alt":"内臓を除いたマサバの腹の内側にある血合いを洗い落とす工程"}],
     "prep": [
       "胸びれの後ろから頭を落とす",
       "腹を開いて内臓を取り、血合いを流水でよく洗う",

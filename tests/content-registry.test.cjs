@@ -100,7 +100,7 @@ const migratedSnapshots={
   details:Object.fromEntries(Object.entries({...details,hamachi:archivedHamachi.detail,...(archivedGashira.detail?{gashira:archivedGashira.detail}:{})}).filter(([slug])=>originalFish.includes(slug)&&!['anago','isaki'].includes(slug))),
   launch:Object.fromEntries(featuredFish.map(slug=>[slug,featured.launchFish[slug]])),
   launchSlugs:featured.launchFishSlugs.filter(slug=>featuredFish.includes(slug)),
-  cooking:cookingFish.filter(f=>f.slug==='saba').map(f=>({...f,recipes:f.recipes.map(({preparation,...recipe})=>recipe)})),
+  cooking:cookingFish.filter(f=>f.slug==='saba').map(({prepImages,...f})=>({...f,recipes:f.recipes.map(({preparation,...recipe})=>recipe)})),
   tableGuides:Object.fromEntries(tableFish.map(slug=>[slug,registry.getFishProfile(slug).tableGuide])),
 };
 const originalDigests={
@@ -199,7 +199,7 @@ test('editing a recipe identity updates editorial cards without duplicate edits'
  const card=getSpeciesTableGuide(species).dishes[0];assert.equal(card.name,'new name');assert.equal(card.src,'/new.png');assert.equal(card.desc,'editorial description');
 });
 
-test('the established seven species retain all user-authored recipes',()=>assert.equal(digest(cookingFish.filter(f=>featuredFish.includes(f.slug)).map(f=>({...f,recipes:f.recipes.map(({preparation,...recipe})=>recipe)}))),'a38dc13f0b5bb83190d62d7b3a22799f5490d37cfc8c0cccdf9560aab8ac8506'));
+test('the established seven species retain all user-authored recipes',()=>assert.equal(digest(cookingFish.filter(f=>featuredFish.includes(f.slug)).map(({prepImages,...f})=>({...f,recipes:f.recipes.map(({preparation,...recipe})=>recipe)}))),'a38dc13f0b5bb83190d62d7b3a22799f5490d37cfc8c0cccdf9560aab8ac8506'));
 
 
 test('new full profiles keep four original recipe assets, guides and method routes',()=>{

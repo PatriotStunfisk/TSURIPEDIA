@@ -51,6 +51,7 @@ export default defineFishSpecies({
     spotFocus: '大阪湾・明石・和歌山の船釣り'
   },
   cooking: {
+    prepImages: [{"step":2,"src":"/images/preparation/tachiuo-fillet.webp","alt":"タチウオを三枚おろしにし、銀色の皮が残る身と中骨を分けた状態"}],
     prep: [
       '鋭い歯に触れないよう頭部を固定し、エラ後方から頭を落とす',
       '腹を開いて内臓と血合いを取り、冷水で短時間に洗って水気をよく拭く',
