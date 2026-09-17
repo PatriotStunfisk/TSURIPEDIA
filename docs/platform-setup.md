@@ -6,9 +6,9 @@
 - `/catches` と `/quest/profile`：同じIndexedDB `uolink-real-catches-v1` を読む実釣記録。ゲーム内捕獲やXPとは別データ。画像も端末に保存し、削除・JSON書き出しが可能。
 - 公開釣果のAPI：Supabase REST/Storageへ実際に保存する実装。未接続時は受付を閉じ、端末保存だけ利用可能。
 
-## 公開釣果の有効化（本番DB変更の承認後）
+## 公開釣果の有効化（2026-09-17 本番接続済み）
 1. Supabaseプロジェクトを用意し、`supabase/catch-reports.sql` のテーブル・インデックス・RLS・非公開Storageバケット・回数制限関数をレビューして適用。
-2. Vercelのサーバー環境変数に `NEXT_PUBLIC_SUPABASE_URL`、`SUPABASE_SERVICE_ROLE_KEY` を設定。サービスキーをNEXT_PUBLIC付きの名前へ入れない。
+2. Vercelのサーバー環境変数に `SUPABASE_URL`、`SUPABASE_SERVICE_ROLE_KEY` を設定。サービスキーをNEXT_PUBLIC付きの名前へ入れない。
 3. 審査担当を決めてから `CATCH_REPORTS_ENABLED=true`。再デプロイ。
 4. テスト投稿を送信→DBでpending確認→写真・本文・個人情報・釣り許可・魚種を審査→対象行だけapprovedへ変更→釣り場表示を確認。
 
@@ -16,7 +16,9 @@
 
 審査で顔・車のナンバー・連絡先・無断転載・危険行為・広告・実釣ではない画像を確認する。自動でapprovedにしない。拒否された投稿・30日を超える未審査投稿はStorage画像と行を合わせて削除する運用とする。画面の削除操作は端末に保存した秘密の削除キーで照合する。サイトデータを消した場合に備え、運営窓口でも投稿IDをもとに削除依頼へ対応する。
 
-本番DBへのSQL適用、キー登録、公開受付の有効化は今回実行していない。
+2026-09-17、ユーザー承認後に既存Supabase無料プロジェクトへSQLを適用し、Vercel Productionの接続と公開受付を有効化した。サーバーは SUPABASE_URL を優先し、旧 NEXT_PUBLIC_SUPABASE_URL をフォールバックする。秘密キーはサーバー専用環境変数のみで管理する。
+
+本番で写真付き検証投稿のpending保存・非公開Storage保存・対象行の審査承認・最近の釣果表示・署名URL画像読込・再読み込み・QUEST共通記録を確認済み。最後に検証投稿をrejectedへ戻し、公開一覧から非表示になったことを確認した。実投稿も自動承認せず、運営がSupabaseで審査する。
 
 ## 写真判別の有効化（API利用・費用の承認後）
 - OpenAIの画像入力に対応するResponses APIモデルを選び、`OPENAI_API_KEY` と `FISH_IDENTIFY_MODEL` をVercelのサーバー環境変数へ設定。
