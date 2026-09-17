@@ -1,3 +1,4 @@
+import {managedMapGrowth} from './fishing-map-managed-growth';
 import {boatMapGrowth} from './fishing-map-boat-growth';
 import {accessMapGrowth} from './fishing-map-access-growth';
 import {coastalMapGrowth} from './fishing-map-coastal-growth';
@@ -57,6 +58,7 @@ export type FishingMapEntry={
 };
 
 const sourceEntries:FishingMapEntry[]=[
+  ...managedMapGrowth,
   ...boatMapGrowth,
   ...accessMapGrowth,
   ...platformMapExpansion,...riverMapExpansion,...nationalMapGrowth,...coastalMapGrowth,

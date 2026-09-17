@@ -217,7 +217,7 @@ test('map IDs and relationships resolve; closed sites are not recommended',()=>{
   for(const slug of e.fishSlugs??[])assert.ok(registry.getFishProfile(slug),slug);
   for(const slug of e.methodSlugs??[])assert.ok(methodDetails[slug],slug);
   for(const slug of e.guideSlugs??[])assert.ok(allGuides.some(g=>g.slug===slug),slug);
-  for(const source of e.sources??[]){const url=new URL(source.url);/* These two operator sites currently serve HTTP only; do not invent a broken HTTPS link. */assert.equal(url.protocol,['meiseimaru.com','www.beppumaru.com'].includes(url.hostname)?'http:':'https:');}
+  for(const source of e.sources??[]){const url=new URL(source.url);/* These verified operator sites currently serve HTTP only; do not invent broken HTTPS links. */assert.equal(url.protocol,['meiseimaru.com','www.beppumaru.com','azuminofishing.com','kawaba-kingdomfishing.com','sekine-fish.com','tsuritengoku.com','www.joyvalley.co.jp','www.mikawakougen.com','www.mino-fa.com','www.okutama-fc.co.jp','www.turiboriakashi.com'].includes(url.hostname)?'http:':'https:');}
  }
  for(const slug of ['hirame','sawara','madako'])assert.ok(getSpotsForFish(slug).length);
  assert.ok(!getSpotsForFish('aji').some(e=>e.slug==='nanko-fishing-park'));
