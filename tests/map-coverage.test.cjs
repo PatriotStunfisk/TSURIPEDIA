@@ -34,3 +34,33 @@ test('restricted access and seasonal conditions remain visible, with correct met
  assert.ok(matchesSpot(get('zao-tsuribori'),{method:'freshwater-bait'}));
  assert.equal(get('omi-amagonosato').area,'滋賀県・高島市');
 });
+
+const {regionalMapGrowth}=require('../lib/fishing-map-regional-growth.ts');
+test('regional expansion adds 100 distinct places with 78 in the four requested prefectures',()=>{
+ assert.equal(regionalMapGrowth.length,100);
+ const ids=new Set(regionalMapGrowth.map(e=>e.slug));
+ assert.equal(ids.size,100);
+ assert.equal(fishingMapEntries.filter(e=>ids.has(e.slug)).length,100);
+ assert.deepEqual(validateFishingMap(fishingMapEntries).filter(i=>i.slugs.some(s=>ids.has(s))),[]);
+ for(const [pref,count] of Object.entries({'大阪府':15,'兵庫県':19,'和歌山県':28,'京都府':16}))assert.equal(regionalMapGrowth.filter(e=>e.prefecture===pref).length,count);
+ for(const e of regionalMapGrowth){
+  assert.equal(e.type,'spot');assert.ok(!e.closed);assert.ok(Number.isFinite(e.lat)&&Number.isFinite(e.lng));
+  assert.ok(e.sources.length&&e.positionNote&&e.verifiedAt);assert.ok(e.note.length>45&&e.tips[0].length>25);
+  assert.equal(e.parking,undefined);assert.equal(e.toilet,undefined);
+ }
+});
+test('regional access restrictions survive registry and seasonal facilities are labelled',()=>{
+ const get=s=>fishingMapEntries.find(e=>e.slug==='regional-'+s);
+ assert.match(get('tosaka-port').tips.join(''),/夜釣り禁止/);
+ assert.match(get('susami-port').tips.join(''),/稲積島は立入禁止/);
+ assert.match(get('sanogawa-mouth').tips.join(''),/係留施設内は釣り禁止/);
+ assert.match(get('hamazume-port').tips.join(''),/立入禁止/);
+ assert.match(get('izumisano-ichimonji').positionNote,/集合側/);
+ assert.match(get('awakan-private-fishing').name,/宿泊者専用/);
+ assert.match(get('tarorin-pond').season,/7月中旬〜10月上旬/);
+ assert.match(get('woodpark-okazaki-trout').season,/夏季.*休止/);
+ assert.equal(get('marinacity-fishing-park').officialUrl,'https://www.marinacity.com/tsuri/');
+ assert.ok(!regionalMapGrowth.some(e=>/かもめ大橋|小引漁港|しい茸園有馬富士/.test(e.name)));
+ assert.ok(matchesSpot(get('tsutenko-trout'),{method:'trout-lure'}));
+ assert.ok(!matchesSpot(get('tsutenko-trout'),{method:'freshwater-bait'}));
+});
