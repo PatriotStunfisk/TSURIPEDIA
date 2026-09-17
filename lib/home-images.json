@@ -1,0 +1,62 @@
+{
+  "tachiuo": {
+    "src": "/images/home/tachiuo-320.webp",
+    "srcSet": "/images/home/tachiuo-320.webp 320w, /images/home/tachiuo-640.webp 640w",
+    "width": 1400,
+    "height": 467
+  },
+  "aji": {
+    "src": "/images/home/aji-320.webp",
+    "srcSet": "/images/home/aji-320.webp 320w, /images/home/aji-640.webp 640w",
+    "width": 1774,
+    "height": 887
+  },
+  "saba": {
+    "src": "/images/home/saba-320.webp",
+    "srcSet": "/images/home/saba-320.webp 320w, /images/home/saba-640.webp 640w",
+    "width": 1891,
+    "height": 831
+  },
+  "buri": {
+    "src": "/images/home/buri-320.webp",
+    "srcSet": "/images/home/buri-320.webp 320w, /images/home/buri-640.webp 640w",
+    "width": 1983,
+    "height": 793
+  },
+  "kisu": {
+    "src": "/images/home/kisu-320.webp",
+    "srcSet": "/images/home/kisu-320.webp 320w, /images/home/kisu-640.webp 640w",
+    "width": 2172,
+    "height": 724
+  },
+  "kasago": {
+    "src": "/images/home/kasago-320.webp",
+    "srcSet": "/images/home/kasago-320.webp 320w, /images/home/kasago-640.webp 640w",
+    "width": 1774,
+    "height": 887
+  },
+  "madai": {
+    "src": "/images/home/madai-320.webp",
+    "srcSet": "/images/home/madai-320.webp 320w, /images/home/madai-640.webp 640w",
+    "width": 1536,
+    "height": 1024
+  },
+  "kawahagi": {
+    "src": "/images/home/kawahagi-320.webp",
+    "srcSet": "/images/home/kawahagi-320.webp 320w, /images/home/kawahagi-640.webp 640w",
+    "width": 1536,
+    "height": 1024
+  },
+  "aoriika": {
+    "src": "/images/home/aoriika-320.webp",
+    "srcSet": "/images/home/aoriika-320.webp 320w, /images/home/aoriika-640.webp 640w",
+    "width": 1536,
+    "height": 1024
+  },
+  "mebaru": {
+    "src": "/images/home/mebaru-320.webp",
+    "srcSet": "/images/home/mebaru-320.webp 320w, /images/home/mebaru-640.webp 640w",
+    "width": 1536,
+    "height": 1024
+  }
+}

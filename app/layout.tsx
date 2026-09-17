@@ -3,7 +3,6 @@ import type {Metadata} from 'next';
 import {Analytics} from '@vercel/analytics/next';
 import './globals.css';
 import Header from '@/components/Header';import Footer from '@/components/Footer';
-import FishPageEnhancer from '@/components/FishPageEnhancer';
 
 const siteUrl='https://uolink.vercel.app';
 
@@ -40,4 +39,4 @@ const organizationJsonLd={
   description:'魚から釣りへつなぐ釣り情報サイト UOLINK（ウオリンク）'
 };
 
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="ja"><body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(websiteJsonLd)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(organizationJsonLd)}}/><Header/><FishPageEnhancer/><main>{children}</main><Footer/><Analytics/></body></html>}
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="ja"><body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(websiteJsonLd)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(organizationJsonLd)}}/><Header/><main>{children}</main><Footer/><Analytics/></body></html>}
