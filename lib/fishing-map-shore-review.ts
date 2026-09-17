@@ -816,5 +816,73 @@ export const shoreReviewExpansion:FishingMapEntry[]= [
         "url": "https://maps.gsi.go.jp/#17/35.682878/134.976718/&base=std&ls=std&disp=1"
       }
     ]
+  },
+  {
+    "slug": "kishiwada-ichimonji",
+    "type": "spot",
+    "primaryType": "pier",
+    "name": "岸和田一文字",
+    "prefecture": "大阪府",
+    "area": "大阪府・岸和田市",
+    "terrain": "pier",
+    "lat": 34.476633,
+    "lng": 135.361176,
+    "fish": [
+      "アジ",
+      "メバル",
+      "タチウオ",
+      "カレイ"
+    ],
+    "methods": [
+      "サビキ",
+      "メバリング",
+      "ウキ釣り",
+      "投げ釣り"
+    ],
+    "season": "魚種・渡船の運航状況により変わる",
+    "beginner": false,
+    "kids": false,
+    "note": "岸和田沖の渡船で渡る防波堤群。沖一文字・旧一文字・中波止を一つの釣行先として掲載し、当日の渡堤先は船宿に確認します。",
+    "googleQuery": "岸和田一文字",
+    "officialUrl": "https://www.city.kishiwada.lg.jp/site/kishiwada-side/ichimonji.html",
+    "verifiedAt": "2026-09-17",
+    "positionNote": "地理院地図で岸之浦町沖の独立した防波堤上を確認した代表点。渡船乗り場ではなく、全ての堤防の利用可否を示すものでもありません。",
+    "access": "渡船利用。受付・運航する堤防・最終迎えの時刻を事前確認する。",
+    "field": "沖向きと港内向きでは風波や流れが異なるため、船宿の案内に従って釣座を選ぶ。",
+    "bestFor": [
+      "小型回遊魚のサビキ",
+      "季節のタチウオ",
+      "メバル"
+    ],
+    "timing": "魚の回遊と渡船運航、帰港時刻を合わせて計画する。",
+    "tips": [
+      "荷物をまとめ、迎えの船に遅れないよう終了時刻を先に決める。"
+    ],
+    "caution": [
+      "陸から無断で侵入せず、渡船で許可された堤防だけを利用する。",
+      "救命具を着用し、天候悪化時は船長の判断に従う。"
+    ],
+    "fishSlugs": [
+      "aji",
+      "mebaru",
+      "tachiuo",
+      "makogarei"
+    ],
+    "methodSlugs": [
+      "sabiki",
+      "mebaring",
+      "uki"
+    ],
+    "guideSlugs": [],
+    "sources": [
+      {
+        "label": "岸和田市：一文字と渡船利用の案内",
+        "url": "https://www.city.kishiwada.lg.jp/site/kishiwada-side/ichimonji.html"
+      },
+      {
+        "label": "地理院地図：沖の防波堤位置",
+        "url": "https://maps.gsi.go.jp/#17/34.476633/135.361176/&base=std&ls=std&disp=1"
+      }
+    ]
   }
 ];
