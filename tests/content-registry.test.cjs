@@ -106,7 +106,8 @@ const migratedSnapshots={
 const originalDigests={
   // 2026-09-17: intentional water classifications and completed unagi profile.
   fish:'9fa68e6ac682e0f4f5baee7b948de70c1d12f31942842883e4d2f117345c1b39',
-  details:'40d8008e09681642ae7d5f1bb3485a9c4b82ca624abd5bb9a1f170785ebbfea9',
+  // 2026-09-17: user-requested duplicate raw-food notice removal; other historical sections unchanged.
+  details:'638fbc4b6240b6ad8c84c798dbea52b1ae031f7bf691918c8e216522226f1f05',
   launch:'035a14df86692faa3770972f5dcf4c622e89955ba3aa37026b8a455775640721',
   launchSlugs:'109affa8f8a322f03f9af2a53acd6001574169cdd039aa6e7f101516fab0e706',
   cooking:'9b06856019b55b157bd735946e563667983c39d114fe5181a7247822b2f0302f',
@@ -216,7 +217,7 @@ test('map IDs and relationships resolve; closed sites are not recommended',()=>{
   for(const slug of e.fishSlugs??[])assert.ok(registry.getFishProfile(slug),slug);
   for(const slug of e.methodSlugs??[])assert.ok(methodDetails[slug],slug);
   for(const slug of e.guideSlugs??[])assert.ok(allGuides.some(g=>g.slug===slug),slug);
-  for(const source of e.sources??[])assert.equal(new URL(source.url).protocol,'https:');
+  for(const source of e.sources??[]){const url=new URL(source.url);/* These two operator sites currently serve HTTP only; do not invent a broken HTTPS link. */assert.equal(url.protocol,['meiseimaru.com','www.beppumaru.com'].includes(url.hostname)?'http:':'https:');}
  }
  for(const slug of ['hirame','sawara','madako'])assert.ok(getSpotsForFish(slug).length);
  assert.ok(!getSpotsForFish('aji').some(e=>e.slug==='nanko-fishing-park'));

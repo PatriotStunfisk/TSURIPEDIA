@@ -22,7 +22,7 @@ export type LaunchFishExtra={
 };
 
 export type Recipe={preparation?:'raw'|'cooked';slug:string;name:string;image?:string;summary:string;ingredients:string[];steps:string[];tips:string[]};
-export type CookingFish={slug:string;name:string;prep:string[];recipes:Recipe[]};
+export type CookingFish={slug:string;name:string;prep:string[];prepImages?:{step:number;src:string;alt:string}[];recipes:Recipe[]};
 
 
 export type FishDish={name:string;src?:string;emoji?:string;desc:string;recipe?:string};
