@@ -1,3 +1,4 @@
+import {autumnMapGrowth} from './fishing-map-autumn-growth';
 import {northMapGrowth} from './fishing-map-north-growth';
 import {favoritesMapGrowth} from './fishing-map-favorites-growth';
 import {shoreReviewExpansion} from './fishing-map-shore-review';
@@ -9,7 +10,7 @@ import {accessMapGrowth} from './fishing-map-access-growth';
 import {coastalMapGrowth} from './fishing-map-coastal-growth';
 import {nationalMapGrowth} from './fishing-map-national-growth';
 import {riverMapExpansion} from './fishing-map-river-expansion';
-import {fishSpecies} from './fish-species';
+import {getFishByName} from './fish-registry';
 import {platformMapExpansion} from './fishing-map-20260917';
 import {classifySpot,type SpotPrimaryType,type LegacySpotPrimaryType} from './spot-classification';
 import {verifiedMapExpansion} from './fishing-map-20260916';
@@ -63,6 +64,7 @@ export type FishingMapEntry={
 };
 
 const sourceEntries:FishingMapEntry[]=[
+  ...autumnMapGrowth,
   ...northMapGrowth,
   ...favoritesMapGrowth,
   ...shoreReviewExpansion,
@@ -136,7 +138,8 @@ const sourceEntries:FishingMapEntry[]=[
   }
 ];
 
-const exactFishNames=new Map(fishSpecies.map(f=>[f.base.name,f.base.slug]));
+// Resolve known aliases (e.g. アジ) without guessing ambiguous groups such as 青物.
+const exactFishNames=new Map([...new Set(sourceEntries.flatMap(e=>e.fish))].flatMap(name=>{const fish=getFishByName(name);return fish?[[name,fish.slug] as const]:[];}));
 export const fishingMapEntries:FishingMapEntry[]=sourceEntries.map(e=>classifySpot({...e,fishSlugs:[...new Set([...(e.fishSlugs??[]),...e.fish.flatMap(name=>exactFishNames.has(name)?[exactFishNames.get(name)!]:[])])]}));
 
 export const fishingMapFish=['すべて',...new Set(fishingMapEntries.flatMap(e=>e.fish))];
