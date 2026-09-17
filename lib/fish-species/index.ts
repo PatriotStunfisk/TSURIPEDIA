@@ -1,3 +1,13 @@
+import shimaaji from './shimaaji';
+import hiramasa from './hiramasa';
+import kaiwari from './kaiwari';
+import maruaji from './maruaji';
+import takabe from './takabe';
+import shiroamadai from './shiroamadai';
+import suma from './suma';
+import hirasouda from './hirasouda';
+import marusouda from './marusouda';
+import usubahagi from './usubahagi';
 import iwana from './iwana';
 import yamame from './yamame';
 import wakasagi from './wakasagi';
@@ -67,7 +77,7 @@ import type {FishSpeciesDefinition} from './types';
 
 // Add one import and one entry here for a new full species profile.
 // Keep this order stable: it is also the encyclopedia order for all species.
-export const fishSpecies:FishSpeciesDefinition[]=[tachiuo,aji,madai,buri,kisu,kasago,saba,iwashi,suzuki,chinu,kawahagi,hirame,mebaru,aoriika,madako,kanpachi,sawara,amago,nijimasu,ayu,unagi,anago,isaki,magochi,mejina,haze,ainame,kijihata,akahata,oomonhata,houbo,itoyoridai,kouika,yariika,akakamas,katakuchi,urume,konoshiro,bora,shiira,makogarei,umazurahagi,kidai,kensakiika,sayori,gomasaba,kurosoi,ishidai,ishigarei,akaamadai,kinmedai,akamutsu,kuromutsu,medai,kusafugu,aigo,gonzui,haokoze,oniokoze,minokasago,akaei,yamame,wakasagi,iwana];
+export const fishSpecies:FishSpeciesDefinition[]=[tachiuo,aji,madai,buri,kisu,kasago,saba,iwashi,suzuki,chinu,kawahagi,hirame,mebaru,aoriika,madako,kanpachi,sawara,amago,nijimasu,ayu,unagi,anago,isaki,magochi,mejina,haze,ainame,kijihata,akahata,oomonhata,houbo,itoyoridai,kouika,yariika,akakamas,katakuchi,urume,konoshiro,bora,shiira,makogarei,umazurahagi,kidai,kensakiika,sayori,gomasaba,kurosoi,ishidai,ishigarei,akaamadai,kinmedai,akamutsu,kuromutsu,medai,kusafugu,aigo,gonzui,haokoze,oniokoze,minokasago,akaei,yamame,wakasagi,iwana,shimaaji,hiramasa,kaiwari,maruaji,takabe,shiroamadai,suma,hirasouda,marusouda,usubahagi];
 uniqueFishSlugs(fishSpecies.map(species=>species.base));
 const speciesBySlug=new Map(fishSpecies.map(species=>[species.base.slug,species]));
 export function getFishSpecies(slug:string){return speciesBySlug.get(slug)}
