@@ -49,7 +49,7 @@ export default async function GuideArticlePage({params}:{params:Promise<{slug:st
  return <div className="section pageTop">
   <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumb)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(article)}}/>
   <div className="breadcrumb"><Link href="/">ホーム</Link> / <Link href="/guide">釣りガイド</Link> / {a.category}</div>
-  <div className="pageHero"><span>{a.articleType} · 約{a.readingMinutes}分</span><h1>{a.title}</h1><p>{a.summary}</p></div>
+  <div className="pageHero"><span>{a.articleType} · 約{a.readingMinutes}分</span><h1>{a.title}</h1>{a.summary.trim()!==a.answer.trim()&&<p>{a.summary}</p>}</div>
   <section style={{margin:'24px 0',padding:'26px 28px',borderRadius:20,background:'#0e2f43',color:'#fff',border:'1px solid #1d4c66'}}><span style={{display:'inline-flex',padding:'5px 9px',borderRadius:999,background:'#fff',color:'#0e2f43',fontSize:11,fontWeight:900}}>結論</span><p style={{fontSize:'clamp(18px,2.3vw,23px)',lineHeight:1.7,fontWeight:900,margin:'13px 0 0'}}>{a.answer}</p></section>
   <section className="factsGrid"><article><span>検索テーマ</span><b>{a.query}</b></article><article><span>カテゴリ</span><b>{guideTopics[a.topic]}</b></article><article><span>読む目安</span><b>約{a.readingMinutes}分</b></article><article><span>UOLINK</span><b>釣行前の疑問解決</b></article></section>
   <nav style={{margin:'20px 0 0',padding:'18px 20px',borderRadius:14,background:'#f4f8fa'}}><b style={{display:'block',marginBottom:8}}>この記事のポイント</b><div style={{display:'flex',gap:10,flexWrap:'wrap'}}>{a.sections.map((s,i)=><a key={s.heading} href={`#p${i+1}`} style={{fontSize:12,fontWeight:800,color:'#087bc4'}}>0{i+1} {s.heading}</a>)}</div></nav>

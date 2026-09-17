@@ -1,3 +1,4 @@
+import {fieldQuestionGuides} from './guide-articles-field-questions';
 import {riverExpansionGuides} from './guide-articles-river-expansion';
 import {freshwaterGuides} from './guide-articles-freshwater';
 import {quickGuides} from './guide-articles-quick';
@@ -44,6 +45,7 @@ const sourceGuides=[
   ...extraGuideArticles5,
   ...extraGuideArticles6,
   ...extraGuideArticles7,
+  ...fieldQuestionGuides,
 ];
 
 const directTags=(guide:typeof sourceGuides[number],kind:'fish'|'methods')=>[...new Set(guide.related.flatMap(link=>{const match=link.href.split(/[?#]/)[0].match(new RegExp(`^/${kind}/([^/]+)$`));return match?[kind==='fish'?canonicalFishSlug(match[1]):match[1]]:[]}))];
