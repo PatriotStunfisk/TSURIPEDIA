@@ -1,3 +1,4 @@
+import {shoreReviewExpansion} from './fishing-map-shore-review';
 import {regionalMapGrowth} from './fishing-map-regional-growth';
 import {facilityMapExpansion} from './fishing-map-facility-expansion';
 import {managedMapGrowth} from './fishing-map-managed-growth';
@@ -8,7 +9,7 @@ import {nationalMapGrowth} from './fishing-map-national-growth';
 import {riverMapExpansion} from './fishing-map-river-expansion';
 import {fishSpecies} from './fish-species';
 import {platformMapExpansion} from './fishing-map-20260917';
-import {classifySpot,type SpotPrimaryType} from './spot-classification';
+import {classifySpot,type SpotPrimaryType,type LegacySpotPrimaryType} from './spot-classification';
 import {verifiedMapExpansion} from './fishing-map-20260916';
 import {nationwideExpansion} from './fishing-map-nationwide-expansion';
 import {nationalSpots} from './fishing-map-national';
@@ -19,7 +20,7 @@ import {expansionSpots} from './fishing-map-expansion';
 export type MapEntryType='spot'|'boat'|'area';
 
 export type FishingMapEntry={
-  primaryType?:SpotPrimaryType;
+  primaryType?:SpotPrimaryType|LegacySpotPrimaryType;
   features?:string[];
   slug:string;
   type:MapEntryType;
@@ -60,6 +61,7 @@ export type FishingMapEntry={
 };
 
 const sourceEntries:FishingMapEntry[]=[
+  ...shoreReviewExpansion,
   ...regionalMapGrowth,
   ...facilityMapExpansion,
   ...managedMapGrowth,
@@ -73,7 +75,8 @@ const sourceEntries:FishingMapEntry[]=[
   ...batchSpots,
   ...expansionSpots,
   {
-    slug:'mukogawa-ichimonji',fishSlugs:['aji','saba','tachiuo','buri'],methodSlugs:['sabiki','shore-jigging','nomase'],type:'spot',name:'武庫川一文字',prefecture:'兵庫県',terrain:'pier',area:'兵庫・大阪湾',lat:34.699,lng:135.353,
+    slug:'mukogawa-ichimonji',fishSlugs:['aji','saba','tachiuo','buri'],methodSlugs:['sabiki','shore-jigging','nomase'],type:'spot',name:'武庫川一文字',prefecture:'兵庫県',terrain:'pier',area:'兵庫・大阪湾',lat:34.6762,lng:135.355,
+    officialUrl:'https://www.amagyo.com/index-tosentop.html',verifiedAt:'2026-09-17',positionNote:'地理院地図で沖堤防の東側屈曲部を確認した代表点。陸上の渡船受付・乗り場とは異なります。',sources:[{label:'武庫川渡船：運航・利用条件',url:'https://www.amagyo.com/index-tosentop.html'},{label:'地理院地図：沖堤防上の位置',url:'https://maps.gsi.go.jp/#16/34.6762/135.3550/&base=std&ls=std&disp=1'}],
     fish:['アジ','サバ','タチウオ','青物'],methods:['サビキ','ショアジギング','ノマセ','タチウオ'],season:'春〜冬',beginner:false,kids:false,parking:true,toilet:false,
     note:'大阪湾を代表する沖堤防のひとつ。潮通しが良く、回遊魚からタチウオまで季節ごとに狙いが変わる。',googleQuery:'武庫川一文字',
     access:'渡船利用が前提。出船場所・受付方法・始発最終便・欠航情報を釣行前に必ず確認。',

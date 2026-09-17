@@ -55,7 +55,8 @@ test('regional access restrictions survive registry and seasonal facilities are 
  assert.match(get('susami-port').tips.join(''),/稲積島は立入禁止/);
  assert.match(get('sanogawa-mouth').tips.join(''),/係留施設内は釣り禁止/);
  assert.match(get('hamazume-port').tips.join(''),/立入禁止/);
- assert.match(get('izumisano-ichimonji').positionNote,/集合側/);
+ assert.match(get('izumisano-ichimonji').positionNote,/堤防上/);
+ assert.equal(get('izumisano-ichimonji').lat,34.4228);assert.equal(get('izumisano-ichimonji').lng,135.3101);
  assert.match(get('awakan-private-fishing').name,/宿泊者専用/);
  assert.match(get('tarorin-pond').season,/7月中旬〜10月上旬/);
  assert.match(get('woodpark-okazaki-trout').season,/夏季.*休止/);

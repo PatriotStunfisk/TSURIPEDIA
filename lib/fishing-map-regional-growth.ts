@@ -5674,8 +5674,8 @@ export const regionalMapGrowth:FishingMapEntry[]=[
     "prefecture": "大阪府",
     "area": "大阪府",
     "terrain": "pier",
-    "lat": 34.419880726917384,
-    "lng": 135.31693592003757,
+    "lat": 34.4228,
+    "lng": 135.3101,
     "fish": [
       "クロダイ",
       "ブリ"
@@ -5686,12 +5686,12 @@ export const regionalMapGrowth:FishingMapEntry[]=[
     "season": "釣期・営業日・利用区画は最新案内で確認",
     "beginner": false,
     "kids": false,
-    "note": "泉佐野一文字は渡船で渡る沖堤防。ピンは葵渡船の集合側を示し、岸から徒歩で入れる釣り場ではありません。",
+    "note": "泉佐野一文字は葵渡船で渡る沖堤防。クロダイや季節の回遊魚を狙う場所で、岸から徒歩では入れません。",
     "googleQuery": "大阪府 泉佐野一文字",
     "verifiedAt": "2026-09-17",
-    "positionNote": "葵渡船の集合側を示す参考ピン。沖堤防そのものの位置ではありません。渡船の公式案内で受付・乗船場所を確認してください。",
+    "positionNote": "地理院地図で確認した泉佐野港沖の一文字堤防上の代表点。受付・乗船場所とは異なるため、集合場所は葵渡船の公式案内を確認してください。",
     "access": "案内元のアクセス情報で入口を確認。港・海岸では立入表示と漁業の作業を優先してください。",
-    "field": "泉佐野一文字は渡船で渡る沖堤防。ピンは葵渡船の集合側を示し、岸から徒歩で入れる釣り場ではありません。",
+    "field": "泉佐野一文字は葵渡船で渡る沖堤防。クロダイや季節の回遊魚を狙う場所で、岸から徒歩では入れません。",
     "bestFor": [
       "ウキ釣り"
     ],
@@ -5714,7 +5714,7 @@ export const regionalMapGrowth:FishingMapEntry[]=[
       "map-pin-entrance",
       "map-offline-trip-notes"
     ],
-    "sources": [
+    "sources": [{"label":"地理院地図：沖堤防上の位置","url":"https://maps.gsi.go.jp/#18/34.4228/135.3101/&base=std&ls=std&disp=1"},
       {
         "label": "釣り場紹介：地形・利用上の注意（許可の保証ではありません）",
         "url": "https://t-port.com/map/izumisanoichimonji/"

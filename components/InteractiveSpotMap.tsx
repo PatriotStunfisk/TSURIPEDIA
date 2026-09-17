@@ -7,6 +7,7 @@ import type {FishingMapEntry} from '@/lib/fishing-map-data';
 import {markerKinds,markerKind,clusterPoints,clusterCellSize} from '@/lib/spot-markers';
 import type {SpotPrimaryType} from '@/lib/spot-classification';
 import s from './SpotMap.module.css';
+import {visibleSpotLabels} from '@/lib/spot-labels';
 import type {TackleShop} from '@/lib/tackle-shops';
 import type {Coordinates} from '@/lib/spot-distance';
 
@@ -25,7 +26,7 @@ export default function InteractiveSpotMap({entries,shops,shopsOn,onShopsChange,
    const instance=L.map(root.current,{scrollWheelZoom:false}).setView([36.5,137.5],5);map.current=instance;
    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'}).on('tileerror',()=>setFailed(true)).addTo(instance);
    instance.on('zoomend',()=>setRevision(v=>v+1));
-   instance.on('moveend',()=>{if(!fittedPoints.current)return;try{const c=instance.getCenter();sessionStorage.setItem('uolink-map-view-v1',JSON.stringify({key:fittedPoints.current,lat:c.lat,lng:c.lng,zoom:instance.getZoom()}));}catch{}});
+   instance.on('moveend',()=>{setRevision(v=>v+1);if(!fittedPoints.current)return;try{const c=instance.getCenter();sessionStorage.setItem('uolink-map-view-v1',JSON.stringify({key:fittedPoints.current,lat:c.lat,lng:c.lng,zoom:instance.getZoom()}));}catch{}});
    markers.current=L.layerGroup().addTo(instance);
    observer=new ResizeObserver(()=>instance.invalidateSize());observer.observe(root.current);setReady(true);
   }).catch(()=>{if(!cancelled)setFailed(true)});
@@ -42,6 +43,7 @@ export default function InteractiveSpotMap({entries,shops,shopsOn,onShopsChange,
    // Fit before projecting clusters; cancel an older zoom when filters change.
    if((points.length||shops.length||focus)&&pointKey!==fittedPoints.current){fittedPoints.current=pointKey;instance.stop();if(focus)instance.setView([focus.lat,focus.lng],11,{animate:false});else instance.fitBounds(L.latLngBounds([...points,...shops].map(e=>[e.lat,e.lng])),{padding:[30,30],maxZoom:13,animate:false});}
    const groups=clusterPoints(points,p=>instance.project([p.lat,p.lng],instance.getZoom()),selected,clusterCellSize(instance.getZoom()));
+   const size=instance.getSize();const labels=visibleSpotLabels(groups.filter(g=>g.length===1).map(([e])=>({slug:e.slug,name:e.name,...instance.latLngToContainerPoint([e.lat,e.lng])})),instance.getZoom(),size.x,size.y,selected);
    for(const group of groups){
     if(group.length>1){
      const center=L.latLngBounds(group.map(e=>[e.lat,e.lng])).getCenter();
@@ -53,7 +55,8 @@ export default function InteractiveSpotMap({entries,shops,shopsOn,onShopsChange,
     }
     const entry=group[0],kind=markerKinds[markerKind(entry)],chosen=entry.slug===selected;
     const text=document.createElement('span');text.textContent=`${kind.label}：${entry.name}${chosen?'（選択中）':''}`;
-    const marker=L.marker([entry.lat,entry.lng],{title:text.textContent,alt:text.textContent,zIndexOffset:chosen?1000:0,icon:L.divIcon({className:`${s.mapPin} ${chosen?s.selectedPin:''}`,html:`<span style="display:block;border-radius:50%;background:${kind.color}">${kind.symbol}</span>`,iconSize:[30,30],iconAnchor:[15,15]})}).bindTooltip(text).on('click',()=>callback.current(entry.slug)).addTo(layer);
+    const tip=document.createElement('span');tip.textContent=labels.has(entry.slug)?entry.name:text.textContent;
+    const marker=L.marker([entry.lat,entry.lng],{title:text.textContent,alt:text.textContent,zIndexOffset:chosen?1000:0,icon:L.divIcon({className:`${s.mapPin} ${chosen?s.selectedPin:''}`,html:`<span style="display:block;border-radius:50%;background:${kind.color}">${kind.symbol}</span>`,iconSize:[30,30],iconAnchor:[15,15]})}).bindTooltip(tip,{permanent:labels.has(entry.slug),direction:'top',offset:[0,-14],className:labels.has(entry.slug)?s.placeLabel:''}).on('click',()=>callback.current(entry.slug)).addTo(layer);
     marker.getElement()?.setAttribute('aria-label',text.textContent);
    }
    // Shops are a separate retail layer, excluded from fishing-spot clusters and totals.
