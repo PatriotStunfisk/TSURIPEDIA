@@ -1,9 +1,10 @@
 import {createHmac,createHash} from 'node:crypto';
 import type {CatchReport} from '../catches/types';
 import {HttpError} from './request';
-export function backendConfigured(){return !!(process.env.NEXT_PUBLIC_SUPABASE_URL&&process.env.SUPABASE_SERVICE_ROLE_KEY);}
+function backendUrl(){return process.env.SUPABASE_URL||process.env.NEXT_PUBLIC_SUPABASE_URL;}
+export function backendConfigured(){return !!(backendUrl()&&process.env.SUPABASE_SERVICE_ROLE_KEY);}
 export function catchStoreReady(){return backendConfigured()&&process.env.CATCH_REPORTS_ENABLED==='true';}
-function config(){if(!backendConfigured())throw new HttpError(503,'公開釣果は準備中です。端末内の記録は利用できます。');return {url:process.env.NEXT_PUBLIC_SUPABASE_URL!.replace(/\/$/,''),key:process.env.SUPABASE_SERVICE_ROLE_KEY!};}
+function config(){if(!backendConfigured())throw new HttpError(503,'公開釣果は準備中です。端末内の記録は利用できます。');return {url:backendUrl()!.replace(/\/$/,''),key:process.env.SUPABASE_SERVICE_ROLE_KEY!};}
 export async function storeRequest(path:string,init:RequestInit={}){const {url,key}=config();const response=await fetch(url+path,{...init,headers:{apikey:key,Authorization:`Bearer ${key}`,...init.headers},cache:'no-store',signal:AbortSignal.timeout(12000)});if(!response.ok)throw new HttpError(503,'公開釣果の保存先へ接続できません。端末内の記録は保持されています。');return response;}
 export async function takeQuota(request:Request,bucket:string,limit:number){const {key}=config();const ip=request.headers.get('x-vercel-forwarded-for')??request.headers.get('x-forwarded-for')?.split(',')[0]??'unknown';const hash=createHmac('sha256',key).update(bucket+':'+ip).digest('hex');const r=await storeRequest('/rest/v1/rpc/uolink_take_quota',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({p_key:hash,p_limit:limit})});if(!(await r.json()))throw new HttpError(429,'送信回数の上限です。1時間ほど空けてください。');}
 export async function publishCatch(report:CatchReport,token:string,photo?:Buffer){const {photo:discard,...payload}=report;void discard;const tokenHash=createHash('sha256').update(token).digest('hex');
