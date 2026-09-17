@@ -207,6 +207,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/umazurahagi-sashimi.webp",
         "name": "刺身・薄造り",
         "preparation": "raw",
         "summary": "皮と薄皮を除いた身を薄く引くと、カワハギに近い白身の歯応えを味わえます。肝の生食は案内しません。",

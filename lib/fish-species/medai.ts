@@ -124,6 +124,7 @@ export default defineFishSpecies({
     ],
     "recipes": [...(["misozuke","teriyaki","meuniere","fry"].map(slug=>cookedRecipe(fish,slug,"粘液・鱗・骨を除いた切り身","身の厚みをそろえ、皮や小骨の残りを確認してから調理します。"))),{
   "slug": "sashimi",
+  "image": "/images/cooking/medai-sashimi.webp",
   "name": "刺身",
   "preparation": "raw",
   "summary": "厚い身を切りやすい柵に整え、繊維を断つ方向に切ります。加熱とは違う弾力を楽しめます。",

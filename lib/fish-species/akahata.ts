@@ -200,6 +200,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/akahata-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "皮を除いた白身を薄く切る料理です。透明感と歯応えを生かし、加熱料理と違う食感を楽しみます。",

@@ -200,6 +200,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/makogarei-sashimi.webp",
         "name": "刺身・薄造り",
         "preparation": "raw",
         "summary": "薄造りが代表的な食べ方の一つ。小骨と薄皮を除き、弾力が残る厚さに引きます。",

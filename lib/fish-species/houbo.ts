@@ -204,6 +204,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/houbo-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "淡白で弾力のある白身を薄く切ります。頭は生食に回さず、別に加熱料理へ使います。",

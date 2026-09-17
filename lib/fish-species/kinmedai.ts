@@ -130,6 +130,7 @@ export default defineFishSpecies({
     ],
     "recipes": [...(["nitsuke","shioyaki","sakamushi","takikomi"].map(slug=>cookedRecipe(fish,slug,"鱗と骨を除いた皮付きの切り身","赤い皮を残す切り身で作り、煮ている間は箸で動かしすぎないようにします。"))),{
   "slug": "sashimi",
+  "image": "/images/cooking/kinmedai-sashimi.webp",
   "name": "刺身",
   "preparation": "raw",
   "summary": "脂のある白身を皮なしの刺身で味わいます。皮を炙るだけでは内部の寄生虫対策になりません。",

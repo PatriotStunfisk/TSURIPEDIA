@@ -197,6 +197,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/isaki-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "皮を除いた白身はほどよい脂と歯応えを楽しめます。中骨周りの小骨を丁寧に確認します。",

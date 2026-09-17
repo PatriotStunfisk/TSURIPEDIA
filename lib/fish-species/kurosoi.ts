@@ -131,6 +131,7 @@ export default defineFishSpecies({
     ],
     "recipes": [...(["nitsuke","karaage","sakamushi","ushiojiru"].map(slug=>cookedRecipe(fish,slug,"骨を除いた皮付きの身","頭やひれの棘を避けて下処理し、骨のない身で食べやすく仕上げます。"))),{
   "slug": "sashimi",
+  "image": "/images/cooking/kurosoi-sashimi.webp",
   "name": "刺身",
   "preparation": "raw",
   "summary": "大きめの個体の身を薄造りにし、歯応えを楽しみます。皮と小骨を除いて切ります。",

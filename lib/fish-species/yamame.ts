@@ -103,6 +103,7 @@ export default defineFishSpecies({
     "recipes": [
       {
         "slug": "shioyaki",
+  "image": "/images/cooking/yamame-shioyaki.webp",
         "name": "塩焼き",
         "summary": "皮を香ばしく焼き、淡い身の風味を塩だけで味わいます。大きさをそろえると火の通りを確認しやすくなります。",
         "ingredients": [
@@ -123,6 +124,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "karaage",
+  "image": "/images/cooking/yamame-karaage.webp",
         "name": "唐揚げ",
         "summary": "身を一口大にして薄い粉で揚げ、皮の香ばしさを楽しみます。大きなヤマメは骨を除いた身を使うと食べやすくなります。",
         "ingredients": [
@@ -143,6 +145,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "nanban",
+  "image": "/images/cooking/yamame-nanban.webp",
         "name": "南蛮漬け",
         "summary": "揚げたヤマメを玉ねぎ入りの甘酢へ。淡白な身に酸味を合わせ、冷やしても食べやすい料理にします。",
         "ingredients": [
@@ -166,6 +169,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "meuniere",
+  "image": "/images/cooking/yamame-meuniere.webp",
         "name": "ムニエル",
         "summary": "骨を除いた身の表面を粉で保護して焼き、バターとレモンを合わせます。小さすぎる魚より、身を取り分けやすい大きさが向きます。",
         "ingredients": [

@@ -127,6 +127,7 @@ export default defineFishSpecies({
     ],
     "recipes": [...(["shioyaki","nitsuke","meuniere","ushiojiru"].map(slug=>cookedRecipe(fish,slug,"骨を除いた切り身","厚い身は大きさをそろえ、表面だけでなく中心まで火を通します。"))),{
   "slug": "sashimi",
+  "image": "/images/cooking/ishidai-sashimi.webp",
   "name": "刺身・薄造り",
   "preparation": "raw",
   "summary": "弾力の強い身を薄く切ると歯切れがよくなります。厚切りにしすぎないのが食べやすさのポイントです。",

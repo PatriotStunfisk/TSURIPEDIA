@@ -208,6 +208,7 @@ export default defineFishSpecies({
     ,
 {
   "slug": "sashimi",
+  "image": "/images/cooking/kensakiika-sashimi.webp",
   "name": "刺身",
   "preparation": "raw",
   "summary": "細く切った胴の甘みと、やわらかさを楽しむ代表料理。薄皮・軟骨を除いた生食用の胴を使います。",

@@ -202,6 +202,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/chinu-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "締まった白身は薄造りに向きます。生息環境による風味の差があり、生食用として扱える食材を選びます。",

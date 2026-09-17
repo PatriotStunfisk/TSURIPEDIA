@@ -201,6 +201,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/kijihata-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "厚みと弾力のある身を薄めに切り、白身の旨味を味わいます。",

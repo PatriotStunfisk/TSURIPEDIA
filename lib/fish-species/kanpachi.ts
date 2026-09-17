@@ -197,6 +197,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/kanpachi-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "適度に脂のある厚い身を、繊維を断つ方向に切って食感を楽しめます。",

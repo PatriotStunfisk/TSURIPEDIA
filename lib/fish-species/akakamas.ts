@@ -198,6 +198,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/akakamas-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "生食用に管理された柵を使用。細長い身を薄めに切り、小骨を取り残さないよう確認します。",

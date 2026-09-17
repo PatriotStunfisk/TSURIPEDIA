@@ -208,6 +208,7 @@ export default defineFishSpecies({
     ,
 {
   "slug": "sashimi",
+  "image": "/images/cooking/kawahagi-sashimi.webp",
   "name": "刺身・薄造り",
   "preparation": "raw",
   "summary": "薄皮を丁寧に除いた身を薄く引くと、弾力と淡い甘みが分かります。肝を生で添えず、身だけの薄造りとして紹介します。",

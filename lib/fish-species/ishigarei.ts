@@ -125,6 +125,7 @@ export default defineFishSpecies({
     ],
     "recipes": [...(["nitsuke","karaage","meuniere","sakamushi"].map(slug=>cookedRecipe(fish,slug,"骨板・皮・骨を除いた身","骨板が残らないように皮を除いた身を使い、薄い部分の加熱しすぎを防ぎます。"))),{
   "slug": "sashimi",
+  "image": "/images/cooking/ishigarei-sashimi.webp",
   "name": "刺身",
   "preparation": "raw",
   "summary": "硬い骨板のある皮を外した柵を薄く切ります。皮の処理と細かな骨の確認は販売店や専門家に任せます。",

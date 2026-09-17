@@ -199,6 +199,7 @@ export default defineFishSpecies({
     ,
 {
   "slug": "sashimi",
+  "image": "/images/cooking/hirame-sashimi.webp",
   "name": "刺身・薄造り",
   "preparation": "raw",
   "summary": "薄造りで白身の歯応えを楽しむ代表料理。クドア対策を含め生食用として処理・管理された柵を使います。",

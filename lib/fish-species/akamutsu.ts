@@ -130,6 +130,7 @@ export default defineFishSpecies({
     ],
     "recipes": [...(["nitsuke","shioyaki","sakamushi","takikomi"].map(slug=>cookedRecipe(fish,slug,"鱗と骨を除いた皮付きの切り身","皮を残して脂を生かし、柔らかい身を崩さないように扱います。"))),{
   "slug": "sashimi",
+  "image": "/images/cooking/akamutsu-sashimi.webp",
   "name": "刺身",
   "preparation": "raw",
   "summary": "脂の多い白身を小さめに切り、重くなりすぎないよう薬味を添えます。表面の炙りだけで安全にはなりません。",

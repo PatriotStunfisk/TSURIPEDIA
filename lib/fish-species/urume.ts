@@ -202,6 +202,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/urume-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "脂と銀色の皮が特徴ですが、傷みやすいため生食用として管理された柵だけを使います。",

@@ -125,6 +125,7 @@ export default defineFishSpecies({
     ],
     "recipes": [...(["shioyaki","sakamushi","tempura","takikomi"].map(slug=>cookedRecipe(fish,slug,"鱗と骨を除いた皮付きの身","柔らかい身は強く押さえず、水分を拭いてから調理します。"))),{
   "slug": "sashimi",
+  "image": "/images/cooking/akaamadai-sashimi.webp",
   "name": "刺身",
   "preparation": "raw",
   "summary": "水分が多くやわらかい身を冷たい状態で切ります。昆布締めもありますが、昆布や塩は寄生虫対策ではありません。",

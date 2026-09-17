@@ -199,6 +199,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/iwashi-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "小さな身は手開きにしやすく、脂と薬味を一緒に味わえます。傷みやすいため生食用として管理されたものを食べる直前に調理します。",

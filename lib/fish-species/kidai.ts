@@ -200,6 +200,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/kidai-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "小ぶりな個体が多いため、柵が取れるサイズで薄造りに。小さい魚は塩焼きや煮付けが扱いやすいです。",

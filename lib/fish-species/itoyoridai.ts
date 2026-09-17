@@ -204,6 +204,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/itoyoridai-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "やわらかな身を冷たい状態で切り、崩さず盛ります。皮を除いた柵を使います。",

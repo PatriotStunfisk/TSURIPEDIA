@@ -200,6 +200,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/oomonhata-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "大きな柵を薄めに引き、弾力のある身を食べやすくします。",

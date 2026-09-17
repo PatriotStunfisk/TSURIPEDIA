@@ -194,6 +194,7 @@ export default defineFishSpecies({
     ,
 {
   "slug": "sashimi",
+  "image": "/images/cooking/yariika-sashimi.webp",
   "name": "刺身",
   "preparation": "raw",
   "summary": "薄い胴のやわらかい食感を生かします。縦に細く切り、歯応えを調整します。",

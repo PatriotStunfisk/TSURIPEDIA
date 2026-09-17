@@ -203,6 +203,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/mebaru-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "大きめの個体は皮と小骨を取り除いて刺身にできます。小型は無理に身を取らず煮付けなどに回します。",

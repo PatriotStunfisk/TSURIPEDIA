@@ -201,6 +201,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/magochi-sashimi.webp",
         "name": "刺身・薄造り",
         "preparation": "raw",
         "summary": "弾力の強い身を薄く引くと食べやすく、淡白な旨味を薬味と楽しめます。",

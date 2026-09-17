@@ -205,6 +205,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/suzuki-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "淡白な白身の歯応えを生かし、薄く引いてぽん酢や薬味と合わせます。",

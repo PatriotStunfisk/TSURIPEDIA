@@ -202,6 +202,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/ainame-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "締まった白身を薄造りに。小骨が多いため柵の中央まで丁寧に確認します。",

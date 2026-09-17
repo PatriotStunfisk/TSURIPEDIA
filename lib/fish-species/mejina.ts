@@ -198,6 +198,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/mejina-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "皮を引いた白身を薄めに切り、身の歯応えを生かします。季節や生息環境で脂と風味が変わります。",

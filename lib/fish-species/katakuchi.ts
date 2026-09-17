@@ -205,6 +205,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/katakuchi-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "小さな身を丁寧に開く料理です。鮮度の低下が速く、釣ったばかりという理由だけで生食を選びません。",

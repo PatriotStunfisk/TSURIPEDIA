@@ -108,6 +108,7 @@ export default defineFishSpecies({
     "recipes": [
       {
         "slug": "shioyaki",
+  "image": "/images/cooking/iwana-shioyaki.webp",
         "name": "塩焼き",
         "summary": "皮を香ばしく焼き、イワナの身の香りを塩で引き立てる定番。厚い背側まで火を通し、食べるときに背骨を外します。",
         "ingredients": [
@@ -128,6 +129,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "karaage",
+  "image": "/images/cooking/iwana-karaage.webp",
         "name": "唐揚げ",
         "summary": "骨を外して一口大にすると、衣と皮の香ばしさを楽しめます。丸揚げで骨まで食べられると決めつけず、大きい個体は身を使います。",
         "ingredients": [
@@ -148,6 +150,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "nanban",
+  "image": "/images/cooking/iwana-nanban.webp",
         "name": "南蛮漬け",
         "summary": "揚げたイワナを玉ねぎ入りの甘酢へ。淡白な身に酸味を合わせ、冷やしても食べやすい料理にします。",
         "ingredients": [
@@ -171,6 +174,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "meuniere",
+  "image": "/images/cooking/iwana-meuniere.webp",
         "name": "ムニエル",
         "summary": "骨を除いた身の表面を粉で保護して焼き、バターとレモンを合わせます。小さすぎる魚より、身を取り分けやすい大きさが向きます。",
         "ingredients": [

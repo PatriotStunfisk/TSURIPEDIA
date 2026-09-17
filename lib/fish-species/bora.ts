@@ -205,6 +205,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "sashimi",
+  "image": "/images/cooking/bora-sashimi.webp",
         "name": "刺身",
         "preparation": "raw",
         "summary": "生食用として適切に選別・管理された身は、薄く引いて歯応えを楽しめます。水域の衛生状態が不明な魚を自己判断で生食しません。",

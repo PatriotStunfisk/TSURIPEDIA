@@ -197,6 +197,7 @@ export default defineFishSpecies({
     ,
 {
   "slug": "sashimi",
+  "image": "/images/cooking/kouika-sashimi.webp",
   "name": "刺身",
   "preparation": "raw",
   "summary": "肉厚の胴を細めに切ると、弾力と甘みを楽しめます。薄皮と軟骨を除いた生食用の胴を使います。",

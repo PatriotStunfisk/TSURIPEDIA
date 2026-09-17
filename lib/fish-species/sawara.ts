@@ -197,6 +197,7 @@ export default defineFishSpecies({
     ,
 {
   "slug": "sashimi",
+  "image": "/images/cooking/sawara-sashimi.webp",
   "name": "刺身",
   "preparation": "raw",
   "summary": "やわらかく崩れやすい身は冷たい状態で切ります。生食は鮮度・寄生虫対策を管理した専用の食材に限ります。",

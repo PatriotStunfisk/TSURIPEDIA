@@ -102,6 +102,7 @@ export default defineFishSpecies({
     "recipes": [
       {
         "slug": "tempura",
+  "image": "/images/cooking/wakasagi-tempura.webp",
         "name": "天ぷら",
         "summary": "薄い衣で小さな身を包み、ふわっとした身と衣の歯触りを楽しむ定番です。",
         "ingredients": [
@@ -124,6 +125,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "karaage",
+  "image": "/images/cooking/wakasagi-karaage.webp",
         "name": "唐揚げ",
         "summary": "薄い粉で表面を香ばしく仕上げる料理。魚の水気を拭き、一度に入れすぎないことが油はね防止にもつながります。",
         "ingredients": [
@@ -144,6 +146,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "nanban",
+  "image": "/images/cooking/wakasagi-nanban.webp",
         "name": "南蛮漬け",
         "summary": "中心まで揚げたワカサギを甘酢と玉ねぎに合わせます。酸味が小魚の風味を食べやすくします。",
         "ingredients": [
@@ -167,6 +170,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "kanroni",
+  "image": "/images/cooking/wakasagi-kanroni.webp",
         "name": "甘露煮",
         "summary": "小魚に甘辛い煮汁をからめ、御飯のおかずに。身を箸で動かさず、鍋を傾けて煮汁を回します。",
         "ingredients": [

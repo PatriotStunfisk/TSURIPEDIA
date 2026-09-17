@@ -116,6 +116,7 @@ export default defineFishSpecies({
     "recipes": [
       {
         "slug": "kabayaki-don",
+  "image": "/images/cooking/unagi-kabayaki-don.webp",
         "name": "蒲焼き丼",
         "summary": "市販の蒲焼きを温め直し、香ばしいたれを御飯に合わせます。",
         "ingredients": [
@@ -138,6 +139,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "shirayaki",
+  "image": "/images/cooking/unagi-shirayaki.webp",
         "name": "白焼き",
         "summary": "たれのない加熱済み白焼きで、脂と香りを味わいます。",
         "ingredients": [
@@ -160,6 +162,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "umaki",
+  "image": "/images/cooking/unagi-umaki.webp",
         "name": "う巻き",
         "summary": "少量の蒲焼きを卵で包み、甘辛いたれと卵の味を楽しみます。",
         "ingredients": [
@@ -182,6 +185,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "uzaku",
+  "image": "/images/cooking/unagi-uzaku.webp",
         "name": "うざく",
         "summary": "蒲焼きの脂をきゅうりと酢のさっぱりした味で楽しみます。",
         "ingredients": [

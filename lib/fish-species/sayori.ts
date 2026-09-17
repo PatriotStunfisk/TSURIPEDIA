@@ -126,6 +126,7 @@ export default defineFishSpecies({
     ],
     "recipes": [...(["tempura","nanban","shioyaki","fry"].map(slug=>cookedRecipe(fish,slug,"骨を除いて開いた身","薄く繊細な身なので小骨を丁寧に除き、加熱しすぎて乾かないよう確認します。"))),{
   "slug": "sashimi",
+  "image": "/images/cooking/sayori-sashimi.webp",
   "name": "刺身",
   "preparation": "raw",
   "summary": "細長い身を開き、腹の黒い膜と小骨を除くと上品な味わいになります。",
