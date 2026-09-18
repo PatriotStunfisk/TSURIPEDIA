@@ -2,8 +2,9 @@ import type {FishingMapEntry} from './fishing-map-data';
 import type {Prefecture} from './japan-regions';
 // Public fishing reports identify candidates; they do not override posted access restrictions.
 // Map positions were reviewed against GSI shorelines, not accepted as address-search results.
-export type HarborRecord={slug:string;name:string;prefecture:Prefecture;lat:number;lng:number;fish:string[];methodSlugs:string[];note:string;caution:string[];sources:NonNullable<FishingMapEntry['sources']>;primaryType?:'port'|'pier'};
+export type HarborRecord={slug:string;name:string;prefecture:Prefecture;lat:number;lng:number;fish:string[];methodSlugs:string[];note:string;caution:string[];sources:NonNullable<FishingMapEntry['sources']>;primaryType?:'port'|'pier'|'beach'};
 const methodHelp:Record<string,{name:string;tip:string}>={
+  'surf-lure':{name:'サーフルアー',tip:'手前の底の変化から探り、底をこすり続けず少し浮かせて巻く。人のいる方向へ投げない。'},
   "sabiki": {
     "name": "サビキ",
     "tip": "サビキは短い仕掛けから始め、足元の船・ロープを避けて回遊する棚を探す。"
@@ -26,12 +27,12 @@ const methodHelp:Record<string,{name:string;tip:string}>={
   }
 };
 export const createHarborEntries=(harbors:readonly HarborRecord[]):FishingMapEntry[]=>harbors.map(h=>({...h,
- type:'spot',terrain:h.primaryType==='pier'?'pier':'port',primaryType:h.primaryType??'port',
+ type:'spot',terrain:h.primaryType??'port',primaryType:h.primaryType??'port',
  area:`${h.prefecture}・${h.name}`,googleQuery:`${h.prefecture} ${h.name}`,
  methods:h.methodSlugs.map(id=>methodHelp[id].name),
  season:'対象魚・回遊・天候により変動。出発前に直近の岸釣り情報と利用条件を確認。',
  beginner:false,kids:false,verifiedAt:'2026-09-18',
- positionNote:'港内岸壁・波止の代表位置を地理院地図で照合。ピンは釣り許可範囲や駐車位置ではありません。',
+ positionNote:h.primaryType==='beach'?'砂浜の代表位置を地理院地図で照合。ピンは釣り許可範囲・駐車位置・入水位置ではありません。':'港内岸壁・波止の代表位置を地理院地図で照合。ピンは釣り許可範囲や駐車位置ではありません。',
  access:`${h.prefecture}の${h.name}。駐車・進入路・立入範囲は現地の案内を確認。`,
  field:h.note,bestFor:h.fish.slice(0,3).map(f=>`${f}の岸釣り候補`),
  timing:'初めてなら明るい時間に足場と帰路を確認。作業中や風・波が強い場合は利用しない。',
