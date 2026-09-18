@@ -23,6 +23,9 @@ export const tackleCategories=[['rod','ロッド'],['reel','リール'],['line',
 export function amazonSearchUrl(query:string){return `https://www.amazon.co.jp/s?k=${encodeURIComponent(query)}&tag=${amazonStoreId}`;}
 
 export const tackleSearchTerms:Readonly<Record<string,Partial<Record<typeof tackleCategories[number][0],string>>>>={
+ 'herabuna-bottom':{rod:'へら竿 9尺 12尺',line:'へら 道糸 ナイロン 0.8号',leader:'へら ハリス 0.4号 0.6号',rig:'へら 底釣り 仕掛け ウキ',bait:'へら 餌 底釣り グルテン'},
+ 'carp-bottom':{rod:'鯉 釣り 竿',reel:'鯉 スピニングリール',line:'鯉 ナイロン 道糸 3号 4号',rig:'鯉 一本針 遊動 仕掛け',bait:'鯉 練り餌'},
+ 'freshwater-float':{rod:'小物釣り のべ竿 3m',line:'小物釣り ナイロン 道糸',rig:'川 小物釣り ウキ 袖針 仕掛け',bait:'川 小物釣り 練り餌'},
  'sayori-uki':{rig:'サヨリ ウキ 仕掛け',bait:'サヨリ オキアミ'},
  'ishidai-bottom':{rod:'イシダイ 専用竿',reel:'イシダイ 両軸リール',rig:'イシダイ 底物 仕掛け'},
  'nage':{rod:'カレイ 投げ竿',reel:'投げ釣り リール',line:'投げ釣り 道糸 力糸',rig:'カレイ 天秤 仕掛け'},
