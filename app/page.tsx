@@ -14,7 +14,8 @@ const quickLinks=[
   {href:'/spots',icon:'⌖',label:'釣り場マップ'},
   {href:'/gear',icon:'▣',label:'釣具'},
   {href:'/cooking',icon:'◇',label:'魚料理'},
-  {href:'/quest',icon:'◈',label:'QUEST'}
+  {href:'/quest',icon:'◈',label:'QUEST'},
+  {href:'/catches',icon:'▤',label:'新着釣果'}
 ];
 
 export default function Home(){

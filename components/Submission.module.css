@@ -9,3 +9,5 @@
 .noPhoto{grid-template-columns:minmax(0,1fr)}.noPhoto>h3,.noPhoto>p,.noPhoto>details{grid-column:1}
 
 .sourceNotes{border-top:1px solid #dce6eb;padding-top:16px;margin-top:32px;color:#5b717b;font-size:12px;line-height:1.7}.sourceNotes h2{font-size:15px}.sourceNotes p{margin:8px 0}
+
+.field input,.field select,.field textarea{min-width:0;max-width:100%}.field input[type=date]{display:block;min-width:0;max-width:100%;appearance:none;-webkit-appearance:none}.field input[type=date]::-webkit-date-and-time-value{text-align:left;min-width:0}
