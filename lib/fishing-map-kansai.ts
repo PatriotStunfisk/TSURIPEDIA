@@ -1,11 +1,11 @@
 import type {FishingMapEntry} from './fishing-map-data';
 export const kansaiSpots:FishingMapEntry[]=[
-  {
+  {positionNote:"地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
     "slug": "amagasaki-uoturi",
     "name": "尼崎市立魚つり公園",
     "prefecture": "兵庫県", "terrain": "pier", "area": "兵庫・尼崎",
-    "lat": 34.6834,
-    "lng": 135.369,
+    "lat": 34.681835,
+    "lng": 135.368793,
     "fish": [
       "アジ",
       "サバ",
@@ -30,16 +30,13 @@ export const kansaiSpots:FishingMapEntry[]=[
     "note": "武庫川河口に設けられた釣り桟橋。売店・貸竿などを備え、初めての釣行も計画しやすい管理施設です。",
     "access": "兵庫県尼崎市平左衛門町66。武庫川駅からの交通手段は公式アクセス案内を確認。",
     "field": "管理された桟橋。混雑時は釣り座の間隔を取り、子どもから目を離さない。",
-    "sources": [
-      {
+    "sources": [{
         "label": "尼崎市の施設・地図案内",
         "url": "https://www.city.amagasaki.hyogo.jp/map/1000380/1000422/1000849.html"
-      },
-      {
+      },{
         "label": "運営者の営業・釣果案内",
         "url": "https://amagasaki-uoturikouen.com/index.html"
-      }
-    ],
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/34.681835/135.368793/&base=std&ls=std&disp=1"}],
     "type": "spot",
     "season": "釣期・営業日は最新の公式案内を確認",
     "beginner": true,
@@ -64,12 +61,12 @@ export const kansaiSpots:FishingMapEntry[]=[
       "fishing-first-checklist"
     ]
   },
-  {
+  {positionNote:"地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
     "slug": "maizuru-shinkai",
     "name": "舞鶴親海公園",
     "prefecture": "京都府", "terrain": "pier", "area": "京都北部・舞鶴",
-    "lat": 35.5142706,
-    "lng": 135.3418639,
+    "lat": 35.513872,
+    "lng": 135.343645,
     "fish": [],
     "fishSlugs": [],
     "methods": [
@@ -79,16 +76,13 @@ export const kansaiSpots:FishingMapEntry[]=[
     "note": "舞鶴湾に面した海釣り護岸のある公園。公園全体を釣り可能範囲とせず、指定された護岸を利用します。",
     "access": "京都府舞鶴市字千歳897-1。東舞鶴駅から車で向かう場合も帰路と駐車場を確認。",
     "field": "海釣り護岸と休憩施設を備える公園。護岸の使用ルール、開場時間と天候を優先。",
-    "sources": [
-      {
+    "sources": [{
         "label": "舞鶴市：施設・休場日案内",
         "url": "https://www.city.maizuru.kyoto.jp/kurashi/0000009016.html"
-      },
-      {
+      },{
         "label": "海の京都：所在地・地図",
         "url": "https://www.uminokyoto.jp/spot/detail.php?sid=168"
-      }
-    ],
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/35.513872/135.343645/&base=std&ls=std&disp=1"}],
     "type": "spot",
     "season": "釣期・営業日は最新の公式案内を確認",
     "beginner": true,

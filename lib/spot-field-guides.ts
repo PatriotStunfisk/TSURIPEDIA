@@ -1,3 +1,4 @@
+import {kansaiNationalFieldGuides} from './spot-field-guides-kansai-national';
 import {coastalNextFieldGuides} from './spot-field-guides-coastal-next';
 import type {SpotFieldGuide} from './spot-planning';
 import {shoreFieldGuides} from './spot-field-guides-growth';
@@ -5,6 +6,7 @@ import {shoreFieldGuides} from './spot-field-guides-growth';
 export const spotFieldGuides:Record<string,SpotFieldGuide>={
   ...shoreFieldGuides,
   ...coastalNextFieldGuides,
+  ...kansaiNationalFieldGuides,
   "coast-hyougokasuminisikou": {
     "features": [
       "港内の岸壁と波止では、船の出入り・水面の明暗・壁際の条件が異なる。先端へ進むことより、仕掛けを回収できる方向を確保することを優先したい。"

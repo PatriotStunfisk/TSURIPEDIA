@@ -16,19 +16,13 @@ const additions:Addition[]=
     "access": "秋田県秋田市土崎港西一丁目。詳細な経路と受付は出典の公式案内を確認。",
     "field": "指定された北防波堤の開放釣り場。未就学児は入場できません。開放日と当日の中止告知を確認して受付へ。",
     "googleQuery": "秋田港北防波堤",
-    "sources": [
-      {
+    "sources": [{
         "label": "公式・運営者の利用案内",
         "url": "https://www.pa.thr.mlit.go.jp/akita/100/20200101002000.html"
-      },
-      {
-        "label": "位置の出典：国土地理院住所検索（町域代表点）",
-        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A7%8B%E7%94%B0%E7%9C%8C%E7%A7%8B%E7%94%B0%E5%B8%82%E5%9C%9F%E5%B4%8E%E6%B8%AF%E8%A5%BF%E4%B8%80%E4%B8%81%E7%9B%AE"
-      }
-    ],
-    "lat": 39.752254,
-    "lng": 140.061172,
-    "positionNote": "ピンは国土地理院の住所検索による秋田県秋田市土崎港西一丁目の参考位置です。入場口・乗船場・釣り可能区間は公式地図で確認してください。"
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/39.771075/140.034914/&base=std&ls=std&disp=1"}],
+    "lat": 39.771075,
+    "lng": 140.034914,
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。"
   },
   {
     "slug": "shinchi-park",
@@ -43,19 +37,13 @@ const additions:Addition[]=
     "access": "福島県相馬郡新地町今泉。詳細な経路と受付は出典の公式案内を確認。",
     "field": "相馬港5号埠頭の管理釣り場。予約制のため、空き状況と受付を公式サイトで確認します。周辺港湾の立入禁止区域へは入らないでください。",
     "googleQuery": "新地町海釣り公園",
-    "sources": [
-      {
+    "sources": [{
         "label": "公式・運営者の利用案内",
         "url": "https://www.shinchi-fishing.com/"
-      },
-      {
-        "label": "位置の出典：国土地理院住所検索（町域代表点）",
-        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E6%96%B0%E5%9C%B0%E7%94%BA%E4%BB%8A%E6%B3%89"
-      }
-    ],
-    "lat": 37.854523,
-    "lng": 140.933273,
-    "positionNote": "ピンは福島県新地町今泉の町域代表点です。受付・釣座ではありません。公式アクセス図を確認してください。"
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/37.859455/140.956542/&base=std&ls=std&disp=1"}],
+    "lat": 37.859455,
+    "lng": 140.956542,
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。"
   },
   {
     "slug": "kashima-fishing",
@@ -70,19 +58,13 @@ const additions:Addition[]=
     "access": "茨城県鹿嶋市新浜。詳細な経路と受付は出典の公式案内を確認。",
     "field": "鹿島港の指定区間で釣りをする県営施設。貸竿・餌販売があり、入園時の同意書と救命胴衣着用が必要です。",
     "googleQuery": "鹿島港魚釣園",
-    "sources": [
-      {
+    "sources": [{
         "label": "公式・運営者の利用案内",
         "url": "https://kashima-fa.com/access/"
-      },
-      {
-        "label": "位置の出典：国土地理院住所検索（町域代表点）",
-        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E8%8C%A8%E5%9F%8E%E7%9C%8C%E9%B9%BF%E5%B6%8B%E5%B8%82%E6%96%B0%E6%B5%9C"
-      }
-    ],
-    "lat": 35.93799166959721,
-    "lng": 140.70115323994554,
-    "positionNote": "公式アクセスページ掲載の参考位置。入口と開放区間は当日の案内を優先。",
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/35.938197/140.702291/&base=std&ls=std&disp=1"}],
+    "lat": 35.938197,
+    "lng": 140.702291,
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
     "parking": true,
     "toilet": true,
     "beginner": true,
@@ -106,19 +88,13 @@ const additions:Addition[]=
     "access": "東京都江東区若洲三丁目。詳細な経路と受付は出典の公式案内を確認。",
     "field": "防波堤・護岸・人工磯の釣り施設。振りかぶる・横から投げる投げ釣りとルアー釣り、撒き餌は禁止。売店は営業終了のため釣具・餌を持参します。",
     "googleQuery": "若洲海浜公園 海釣り施設",
-    "sources": [
-      {
+    "sources": [{
         "label": "公式・運営者の利用案内",
         "url": "https://www.tptc.co.jp/park/03_10/fishing"
-      },
-      {
-        "label": "位置の出典：国土地理院住所検索（町域代表点）",
-        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B1%9F%E6%9D%B1%E5%8C%BA%E8%8B%A5%E6%B4%B2%E4%B8%89%E4%B8%81%E7%9B%AE"
-      }
-    ],
-    "lat": 35.622387,
-    "lng": 139.836166,
-    "positionNote": "ピンは国土地理院の住所検索による東京都江東区若洲三丁目の参考位置です。入場口・乗船場・釣り可能区間は公式地図で確認してください。",
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/35.614605/139.830637/&base=std&ls=std&disp=1"}],
+    "lat": 35.614605,
+    "lng": 139.830637,
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
     "fishSlugs": [
       "suzuki",
       "kasago",
@@ -139,19 +115,13 @@ const additions:Addition[]=
     "access": "神奈川県横浜市鶴見区大黒ふ頭。詳細な経路と受付は出典の公式案内を確認。",
     "field": "大黒ふ頭の海づり施設。途中の港湾関係者専用区域には入れません。予約・入場制限を運営者の案内で確認します。",
     "googleQuery": "大黒海づり施設",
-    "sources": [
-      {
+    "sources": [{
         "label": "公式・運営者の利用案内",
         "url": "https://yokohama-fishingpiers.jp/daikoku/facility-guide/"
-      },
-      {
-        "label": "位置の出典：国土地理院住所検索（町域代表点）",
-        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%B6%B4%E8%A6%8B%E5%8C%BA%E5%A4%A7%E9%BB%92%E3%81%B5%E9%A0%AD"
-      }
-    ],
-    "lat": 35.459953,
-    "lng": 139.680527,
-    "positionNote": "ピンは国土地理院の住所検索による神奈川県横浜市鶴見区大黒ふ頭の参考位置です。入場口・乗船場・釣り可能区間は公式地図で確認してください。"
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/35.449256/139.695024/&base=std&ls=std&disp=1"}],
+    "lat": 35.449256,
+    "lng": 139.695024,
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。"
   },
   {
     "slug": "isogo-fishing",
@@ -166,19 +136,13 @@ const additions:Addition[]=
     "access": "神奈川県横浜市磯子区新磯子町。詳細な経路と受付は出典の公式案内を確認。",
     "field": "横浜市の海づり施設。磯子駅から施設方面のバスを利用できます。周囲のふ頭・防波堤が自由な釣り場という意味ではありません。",
     "googleQuery": "磯子海づり施設",
-    "sources": [
-      {
+    "sources": [{
         "label": "公式・運営者の利用案内",
         "url": "https://www.city.yokohama.lg.jp/kanko-bunka/minato/taikan/asobu/spot/umizuri.html"
-      },
-      {
-        "label": "位置の出典：国土地理院住所検索（町域代表点）",
-        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C%E6%A8%AA%E6%B5%9C%E5%B8%82%E7%A3%AF%E5%AD%90%E5%8C%BA%E6%96%B0%E7%A3%AF%E5%AD%90%E7%94%BA"
-      }
-    ],
-    "lat": 35.404591,
-    "lng": 139.63353,
-    "positionNote": "ピンは国土地理院の住所検索による神奈川県横浜市磯子区新磯子町の参考位置です。入場口・乗船場・釣り可能区間は公式地図で確認してください。"
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/35.402431/139.643204/&base=std&ls=std&disp=1"}],
+    "lat": 35.402431,
+    "lng": 139.643204,
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。"
   },
   {
     "slug": "ichihara-fishing",
@@ -193,19 +157,13 @@ const additions:Addition[]=
     "access": "千葉県市原市五井南海岸。詳細な経路と受付は出典の公式案内を確認。",
     "field": "養老川河口近くにある市原市の桟橋型釣り施設。釣座・利用できる道具・当日の風による閉鎖を公式案内で確認します。",
     "googleQuery": "オリジナルメーカー海づり公園",
-    "sources": [
-      {
+    "sources": [{
         "label": "公式・運営者の利用案内",
         "url": "https://ichihara-umizuri.com/"
-      },
-      {
-        "label": "位置の出典：国土地理院住所検索（町域代表点）",
-        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%8D%83%E8%91%89%E7%9C%8C%E5%B8%82%E5%8E%9F%E5%B8%82%E4%BA%94%E4%BA%95%E5%8D%97%E6%B5%B7%E5%B2%B8"
-      }
-    ],
-    "lat": 35.54235433758962,
-    "lng": 140.05780907625373,
-    "positionNote": "公式サイトの埋込地図中心を参考表示。受付は施設の案内へ。"
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/35.543558/140.059741/&base=std&ls=std&disp=1"}],
+    "lat": 35.543558,
+    "lng": 140.059741,
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。"
   },
   {
     "slug": "ishida-fisherina",
@@ -222,19 +180,13 @@ const additions:Addition[]=
     "access": "富山県黒部市浜石田。詳細な経路と受付は出典の公式案内を確認。",
     "field": "漁港のボート区域と分離して設けられたつり桟橋。サビキの貸竿が案内され、季節で閉門時間が変わります。",
     "googleQuery": "石田フィッシャリーナ つり桟橋",
-    "sources": [
-      {
+    "sources": [{
         "label": "公式・運営者の利用案内",
         "url": "https://fisyarina.webes.jp/sanbashi_jyouhou.php"
-      },
-      {
-        "label": "位置の出典：国土地理院住所検索（町域代表点）",
-        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%AF%8C%E5%B1%B1%E7%9C%8C%E9%BB%92%E9%83%A8%E5%B8%82%E6%B5%9C%E7%9F%B3%E7%94%B0"
-      }
-    ],
-    "lat": 36.863701,
-    "lng": 137.416626,
-    "positionNote": "ピンは国土地理院の住所検索による富山県黒部市浜石田の参考位置です。入場口・乗船場・釣り可能区間は公式地図で確認してください。",
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/36.867399/137.414525/&base=std&ls=std&disp=1"}],
+    "lat": 36.867399,
+    "lng": 137.414525,
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
     "methodSlugs": [
       "sabiki"
     ]
@@ -252,24 +204,18 @@ const additions:Addition[]=
     "access": "愛知県知多市緑浜町。詳細な経路と受付は出典の公式案内を確認。",
     "field": "公園内の指定魚釣り施設。竿・救命胴衣の貸出窓口は釣り施設から離れた管理事務所にあります。浜全域での釣り案内ではありません。",
     "googleQuery": "新舞子マリンパーク 魚釣り施設",
-    "sources": [
-      {
+    "sources": [{
         "label": "公式・運営者の利用案内",
         "url": "https://www.port-of-nagoya.jp/kanko/kankoshisetsu/1000895.html"
-      },
-      {
-        "label": "位置の出典：国土地理院住所検索（町域代表点）",
-        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E7%9F%A5%E5%A4%9A%E5%B8%82%E7%B7%91%E6%B5%9C%E7%94%BA"
-      }
-    ],
-    "lat": 34.95768,
-    "lng": 136.819,
-    "positionNote": "ピンは国土地理院の住所検索による愛知県知多市緑浜町の参考位置です。入場口・乗船場・釣り可能区間は公式地図で確認してください。",
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/34.951119/136.817722/&base=std&ls=std&disp=1"}],
+    "lat": 34.951119,
+    "lng": 136.817722,
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
     "parking": true,
     "toilet": true,
     "beginner": true
   },
-  {
+  {verifiedAt:'2026-09-18',
     "slug": "toyohama-pier",
     "type": "spot",
     "name": "豊浜漁港 釣桟橋",
@@ -282,19 +228,13 @@ const additions:Addition[]=
     "access": "愛知県知多郡南知多町豊浜。詳細な経路と受付は出典の公式案内を確認。",
     "field": "豊浜地区の緑地とともに整備された釣桟橋。水揚げや工事の区域を避け、桟橋の利用条件と現地掲示を確認します。",
     "googleQuery": "豊浜漁港 釣桟橋",
-    "sources": [
-      {
+    "sources": [{
         "label": "公式・運営者の利用案内",
         "url": "https://www.pref.aichi.jp/soshiki/kowan/0000039903.html"
-      },
-      {
-        "label": "位置の出典：国土地理院住所検索（町域代表点）",
-        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%8D%97%E7%9F%A5%E5%A4%9A%E7%94%BA%E8%B1%8A%E6%B5%9C"
-      }
-    ],
-    "lat": 34.716042,
-    "lng": 136.904388,
-    "positionNote": "ピンは愛知県南知多町大字豊浜の町域代表点です。受付・釣座ではありません。公式アクセス図を確認してください。"
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/34.70295/136.93466/&base=std&ls=std&disp=1"}],
+    "lat": 34.70295,
+    "lng": 136.93466,
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。"
   },
   {
     "slug": "arai-benten",
@@ -309,19 +249,13 @@ const additions:Addition[]=
     "access": "静岡県湖西市新居町新居。詳細な経路と受付は出典の公式案内を確認。",
     "field": "浜名湖の今切口近くにT字型堤防が並ぶ海釣公園。釣具レンタルのある店舗と公衆トイレがあります。今切口の流れと通航船に注意します。",
     "googleQuery": "新居弁天海釣公園",
-    "sources": [
-      {
+    "sources": [{
         "label": "公式・運営者の利用案内",
         "url": "https://hamanako-kosai.jp/location/2330/"
-      },
-      {
-        "label": "位置の出典：国土地理院住所検索（町域代表点）",
-        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E9%9D%99%E5%B2%A1%E7%9C%8C%E6%B9%96%E8%A5%BF%E5%B8%82%E6%96%B0%E5%B1%85%E7%94%BA%E6%96%B0%E5%B1%85"
-      }
-    ],
-    "lat": 34.6817317,
-    "lng": 137.589509,
-    "positionNote": "観光協会の埋込地図中心を参考表示。釣座は現地掲示を確認。",
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/34.681641/137.59243/&base=std&ls=std&disp=1"}],
+    "lat": 34.681641,
+    "lng": 137.59243,
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
     "parking": true,
     "toilet": true,
     "beginner": true
@@ -339,19 +273,13 @@ const additions:Addition[]=
     "access": "兵庫県神戸市須磨区一ノ谷町五丁目。詳細な経路と受付は出典の公式案内を確認。",
     "field": "須磨浦公園駅からアクセスできる海づり公園。季節で開園時間が変わるため最新案内を確認。車は須磨浦公園駐車場を利用します。",
     "googleQuery": "須磨海づり公園",
-    "sources": [
-      {
+    "sources": [{
         "label": "公式・運営者の利用案内",
         "url": "https://sumasakana-park.com/guide/"
-      },
-      {
-        "label": "位置の出典：国土地理院住所検索（町域代表点）",
-        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%85%B5%E5%BA%AB%E7%9C%8C%E7%A5%9E%E6%88%B8%E5%B8%82%E9%A0%88%E7%A3%A8%E5%8C%BA%E4%B8%80%E3%83%8E%E8%B0%B7%E7%94%BA%E4%BA%94%E4%B8%81%E7%9B%AE"
-      }
-    ],
-    "lat": 34.637539,
-    "lng": 135.101196,
-    "positionNote": "ピンは国土地理院の住所検索による兵庫県神戸市須磨区一ノ谷町五丁目の参考位置です。入場口・乗船場・釣り可能区間は公式地図で確認してください。",
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/34.63432/135.104842/&base=std&ls=std&disp=1"}],
+    "lat": 34.63432,
+    "lng": 135.104842,
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
     "parking": true
   },
   {
@@ -395,23 +323,16 @@ const additions:Addition[]=
     "access": "福岡県福岡市西区小田。詳細な経路と受付は出典の公式案内を確認。",
     "field": "博多湾へ突き出たT字型桟橋と海洋釣堀。初心者向けの釣り指導と貸竿が案内されています。釣台と釣堀では利用方法が異なります。",
     "googleQuery": "福岡市海づり公園",
-    "sources": [
-      {
+    "sources": [{
         "label": "公式・運営者の利用案内",
         "url": "https://yokanavi.com/spots/77822"
-      },
-      {
-        "label": "位置の出典：国土地理院住所検索（町域代表点）",
-        "url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E8%A5%BF%E5%8C%BA%E5%B0%8F%E7%94%B0"
-      },
-      {
+      },{
         "label": "管理者：最新の開園案内",
         "url": "https://umizuri.com/"
-      }
-    ],
-    "lat": 33.629471,
-    "lng": 130.215942,
-    "positionNote": "ピンは国土地理院の住所検索による福岡県福岡市西区小田の参考位置です。入場口・乗船場・釣り可能区間は公式地図で確認してください。",
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/33.627467/130.23144/&base=std&ls=std&disp=1"}],
+    "lat": 33.627467,
+    "lng": 130.23144,
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
     "parking": true,
     "toilet": true,
     "beginner": true

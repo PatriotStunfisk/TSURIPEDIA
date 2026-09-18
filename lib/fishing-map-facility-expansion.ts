@@ -10,8 +10,8 @@ export const facilityMapExpansion:FishingMapEntry[]=[
     "prefecture": "新潟県",
     "area": "新潟県",
     "terrain": "pier",
-    "lat": 37.5455152,
-    "lng": 138.6914096,
+    "lat": 37.546228,
+    "lng": 138.690183,
     "fish": [],
     "methods": [],
     "season": "春〜秋。フィッシングブリッジは11月〜3月閉鎖",
@@ -21,7 +21,7 @@ export const facilityMapExpansion:FishingMapEntry[]=[
     "googleQuery": "いずもざき海遊広場 フィッシングブリッジ 新潟県",
     "officialUrl": "https://www.izumozaki.net/outdoor/sea/",
     "verifiedAt": "2026-09-17",
-    "positionNote": "施設・受付周辺を示す参考ピンです。釣り座・乗船場所は公式案内で確認してください。周辺全域の釣り許可を示すものではありません。",
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
     "access": "公式のアクセス案内で入口・受付を確認。予約や宿泊者限定などの条件がある場合は、利用手続き後に入場します。",
     "field": "海へ伸びる橋から釣りができる出雲崎の広場。海岸の散策施設と釣り位置を区別して利用します。",
     "bestFor": [
@@ -41,16 +41,13 @@ export const facilityMapExpansion:FishingMapEntry[]=[
     ],
     "methodSlugs": [],
     "fishSlugs": [],
-    "sources": [
-      {
+    "sources": [{
         "label": "運営者・自治体等の案内：利用条件",
         "url": "https://www.izumozaki.net/outdoor/sea/"
-      },
-      {
+      },{
         "label": "所在地・施設名の照合資料",
         "url": "https://www.kanritsuriba.com/cgi-bin/niigata/izumozaki/sea.cgi"
-      }
-    ]
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/37.546228/138.690183/&base=std&ls=std&disp=1"}]
   },
   {
     "slug": "field-fishing-rainbow",

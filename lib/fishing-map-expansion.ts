@@ -1,8 +1,8 @@
 import type {FishingMapEntry} from './fishing-map-data';
 export const expansionSpots:FishingMapEntry[]=[
-  {
+  {positionNote:"地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
     "slug": "naruohama",
-    "lat": 34.69260157292251, "lng": 135.35601867652042,
+    "lat": 34.692403, "lng": 135.35888,
     "type": "spot",
     "name": "鳴尾浜臨海公園 海づり広場",
     "prefecture": "兵庫県", "terrain": "pier", "area": "兵庫・阪神・西宮",
@@ -55,12 +55,10 @@ export const expansionSpots:FishingMapEntry[]=[
       "周囲の人や仕掛けとの間隔を確保"
     ],
     "verifiedAt": "2026-09-13",
-    "sources": [
-      {
+    "sources": [{
         "label": "鳴尾浜臨海公園：海づり広場の利用案内・釣果",
         "url": "https://www.naruohama-park.com/umizuri/"
-      }
-    ]
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/34.692403/135.35888/&base=std&ls=std&disp=1"}]
   },
   {
     "slug": "akashi-offshore-planning",

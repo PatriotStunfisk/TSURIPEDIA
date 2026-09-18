@@ -4,6 +4,9 @@ import type {Prefecture} from './japan-regions';
 // Map positions were reviewed against GSI shorelines, not accepted as address-search results.
 export type HarborRecord={slug:string;name:string;prefecture:Prefecture;lat:number;lng:number;fish:string[];methodSlugs:string[];note:string;caution:string[];sources:NonNullable<FishingMapEntry['sources']>;primaryType?:'port'|'pier'|'beach'|'estuary'|'sea-park'};
 const methodHelp:Record<string,{name:string;tip:string}>={
+  'shore-jigging':{name:'ショアジギング',tip:'周囲と後方の安全を確かめてから投げ、回遊待ちでも船道にラインを残さない。風と足場に合う重さを選ぶ。'},
+  'seabass-lure':{name:'シーバスルアー',tip:'流れの境目へ短く通し、根や係留物に触れる前に回収する。取り込み場所も先に決めておく。'},
+  'chinning':{name:'チニング',tip:'浅い石積みの上を引きずらず、底に触れたら少し浮かせて根掛かりを減らす。'},
   'surf-lure':{name:'サーフルアー',tip:'手前の底の変化から探り、底をこすり続けず少し浮かせて巻く。人のいる方向へ投げない。'},
   "sabiki": {
     "name": "サビキ",

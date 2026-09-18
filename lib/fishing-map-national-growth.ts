@@ -157,17 +157,15 @@ export const nationalMapGrowth: FishingMapEntry[] = [
     "terrain": "pier",
     "type": "spot",
     "primaryType": "facility",
-    "lat": 35.5259673,
-    "lng": 135.6618213,
+    "lat": 35.525206,
+    "lng": 135.660617,
     "officialUrl": "https://www.fuku-e.com/spot/detail_1448.html",
-    "sources": [
-      {
+    "sources": [{
         "label": "運営者・自治体・観光協会の施設案内",
         "url": "https://www.fuku-e.com/spot/detail_1448.html"
-      }
-    ],
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/35.525206/135.660617/&base=std&ls=std&disp=1"}],
     "verifiedAt": "2026-09-17",
-    "positionNote": "公式案内の地図位置。釣り可能区画・受付は現地表示と運営者の最新案内を優先。",
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
     "fish": [],
     "methods": [],
     "season": "春〜秋中心。冬季休園期間は公式で確認",

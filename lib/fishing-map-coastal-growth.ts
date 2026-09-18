@@ -348,8 +348,8 @@ export const coastalMapGrowth: FishingMapEntry[] = [
     "name": "フィッシングパーク光",
     "prefecture": "山口県",
     "area": "山口・光・室積",
-    "lat": 33.928003,
-    "lng": 131.963781,
+    "lat": 33.929759,
+    "lng": 131.962495,
     "type": "spot",
     "primaryType": "facility",
     "terrain": "sea-pond",
@@ -364,18 +364,15 @@ export const coastalMapGrowth: FishingMapEntry[] = [
       "ウキ釣り"
     ],
     "officialUrl": "https://www.city.hikari.lg.jp/kanko_bunka/fishingpark/guide/15801.html",
-    "sources": [
-      {
+    "sources": [{
         "label": "光市：施設利用案内",
         "url": "https://www.city.hikari.lg.jp/kanko_bunka/fishingpark/guide/15801.html"
-      },
-      {
+      },{
         "label": "釣具のポイント：地図・釣果照合",
         "url": "https://www.point-i.jp/fishing_spots/18196"
-      }
-    ],
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/33.929759/131.962495/&base=std&ls=std&disp=1"}],
     "verifiedAt": "2026-09-17",
-    "positionNote": "施設名と住所を市の案内で確認し、釣具店の地点マーカーで座標を照合。",
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
     "season": "対象魚・営業日・休業日は公式案内を確認",
     "beginner": true,
     "kids": true,

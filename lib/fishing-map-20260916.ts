@@ -153,8 +153,8 @@ export const verifiedMapExpansion:FishingMapEntry[]=[
     "prefecture": "神奈川県",
     "area": "神奈川・横須賀・東京湾",
     "terrain": "park",
-    "lng": 139.684723,
-    "lat": 35.27277,
+    "lng": 139.690518,
+    "lat": 35.268222,
     "fish": [],
     "fishSlugs": [],
     "methods": [],
@@ -167,13 +167,11 @@ export const verifiedMapExpansion:FishingMapEntry[]=[
     "season": "開園期間・当日の利用状況は公式情報で確認",
     "beginner": true,
     "kids": false,
-    "positionNote": "地図は所在地の町域代表点です（国土地理院住所検索）。釣座・入口の正確な位置は公式案内とGoogleマップで確認してください。",
-    "sources": [
-      {
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
+    "sources": [{
         "label": "運営者・自治体・観光協会の施設案内",
         "url": "https://www.kanagawaparks.com/umibeturi/"
-      }
-    ],
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/35.268222/139.690518/&base=std&ls=std&disp=1"}],
     "guideSlugs": [
       "fishing-map-permission-check",
       "fishing-first-checklist"
@@ -197,8 +195,8 @@ export const verifiedMapExpansion:FishingMapEntry[]=[
     "prefecture": "静岡県",
     "area": "静岡・清水港・新興津",
     "terrain": "pier",
-    "lng": 138.507874,
-    "lat": 35.05125,
+    "lng": 138.522642,
+    "lat": 35.045756,
     "fish": [],
     "fishSlugs": [],
     "methods": [],
@@ -211,13 +209,11 @@ export const verifiedMapExpansion:FishingMapEntry[]=[
     "season": "開園期間・当日の利用状況は公式情報で確認",
     "beginner": false,
     "kids": false,
-    "positionNote": "地図は所在地の町域代表点です（国土地理院住所検索）。釣座・入口の正確な位置は公式案内とGoogleマップで確認してください。",
-    "sources": [
-      {
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
+    "sources": [{
         "label": "運営者・自治体・観光協会の施設案内",
         "url": "https://www.city.shizuoka.lg.jp/s7524/s013047.html"
-      }
-    ],
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/35.045756/138.522642/&base=std&ls=std&disp=1"}],
     "guideSlugs": [
       "fishing-map-permission-check",
       "fishing-first-checklist"
@@ -462,8 +458,8 @@ export const verifiedMapExpansion:FishingMapEntry[]=[
     "prefecture": "福岡県",
     "area": "福岡・北九州・若松",
     "terrain": "pier",
-    "lng": 130.71936,
-    "lat": 33.92767,
+    "lng": 130.728765,
+    "lat": 33.937948,
     "fish": [
       "アジ",
       "シロギス"
@@ -482,13 +478,11 @@ export const verifiedMapExpansion:FishingMapEntry[]=[
     "season": "開園期間・当日の利用状況は公式情報で確認",
     "beginner": false,
     "kids": false,
-    "positionNote": "地図は所在地の町域代表点です（国土地理院住所検索）。釣座・入口の正確な位置は公式案内とGoogleマップで確認してください。",
-    "sources": [
-      {
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
+    "sources": [{
         "label": "運営者・自治体・観光協会の施設案内",
         "url": "https://www.crossroadfukuoka.jp/spot/13136"
-      }
-    ],
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/33.937948/130.728765/&base=std&ls=std&disp=1"}],
     "guideSlugs": [
       "fishing-map-permission-check",
       "fishing-first-checklist"
@@ -514,8 +508,8 @@ export const verifiedMapExpansion:FishingMapEntry[]=[
     "prefecture": "鹿児島県",
     "area": "鹿児島・桜島・錦江湾",
     "terrain": "pier",
-    "lng": 130.595276,
-    "lat": 31.584061,
+    "lng": 130.596478,
+    "lat": 31.593122,
     "fish": [
       "アジ",
       "カサゴ",
@@ -544,13 +538,11 @@ export const verifiedMapExpansion:FishingMapEntry[]=[
     "season": "開園期間・当日の利用状況は公式情報で確認",
     "beginner": true,
     "kids": false,
-    "positionNote": "地図は所在地の町域代表点です（国土地理院住所検索）。釣座・入口の正確な位置は公式案内とGoogleマップで確認してください。",
-    "sources": [
-      {
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
+    "sources": [{
         "label": "運営者・自治体・観光協会の施設案内",
         "url": "https://www.city.kagoshima.lg.jp/seisanryutu/shisetsu/kanko/018.html"
-      }
-    ],
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/31.593122/130.596478/&base=std&ls=std&disp=1"}],
     "guideSlugs": [
       "aji-sabiki-depth",
       "dangerous-fish-first-check"
@@ -576,8 +568,8 @@ export const verifiedMapExpansion:FishingMapEntry[]=[
     "prefecture": "長崎県",
     "area": "長崎・高島",
     "terrain": "rock",
-    "lng": 129.752884,
-    "lat": 32.657909,
+    "lng": 129.758792,
+    "lat": 32.669798,
     "fish": [],
     "fishSlugs": [],
     "methods": [],
@@ -590,13 +582,11 @@ export const verifiedMapExpansion:FishingMapEntry[]=[
     "season": "開園期間・当日の利用状況は公式情報で確認",
     "beginner": false,
     "kids": false,
-    "positionNote": "地図は所在地の町域代表点です（国土地理院住所検索）。釣座・入口の正確な位置は公式案内とGoogleマップで確認してください。",
-    "sources": [
-      {
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
+    "sources": [{
         "label": "運営者・自治体・観光協会の施設案内",
         "url": "https://www.city.nagasaki.lg.jp/page/1693.html"
-      }
-    ],
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/32.669798/129.758792/&base=std&ls=std&disp=1"}],
     "guideSlugs": [
       "fishing-map-permission-check",
       "fishing-first-checklist"

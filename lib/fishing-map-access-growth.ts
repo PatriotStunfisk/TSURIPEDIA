@@ -469,8 +469,8 @@ export const accessMapGrowth:FishingMapEntry[]=[
     "name": "直江津港第3東防波堤 管理釣り場",
     "prefecture": "新潟県",
     "area": "新潟・上越・直江津",
-    "lat": 37.21136111111112,
-    "lng": 138.2778888888889,
+    "lat": 37.213105,
+    "lng": 138.276308,
     "primaryType": "facility",
     "terrain": "pier",
     "fish": [
@@ -483,18 +483,15 @@ export const accessMapGrowth:FishingMapEntry[]=[
     "note": "直江津港で受付を通して利用する管理釣り場。大型船の入出港や風の状態で閉鎖されるため、開放予定を見て釣行を決めます。",
     "access": "上越市八千浦の管理棟で受付。港の他区画へ釣り目的で立ち入らない。",
     "field": "直江津港で受付を通して利用する管理釣り場。大型船の入出港や風の状態で閉鎖されるため、開放予定を見て釣行を決めます。",
-    "positionNote": "施設の公式アクセス案内と位置情報を照合した代表位置。実際の釣り区画は受付で確認。",
+    "positionNote": "地理院地図・航空写真と施設案内を照合した釣りエリアの代表位置。ピンは駐車場や入口ではありません。利用区画は現地の案内で確認してください。",
     "officialUrl": "https://happyfishing-n.jp/",
-    "sources": [
-      {
+    "sources": [{
         "label": "公式：利用・営業案内",
         "url": "https://happyfishing-n.jp/"
-      },
-      {
+      },{
         "label": "アクセス地図・位置の照合",
         "url": "https://happyfishing-n.jp/access/"
-      }
-    ],
+      },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/37.213105/138.276308/&base=std&ls=std&disp=1"}],
     "tips": [
       "受付で利用できる釣法・貸道具・餌を確認してから始める。"
     ],
