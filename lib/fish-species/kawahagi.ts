@@ -1,5 +1,17 @@
 import {defineFishSpecies} from './define';
 export default defineFishSpecies({
+  ecologyVisual: {
+  "title": "ひれを細かく動かして、ぴたりと止まる",
+  "description": "カワハギは背びれと尻びれを波打たせ、前にも後ろにも泳げます。岩のそばでも姿勢を保ち、小さな口で餌をついばむのが得意。餌だけ取られる釣りの難しさにもつながる、器用な動きです。",
+  "alt": "砂と岩の境目でひれを使って姿勢を保つカワハギの再現画像",
+  "source": {
+    "label": "海遊館：カワハギ",
+    "url": "https://pop.kaiyukan.com/area/exhibition/071.html"
+  },
+  "image": "/images/ecology/kawahagi-20260919.webp",
+  "width": 1200,
+  "height": 800
+},
   "representativeRecipes": [
     "sashimi",
     "kimo-shoyu",

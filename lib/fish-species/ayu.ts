@@ -1,5 +1,17 @@
 import {defineFishSpecies} from './define';
 export default defineFishSpecies({
+  ecologyVisual: {
+  "title": "石の表面をはんで、なわばりを守る",
+  "description": "川で育つアユは、石に付いた藻類を口でこそげ取って食べます。餌の多い石の周りになわばりを持ち、近づく別のアユを追うことも。この習性を利用するのが友釣りです。",
+  "image": "/images/ecology/ayu-20260919.webp",
+  "alt": "川底の石に付いた藻類を食べるアユの再現画像",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "井の頭自然文化園：アユのなわばり行動",
+    "url": "https://www.tokyo-zoo.net/topics/news/ino/5251_21612_2013-06-22.html"
+  }
+},
   "base": {
     "slug": "ayu",
     "name": "アユ",

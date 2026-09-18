@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual: {
+  "title": "岩の隙間が、マダコの住みか",
+  "description": "やわらかな体を岩の隙間へ収め、腕の吸盤で足場をつかむマダコ。巣穴の周りに食べ残した貝殻が見られることもあります。砂地だけでなく、隠れられる石や岩がある場所にも目を向けてみましょう。",
+  "alt": "岩の隙間から腕を伸ばすマダコと周囲の貝殻の再現画像",
+  "source": {
+    "label": "葛西臨海水族園：マダコ",
+    "url": "https://www.tokyo-zoo.net/kasai/encyclopedia/common-octopus/index.html"
+  },
+  "image": "/images/ecology/madako-20260919.webp",
+  "width": 1200,
+  "height": 800
+},
   representativeRecipes: ["yudedako","karaage","takomeshi","yawarakani"],
   quest: {hook: {kind:'cover',mouthAnchor:{x:0.3,y:0.65},modelAnchor:{x:0.3,y:0.35,z:.5}},fightProfile: 'bottom', "swimSpeed": 0.3, "stamina": 85, "runPower": 30},
   "base": {
