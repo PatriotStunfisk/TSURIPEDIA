@@ -22,7 +22,7 @@ export default function SpotMapPreview({entry,shop,onClose,onDetails,fishNames={
   {entry&&<div className={s.previewFish}>{entry.fishSlugs?.length?entry.fishSlugs.slice(0,4).map(slug=><span key={slug}>{fishNames[slug]??slug}</span>):entry.fish.slice(0,4).map(fish=><span key={fish}>{fish}</span>)}</div>}
   <div className={s.previewFacilities}>{entry?.beginner&&<span>初心者向け</span>}<span>駐車場：{facility(shop?shop.parking:entry?.parking)}</span>{entry&&<span>トイレ：{facility(entry.toilet)}</span>}</div>
   <p className={s.previewIntro}>{shop?.note??entry?.note}</p>
-  {entry&&entry.type!=='area'&&<SpotCatchPreview key={entry.slug} slug={entry.slug} fishNames={fishNames} canPost={!entry.closed}/>}
+  {entry&&entry.type!=='area'&&<SpotCatchPreview key={entry.slug} slug={entry.slug} fishNames={fishNames} canPost={!entry.closed} onDetails={onDetails}/>}
   <div className={s.previewActions}>{entry&&<SpotFavorite slug={entry.slug} name={entry.name}/>}<button type="button" className={s.previewDetails} onClick={onDetails}>詳細を見る ↓</button></div>
  </section>;
 }

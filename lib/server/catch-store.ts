@@ -19,9 +19,9 @@ export async function publishCatch(report:CatchReport,userId:string,photos:Buffe
  await storeRequest('/rest/v1/catch_reports',{method:'POST',headers:jsonHeaders,body:JSON.stringify({id:report.id,user_id:userId,spot_slug:report.spotSlug,fish_slug:report.fishSlug,fish_name:report.fishName??null,caught_on:report.date,time_band:report.time,method_slug:report.methodSlug??null,count:report.count,size_cm:report.sizeCm??null,released:report.released??null,payload,photo_paths:paths,token_hash:null,status:'pending',upload_complete:false})});
  try{
   for(let i=0;i<photos.length;i++)await storeRequest(`/storage/v1/object/catch-photos/${paths[i]}`,{method:'POST',headers:{'Content-Type':'image/jpeg','x-upsert':'false'},body:new Uint8Array(photos[i])});
-  await storeRequest(`/rest/v1/catch_reports?id=eq.${report.id}&user_id=eq.${userId}`,{method:'PATCH',headers:jsonHeaders,body:JSON.stringify({upload_complete:true})});
+  await storeRequest(`/rest/v1/catch_reports?id=eq.${report.id}&user_id=eq.${userId}`,{method:'PATCH',headers:jsonHeaders,body:JSON.stringify({upload_complete:true,status:'approved'})});
  }catch(error){await deleteStoredCatch(report.id,userId).catch(()=>{});throw error;}
- return 'pending';
+ return 'approved';
 }
 async function displayRows(rows:StoredCatch[],userId?:string):Promise<PublicCatch[]>{
  const paths=[...new Set(rows.flatMap(r=>r.photo_paths?.length?r.photo_paths:r.photo_path?[r.photo_path]:[]))];const photos=new Map<string,string>();

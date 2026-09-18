@@ -31,5 +31,12 @@
     "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^10.10.0",
     "typescript": "5.9.2"
-  }
+  },
+  "browserslist": [
+    "Chrome >= 111",
+    "Edge >= 111",
+    "Firefox >= 111",
+    "Safari >= 16.3",
+    "iOS >= 16.3"
+  ]
 }

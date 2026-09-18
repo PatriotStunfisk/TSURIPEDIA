@@ -41,8 +41,8 @@ test('authenticated API flow enforces owner, moderation, reports, quotas and pho
  user=null;assert.equal((await api.POST(req('POST',{report,consent:true}))).status,401);
  user=owner;assert.equal((await api.POST(req('POST',{report,consent:true},'/api/catches','https://evil.example'))).status,403);
  const image=fs.readFileSync(path.join(root,'public',require('../lib/sharing-images.json')['/']));const photo='data:image/jpeg;base64,'+image.toString('base64');
- const result=await api.POST(req('POST',{report:{...report,photos:[photo,photo]},consent:true}));assert.equal(result.status,202);assert.equal(rows[0].user_id,owner);assert.equal(rows[0].status,'pending');assert.equal(photos.size,2);assert.ok(!rows[0].payload.photo&&!rows[0].payload.photos);
- assert.equal((await (await api.GET(new Request('https://uolink.vercel.app/api/catches?spot=naruohama'))).json()).reports.length,0);
+ const result=await api.POST(req('POST',{report:{...report,photos:[photo,photo]},consent:true}));assert.equal(result.status,202);assert.equal(rows[0].user_id,owner);assert.equal(rows[0].status,'approved');assert.equal(photos.size,2);assert.ok(!rows[0].payload.photo&&!rows[0].payload.photos);
+ assert.equal((await (await api.GET(new Request('https://uolink.vercel.app/api/catches?spot=naruohama'))).json()).reports.length,1);
  let own=await (await api.GET(new Request('https://uolink.vercel.app/api/catches?mine=1'))).json();assert.equal(own.reports[0].photos.length,2);assert.equal(own.reports[0].isOwn,true);
  user=other;assert.equal((await api.DELETE(req('DELETE',{id:report.id}))).status,404);assert.equal((await moderateApi.POST(req('POST',{id:report.id,action:'approve'}))).status,403);
  user=owner;assert.equal((await moderateApi.POST(req('POST',{id:report.id,action:'approve'}))).status,200);
