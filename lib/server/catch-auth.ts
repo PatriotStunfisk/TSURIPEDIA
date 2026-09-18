@@ -13,8 +13,8 @@ export async function catchAuth(){
 }
 export async function catchUser(required=true){
  const auth=await catchAuth();const {data:{user},error}=await auth.auth.getUser();
- if(error||!user||!user.email_confirmed_at){if(required)throw new HttpError(401,'ログインしてから投稿してください。');return null;}
- return {id:user.id,email:user.email};
+ if(error||!user||(!user.email_confirmed_at&&!user.identities?.some(i=>i.provider==='google'||i.provider==='apple'))){if(required)throw new HttpError(401,'ログインしてから投稿してください。');return null;}
+ return {id:user.id,email:user.email,displayName:typeof user.user_metadata?.full_name==='string'?user.user_metadata.full_name.slice(0,100):undefined,avatarUrl:typeof user.user_metadata?.avatar_url==='string'&&user.user_metadata.avatar_url.startsWith('https://')?user.user_metadata.avatar_url:undefined};
 }
 export async function isCatchModerator(userId:string){const r=await storeRequest(`/rest/v1/catch_moderators?user_id=eq.${encodeURIComponent(userId)}&select=user_id&limit=1`);return (await r.json()).length===1;}
 export async function requireCatchModerator(){const user=(await catchUser())!;if(!await isCatchModerator(user.id))throw new HttpError(403,'管理者のみ利用できます。');return user;}

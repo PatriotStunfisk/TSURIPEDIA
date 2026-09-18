@@ -1,3 +1,5 @@
+> 2026-09-18更新：一般ログインはGoogle / Apple OAuthへ移行。メール／SMTPの説明は旧実装の記録です。現在の設定は [catch-oauth.md](./catch-oauth.md) を参照してください。
+
 # MAP × 実釣データベース MVP
 
 ## 構成
