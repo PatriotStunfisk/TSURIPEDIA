@@ -4,6 +4,8 @@ import {relatedSpotGuideSlugs} from '@/lib/spot-connections';
 import {markerKind,markerKinds} from '@/lib/spot-markers';
 import type {SpotPrimaryType} from '@/lib/spot-classification';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+const CatchReports=dynamic(()=>import('./CatchReports').then(m=>m.CatchReports));
 import SpotFavorite,{useSpotFavorites} from './SpotFavorite';
 import {japanRegions,prefectures,type JapanRegion} from '@/lib/japan-regions';
 import {matchesSpot} from '@/lib/spot-filters';
@@ -24,7 +26,8 @@ export default function SpotMap({mapEntries,shops=[],nearSpot,initialShops=false
  useEffect(()=>{if(restored)try{sessionStorage.setItem(mapSessionKey,JSON.stringify({types:selectedTypes,shops:shopsOn}));}catch{}},[restored,selectedTypes,shopsOn]);
  const detailRef=useRef<HTMLElement>(null),mapRef=useRef<HTMLDivElement>(null);
  const [previewOpen,setPreviewOpen]=useState(false);
- const showDetails=()=>detailRef.current?.scrollIntoView({block:'start',behavior:'smooth'});
+ const [detailOpened,setDetailOpened]=useState(false);
+ const showDetails=()=>{setDetailOpened(true);detailRef.current?.scrollIntoView({block:'start',behavior:'smooth'});};
  const [listLimit,setListLimit]=useState(20);
  const selectSpot=(slug:string)=>{setSelectedShop('');setSelected(slug);setPreviewOpen(true);};
  const selectShop=(id:string)=>{setSelectedShop(id);setPreviewOpen(true);};
@@ -75,7 +78,7 @@ export default function SpotMap({mapEntries,shops=[],nearSpot,initialShops=false
   <div className={s.contentGrid}>
    <aside ref={detailRef} className={s.panel} aria-label="選択した地点の詳細"><button className={s.backToMap} onClick={()=>mapRef.current?.scrollIntoView({block:'start',behavior:'smooth'})}>↑ MAPに戻る</button>{activeShop?<><span className={s.status}>釣具店</span><h2>{activeShop.name}</h2><p>{activeShop.address}</p><p>{activeShop.hours??'営業時間：公式案内を確認'}</p><p>定休日：{activeShop.closedDays??'未確認'} / 駐車場：{activeShop.parking===undefined?'未確認':activeShop.parking?'あり':'なし'}</p><p>活き餌：{activeShop.baits?.live===undefined?'未確認':activeShop.baits.live?'取扱あり（在庫要確認）':'取扱なし'} / 冷凍餌：{activeShop.baits?.frozen===undefined?'未確認':activeShop.baits.frozen?'取扱あり（在庫要確認）':'取扱なし'}</p>{anchor&&hasCoordinates(anchor)&&<p>{anchor.name}から約{distanceKm(anchor,activeShop).toFixed(1)}km（直線）</p>}<p>{activeShop.note}</p><p>最終確認日：{activeShop.verifiedAt}</p><a className={s.googleLink} href={activeShop.officialUrl} target="_blank" rel="noopener noreferrer">店舗公式・営業時間を確認 ↗</a><a className={s.googleLink} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(activeShop.name+' '+activeShop.address)}`} target="_blank" rel="noopener noreferrer">店舗への経路を調べる ↗</a></>:active?<>
     <div className={s.panelTop}><span>{active.type==='area'?'釣行エリア':active.type==='boat'?'釣船':'釣り場'}</span><small>{active.area}</small></div>
-    <h2>{active.name}</h2><SpotFavorite slug={active.slug} name={active.name}/><p><Link href={`/spots/${active.slug}`}>釣り場の詳細・最近の釣果を見る →</Link> · <Link href={`/spots?near=${active.slug}&shops=1`}>近くの釣具店を見る →</Link></p><div className={s.badges}><span>{markerKinds[markerKind(active)].label}</span>{active.features?.map(f=><span key={f}>{f}</span>)}</div>{active.port&&<p>出船港：{active.port}</p>}{active.officialUrl&&<a className={s.googleLink} href={active.officialUrl} target="_blank" rel="noopener noreferrer">{markerKind(active)==='boat'?'船宿公式サイト・出船案内 ↗':'施設・利用条件の公式案内 ↗'}</a>}{active.positionNote&&<p>{active.positionNote}</p>}
+    <h2>{active.name}</h2><SpotFavorite slug={active.slug} name={active.name}/><div className={s.badges}><span>{markerKinds[markerKind(active)].label}</span>{active.features?.map(f=><span key={f}>{f}</span>)}</div>{active.port&&<p>出船港：{active.port}</p>}{active.officialUrl&&<a className={s.googleLink} href={active.officialUrl} target="_blank" rel="noopener noreferrer">{markerKind(active)==='boat'?'船宿公式サイト・出船案内 ↗':'施設・利用条件の公式案内 ↗'}</a>}
     {active.status&&<div className={s.status}>{active.status}</div>}
     <p className={s.lead}>{active.note}</p><p>参照情報の確認日：{active.verifiedAt??'未確認（釣行前に要確認）'}</p>{active.sourceUpdatedAt&&<p>参照元の更新日：{active.sourceUpdatedAt}</p>}{active.sources?.map(source=><p key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a></p>)}
     <dl>
@@ -93,6 +96,8 @@ export default function SpotMap({mapEntries,shops=[],nearSpot,initialShops=false
     <section className={s.detailBlock}><h3>注意点</h3><ul>{active.caution.map(v=><li key={v}>{v}</li>)}</ul></section>
     <section className={s.detailBlock}><h3>魚・釣法・料理につなぐ</h3><div className={s.bestFor}>{active.fishSlugs?.map(slug=><Link key={slug} href={`/fish/${slug}`}>{fishNames[slug]??slug}の図鑑</Link>)}{active.fishSlugs?.filter(slug=>cookingSlugs.includes(slug)).map(slug=><Link key={'cooking-'+slug} href={`/cooking/${slug}`}>{fishNames[slug]??slug}の料理</Link>)}{active.methodSlugs?.map(slug=><Link key={slug} href={`/methods/${slug}`}>{methodNames[slug]??slug}</Link>)}</div></section>
     <div className={s.bestFor}>{relatedSpotGuideSlugs(active,guideIndex).map(slug=><Link key={slug} href={`/guide/${slug}`}>{guideNames[slug]??slug} →</Link>)}</div><a className={s.googleLink} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(active.googleQuery)}`} target="_blank" rel="noopener noreferrer">Googleマップで場所を確認 ↗</a>
+    {detailOpened&&active.type!=='area'&&<CatchReports key={active.slug} spotSlug={active.slug} canPost={!active.closed} options={{fish:Object.entries(fishNames).map(([slug,name])=>({slug,name})),methods:Object.entries(methodNames).map(([slug,name])=>({slug,name})),spots:[{slug:active.slug,name:active.name}]}}/>}
+    <p className={s.positionFootnote}>ピンは位置の目安です。釣りの許可範囲や駐車位置を示すものではありません。{active.positionNote}</p>
    </>:<div className={s.panelEmpty}>条件を変えて釣り場を探してください。</div>}</aside>
    {shopsOn&&!favoritesOnly&&<section><h2>登録されている釣具店</h2><div className={s.shopList}>{visibleShops.map(shop=><button className={s.spotCard} key={shop.id} onClick={()=>selectShop(shop.id)}><strong>店 {shop.name}</strong><p>{shop.address}</p>{anchor&&hasCoordinates(anchor)&&<small>約{distanceKm(anchor,shop).toFixed(1)}km（直線）</small>}</button>)}</div>{!visibleShops.length&&<p>この範囲には確認済みの登録店舗がまだありません。店舗が存在しないという意味ではありません。</p>}</section>}<div className={s.spotList}>{entries.length?entries.slice(0,listLimit).map(e=><div key={e.slug} className={s.favoriteCard}><button aria-pressed={active?.slug===e.slug} className={`${s.spotCard} ${active?.slug===e.slug?s.selected:''}`} onClick={()=>selectSpot(e.slug)}>
     <div><span>{e.type==='area'?'釣行エリア':e.type==='boat'?'釣船':'釣り場'}</span><small>{e.area}</small></div><strong>{e.name}</strong>{origin&&<small>{hasCoordinates(e)?`現在地から約${distanceKm(origin,e).toFixed(1)}km（直線）`:'位置未登録・距離不明'}</small>}<p>{e.note}</p><div className={s.miniFish}>{e.fish.slice(0,5).map(f=><em key={f}>{f}</em>)}</div>

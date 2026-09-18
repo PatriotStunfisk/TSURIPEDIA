@@ -24,3 +24,5 @@
 @media(max-width:760px){.mapPreview{top:auto;bottom:24px;left:10px;width:calc(100% - 20px);max-height:48%;padding:12px 14px;border-radius:16px}.mapPreview h2{font-size:17px;margin-top:6px}.mapPreview .previewArea{display:none}.previewFish,.previewFacilities{margin:6px 0}.mapPreview .previewIntro{margin:6px 0 8px;font-size:11px}.previewActions .favoriteButton,.previewDetails{font-size:12px;padding:8px 10px}}
 
 .catchPreview{font-size:11px;line-height:1.5;border-top:1px solid #d9e5eb;margin:7px 0;padding-top:6px;display:grid;gap:3px}.catchPreview>span{color:#617580}.catchPreview a{color:#086181}.catchPreview time{float:right;color:#617580}.catchPreview>div{display:flex;gap:12px;flex-wrap:wrap;padding:4px 0}.catchPreview>div a{min-height:28px;display:flex;align-items:center;font-weight:700}@media(max-width:760px){.mapPreview{max-height:58%}.mapPreview .previewIntro{display:none}.previewFacilities{font-size:10px}}
+
+.positionFootnote{font-size:11px!important;line-height:1.6;color:#647780;margin-top:24px;padding-top:12px;border-top:1px solid #e2e9ed;}
