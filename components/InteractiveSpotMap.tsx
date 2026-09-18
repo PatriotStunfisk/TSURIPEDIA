@@ -1,5 +1,5 @@
 'use client';
-import {useEffect,useRef,useState,type ReactNode} from 'react';
+import {useEffect,useMemo,useRef,useState,type ReactNode} from 'react';
 import type * as Leaflet from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import {hasCoordinates} from '@/lib/spot-distance';
@@ -19,6 +19,8 @@ export default function InteractiveSpotMap({preview,boundaryPrefectures,favorite
  const [ready,setReady]=useState(false),[failed,setFailed]=useState(false),[attempt,setAttempt]=useState(0);
  const callback=useRef(onSelect),shopCallback=useRef(onShopSelect);
  const fittedPoints=useRef<string|null>(null);
+ const points=useMemo(()=>entries.filter(hasCoordinates),[entries]);
+ const projectionCache=useRef<{points:typeof points;zoom:number;selected?:string;positions:Map<string,{x:number;y:number}>;groups:(typeof points)[]}|null>(null);
  const locationActive=useRef(false);
  // Do not persist a viewport derived from private geolocation, even after hiding the dot.
  useEffect(()=>{if(userLocation)locationActive.current=true},[userLocation]);
@@ -67,16 +69,17 @@ export default function InteractiveSpotMap({preview,boundaryPrefectures,favorite
   if(!ready)return;let cancelled=false;
   import('leaflet').then(L=>{
    if(cancelled||!map.current||!markers.current)return;
-   markers.current.clearLayers();const points=entries.filter(hasCoordinates);
+   markers.current.clearLayers();
    const instance=map.current,layer=markers.current;
    const pointKey=fitKey;
    if(fittedPoints.current===null&&!userLocation){try{const v=JSON.parse(sessionStorage.getItem('uolink-map-view-v1')??'null');if(v?.key===pointKey&&Number.isFinite(v.lat)&&Number.isFinite(v.lng)&&Math.abs(v.lat)<=90&&Math.abs(v.lng)<=180&&v.zoom>=3&&v.zoom<=18){fittedPoints.current=pointKey;instance.setView([v.lat,v.lng],v.zoom,{animate:false});}}catch{}}
    // Fit before projecting clusters; cancel an older zoom when filters change.
    if(!userLocation&&(points.length||shops.length||focus)&&pointKey!==fittedPoints.current){fittedPoints.current=pointKey;instance.stop();if(focus)instance.setView([focus.lat,focus.lng],11,{animate:false});else instance.fitBounds(L.latLngBounds([...points,...shops].map(e=>[e.lat,e.lng])),{padding:[30,30],maxZoom:13,animate:false});}
    const zoom=instance.getZoom(),renderBounds=instance.getBounds().pad(.2),favoriteSet=new Set(favorites);
-   const positions=displaySpotPositions(points,p=>instance.project([p.lat,p.lng],zoom),zoom);
+   let cached=projectionCache.current;
+   if(!cached||cached.points!==points||cached.zoom!==zoom||cached.selected!==selected){const positions=displaySpotPositions(points,p=>instance.project([p.lat,p.lng],zoom),zoom);cached={points,zoom,selected,positions,groups:clusterPoints(points,p=>positions.get(p.slug)!,selected,clusterCellSize(zoom))};projectionCache.current=cached;}
+   const {positions,groups}=cached;
    const displayLatLng=(p:typeof points[number])=>{const v=positions.get(p.slug)!;return instance.unproject(L.point(v.x,v.y),zoom)};
-   const groups=clusterPoints(points,p=>positions.get(p.slug)!,selected,clusterCellSize(zoom));
    const size=instance.getSize();const labels=visibleSpotLabels(groups.filter(g=>g.length===1).map(([e])=>({slug:e.slug,name:e.name,...instance.latLngToContainerPoint(displayLatLng(e))})),instance.getZoom(),size.x,size.y,selected);
    for(const group of groups){
     if(group.length>1){
@@ -100,6 +103,6 @@ export default function InteractiveSpotMap({preview,boundaryPrefectures,favorite
    // Shops are a separate retail layer, excluded from fishing-spot clusters and totals.
    for(const shop of shops){if(!renderBounds.contains([shop.lat,shop.lng]))continue;const chosen=shop.id===selectedShop;const label=`釣具店：${shop.name}${chosen?'（選択中）':''}`;const tip=document.createElement('span');tip.textContent=label;const marker=L.marker([shop.lat,shop.lng],{title:label,alt:label,zIndexOffset:chosen?1200:100,icon:L.divIcon({className:`${s.mapPin} ${s.shopPin} ${chosen?s.selectedPin:''}`,html:'店',iconSize:[30,30],iconAnchor:[15,15]})}).bindTooltip(tip).on('click',()=>shopCallback.current(shop.id)).addTo(layer);marker.getElement()?.setAttribute('aria-label',label);}
   });return ()=>{cancelled=true};
- },[favorites,entries,shops,selectedShop,focus,ready,selected,revision,fitKey,userLocation]);
+ },[favorites,points,entries,shops,selectedShop,focus,ready,selected,revision,fitKey,userLocation]);
  return <div className={s.mapFrame}><div className={s.mapViewport}><div ref={root} className={s.liveMap} aria-label="釣り場の地図"/>{preview}</div>{failed&&<p role="status">地図を読み込めない部分があります。<button type="button" onClick={()=>{fittedPoints.current=null;setAttempt(n=>n+1);}}>地図を再読み込み</button> 下の一覧からも探せます。</p>}{favoritesOnly&&favorites.length===0?<p role="status">お気に入りの釣り場はまだありません。</p>:!entries.some(hasCoordinates)&&!shops.length&&<p role="status">現在の条件には位置登録のある地点がありません。下の一覧で地域と公式案内を確認できます。</p>}<div className={s.legend} role="group" aria-label="釣り場タイプの複数選択"><button onClick={()=>onTypesChange(Object.keys(markerKinds) as SpotPrimaryType[])}>すべて選択</button><button onClick={()=>onTypesChange([])}>すべて解除</button>{Object.entries(markerKinds).map(([id,k])=><button key={id} aria-pressed={selectedTypes.includes(id as SpotPrimaryType)} onClick={()=>onTypesChange(selectedTypes.includes(id as SpotPrimaryType)?selectedTypes.filter(t=>t!==id):[...selectedTypes,id as SpotPrimaryType])}><i style={{background:k.color}}>{k.symbol}</i>{k.label}</button>)}<button className={s.shopChip} aria-pressed={shopsOn} onClick={()=>onShopsChange(!shopsOn)}><i>店</i>釣具店{shopsOn&&<small> {shops.length}</small>}</button><button className={s.favoriteChip} aria-pressed={favoritesOnly} onClick={()=>onFavoritesChange(!favoritesOnly)}>☆ お気に入りのみ{favorites.length>0&&<small>{favorites.length}</small>}</button></div><p>{boundaryKey&&<>破線は選択地域の概略境界です。 <a href="https://github.com/amay077/JapanPrefGeoJson" target="_blank" rel="noreferrer">境界データ</a>（簡略化・釣り可能区域ではありません）。</>}数字の丸印は近接地点の一覧を開きます。黒枠は選択中。★はお気に入り。{userLocation&&'青い点は現在地、薄い円は位置精度の目安です。'}同じ位置の地点は拡大時に少し離し、線で登録位置を示します。マーカーは登録地点の参考位置です。釣り可能範囲や入場口を示すものではありません。地図を拡大しても未登録の釣り場は表示されません。</p></div>;
 }

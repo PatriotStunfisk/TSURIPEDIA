@@ -11,7 +11,7 @@ const quickLinks=[
   {href:'/fish',icon:'◉',label:'魚図鑑'},
   {href:'/methods',icon:'⌁',label:'釣り方'},
   {href:'/guide',icon:'?',label:'GUIDE'},
-  {href:'/spots',icon:'⌖',label:'釣り場'},
+  {href:'/spots',icon:'⌖',label:'釣り場マップ'},
   {href:'/gear',icon:'▣',label:'釣具'},
   {href:'/cooking',icon:'◇',label:'魚料理'},
   {href:'/quest',icon:'◈',label:'QUEST'}
@@ -38,7 +38,7 @@ export default function Home(){
       <a className={s.navCard} href="/fish"><div className={s.navIcon}>◉</div><b>魚図鑑</b><span>旬・サイズ・見分け方まで</span></a>
       <a className={s.navCard} href="/methods"><div className={s.navIcon}>⌁</div><b>釣り方</b><span>仕掛け・手順・コツを解説</span></a>
       <a className={s.navCard} href="/guide"><div className={s.navIcon}>?</div><b>釣りガイド</b><span>何号？何g？いつ釣れる？</span></a>
-      <a className={s.navCard} href="/spots"><div className={s.navIcon}>⌖</div><b>釣りスポット</b><span>魚種・設備・エリアから探す</span></a>
+      <a className={s.navCard} href="/spots"><div className={s.navIcon}>⌖</div><b>釣り場マップ</b><span>魚種・設備・エリアから探す</span></a>
       <a className={s.navCard} href="/gear"><div className={s.navIcon}>▣</div><b>釣具</b><span>ロッド・リール・仕掛け</span></a>
       <a className={s.navCard} href="/cooking"><div className={s.navIcon}>◇</div><b>魚料理</b><span>捌き方・下処理・レシピ</span></a>
     </section>
@@ -49,6 +49,11 @@ export default function Home(){
         <p>図鑑・釣り方・料理をまとめて読める基本10魚種をご紹介。すべての魚は魚図鑑一覧から探せます。</p><p><a href="/fish?hazard=1">釣れた魚を触る前に：危険魚を確認 →</a></p><div className={s.fishGrid}>{featured.map(f=><a key={f.slug} className={s.fishCard} href={`/fish/${f.slug}`}><div className={s.thumb} style={{'--tone':f.accent} as React.CSSProperties}><HomeFishImage slug={f.slug} name={f.name}/><span className={s.season}>{f.season}</span></div><div className={s.fishInfo}><h3>{f.name}</h3><p>{f.en}</p><div className={s.chips}><span>{f.methods[0]}</span><span>{f.areas[0]}</span></div></div></a>)}</div>
       </section>
     </div>
+
+    <section className={`${s.section} ${s.mapFeature}`} aria-label="釣り場マップ">
+      <div className={s.mapIllustration} aria-hidden="true"><span>⌖</span><b>港</b><b>船</b><b>店</b><i>UOLINK MAP</i></div>
+      <div><div className={s.eyebrow}>EXPLORE THE FIELD</div><h2>釣り場マップ</h2><p>全国の釣り場・船宿・釣具店を地図から探す。気になる場所の魚や釣り方、最近の釣果まで確認できます。</p><a className={s.primary} href="/spots">釣り場マップを開く →</a><nav className={s.mapFeatureLinks}><a href="/spots?fish=aji">アジが狙える釣り場</a><a href="/spots?method=sabiki">サビキの釣り場</a><a href="/catches">最近の釣果を見る</a></nav></div>
+    </section>
 
     <section className={s.section}>
       <div className={s.head}><div><div className={s.eyebrow}>SEARCH GUIDE</div><h2>釣りに行くための実践GUIDE</h2></div><a href="/guide">釣りガイドをすべて見る →</a></div>

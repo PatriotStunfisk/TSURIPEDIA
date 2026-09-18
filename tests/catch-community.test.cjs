@@ -47,6 +47,10 @@ test('authenticated API flow enforces owner, moderation, reports, quotas and pho
  user=other;assert.equal((await api.DELETE(req('DELETE',{id:report.id}))).status,404);assert.equal((await moderateApi.POST(req('POST',{id:report.id,action:'approve'}))).status,403);
  user=owner;assert.equal((await moderateApi.POST(req('POST',{id:report.id,action:'approve'}))).status,200);
  user=other;const publicRows=await (await api.GET(new Request('https://uolink.vercel.app/api/catches?spot=naruohama'))).json();assert.equal(publicRows.reports.length,1);assert.equal(publicRows.reports[0].isOwn,false);assert.ok(!('user_id' in publicRows.reports[0]));
+ const feed=await api.GET(new Request('https://uolink.vercel.app/api/catches?feed=1&fish=aji&method=sabiki&spot=naruohama'));assert.equal(feed.status,200);assert.equal((await feed.json()).reports.length,1);
+ assert.equal((await api.GET(new Request('https://uolink.vercel.app/api/catches?feed=1&fish=invalid'))).status,400);
+ assert.equal((await api.GET(new Request('https://uolink.vercel.app/api/catches?feed=1&from=2026-02-31'))).status,400);
+ assert.equal((await (await api.GET(new Request('https://uolink.vercel.app/api/catches?feed=1&spot=naruohama&prefecture='+encodeURIComponent('大阪府')))).json()).reports.length,0);
  const before=calls.length;const summary=await (await api.GET(new Request('https://uolink.vercel.app/api/catches?spot=naruohama&summary=1'))).json();assert.equal(summary.reports[0].fishSlug,'aji');assert.ok(!summary.reports[0].photos);assert.ok(calls.slice(before).every(c=>!c.path.includes('storage')));
  assert.equal((await flagApi.POST(req('POST',{id:report.id,reason:'個人情報'}))).status,200);assert.equal(flags[0].user_id,other);
  quota=false;assert.equal((await api.POST(req('POST',{report:{...report,id:'22345678-1234-4234-8234-123456789012'},consent:true}))).status,429);quota=true;

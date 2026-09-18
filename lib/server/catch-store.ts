@@ -52,3 +52,14 @@ export async function moderateCatch(id:string,action:'approve'|'reject'|'delete'
 }
 
 export async function recentCatchSummary(spotSlug:string){const r=await storeRequest(`/rest/v1/catch_reports?spot_slug=eq.${encodeURIComponent(spotSlug)}&status=eq.approved&deleted_at=is.null&upload_complete=eq.true&order=created_at.desc,id.desc&limit=2&select=id,payload`);return (await r.json() as StoredCatch[]).map(({id,payload:p})=>({id,fishSlug:p.fishSlug,fishName:p.fishName,count:p.count,sizeCm:p.sizeCm,sizeLabel:p.sizeLabel,date:p.date}));}
+
+export async function catchFeed(filters:{fish?:string;method?:string;spots?:string[];from?:string;to?:string},offset=0){
+ if(filters.spots?.length===0)return [];
+ const query=new URLSearchParams({status:'eq.approved',deleted_at:'is.null',upload_complete:'eq.true',order:'created_at.desc,id.desc',limit:'10',offset:String(offset),select:fields});
+ if(filters.fish)query.set('fish_slug','eq.'+filters.fish);
+ if(filters.method)query.set('method_slug','eq.'+filters.method);
+ if(filters.spots)query.set('spot_slug','in.('+filters.spots.join(',')+')');
+ if(filters.from)query.append('caught_on','gte.'+filters.from);
+ if(filters.to)query.append('caught_on','lte.'+filters.to);
+ return displayRows(await (await storeRequest('/rest/v1/catch_reports?'+query)).json());
+}
