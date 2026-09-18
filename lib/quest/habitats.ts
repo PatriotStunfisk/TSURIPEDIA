@@ -13,7 +13,7 @@ export const questHabitats:QuestHabitat[]=[
  {slug:'wakayama',name:'和歌山・沿岸',description:'エギングから船釣りまで、幅広い組み合わせを試す。',methods:['eging','tiprun','sabiki','kawahagi','jigging','boat-kisu','casting','fukase','otoshikomi','isaki-komase','rockfish-lure','ika-sutte','ika-metal','kamasu-lure','sayori-uki'],mapQuery:'和歌山'},
  {slug:'clear-river',name:'清流',description:'流れを読むアマゴ釣りと、おとりを送るアユ友釣り。実際の入川には遊漁規則の確認が必要です。',methods:['ayu-tomozuri','freshwater-bait','trout-lure'],mapQuery:'日高川'},
  {slug:'trout-pond',name:'管理池',description:'スプーンや餌でマスを誘う。深さと速度をそろえて反応を探す。',methods:['trout-lure','freshwater-bait'],mapQuery:'マス'},
- {slug:'northern-coast',name:'北の沿岸',description:'根の際を探り、クロソイの底へ戻る引きに対応する。実際の釣り場と利用規則はMAPで確認。',methods:['rockfish-lure','douzuki'],mapQuery:'北海道',fightDepth:12},
+ {slug:'northern-coast',name:'北の沿岸',description:'チカやニシンの群れ、カレイの底の重み、根魚の突進を釣り分ける。実際の釣り場と利用規則はMAPで確認。',methods:['rockfish-lure','douzuki','sabiki','uki','nage','choinage'],mapQuery:'北海道',fightDepth:12},
  {slug:'shelf-offshore',name:'砂泥底・沖',description:'天秤仕掛けでアマダイやメダイを狙う船の環境。棚と底取りを意識する。',methods:['amadai-tenbin','medai-komase'],mapQuery:'船',fightDepth:75},
  {slug:'deep-offshore',name:'中深場・深場',description:'キンメダイ・アカムツ・クロムツを深い層から巻き上げる。ゲームの水深と時間は実釣を簡略化しています。',methods:['deepsea-douzuki'],mapQuery:'船',fightDepth:180},
 ];

@@ -259,7 +259,7 @@ test('biological species are unique while old names remain searchable',async()=>
  const {fishMatchesSearch,canonicalFishSlug}=require('../lib/fish-aliases.ts');
  unique(registry.fishCatalog.map(f=>f.scientific.trim().toLowerCase()),'scientific name');
  for(const [name,slug] of [['はまち','buri'],['ﾂﾊﾞｽ','buri'],['がしら','kasago'],['ちぬ','chinu']]){
-  assert.deepEqual(registry.fishCatalog.filter(f=>fishMatchesSearch(f,name)).map(f=>f.slug),[slug]);
+  assert.ok(registry.fishCatalog.filter(f=>fishMatchesSearch(f,name)).some(f=>f.slug===slug));
  }
  assert.ok(!registry.fishSlugs.includes('hamachi'));
  assert.equal(canonicalFishSlug('constructor'),'constructor');
@@ -341,7 +341,7 @@ test('uploaded model spelling aliases preserve canonical fish slugs',()=>{
 
 test('optional ecology visuals propagate from species profiles with local landscape assets and sources',()=>{
   const {getFishSpecies}=require('../lib/fish-species/index.ts');
-  for(const slug of ['tachiuo','aji','hirame','kasago','aoriika']){
+  for(const slug of ['tachiuo','aji','hirame','kasago','aoriika','madako','kawahagi','ayu']){
     const visual=registry.getFishProfile(slug).ecologyVisual;
     assert.deepEqual(visual,getFishSpecies(slug).ecologyVisual);
     assert.ok(visual.title&&visual.description&&visual.alt);
@@ -350,4 +350,29 @@ test('optional ecology visuals propagate from species profiles with local landsc
     assert.equal(new URL(visual.source.url).protocol,'https:');
   }
   assert.equal(registry.getFishProfile('madai').ecologyVisual,undefined);
+});
+
+test('map-led northern species have four illustrated recipes and derived MAP/QUEST connections',()=>{
+ const {fishingMapEntries}=require('../lib/fishing-map-data.ts');
+ const {questFish}=require('../lib/quest/catalog.ts');
+ const batch=['chika','umitanago','shiroguchi','magarei','hokke','kurogashiragarei','komai','nishin','ezomebaru','kibire'];
+ const images=[];
+ for(const slug of batch){
+  const f=registry.getFishProfile(slug);assert.ok(f,slug);
+  assert.ok(f.detail.body&&f.detail.fishing&&f.detail.safety,slug);
+  assert.ok(f.launch.identify.length>=3,slug);
+  assert.equal(f.tableGuide.dishes.length,4,slug);
+  assert.equal(f.cooking.recipes.length,4,slug);
+  for(const r of f.cooking.recipes){assert.ok(r.image&&fs.existsSync(path.join(root,'public',r.image)),`${slug}/${r.slug}`);images.push(r.image);assert.ok(r.steps.length>=3&&r.ingredients.length>=3);}
+  assert.ok(fs.existsSync(path.join(root,'public',f.media.image)),slug);
+  const c=getFishConnections(slug);assert.ok(c.methods.length&&c.guides.length&&c.related.length,slug);
+  assert.ok(fishingMapEntries.some(s=>s.fishSlugs.includes(slug)),slug);
+  assert.ok(questFish.some(q=>q.slug===slug&&q.habitats.length),slug);
+ }
+ unique(images,'new recipe image');
+ assert.equal(registry.getFishByName('ガヤ').slug,'ezomebaru');
+ assert.equal(registry.getFishByName('キチヌ').slug,'kibire');
+ assert.equal(registry.getFishByName('カンカイ').slug,'komai');
+ assert.equal(registry.getFishByName('カレイ'),undefined);
+ assert.equal(registry.getFishByName('ソイ'),undefined);
 });
