@@ -1,3 +1,4 @@
+import {coastalMapExpansion} from './fishing-map-coastal-expansion';
 import {portMapExpansion} from './fishing-map-port-expansion';
 import {harborMapGrowth} from './fishing-map-harbor-growth';
 import {autumnMapGrowth} from './fishing-map-autumn-growth';
@@ -66,6 +67,7 @@ export type FishingMapEntry={
 };
 
 const sourceEntries:FishingMapEntry[]=[
+  ...coastalMapExpansion,
   ...portMapExpansion,
   ...harborMapGrowth,
   ...autumnMapGrowth,
