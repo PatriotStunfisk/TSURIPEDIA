@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual: {
+  "title": "群れで泳ぐ、岸近くの回遊魚",
+  "description": "マアジは群れをつくって岸近くから沖合を回遊し、沿岸に定着するものもいます。釣りでは同じ場所でも群れが通る水深を探すのが手掛かり。一匹釣れたら、その棚を覚えておきましょう。",
+  "alt": "青緑色の沿岸の海を群れで泳ぐマアジの再現画像",
+  "source": {
+    "label": "葛西臨海水族園：マアジ",
+    "url": "https://www.tokyo-zoo.net/kasai/encyclopedia/japanese-jack-mackerel/index.html"
+  },
+  "image": "/images/ecology/aji-20260919.webp",
+  "width": 1200,
+  "height": 800
+},
   representativeRecipes: ["sashimi","shioyaki","aji-fry","namero"],
   quest: {hook: {kind:'mouth',mouthAnchor:{x:0.025,y:0.52},modelAnchor:{x:0.025,y:0.48,z:.5}},"swimSpeed": 1.1, "stamina": 45, "runPower": 25, "wariness": 0.1},
   base: {

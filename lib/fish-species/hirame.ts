@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual: {
+  "title": "砂にまぎれて、獲物を待つ",
+  "description": "ヒラメは砂底に身を伏せ、周囲に似た体色で目立たなくなります。砂からのぞく両眼は、近くを通る獲物を見るためのもの。じっとしている姿も、食事の機会を待つハンターの姿です。",
+  "alt": "砂底に伏せて体を隠し、両眼をのぞかせるヒラメの再現画像",
+  "source": {
+    "label": "かごしま水族館：ヒラメ",
+    "url": "https://ioworld.jp/guide/guide-912"
+  },
+  "image": "/images/ecology/hirame-20260919.webp",
+  "width": 1200,
+  "height": 800
+},
   representativeRecipes: ["sashimi","meuniere","nitsuke","fry"],
   quest: {hook: {kind:'mouth',mouthAnchor:{x:0.04,y:0.53},modelAnchor:{x:0.04,y:0.47,z:.5}},fightProfile: 'bottom', "swimSpeed": 0.55, "stamina": 75, "runPower": 65},
   "base": {

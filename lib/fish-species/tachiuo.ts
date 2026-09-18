@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual: {
+  "title": "長い背びれを使って、姿勢を変える",
+  "description": "タチウオは長い背びれを波打たせて泳ぎます。頭を上にして静かに漂うこともあれば、移動するときには体を水平に近づけることも。銀色の細長い体だけでなく、泳ぐ姿勢にも注目してみてください。",
+  "alt": "銀色の細長い体を傾け、長い背びれを広げて泳ぐタチウオの再現画像",
+  "source": {
+    "label": "葛西臨海水族園：タチウオの泳ぎ方",
+    "url": "https://www.tokyo-zoo.net/topics/news/kasai/6012_20074_2011-09-23.html"
+  },
+  "image": "/images/ecology/tachiuo-20260919.webp",
+  "width": 1200,
+  "height": 800
+},
   representativeRecipes: ["sashimi","shioyaki","tempura","nitsuke"],
   quest: {hook: {kind:'mouth',mouthAnchor:{x:0.025,y:0.38},modelAnchor:{x:0.025,y:0.62,z:.5}},fightProfile: 'runner', "approachSpeed": 14, "biteWindowMs": 3200},
   base: {

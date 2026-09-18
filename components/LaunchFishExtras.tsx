@@ -1,6 +1,5 @@
 import {getFishConnections} from '@/lib/fish-connections';
 import Link from 'next/link';
-import TachiuoSchool from './TachiuoSchool';
 import {getFishLaunch,getFishByName,getFishProfile} from '@/lib/fish-registry';
 
 export default function LaunchFishExtras({slug,name}:{slug:string;name:string}){
@@ -10,7 +9,6 @@ export default function LaunchFishExtras({slug,name}:{slug:string;name:string}){
   const methodLinks=x.methodLinks.length?x.methodLinks:(links?.methods??[]).map(m=>({label:m.name,href:`/methods/${m.slug}`}));
   const related=x.related.length?x.related:(links?.related??[]).map(f=>f.name);
   return <>
-    {slug==='tachiuo'&&<TachiuoSchool/>}
     {slug==='aji'&&<>
       <section className="detailGrid">
         <article><span>HOW TO CATCH</span><h2>マアジの釣り方を選ぶ</h2><p>マアジは岸からも船からも狙えます。初めてならサビキ、ルアーで楽しむならアジング、良型を効率よく狙うなら船釣りが基本です。</p>

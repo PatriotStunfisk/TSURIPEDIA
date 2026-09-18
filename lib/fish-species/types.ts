@@ -29,7 +29,13 @@ export type FishDish={name:string;src?:string;emoji?:string;desc:string;recipe?:
 export type FishTableGuideData={lead:string;dishes:FishDish[]};
 
 // A species has one authoritative base record; recipes inherit its slug/name.
+export type FishEcologyVisual={
+  title:string; description:string; image:string; alt:string;
+  width:number; height:number; source:{label:string;url:string};
+};
+
 export type FishSpeciesDefinition={
+  ecologyVisual?:FishEcologyVisual;
   base:Fish;
   representativeRecipes?:string[];
   hazard?:FishHazard;

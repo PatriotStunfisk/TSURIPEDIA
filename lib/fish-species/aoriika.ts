@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual: {
+  "title": "大きなひれと噴射で、水中を自在に",
+  "description": "アオリイカは胴の両側に大きなひれを持ち、浅い岩礁域で暮らします。水を漏斗から噴き出し、前にも後ろにも泳げるのが特徴。魚とは違う体の向きと移動の仕方に注目すると、観察が面白くなります。",
+  "alt": "海藻のそばで大きなひれを広げて浮かぶアオリイカの再現画像",
+  "source": {
+    "label": "葛西臨海水族園：アオリイカ",
+    "url": "https://www.tokyo-zoo.net/kasai/encyclopedia/bigfin-reef-squid/index.html"
+  },
+  "image": "/images/ecology/aoriika-20260919.webp",
+  "width": 1200,
+  "height": 800
+},
   representativeRecipes: ["sashimi","tempura","butter","shioyaki"],
   quest: {hook: {kind:'embrace',mouthAnchor:{x:0.25,y:0.52},modelAnchor:{x:0.25,y:0.48,z:.5}},fightProfile: 'jet', "swimSpeed": 0.65, "wariness": 0.4, "biteWindowMs": 4000, "runPower": 50},
   "base": {

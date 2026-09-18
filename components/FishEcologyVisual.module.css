@@ -1,0 +1,11 @@
+.wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:center;gap:28px;max-width:1180px;margin:0 auto 36px;padding-bottom:28px;border-bottom:1px solid #dce7ed}
+.photo{min-width:0;margin:0}
+.photo img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;border-radius:16px;background:#e4edf0}
+.photo figcaption{margin-top:7px;color:#637783;font-size:11px;line-height:1.5}
+.copy{min-width:0}
+.eyebrow{color:#28749a;font-size:10px;font-weight:800;letter-spacing:1.5px}
+.wrap .copy h2{margin:9px 0 12px;color:#173144;font-size:clamp(22px,2.2vw,28px);line-height:1.45;text-wrap:pretty}
+.copy p{margin:0;color:#526875;font-size:14px;line-height:1.9}
+.source{display:inline-block;margin-top:14px;color:#526875;font-size:11px;line-height:1.6;text-decoration:underline;text-underline-offset:3px}
+.source:focus-visible{outline:2px solid #28749a;outline-offset:4px}
+@media(max-width:760px){.wrap{grid-template-columns:1fr;gap:14px;margin-bottom:28px;padding-bottom:24px}.wrap .copy h2{font-size:22px;margin:6px 0 8px}.photo img{border-radius:12px}.copy p{font-size:13px;line-height:1.85}.source{margin-top:10px}}

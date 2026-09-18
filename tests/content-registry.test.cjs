@@ -338,3 +338,16 @@ test('uploaded model spelling aliases preserve canonical fish slugs',()=>{
  try{fs.mkdirSync(path.join(dir,'models'));for(const [slug,file] of [['akakamas','akakamasu'],['katakuchi','katakuchiiwashi'],['urume','urumeiwashi']]){fs.writeFileSync(path.join(dir,'models',`${file}.glb`),'fixture');assert.equal(require('../lib/fish-media.ts').getSpeciesModelSrc(slug,dir),`/models/${file}.glb`);}}
  finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
+
+test('optional ecology visuals propagate from species profiles with local landscape assets and sources',()=>{
+  const {getFishSpecies}=require('../lib/fish-species/index.ts');
+  for(const slug of ['tachiuo','aji','hirame','kasago','aoriika']){
+    const visual=registry.getFishProfile(slug).ecologyVisual;
+    assert.deepEqual(visual,getFishSpecies(slug).ecologyVisual);
+    assert.ok(visual.title&&visual.description&&visual.alt);
+    assert.ok(visual.width>visual.height&&visual.height>0);
+    assert.ok(fs.existsSync(path.join(root,'public',visual.image)));
+    assert.equal(new URL(visual.source.url).protocol,'https:');
+  }
+  assert.equal(registry.getFishProfile('madai').ecologyVisual,undefined);
+});

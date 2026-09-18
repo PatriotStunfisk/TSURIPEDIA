@@ -11,6 +11,7 @@ export const fishCatalog=fish.map(base=>{
   return {
     ...base,
     media:species?.media,
+    ecologyVisual:species?.ecologyVisual,
     hazard:species?.hazard,
     cookingOmission:species?.cookingOmission,
     detail:(Object.hasOwn(fishDetails,base.slug)?fishDetails[base.slug]:undefined) as FishDetail|undefined,
