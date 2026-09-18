@@ -1,3 +1,4 @@
+import {freshIslandEntries} from './fishing-map-fresh-islands';
 import {kansaiNationalEntries} from './fishing-map-kansai-national';
 import {coastalNextEntries} from './fishing-map-coastal-next';
 import {coastalMapExpansion} from './fishing-map-coastal-expansion';
@@ -70,6 +71,7 @@ export type FishingMapEntry={
 };
 
 const sourceEntries:FishingMapEntry[]=[
+  ...freshIslandEntries,
   ...kansaiNationalEntries,
   ...shoreMapGrowth,
   ...coastalNextEntries,
