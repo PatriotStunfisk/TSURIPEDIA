@@ -1,2 +1,2 @@
 import {fishCatalog} from '../fish-registry';import {fishingMapEntries} from '../fishing-map-data';import {methodDetails} from '../method-registry';
-export function catchOptions(){return {fish:fishCatalog.map(f=>({slug:f.slug,name:f.name})),spots:fishingMapEntries.filter(s=>!s.closed).map(s=>({slug:s.slug,name:s.name})),methods:Object.entries(methodDetails).map(([slug,m])=>({slug,name:m.name}))};}
+export function catchOptions(spotSlug?:string){return {fish:fishCatalog.map(f=>({slug:f.slug,name:f.name})),spots:fishingMapEntries.filter(s=>!s.closed&&s.type!=='area'&&(!spotSlug||s.slug===spotSlug)).map(s=>({slug:s.slug,name:s.name})),methods:Object.entries(methodDetails).map(([slug,m])=>({slug,name:m.name}))};}

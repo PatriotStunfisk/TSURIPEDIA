@@ -3,6 +3,7 @@
 import type {FishingMapEntry} from '@/lib/fishing-map-data';
 import type {TackleShop} from '@/lib/tackle-shops';
 import {markerKind,markerKinds} from '@/lib/spot-markers';
+import SpotCatchPreview from './SpotCatchPreview';
 import SpotFavorite from './SpotFavorite';
 import s from './SpotMap.module.css';
 
@@ -22,6 +23,7 @@ export default function SpotMapPreview({entry,shop,onClose,onDetails,fishNames={
   {entry&&<div className={s.previewFish}>{entry.methodSlugs?.slice(0,2).map(slug=><a key={slug} href={`/methods/${slug}`}>{methodNames[slug]??slug} →</a>)}{entry.fishSlugs?.[0]?<a href={`/guide?fish=${entry.fishSlugs[0]}`}>関連GUIDE →</a>:entry.guideSlugs?.[0]?<a href={`/guide/${entry.guideSlugs[0]}`}>関連GUIDE →</a>:null}</div>}
   <div className={s.previewFacilities}>{entry?.beginner&&<span>初心者向け</span>}<span>駐車場：{facility(shop?shop.parking:entry?.parking)}</span>{entry&&<span>トイレ：{facility(entry.toilet)}</span>}</div>
   <p className={s.previewIntro}>{shop?.note??entry?.note}</p>
+  {entry&&entry.type!=='area'&&<SpotCatchPreview key={entry.slug} slug={entry.slug} fishNames={fishNames} canPost={!entry.closed}/>}
   <div className={s.previewActions}>{entry&&<SpotFavorite slug={entry.slug} name={entry.name}/>}<button type="button" className={s.previewDetails} onClick={onDetails}>詳細を見る ↓</button></div>
  </section>;
 }
