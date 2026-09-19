@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual:{
+  "title": "砂のすぐ上で、小さな餌を吸い込む",
+  "description": "シロギスは砂底のすぐ上を泳ぎ、ゴカイ類や小さな甲殻類を食べます。口元を底へ向ける姿が、投げ釣りで底を丁寧に探る理由。群れに当たったら、釣れた距離も覚えておきましょう。",
+  "alt": "砂底の近くで餌を探すシロギスの再現画像",
+  "image": "/images/ecology/kisu-20260919.webp",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "Honda釣り倶楽部：魚種の特徴",
+    "url": "https://www.honda.co.jp/fishing/picture-book/shirogisu/"
+  }
+},
   representativeRecipes: ["tempura","sashimi","shioyaki","nanbanzuke"],
   base:{slug:'kisu',name:'シロギス',en:'Japanese whiting',scientific:'Sillago japonica',season:'5〜10月',difficulty:1,danger:'低',methods:['ちょい投げ','船キス'],areas:['砂浜','湾内'],depth:'2〜30m',size:'15〜30cm',desc:'砂地に暮らす美しい魚。軽い仕掛けで楽しめ、親子の釣りにもおすすめです。',accent:'#e8dfc7',months:[5,6,7,8,9,10],beginner:true,kids:true},
   detail:{family:'キス科',genus:'キス属',aliases:['キス'],habitat:'砂浜・砂底・湾内の浅場',diet:'ゴカイ類、小型甲殻類',behavior:'砂底を群れで移動し、暖かい季節は浅場に寄りやすい',lifespan:'数年程度',taste:'淡白で上品。天ぷらの代表魚として有名',cooking:['天ぷら','刺身','塩焼き','南蛮漬け','昆布締め','フライ'],seasonNote:'初夏から秋に浅場で釣りやすく、盛夏は数釣りを楽しみやすい。',beginnerTip:'ちょい投げなら遠投は不要。仕掛けをゆっくり引いて、底の変化を探すと釣果が上がりやすい。',safety:'大きな危険は少ないが、針外し時のケガに注意。',body:'細長く透明感のある美しい魚体。砂地に適応した体色をしています。',fishing:'浜や堤防からの投げ釣り、ボートや船の天秤仕掛けが定番。軽いタックルでも楽しめます。',trivia:'「海の女王」と呼ばれることもあり、魚体の美しさと食味の良さで人気があります。'},

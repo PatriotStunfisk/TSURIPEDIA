@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual:{
+  "title": "岩と海藻のそばで、ふわりと待つ",
+  "description": "メバルは岩礁や海藻のある沿岸で暮らし、小魚や甲殻類を捕らえます。カサゴのように底へ張り付くだけではなく、水中へ浮いていることも。釣りでは底だけに決めず、上の層も静かに探ります。",
+  "alt": "海藻と岩のそばに浮かぶメバルの再現画像",
+  "image": "/images/ecology/mebaru-20260919.webp",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "Honda釣り倶楽部：魚種の特徴",
+    "url": "https://www.honda.co.jp/fishing/picture-book/mebaru/"
+  }
+},
   "base": {
     "slug": "mebaru",
     "name": "メバル",

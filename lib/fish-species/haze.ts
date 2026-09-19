@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual:{
+  "title": "砂泥の底に寄り添う、河口の魚",
+  "description": "マハゼは河口や内湾の砂泥底で、ゴカイ類や小さな甲殻類を食べます。浅場で見つかることもありますが、成長や季節で居場所が変わります。餌を底から大きく離さず探るのが手掛かりです。",
+  "alt": "河口の砂泥底に休むマハゼの再現画像",
+  "image": "/images/ecology/haze-20260919.webp",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "Honda釣り倶楽部：魚種の特徴",
+    "url": "https://www.honda.co.jp/fishing/picture-book/mahaze/"
+  }
+},
   "base": {
     "slug": "haze",
     "name": "マハゼ",

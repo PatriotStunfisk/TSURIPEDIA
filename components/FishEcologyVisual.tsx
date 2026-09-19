@@ -9,7 +9,6 @@ export default function FishEcologyVisual({visual}:{visual?:EcologyVisual}){
       <Image src={visual.image} alt={visual.alt} width={visual.width} height={visual.height}
         sizes="(max-width: 760px) calc(100vw - 32px), (max-width: 1230px) 55vw, 650px"
         loading="lazy"/>
-      <figcaption>生態をもとにした再現画像（AI生成）</figcaption>
     </figure>
     <div className={s.copy}>
       <span className={s.eyebrow}>ECOLOGY VISUAL</span>

@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual:{
+  "title": "岸壁の貝も、チヌの食べ物",
+  "description": "クロダイは甲殻類や貝類など幅広い餌を食べ、岸壁の付着生物も利用します。沖だけでなく足元の壁際も生活の場。釣りでは護岸の継ぎ目や潮の流れを観察する手掛かりになります。",
+  "alt": "貝の付いた水中の護岸に沿うクロダイの再現画像",
+  "image": "/images/ecology/chinu-20260919.webp",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "Honda釣り倶楽部：魚種の特徴",
+    "url": "https://www.honda.co.jp/fishing/picture-book/kurodai/"
+  }
+},
   "base": {
     "slug": "chinu",
     "name": "クロダイ",

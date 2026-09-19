@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual:{
+  "title": "底の起伏に沿って、餌を探す",
+  "description": "マダイは岩礁や砂礫底の近くで、エビ・カニ・小魚などを食べます。強い歯で硬い餌もかみ砕く魚。釣りでは底を基準にしつつ、魚が浮いている棚も探ることが大切です。",
+  "alt": "砂地と岩の境目を泳ぐマダイの再現画像",
+  "image": "/images/ecology/madai-20260919.webp",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "Honda釣り倶楽部：魚種の特徴",
+    "url": "https://www.honda.co.jp/fishing/picture-book/madai/"
+  }
+},
   representativeRecipes: ["sashimi","shioyaki","nitsuke","chazuke"],
   quest: {hook: {kind:'mouth',mouthAnchor:{x:.03,y:0.58},modelAnchor:{x:.03,y:0.42000000000000004,z:.5}}},
   base: {

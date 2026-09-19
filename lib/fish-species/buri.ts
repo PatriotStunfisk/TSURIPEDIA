@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual:{
+  "title": "小魚を追って、群れで回遊する",
+  "description": "ブリは成長するとアジやイワシなどの小魚を追い、群れで広い海を移動します。岸から釣れるかどうかは餌の群れと回遊次第。同じ堤防でも毎日同じ場所にいる魚ではありません。",
+  "alt": "青い海を群れで泳ぐブリの再現画像",
+  "image": "/images/ecology/buri-20260919.webp",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "Honda釣り倶楽部：魚種の特徴",
+    "url": "https://www.honda.co.jp/fishing/picture-book/buri/"
+  }
+},
   representativeRecipes: ["sashimi","teriyaki","shabu","daikon"],
   quest: {hook: {kind:'mouth',mouthAnchor:{x:0.025,y:0.55},modelAnchor:{x:0.025,y:0.44999999999999996,z:.5}},methods:['nomase','jigging','shore-jigging'], fightProfile: 'diver', "stamina": 95, "runPower": 95, "swimSpeed": 1.8},
   base: {slug:'buri',name:'ブリ',en:'Japanese amberjack',scientific:'Seriola quinqueradiata',season:'秋〜冬',difficulty:4,danger:'低',methods:['ノマセ','ジギング'],areas:['明石','紀北','日本海'],depth:'20〜100m',size:'60〜100cm',desc:'強烈な引きが魅力の大型青物。生き餌を使うノマセ釣りやジギングで狙います。',accent:'#99b9cf',months:[10,11,12,1,2],beginner:false,kids:false},

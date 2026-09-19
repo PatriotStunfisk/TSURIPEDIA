@@ -1,5 +1,17 @@
 import {defineFishSpecies} from './define';
 export default defineFishSpecies({
+  ecologyVisual:{
+  "title": "口を伸ばして、底の餌を探す",
+  "description": "コイは底の泥や砂を口へ取り込みながら、小動物や植物質などを食べます。口元のひげも身近な見分け方の一つ。底釣りでは水面の姿だけでなく、底を探る動きにも注目してみましょう。",
+  "alt": "池の底へ口を向ける野生型のコイの再現画像",
+  "image": "/images/ecology/koi-20260919.webp",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "Honda釣り倶楽部：魚種の特徴",
+    "url": "https://www.honda.co.jp/fishing/picture-book/koi/"
+  }
+},
   "base": {
     "slug": "koi",
     "name": "コイ",
