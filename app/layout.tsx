@@ -21,8 +21,9 @@ const websiteJsonLd={
   '@type':'WebSite',
   '@id':`${siteUrl}/#website`,
   url:siteUrl,
-  name:'UOLINK',
-  alternateName:['ウオリンク','UOLINK（ウオリンク）'],
+  name:'UOLINK（ウオリンク）',
+  alternateName:['UOLINK','ウオリンク'],
+  publisher:{'@id':`${siteUrl}/#organization`},
   inLanguage:'ja-JP',
   description:'魚図鑑・釣り方・釣り場・釣具をつなぐ釣り総合ガイド'
 };
@@ -31,8 +32,8 @@ const organizationJsonLd={
   '@context':'https://schema.org',
   '@type':'Organization',
   '@id':`${siteUrl}/#organization`,
-  name:'UOLINK',
-  alternateName:['ウオリンク','UOLINK（ウオリンク）'],
+  name:'UOLINK（ウオリンク）',
+  alternateName:['UOLINK','ウオリンク'],
   url:siteUrl,
   logo:`${siteUrl}/brand/uolink-logo-hq.png`,
   description:'魚から釣りへつなぐ釣り情報サイト UOLINK（ウオリンク）'
