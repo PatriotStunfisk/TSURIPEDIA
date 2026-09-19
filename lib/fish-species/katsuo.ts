@@ -60,7 +60,7 @@ export default defineFishSpecies({
     "taste": "赤身の香りを生かす刺身とたたき、しょうが煮、竜田揚げを紹介。たたきは中が生なので、加熱料理とは分けて考えます。",
     "cooking": [
       "刺身",
-      "カツオのたたき",
+      "たたき",
       "しょうが煮",
       "竜田揚げ"
     ],
@@ -147,7 +147,7 @@ export default defineFishSpecies({
       },
       {
         "slug": "tataki",
-        "name": "カツオのたたき",
+        "name": "たたき",
         "preparation": "raw",
         "summary": "表面だけを香ばしく焼き、薬味とポン酢を合わせる定番。中心は生の料理です。",
         "ingredients": [
