@@ -1,3 +1,4 @@
+import {septemberBoatEntries} from './fishing-map-boat-september';
 import {kansaiReopeningEntries} from './fishing-map-kansai-reopening';
 import {freshIslandEntries} from './fishing-map-fresh-islands';
 import {kansaiNationalEntries} from './fishing-map-kansai-national';
@@ -72,6 +73,7 @@ export type FishingMapEntry={
 };
 
 const sourceEntries:FishingMapEntry[]=[
+  ...septemberBoatEntries,
   ...kansaiReopeningEntries,
   ...freshIslandEntries,
   ...kansaiNationalEntries,

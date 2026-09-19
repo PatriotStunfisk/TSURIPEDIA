@@ -12,7 +12,10 @@ const ids=new Set(harborMapGrowth.map(x=>x.slug));
 test('shore expansion adds independently named harbors, with no boat operators or unresolved duplicate pins',()=>{
  assert.equal(harborMapGrowth.length,189);
  assert.equal(fishingMapEntries.filter(x=>ids.has(x.slug)).length,189);
- assert.deepEqual(validateFishingMap(fishingMapEntries).filter(x=>x.slugs.some(s=>ids.has(s))),[]);
+ // The operator boards at the already registered Unami harbor; keep both identities and real coordinates.
+ const sharedUnami=['umibozu-five-unami','harbor-toyamaunamigyokou'].sort();
+ const reviewed=validateFishingMap(fishingMapEntries).filter(x=>x.slugs.some(s=>ids.has(s)));
+ assert.deepEqual(reviewed.map(x=>({code:x.code,slugs:[...x.slugs].sort()})),[{code:'same-coordinate',slugs:sharedUnami}]);
  for(const e of harborMapGrowth){assert.equal(e.type,'spot');assert.ok(['port','pier'].includes(e.primaryType));assert.equal(e.parking,undefined);assert.equal(e.toilet,undefined);assert.equal(e.verifiedAt,'2026-09-18');assert.ok(e.sources.some(s=>s.url.startsWith('https://maps.gsi.go.jp/')));assert.ok(e.sources.some(s=>s.url.includes('turihiroba.com/')));assert.ok(e.note.length>45);}
 });
 test('harbor fish and method routes connect through the shared registries',()=>{
