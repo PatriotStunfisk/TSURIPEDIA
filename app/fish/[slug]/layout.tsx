@@ -1,7 +1,8 @@
+import {siteUrl as base} from '@/lib/site-url';
 import type {Metadata} from 'next';
 import {getFishProfile as getFish} from '@/lib/fish-registry';
 
-const base='https://uolink.vercel.app';
+
 
 export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{
   const {slug}=await params;

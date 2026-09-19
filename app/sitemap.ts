@@ -1,3 +1,4 @@
+import {siteUrl as base} from '@/lib/site-url';
 import {fishingMapEntries} from '@/lib/fishing-map-data';
 import type {MetadataRoute} from 'next';
 import {fishCatalog} from '@/lib/fish-registry';
@@ -7,7 +8,6 @@ import {cookingFish} from '@/lib/cooking-data';
 
 
 export default function sitemap():MetadataRoute.Sitemap{
-  const base='https://uolink.vercel.app';
   const now=new Date();
   const staticPages=[
     {path:'',priority:1,changeFrequency:'weekly' as const},

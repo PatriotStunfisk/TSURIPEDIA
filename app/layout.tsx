@@ -1,10 +1,9 @@
+import {siteUrl} from '@/lib/site-url';
 import {pageSharing} from '@/lib/page-sharing';
 import type {Metadata} from 'next';
 import {Analytics} from '@vercel/analytics/next';
 import './globals.css';
 import Header from '@/components/Header';import Footer from '@/components/Footer';
-
-const siteUrl='https://uolink.vercel.app';
 
 export const metadata:Metadata={
   ...pageSharing('/','UOLINK｜魚から、釣りへつながる','魚図鑑・釣り方・釣り場・料理・釣具をつなぐ釣り総合ガイド。'),

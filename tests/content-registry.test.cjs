@@ -328,7 +328,7 @@ test('GUIDE related links resolve to public routes, including historical fish al
  const {canonicalFishSlug}=require('../lib/fish-aliases.ts');
  for(const guide of allGuides)for(const link of guide.related){
   if(!link.href.startsWith('/'))continue;
-  let pathname=new URL(link.href,'https://uolink.vercel.app').pathname;
+  let pathname=new URL(link.href,'https://uolink.jp').pathname;
   pathname=pathname.replace(/^\/fish\/([^/]+)$/,(_,slug)=>'/fish/'+canonicalFishSlug(slug));
   assert.ok(routes.has(pathname),`${guide.slug}: ${link.href}`);
  }

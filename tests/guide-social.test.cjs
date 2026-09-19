@@ -16,6 +16,6 @@ test('GUIDE sharing exposes a large absolute image to social crawlers',()=>{
  for(const slug of ['aji-sabiki-depth','fishing-first-checklist','fishing-map-permission-check']){
   const sharing=guideSharing(slug);assert.equal(sharing.twitter.card,'summary_large_image');
   const image=sharing.openGraph.images[0];assert.equal(image.width,1200);assert.equal(image.height,630);
-  assert.equal(new URL(image.url).origin,'https://uolink.vercel.app');assert.ok(fs.existsSync(path.join(root,'public',new URL(image.url).pathname)));
+  assert.equal(new URL(image.url).origin,'https://uolink.jp');assert.ok(fs.existsSync(path.join(root,'public',new URL(image.url).pathname)));
  }
 });

@@ -10,7 +10,7 @@
 ・一度に大きく変えず、1mほどずつ探る
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/aji-sabiki-depth?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/aji-sabiki-depth?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/aji-sabiki-depth--points.jpg
@@ -24,7 +24,7 @@ https://uolink.vercel.app/guide/aji-sabiki-depth?utm_source=x&utm_medium=social&
 ・魚の名前を確実に判断できるか
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/dangerous-fish-first-check?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/dangerous-fish-first-check?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/dangerous-fish-first-check--points.jpg
@@ -38,7 +38,7 @@ https://uolink.vercel.app/guide/dangerous-fish-first-check?utm_source=x&utm_medi
 ・前アタリを即合わせせず、引き込みを見て掛ける
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/tachiuo-tenya-action?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/tachiuo-tenya-action?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/tachiuo-tenya-action--points.jpg
@@ -52,7 +52,7 @@ https://uolink.vercel.app/guide/tachiuo-tenya-action?utm_source=x&utm_medium=soc
 ・1匹掛かったら早めに回収
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/saba-sabiki-cooling?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/saba-sabiki-cooling?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/saba-sabiki-cooling--points.jpg
@@ -66,7 +66,7 @@ https://uolink.vercel.app/guide/saba-sabiki-cooling?utm_source=x&utm_medium=soci
 ・しゃくりの後は静かに沈める
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/eging-shakuri-count?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/eging-shakuri-count?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/eging-shakuri-count--points.jpg
@@ -80,7 +80,7 @@ https://uolink.vercel.app/guide/eging-shakuri-count?utm_source=x&utm_medium=soci
 ・最初のコツコツで止めずに巻く
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/tairaba-bottom-contact?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/tairaba-bottom-contact?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/tairaba-bottom-contact--points.jpg
@@ -94,7 +94,7 @@ https://uolink.vercel.app/guide/tairaba-bottom-contact?utm_source=x&utm_medium=s
 ・アタリが出た距離と角度を再現する
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/kisu-retrieve-speed?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/kisu-retrieve-speed?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/kisu-retrieve-speed--points.jpg
@@ -108,7 +108,7 @@ https://uolink.vercel.app/guide/kisu-retrieve-speed?utm_source=x&utm_medium=soci
 ・ジグを替える前に泳層を変える
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/shore-jigging-jig-weight?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/shore-jigging-jig-weight?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/shore-jigging-jig-weight--points.jpg
@@ -122,7 +122,7 @@ https://uolink.vercel.app/guide/shore-jigging-jig-weight?utm_source=x&utm_medium
 ・小刻みな震えから持続する重みへの変化を見る
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/hirame-livebait-observation?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/hirame-livebait-observation?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/hirame-livebait-observation--points.jpg
@@ -136,7 +136,7 @@ https://uolink.vercel.app/guide/hirame-livebait-observation?utm_source=x&utm_med
 ・掛かった最初に底から離す
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/kasago-ana-rig?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/kasago-ana-rig?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/kasago-ana-rig--points.jpg
@@ -150,7 +150,7 @@ https://uolink.vercel.app/guide/kasago-ana-rig?utm_source=x&utm_medium=social&ut
 ・付け餌と撒き餌を同じ流れへ
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/chinu-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/chinu-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/chinu-field-notes--points.jpg
@@ -164,7 +164,7 @@ https://uolink.vercel.app/guide/chinu-field-notes?utm_source=x&utm_medium=social
 ・表層から順に泳層を下げる
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/suzuki-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/suzuki-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/suzuki-field-notes--points.jpg
@@ -178,7 +178,7 @@ https://uolink.vercel.app/guide/suzuki-field-notes?utm_source=x&utm_medium=socia
 ・針とハリスの数字を分けて読む
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/aji-sabiki-hook-size?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/aji-sabiki-hook-size?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/aji-sabiki-hook-size--points.jpg
@@ -192,7 +192,7 @@ https://uolink.vercel.app/guide/aji-sabiki-hook-size?utm_source=x&utm_medium=soc
 ・細い糸ほど傷と結束を点検
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/tairaba-pe?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/tairaba-pe?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/tairaba-pe--points.jpg
@@ -206,7 +206,7 @@ https://uolink.vercel.app/guide/tairaba-pe?utm_source=x&utm_medium=social&utm_ca
 ・太さだけでなく傷と結束を見る
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/tairaba-leader?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/tairaba-leader?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/tairaba-leader--points.jpg
@@ -220,7 +220,7 @@ https://uolink.vercel.app/guide/tairaba-leader?utm_source=x&utm_medium=social&ut
 ・棚は底からか水面からか確認
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/tachiuo-tenya-40-vs-50?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/tachiuo-tenya-40-vs-50?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/tachiuo-tenya-40-vs-50--points.jpg
@@ -234,7 +234,7 @@ https://uolink.vercel.app/guide/tachiuo-tenya-40-vs-50?utm_source=x&utm_medium=s
 ・誘う時間と止める時間を分ける
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/kawahagi-hook?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/kawahagi-hook?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/kawahagi-hook--points.jpg
@@ -248,7 +248,7 @@ https://uolink.vercel.app/guide/kawahagi-hook?utm_source=x&utm_medium=social&utm
 ・号数だけで釣果を判断しない
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/eging-leader?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/eging-leader?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/eging-leader--points.jpg
@@ -262,7 +262,7 @@ https://uolink.vercel.app/guide/eging-leader?utm_source=x&utm_medium=social&utm_
 ・利用できる釣法
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/fishing-first-checklist?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/fishing-first-checklist?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/fishing-first-checklist--points.jpg
@@ -276,7 +276,7 @@ https://uolink.vercel.app/guide/fishing-first-checklist?utm_source=x&utm_medium=
 ・クーラーの内側を洗浄
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/fishing-cooler-plan?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/fishing-cooler-plan?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/fishing-cooler-plan--points.jpg
@@ -290,7 +290,7 @@ https://uolink.vercel.app/guide/fishing-cooler-plan?utm_source=x&utm_medium=soci
 ・釣法の禁止事項まで読む
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/fishing-map-permission-check?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/fishing-map-permission-check?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/fishing-map-permission-check--points.jpg
@@ -304,7 +304,7 @@ https://uolink.vercel.app/guide/fishing-map-permission-check?utm_source=x&utm_me
 ・集合時刻と出船時刻を分けて確認
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/first-charter-boat-reservation?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
+https://uolink.jp/guide/first-charter-boat-reservation?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=points--fish-v1
 #釣り
 
 画像：/social/first-charter-boat-reservation--points.jpg
@@ -318,7 +318,7 @@ https://uolink.vercel.app/guide/first-charter-boat-reservation?utm_source=x&utm_
 ・アミエビ・水くみバケツ（使用可の施設のみ）
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/aji-sabiki-depth?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/aji-sabiki-depth?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/aji-sabiki-depth--checklist.jpg
@@ -332,7 +332,7 @@ https://uolink.vercel.app/guide/aji-sabiki-depth?utm_source=x&utm_medium=social&
 ・アイゴの料理は安全な処理済み切り身から
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/dangerous-fish-first-check?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/dangerous-fish-first-check?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/dangerous-fish-first-check--checklist.jpg
@@ -346,7 +346,7 @@ https://uolink.vercel.app/guide/dangerous-fish-first-check?utm_source=x&utm_medi
 ・長いプライヤー・魚ばさみ・ハサミ
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/tachiuo-tenya-action?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/tachiuo-tenya-action?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/tachiuo-tenya-action--checklist.jpg
@@ -360,7 +360,7 @@ https://uolink.vercel.app/guide/tachiuo-tenya-action?utm_source=x&utm_medium=soc
 ・魚ばさみ・針外し
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/saba-sabiki-cooling?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/saba-sabiki-cooling?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/saba-sabiki-cooling--checklist.jpg
@@ -374,7 +374,7 @@ https://uolink.vercel.app/guide/saba-sabiki-cooling?utm_source=x&utm_medium=soci
 ・リーダー・ハサミ・針先を収めるケース
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/eging-shakuri-count?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/eging-shakuri-count?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/eging-shakuri-count--checklist.jpg
@@ -388,7 +388,7 @@ https://uolink.vercel.app/guide/eging-shakuri-count?utm_source=x&utm_medium=soci
 ・結束済み予備リーダー・ハサミ
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/tairaba-bottom-contact?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/tairaba-bottom-contact?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/tairaba-bottom-contact--checklist.jpg
@@ -402,7 +402,7 @@ https://uolink.vercel.app/guide/tairaba-bottom-contact?utm_source=x&utm_medium=s
 ・生き餌の保冷容器・ハサミ・針外し
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/kisu-retrieve-speed?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/kisu-retrieve-speed?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/kisu-retrieve-speed--checklist.jpg
@@ -416,7 +416,7 @@ https://uolink.vercel.app/guide/kisu-retrieve-speed?utm_source=x&utm_medium=soci
 ・リーダー・プライヤー・リング用工具
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/shore-jigging-jig-weight?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/shore-jigging-jig-weight?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/shore-jigging-jig-weight--checklist.jpg
@@ -430,7 +430,7 @@ https://uolink.vercel.app/guide/shore-jigging-jig-weight?utm_source=x&utm_medium
 ・予備針・ハリス・プライヤー
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/hirame-livebait-observation?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/hirame-livebait-observation?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/hirame-livebait-observation--checklist.jpg
@@ -444,7 +444,7 @@ https://uolink.vercel.app/guide/hirame-livebait-observation?utm_source=x&utm_med
 ・切り身餌・小型クーラー
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/kasago-ana-rig?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/kasago-ana-rig?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/kasago-ana-rig--checklist.jpg
@@ -458,7 +458,7 @@ https://uolink.vercel.app/guide/kasago-ana-rig?utm_source=x&utm_medium=social&ut
 ・付け餌と撒き餌・バッカン・ひしゃく
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/chinu-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/chinu-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/chinu-field-notes--checklist.jpg
@@ -472,7 +472,7 @@ https://uolink.vercel.app/guide/chinu-field-notes?utm_source=x&utm_medium=social
 ・長いプライヤー・フィッシュグリップ
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/suzuki-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/suzuki-field-notes?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/suzuki-field-notes--checklist.jpg
@@ -486,7 +486,7 @@ https://uolink.vercel.app/guide/suzuki-field-notes?utm_source=x&utm_medium=socia
 ・針外し道具と氷を先に準備
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/fishing-first-checklist?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/fishing-first-checklist?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/fishing-first-checklist--checklist.jpg
@@ -500,7 +500,7 @@ https://uolink.vercel.app/guide/fishing-first-checklist?utm_source=x&utm_medium=
 ・飲料の出し入れでふたを開け続けない
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/fishing-cooler-plan?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/fishing-cooler-plan?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/fishing-cooler-plan--checklist.jpg
@@ -514,7 +514,7 @@ https://uolink.vercel.app/guide/fishing-cooler-plan?utm_source=x&utm_medium=soci
 ・使う釣法と貸出品を確認
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/fishing-map-permission-check?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/fishing-map-permission-check?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/fishing-map-permission-check--checklist.jpg
@@ -528,7 +528,7 @@ https://uolink.vercel.app/guide/fishing-map-permission-check?utm_source=x&utm_me
 ・予備仕掛けは船宿指定でそろえる
 
 詳しい手順・注意点はこちら
-https://uolink.vercel.app/guide/first-charter-boat-reservation?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
+https://uolink.jp/guide/first-charter-boat-reservation?utm_source=x&utm_medium=social&utm_campaign=guide-launch-202609&utm_content=checklist--fish-v1
 #釣り
 
 画像：/social/first-charter-boat-reservation--checklist.jpg

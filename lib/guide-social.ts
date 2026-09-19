@@ -1,3 +1,4 @@
+import {siteUrl} from './site-url';
 import {getFishImage} from './fish-images';
 import {getGuide} from './all-guides';
 import {getFishProfile} from './fish-registry';
@@ -28,7 +29,7 @@ const topics=[
 ] as const;
 export const socialCampaign='guide-launch-202609';
 export function socialGuideUrl(guideSlug:string,topic:string,thumbnail='fish-v1'){
- const url=new URL(`/guide/${guideSlug}`,'https://uolink.vercel.app');
+ const url=new URL(`/guide/${guideSlug}`,siteUrl);
  url.search=new URLSearchParams({utm_source:'x',utm_medium:'social',utm_campaign:socialCampaign,utm_content:`${topic}--${thumbnail}`}).toString();return url.toString();
 }
 export function createSocialDraft(slug:string,headline:string,index=0,variant?:{topic:string;points:string[]}){

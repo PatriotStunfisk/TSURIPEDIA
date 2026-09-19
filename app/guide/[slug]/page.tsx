@@ -1,3 +1,4 @@
+import {siteUrl as base} from '@/lib/site-url';
 import {guideTopics} from '@/lib/guide-taxonomy';
 import {getFish} from '@/lib/data';
 import {getMethod} from '@/lib/method-registry';
@@ -14,7 +15,7 @@ import GuideAffiliateExtras,{hasAffiliateExtras} from '@/components/GuideAffilia
 import {allGuides,getGuide,getRelatedGuides,getParentGuide,getGuideQuestions} from '@/lib/all-guides';
 
 
-const base='https://uolink.vercel.app';
+
 const categoryAdvice:Record<string,{title:string;body:string;points:string[]}>= {
  '季節・釣り場':{title:'季節記事の使い方',body:'月・地域ごとの魚種は例年傾向。実際の水温、ベイト、風、潮で前後する。出発前は直近数日の釣果と現地ルールを重ねて判断。',points:['直近の釣果で対象魚を絞る','同じ地域でも港・河口・外洋で魚種は変わる','風・波・立入禁止情報を出発前に確認']},
  'タチウオ':{title:'現場で迷ったときの優先順位',body:'棚・誘い・餌の状態を順番に確認。釣れた棚と誘いを再現することが近道。',points:['アタリが出た水深を最優先','餌の曲がりと針先を確認','リーダー傷をこまめに点検']},

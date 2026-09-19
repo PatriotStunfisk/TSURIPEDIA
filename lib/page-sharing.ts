@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import cards from './sharing-images.json';
-export const siteUrl='https://uolink.vercel.app';
+import {siteUrl} from './site-url';
+export {siteUrl} from './site-url';
 export function pageSharing(path:string,title:string,description:string,type:'website'|'article'='website'):Metadata{
  const imagePath=(cards as Record<string,string>)[path]??cards['/'];
  const image={url:new URL(imagePath,siteUrl).href,width:1200,height:630,type:'image/jpeg',alt:title};

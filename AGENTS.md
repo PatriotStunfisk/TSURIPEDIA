@@ -33,7 +33,7 @@
 - Keep Japanese user-facing copy, meaningful alt text, semantic links/buttons, and accessible controls.
 - When adding content, update the appropriate source collection and registry wiring, then check list pages, detail pages, related links, metadata, and sitemap coverage against the shared content architecture.
 - Keep browser-only Three.js work inside client lifecycle code and clean up animation frames, listeners, observers, and GPU resources. Preserve a usable fallback when rendering fails.
-- Keep branding, canonical URLs, structured data, sitemap, and robots consistent when changing site identity. `app/layout.tsx` currently hardcodes the site URL; do not assume `.env.example` controls it.
+- Keep branding, canonical URLs, structured data, sitemap, and robots consistent when changing site identity. `lib/site-url.ts` is the canonical production origin shared by metadata, sitemap, robots, structured data, and social links; `.env.example` does not override it.
 
 ## SEO and future monetization
 - Consider title, description, canonical URLs, sitemap coverage, useful internal links, mobile presentation, and Core Web Vitals when changing pages. Prioritize helpful content and performance; do not mass-generate low-quality pages solely for SEO.

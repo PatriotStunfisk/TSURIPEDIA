@@ -17,7 +17,7 @@ Supabase AuthのGoogle / Apple OAuth（PKCE）を使用。メール・パスワ�
 2. Google Auth Platformでアプリ名UOLINK、サポートメール、対象「外部」、連絡先を設定。規約同意は所有者が行う。
 3. スコープはopenid、email、profileのみ。Gmailのメール閲覧権限は要求しない。
 4. OAuthクライアントを「ウェブ アプリケーション」で作成。
-5. JavaScript生成元：`https://uolink.vercel.app`
+5. JavaScript生成元：`https://uolink.jp`
 6. 承認済みリダイレクトURI：`https://tiiljxuyyqsnraelgpkb.supabase.co/auth/v1/callback`
 7. Client IDとClient SecretをSupabase > Authentication > Sign In / Providers > Googleに保存し有効化。秘密情報はリポジトリに入れない。認証情報作成・入力は所有者が行う。
 8. テストモードならテストユーザーで確認。一般公開には対象を公開へ切り替え、Googleが求める同意画面・ドメイン等の確認を完了する。
@@ -34,8 +34,8 @@ Apple Developer設定が必要。Team ID、Sign in with Apple対応App ID、Web�
 
 ## Supabase共通設定
 
-- Site URL：`https://uolink.vercel.app`
-- Redirect allow list：`https://uolink.vercel.app/auth/callback`
+- Site URL：`https://uolink.jp`
+- Redirect allow list：`https://uolink.jp/auth/callback`。移行中は既存の `https://uolink.vercel.app/auth/callback` も維持。
 - Google / AppleからSupabaseへ戻るURLと、SupabaseからUOLINKへ戻るURLは異なる。
 - SMTP設定と `CATCH_EMAIL_LOGIN_READY` はアプリの必須条件ではなく、現在のOAuth実装では使用しない。
 - 必要な既存環境変数：`SUPABASE_URL`（または `NEXT_PUBLIC_SUPABASE_URL`）、`SUPABASE_SERVICE_ROLE_KEY`、`CATCH_REPORTS_ENABLED`。認証用キーは `SUPABASE_ANON_KEY` を優先、既存のサーバー専用キーは互換フォールバック。
