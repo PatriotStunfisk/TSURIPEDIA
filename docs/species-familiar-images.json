@@ -1,0 +1,411 @@
+{
+  "date": "2026-09-19",
+  "origin": "OpenAI image generation; original commissioned assets",
+  "notes": [
+    "Transparent species images and individual recipe images; no external photographs copied.",
+    "Eight unpublished recipe drafts were regenerated to correct species markings.",
+    "Ecology scenes illustrate behavior; factual references are stored in each species profile."
+  ],
+  "assets": [
+    {
+      "id": "suzumedai",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-645e56fd-5fdc-4bbe-b55c-eb3a4980a469.png"
+    },
+    {
+      "id": "hoshisasanoha",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-f9b271d4-f14d-4fc9-8f1b-ea99a1e215c9.png"
+    },
+    {
+      "id": "akasasanoha",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-23dd3a8c-eef9-485d-b2f8-018f37cd1b88.png"
+    },
+    {
+      "id": "kyusen",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-3f876b20-4d2a-413d-9ed7-bbf2c00c17cb.png"
+    },
+    {
+      "id": "sappa",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-de2d523b-c961-422f-9193-6ec924c03fad.png"
+    },
+    {
+      "id": "shimagatsuo",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-89a5c5f7-5f1b-44d8-97ec-093c69cdb826.png"
+    },
+    {
+      "id": "kobudai",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-83149711-cc7c-43a4-9b9d-66dc77db342e.png"
+    },
+    {
+      "id": "utsubo",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-018f892c-8449-4d8c-9615-0cfc0eb84f0d.png"
+    },
+    {
+      "id": "kuromaguro",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-b4bd5151-e45e-4a73-87eb-e9da40186ecc.png"
+    },
+    {
+      "id": "browntrout",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-6fca8257-4801-4550-bc0f-76b7b5168479.png"
+    },
+    {
+      "id": "koshoudai",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-b8b6d976-e09f-4f10-88db-c1b0d29c9f83.png"
+    },
+    {
+      "id": "nenbutsudai",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-22f55860-7357-4422-bf1d-6a54c90d3f86.png"
+    },
+    {
+      "id": "suzumedai-shioyaki",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-be74fe06-c150-4013-80a4-c87523539b5a.png"
+    },
+    {
+      "id": "suzumedai-karaage",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-042eb487-3729-45e8-97ed-b864fe750478.png"
+    },
+    {
+      "id": "suzumedai-nanban",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-a33be3af-385f-4bdd-8856-826ec3e5f32e.png"
+    },
+    {
+      "id": "suzumedai-nitsuke",
+      "kind": "fish-or-cooking",
+      "generationFile": "exec-604cca4a-803d-48ae-b3a1-b6620fc3a9b3.png"
+    },
+    {
+      "id": "hoshisasanoha-nitsuke",
+      "kind": "cooking",
+      "generationFile": "exec-fb6940c9-fd4b-4bf7-aefd-60d490dc152f.png"
+    },
+    {
+      "id": "hoshisasanoha-karaage",
+      "kind": "cooking",
+      "generationFile": "exec-a22c7408-edc0-4435-a722-d44ea98b24c0.png"
+    },
+    {
+      "id": "hoshisasanoha-shioyaki",
+      "kind": "cooking",
+      "generationFile": "exec-3f5aa0b7-f063-430a-bd58-2cb8f772d0fc.png"
+    },
+    {
+      "id": "hoshisasanoha-meuniere",
+      "kind": "cooking",
+      "generationFile": "exec-1f72190e-d5c8-49b4-8334-aee9c8f165bd.png"
+    },
+    {
+      "id": "akasasanoha-shioyaki",
+      "kind": "cooking",
+      "generationFile": "exec-77a432c0-7dea-4940-ac4e-48fde1aece1a.png"
+    },
+    {
+      "id": "akasasanoha-nitsuke",
+      "kind": "cooking",
+      "generationFile": "exec-604223e8-85db-44a4-be28-44cff1bb615a.png"
+    },
+    {
+      "id": "akasasanoha-fry",
+      "kind": "cooking",
+      "generationFile": "exec-14b285b9-8dbc-41af-a77d-95c06555b8fc.png"
+    },
+    {
+      "id": "akasasanoha-sakamushi",
+      "kind": "cooking",
+      "generationFile": "exec-67938c27-136f-46b5-9928-e58d1cd02a3a.png"
+    },
+    {
+      "id": "kyusen-shioyaki",
+      "kind": "cooking",
+      "generationFile": "exec-35e2b271-3a33-4df3-ae9e-0c6664e79743.png"
+    },
+    {
+      "id": "kyusen-nitsuke",
+      "kind": "cooking",
+      "generationFile": "exec-70de0b8e-bf56-4dfa-9dc6-cad46c0c5b5e.png"
+    },
+    {
+      "id": "kyusen-karaage",
+      "kind": "cooking",
+      "generationFile": "exec-2b331808-b965-4db9-bae8-717f6bb560c5.png"
+    },
+    {
+      "id": "kyusen-nanban",
+      "kind": "cooking",
+      "generationFile": "exec-cc1ba0f8-9f6a-4332-af6f-78a6fbfefb71.png"
+    },
+    {
+      "id": "sappa-sunomono",
+      "kind": "cooking",
+      "generationFile": "exec-23436758-f33c-40d4-b9a9-1f76803b3d01.png"
+    },
+    {
+      "id": "sappa-shioyaki",
+      "kind": "cooking",
+      "generationFile": "exec-6211a082-8f63-4a33-8bb8-997f4f9649e2.png"
+    },
+    {
+      "id": "sappa-karaage",
+      "kind": "cooking",
+      "generationFile": "exec-c2dbf0e5-82cb-4f82-ad39-dbb505ea8f9b.png"
+    },
+    {
+      "id": "sappa-nanban",
+      "kind": "cooking",
+      "generationFile": "exec-171c5993-ca34-4ee4-b709-6729f7e299c1.png"
+    },
+    {
+      "id": "shimagatsuo-fry",
+      "kind": "cooking",
+      "generationFile": "exec-ad4db773-8b89-438f-bbac-33ae56dc019e.png"
+    },
+    {
+      "id": "shimagatsuo-meuniere",
+      "kind": "cooking",
+      "generationFile": "exec-ecb639dc-56f3-4fef-82ed-b6d63c1257da.png"
+    },
+    {
+      "id": "shimagatsuo-nitsuke",
+      "kind": "cooking",
+      "generationFile": "exec-463f502d-d938-419e-bed6-c3de0ffdd663.png"
+    },
+    {
+      "id": "shimagatsuo-sakamushi",
+      "kind": "cooking",
+      "generationFile": "exec-f0d062b1-2f98-4744-af5a-89482cdb3812.png"
+    },
+    {
+      "id": "kobudai-nitsuke",
+      "kind": "cooking",
+      "generationFile": "exec-e1eabbff-08b2-4819-a6d7-e3efff8b7bf5.png"
+    },
+    {
+      "id": "kobudai-fry",
+      "kind": "cooking",
+      "generationFile": "exec-1a4dbc7b-d4b4-492f-bde2-3a240f79dd55.png"
+    },
+    {
+      "id": "kobudai-sakamushi",
+      "kind": "cooking",
+      "generationFile": "exec-d92b5c84-21da-4675-b8ac-a08d2a18f1db.png"
+    },
+    {
+      "id": "kobudai-nabe",
+      "kind": "cooking",
+      "generationFile": "exec-e224d1c7-3b57-4861-ae38-b9cd1179cc2a.png"
+    },
+    {
+      "id": "utsubo-karaage",
+      "kind": "cooking",
+      "generationFile": "exec-6abcb510-6240-4928-ac07-59e17f1ef705.png"
+    },
+    {
+      "id": "utsubo-nitsuke",
+      "kind": "cooking",
+      "generationFile": "exec-f846fdc9-6ff2-4c55-b5e3-317a47d98d9c.png"
+    },
+    {
+      "id": "utsubo-nikogori",
+      "kind": "cooking",
+      "generationFile": "exec-e5f12b28-3f1e-444d-991b-c636d1d2b062.png"
+    },
+    {
+      "id": "utsubo-teriyaki",
+      "kind": "cooking",
+      "generationFile": "exec-247ce694-7617-4418-a713-296abe194eea.png"
+    },
+    {
+      "id": "kuromaguro-sashimi",
+      "kind": "cooking",
+      "generationFile": "exec-ca3e9753-d652-49e1-b966-886335847ade.png"
+    },
+    {
+      "id": "kuromaguro-zuke",
+      "kind": "cooking",
+      "generationFile": "exec-530890ca-7bc2-4a7d-96dc-d5492868026a.png"
+    },
+    {
+      "id": "kuromaguro-negima",
+      "kind": "cooking",
+      "generationFile": "exec-b3f5ec55-3fd6-4fec-a11c-1532d2ee5288.png"
+    },
+    {
+      "id": "kuromaguro-tatsuta",
+      "kind": "cooking",
+      "generationFile": "exec-bbcc69a2-70c6-4319-bc4c-f98ecac3c143.png"
+    },
+    {
+      "id": "browntrout-meuniere",
+      "kind": "cooking",
+      "generationFile": "exec-890e3e9c-a6fb-434a-9fe0-ea4f421230e5.png"
+    },
+    {
+      "id": "browntrout-shioyaki",
+      "kind": "cooking",
+      "generationFile": "exec-e019802f-80f8-4621-bdda-e316d30564f6.png"
+    },
+    {
+      "id": "browntrout-foil",
+      "kind": "cooking",
+      "generationFile": "exec-382bdf1f-e9f3-4054-9e58-a63cf68adbc9.png"
+    },
+    {
+      "id": "browntrout-fry",
+      "kind": "cooking",
+      "generationFile": "exec-2ef4ce53-026b-4b7c-96cf-698e364193d0.png"
+    },
+    {
+      "id": "koshoudai-sashimi",
+      "kind": "cooking",
+      "generationFile": "exec-5d43a048-2beb-402e-bd45-1cbe5383747a.png"
+    },
+    {
+      "id": "koshoudai-meuniere",
+      "kind": "cooking",
+      "generationFile": "exec-722c3dd8-51b8-4a03-a44d-69e47ac41d34.png"
+    },
+    {
+      "id": "koshoudai-shioyaki",
+      "kind": "cooking",
+      "generationFile": "exec-70afdbde-2655-4977-a37d-470de8bebd79.png"
+    },
+    {
+      "id": "koshoudai-nitsuke",
+      "kind": "cooking",
+      "generationFile": "exec-ff0295a1-1a08-4b20-b934-7c0858457ed1.png"
+    },
+    {
+      "id": "nenbutsudai-karaage",
+      "kind": "cooking",
+      "generationFile": "exec-c8364684-88f7-4ae2-83bf-c38dd677d858.png"
+    },
+    {
+      "id": "nenbutsudai-nanban",
+      "kind": "cooking",
+      "generationFile": "exec-3cf9e8a9-e565-4a33-9452-4ec3df5e73ab.png"
+    },
+    {
+      "id": "nenbutsudai-tempura",
+      "kind": "cooking",
+      "generationFile": "exec-a3116131-5d81-4568-8a25-e1e5c2e19ae5.png"
+    },
+    {
+      "id": "nenbutsudai-tsumire",
+      "kind": "cooking",
+      "generationFile": "exec-bbec8a99-ebba-4ccb-93ae-ea0fdf7623cb.png"
+    },
+    {
+      "id": "sappa-sunomono",
+      "kind": "cooking-correction",
+      "generationFile": "exec-af4a247c-96b6-4790-8eb2-c618ab4e7d76.png"
+    },
+    {
+      "id": "sappa-shioyaki",
+      "kind": "cooking-correction",
+      "generationFile": "exec-ce1d4e09-a8c8-43c0-ba92-48708de47762.png"
+    },
+    {
+      "id": "sappa-karaage",
+      "kind": "cooking-correction",
+      "generationFile": "exec-e9a26262-8dd0-4855-88ab-d9baf24e836e.png"
+    },
+    {
+      "id": "sappa-nanban",
+      "kind": "cooking-correction",
+      "generationFile": "exec-f37f6d7b-3892-4225-b3b5-71202f144777.png"
+    },
+    {
+      "id": "koshoudai-sashimi",
+      "kind": "cooking-correction",
+      "generationFile": "exec-38e136c5-505a-41e0-83c2-fcb5b02aee78.png"
+    },
+    {
+      "id": "koshoudai-shioyaki",
+      "kind": "cooking-correction",
+      "generationFile": "exec-adb1f949-4735-4eb5-be3d-5e1cde9a40e9.png"
+    },
+    {
+      "id": "koshoudai-nitsuke",
+      "kind": "cooking-correction",
+      "generationFile": "exec-6266d18d-0c9d-4181-bc1c-ce2426202983.png"
+    },
+    {
+      "id": "koshoudai-meuniere",
+      "kind": "cooking-correction",
+      "generationFile": "exec-5f745e19-521d-4a6f-ae64-54a75ab2e125.png"
+    },
+    {
+      "id": "saba",
+      "kind": "ecology",
+      "generationFile": "exec-a15eadb1-5334-4a71-ac8d-ecd55969017c.png"
+    },
+    {
+      "id": "iwashi",
+      "kind": "ecology",
+      "generationFile": "exec-e423105d-09b6-405f-a667-d00a0ee037a4.png"
+    },
+    {
+      "id": "unagi",
+      "kind": "ecology",
+      "generationFile": "exec-4b0ddd6f-5b06-437a-8946-a6b746c2c0d0.png"
+    },
+    {
+      "id": "anago",
+      "kind": "ecology",
+      "generationFile": "exec-28a9ff38-4905-4d5a-930e-6db47f025b85.png"
+    },
+    {
+      "id": "ishidai",
+      "kind": "ecology",
+      "generationFile": "exec-111036b0-cb21-4236-8a94-310007f46215.png"
+    },
+    {
+      "id": "houbo",
+      "kind": "ecology",
+      "generationFile": "exec-61d0c1ab-2bd7-495f-a86b-ea29391be889.png"
+    },
+    {
+      "id": "magochi",
+      "kind": "ecology",
+      "generationFile": "exec-2ef50fbc-588d-47a0-81ed-f1710be45786.png"
+    },
+    {
+      "id": "katsuo",
+      "kind": "ecology",
+      "generationFile": "exec-42dfc64c-9399-4b9a-84f2-9bee4dfa9f21.png"
+    },
+    {
+      "id": "kyusen",
+      "kind": "ecology",
+      "generationFile": "exec-953448ea-4bc3-4daf-a791-e19b742c348d.png"
+    },
+    {
+      "id": "suzumedai",
+      "kind": "ecology",
+      "generationFile": "exec-4373f901-92bc-4e0d-9eda-2879783c8013.png"
+    },
+    {
+      "id": "nenbutsudai",
+      "kind": "ecology",
+      "generationFile": "exec-66e33702-d744-4844-936c-b4afba4dd110.png"
+    },
+    {
+      "id": "kobudai",
+      "kind": "ecology",
+      "generationFile": "exec-f050ae2f-1bc0-43af-b20a-1b14631e46ed.png"
+    }
+  ]
+}

@@ -3,6 +3,18 @@ import {cookedRecipe} from './cooked-recipes';
 // Species reference: https://www.daiwa.com/jp/column/fish_field_guide/sea/009 (checked 2026-09-15)
 const fish={slug:"ishidai",name:"イシダイ"};
 export default defineFishSpecies({
+  ecologyVisual:{
+  "title": "丈夫な歯で硬い餌を食べる",
+  "description": "イシダイは貝や甲殻類などを食べます。幼魚のはっきりした縞模様は成長で変わりますが、丈夫な口は共通する特徴。底物釣りで貝などを使う理由にもつながります。",
+  "image": "/images/ecology/ishidai-20260919.webp",
+  "alt": "イシダイの丈夫な歯で硬い餌を食べる様子",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "生態の参考資料",
+    "url": "https://www.honda.co.jp/fishing/picture-book/ishidai/"
+  }
+},
   representativeRecipes: ["sashimi","shioyaki","nitsuke","meuniere"],
   "base": {
     "slug": "ishidai",

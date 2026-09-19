@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual:{
+  "title": "ひれの一部で海底を探る",
+  "description": "ホウボウの胸びれの一部は、指のように分かれています。その軟条を使って砂底を探り、餌を見つけます。大きな胸びれと、海底を歩くような動きが印象的な魚です。",
+  "image": "/images/ecology/houbo-20260919.webp",
+  "alt": "ホウボウのひれの一部で海底を探る様子",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "生態の参考資料",
+    "url": "https://www.honda.co.jp/fishing/picture-book/houbou/"
+  }
+},
   "base": {
     "slug": "houbo",
     "name": "ホウボウ",

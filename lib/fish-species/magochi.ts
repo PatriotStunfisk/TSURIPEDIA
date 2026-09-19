@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual:{
+  "title": "砂底に伏せて獲物を待つ",
+  "description": "平たい頭と上向きの目を持つマゴチは、砂底に伏せて近づく餌を待ちます。海底のすぐ上を通る小魚に反応するため、ルアーも底から離しすぎないことが狙い方の手掛かりになります。",
+  "image": "/images/ecology/magochi-20260919.webp",
+  "alt": "マゴチの砂底に伏せて獲物を待つ様子",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "生態の参考資料",
+    "url": "https://www.honda.co.jp/fishing/picture-book/magochi/"
+  }
+},
   "base": {
     "slug": "magochi",
     "name": "マゴチ",

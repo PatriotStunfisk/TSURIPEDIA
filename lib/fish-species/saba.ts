@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual:{
+  "title": "群れで小魚を追う",
+  "description": "マサバは群れで移動し、小魚などを追います。回遊が入ると短時間に続けて釣れる一方、群れが離れると急に静かになることも。仕掛けの深さを合わせることが大切です。",
+  "image": "/images/ecology/saba-20260919.webp",
+  "alt": "マサバの群れで小魚を追う様子",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "生態の参考資料",
+    "url": "https://www.honda.co.jp/fishing/picture-book/masaba/"
+  }
+},
   representativeRecipes: ["shimesaba","shioyaki","misoni","tatsutaage"],
   quest: {hook: {kind:'mouth',mouthAnchor:{x:.03,y:0.52},modelAnchor:{x:.03,y:0.48,z:.5}}},
   "base": {

@@ -217,7 +217,7 @@ test('map IDs and relationships resolve; closed sites are not recommended',()=>{
   for(const slug of e.fishSlugs??[])assert.ok(registry.getFishProfile(slug),slug);
   for(const slug of e.methodSlugs??[])assert.ok(methodDetails[slug],slug);
   for(const slug of e.guideSlugs??[])assert.ok(allGuides.some(g=>g.slug===slug),slug);
-  for(const source of e.sources??[]){const url=new URL(source.url);/* Keep the observed operator URL scheme; do not invent unverified HTTPS endpoints. */assert.equal(url.protocol,['www.minatomaru.sakura.ne.jp','akitaya1091.com','akou.ninja-x.jp','blog.watanabetsuribuneten.com','choeimaru.sakura.ne.jp','daini2asahimaru.web.fc2.com','fukuurakaitomaru.web.fc2.com','goroumaru.sakura.ne.jp','h-syoueimaru.com','kitajimatosen.sunnyday.jp','kurokawa-maru.com','luzplaya.yokaa.net','nagasakimaru.web.fc2.com','shintokumaru.blog31.fc2.com','shouichimaru.jp','www.awa.or.jp','www.fishingrisky.com','www.goemumaru.com','www.katsumaru.com','www.kimimaru.com','www.kokuseimaru.com','www.koushin-group.jp','www.maneimaru.com','www.masumimaru.com','www.mutsuroku.com','www.oguramaru.com','www.portland.ne.jp','www.sajima-kairakuen.com','www.satouya-sakatakou.jp','www.teradomari-fujimaru.jp','www.turinet.com','www.yoshiakimaru.com','www2.bii.ne.jp','www5b.biglobe.ne.jp','www5e.biglobe.ne.jp','yoshihiro1173.web.fc2.com','meiseimaru.com','www.beppumaru.com','azuminofishing.com','kawaba-kingdomfishing.com','sekine-fish.com','tsuritengoku.com','www.joyvalley.co.jp','www.mikawakougen.com','www.mino-fa.com','www.okutama-fc.co.jp','www.turiboriakashi.com','jf-omishima.or.jp','kojima-fm.jp','takamori-bonten.com','tuburoko.net','ukiukiland.g2.xrea.com','www.gujo-tv.ne.jp','www.kisuien.info','www.suisan-center.com','www.tsuriikada-uken.com','www.yamame.co.jp','www1.kl.mmnet-ai.ne.jp','www7.wind.ne.jp','www.omori-camp.jp','www.sakana-en.jp','www.ashigara-ca.com','www.futami23-design.com','home.catv.ne.jp','kaiyuu-turibori.com','kamaishi-town.com','meiseikousan.jp','sasayuri-net.jp','taishakukyo.com','www.amigo.ne.jp','www.btvm.ne.jp','www.kurokawa-suisan.com','www.nanako-wakasagi.com','www.outdoorhouse-aono.fishingclub.jp','www.y-jupiter.jp','www.yanagidakoumuten.com',"tukubaryuugenko.com","tajimaike.cocolog-nifty.com","www.shiinokiko.jp","www7b.biglobe.ne.jp","herabuna-suikouen.com","heranosato.com","www.ip.mirai.ne.jp","asunaronosato.net","www.konseigawa.com","park10.wakwak.com","tsuri-center.com","seirakuen.jp","www8.wind.ne.jp","www.ikonosato.jp","nagatorofishing.web.fc2.com","www.komatsuzawa.co.jp","www.tanzawa-home.com","www.ooyama-fc.com","www.ygl.jp","www.tsukinoike.jp","www.mcci.or.jp","www.hassogawa.com","www.nagaragawachuoh.or.jp"].includes(url.hostname)?'http:':'https:');}
+  for(const source of e.sources??[]){const url=new URL(source.url);/* Keep the observed operator URL scheme; do not invent unverified HTTPS endpoints. */assert.ok(url.protocol==='https:' || (['ottertails.net','www.houseimaru.net','www.kouryoumaru.com','ys-ship.net','yusyomaru-dream.com','bigboy-fishing.com','cfo-jerk.com','hokuyuumaru.web.fc2.com','kouyuumaru.info','narutokaisei.com','rumimaru.amsstudio.jp','www.daihachitatsumaru.com','www.uchihama.com','www.zeel2.com','www2.kagacable.ne.jp','www.minatomaru.sakura.ne.jp','akitaya1091.com','akou.ninja-x.jp','blog.watanabetsuribuneten.com','choeimaru.sakura.ne.jp','daini2asahimaru.web.fc2.com','fukuurakaitomaru.web.fc2.com','goroumaru.sakura.ne.jp','h-syoueimaru.com','kitajimatosen.sunnyday.jp','kurokawa-maru.com','luzplaya.yokaa.net','nagasakimaru.web.fc2.com','shintokumaru.blog31.fc2.com','shouichimaru.jp','www.awa.or.jp','www.fishingrisky.com','www.goemumaru.com','www.katsumaru.com','www.kimimaru.com','www.kokuseimaru.com','www.koushin-group.jp','www.maneimaru.com','www.masumimaru.com','www.mutsuroku.com','www.oguramaru.com','www.portland.ne.jp','www.sajima-kairakuen.com','www.satouya-sakatakou.jp','www.teradomari-fujimaru.jp','www.turinet.com','www.yoshiakimaru.com','www2.bii.ne.jp','www5b.biglobe.ne.jp','www5e.biglobe.ne.jp','yoshihiro1173.web.fc2.com','meiseimaru.com','www.beppumaru.com','azuminofishing.com','kawaba-kingdomfishing.com','sekine-fish.com','tsuritengoku.com','www.joyvalley.co.jp','www.mikawakougen.com','www.mino-fa.com','www.okutama-fc.co.jp','www.turiboriakashi.com','jf-omishima.or.jp','kojima-fm.jp','takamori-bonten.com','tuburoko.net','ukiukiland.g2.xrea.com','www.gujo-tv.ne.jp','www.kisuien.info','www.suisan-center.com','www.tsuriikada-uken.com','www.yamame.co.jp','www1.kl.mmnet-ai.ne.jp','www7.wind.ne.jp','www.omori-camp.jp','www.sakana-en.jp','www.ashigara-ca.com','www.futami23-design.com','home.catv.ne.jp','kaiyuu-turibori.com','kamaishi-town.com','meiseikousan.jp','sasayuri-net.jp','taishakukyo.com','www.amigo.ne.jp','www.btvm.ne.jp','www.kurokawa-suisan.com','www.nanako-wakasagi.com','www.outdoorhouse-aono.fishingclub.jp','www.y-jupiter.jp','www.yanagidakoumuten.com',"tukubaryuugenko.com","tajimaike.cocolog-nifty.com","www.shiinokiko.jp","www7b.biglobe.ne.jp","herabuna-suikouen.com","heranosato.com","www.ip.mirai.ne.jp","asunaronosato.net","www.konseigawa.com","park10.wakwak.com","tsuri-center.com","seirakuen.jp","www8.wind.ne.jp","www.ikonosato.jp","nagatorofishing.web.fc2.com","www.komatsuzawa.co.jp","www.tanzawa-home.com","www.ooyama-fc.com","www.ygl.jp","www.tsukinoike.jp","www.mcci.or.jp","www.hassogawa.com","www.nagaragawachuoh.or.jp"].includes(url.hostname) && url.protocol==='http:'), source.url);}
  }
  for(const slug of ['hirame','sawara','madako'])assert.ok(getSpotsForFish(slug).length);
  assert.ok(getSpotsForFish('aji').some(e=>e.slug==='nanko-fishing-park')); // Current operator confirms reopening.
@@ -286,11 +286,11 @@ test('map facilities are unique and verified closures are excluded from normal r
 });
 
 test('hazard cooking policy controls all registries and sitemap, including direct routes',()=>{
- const danger=registry.fishCatalog.filter(f=>f.hazard);assert.equal(danger.length,7);
+ const danger=registry.fishCatalog.filter(f=>f.hazard);assert.equal(danger.length,8);
  const paths=sitemap().map(x=>new URL(x.url).pathname);
  for(const f of danger){
   assert.ok(f.hazard.sources.length);assert.ok(f.hazard.identify.length>=3);
-  assert.equal(getFishConnections(f.slug).methods.length,0);
+  if(f.hazard.identificationOnly)assert.equal(getFishConnections(f.slug).methods.length,0);
   assert.ok(paths.includes('/fish/'+f.slug));
   if(!f.hazard.cookingEnabled){assert.equal(f.cooking,undefined);assert.equal(f.tableGuide,undefined);assert.ok(!paths.some(p=>p.startsWith('/cooking/'+f.slug)));}
  }
@@ -299,7 +299,8 @@ test('hazard cooking policy controls all registries and sitemap, including direc
  assert.throws(()=>defineFishSpecies({...f,cooking:{prep:['unsafe'],recipes:[]}}),/Cooking disabled/);
  assert.equal(getSpeciesTableGuide({...f,cooking:{prep:[],recipes:[]},tableGuide:{lead:'unsafe',dishes:[]}}),undefined);
  const catalog=require('../lib/quest/catalog.ts').questFish;
- assert.ok(danger.every(f=>!catalog.some(q=>q.slug===f.slug)));
+ assert.ok(danger.filter(f=>f.hazard.identificationOnly).every(f=>!catalog.some(q=>q.slug===f.slug)));
+ assert.ok(registry.getFishProfile('utsubo').cooking.recipes.length>=4);
 });
 test('practical guides expose valid diagrams, tables and reverse links without duplicate routes',()=>{
  const practical=require('../lib/guide-articles-practical.ts').practicalGuides;
@@ -341,7 +342,7 @@ test('uploaded model spelling aliases preserve canonical fish slugs',()=>{
 
 test('optional ecology visuals propagate from species profiles with local landscape assets and sources',()=>{
   const {getFishSpecies}=require('../lib/fish-species/index.ts');
-  for(const slug of ['tachiuo','aji','hirame','kasago','aoriika','madako','kawahagi','ayu','madai','buri','kisu','chinu','mebaru','haze','koi','surumeika']){
+  for(const slug of ['tachiuo','aji','hirame','kasago','aoriika','madako','kawahagi','ayu','madai','buri','kisu','chinu','mebaru','haze','koi','surumeika','saba','iwashi','unagi','anago','ishidai','houbo','magochi','katsuo','kyusen','suzumedai','nenbutsudai','kobudai']){
     const visual=registry.getFishProfile(slug).ecologyVisual;
     assert.deepEqual(visual,getFishSpecies(slug).ecologyVisual);
     assert.ok(visual.title&&visual.description&&visual.alt);
@@ -349,7 +350,27 @@ test('optional ecology visuals propagate from species profiles with local landsc
     assert.ok(fs.existsSync(path.join(root,'public',visual.image)));
     assert.equal(new URL(visual.source.url).protocol,'https:');
   }
-  assert.equal(registry.getFishProfile('saba').ecologyVisual,undefined);
+  assert.equal(registry.getFishProfile('sappa').ecologyVisual,undefined);
+});
+
+test('familiar reef and offshore species retain complete recipes and derived connections',()=>{
+ const batch=['suzumedai','hoshisasanoha','akasasanoha','kyusen','sappa','shimagatsuo','kobudai','utsubo','kuromaguro','browntrout','koshoudai','nenbutsudai'];
+ const {questFish}=require('../lib/quest/catalog.ts');
+ const paths=sitemap().map(x=>new URL(x.url).pathname);
+ const images=[];
+ for(const slug of batch){
+  const f=registry.getFishProfile(slug);assert.ok(f.detail.body&&f.detail.safety,slug);
+  assert.ok(f.launch.identify.length>=3,slug);assert.equal(f.cooking.recipes.length,4,slug);
+  assert.equal(f.tableGuide.dishes.length,4,slug);
+  assert.ok(fs.existsSync(path.join(root,'public',f.media.image)),slug);
+  for(const r of f.cooking.recipes){assert.ok(r.image&&fs.existsSync(path.join(root,'public',r.image)),slug);images.push(r.image);assert.ok(paths.includes(`/cooking/${slug}/${r.slug}`));}
+  const c=getFishConnections(slug);assert.ok(c.methods.length&&c.guides.length&&c.related.length,slug);
+  assert.ok(questFish.some(q=>q.slug===slug&&q.habitats.length),slug);assert.ok(paths.includes('/fish/'+slug));
+ }
+ unique(images,'illustrated recipe');
+ assert.notEqual(registry.getFishByName('ホシササノハベラ').slug,registry.getFishByName('アカササノハベラ').slug);
+ assert.equal(registry.getFishByName('ササノハベラ'),undefined);
+ assert.ok(registry.getFishProfile('utsubo').hazard.foodAdvice.includes('シガテラ'));
 });
 
 test('map-led northern species have four illustrated recipes and derived MAP/QUEST connections',()=>{

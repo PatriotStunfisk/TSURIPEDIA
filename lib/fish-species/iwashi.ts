@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual:{
+  "title": "群れで向きをそろえる",
+  "description": "マイワシは群れを作って泳ぎます。まとまった群れは大型魚の餌にもなり、イワシを追う青物やスズキの動きにもつながります。小さな魚の回遊が、釣り場全体の変化の手掛かりになります。",
+  "image": "/images/ecology/iwashi-20260919.webp",
+  "alt": "マイワシの群れで向きをそろえる様子",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "生態の参考資料",
+    "url": "https://www.honda.co.jp/fishing/picture-book/maiwashi/"
+  }
+},
   "base": {
     "slug": "iwashi",
     "name": "マイワシ",

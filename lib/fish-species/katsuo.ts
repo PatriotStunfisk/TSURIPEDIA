@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 // Reviewed 2026-09-19: https://www.honda.co.jp/fishing/picture-book/katsuo/
 export default defineFishSpecies({
+  ecologyVisual:{
+  "title": "広い海を群れで回遊する",
+  "description": "カツオは群れで移動し、小魚やイカなどを追います。水面の鳥や餌の動きも手掛かりですが、群れが中層にいる場合も。表面だけで判断せず、船長が示す棚へ仕掛けを合わせます。",
+  "image": "/images/ecology/katsuo-20260919.webp",
+  "alt": "カツオの広い海を群れで回遊する様子",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "生態の参考資料",
+    "url": "https://www.honda.co.jp/fishing/picture-book/katsuo/"
+  }
+},
   "base": {
     "slug": "katsuo",
     "name": "カツオ",

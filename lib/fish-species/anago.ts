@@ -1,6 +1,18 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  ecologyVisual:{
+  "title": "砂泥底の隠れ場所を使う",
+  "description": "マアナゴは海の砂泥底などで暮らし、日中は穴や物陰を利用します。暗くなると底近くへ出て餌を探すため、海底から大きく離さずに餌を見せる釣り方と結び付きます。",
+  "image": "/images/ecology/anago-20260919.webp",
+  "alt": "マアナゴの砂泥底の隠れ場所を使う様子",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "生態の参考資料",
+    "url": "https://www.knsk-osaka.jp/zukan/zukan_database/osakawan/8050b3250f4abcc/8050c17ae2ac0a1.html"
+  }
+},
   "base": {
     "slug": "anago",
     "name": "マアナゴ",

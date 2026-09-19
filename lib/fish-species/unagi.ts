@@ -1,5 +1,17 @@
 import {defineFishSpecies} from './define';
 export default defineFishSpecies({
+  ecologyVisual:{
+  "title": "暗くなると物陰から出る",
+  "description": "ニホンウナギは日中、石のすき間などに身を隠し、暗くなると餌を探します。昼に見えない場所にも魚がいる理由の一つ。護岸際の陰や底の変化を読むことにつながる生態です。",
+  "image": "/images/ecology/unagi-20260919.webp",
+  "alt": "ニホンウナギの暗くなると物陰から出る様子",
+  "width": 1200,
+  "height": 800,
+  "source": {
+    "label": "生態の参考資料",
+    "url": "https://www.honda.co.jp/fishing/picture-book/unagi/"
+  }
+},
   "base": {
     "slug": "unagi",
     "name": "ニホンウナギ",
