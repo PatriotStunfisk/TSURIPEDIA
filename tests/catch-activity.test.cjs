@@ -75,3 +75,40 @@ test('public server-rendered catch cards yield recent detail URLs without retain
  assert.deepEqual(anglersCandidates(card(123,'2026-09-18T21:30:00+09:00')+card(123,'2026-09-18T21:30:00+09:00')+card(124,'2022-09-18T21:30:00+09:00'),now),['https://anglers.jp/catches/123']);
  assert.throws(()=>anglersCandidates('<div data-react-class="results/ResultCard" data-react-props="{}"></div>',now));
 });
+
+test('facility tables map aliases, aggregate without duplicate rows, and omit ranges and narrative',()=>{
+ const {parseFacility,facilityLinks}=require('../lib/catches/facility-parser');
+ const html='<div id="block184-1"><div data-switch="date">2026-09-20</div><div>カサゴ（アラカブ）/15cm/1尾/ポイントQ<br>カサゴ/20cm/2尾/ポイントR<br>バリ/30～38cm/6尾/ポイントD</div><p>アジが釣れるかもしれません</p><img src="private.jpg">';
+ const r=parseFacility(html,'https://umizuri.com/pages/30','fukuoka-fishing','fukuoka-html',now);
+ assert.equal(r.length,2);assert.equal(r[0].count,3);assert.equal(r[0].sizeCm,undefined);assert.equal(r[0].countScope,'facility');assert.equal(r[1].fishSlug,'aigo');assert.ok(!JSON.stringify(r).includes('private'));
+ assert.equal(parseFacility(html.replaceAll('2026-09-20','2025-09-20'),'https://umizuri.com/pages/30','fukuoka-fishing','fukuoka-html',now).length,0);
+ assert.deepEqual(facilityLinks('<a href="/fishing/20260920.html">釣果</a><a href="https://other.example/fishing/20260920.html">釣果</a>','https://shimonoseki-fishingpark.com/fishing/index.html','shimonoseki-html'),['https://shimonoseki-fishingpark.com/fishing/20260920.html']);
+});
+test('facility daily table parsers ignore sidebar dates, averages, unknown fish and prose',()=>{
+ const {parseFacility}=require('../lib/catches/facility-parser');
+ const shim='<title>2026年9月20日（日）</title><h4>本日の釣果情報</h4><table><tr><th>ブリ（ヤズ）</th><td>28cm</td><td>1匹</td></tr><tr><th>不明</th><td>10cm</td><td>5匹</td></tr></table>';
+ assert.equal(parseFacility(shim,'https://example.com','shimonoseki-fishing','shimonoseki-html',now)[0].sizeCm,28);
+ const hira='<h2>2026年9月20日の釣果情報</h2><div class="fishdata-wrapper"><p class="fishdata-name">魚種</p><p class="fishdata-content">マルハギ</p><p class="fishdata-name">サイズ</p><p class="fishdata-content">17㎝</p><p class="fishdata-name">尾数</p><p class="fishdata-content">1尾</p>';
+ assert.equal(parseFacility(hira,'https://example.com','hira-isoumi','hiraiso-html',now)[0].fishSlug,'kawahagi');
+ const ichi='<p>2026年09月20日(日)</p><div class="flex border-b border-gray-300"><div>フッコ</div><div><p>30～50cm</p></div><div>合計 9匹</div></div>';
+ const i=parseFacility(ichi,'https://example.com','ichihara-fishing','ichihara-html',now);assert.equal(i[0].fishSlug,'suzuki');assert.equal(i[0].sizeCm,undefined);
+ const happy='<p class="date">2026年09月20日(日)</p><h4>カワハギ　１２～１５cm　５０匹以上　２１番</h4><p>アジが釣れそう</p>';
+ const h=parseFacility(happy,'https://example.com','niigata-happyfishing','happy-html',now);assert.equal(h.length,1);assert.equal(h[0].count,undefined);
+});
+
+test('repeat imports update changed official quantities without creating duplicate catches',async()=>{
+ const {catchSources}=require('../lib/catches/sources'),store=require('../lib/server/catch-store'),{refreshExternalCatches}=require('../lib/server/external-catches');const oldFetch=global.fetch,oldStore=store.storeRequest,prior=catchSources.splice(0),saved=new Map();let count=2,writes=0;
+ catchSources.push({id:'fixture',name:'fixture',sourceType:'official',format:'json',endpoint:'https://example.com/data',allowedHosts:['example.com'],permissionUrl:'https://example.com/terms',enabled:true});
+ const date=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+ global.fetch=async()=>Response.json({catches:[{id:'1',date,fishSlug:'aji',spotSlug:'naruohama',summary:'fixture',sourceUrl:'https://example.com/report',count,countScope:'facility'}]});
+ store.storeRequest=async(url,init)=>{if(init.method==='GET')return Response.json([...saved.values()]);if(url.includes('on_conflict')){writes++;for(const r of JSON.parse(init.body))saved.set(r.id,r);}return Response.json([]);};
+ try{assert.equal((await refreshExternalCatches())[0].inserted,1);count=5;assert.equal((await refreshExternalCatches())[0].inserted,0);assert.equal(saved.size,1);assert.equal([...saved.values()][0].signal.count,5);await refreshExternalCatches();assert.equal(writes,2);}finally{global.fetch=oldFetch;store.storeRequest=oldStore;catchSources.splice(0,catchSources.length,...prior);}
+});
+
+test('source redirects stay on approved hosts and browser challenges stop extraction',async()=>{
+ const {catchSources}=require('../lib/catches/sources'),store=require('../lib/server/catch-store'),{refreshExternalCatches}=require('../lib/server/external-catches');
+ const prior=catchSources.splice(0),oldFetch=global.fetch,oldStore=store.storeRequest;const urls=[];
+ catchSources.push(...['allowed','blocked','challenge'].map(id=>({id,name:id,sourceType:'official',format:'json',endpoint:'https://example.com/'+id,allowedHosts:['example.com'],permissionUrl:'https://example.com/terms',enabled:true})));
+ global.fetch=async url=>{urls.push(String(url));if(String(url).endsWith('/allowed'))return new Response(null,{status:301,headers:{location:'/final'}});if(String(url).endsWith('/blocked'))return new Response(null,{status:302,headers:{location:'https://unapproved.example/final'}});if(String(url).endsWith('/challenge'))return new Response('',{status:202,headers:{'x-amzn-waf-action':'challenge'}});return Response.json({catches:[]});};store.storeRequest=async()=>Response.json([]);
+ try{const result=await refreshExternalCatches();assert.deepEqual(result.map(r=>r.status),['success','failed','failed']);assert.ok(urls.includes('https://example.com/final'));assert.ok(urls.every(u=>new URL(u).hostname==='example.com'));}finally{catchSources.splice(0,catchSources.length,...prior);global.fetch=oldFetch;store.storeRequest=oldStore;}
+});

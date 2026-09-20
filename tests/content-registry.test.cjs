@@ -106,8 +106,8 @@ const migratedSnapshots={
 const originalDigests={
   // 2026-09-17: intentional water classifications, unagi profile and requested ayuing label.
   fish:'a395b1040d0526313d1f07a961d8109059d48deb8e2984809ea4ee22e9635d33',
-  // 2026-09-17: user-requested duplicate raw-food notice removal; other historical sections unchanged.
-  details:'638fbc4b6240b6ad8c84c798dbea52b1ae031f7bf691918c8e216522226f1f05',
+  // 2026-09-20: add the common フッコ alias to スズキ for official catch matching.
+  details:'7a107c9cef5d1170a358217eb67c5fc2394e86cfbc0bd4ac4e43a6abe1a02fa1',
   launch:'035a14df86692faa3770972f5dcf4c622e89955ba3aa37026b8a455775640721',
   launchSlugs:'109affa8f8a322f03f9af2a53acd6001574169cdd039aa6e7f101516fab0e706',
   cooking:'9b06856019b55b157bd735946e563667983c39d114fe5181a7247822b2f0302f',

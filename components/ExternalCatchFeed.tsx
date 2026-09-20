@@ -15,7 +15,7 @@ export default function ExternalCatchFeed({query,options,hideEmpty=false,spotVie
  {loading?<p role="status" className={s.message}>釣果を読み込み中…</p>:error?<p role="status" className={s.message}>{error}</p>:!filtered.length?<p className={s.message}>この条件の{source==='official'?'公式':source==='external'?'外部':''}釣果はまだありません。</p>:<div className={s.list}>{visible.map(r=>{const fishName=options.fish.find(f=>f.slug===r.fishSlug)?.name??r.fishSlug;return <article className={s.card} key={r.id}>
  <div className={s.date}><time dateTime={r.date}>{Number(r.date.slice(5,7))}/{Number(r.date.slice(8,10))}</time>{ageDays(r.date)<7&&<small>7日以内</small>}</div><div className={s.body}>
  <div className={s.facts}><Link href={`/fish/${r.fishSlug}`}>{fishName}</Link>{r.sizeCm&&<span>{r.sizeCm}<small>cm</small></span>}{r.count&&<span>×{r.count}<small>匹</small></span>}</div>
- <div className={s.meta}><span className={r.sourceType==='official'?s.official:s.external}>{r.sourceType==='official'?'公式情報':'外部情報'}</span>{r.sourceType==='official'&&<span>{r.sourceName??r.source}</span>}</div>
+ <div className={s.meta}><span className={r.sourceType==='official'?s.official:s.external}>{r.sourceType==='official'?'公式情報':'外部情報'}</span>{r.countScope==='facility'&&<span>施設集計</span>}{r.sourceType==='official'&&<span>{r.sourceName??r.source}</span>}</div>
  {!spotView&&<Link className={s.spot} href={`/spots/${r.spotSlug}`}>{options.spots.find(p=>p.slug===r.spotSlug)?.name??r.spotSlug} →</Link>}
 
  <div className={s.links}>{r.sourceType==='official'&&<a href={r.sourceUrl} target="_blank" rel="noopener noreferrer">出典の釣果を読む ↗</a>}{r.methodSlug&&<Link href={`/methods/${r.methodSlug}`}>この釣法・必要な道具を見る →</Link>}</div>

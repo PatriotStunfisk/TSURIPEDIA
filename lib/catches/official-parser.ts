@@ -18,18 +18,18 @@ export function parseNaruohama(html:string,endpoint:string){
 }
 
 /** Facility-selected public report table; omit visitor names, narrative and image URLs. */
-export function parseTottopark(html:string,endpoint:string){
+export function parseTottopark(html:string,endpoint:string,spotSlug='tottopark-kojima'){
  const records:{id:string;date:string;fishSlug:string;spotSlug:string;summary:string;sourceUrl:string;sizeCm?:number}[]=[];
  const tables=[...html.matchAll(/<table width="100%"[\s\S]*?<\/table>/g)];
  if(!tables.length)throw Error('Official report structure changed');
  for(const [table] of tables){
   const date=table.match(/釣り公園\s+(\d{4}-\d{2}-\d{2})/),id=table.match(/fish_details\.php\?sea_id=(\d+)/);
   const cells=[...table.matchAll(/<td width="(?:40|30)%" class="tp2">([^<]*)<\/td>/g)].map(m=>m[1].trim());
-  if(!date||!id||!cells.length)continue;
+  if(!date||!id||!cells.length||(!cells[1]&&!cells[2]))continue;
   const name=cells[0],explicit=name.match(/（([^）]+)）/),fish=getFishByName(explicit?.[1]??name);if(!fish)continue;
   const size=cells[1]?.match(/^(\d+(?:\.\d+)?)cm$/),sizeCm=size?Number(size[1]):undefined;
   const sourceUrl=new URL(`./fish_details.php?sea_id=${id[1]}`,endpoint).toString();
-  records.push({id:id[1]+':'+fish.slug,date:date[1],fishSlug:fish.slug,spotSlug:'tottopark-kojima',summary:`${date[1]}の施設公表釣果に${name}の記録があります。詳細は施設の釣果ページで確認できます。`,sourceUrl,...(sizeCm?{sizeCm}:{})});
+  records.push({id:id[1]+':'+fish.slug,date:date[1],fishSlug:fish.slug,spotSlug,summary:`${date[1]}の施設公表釣果に${name}の記録があります。詳細は施設の釣果ページで確認できます。`,sourceUrl,...(sizeCm?{sizeCm}:{})});
  }
  return records;
 }

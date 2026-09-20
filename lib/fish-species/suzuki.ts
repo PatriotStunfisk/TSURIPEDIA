@@ -53,6 +53,7 @@ export default defineFishSpecies({
     "aliases": [
       "シーバス",
       "セイゴ",
+      "フッコ",
       "ハネ"
     ],
     "habitat": "港湾、河口、汽水域、沿岸の浅場",
