@@ -32,6 +32,7 @@ async function fetchText(source:CatchSource,endpoint=source.endpoint){
 async function fetchSource(source:CatchSource){
  const body=await fetchText(source);
  if(source.format==='anglers-html'){
+  console.info('catch_source_shape',{source:source.id,bytes:body.length,title:body.match(/<title[^>]*>([^<]*)<\/title>/i)?.[1]?.slice(0,100),cardTags:(body.match(/results\/ResultCard/g)??[]).length,props:(body.match(/data-react-props/g)??[]).length,catchLinks:(body.match(/\/catches\/\d+/g)??[]).length,challenge:/captcha|access denied|checking your browser|cf-chl-/i.test(body)});
   const rows=[];for(const url of anglersCandidates(body).slice(0,3)){const detail=await fetchText(source,url);const row=parseAnglersCatch(detail,url,source.areaId!,source.spotSlug!);if(row)rows.push(row);}
   return rows;
  }
