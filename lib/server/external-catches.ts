@@ -24,7 +24,7 @@ async function fetchText(source:CatchSource,endpoint=source.endpoint){
  const url=new URL(endpoint);if(url.protocol!=='https:'||!source.allowedHosts.includes(url.hostname)||!source.permissionUrl)throw Error('Source not authorized');
  if(source.format==='anglers-html'){const due=Math.max(Date.now(),(sourceRequests.get(url.hostname)??0)+10000);sourceRequests.set(url.hostname,due);if(due>Date.now())await new Promise(resolve=>setTimeout(resolve,due-Date.now()));}
  const response=await fetch(url,{redirect:'error',signal:AbortSignal.timeout(10000),headers:{Accept:source.format==='json'?'application/json':'text/html','User-Agent':'UOLINK/1.0 (+https://uolink.jp)'},cache:'no-store'});
- if(!response.ok||!response.headers.get('content-type')?.includes(source.format==='json'?'json':'text/html'))throw Error('Source response invalid');
+ if(!response.ok)throw Error('Source HTTP '+response.status);if(!response.headers.get('content-type')?.includes(source.format==='json'?'json':'text/html'))throw Error('Source content type invalid');
  const reader=response.body?.getReader();if(!reader)throw Error('Empty response');const chunks:Uint8Array[]=[];let bytes=0;
  try{while(true){const {done,value}=await reader.read();if(done)break;bytes+=value.byteLength;if(bytes>1000000)throw Error('Feed too large');chunks.push(value);}}finally{await reader.cancel();}
  const body=new TextDecoder(source.format==='tottopark-html'?'shift_jis':'utf-8').decode(Buffer.concat(chunks));return body;
@@ -42,11 +42,11 @@ export async function refreshExternalCatches(){
  const results=[];
  for(const source of catchSources.filter(s=>s.enabled)){
   let inserted=0,invalid=0,status='success';
-  try{const values=await fetchSource(source);const records=new Map<string,object>();for(const value of values){let r:ExternalCatch;try{r=parseExternalCatch(value,source);}catch{invalid++;continue;}if(ageDays(r.date)>=30)continue;
+  try{const values=await fetchSource(source);console.info('catch_import_parsed',{source:source.id,records:values.length});const records=new Map<string,object>();for(const value of values){let r:ExternalCatch;try{r=parseExternalCatch(value,source);}catch{invalid++;continue;}if(ageDays(r.date)>=30)continue;
    const id=createHash('sha256').update([r.sourceUrl,r.date,r.spotSlug,r.fishSlug].join('|')).digest('hex');
    records.set(id,{id,date:r.date,fish_slug:r.fishSlug,spot_slug:r.spotSlug,method_slug:r.methodSlug??null,size_cm:r.sizeCm??null,signal:r});
   }if(records.size){const result=await storeRequest('/rest/v1/external_catches?on_conflict=id',{method:'POST',headers:{...headers,Prefer:'resolution=ignore-duplicates,return=representation'},body:JSON.stringify([...records.values()])});inserted=(await result.json()).length;}
-  }catch{status='failed';}
+  }catch(error){status='failed';const message=error instanceof Error?error.message:'';const reason=/^Source HTTP [0-9]{3}$/.test(message)?message:['Source content type invalid','Empty response','Feed too large','Catch listing requires rendering or its structure changed','Catch data structure changed','Missing catch card data','Invalid catch card data'].includes(message)?message:error instanceof Error?error.name:'Unknown error';console.error('catch_import_failed',{source:source.id,reason});}
   const log={source:source.id,status,inserted,invalid,finished_at:new Date().toISOString()};
   try{await storeRequest('/rest/v1/catch_import_runs',{method:'POST',headers,body:JSON.stringify(log)});}catch{console.error('catch_import_log_failed',{source:source.id,status});}results.push(log);
  }
