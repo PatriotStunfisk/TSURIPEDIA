@@ -1,11 +1,17 @@
 import type {FacilityFormat} from './facility-parser';
 import type {CatchSourceType,CatchSignal} from './activity';
-export type ExternalCatch=CatchSignal&{sourceType:'official'|'external';summary:string;sourceUrl:string;area?:string;fishName?:string;sourceName?:string;count?:number;countScope?:'facility'};
-export type CatchSource={id:string;name:string;sourceType:Exclude<CatchSourceType,'user'>;format:FacilityFormat|'json'|'naruohama-html'|'tottopark-html'|'anglers-html';endpoint:string;allowedHosts:string[];permissionUrl:string;enabled:boolean;spotSlug?:string;areaId?:string};
+export type ExternalCatch=CatchSignal&{sourceType:'official'|'external';summary:string;sourceUrl:string;area?:string;fishName?:string;sourceName?:string;count?:number;countScope?:'facility'|'boat'};
+export type CatchSource={id:string;name:string;sourceType:Exclude<CatchSourceType,'user'>;format:FacilityFormat|'fishing-vision-html'|'json'|'naruohama-html'|'tottopark-html'|'anglers-html';endpoint:string;allowedHosts:string[];permissionUrl:string;enabled:boolean;spotSlug?:string;areaId?:string};
 /** Each enabled source is reviewed for retrieval restrictions. Import facts only, never prose/images.
  * JSON partners use {catches:[{id,date,fishSlug,spotSlug,summary,sourceUrl,methodSlug?,sizeCm?}]}.
  */
 export const catchSources:CatchSource[]=[
+ {id:'fishing-vision-uoe',name:'釣りビジョン',sourceType:'external',format:'fishing-vision-html',endpoint:'https://www.fishing-v.jp/choka/choka_detail.php?s=669',allowedHosts:['www.fishing-v.jp'],permissionUrl:'https://www.fishing-v.jp/robots.txt',spotSlug:'boat-uoe',enabled:true},
+ {id:'fishing-vision-bentenya',name:'釣りビジョン',sourceType:'external',format:'fishing-vision-html',endpoint:'https://www.fishing-v.jp/choka/choka_detail.php?s=190',allowedHosts:['www.fishing-v.jp'],permissionUrl:'https://www.fishing-v.jp/robots.txt',spotSlug:'hakkei-bentenya',enabled:true},
+ {id:'fishing-vision-yoshikyu',name:'釣りビジョン',sourceType:'external',format:'fishing-vision-html',endpoint:'https://www.fishing-v.jp/choka/choka_detail.php?s=147',allowedHosts:['www.fishing-v.jp'],permissionUrl:'https://www.fishing-v.jp/robots.txt',spotSlug:'urayasu-yoshikyu',enabled:true},
+ {id:'fishing-vision-yoshinoya',name:'釣りビジョン',sourceType:'external',format:'fishing-vision-html',endpoint:'https://www.fishing-v.jp/choka/choka_detail.php?s=146',allowedHosts:['www.fishing-v.jp'],permissionUrl:'https://www.fishing-v.jp/robots.txt',spotSlug:'urayasu-yoshinoya',enabled:true},
+ {id:'fishing-vision-kairyumaru',name:'釣りビジョン',sourceType:'external',format:'fishing-vision-html',endpoint:'https://www.fishing-v.jp/choka/choka_detail.php?s=12117',allowedHosts:['www.fishing-v.jp'],permissionUrl:'https://www.fishing-v.jp/robots.txt',spotSlug:'kanazawa-kairyumaru',enabled:true},
+ {id:'fishing-vision-shichifuku',name:'釣りビジョン',sourceType:'external',format:'fishing-vision-html',endpoint:'https://www.fishing-v.jp/choka/choka_detail.php?s=359',allowedHosts:['www.fishing-v.jp'],permissionUrl:'https://www.fishing-v.jp/robots.txt',spotSlug:'shichifuku-morozaki',enabled:true},
  {id:'naoetsu-official',name:'直江津港ハッピーフィッシング',sourceType:'official',format:'happy-html',endpoint:'https://happyfishing-n.jp/',allowedHosts:['happyfishing-n.jp'],permissionUrl:'https://happyfishing-n.jp/robots.txt',spotSlug:'naoetsu-happyfishing',enabled:true},
  {id:'yura-official',name:'由良海つり公園',sourceType:'official',format:'tottopark-html',endpoint:'https://minnaga.com/system/yurakouen/contents/fish/fish_listup.php',allowedHosts:['minnaga.com'],permissionUrl:'https://minnaga.com/robots.txt',spotSlug:'yura-wakayama-park',enabled:true},
  {id:'niigata-official',name:'新潟東港ハッピーフィッシング',sourceType:'official',format:'happy-html',endpoint:'https://happyfishing.jp/',allowedHosts:['happyfishing.jp'],permissionUrl:'https://happyfishing.jp/robots.txt',spotSlug:'niigata-happyfishing',enabled:true},

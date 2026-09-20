@@ -1,3 +1,4 @@
+import {parseFishingVision} from '../catches/boat-parser';
 import {facilityLinks,parseFacility,type FacilityFormat} from '../catches/facility-parser';
 import {anglersCandidates,parseAnglersCatch} from '../catches/anglers-parser';
 import {parseNaruohama,parseTottopark} from '../catches/official-parser';
@@ -18,14 +19,14 @@ export function parseExternalCatch(value:unknown,source:CatchSource,now=new Date
  if(v.count!==undefined&&(!Number.isInteger(v.count)||(v.count as number)<1||(v.count as number)>100000))throw Error('Invalid count');
  if(v.sizeCm!==undefined&&(typeof v.sizeCm!=='number'||!Number.isFinite(v.sizeCm)||v.sizeCm<=0||v.sizeCm>500))throw Error('Invalid size');
  if(v.methodSlug!==undefined&&(typeof v.methodSlug!=='string'||!Object.hasOwn(methodDetails,v.methodSlug)))throw Error('Invalid method');
- return {id:source.id+':'+id,source:source.id,sourceName:source.name,sourceType:source.sourceType,actor:source.id,date,fishSlug,spotSlug,summary,sourceUrl,methodSlug:v.methodSlug as string|undefined,sizeCm:v.sizeCm as number|undefined,count:v.count as number|undefined,...(source.sourceType==='official'&&v.countScope==='facility'?{countScope:'facility' as const}:{})};
+ return {id:source.id+':'+id,source:source.id,sourceName:source.name,sourceType:source.sourceType,actor:source.id,date,fishSlug,spotSlug,summary,sourceUrl,methodSlug:v.methodSlug as string|undefined,sizeCm:v.sizeCm as number|undefined,count:v.count as number|undefined,...(['facility','boat'].includes(String(v.countScope))?{countScope:v.countScope as 'facility'|'boat'}:{})};
 }
 const sourceRequests=new Map<string,number>();
 async function fetchText(source:CatchSource,endpoint=source.endpoint){
  let url=new URL(endpoint);let response:Response|undefined;
  for(let redirects=0;redirects<=2;redirects++){
   if(url.protocol!=='https:'||!source.allowedHosts.includes(url.hostname)||!source.permissionUrl)throw Error('Source not authorized');
-  if(source.format==='anglers-html'){const due=Math.max(Date.now(),(sourceRequests.get(url.hostname)??0)+10000);sourceRequests.set(url.hostname,due);if(due>Date.now())await new Promise(resolve=>setTimeout(resolve,due-Date.now()));}
+  if(source.format==='anglers-html'||source.format==='fishing-vision-html'){const interval=source.format==='anglers-html'?10000:2000;const due=Math.max(Date.now(),(sourceRequests.get(url.hostname)??0)+interval);sourceRequests.set(url.hostname,due);if(due>Date.now())await new Promise(resolve=>setTimeout(resolve,due-Date.now()));}
   response=await fetch(url,{redirect:'manual',signal:AbortSignal.timeout(10000),headers:{Accept:source.format==='json'?'application/json':'text/html','User-Agent':'UOLINK/1.0 (+https://uolink.jp)'},cache:'no-store'});
   if(![301,302,303,307,308].includes(response.status))break;
   const location=response.headers.get('location');await response.body?.cancel();if(!location||redirects===2)throw Error('Source redirect invalid');url=new URL(location,url);response=undefined;
@@ -38,6 +39,7 @@ async function fetchText(source:CatchSource,endpoint=source.endpoint){
 }
 async function fetchSource(source:CatchSource){
  const body=await fetchText(source);
+ if(source.format==='fishing-vision-html')return parseFishingVision(body,source.endpoint,source.spotSlug!);
  if(source.format==='anglers-html'){
   console.info('catch_source_shape',{source:source.id,bytes:body.length,title:body.match(/<title[^>]*>([^<]*)<\/title>/i)?.[1]?.slice(0,100),cardTags:(body.match(/results\/ResultCard/g)??[]).length,props:(body.match(/data-react-props/g)??[]).length,catchLinks:(body.match(/\/catches\/\d+/g)??[]).length,challenge:/captcha|access denied|checking your browser|cf-chl-|awswaf|aws-waf|challenge\.js/i.test(body)});
   const rows=[];for(const url of anglersCandidates(body).slice(0,3)){const detail=await fetchText(source,url);const row=parseAnglersCatch(detail,url,source.areaId!,source.spotSlug!);if(row)rows.push(row);}
