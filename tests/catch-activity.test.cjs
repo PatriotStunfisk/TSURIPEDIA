@@ -37,7 +37,25 @@ test('unconfigured and incorrect cron credentials are rejected',async()=>{
 });
 test('source failures are isolated and cleanup never targets user reports',async()=>{
  const {catchSources}=require('../lib/catches/sources'),store=require('../lib/server/catch-store'),{refreshExternalCatches}=require('../lib/server/external-catches');const oldFetch=global.fetch,oldStore=store.storeRequest;const calls=[];const date=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
- catchSources.push(...['bad','good'].map(id=>({id,name:id,sourceType:'official',format:'json',endpoint:'https://example.com/'+id,allowedHosts:['example.com'],permissionUrl:'https://example.com/terms',enabled:true})));
+ const priorSources=catchSources.splice(0);catchSources.push(...['bad','good'].map(id=>({id,name:id,sourceType:'official',format:'json',endpoint:'https://example.com/'+id,allowedHosts:['example.com'],permissionUrl:'https://example.com/terms',enabled:true})));
  global.fetch=async url=>{if(String(url).endsWith('bad'))throw Error('local failure');return Response.json({catches:[{id:'one',date,fishSlug:'aji',spotSlug:'naruohama',summary:'local fixture',sourceUrl:'https://example.com/report'}]});};store.storeRequest=async(url,init)=>{calls.push({url,init});return Response.json(url.startsWith('/rest/v1/external_catches?on_conflict')?[{id:'saved'}]:[]);};
- try{const results=await refreshExternalCatches();assert.equal(results[0].status,'failed');assert.equal(results[1].status,'success');assert.equal(results[1].inserted,1);assert.ok(calls.filter(c=>c.init.method==='DELETE').every(c=>!c.url.includes('catch_reports')));assert.equal(calls.filter(c=>c.url==='/rest/v1/catch_import_runs').length,2);}finally{catchSources.splice(0);global.fetch=oldFetch;store.storeRequest=oldStore;}
+ try{const results=await refreshExternalCatches();assert.equal(results[0].status,'failed');assert.equal(results[1].status,'success');assert.equal(results[1].inserted,1);assert.ok(calls.filter(c=>c.init.method==='DELETE').every(c=>!c.url.includes('catch_reports')));assert.equal(calls.filter(c=>c.url==='/rest/v1/catch_import_runs').length,2);}finally{catchSources.splice(0,catchSources.length,...priorSources);global.fetch=oldFetch;store.storeRequest=oldStore;}
+});
+
+test('official structured rows exclude prose, photos and ambiguous fish names',()=>{
+ const {parseNaruohama}=require('../lib/catches/official-parser');
+ const rows=parseNaruohama('<div id="choka1" class="c_anchor"></div><p class="date">2026年9月20日（日）</p><ul class="data"><li><span>カタクチイワシ　8-12cm　</span>合計 50 匹</li><li><span>魚種不明　10cm</span></li></ul><p class="txt">アジもいるという未確認の文章</p><img src="private.jpg">','https://www.naruohama-park.com/choka/');
+ assert.equal(rows.length,1);assert.equal(rows[0].date,'2026-09-20');assert.ok(!('sizeCm' in rows[0]));assert.ok(!JSON.stringify(rows).includes('private.jpg'));assert.throws(()=>parseNaruohama('<html>changed</html>','https://example.com'));
+});
+test('preview centering leaves marker in the uncovered area without changing scale',()=>{
+ const {previewMapCenter}=require('../lib/map-preview-position');
+ assert.deepEqual(previewMapCenter(1000,600,{left:12,top:12,right:312,bottom:280}),{x:656,y:300});
+ assert.deepEqual(previewMapCenter(390,560,{left:10,top:360,right:380,bottom:550}),{x:195,y:180});
+});
+
+test('facility reports exclude notices and retain only exact individual sizes',()=>{
+ const {parseTottopark}=require('../lib/catches/official-parser');
+ const make=(name,size)=>`<table width="100%"><td>釣り公園 2026-09-20<a href="./fish_details.php?sea_id=123"></a></td><td width="40%" class="tp2">${name}</td><td width="30%" class="tp2">${size}</td><td colspan="3">private name</td></table>`;
+ const rows=parseTottopark(make('おしらせ','')+make('小アジ（マアジ）','18cm')+make('タチウオ','70-90cm'),'https://minnaga.com/system/totopark/contents/fish/fish_listup.php');
+ assert.equal(rows.length,2);assert.equal(rows[0].fishSlug,'aji');assert.equal(rows[0].sizeCm,18);assert.equal(rows[1].sizeCm,undefined);assert.ok(!JSON.stringify(rows).includes('private name'));
 });

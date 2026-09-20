@@ -30,3 +30,5 @@
 .detailTitleLink{color:#096b91;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}.detailTitleLink small{display:block;font-size:12px;font-weight:500;margin-top:6px}.detailTitleLink:hover{color:#034762}
 
 .recentPin{box-shadow:0 0 0 3px #3ba781!important}.hotPin{box-shadow:0 0 0 4px #ee8b24!important}
+
+.mapPreview{padding:12px;width:min(300px,calc(100% - 84px))}.mapPreview h2{font-size:16px;margin:6px 28px 4px 0}.mapPreview .previewFacilities{font-size:10px;margin:5px 0}.mapPreview .catchPreview{margin:6px 0;padding-top:6px}.mapPreview .previewFish{margin:5px 0}@media(max-width:760px){.mapPreview{width:calc(100% - 20px);max-height:45%;padding:10px 12px}.mapPreview h2{font-size:15px}.mapPreview .previewActions{margin-top:6px}}

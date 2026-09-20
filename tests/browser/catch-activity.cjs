@@ -19,6 +19,8 @@ let browser;
   await marker.click();await page.getByText('🔥 最近の釣果が集まっています',{exact:true}).waitFor();assert.ok((await page.getByLabel('選択地点のプレビュー').innerText()).includes('直近7日：3件'));
   await page.waitForFunction(()=>[...document.querySelectorAll('img.leaflet-tile')].every(img=>img.complete&&img.naturalWidth>0)&&document.querySelectorAll('img.leaflet-tile').length>0,{},{timeout:15000});
   await page.waitForTimeout(400);
+  const placement=await page.evaluate(()=>{const map=document.querySelector('.leaflet-container').getBoundingClientRect(),card=document.querySelector('[data-spot-preview]').getBoundingClientRect(),pin=document.querySelector('.leaflet-marker-icon[class*="selectedPin"]').getBoundingClientRect();const mobile=card.width>map.width*.65;return {x:pin.x+pin.width/2-map.x,y:pin.y+pin.height/2-map.y,tx:mobile?map.width/2:(card.right-map.left+map.width)/2,ty:mobile?(card.top-map.top)/2:map.height/2,ratio:card.height/map.height};});
+  assert.ok(Math.abs(placement.x-placement.tx)<12&&Math.abs(placement.y-placement.ty)<12,JSON.stringify(placement));if(width===390)assert.ok(placement.ratio<=.46);
   await page.screenshot({path:`/tmp/uolink-hot-${width}.png`});
   await page.goto('http://localhost:3118/spots/naruohama#catch-form',{waitUntil:'domcontentloaded'});const form=page.locator('#catch-form'),combo=form.getByRole('combobox',{name:'魚種（名前・別名で検索）'});
   await combo.fill('ガシラ');if(width===390)await form.getByRole('option',{name:/カサゴ/}).tap();else await form.getByRole('option',{name:/カサゴ/}).click();assert.equal(await form.locator('[name=fishSlug]').inputValue(),'kasago');

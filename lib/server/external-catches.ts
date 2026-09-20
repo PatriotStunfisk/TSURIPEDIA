@@ -1,3 +1,4 @@
+import {parseNaruohama,parseTottopark} from '../catches/official-parser';
 import {createHash} from 'node:crypto';
 import {fishSlugs} from '../fish-registry';
 import {fishingMapEntries} from '../fishing-map-data';
@@ -14,15 +15,16 @@ export function parseExternalCatch(value:unknown,source:CatchSource,now=new Date
  if(!source.allowedHosts.includes(new URL(sourceUrl).hostname)||!fish.has(fishSlug)||!spots.has(spotSlug)||ageDays(date,now)<0||!Number.isFinite(ageDays(date,now)))throw Error('Unmapped or invalid entry');
  if(v.sizeCm!==undefined&&(typeof v.sizeCm!=='number'||!Number.isFinite(v.sizeCm)||v.sizeCm<=0||v.sizeCm>500))throw Error('Invalid size');
  if(v.methodSlug!==undefined&&(typeof v.methodSlug!=='string'||!Object.hasOwn(methodDetails,v.methodSlug)))throw Error('Invalid method');
- return {id:source.id+':'+id,source:source.id,sourceType:source.sourceType,actor:source.id,date,fishSlug,spotSlug,summary,sourceUrl,methodSlug:v.methodSlug as string|undefined,sizeCm:v.sizeCm as number|undefined};
+ return {id:source.id+':'+id,source:source.id,sourceName:source.name,sourceType:source.sourceType,actor:source.id,date,fishSlug,spotSlug,summary,sourceUrl,methodSlug:v.methodSlug as string|undefined,sizeCm:v.sizeCm as number|undefined};
 }
 async function fetchSource(source:CatchSource){
  const url=new URL(source.endpoint);if(url.protocol!=='https:'||!source.allowedHosts.includes(url.hostname)||!source.permissionUrl)throw Error('Source not authorized');
- const response=await fetch(url,{redirect:'error',signal:AbortSignal.timeout(10000),headers:{Accept:'application/json','User-Agent':'UOLINK/1.0 (+https://uolink.jp)'},cache:'no-store'});
- if(!response.ok||!response.headers.get('content-type')?.includes('json'))throw Error('Source response invalid');
+ const response=await fetch(url,{redirect:'error',signal:AbortSignal.timeout(10000),headers:{Accept:source.format==='json'?'application/json':'text/html','User-Agent':'UOLINK/1.0 (+https://uolink.jp)'},cache:'no-store'});
+ if(!response.ok||!response.headers.get('content-type')?.includes(source.format==='json'?'json':'text/html'))throw Error('Source response invalid');
  const reader=response.body?.getReader();if(!reader)throw Error('Empty response');const chunks:Uint8Array[]=[];let bytes=0;
  try{while(true){const {done,value}=await reader.read();if(done)break;bytes+=value.byteLength;if(bytes>1000000)throw Error('Feed too large');chunks.push(value);}}finally{await reader.cancel();}
- const data=JSON.parse(Buffer.concat(chunks).toString('utf8'));if(!Array.isArray(data.catches)||data.catches.length>500)throw Error('Invalid feed');return data.catches as unknown[];
+ const body=new TextDecoder(source.format==='tottopark-html'?'shift_jis':'utf-8').decode(Buffer.concat(chunks));if(source.format==='tottopark-html')return parseTottopark(body,source.endpoint);if(source.format==='naruohama-html')return parseNaruohama(body,source.endpoint);
+ const data=JSON.parse(body);if(!Array.isArray(data.catches)||data.catches.length>500)throw Error('Invalid feed');return data.catches as unknown[];
 }
 export async function refreshExternalCatches(){
  const results=[];

@@ -1,4 +1,5 @@
 'use client';
+import {previewMapCenter} from '@/lib/map-preview-position';
 import type {SpotActivity} from '@/lib/catches/activity';
 import {useEffect,useMemo,useRef,useState,type ReactNode} from 'react';
 import type * as Leaflet from 'leaflet';
@@ -105,5 +106,20 @@ export default function InteractiveSpotMap({activity,preview,boundaryPrefectures
    for(const shop of shops){if(!renderBounds.contains([shop.lat,shop.lng]))continue;const chosen=shop.id===selectedShop;const label=`釣具店：${shop.name}${chosen?'（選択中）':''}`;const tip=document.createElement('span');tip.textContent=label;const marker=L.marker([shop.lat,shop.lng],{title:label,alt:label,zIndexOffset:chosen?1200:100,icon:L.divIcon({className:`${s.mapPin} ${s.shopPin} ${chosen?s.selectedPin:''}`,html:'店',iconSize:[30,30],iconAnchor:[15,15]})}).bindTooltip(tip).on('click',()=>shopCallback.current(shop.id)).addTo(layer);marker.getElement()?.setAttribute('aria-label',label);}
   });return ()=>{cancelled=true};
  },[activity,favorites,points,entries,shops,selectedShop,focus,ready,selected,revision,fitKey,userLocation]);
+ // Pan only on a selection or an overlay size change, never on map drag/zoom.
+ useEffect(()=>{
+  if(!ready||(!selected&&!selectedShop)||!root.current||!map.current)return;
+  const canvas=root.current,instance=map.current,card=canvas.parentElement?.querySelector<HTMLElement>('[data-spot-preview]');
+  if(!card)return;let frame=0,cancelled=false;
+  const pan=()=>{cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{
+   if(cancelled)return;const entry=points.find(p=>p.slug===selected),shop=shops.find(p=>p.id===selectedShop);if(!entry&&!shop)return;
+   const zoom=instance.getZoom();const projected=entry?displaySpotPositions(points,p=>instance.project([p.lat,p.lng],zoom),zoom).get(entry.slug):undefined;
+   const position=projected?instance.unproject([projected.x,projected.y],zoom):[shop!.lat,shop!.lng] as [number,number];
+   const mapRect=canvas.getBoundingClientRect(),r=card.getBoundingClientRect(),size=instance.getSize();
+   const target=previewMapCenter(size.x,size.y,{left:r.left-mapRect.left,top:r.top-mapRect.top,right:r.right-mapRect.left,bottom:r.bottom-mapRect.top});
+   const current=instance.latLngToContainerPoint(position);if(Math.hypot(current.x-target.x,current.y-target.y)>2)instance.panBy([current.x-target.x,current.y-target.y],{animate:!window.matchMedia('(prefers-reduced-motion: reduce)').matches,duration:.25});
+  });};pan();const observer=typeof ResizeObserver!=='undefined'?new ResizeObserver(pan):undefined;observer?.observe(card);observer?.observe(canvas);
+  return()=>{cancelled=true;cancelAnimationFrame(frame);observer?.disconnect();};
+ },[ready,selected,selectedShop]);
  return <div className={s.mapFrame}><div className={s.mapViewport}><div ref={root} className={s.liveMap} aria-label="釣り場の地図"/>{preview}</div>{failed&&<p role="status">地図を読み込めない部分があります。<button type="button" onClick={()=>{fittedPoints.current=null;setAttempt(n=>n+1);}}>地図を再読み込み</button> 下の一覧からも探せます。</p>}{favoritesOnly&&favorites.length===0?<p role="status">お気に入りの釣り場はまだありません。</p>:!entries.some(hasCoordinates)&&!shops.length&&<p role="status">現在の条件には位置登録のある地点がありません。下の一覧で地域と公式案内を確認できます。</p>}<div className={s.legend} role="group" aria-label="釣り場タイプの複数選択"><button onClick={()=>onTypesChange(Object.keys(markerKinds) as SpotPrimaryType[])}>すべて選択</button><button onClick={()=>onTypesChange([])}>すべて解除</button>{Object.entries(markerKinds).map(([id,k])=><button key={id} aria-pressed={selectedTypes.includes(id as SpotPrimaryType)} onClick={()=>onTypesChange(selectedTypes.includes(id as SpotPrimaryType)?selectedTypes.filter(t=>t!==id):[...selectedTypes,id as SpotPrimaryType])}><i style={{background:k.color}}>{k.symbol}</i>{k.label}</button>)}<button className={s.shopChip} aria-pressed={shopsOn} onClick={()=>onShopsChange(!shopsOn)}><i>店</i>釣具店{shopsOn&&<small> {shops.length}</small>}</button><button className={s.favoriteChip} aria-pressed={favoritesOnly} onClick={()=>onFavoritesChange(!favoritesOnly)}>☆ お気に入りのみ{favorites.length>0&&<small>{favorites.length}</small>}</button></div><p>{boundaryKey&&<>破線は選択地域の概略境界です。 <a href="https://github.com/amay077/JapanPrefGeoJson" target="_blank" rel="noreferrer">境界データ</a>（簡略化・釣り可能区域ではありません）。</>}数字の丸印は近接地点の一覧を開きます。黒枠は選択中。★はお気に入り。{userLocation&&'青い点は現在地、薄い円は位置精度の目安です。'}同じ位置の地点は拡大時に少し離し、線で登録位置を示します。マーカーは登録地点の参考位置です。釣り可能範囲や入場口を示すものではありません。地図を拡大しても未登録の釣り場は表示されません。</p></div>;
 }
