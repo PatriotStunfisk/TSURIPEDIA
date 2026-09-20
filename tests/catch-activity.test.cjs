@@ -59,3 +59,11 @@ test('facility reports exclude notices and retain only exact individual sizes',(
  const rows=parseTottopark(make('おしらせ','')+make('小アジ（マアジ）','18cm')+make('タチウオ','70-90cm'),'https://minnaga.com/system/totopark/contents/fish/fish_listup.php');
  assert.equal(rows.length,2);assert.equal(rows[0].fishSlug,'aji');assert.equal(rows[0].sizeCm,18);assert.equal(rows[1].sizeCm,undefined);assert.ok(!JSON.stringify(rows).includes('private name'));
 });
+
+test('ANGLERS facts distinguish fish quantity from post counts and enforce exact mapped area',()=>{
+ const {anglersCandidates,parseAnglersCatch}=require('../lib/catches/anglers-parser');
+ assert.deepEqual(anglersCandidates('<a href="/catches/42"><div>2026.09.18</div><span>2釣果</span></a><a href="/catches/43"><div>2025.09.18</div></a>',now),['https://anglers.jp/catches/42']);
+ const table='<dl><dt>釣れた日</dt><dd>2026年09月18日 21:30</dd><dt>魚種</dt><dd><a href="/fishes/57">サヨリ</a></dd><dt>匹数</dt><dd>12匹</dd><dt>サイズ</dt><dd>25.0cm</dd><dt>エリア</dt><dd><a href="/areas/2335">鳴尾浜</a></dd></dl>';
+ const r=parseAnglersCatch(table,'https://anglers.jp/catches/42','2335','naruohama');assert.equal(r.count,12);assert.equal(r.sizeCm,25);assert.equal(r.fishSlug,'sayori');assert.equal(parseAnglersCatch(table,'https://anglers.jp/catches/42','874','amagasaki'),null);
+ assert.equal(parseAnglersCatch(table.replace('12匹','2釣果'),'https://anglers.jp/catches/42','2335','naruohama').count,undefined);
+});
