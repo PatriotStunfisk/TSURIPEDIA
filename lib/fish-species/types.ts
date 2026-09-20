@@ -35,6 +35,7 @@ export type FishEcologyVisual={
 };
 
 export type FishSpeciesDefinition={
+  fieldNotes?:{heading:string;body:string}[];
   ecologyVisual?:FishEcologyVisual;
   base:Fish;
   representativeRecipes?:string[];

@@ -22,6 +22,7 @@ export default function SpotPlanning({spot,guide}:{spot:FishingMapEntry;guide?:S
     <h4>反応がないとき</h4><p>{m.ifQuiet}</p><Link href={`/methods/${m.slug}`}>仕掛け・道具と詳しい釣り方 →</Link>
    </article>)}</div>
   </section>}
+  {!!guide?.questions?.length&&<section className={s.panel} aria-label="この釣り場のよくある疑問"><h2>この釣り場のよくある疑問</h2>{guide.questions.map(q=><details key={q.question} style={{padding:'12px 0',borderBottom:'1px solid #dce6ec'}}><summary style={{cursor:'pointer',fontWeight:700,lineHeight:1.6}}>{q.question}</summary><p>{q.answer}</p></details>)}</section>}
   <section className={s.panel}><h2>出発前・到着後のチェック</h2><ul>{checks.map(x=><li key={x}>{x}</li>)}</ul></section>
  </>;
 }

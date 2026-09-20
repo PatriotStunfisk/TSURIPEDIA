@@ -1,7 +1,10 @@
 import {allGuides} from './all-guides';
-/** Derived once on the server; clients receive IDs, never article bodies. */
-export const spotGuideIndex:Record<string,string[]>={};
+import {selectHubGuides} from './guide-selection';
+import type {ClassifiedGuide} from './guide-taxonomy';
+// Built on the server; a maximum of six IDs per relationship travels to the map.
+const candidates=new Map<string,ClassifiedGuide[]>();
 for(const guide of allGuides){
- const paths=new Set([...guide.fishTags.map(slug=>`/fish/${slug}`),...guide.related.map(r=>r.href.split(/[?#]/)[0]).filter(p=>p.startsWith('/fish/')||p.startsWith('/methods/'))]);
- for(const path of paths){const list=spotGuideIndex[path]??=[];if(list.length<6)list.push(guide.slug);}
+ const paths=new Set([...guide.fishTags.map(slug=>`/fish/${slug}`),...guide.methodTags.map(slug=>`/methods/${slug}`)]);
+ for(const path of paths){const list=candidates.get(path)??[];list.push(guide);candidates.set(path,list);}
 }
+export const spotGuideIndex:Record<string,string[]>=Object.fromEntries([...candidates].map(([path,guides])=>[path,selectHubGuides(guides).map(g=>g.slug)]));

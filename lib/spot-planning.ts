@@ -1,6 +1,7 @@
 import type {FishingMapEntry} from './fishing-map-data';
 
 export type SpotFieldGuide={
+  questions?:{question:string;answer:string}[];
   features:string[];
   approach:string[];
   beforeYouGo:string[];
