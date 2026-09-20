@@ -17,6 +17,7 @@ export default function FishConnections({slug}:{slug:string}){
       <span>FISHING &amp; GUIDE</span><h2>釣り方と実践ガイド</h2>
       {methods.length>0&&<><h3>釣り方を詳しく見る</h3>{methods.map(method=><Link key={method.slug} href={`/methods/${method.slug}`} className="methodLink"><div><b>{method.name}</b><small>{method.subtitle}</small></div><em>→</em></Link>)}</>}
       {guides.length>0&&<><h3>この魚を知る実践GUIDE</h3>{guides.slice(0,6).map(guide=><Link key={guide.slug} href={`/guide/${guide.slug}`} className="methodLink"><div><b>{guide.title}</b></div><em>→</em></Link>)}{guides.length>6&&<Link href={`/guide?fish=${slug}`} className="gearCta">釣りGUIDEの一覧を見る →</Link>}</>}
+      <Link className="gearCta" href={`/spots?fish=${slug}&recent=30days`}>最近この魚が釣れている場所を見る →</Link>
       <RelatedSpots entries={spots} fish={slug} name={getFishProfile(slug)?.name??slug}/>
       {methods[0]&&<Link className="gearCta" href={`/gear?method=${methods[0].slug}`}>この釣り方の道具一式 →</Link>}
       {questFish.some(f=>f.slug===slug)&&<Link href={`/quest/play?fish=${slug}`} className="gearCta">この魚をQUESTで狙う →</Link>}

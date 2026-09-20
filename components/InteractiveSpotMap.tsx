@@ -1,4 +1,5 @@
 'use client';
+import type {SpotActivity} from '@/lib/catches/activity';
 import {useEffect,useMemo,useRef,useState,type ReactNode} from 'react';
 import type * as Leaflet from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -12,8 +13,8 @@ import {visibleSpotLabels} from '@/lib/spot-labels';
 import type {TackleShop} from '@/lib/tackle-shops';
 import type {Coordinates} from '@/lib/spot-distance';
 
-type Props={preview?:ReactNode;boundaryPrefectures:readonly string[];favorites:readonly string[];favoritesOnly:boolean;onFavoritesChange:(on:boolean)=>void;userLocation?:Coordinates&{accuracy?:number};shopsOn:boolean;onShopsChange:(on:boolean)=>void;shops:TackleShop[];selectedShop?:string;onShopSelect:(id:string)=>void;focus?:Coordinates;entries:FishingMapEntry[];selected?:string;onSelect:(slug:string)=>void;selectedTypes:SpotPrimaryType[];onTypesChange:(types:SpotPrimaryType[])=>void;fitKey:string};
-export default function InteractiveSpotMap({preview,boundaryPrefectures,favorites,favoritesOnly,onFavoritesChange,userLocation,entries,shops,shopsOn,onShopsChange,selectedShop,onShopSelect,focus,selected,onSelect,selectedTypes,onTypesChange,fitKey}:Props){
+type Props={activity:Record<string,SpotActivity>;preview?:ReactNode;boundaryPrefectures:readonly string[];favorites:readonly string[];favoritesOnly:boolean;onFavoritesChange:(on:boolean)=>void;userLocation?:Coordinates&{accuracy?:number};shopsOn:boolean;onShopsChange:(on:boolean)=>void;shops:TackleShop[];selectedShop?:string;onShopSelect:(id:string)=>void;focus?:Coordinates;entries:FishingMapEntry[];selected?:string;onSelect:(slug:string)=>void;selectedTypes:SpotPrimaryType[];onTypesChange:(types:SpotPrimaryType[])=>void;fitKey:string};
+export default function InteractiveSpotMap({activity,preview,boundaryPrefectures,favorites,favoritesOnly,onFavoritesChange,userLocation,entries,shops,shopsOn,onShopsChange,selectedShop,onShopSelect,focus,selected,onSelect,selectedTypes,onTypesChange,fitKey}:Props){
  const root=useRef<HTMLDivElement>(null),map=useRef<Leaflet.Map|null>(null),markers=useRef<Leaflet.LayerGroup|null>(null);
  const [revision,setRevision]=useState(0);
  const [ready,setReady]=useState(false),[failed,setFailed]=useState(false),[attempt,setAttempt]=useState(0);
@@ -93,16 +94,16 @@ export default function InteractiveSpotMap({preview,boundaryPrefectures,favorite
     }
     const entry=group[0],kind=markerKinds[markerKind(entry)],chosen=entry.slug===selected,isFavorite=favoriteSet.has(entry.slug);
     if(!renderBounds.contains(displayLatLng(entry)))continue;
-    const text=document.createElement('span');text.textContent=`${kind.label}：${entry.name}${isFavorite?'（お気に入り）':''}${chosen?'（選択中）':''}`;
+    const text=document.createElement('span');text.textContent=`${kind.label}：${entry.name}${activity[entry.slug]?.level==='hot'?'（HOT）':activity[entry.slug]?'（最近の釣果あり）':''}${isFavorite?'（お気に入り）':''}${chosen?'（選択中）':''}`;
     const tip=document.createElement('span');tip.textContent=labels.has(entry.slug)?entry.name:text.textContent;
     const display=displayLatLng(entry);
     if(!display.equals(L.latLng(entry.lat,entry.lng),1e-8)){L.polyline([[entry.lat,entry.lng],display],{color:kind.color,weight:1.5,opacity:.65,interactive:false}).addTo(layer);}
-    const marker=L.marker(display,{title:text.textContent,alt:text.textContent,zIndexOffset:chosen?1000:0,icon:L.divIcon({className:`${s.mapPin} ${chosen?s.selectedPin:''}`,html:`<span style="display:block;border-radius:50%;background:${kind.color}">${kind.symbol}</span>${isFavorite?`<b class="${s.favoriteBadge}" aria-hidden="true">★</b>`:''}`,iconSize:[30,30],iconAnchor:[15,15]})}).bindTooltip(tip,{permanent:labels.has(entry.slug),direction:'top',offset:[0,-14],className:labels.has(entry.slug)?s.placeLabel:''}).on('click',()=>callback.current(entry.slug)).addTo(layer);
+    const marker=L.marker(display,{title:text.textContent,alt:text.textContent,zIndexOffset:chosen?1000:0,icon:L.divIcon({className:`${s.mapPin} ${activity[entry.slug]?.level==='hot'?s.hotPin:activity[entry.slug]?s.recentPin:''} ${chosen?s.selectedPin:''}`,html:`<span style="display:block;border-radius:50%;background:${kind.color}">${kind.symbol}</span>${isFavorite?`<b class="${s.favoriteBadge}" aria-hidden="true">★</b>`:''}`,iconSize:[30,30],iconAnchor:[15,15]})}).bindTooltip(tip,{permanent:labels.has(entry.slug),direction:'top',offset:[0,-14],className:labels.has(entry.slug)?s.placeLabel:''}).on('click',()=>callback.current(entry.slug)).addTo(layer);
     marker.getElement()?.setAttribute('aria-label',text.textContent);
    }
    // Shops are a separate retail layer, excluded from fishing-spot clusters and totals.
    for(const shop of shops){if(!renderBounds.contains([shop.lat,shop.lng]))continue;const chosen=shop.id===selectedShop;const label=`釣具店：${shop.name}${chosen?'（選択中）':''}`;const tip=document.createElement('span');tip.textContent=label;const marker=L.marker([shop.lat,shop.lng],{title:label,alt:label,zIndexOffset:chosen?1200:100,icon:L.divIcon({className:`${s.mapPin} ${s.shopPin} ${chosen?s.selectedPin:''}`,html:'店',iconSize:[30,30],iconAnchor:[15,15]})}).bindTooltip(tip).on('click',()=>shopCallback.current(shop.id)).addTo(layer);marker.getElement()?.setAttribute('aria-label',label);}
   });return ()=>{cancelled=true};
- },[favorites,points,entries,shops,selectedShop,focus,ready,selected,revision,fitKey,userLocation]);
+ },[activity,favorites,points,entries,shops,selectedShop,focus,ready,selected,revision,fitKey,userLocation]);
  return <div className={s.mapFrame}><div className={s.mapViewport}><div ref={root} className={s.liveMap} aria-label="釣り場の地図"/>{preview}</div>{failed&&<p role="status">地図を読み込めない部分があります。<button type="button" onClick={()=>{fittedPoints.current=null;setAttempt(n=>n+1);}}>地図を再読み込み</button> 下の一覧からも探せます。</p>}{favoritesOnly&&favorites.length===0?<p role="status">お気に入りの釣り場はまだありません。</p>:!entries.some(hasCoordinates)&&!shops.length&&<p role="status">現在の条件には位置登録のある地点がありません。下の一覧で地域と公式案内を確認できます。</p>}<div className={s.legend} role="group" aria-label="釣り場タイプの複数選択"><button onClick={()=>onTypesChange(Object.keys(markerKinds) as SpotPrimaryType[])}>すべて選択</button><button onClick={()=>onTypesChange([])}>すべて解除</button>{Object.entries(markerKinds).map(([id,k])=><button key={id} aria-pressed={selectedTypes.includes(id as SpotPrimaryType)} onClick={()=>onTypesChange(selectedTypes.includes(id as SpotPrimaryType)?selectedTypes.filter(t=>t!==id):[...selectedTypes,id as SpotPrimaryType])}><i style={{background:k.color}}>{k.symbol}</i>{k.label}</button>)}<button className={s.shopChip} aria-pressed={shopsOn} onClick={()=>onShopsChange(!shopsOn)}><i>店</i>釣具店{shopsOn&&<small> {shops.length}</small>}</button><button className={s.favoriteChip} aria-pressed={favoritesOnly} onClick={()=>onFavoritesChange(!favoritesOnly)}>☆ お気に入りのみ{favorites.length>0&&<small>{favorites.length}</small>}</button></div><p>{boundaryKey&&<>破線は選択地域の概略境界です。 <a href="https://github.com/amay077/JapanPrefGeoJson" target="_blank" rel="noreferrer">境界データ</a>（簡略化・釣り可能区域ではありません）。</>}数字の丸印は近接地点の一覧を開きます。黒枠は選択中。★はお気に入り。{userLocation&&'青い点は現在地、薄い円は位置精度の目安です。'}同じ位置の地点は拡大時に少し離し、線で登録位置を示します。マーカーは登録地点の参考位置です。釣り可能範囲や入場口を示すものではありません。地図を拡大しても未登録の釣り場は表示されません。</p></div>;
 }

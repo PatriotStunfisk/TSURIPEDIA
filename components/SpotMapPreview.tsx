@@ -1,5 +1,7 @@
 'use client';
 
+import {ActivityReason} from './CatchActivity';
+import type {SpotActivity} from '@/lib/catches/activity';
 import type {FishingMapEntry} from '@/lib/fishing-map-data';
 import type {TackleShop} from '@/lib/tackle-shops';
 import {markerKind,markerKinds} from '@/lib/spot-markers';
@@ -10,7 +12,7 @@ import s from './SpotMap.module.css';
 const facility=(value:boolean|undefined)=>value===undefined?'未確認':value?'あり':'なし';
 
 /** A non-modal sibling of the Leaflet canvas: card actions never drag or zoom the map. */
-export default function SpotMapPreview({entry,shop,onClose,onDetails,onCatches,fishNames={}}:{fishNames?:Record<string,string>;methodNames?:Record<string,string>;entry?:FishingMapEntry;shop?:TackleShop;onClose:()=>void;onDetails:()=>void;onCatches:()=>void}){
+export default function SpotMapPreview({activity,entry,shop,onClose,onDetails,onCatches,fishNames={}}:{activity?:SpotActivity;fishNames?:Record<string,string>;methodNames?:Record<string,string>;entry?:FishingMapEntry;shop?:TackleShop;onClose:()=>void;onDetails:()=>void;onCatches:()=>void}){
  if(!entry&&!shop)return null;
  const name=shop?.name??entry!.name;
  const kind=shop?{label:'釣具店',symbol:'店',color:'#b3480b'}:markerKinds[markerKind(entry!)];
@@ -22,6 +24,7 @@ export default function SpotMapPreview({entry,shop,onClose,onDetails,onCatches,f
   {entry&&<div className={s.previewFish}>{entry.fishSlugs?.length?entry.fishSlugs.slice(0,4).map(slug=><span key={slug}>{fishNames[slug]??slug}</span>):entry.fish.slice(0,4).map(fish=><span key={fish}>{fish}</span>)}</div>}
   <div className={s.previewFacilities}>{entry?.beginner&&<span>初心者向け</span>}<span>駐車場：{facility(shop?shop.parking:entry?.parking)}</span>{entry&&<span>トイレ：{facility(entry.toilet)}</span>}</div>
   <p className={s.previewIntro}>{shop?.note??entry?.note}</p>
+  {entry&&activity&&<ActivityReason activity={activity} fishNames={fishNames}/>}
   {entry&&entry.type!=='area'&&<SpotCatchPreview key={entry.slug} slug={entry.slug} fishNames={fishNames} canPost={!entry.closed} onDetails={onCatches}/>}
   <div className={s.previewActions}>{entry&&<SpotFavorite slug={entry.slug} name={entry.name}/>}<button type="button" className={s.previewDetails} onClick={onDetails}>詳細を見る ↓</button></div>
  </section>;

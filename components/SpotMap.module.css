@@ -28,3 +28,5 @@
 .positionFootnote{font-size:11px!important;line-height:1.6;color:#647780;margin-top:24px;padding-top:12px;border-top:1px solid #e2e9ed;}
 
 .detailTitleLink{color:#096b91;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}.detailTitleLink small{display:block;font-size:12px;font-weight:500;margin-top:6px}.detailTitleLink:hover{color:#034762}
+
+.recentPin{box-shadow:0 0 0 3px #3ba781!important}.hotPin{box-shadow:0 0 0 4px #ee8b24!important}

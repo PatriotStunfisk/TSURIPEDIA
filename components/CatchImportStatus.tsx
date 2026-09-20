@@ -1,0 +1,4 @@
+'use client';
+import {useState} from 'react';
+type Run={source:string;status:string;inserted:number;invalid:number;finished_at:string};
+export default function CatchImportStatus(){const [runs,setRuns]=useState<Run[]>([]),[message,setMessage]=useState('');async function load(){setMessage('確認中…');try{const r=await fetch('/api/catches/imports');const v=await r.json();if(!r.ok)throw Error(v.error);setRuns(v.runs);setMessage(v.enabled?'取得元ごとの最新50回を表示します。':'外部自動取得は未有効です。許諾済みソースの設定後に開始できます。');}catch(e){setMessage((e as Error).message);}}return <details onToggle={e=>{if(e.currentTarget.open)void load();}}><summary>外部釣果の更新状況</summary><p role="status">{message}</p><ul>{runs.map((r,i)=><li key={i}>{r.source} · {r.status==='success'?'成功':'失敗'} · 新規{r.inserted}件 / 未対応{r.invalid}件 · {new Date(r.finished_at).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})}</li>)}</ul></details>;}

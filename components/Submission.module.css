@@ -11,3 +11,5 @@
 .sourceNotes{border-top:1px solid #dce6eb;padding-top:16px;margin-top:32px;color:#5b717b;font-size:12px;line-height:1.7}.sourceNotes h2{font-size:15px}.sourceNotes p{margin:8px 0}
 
 .field input,.field select,.field textarea{min-width:0;max-width:100%}.field input[type=date]{display:block;min-width:0;max-width:100%;appearance:none;-webkit-appearance:none}.field input[type=date]::-webkit-date-and-time-value{text-align:left;min-width:0}
+
+.fishOptions{max-height:220px;overflow:auto;border:1px solid #cbd9dc;border-radius:8px;background:white}.fishOptions button{display:block;width:100%;padding:10px;text-align:left;background:white;color:#173d49;border:0;cursor:pointer}.fishOptions button[aria-selected="true"]{background:#e8f4f6}.fishOptions small{font-size:12px;color:#536975}
