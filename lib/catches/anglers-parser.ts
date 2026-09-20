@@ -3,6 +3,18 @@ import {ageDays} from './activity';
 /** Only links from recent cards; never use the post-count badge as a fish count. */
 export function anglersCandidates(html:string,now=new Date()){
  const urls:string[]=[];
+ let recognized=/<a\s+href="\/catches\/\d+"/.test(html);
+ // Public server-rendered card props: use only the ID and catch date to locate details.
+ for(const tag of html.match(/<[^>]+data-react-class="results\/ResultCard"[^>]*>/g)??[]){
+  recognized=true;
+  const raw=tag.match(/data-react-props="([^"]*)"/)?.[1];if(!raw)throw Error('Missing catch card data');
+  const decoded=raw.replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
+  const result=JSON.parse(decoded)?.result;
+  if(!Number.isSafeInteger(result?.id)||result.id<=0||typeof result.caught_at!=='string')throw Error('Invalid catch card data');
+  const day=result.caught_at.slice(0,10);
+  if(ageDays(day,now)>=0&&ageDays(day,now)<30)urls.push('https://anglers.jp/catches/'+result.id);
+ }
+ if(!recognized)throw Error('Catch listing requires rendering or its structure changed');
  for(const block of html.split(/<a\s+href="\/catches\//).slice(1)){
   const id=block.match(/^(\d+)"/),date=block.match(/>(\d{4})\.(\d{2})\.(\d{2})</);if(!id||!date)continue;
   const day=`${date[1]}-${date[2]}-${date[3]}`;if(ageDays(day,now)<0||ageDays(day,now)>=30)continue;
