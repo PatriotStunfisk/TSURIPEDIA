@@ -15,7 +15,7 @@ export async function activitySignals(filters:{fish?:string;method?:string;days?
   if(batch.length<1000)break;if(offset===99000)throw Error('Recent activity capacity exceeded');
  }
  if(process.env.CATCH_EXTERNAL_ENABLED==='true'){
-  for(let offset=0;offset<100000;offset+=1000){const batch=await(await storeRequest(`/rest/v1/external_catches?date=gte.${since}${filters.fish?`&fish_slug=eq.${encodeURIComponent(filters.fish)}`:''}${filters.method?`&method_slug=eq.${encodeURIComponent(filters.method)}`:''}&order=id.asc&limit=1000&offset=${offset}&select=signal`)).json() as {signal:CatchSignal}[];rows.push(...batch.map(r=>r.signal));if(batch.length<1000)break;if(offset===99000)throw Error('External activity capacity exceeded');}
+  for(let offset=0;offset<100000;offset+=1000){const batch=await(await storeRequest(`/rest/v1/external_catches?signal->>excluded=is.null&date=gte.${since}${filters.fish?`&fish_slug=eq.${encodeURIComponent(filters.fish)}`:''}${filters.method?`&method_slug=eq.${encodeURIComponent(filters.method)}`:''}&order=id.asc&limit=1000&offset=${offset}&select=signal`)).json() as {signal:CatchSignal}[];rows.push(...batch.map(r=>r.signal));if(batch.length<1000)break;if(offset===99000)throw Error('External activity capacity exceeded');}
  }
  return rows;
 }

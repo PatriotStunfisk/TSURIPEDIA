@@ -116,7 +116,7 @@ test('source redirects stay on approved hosts and browser challenges stop extrac
 test('boat aggregation uses explicit boat totals, excludes prose and does not turn ranges into totals',()=>{
  const {parseFishingVision}=require('../lib/catches/boat-parser');
  const row=(fish,count,size='')=>`<tr><td>1</td><td>${fish}</td><td>${count}</td><td>${size}</td><td></td></tr>`;
- const html='<div class="choka_box"><li class="date">2026年9月20日(日)</li><table>'+row('ハマチ・メジロ','0～2 匹 船中 7匹','60～70cm')+row('タチウオ','1～30 匹')+row('マアジ','船中 1匹','20 cm')+row('マアジ','船中 2匹')+row('カサゴ・マアジ','船中 9匹')+row('マダイ','0匹')+'</table><p>マダイ999匹</p><img src="photo.jpg">';
+ const html='<div class="choka_box"><li class="date">2026年9月20日(日)</li><table>'+row('ハマチ・メジロ','0～2 匹 船中 7匹','60～70cm')+row('タチウオ','1～30 匹')+row('マアジ','船中 1匹','20 cm')+row('マアジ','船中 2匹')+row('カサゴ・マアジ','船中 9匹')+row('マダイ','0匹')+row('フグ','船中 9匹')+'</table><p>マダイ999匹</p><img src="photo.jpg">';
  const r=parseFishingVision(html,'https://www.fishing-v.jp/choka/choka_detail.php?s=1','boat-uoe',now);
  assert.equal(r.length,3);assert.equal(r.find(r=>r.fishSlug==='buri').count,7);assert.equal(r.find(r=>r.fishSlug==='tachiuo').count,undefined);assert.equal(r.find(r=>r.fishSlug==='aji').count,3);assert.equal(r.find(r=>r.fishSlug==='aji').sizeCm,undefined);assert.ok(!JSON.stringify(r).includes('photo.jpg'));assert.ok(r.every(r=>r.fishSlug!=='madai'));assert.equal(parseFishingVision(html.replace('2026年9月20日','2025年9月20日'),'https://example.com','boat-uoe',now).length,0);
  assert.throws(()=>parseFishingVision('<html>blocked</html>','https://example.com','boat-uoe',now));

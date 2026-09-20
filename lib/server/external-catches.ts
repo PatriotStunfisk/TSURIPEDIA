@@ -81,7 +81,7 @@ export async function refreshExternalCatches(){
 export async function externalFeed(params:URLSearchParams){
  if(process.env.CATCH_EXTERNAL_ENABLED!=='true')return [];
  const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
- const q=new URLSearchParams({date:'gte.'+new Date(Date.parse(today)-29*86400000).toISOString().slice(0,10),order:'date.desc,id.asc',limit:'20',select:'signal'});
+ const q=new URLSearchParams({date:'gte.'+new Date(Date.parse(today)-29*86400000).toISOString().slice(0,10),order:'date.desc,id.asc',limit:'20',select:'signal','signal->>excluded':'is.null'});
  q.append('date','lte.'+today);
  for(const [param,column] of [['fish','fish_slug'],['spot','spot_slug'],['method','method_slug']] as const){const value=params.get(param);if(value&&/^[a-z0-9-]{1,100}$/.test(value))q.set(column,'eq.'+value);}
  const prefecture=params.get('prefecture');if(prefecture){const ids=fishingMapEntries.filter(s=>s.prefecture===prefecture).map(s=>s.slug);if(!ids.length)return [];const spot=params.get('spot');if(spot&&!ids.includes(spot))return [];if(!spot)q.set('spot_slug','in.('+ids.join(',')+')');}

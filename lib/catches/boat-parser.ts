@@ -12,6 +12,7 @@ export function parseFishingVision(html:string,sourceUrl:string,spotSlug:string,
   for(const [tr] of table.matchAll(/<tr\b[^>]*>[\s\S]*?<\/tr>/g)){
    const cells=[...tr.matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/g)].map(m=>plain(m[1]));if(cells.length<4)continue;
    const names=cells[1].replace(/\([^)]*\)/g,'').split('・');
+   if(names.some(n=>['フグ','フグ類','イカ','青物','根魚'].includes(n.trim())))continue;
    const fishes=names.map(n=>getFishByName(n.trim()));if(fishes.some(f=>!f)||new Set(fishes.map(f=>f?.slug)).size!==1)continue;
    const fish=fishes[0]!;
    const boat=cells[2].match(/(?:^|\s)船中\s*(\d+)\s*[匹尾杯本枚](?:\s|$)/);
