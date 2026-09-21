@@ -1,19 +1,15 @@
-import {pageSharing} from '@/lib/page-sharing';
+import {getGuideListing,guideListingMetadata,type GuideSearchParams} from '@/lib/guide-listing';
 import Link from 'next/link';
 import {allGuides} from '@/lib/all-guides';
 import {fish} from '@/lib/data';
 import {methodDetails} from '@/lib/method-registry';
-import {canonicalFishSlug} from '@/lib/fish-aliases';
-import {guideTopics,guideGearTags,filterGuides} from '@/lib/guide-taxonomy';
+import {guideTopics,guideGearTags} from '@/lib/guide-taxonomy';
 import s from './page.module.css';
-export const metadata=pageSharing("/guide","釣りガイド｜基本から具体的な疑問まで","GUIDEとQUICK GUIDEを魚・釣法・道具から検索。実際の釣行に役立つ仕掛け、誘い、釣れないときの対処を解説。");
-type Params={q?:string;fish?:string;method?:string;gear?:string;type?:string;topic?:string;page?:string};
-export default async function GuidePage({searchParams}:{searchParams:Promise<Params>}){
- const raw=await searchParams;const params=Object.fromEntries(Object.entries(raw).filter(([,v])=>typeof v==='string').map(([k,v])=>[k,v.slice(0,100)])) as Params;
- const filters={...params,fish:params.fish?canonicalFishSlug(params.fish):undefined};
- const labels=Object.fromEntries([...fish.map(f=>[f.slug,f.name]),...Object.values(methodDetails).map(m=>[m.slug,m.name])]);
- const results=filterGuides(allGuides,filters,labels);const pages=Math.max(1,Math.ceil(results.length/24));const page=Math.max(1,Math.min(pages,Number.parseInt(params.page??'1',10)||1));
- const pageHref=(n:number)=>{const p=new URLSearchParams(Object.entries(params).filter(([k,v])=>k!=='page'&&!!v) as [string,string][]);p.set('page',String(n));return `/guide?${p}`;};
+export async function generateMetadata({searchParams}:{searchParams:Promise<GuideSearchParams>}){
+ return guideListingMetadata(await searchParams);
+}
+export default async function GuidePage({searchParams}:{searchParams:Promise<GuideSearchParams>}){
+ const {params,filters,results,pages,page,pageHref}=getGuideListing(await searchParams);
  const fishes=fish.filter(f=>allGuides.some(g=>g.fishTags.includes(f.slug)));
  const methods=Object.values(methodDetails).filter(m=>allGuides.some(g=>g.methodTags.includes(m.slug)));
  return <div className="section pageTop">
@@ -36,6 +32,6 @@ export default async function GuidePage({searchParams}:{searchParams:Promise<Par
    <div className="chips"><span>{a.articleType}</span><span>約{a.readingMinutes}分</span><span>{guideTopics[a.topic]}</span></div>
    <h2><Link href={`/guide/${a.slug}`}>{a.title}</Link></h2><p>{a.summary}</p><Link className={s.read} href={`/guide/${a.slug}`}>読む →</Link>
   </article>)}</div>
-  {pages>1&&<nav aria-label="釣りガイドのページ" className={s.pagination}>{page>1&&<Link href={pageHref(page-1)}>← 前へ</Link>}<span>{page} / {pages}</span>{page<pages&&<Link href={pageHref(page+1)}>次へ →</Link>}</nav>}
+  {pages>1&&<nav aria-label="釣りガイドのページ" className={s.pagination}>{page>1&&<a href={pageHref(page-1)}>← 前へ</a>}<span>{page} / {pages}</span>{page<pages&&<a href={pageHref(page+1)}>次へ →</a>}</nav>}
  </div>;
 }
