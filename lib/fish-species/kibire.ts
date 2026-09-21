@@ -1,6 +1,7 @@
 import {defineFishSpecies} from './define';
 // Reviewed 2026-09-19: https://www.honda.co.jp/fishing/picture-book/kichinu/
 export default defineFishSpecies({
+  fieldNotes:[{"heading": "河口の底を同じ操作で比較する", "body": "砂泥底を探る場合、短い距離で底の感触を覚えてから範囲を広げます。泥へ埋まる、流れで浮くなどの違いを見て重量と引く幅を調整。ワームの色より先に、狙う層へ届いているかを確認します。"}, {"heading": "手前の障害物を回収前に把握する", "body": "沖では引けても護岸際の石や段差へ掛かることがあります。最後まで底を引くことにこだわらず、手前では浮かせて回収する経路を決めます。魚を掛けた後も同じ障害物へラインを擦らせない取り込み位置が必要です。"}],
   "base": {
     "slug": "kibire",
     "name": "キビレ",
@@ -20,6 +21,7 @@ export default defineFishSpecies({
       "fukase"
     ],
     "guideSlugs": [
+      "chinning-bottom-first-session",
       "tackle-spec-reading"
     ],
     "relatedSlugs": [

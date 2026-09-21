@@ -1,6 +1,7 @@
 import {defineFishSpecies} from './define';
 
 export default defineFishSpecies({
+  fieldNotes:[{"heading": "底の感触と魚の動きを比べる", "body": "ルアーで底を探る時は、同じ場所で繰り返す硬い感触と、操作を止めても続く糸の動きを分けます。小さな反応すべてに強く合わせず、糸ふけを回収して変化を確かめると根掛かりとの判断に役立ちます。"}, {"heading": "同じ魚でも釣法に合う場所を選ぶ", "body": "クロダイが登録された釣り場でもルアーを使えるとは限りません。施設の釣法制限を確認し、餌釣りの施設にはその規則に合う仕掛けを持参。MAPの魚フィルターに釣法も組み合わせて候補を絞ります。"}],
   ecologyVisual:{
   "title": "岸壁の貝も、チヌの食べ物",
   "description": "クロダイは甲殻類や貝類など幅広い餌を食べ、岸壁の付着生物も利用します。沖だけでなく足元の壁際も生活の場。釣りでは護岸の継ぎ目や潮の流れを観察する手掛かりになります。",
@@ -57,6 +58,7 @@ export default defineFishSpecies({
       "kawahagi"
     ],
     "guideSlugs": [
+      "chinning-bottom-first-session",
       "chinu-field-notes"
     ]
   },

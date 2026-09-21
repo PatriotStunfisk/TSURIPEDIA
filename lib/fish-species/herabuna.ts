@@ -1,5 +1,6 @@
 import {defineFishSpecies} from './define';
 export default defineFishSpecies({
+  fieldNotes:[{"heading": "ウキの変化を比べられる状態を作る", "body": "同じ投入点へ同じ大きさの餌を入れ、ウキが落ち着くまでの動きを見ます。底の深さが違う場所へ投げ分けながら目盛りを直すと、何が変わったか分からなくなります。針を交換した時も餌なしの基準を確認しましょう。"}, {"heading": "掛けることと取り込むことを分ける", "body": "小さな合わせで掛けた後は、竿を急に後ろへあおらず魚を寄せます。座った位置から届く場所に玉網を置き、網を濡らして受ける準備を先に済ませます。魚の保管・再放流は管理池の規則に従います。"}],
   "base": {
     "slug": "herabuna",
     "name": "ヘラブナ",
@@ -46,6 +47,7 @@ export default defineFishSpecies({
     ],
     "danger": "桟橋で後ろへ歩きながら取り込まず、玉網を先に用意。濡れた手と網で扱い、地面へ置かない。別の池や川へ魚を移さない。",
     "guideSlugs": [
+      "herabuna-bottom-first-session",
       "native-fish-conservation"
     ]
   },

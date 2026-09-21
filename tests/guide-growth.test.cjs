@@ -8,7 +8,7 @@ const {getSpotGuides}=require('../lib/spot-guide-selection.ts');
 const {spotGuideIndex}=require('../lib/spot-guide-index.ts');
 const {fishingMapEntries}=require('../lib/fishing-map-data.ts');
 const {getFishProfile}=require('../lib/fish-registry.ts');
-const added=[...require('../lib/guide-articles-observation.ts').observationGuides,...require('../lib/guide-articles-boat-workshop.ts').boatWorkshopGuides,...require('../lib/guide-articles-freshwater-workshop.ts').freshwaterWorkshopGuides,...require('../lib/guide-articles-small-questions.ts').smallQuestionGuides];
+const added=[...require('../lib/guide-articles-bottom-workshop.ts').bottomWorkshopGuides.filter(g=>g.editorial.articleType==='QUICK GUIDE'),...require('../lib/guide-articles-observation.ts').observationGuides,...require('../lib/guide-articles-boat-workshop.ts').boatWorkshopGuides,...require('../lib/guide-articles-freshwater-workshop.ts').freshwaterWorkshopGuides,...require('../lib/guide-articles-small-questions.ts').smallQuestionGuides];
 test('new field questions have a real full parent, distinct answers and complete decision tables',()=>{
  const answers=new Set();
  for(const q of added){

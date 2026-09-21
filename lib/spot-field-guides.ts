@@ -4,6 +4,19 @@ import type {SpotFieldGuide} from './spot-planning';
 import {shoreFieldGuides} from './spot-field-guides-growth';
 // Detail-only editorial notes; factual references are listed on each spot page.
 export const spotFieldGuides:Record<string,SpotFieldGuide>={
+
+ 'boat-uoyasu-yamanakako':{
+ features:['山中湖のドーム船で、座椅子に座ってワカサギを狙う事業者です。暖房やトイレがあっても、受付・桟橋の移動には屋外の服装が必要。船内へ持ち込む荷物をまとめると針を扱う範囲を確保できます。'],
+ approach:['棚を聞いたら、オモリの深さに加えてどの針へ魚が掛かるかを確認します。上針へ偏る場合は少し上げて比較し、同じ深さへ繰り返し戻せるよう記録しましょう。'],
+ beforeYouGo:['2026年9月21日確認の公式案内では乗船は5歳以上、混雑時は一人一本竿。餌・仕掛け・竿のセットと遊漁券の扱いは予約時に確認します。'],
+ questions:[{question:'竿を二本出した方が釣れる？',answer:'公式案内では混雑時は一人一本です。一本でも棚を揃え、餌付け・回収を手早く行う練習ができます。二本使えるかは当日の混雑と船主の案内を優先してください。'},{question:'途中から乗ったり早く帰ったりできる？',answer:'公式には途中乗降の相談が案内されていますが、予約なしで自由に乗降できる意味ではありません。希望する時刻を事前に相談し、遅刻する場合も連絡してください。'}],
+ },
+ 'hibara-wakasagi':{
+ features:['桧原湖周辺には複数のワカサギ釣り事業者があります。このMAP地点は湖の釣行計画エリアで、特定のドーム船や氷上への入口ではありません。利用する事業者を選んでから移動計画を作ります。'],
+ approach:['貸道具で始める場合は、針・餌・オモリまで含むかを確認。船や小屋へ入ってからは魚の棚を聞き、底だけに固定せず、掛かった針の位置を記録して探ります。'],
+ beforeYouGo:['ドーム船と氷上釣りは開放条件が異なります。結氷の見た目から進入を判断せず、選んだ事業者の受付・移動方法・実施状況を確認します。'],
+ questions:[{question:'湖のMAPピンへ向かえば受付がある？',answer:'この地点は湖の代表位置です。予約確認にある事業者名・受付・駐車場所を使って移動してください。地図アプリへは湖名だけでなく受付施設名を入力すると集合場所の取り違えを減らせます。'},{question:'釣果に書かれた水深をそのまま使える？',answer:'事業者の利用場所や日によって条件が違います。参考にはなりますが当日の棚を聞き、手元の仕掛けの全長も考慮して調整します。カウンターの数字だけでなく底からの位置を合わせて確認しましょう。'}],
+ },
   ...shoreFieldGuides,
   ...coastalNextFieldGuides,
   ...kansaiNationalFieldGuides,
