@@ -6,11 +6,12 @@ export type WorkshopQuestion={
  methods?:string[];
  slug:string; title:string; answer:string; context:string;
  sources?:GuideArticle['sources'];
+ verifiedAt?:string;
  steps:[string,string,string]; choices:[string,string][]; finish:string;
 };
 export function workshopGuides(context:{parent:string;topic:GuideEditorial['topic'];fish?:string[];methods?:string[]},questions:WorkshopQuestion[]):GuideArticle[]{
  return questions.map(q=>({inheritContext:false,slug:q.slug,title:q.title,query:q.title,
-  sources:q.sources,verifiedAt:q.sources?'2026-09-20':undefined,
+  sources:q.sources,verifiedAt:q.sources?(q.verifiedAt??'2026-09-20'):undefined,
   summary:q.answer,answer:q.answer,category:'現場で判断する',
   editorial:{articleType:'QUICK GUIDE',topic:context.topic,parentGuide:context.parent},
   sections:[

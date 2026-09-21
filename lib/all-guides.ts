@@ -1,3 +1,14 @@
+import {guides500Squid} from './guide-articles-500-squid';
+import {guides500Livebait} from './guide-articles-500-livebait';
+import {guides500Float} from './guide-articles-500-float';
+import {guides500Sayori} from './guide-articles-500-sayori';
+import {guides500Haze} from './guide-articles-500-haze';
+import {guides500Care} from './guide-articles-500-care';
+import {guides500Jigging} from './guide-articles-500-jigging';
+import {guides500Fly} from './guide-articles-500-fly';
+import {guides500Cooking} from './guide-articles-500-cooking';
+import {guides500Bass} from './guide-articles-500-bass';
+import {guides500Trip} from './guide-articles-500-trip';
 import {bottomWorkshopGuides} from './guide-articles-bottom-workshop';
 import {smallQuestionGuides} from './guide-articles-small-questions';
 import {observationGuides} from './guide-articles-observation';
@@ -31,6 +42,18 @@ import {extraGuideArticles6} from '@/lib/guide-articles-extra6';
 import {extraGuideArticles7} from '@/lib/guide-articles-extra7';
 
 const sourceGuides=[
+  ...guides500Squid,
+  ...guides500Livebait,
+  ...guides500Float,
+  ...guides500Sayori,
+  ...guides500Haze,
+  ...guides500Care,
+  ...guides500Jigging,
+  ...guides500Fly,
+  ...guides500Cooking,
+  ...guides500Bass,
+  ...guides500Trip,
+
   ...bottomWorkshopGuides,
   ...speciesGrowthGuides,
   ...freshwaterGuides,...riverExpansionGuides,
