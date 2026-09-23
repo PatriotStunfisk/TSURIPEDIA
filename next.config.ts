@@ -6,6 +6,6 @@ const nextConfig: NextConfig = {
   typedRoutes: false,
   // Preserve normal local images, and allow versioned encyclopedia assets.
   images:{localPatterns:[{pathname:'/**',search:''},{pathname:'/images/fish/**'}]},
-  async redirects(){return Object.entries(fishSlugAliases).map(([alias,slug])=>({source:`/fish/${alias}`,destination:`/fish/${slug}`,permanent:true}));}
+  async redirects(){return Object.entries(fishSlugAliases).flatMap(([alias,slug])=>['','/en'].map(prefix=>({source:`${prefix}/fish/${alias}`,destination:`${prefix}/fish/${slug}`,permanent:true})));}
 };
 export default nextConfig;

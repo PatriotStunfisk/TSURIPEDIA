@@ -1,4 +1,5 @@
 'use client';
+import {englishSpotTypes} from '@/lib/i18n/common';
 import {previewMapCenter} from '@/lib/map-preview-position';
 import type {SpotActivity} from '@/lib/catches/activity';
 import {useEffect,useMemo,useRef,useState,type ReactNode} from 'react';
@@ -14,8 +15,9 @@ import {visibleSpotLabels} from '@/lib/spot-labels';
 import type {TackleShop} from '@/lib/tackle-shops';
 import type {Coordinates} from '@/lib/spot-distance';
 
-type Props={activity:Record<string,SpotActivity>;preview?:ReactNode;boundaryPrefectures:readonly string[];favorites:readonly string[];favoritesOnly:boolean;onFavoritesChange:(on:boolean)=>void;userLocation?:Coordinates&{accuracy?:number};shopsOn:boolean;onShopsChange:(on:boolean)=>void;shops:TackleShop[];selectedShop?:string;onShopSelect:(id:string)=>void;focus?:Coordinates;entries:FishingMapEntry[];selected?:string;onSelect:(slug:string)=>void;selectedTypes:SpotPrimaryType[];onTypesChange:(types:SpotPrimaryType[])=>void;fitKey:string};
-export default function InteractiveSpotMap({activity,preview,boundaryPrefectures,favorites,favoritesOnly,onFavoritesChange,userLocation,entries,shops,shopsOn,onShopsChange,selectedShop,onShopSelect,focus,selected,onSelect,selectedTypes,onTypesChange,fitKey}:Props){
+type Props={locale?:'ja'|'en';activity:Record<string,SpotActivity>;preview?:ReactNode;boundaryPrefectures:readonly string[];favorites:readonly string[];favoritesOnly:boolean;onFavoritesChange:(on:boolean)=>void;userLocation?:Coordinates&{accuracy?:number};shopsOn:boolean;onShopsChange:(on:boolean)=>void;shops:TackleShop[];selectedShop?:string;onShopSelect:(id:string)=>void;focus?:Coordinates;entries:FishingMapEntry[];selected?:string;onSelect:(slug:string)=>void;selectedTypes:SpotPrimaryType[];onTypesChange:(types:SpotPrimaryType[])=>void;fitKey:string};
+export default function InteractiveSpotMap({locale='ja',activity,preview,boundaryPrefectures,favorites,favoritesOnly,onFavoritesChange,userLocation,entries,shops,shopsOn,onShopsChange,selectedShop,onShopSelect,focus,selected,onSelect,selectedTypes,onTypesChange,fitKey}:Props){
+ const english=locale==='en';
  const root=useRef<HTMLDivElement>(null),map=useRef<Leaflet.Map|null>(null),markers=useRef<Leaflet.LayerGroup|null>(null);
  const [revision,setRevision]=useState(0);
  const [ready,setReady]=useState(false),[failed,setFailed]=useState(false),[attempt,setAttempt]=useState(0);
@@ -62,11 +64,11 @@ export default function InteractiveSpotMap({activity,preview,boundaryPrefectures
    const instance=map.current,position=L.latLng(userLocation.lat,userLocation.lng);
    layer=L.layerGroup().addTo(instance);
    if(userLocation.accuracy!==undefined&&Number.isFinite(userLocation.accuracy)&&userLocation.accuracy>0)L.circle(position,{radius:userLocation.accuracy,color:'#1677ff',weight:1,fillColor:'#1677ff',fillOpacity:.1,interactive:false}).addTo(layer);
-   L.marker(position,{title:'現在地',alt:'現在地',zIndexOffset:2000,icon:L.divIcon({className:s.currentLocation,html:'<span></span>',iconSize:[20,20],iconAnchor:[10,10]})}).bindTooltip('現在地（端末の測位による概算）',{direction:'top',offset:[0,-10]}).addTo(layer);
+   L.marker(position,{title:english?'Your location':'現在地',alt:english?'Your location':'現在地',zIndexOffset:2000,icon:L.divIcon({className:s.currentLocation,html:'<span></span>',iconSize:[20,20],iconAnchor:[10,10]})}).bindTooltip(english?'Your approximate location':'現在地（端末の測位による概算）',{direction:'top',offset:[0,-10]}).addTo(layer);
    instance.setView(position,Math.max(instance.getZoom(),12));
   });
   return ()=>{cancelled=true;layer?.remove();};
- },[ready,userLocation]);
+ },[ready,userLocation,english]);
  useEffect(()=>{
   if(!ready)return;let cancelled=false;
   import('leaflet').then(L=>{
@@ -87,15 +89,15 @@ export default function InteractiveSpotMap({activity,preview,boundaryPrefectures
     if(group.length>1){
      const center=L.latLngBounds(group.map(e=>[e.lat,e.lng])).getCenter();
      if(!renderBounds.contains(center))continue;
-     const marker=L.marker(center,{title:`${group.length}件の地点を表示`,alt:`${group.length}件の地点を表示`,icon:L.divIcon({className:s.clusterPin,html:String(group.length),iconSize:[38,38],iconAnchor:[19,19]})}).addTo(layer);
+     const marker=L.marker(center,{title:english?`${group.length} locations`:`${group.length}件の地点を表示`,alt:english?`${group.length} locations`:`${group.length}件の地点を表示`,icon:L.divIcon({className:s.clusterPin,html:String(group.length),iconSize:[38,38],iconAnchor:[19,19]})}).addTo(layer);
      marker.bindPopup(()=>{const choices=document.createElement('div');choices.style.maxHeight='200px';choices.style.overflowY='auto';
      for(const e of group){const button=document.createElement('button');button.type='button';button.textContent=e.name;button.style.cssText='display:block;padding:12px;width:100%;text-align:left;border:0;background:white;cursor:pointer';button.onclick=()=>{instance.closePopup();callback.current(e.slug)};choices.appendChild(button);}
      return choices;});
-     marker.getElement()?.setAttribute('aria-label',`${group.length}件の地点を表示`);continue;
+     marker.getElement()?.setAttribute('aria-label',english?`${group.length} locations`:`${group.length}件の地点を表示`);continue;
     }
-    const entry=group[0],kind=markerKinds[markerKind(entry)],chosen=entry.slug===selected,isFavorite=favoriteSet.has(entry.slug);
+    const entry=group[0],kind={...markerKinds[markerKind(entry)],...(english?{label:englishSpotTypes[markerKind(entry)],symbol:({boat:'B','sea-park':'P','sea-pond':'F',port:'H',pier:'P',beach:'S',rock:'R',estuary:'E',fresh:'L',area:'A',other:'•'})[markerKind(entry)]}:{})},chosen=entry.slug===selected,isFavorite=favoriteSet.has(entry.slug);
     if(!renderBounds.contains(displayLatLng(entry)))continue;
-    const text=document.createElement('span');text.textContent=`${kind.label}：${entry.name}${activity[entry.slug]?.level==='hot'?'（HOT）':activity[entry.slug]?'（最近の釣果あり）':''}${isFavorite?'（お気に入り）':''}${chosen?'（選択中）':''}`;
+    const text=document.createElement('span');text.textContent=`${kind.label}：${entry.name}${activity[entry.slug]?.level==='hot'?'（HOT）':activity[entry.slug]?(english?' (Recent catches)':'（最近の釣果あり）'):''}${isFavorite?(english?' (Saved)':'（お気に入り）'):''}${chosen?(english?' (Selected)':'（選択中）'):''}`;
     const tip=document.createElement('span');tip.textContent=labels.has(entry.slug)?entry.name:text.textContent;
     const display=displayLatLng(entry);
     if(!display.equals(L.latLng(entry.lat,entry.lng),1e-8)){L.polyline([[entry.lat,entry.lng],display],{color:kind.color,weight:1.5,opacity:.65,interactive:false}).addTo(layer);}
@@ -103,9 +105,9 @@ export default function InteractiveSpotMap({activity,preview,boundaryPrefectures
     marker.getElement()?.setAttribute('aria-label',text.textContent);
    }
    // Shops are a separate retail layer, excluded from fishing-spot clusters and totals.
-   for(const shop of shops){if(!renderBounds.contains([shop.lat,shop.lng]))continue;const chosen=shop.id===selectedShop;const label=`釣具店：${shop.name}${chosen?'（選択中）':''}`;const tip=document.createElement('span');tip.textContent=label;const marker=L.marker([shop.lat,shop.lng],{title:label,alt:label,zIndexOffset:chosen?1200:100,icon:L.divIcon({className:`${s.mapPin} ${s.shopPin} ${chosen?s.selectedPin:''}`,html:'店',iconSize:[30,30],iconAnchor:[15,15]})}).bindTooltip(tip).on('click',()=>shopCallback.current(shop.id)).addTo(layer);marker.getElement()?.setAttribute('aria-label',label);}
+   for(const shop of shops){if(!renderBounds.contains([shop.lat,shop.lng]))continue;const chosen=shop.id===selectedShop;const label=`釣具店：${shop.name}${chosen?(english?' (Selected)':'（選択中）'):''}`;const tip=document.createElement('span');tip.textContent=label;const marker=L.marker([shop.lat,shop.lng],{title:label,alt:label,zIndexOffset:chosen?1200:100,icon:L.divIcon({className:`${s.mapPin} ${s.shopPin} ${chosen?s.selectedPin:''}`,html:'店',iconSize:[30,30],iconAnchor:[15,15]})}).bindTooltip(tip).on('click',()=>shopCallback.current(shop.id)).addTo(layer);marker.getElement()?.setAttribute('aria-label',label);}
   });return ()=>{cancelled=true};
- },[activity,favorites,points,entries,shops,selectedShop,focus,ready,selected,revision,fitKey,userLocation]);
+ },[activity,favorites,points,entries,shops,selectedShop,focus,ready,selected,revision,fitKey,userLocation,english]);
  // Pan only on a selection or an overlay size change, never on map drag/zoom.
  useEffect(()=>{
   if(!ready||(!selected&&!selectedShop)||!root.current||!map.current)return;
@@ -121,5 +123,6 @@ export default function InteractiveSpotMap({activity,preview,boundaryPrefectures
   });};pan();const observer=typeof ResizeObserver!=='undefined'?new ResizeObserver(pan):undefined;observer?.observe(card);observer?.observe(canvas);
   return()=>{cancelled=true;cancelAnimationFrame(frame);observer?.disconnect();};
  },[ready,selected,selectedShop]);
+ if(english)return <div className={s.mapFrame}><div className={s.mapViewport}><div ref={root} className={s.liveMap} aria-label="Fishing map of Japan"/>{preview}</div>{failed&&<p role="status">Some map tiles could not load. <button onClick={()=>{fittedPoints.current=null;setAttempt(n=>n+1)}}>Retry map</button> The list remains available.</p>}{!points.length&&<p role="status">No mapped locations match these filters.</p>}<div className={s.legend} role="group" aria-label="Fishing spot types"><button onClick={()=>onTypesChange(Object.keys(markerKinds) as SpotPrimaryType[])}>Select all</button><button onClick={()=>onTypesChange([])}>Clear all</button>{Object.entries(markerKinds).map(([id,k])=><button key={id} aria-pressed={selectedTypes.includes(id as SpotPrimaryType)} onClick={()=>onTypesChange(selectedTypes.includes(id as SpotPrimaryType)?selectedTypes.filter(t=>t!==id):[...selectedTypes,id as SpotPrimaryType])}><i style={{background:k.color}} aria-hidden="true">●</i>{englishSpotTypes[id as SpotPrimaryType]}</button>)}<button aria-pressed={favoritesOnly} onClick={()=>onFavoritesChange(!favoritesOnly)}>☆ Saved only</button></div><p>{boundaryKey&&<>Dashed lines are approximate prefectural boundaries, not fishing permissions. <a href="https://github.com/amay077/JapanPrefGeoJson" target="_blank" rel="noreferrer">Boundary data ↗</a> </>}Numbered markers group nearby locations. ★ indicates a saved spot. Pins show reference positions, not permitted fishing boundaries or entrances. Map data © OpenStreetMap contributors.</p></div>;
  return <div className={s.mapFrame}><div className={s.mapViewport}><div ref={root} className={s.liveMap} aria-label="釣り場の地図"/>{preview}</div>{failed&&<p role="status">地図を読み込めない部分があります。<button type="button" onClick={()=>{fittedPoints.current=null;setAttempt(n=>n+1);}}>地図を再読み込み</button> 下の一覧からも探せます。</p>}{favoritesOnly&&favorites.length===0?<p role="status">お気に入りの釣り場はまだありません。</p>:!entries.some(hasCoordinates)&&!shops.length&&<p role="status">現在の条件には位置登録のある地点がありません。下の一覧で地域と公式案内を確認できます。</p>}<div className={s.legend} role="group" aria-label="釣り場タイプの複数選択"><button onClick={()=>onTypesChange(Object.keys(markerKinds) as SpotPrimaryType[])}>すべて選択</button><button onClick={()=>onTypesChange([])}>すべて解除</button>{Object.entries(markerKinds).map(([id,k])=><button key={id} aria-pressed={selectedTypes.includes(id as SpotPrimaryType)} onClick={()=>onTypesChange(selectedTypes.includes(id as SpotPrimaryType)?selectedTypes.filter(t=>t!==id):[...selectedTypes,id as SpotPrimaryType])}><i style={{background:k.color}}>{k.symbol}</i>{k.label}</button>)}<button className={s.shopChip} aria-pressed={shopsOn} onClick={()=>onShopsChange(!shopsOn)}><i>店</i>釣具店{shopsOn&&<small> {shops.length}</small>}</button><button className={s.favoriteChip} aria-pressed={favoritesOnly} onClick={()=>onFavoritesChange(!favoritesOnly)}>☆ お気に入りのみ{favorites.length>0&&<small>{favorites.length}</small>}</button></div><p>{boundaryKey&&<>破線は選択地域の概略境界です。 <a href="https://github.com/amay077/JapanPrefGeoJson" target="_blank" rel="noreferrer">境界データ</a>（簡略化・釣り可能区域ではありません）。</>}数字の丸印は近接地点の一覧を開きます。黒枠は選択中。★はお気に入り。{userLocation&&'青い点は現在地、薄い円は位置精度の目安です。'}同じ位置の地点は拡大時に少し離し、線で登録位置を示します。マーカーは登録地点の参考位置です。釣り可能範囲や入場口を示すものではありません。地図を拡大しても未登録の釣り場は表示されません。</p></div>;
 }

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {getMethodTackle} from '@/lib/method-tackle';
 import {fishCatalog} from '@/lib/fish-registry';
 import {getFishMethodSlugs} from '@/lib/fish-methods';
-import s from '@/app/gear/gear.module.css';
+import s from '@/app/(ja)/gear/gear.module.css';
 
 export default function MethodTackle({slug}:{slug:string}){
  const data=getMethodTackle(slug);if(!data)return null;const {method,specs}=data;

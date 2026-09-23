@@ -19,7 +19,7 @@ import InteractiveSpotMap from './InteractiveSpotMap';
 import SpotMapPreview from './SpotMapPreview';
 import {distanceKm,hasCoordinates,sortByDistance,type Coordinates} from '@/lib/spot-distance';
 
-export default function SpotMap({mapEntries,shops=[],nearSpot,initialShops=false,initialFavorites=false,initialQuery='',initialFish='',initialMethod='',initialRecent=false,catchFishOptions=[],fishOptions=[],guideIndex={},initialKind='all',fishNames={},methodNames={},guideNames={},cookingSlugs=[]}:{mapEntries:FishingMapEntry[];shops?:TackleShop[];nearSpot?:string;initialShops?:boolean;initialFavorites?:boolean;initialKind?:'all'|MapEntryType;initialQuery?:string;initialFish?:string;initialMethod?:string;initialRecent?:boolean;catchFishOptions?:{slug:string;name:string;aliases?:string[]}[];fishOptions?:{value:string;label:string}[];guideIndex?:Record<string,string[]>;fishNames?:Record<string,string>;methodNames?:Record<string,string>;guideNames?:Record<string,string>;cookingSlugs?:string[]}){
+export default function SpotMap({mapEntries,shops=[],nearSpot,initialShops=false,initialFavorites=false,initialQuery='',initialPrefecture='',initialFish='',initialMethod='',initialRecent=false,catchFishOptions=[],fishOptions=[],guideIndex={},initialKind='all',fishNames={},methodNames={},guideNames={},cookingSlugs=[]}:{mapEntries:FishingMapEntry[];shops?:TackleShop[];nearSpot?:string;initialShops?:boolean;initialFavorites?:boolean;initialKind?:'all'|MapEntryType;initialQuery?:string;initialPrefecture?:string;initialFish?:string;initialMethod?:string;initialRecent?:boolean;catchFishOptions?:{slug:string;name:string;aliases?:string[]}[];fishOptions?:{value:string;label:string}[];guideIndex?:Record<string,string[]>;fishNames?:Record<string,string>;methodNames?:Record<string,string>;guideNames?:Record<string,string>;cookingSlugs?:string[]}){
  const favorites=useSpotFavorites();const [favoritesOnly,setFavoritesOnly]=useState(initialFavorites);
  const [selectedTypes,setSelectedTypes]=useState<SpotPrimaryType[]>(Object.keys(markerKinds) as SpotPrimaryType[]);
  const [shopsOn,setShopsOn]=useState(initialShops),[selectedShop,setSelectedShop]=useState(''),[restored,setRestored]=useState(false);
@@ -35,7 +35,7 @@ export default function SpotMap({mapEntries,shops=[],nearSpot,initialShops=false
  const selectSpot=(slug:string)=>{setCatchScroll(0);setSelectedShop('');setSelected(slug);setPreviewOpen(true);};
  const selectShop=(id:string)=>{setSelectedShop(id);setPreviewOpen(true);};
  const [kind,setKind]=useState<'all'|MapEntryType>(initialKind);
- const [region,setRegion]=useState('');const [prefecture,setPrefecture]=useState('');const [method,setMethod]=useState(initialMethod);const [terrain,setTerrain]=useState('');const [beginner,setBeginner]=useState(false);const [family,setFamily]=useState(false);
+ const [region,setRegion]=useState('');const [prefecture,setPrefecture]=useState(initialPrefecture);const [method,setMethod]=useState(initialMethod);const [terrain,setTerrain]=useState('');const [beginner,setBeginner]=useState(false);const [family,setFamily]=useState(false);
  const fishingMapFish=[{value:'すべて',label:'すべて'},...fishOptions];
  const [fish,setFish]=useState(initialFish||'すべて');
  const [recentOnly,setRecentOnly]=useState(initialRecent);

@@ -8,3 +8,7 @@
 .chips .relatedFishLink{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;background:#edf4f7;border:1px solid #d2e2e9;border-radius:9px;color:#17678a;font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:3px}.chips .relatedFishLink:hover{background:#dceff6}.chips .relatedFishLink:focus-visible{outline:2px solid #17678a;outline-offset:2px}
 
 @media(max-width:620px){.header{gap:12px;padding-inline:16px}}
+
+/* Compact language control shared by both static language roots. */
+.languageSwitch{flex-shrink:0;white-space:nowrap;font-size:12px;font-weight:700;padding:7px 9px;border:1px solid #cadde4;border-radius:9px;text-decoration:none;color:#17445a;background:#fff}.srOnly{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:700px){.header .languageSwitch{font-size:11px;padding:6px}.header .mobileQuest{font-size:11px;padding:8px}}
+@media(max-width:420px){.header:not(.englishHeader){gap:8px;padding-inline:12px}.header:not(.englishHeader) .brand{flex:0 0 100px;min-width:0}.header:not(.englishHeader) .brand img{width:112px!important}.header:not(.englishHeader) .languageSwitch{max-width:60px;white-space:normal;text-align:center}.header:not(.englishHeader) .mobileQuest{padding:8px 7px}}

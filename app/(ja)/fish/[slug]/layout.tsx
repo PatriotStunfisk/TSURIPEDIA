@@ -1,3 +1,4 @@
+import {languageAlternates} from '@/lib/i18n/routes';
 import {siteUrl as base} from '@/lib/site-url';
 import type {Metadata} from 'next';
 import {getFishProfile as getFish} from '@/lib/fish-registry';
@@ -10,7 +11,7 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   if(!f)return {};
   const url=`/fish/${slug}`;
   return {
-    alternates:{canonical:url},
+    alternates:{canonical:url,languages:languageAlternates(url)},
     keywords:f.hazard?[f.name,`${f.name} 見分け方`,`${f.name} 危険部位`,'危険魚','魚図鑑']:[f.name,`${f.name} 釣り`,`${f.name} 釣り方`,`${f.name} 旬`,`${f.name} 仕掛け`,`${f.name} 釣具`,'UOLINK','ウオリンク','魚図鑑'],
     openGraph:{
       url:base+url,

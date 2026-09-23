@@ -1,3 +1,4 @@
+import {languageAlternates} from '@/lib/i18n/routes';
 import RelatedSpots from '@/components/RelatedSpots';
 import TackleDiagram from '@/components/TackleDiagram';
 import {amazonSearchUrl,tachiuoRodSearch} from '@/lib/affiliate-products';
@@ -21,7 +22,7 @@ const amazonByMethod:Record<string,{rig:string;bait:string}>={
 };
 
 export function generateStaticParams(){return Object.keys(methodDetails).map(slug=>({slug}))}
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const m=methodDetails[slug];return {title:m?`${m.name}｜釣り方`:'釣り方',description:m?.overview,alternates:{canonical:`/methods/${slug}`}}}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const m=methodDetails[slug];return {title:m?`${m.name}｜釣り方`:'釣り方',description:m?.overview,alternates:{canonical:`/methods/${slug}`,languages:languageAlternates(`/methods/${slug}`)}}}
 
 export default async function Page({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;const m=methodDetails[slug];if(!m)notFound();const shop=amazonByMethod[slug];
