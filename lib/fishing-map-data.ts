@@ -1,4 +1,5 @@
 import {coastReviewEntries} from './fishing-map-coast-review-20260921';
+import {rockReviewEntries} from './fishing-map-rock-review-20260924';
 import {septemberBoatEntries} from './fishing-map-boat-september';
 import {kansaiReopeningEntries} from './fishing-map-kansai-reopening';
 import {freshIslandEntries} from './fishing-map-fresh-islands';
@@ -74,6 +75,7 @@ export type FishingMapEntry={
 };
 
 const sourceEntries:FishingMapEntry[]=[
+  ...rockReviewEntries,
   ...coastReviewEntries,
   ...septemberBoatEntries,
   ...kansaiReopeningEntries,
