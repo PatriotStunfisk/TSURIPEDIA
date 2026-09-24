@@ -17,3 +17,8 @@
 `variants` はメーカー公表値からの代表仕様。価格・JAN・カラー列を除き、同仕様の色違いはまとめる。表に全型番を掲載しているとは表示しない。写真と代表仕様の型番が必ず同一であるとは扱わず、写真はシリーズ代表と明示する。未知の値は補完しない。
 
 一覧はGET検索、24件ごとのサーバーページ分割。ページ移動でも絞り込みを保持し、全製品の仕様表をクライアントへ送らない。サイト検索・sitemap・静的詳細ページは共通レジストリから派生する。
+
+## Colors and contextual product cards
+- Optional `colors: {name, models[]}[]` preserves official color names/codes and model associations. An empty model list means only a series-level color is confirmed, not availability for every size. No approximate color swatches or recolored product photos are generated.
+- 66 DAIWA/Rapala series have color entries checked against the official product pages used by the catalog on 2026-09-24. Unknown color/model combinations are omitted.
+- `selectRelatedGear` filters explicit `methods` / `fish` relationships and prioritizes category diversity. `RelatedGear` shares the existing product images, detail links and central Amazon link helpers on method/fish pages. It does not claim the selected products form a compatible tackle set.

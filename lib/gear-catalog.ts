@@ -1,5 +1,5 @@
 import expansion from './gear-catalog-expansion.json';
-export type GearProduct={slug:string;brand:string;name:string;kind:GearKind;subtype?:GearSubtype;summary:string;specs:Record<string,string>;variants?:{headers:string[];rows:string[][]};methods:string[];fish:string[];source:string;relatedGear?:string[];asin?:string;amazonQuery?:string;line:string;query:string;accessory:string;accessoryQuery:string;check:string;image?:{src:string;alt:string;credit:string;permission:string;caption?:string}};
+export type GearProduct={slug:string;brand:string;name:string;kind:GearKind;subtype?:GearSubtype;summary:string;colors?:{name:string;models:string[]}[];specs:Record<string,string>;variants?:{headers:string[];rows:string[][]};methods:string[];fish:string[];source:string;relatedGear?:string[];asin?:string;amazonQuery?:string;line:string;query:string;accessory:string;accessoryQuery:string;check:string;image?:{src:string;alt:string;credit:string;permission:string;caption?:string}};
 export const gearKindLabels={rod:'ロッド',reel:'リール',lure:'ルアー',egi:'エギ',line:'ライン',cooler:'クーラー',tool:'小物',rig:'仕掛け・針',storage:'バッグ・ケース',net:'ランディング用品'} as const;
 export type GearKind=keyof typeof gearKindLabels;
 export const gearSubtypeLabels={minnow:'ミノー',metalJig:'メタルジグ',vibration:'バイブレーション',pencil:'ペンシル',popper:'ポッパー',crank:'クランク',spoon:'スプーン',spinner:'スピナー・スピナーベイト',worm:'ワーム',taiRubber:'タイラバ',otherLure:'その他ルアー',pe:'PEライン',nylon:'ナイロン',fluoro:'フロロカーボン',leader:'リーダー',otherLine:'金属・その他ライン'} as const;
@@ -493,4 +493,13 @@ export const gearCatalog:GearProduct[]=[
 , ...expansion as GearProduct[]];
 export const gearVerifiedAt='2026-09-24';
 export function getGearProduct(slug:string){return gearCatalog.find(p=>p.slug===slug)}
-export function filterGear(q:{q?:string;brand?:string;kind?:string;subtype?:string;method?:string;fish?:string}){const terms=(q.q??'').normalize('NFKC').toLowerCase().trim().split(/\s+/).filter(Boolean);return gearCatalog.filter(p=>(!q.brand||p.brand===q.brand)&&(!q.kind||p.kind===q.kind)&&(!q.subtype||getGearSubtype(p)===q.subtype)&&(!q.method||p.methods.includes(q.method))&&(!q.fish||p.fish.includes(q.fish))&&terms.every(t=>`${p.brand} ${p.name} ${p.summary} ${gearKindLabels[p.kind]} ${getGearSubtype(p)?gearSubtypeLabels[getGearSubtype(p)!]:''} ${p.variants?.rows.map(row=>row[0]).join(' ')??''}`.normalize('NFKC').toLowerCase().includes(t)))}
+export function filterGear(q:{q?:string;brand?:string;kind?:string;subtype?:string;method?:string;fish?:string}){const terms=(q.q??'').normalize('NFKC').toLowerCase().trim().split(/\s+/).filter(Boolean);return gearCatalog.filter(p=>(!q.brand||p.brand===q.brand)&&(!q.kind||p.kind===q.kind)&&(!q.subtype||getGearSubtype(p)===q.subtype)&&(!q.method||p.methods.includes(q.method))&&(!q.fish||p.fish.includes(q.fish))&&terms.every(t=>`${p.brand} ${p.name} ${p.summary} ${gearKindLabels[p.kind]} ${getGearSubtype(p)?gearSubtypeLabels[getGearSubtype(p)!]:''} ${p.colors?.map(c=>c.name).join(' ')??''} ${p.variants?.rows.map(row=>row[0]).join(' ')??''}`.normalize('NFKC').toLowerCase().includes(t)))}
+
+// Explicit product relationships only: never infer compatibility from a shared fish.
+export function selectRelatedGear({method,fish,limit=6}:{method?:string;fish?:string;limit?:number}){
+ const candidates=gearCatalog.filter(p=>(!method||p.methods.includes(method))&&(!fish||p.fish.includes(fish)));
+ const selected:GearProduct[]=[];
+ for(const kind of ['rod','reel','lure','egi','rig','line','tool','cooler','net','storage']){const p=candidates.find(p=>p.kind===kind);if(p)selected.push(p);if(selected.length>=limit)break}
+ for(const p of candidates){if(selected.length>=limit)break;if(!selected.includes(p))selected.push(p)}
+ return selected;
+}

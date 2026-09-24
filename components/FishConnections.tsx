@@ -1,3 +1,5 @@
+import RelatedGear from './RelatedGear';
+import {selectRelatedGear} from '@/lib/gear-catalog';
 import {selectHubGuides} from '@/lib/guide-selection';
 import RelatedSpots from './RelatedSpots';
 import MethodTackle from './MethodTackle';
@@ -27,5 +29,5 @@ export default function FishConnections({slug}:{slug:string}){
       {cooking&&<><span>COOKING</span><h2>捌き方と料理</h2><Link href={`/cooking/${slug}`} className="gearCta">{cooking.name}の捌き方・料理を見る →</Link>{cooking.recipes.map(recipe=><Link key={recipe.slug} href={`/cooking/${slug}/${recipe.slug}`} className="methodLink"><div><b>{recipe.name}</b></div><em>→</em></Link>)}</>}
       {related.length>0&&<><h2>{hasEditorialRelated?'関連する魚の図鑑':'同じ釣り方で狙える魚'}</h2>{related.slice(0,6).map(fish=><Link key={fish.slug} href={`/fish/${fish.slug}`} className="methodLink"><div><b>{fish.name}</b></div><em>→</em></Link>)}</>}
     </aside>}
-  </section>{methods[0]&&<section aria-label="この魚を釣るための道具"><h2>{getFishProfile(slug)?.name}を釣るための道具</h2><p>岸と船では道具が異なります。まず代表的な釣法の一式を確認し、別の釣法は上のリンクから選んでください。</p><MethodTackle slug={methods[0].slug}/></section>}{methods[0]&&<AffiliateProducts methods={[methods[0].slug]} title={`${getFishProfile(slug)?.name}の釣りで使う商品候補`}/>}</>;
+  </section>{methods[0]&&<section aria-label="この魚を釣るための道具"><h2>{getFishProfile(slug)?.name}を釣るための道具</h2><p>岸と船では道具が異なります。まず代表的な釣法の一式を確認し、別の釣法は上のリンクから選んでください。</p><MethodTackle slug={methods[0].slug}/></section>}<RelatedGear fish={slug} title={`${getFishProfile(slug)?.name}を狙う釣具図鑑`} limit={4}/>{!selectRelatedGear({fish:slug}).length&&methods[0]&&<AffiliateProducts methods={[methods[0].slug]} title={`${getFishProfile(slug)?.name}の釣りで使う商品候補`}/>}</>;
 }

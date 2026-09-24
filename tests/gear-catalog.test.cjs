@@ -34,3 +34,12 @@ test('series catalog validates taxonomy, sources, representative specifications 
  assert.ok(filterGear({kind:'lure',subtype:'metalJig'}).length>=10);
  for(const kind of ['line','cooler','tool','rig','storage','net'])assert.ok(filterGear({kind}).length>=5);
 });
+
+test('gear links use explicit relationships, diverse categories and verified colors',()=>{
+ const {selectRelatedGear,gearCatalog,filterGear}=require('../lib/gear-catalog');
+ const items=selectRelatedGear({method:'eging'});assert.ok(items.length>2);assert.ok(items.every(p=>p.methods.includes('eging')));assert.ok(new Set(items.map(p=>p.kind)).size>1);
+ assert.ok(selectRelatedGear({fish:'aji'}).every(p=>p.fish.includes('aji')));assert.equal(selectRelatedGear({method:'no-such-method'}).length,0);
+ const colors=gearCatalog.filter(p=>p.colors?.length);assert.ok(colors.length>=60);
+ for(const p of colors){assert.equal(new Set(p.colors.map(c=>c.name)).size,p.colors.length);assert.ok(p.colors.every(c=>c.name.trim().length&&Array.isArray(c.models)))}
+ assert.ok(filterGear({q:'ケイムラ',kind:'lure'}).some(p=>p.colors?.some(c=>c.name.includes('ケイムラ'))));
+});

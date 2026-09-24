@@ -6,3 +6,7 @@
 .tableScroll{overflow:auto;max-height:420px;overscroll-behavior:contain}.variantTable{border-collapse:collapse;min-width:100%;font-size:12px;line-height:1.6}.variantTable th,.variantTable td{padding:9px 12px;text-align:left;border-bottom:1px solid #dce7ec;white-space:nowrap}.variantTable thead th{position:sticky;top:0;background:#edf5f8;z-index:1}.variantTable tbody th{font-weight:600}.variantTable tr:nth-child(even){background:#f7fafb}
 
 .productHero .photoCaption{color:#526775}.specs>div{min-width:0;padding-right:10px}.specs dd{overflow-wrap:anywhere}
+
+.variantTable .colorModels{white-space:normal;min-width:220px;max-width:600px;overflow-wrap:anywhere}.content h3{font-size:17px;margin:6px 0;line-height:1.5}.inlineAmazon{display:block;margin:0 12px 14px;padding:9px 8px;border-radius:8px;background:#fff3d8;color:#704408;font-size:12px;text-align:center}@media(max-width:600px){.content h3{font-size:13px}.inlineAmazon{margin:0 8px 10px;font-size:11px}}
+
+.colorDetails{margin-top:16px}.colorDetails summary{cursor:pointer;font-size:14px;color:#176282;margin-bottom:12px}
