@@ -19,3 +19,13 @@ test('search variants stay usable and followable without generating unlimited in
  assert.ok(listing.pageHref(1).includes('fish=aji'));assert.ok(!listing.pageHref(1).includes('page='));assert.ok(!listing.pageHref(1).includes('ignored'));
  assert.equal(guideListingMetadata({q:['x','y']}).robots.index,true);
 });
+test('guide ordering is deterministic, filters reading time, and retains choices across pages',()=>{
+ const short=getGuideListing({sort:'short'}).results;
+ assert.ok(short.every((g,i)=>!i||g.readingMinutes>=short[i-1].readingMinutes));
+ const deep=getGuideListing({sort:'deep',time:'long'});
+ assert.ok(deep.results.every((g,i)=>g.readingMinutes>3&&(!i||g.readingMinutes<=deep.results[i-1].readingMinutes)));
+ assert.match(deep.pageHref(2),/sort=deep/);assert.match(deep.pageHref(2),/time=long/);
+ assert.deepEqual(getGuideListing({sort:'invalid'}).results,getGuideListing({}).results);
+ assert.equal(guideListingMetadata({sort:'deep'}).robots.index,false);
+ assert.equal(new Set(short.map(g=>g.slug)).size,short.length);
+});

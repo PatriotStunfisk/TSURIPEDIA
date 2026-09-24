@@ -1,3 +1,4 @@
-import LanguageSwitch from '../LanguageSwitch';
-export function EnglishHeader(){return <header className="header englishHeader"><a className="brand" href="/en"><img src="/brand/uolink-logo-header-small.webp" width="138" height="46" alt="UOLINK"/></a><nav aria-label="Main navigation"><a href="/en/fish">Fish</a><a href="/en/guide">Guides</a><a href="/en/methods">Methods</a><a href="/en/spots">Fishing map</a><a href="/en/cooking">Cooking</a></nav><LanguageSwitch/></header>}
-export function EnglishFooter(){return <footer className="footer"><div><strong>UOLINK</strong><p>Know the fish. Learn the method. Find your next fishing spot in Japan.</p></div><div className="footerLinks"><a href="/en/fish">Fish species</a><a href="/en/guide">Japan fishing guides</a><a href="/en/spots">Fishing map</a><a href="mailto:uolink.jp@gmail.com">Contact us</a></div><p>© 2026 UOLINK</p></footer>}
+import Header from '../Header';
+import Footer from '../Footer';
+export function EnglishHeader(){return <Header locale="en"/>}
+export function EnglishFooter(){return <Footer locale="en"/>}

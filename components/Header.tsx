@@ -1,3 +1,8 @@
 import LanguageSwitch from './LanguageSwitch';
 import HeaderShortcut from './HeaderShortcut';
-export default function Header(){return <header className="header"><a className="brand" href="/" style={{transform:'translate(-14px,-7px)'}}><img src="/brand/uolink-logo-header-small.webp" width="414" height="138" loading="eager" decoding="async" alt="UOLINK 魚から、釣りへつながる。" style={{display:'block',width:'138px',height:'auto',objectFit:'contain'}}/></a><nav><a href="/">ホーム</a><a href="/fish">魚図鑑</a><a href="/methods">釣り方</a><a href="/guide">釣りガイド</a><a href="/spots">釣り場マップ</a><a href="/gear">釣具</a><a href="/cooking">料理</a><a href="/quest">QUEST</a></nav><HeaderShortcut/><LanguageSwitch/><div className="headerActions"><a className="searchBtn" href="/fish">⌕ 魚・釣り場・釣り方を検索</a></div></header>}
+import MobileNavigation from './MobileNavigation';
+export default function Header({locale='ja'}:{locale?:'ja'|'en'}){
+ const en=locale==='en',base=en?'/en':'';
+ const links=en?[['/en','Home'],['/en/fish','Fish'],['/en/methods','Methods'],['/en/guide','Guides'],['/en/spots','Fishing map'],['/en/cooking','Cooking']]:[['/','ホーム'],['/fish','魚図鑑'],['/methods','釣り方'],['/guide','釣りガイド'],['/spots','釣り場マップ'],['/gear','釣具'],['/cooking','料理'],['/quest','QUEST']];
+ return <header className="header"><a className="brand" href={base||'/'}><img src="/brand/uolink-logo-header-small.webp" width="414" height="138" loading="eager" decoding="async" alt={en?'UOLINK':'UOLINK 魚から、釣りへつながる。'}/></a><nav className="desktopNavigation" aria-label={en?'Main navigation':'メインナビゲーション'}>{links.map(([href,label])=><a key={href} href={href}>{label}</a>)}</nav><HeaderShortcut locale={locale}/><LanguageSwitch/><MobileNavigation locale={locale}/></header>;
+}
