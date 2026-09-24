@@ -25,3 +25,10 @@ test('source failures remain isolated and never turn into invented data',async()
  const old=global.fetch;global.fetch=async url=>{if(url.includes('forecast'))return {ok:true,json:async()=>[]};throw Error('network')};
  try{const result=await getCityWeather(weatherCities[5],'2026-09-24');assert.equal(result.forecast,null);assert.equal(result.tide,null)}finally{global.fetch=old}
 });
+
+test('weather icons summarize the main forecast without promoting localized exceptions',()=>{
+ const {describeWeather}=require('../lib/weather-display');
+ assert.deepEqual(describeWeather('晴れ 夜 くもり 所により 雨'),{kinds:['sun','cloud'],label:'晴れ・曇り'});
+ assert.equal(describeWeather('くもり 後 雨').label,'曇り・雨');
+ assert.deepEqual(describeWeather('雪').kinds,['snow']);
+});
