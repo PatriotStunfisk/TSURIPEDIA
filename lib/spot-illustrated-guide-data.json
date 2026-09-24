@@ -1543,5 +1543,35 @@
     "slug": "harbor-tunegamimiko",
     "method": "choinage",
     "topic": "bottom"
+  },
+  {
+    "slug": "mukogawa-ichimonji",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "sakai-umizuri-terrace",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "kaizuka-artificial-island",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "minamiashiya-east-shore",
+    "method": "uki",
+    "topic": "float"
+  },
+  {
+    "slug": "kamoike-umizuri",
+    "method": "douzuki",
+    "topic": "bottom"
+  },
+  {
+    "slug": "tomakomai-ippon",
+    "method": "sabiki",
+    "topic": "layers"
   }
 ]
