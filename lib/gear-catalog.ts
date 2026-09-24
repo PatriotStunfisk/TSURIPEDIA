@@ -1,5 +1,6 @@
 import expansion from './gear-catalog-expansion.json';
-export type GearProduct={slug:string;brand:string;name:string;kind:GearKind;subtype?:GearSubtype;summary:string;colors?:{name:string;models:string[]}[];specs:Record<string,string>;variants?:{headers:string[];rows:string[][]};methods:string[];fish:string[];source:string;relatedGear?:string[];asin?:string;amazonQuery?:string;line:string;query:string;accessory:string;accessoryQuery:string;check:string;image?:{src:string;alt:string;credit:string;permission:string;caption?:string}};
+import series from './gear-catalog-series.json';
+export type GearProduct={slug:string;brand:string;name:string;kind:GearKind;subtype?:GearSubtype;summary:string;colors?:{name:string;models:string[]}[];specs:Record<string,string>;variants?:{headers:string[];rows:string[][]};methods:string[];fish:string[];source:string;relatedGear?:string[];asin?:string;amazonQuery?:string;line:string;query:string;accessory:string;accessoryQuery:string;check:string;image?:{src:string;alt:string;credit:string;permission:string;caption?:string;flipX?:boolean}};
 export const gearKindLabels={rod:'ロッド',reel:'リール',lure:'ルアー',egi:'エギ',line:'ライン',cooler:'クーラー',tool:'小物',rig:'仕掛け・針',storage:'バッグ・ケース',net:'ランディング用品'} as const;
 export type GearKind=keyof typeof gearKindLabels;
 export const gearSubtypeLabels={minnow:'ミノー',metalJig:'メタルジグ',vibration:'バイブレーション',pencil:'ペンシル',popper:'ポッパー',crank:'クランク',spoon:'スプーン',spinner:'スピナー・スピナーベイト',worm:'ワーム',taiRubber:'タイラバ',otherLure:'その他ルアー',pe:'PEライン',nylon:'ナイロン',fluoro:'フロロカーボン',leader:'リーダー',otherLine:'金属・その他ライン'} as const;
@@ -151,6 +152,7 @@ export const gearCatalog:GearProduct[]=[
       "alt": "Major Craft 24 ソルパラ SPE-832Mの製品写真",
       "credit": "写真：Major Craft",
       "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "flipX": true,
       "caption": ""
     }
   },
@@ -455,6 +457,7 @@ export const gearCatalog:GearProduct[]=[
       "alt": "Rapala カウントダウン CD7 MTC",
       "credit": "写真：Rapala",
       "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "flipX": true,
       "caption": "MTC"
     }
   },
@@ -486,14 +489,15 @@ export const gearCatalog:GearProduct[]=[
       "alt": "Rapala カウントダウン リップレス CDL7 シリーズ写真・B",
       "credit": "写真：Rapala",
       "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "flipX": true,
       "caption": "シリーズ写真・B"
     }
   }
 
-, ...expansion as GearProduct[]];
+, ...expansion as GearProduct[], ...series as GearProduct[]];
 export const gearVerifiedAt='2026-09-24';
 export function getGearProduct(slug:string){return gearCatalog.find(p=>p.slug===slug)}
-export function filterGear(q:{q?:string;brand?:string;kind?:string;subtype?:string;method?:string;fish?:string}){const terms=(q.q??'').normalize('NFKC').toLowerCase().trim().split(/\s+/).filter(Boolean);return gearCatalog.filter(p=>(!q.brand||p.brand===q.brand)&&(!q.kind||p.kind===q.kind)&&(!q.subtype||getGearSubtype(p)===q.subtype)&&(!q.method||p.methods.includes(q.method))&&(!q.fish||p.fish.includes(q.fish))&&terms.every(t=>`${p.brand} ${p.name} ${p.summary} ${gearKindLabels[p.kind]} ${getGearSubtype(p)?gearSubtypeLabels[getGearSubtype(p)!]:''} ${p.colors?.map(c=>c.name).join(' ')??''} ${p.variants?.rows.map(row=>row[0]).join(' ')??''}`.normalize('NFKC').toLowerCase().includes(t)))}
+export function filterGear(input:{q?:string;brand?:string;kind?:string;subtype?:string;method?:string;fish?:string}){const q=normalizeGearFilters(input);const terms=(q.q??'').normalize('NFKC').toLowerCase().trim().split(/\s+/).filter(Boolean);return gearCatalog.filter(p=>(!q.brand||p.brand===q.brand)&&(!q.kind||p.kind===q.kind)&&(!q.subtype||getGearSubtype(p)===q.subtype)&&(!q.method||p.methods.includes(q.method))&&(!q.fish||p.fish.includes(q.fish))&&terms.every(t=>`${p.brand} ${p.name} ${p.summary} ${gearKindLabels[p.kind]} ${getGearSubtype(p)?gearSubtypeLabels[getGearSubtype(p)!]:''} ${p.colors?.map(c=>c.name).join(' ')??''} ${p.variants?.rows.map(row=>row[0]).join(' ')??''}`.normalize('NFKC').toLowerCase().includes(t)))}
 
 // Explicit product relationships only: never infer compatibility from a shared fish.
 export function selectRelatedGear({method,fish,limit=6}:{method?:string;fish?:string;limit?:number}){
@@ -503,3 +507,6 @@ export function selectRelatedGear({method,fish,limit=6}:{method?:string;fish?:st
  for(const p of candidates){if(selected.length>=limit)break;if(!selected.includes(p))selected.push(p)}
  return selected;
 }
+
+export function gearSubtypesForKind(kind:string){return kind==='lure'||kind==='line'?[...new Set(gearCatalog.filter(p=>p.kind===kind).map(getGearSubtype).filter((id):id is GearSubtype=>!!id))]:[]}
+export function normalizeGearFilters<T extends {kind?:string;subtype?:string}>(q:T):T{return {...q,subtype:gearSubtypesForKind(q.kind??'').includes(q.subtype as GearSubtype)?q.subtype:''}}

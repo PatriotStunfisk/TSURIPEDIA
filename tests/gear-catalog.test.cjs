@@ -19,7 +19,7 @@ test('expanded gear kinds can be filtered and explicit pairing exclusions are pr
 test('gear subtype filters and pagination retain distinct models without invalid page offsets',()=>{
  const {gearCatalog,filterGear,paginateGear,getGearSubtype}=require('../lib/gear-catalog');
  const minnow=filterGear({kind:'lure',subtype:'minnow'});assert.ok(minnow.length);assert.ok(minnow.every(p=>getGearSubtype(p)==='minnow'));
- assert.equal(filterGear({kind:'reel',subtype:'minnow'}).length,0);
+ assert.deepEqual(filterGear({kind:'reel',subtype:'minnow'}),filterGear({kind:'reel'}));
  for(const input of ['-1','0','NaN','1.2',undefined])assert.equal(paginateGear(gearCatalog,input).page,1);
  assert.ok(paginateGear(gearCatalog,'999999').page<=Math.ceil(gearCatalog.length/24));
  const many=Array.from({length:49},(_,i)=>({...gearCatalog[0],slug:String(i)}));
@@ -29,7 +29,7 @@ test('gear subtype filters and pagination retain distinct models without invalid
 test('series catalog validates taxonomy, sources, representative specifications and model search',()=>{
  const {gearCatalog,gearKindLabels,gearSubtypeLabels,filterGear}=require('../lib/gear-catalog');
  const sources=JSON.parse(fs.readFileSync(path.join(root,'docs/gear-image-sources.json'),'utf8'));
- for(const p of gearCatalog){assert.ok(gearKindLabels[p.kind]);if(p.subtype)assert.ok(gearSubtypeLabels[p.subtype]);assert.equal(new URL(p.source).protocol,'https:');assert.ok(sources.some(s=>s.slug===p.slug));if(p.variants){assert.ok(p.variants.rows.length);assert.ok(p.variants.rows.length<=24);assert.ok(p.image.caption.includes('シリーズ'));assert.ok(!p.variants.headers.some(h=>/JAN|価格/.test(h)))}}
+ for(const p of gearCatalog){assert.ok(gearKindLabels[p.kind]);if(p.subtype)assert.ok(gearSubtypeLabels[p.subtype]);assert.equal(new URL(p.source).protocol,'https:');assert.ok(sources.some(s=>s.slug===p.slug));if(p.variants){assert.ok(p.variants.rows.length);assert.equal(new Set(p.variants.rows.map(row=>JSON.stringify(row))).size,p.variants.rows.length);assert.ok(p.image.caption.includes('シリーズ'));assert.ok(!p.variants.headers.some(h=>/JAN|価格/.test(h)))}}
  assert.ok(filterGear({q:'TGベイト250'}).some(p=>p.slug==='daiwa-huz2stf'));
  assert.ok(filterGear({kind:'lure',subtype:'metalJig'}).length>=10);
  for(const kind of ['line','cooler','tool','rig','storage','net'])assert.ok(filterGear({kind}).length>=5);
@@ -42,4 +42,22 @@ test('gear links use explicit relationships, diverse categories and verified col
  const colors=gearCatalog.filter(p=>p.colors?.length);assert.ok(colors.length>=60);
  for(const p of colors){assert.equal(new Set(p.colors.map(c=>c.name)).size,p.colors.length);assert.ok(p.colors.every(c=>c.name.trim().length&&Array.isArray(c.models)))}
  assert.ok(filterGear({q:'ケイムラ',kind:'lure'}).some(p=>p.colors?.some(c=>c.name.includes('ケイムラ'))));
+});
+
+test('subtype choices belong to their selected kind and stale subtype URLs reset safely',()=>{
+ const {gearSubtypesForKind,normalizeGearFilters,filterGear}=require('../lib/gear-catalog');
+ assert.deepEqual(gearSubtypesForKind('rod'),[]);
+ assert.ok(gearSubtypesForKind('lure').includes('pencil'));
+ assert.ok(!gearSubtypesForKind('line').includes('pencil'));
+ assert.equal(normalizeGearFilters({kind:'rod',subtype:'pencil'}).subtype,'');
+ assert.deepEqual(filterGear({kind:'rod',subtype:'pencil'}),filterGear({kind:'rod'}));
+});
+test('new gear series group sizes and powers in existing model tables',()=>{
+ const {gearCatalog,getGearProduct}=require('../lib/gear-catalog');
+ assert.ok(gearCatalog.length>=513);
+ assert.equal(new Set(gearCatalog.map(p=>p.source)).size,gearCatalog.length);
+ const grappler=getGearProduct('shimano-grappler-type-j');assert.equal(grappler.variants.rows.length,20);
+ const emeraldas=gearCatalog.find(p=>p.kind==='rod'&&p.name==='エメラルダス MX');assert.ok(emeraldas.variants.rows.length>3);
+ assert.ok(emeraldas.variants.headers.some(h=>h.includes('全長')));
+ const makimaki=getGearProduct('hayabusa-jackeye-makimaki');assert.equal(makimaki.subtype,'metalJig');assert.ok(makimaki.colors.length);
 });
