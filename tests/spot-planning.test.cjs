@@ -30,3 +30,24 @@ test('place-specific guidance references real entries and preserves local restri
  assert.match(spotFieldGuides['coast-tibaotohamakou'].beforeYouGo.join(''),/エギング制限/);
  assert.match(spotFieldGuides['coast-hirosimatadanoumikou'].beforeYouGo.join(''),/電線/);
 });
+test('researched guides carry dated sources and preserve current venue restrictions',()=>{
+ const researched=require('../lib/spot-field-guides-researched.json');
+ assert.equal(Object.keys(researched).length,15);
+ for(const [slug,g] of Object.entries(researched)){
+  assert.ok(fishingMapEntries.some(x=>x.slug===slug));
+  assert.ok(g.features.length>=2&&g.approach.length>=3,slug);
+  assert.match(g.reviewedAt,/^\d{4}-\d{2}-\d{2}$/);
+  for(const source of g.sources)assert.equal(new URL(source.url).protocol,'https:');
+ }
+ assert.match(researched['wakasu-fishing'].features.join(''),/2025年8月31日.*営業を終了/);
+ assert.match(researched['naruohama'].beforeYouGo.join(''),/ルアー釣りは禁止/);
+ assert.match(researched['nanko-fishing-park'].features.join(''),/ルアー釣りは可能/);
+ assert.equal(fishingMapEntries.find(x=>x.slug==='minamiawaji-megafloat').closed,true);
+});
+
+test('documented facilities are not rendered as absent',()=>{
+ for(const id of ['naruohama','shimonoseki-fishing']){
+  const spot=fishingMapEntries.find(x=>x.slug===id);
+  assert.equal(spot.parking,true);assert.equal(spot.toilet,true);
+ }
+});

@@ -1,3 +1,4 @@
+import researchedGuides from './spot-field-guides-researched.json';
 import {kansaiNationalFieldGuides} from './spot-field-guides-kansai-national';
 import {coastalNextFieldGuides} from './spot-field-guides-coastal-next';
 import type {SpotFieldGuide} from './spot-planning';
@@ -240,3 +241,8 @@ export const spotFieldGuides:Record<string,SpotFieldGuide>={
     ]
   }
 };
+
+// Preserve existing local FAQs while replacing the researched editorial sections.
+for (const [slug, guide] of Object.entries(researchedGuides)) {
+ spotFieldGuides[slug] = {...spotFieldGuides[slug], ...guide};
+}

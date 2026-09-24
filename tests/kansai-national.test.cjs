@@ -24,7 +24,7 @@ test('new location sharing cards exist and Kansai destinations have practical de
  const manifest=require('../lib/sharing-images.json'),{spotFieldGuides}=require('../lib/spot-field-guides.ts');
  for(const e of added){const image=manifest[`/spots/${e.slug}`];assert.ok(image,e.slug);assert.ok(fs.existsSync(path.join(root,'public',image)));}
  for(const id of ['yodogawa-yagura-ryokuchi','wakayama-kousuimaru','nanko-fishing-park','tottopark-kojima']){
-  assert.ok(all.some(e=>e.slug===id));assert.equal(spotFieldGuides[id].approach.length,2);
+  assert.ok(all.some(e=>e.slug===id));assert.ok(spotFieldGuides[id].approach.length>=2);
  }
 });
 test('reopened Nanko is discoverable while unresolved restricted candidates are not introduced',()=>{

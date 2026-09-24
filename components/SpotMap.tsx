@@ -6,6 +6,7 @@ import {markerKind,markerKinds} from '@/lib/spot-markers';
 import type {SpotPrimaryType} from '@/lib/spot-classification';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+const SpotGuideDetails=dynamic(()=>import('./SpotGuideDetails'));
 const CatchReports=dynamic(()=>import('./CatchReports').then(m=>m.CatchReports));
 import SpotFavorite,{useSpotFavorites} from './SpotFavorite';
 import {japanRegions,prefectures,type JapanRegion} from '@/lib/japan-regions';
@@ -97,6 +98,7 @@ export default function SpotMap({mapEntries,shops=[],nearSpot,initialShops=false
     <section className={s.detailBlock}><h3>注意点</h3><ul>{active.caution.map(v=><li key={v}>{v}</li>)}</ul></section>
     <section className={s.detailBlock}><h3>魚・釣法・料理につなぐ</h3><div className={s.bestFor}>{active.fishSlugs?.map(slug=><Link key={slug} href={`/fish/${slug}`}>{fishNames[slug]??slug}の図鑑</Link>)}{active.fishSlugs?.filter(slug=>cookingSlugs.includes(slug)).map(slug=><Link key={'cooking-'+slug} href={`/cooking/${slug}`}>{fishNames[slug]??slug}の料理</Link>)}{active.methodSlugs?.map(slug=><Link key={slug} href={`/methods/${slug}`}>{methodNames[slug]??slug}</Link>)}</div></section>
     <p><Link href={`/spots/${active.slug}`}>{active.name}の釣り場ページを見る →</Link></p><div className={s.bestFor}>{relatedSpotGuideSlugs(active,guideIndex).map(slug=><Link key={slug} href={`/guide/${slug}`}>{guideNames[slug]??slug} →</Link>)}</div><a className={s.googleLink} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(active.googleQuery)}`} target="_blank" rel="noopener noreferrer">Googleマップで場所を確認 ↗</a>
+    {detailOpened&&!active.closed&&<SpotGuideDetails key={active.slug} slug={active.slug}/>}
     {detailOpened&&active.type!=='area'&&<CatchReports scrollRequest={catchScroll} key={active.slug} spotSlug={active.slug} canPost={!active.closed} options={{fish:catchFishOptions.length?catchFishOptions:Object.entries(fishNames).map(([slug,name])=>({slug,name})),methods:Object.entries(methodNames).map(([slug,name])=>({slug,name})),spots:[{slug:active.slug,name:active.name}]}}/>}
     <p className={s.positionFootnote}>ピンは位置の目安です。釣りの許可範囲や駐車位置を示すものではありません。{active.positionNote}</p>
    </>:<div className={s.panelEmpty}>条件を変えて釣り場を探してください。</div>}</aside>

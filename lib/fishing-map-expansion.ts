@@ -34,13 +34,13 @@ export const expansionSpots:FishingMapEntry[]=[
     "season": "対象魚・回遊によって変動",
     "beginner": true,
     "kids": true,
-    "parking": false,
-    "toilet": false,
+    "parking": true,
+    "toilet": true,
     "note": "管理施設の海づり広場。公式の魚こよみと日々の釣果を確認して狙いを決められます。",
     "googleQuery": "鳴尾浜臨海公園 海づり広場",
     "status": "営業日・臨時変更・使用できる仕掛けは公式案内を確認",
     "access": "兵庫県西宮市鳴尾浜3-13。駐車・設備・交通は公式アクセス案内で確認。",
-    "field": "護岸の管理釣り場。魚の掲載は当日の釣果や全釣法の使用許可を保証しません。",
+    "field": "約300mの護岸。海側に転落防止柵はなく、低い竿置きがあります。",
     "bestFor": [
       "サビキの入門",
       "公式釣果を見て釣行計画"
@@ -55,7 +55,7 @@ export const expansionSpots:FishingMapEntry[]=[
       "周囲の人や仕掛けとの間隔を確保"
     ],
     "verifiedAt": "2026-09-13",
-    "sources": [{
+    "sources": [{"label":"西宮市：海づり広場の駐車場・トイレ","url":"https://www.nishi.or.jp/kenko/shakaifukushi/barrier-fre/barrier-free-info/sports/umidurihiroba.html"},{
         "label": "鳴尾浜臨海公園：海づり広場の利用案内・釣果",
         "url": "https://www.naruohama-park.com/umizuri/"
       },{"label":"国土地理院：釣りエリアの位置を照合（2026-09-18）","url":"https://maps.gsi.go.jp/#18/34.692403/135.35888/&base=std&ls=std&disp=1"}]
