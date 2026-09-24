@@ -1,3 +1,4 @@
+import {gearCatalog} from '@/lib/gear-catalog';
 import {englishPagePaths} from '@/lib/i18n/pages';
 import {languageAlternates} from '@/lib/i18n/routes';
 import {siteUrl as base} from '@/lib/site-url';
@@ -20,6 +21,7 @@ export default function sitemap():MetadataRoute.Sitemap{
     {path:'/weather',priority:.7,changeFrequency:'daily' as const},
     {path:'/catches',priority:.7,changeFrequency:'daily' as const},
     {path:'/spots',priority:.8,changeFrequency:'weekly' as const},
+    {path:'/gear/preparation',priority:.6,changeFrequency:'monthly' as const},
     {path:'/gear',priority:.85,changeFrequency:'weekly' as const},
     {path:'/cooking',priority:.88,changeFrequency:'weekly' as const},
     {path:'/quest',priority:.7,changeFrequency:'monthly' as const},
@@ -34,7 +36,7 @@ export default function sitemap():MetadataRoute.Sitemap{
     {url:`${base}/cooking/${f.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.84},
     ...f.recipes.map(r=>({url:`${base}/cooking/${f.slug}/${r.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.82}))
   ]);
-  const japanese:MetadataRoute.Sitemap=[...fishingMapEntries.map(s=>({url:`${base}/spots/${s.slug}`,lastModified:s.verifiedAt?new Date(s.verifiedAt):now,changeFrequency:'weekly' as const,priority:.7})),...staticEntries,...fishEntries,...methodEntries,...guideEntries,...cookingEntries];
+  const japanese:MetadataRoute.Sitemap=[...fishingMapEntries.map(s=>({url:`${base}/spots/${s.slug}`,lastModified:s.verifiedAt?new Date(s.verifiedAt):now,changeFrequency:'weekly' as const,priority:.7})),...gearCatalog.map(p=>({url:`${base}/gear/${p.slug}`,lastModified:now,changeFrequency:'monthly' as const,priority:.7})),...staticEntries,...fishEntries,...methodEntries,...guideEntries,...cookingEntries];
   const english:MetadataRoute.Sitemap=englishPagePaths().map(p=>({url:`${base}/en${p?`/${p}`:""}`,changeFrequency:"monthly",priority:.7}));
   return [...japanese,...english].map(entry=>{const languages=languageAlternates(new URL(entry.url).pathname);return languages?{...entry,alternates:{languages:Object.fromEntries(Object.entries(languages).map(([lang,path])=>[lang,base+path]))}}:entry});
 }

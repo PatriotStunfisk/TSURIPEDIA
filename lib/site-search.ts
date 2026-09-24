@@ -3,8 +3,8 @@ import {fishingMapEntries} from './fishing-map-data';
 import {methodDetails} from './method-registry';
 import {allGuides} from './all-guides';
 import {cookingFish} from './cooking-data';
-import {gear} from './data';
-export const searchCategories={fish:'魚図鑑',spots:'釣り場・船宿',methods:'釣り方',guide:'GUIDE',cooking:'料理',gear:'釣具'} as const;
+import {gearCatalog} from './gear-catalog';
+export const searchCategories={fish:'魚図鑑',spots:'釣り場・船宿',methods:'釣り方',guide:'GUIDE',cooking:'料理',gear:'釣具図鑑'} as const;
 export type SearchCategory=keyof typeof searchCategories;
 type SearchItem={title:string;href:string;description:string;category:SearchCategory;terms?:string;aliases?:string[]};
 const entries:SearchItem[]=[
@@ -13,7 +13,7 @@ const entries:SearchItem[]=[
  ...Object.values(methodDetails).map(m=>({title:m.name,href:`/methods/${m.slug}`,description:'仕掛け・タックルと釣り方の手順',category:'methods' as const,terms:m.slug})),
  ...allGuides.map(g=>({title:g.title,href:`/guide/${g.slug}`,description:g.summary,category:'guide' as const,terms:g.query+' '+g.category})),
  ...cookingFish.flatMap(f=>f.recipes.map(d=>({title:`${f.name}の${d.name}`,href:`/cooking/${f.slug}/${d.slug}`,description:'魚料理・下処理・レシピ',category:'cooking' as const,terms:f.name}))),
- ...gear.map(g=>({title:g.name,href:'/gear',description:g.desc,category:'gear' as const})),
+ ...gearCatalog.map(g=>({title:g.name,href:`/gear/${g.slug}`,description:g.summary,terms:g.brand,category:'gear' as const})),
 ];
 export function normalizeSearch(s:string){return s.normalize('NFKC').toLowerCase().replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60)).trim()}
 export function searchSite(query:string,category?:string){

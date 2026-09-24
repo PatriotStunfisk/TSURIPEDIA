@@ -13,7 +13,7 @@ const quickLinks=[
   {href:'/methods',icon:'⌁',label:'釣り方'},
   {href:'/guide',icon:'?',label:'GUIDE'},
   {href:'/spots',icon:'⌖',label:'釣り場マップ'},
-  {href:'/gear',icon:'▣',label:'釣具'},
+  {href:'/gear',icon:'▣',label:'釣具図鑑'},
   {href:'/cooking',icon:'◇',label:'魚料理'},
   {href:'/quest',icon:'◈',label:'QUEST'},
   {href:'/catches',icon:'▤',label:'新着釣果'},
@@ -42,7 +42,7 @@ export default function Home(){
       <a className={s.navCard} href="/methods"><div className={s.navIcon}>⌁</div><b>釣り方</b><span>仕掛け・手順・コツを解説</span></a>
       <a className={s.navCard} href="/guide"><div className={s.navIcon}>?</div><b>釣りガイド</b><span>何号？何g？いつ釣れる？</span></a>
       <a className={s.navCard} href="/spots"><div className={s.navIcon}>⌖</div><b>釣り場マップ</b><span>魚種・設備・エリアから探す</span></a>
-      <a className={s.navCard} href="/gear"><div className={s.navIcon}>▣</div><b>釣具</b><span>ロッド・リール・仕掛け</span></a>
+      <a className={s.navCard} href="/gear"><div className={s.navIcon}>▣</div><b>釣具図鑑</b><span>ロッド・リール・仕掛け</span></a>
       <a className={s.navCard} href="/cooking"><div className={s.navIcon}>◇</div><b>魚料理</b><span>捌き方・下処理・レシピ</span></a>
     </section>
 
