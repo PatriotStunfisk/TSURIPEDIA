@@ -20,3 +20,10 @@ Leafletを天気ページ内で遅延ロード。places API の bounds / zoom �
 
 ## 一覧と詳細の選び分け
 初期表示は主要11都市の日本地図。詳細地点検索・Leaflet地図は「もっと詳しい地点を選ぶ」で初めてマウントし、閉じると破棄する。選択した地点・URLは閉じても維持し、主要都市を選ぶと都市の天気・潮汐に戻る。
+
+## Two-day forecast, weekly outlook and detailed-place tides
+- `/api/weather/hourly` returns 48 hourly slots from the selected JST date and seven daily outlook rows from the same MET Norway response. Missing one-hour values remain missing; six-hour rain is never relabeled as one-hour rain.
+- Weekly weather uses the available symbol nearest noon. Temperature ranges use supplied samples (remaining hours on today, six-hour samples further ahead), not official daily maxima/minima.
+- `/api/weather/tide` accepts a registered spot ID and today/tomorrow, with an optional validated station ID. It reuses the JMA astronomical tide parser and cache. One source failure does not block weather.
+- `lib/tide-station-data.json` contains 239 station names/codes/coordinates from the JMA 2026 station table, checked 2026-09-24: https://www.data.jma.go.jp/kaiyou/db/tide/suisan/station.php . Nearest eight stations are offered with distance; users can correct a nearest station across a different bay. These are station predictions, never claimed to be the exact fishing location's water level or inland water levels.
+- MET format reference: https://docs.api.met.no/doc/ForecastJSON.html . Short-range one-hour and medium-range six-hour fields are kept distinct.

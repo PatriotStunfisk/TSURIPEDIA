@@ -54,3 +54,20 @@ test('weather map validates bounds and groups nationwide points without forecast
  const wide=weatherMapPoints(20,120,50,155,5),local=weatherMapPoints(34.3,135,34.9,135.7,12);
  assert.ok(wide.length<300);assert.ok(wide.reduce((s,p)=>s+p.count,0)>2000);assert.ok(local.some(p=>p.id));assert.ok(local.every(p=>p.lat>=34.3&&p.lat<=34.9));
 });
+
+test('two-day hourly forecast crosses JST midnight without manufacturing hourly values',()=>{
+ const {mergeHourly,weeklyForecast}=require('../lib/weather-hourly');
+ const met={properties:{meta:{updated_at:'2026-09-24T00:00:00Z'},timeseries:[
+ {time:'2026-09-24T15:00:00Z',data:{instant:{details:{air_temperature:20}},next_1_hours:{summary:{symbol_code:'clearsky_night'}}}},
+ {time:'2026-09-25T03:00:00Z',data:{instant:{details:{air_temperature:26}},next_6_hours:{summary:{symbol_code:'rain'}}}},
+ ]}};
+ const now=Date.parse('2026-09-24T03:00:00Z'),hours=mergeHourly('2026-09-24',met,null,now,2).hours;
+ assert.equal(hours.length,48);assert.equal(hours[24].temperature,20);assert.equal(hours[24].time,'2026-09-25T00:00:00+09:00');assert.equal(hours[36].rain,null);assert.equal(hours[36].weather,null);
+ const days=weeklyForecast(met,'2026-09-24',now);assert.equal(days.length,7);assert.equal(days[1].weather,'雨');assert.equal(days[1].low,20);assert.equal(days[1].high,26);assert.equal(days[2].weather,null);
+ assert.equal(weeklyForecast(met,'2026-09-24',now+3*86400000)[1].weather,null);
+});
+test('nearby tide stations use JMA coordinates and retain explicit station identity',()=>{
+ const {nearbyTideStations,tideStations}=require('../lib/tide-stations');assert.equal(tideStations.length,239);assert.equal(new Set(tideStations.map(s=>s.id)).size,239);
+ const osaka=tideStations.find(s=>s.id==='OS');assert.equal(nearbyTideStations(osaka.lat,osaka.lon)[0].id,'OS');assert.equal(nearbyTideStations(osaka.lat,osaka.lon)[0].km,0);
+ const candidates=nearbyTideStations(34.69,135.5);assert.equal(candidates.length,8);assert.ok(candidates.every((s,i)=>i===0||s.km>=candidates[i-1].km));
+});
