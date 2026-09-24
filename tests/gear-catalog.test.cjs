@@ -61,3 +61,34 @@ test('new gear series group sizes and powers in existing model tables',()=>{
  assert.ok(emeraldas.variants.headers.some(h=>h.includes('全長')));
  const makimaki=getGearProduct('hayabusa-jackeye-makimaki');assert.equal(makimaki.subtype,'metalJig');assert.ok(makimaki.colors.length);
 });
+
+test('NASCI and newly added reels are series pages with model variations',()=>{
+ const {gearCatalog,getGearProduct,filterGear}=require('../lib/gear-catalog');
+ const nasci=getGearProduct('shimano-nasci-c3000');assert.equal(nasci.name,'ナスキー');
+ assert.ok(nasci.variants.rows.some(row=>row[0]==='C3000'));
+ assert.ok(nasci.variants.rows.some(row=>row[0]==='4000'));
+ assert.equal(gearCatalog.filter(p=>p.name==='ナスキー').length,1);
+ for(const name of ['セドナ','サハラ','バルケッタ']){const p=gearCatalog.find(p=>p.name===name);assert.ok(p);assert.equal(p.kind,'reel');assert.ok(p.variants.rows.length>1)}
+ assert.ok(filterGear({kind:'reel'}).length>=210);
+ for(const p of gearCatalog)if(p.sources){assert.ok(p.sources.every(s=>s.label&&new URL(s.url).protocol==='https:'))}
+});
+
+test('every gear detail has sourced reading content and tables contain only model rows',()=>{
+ const {gearCatalog,getGearProduct}=require('../lib/gear-catalog');
+ const {getGearEditorial}=require('../lib/gear-editorial');
+ for(const p of gearCatalog){
+  const article=getGearEditorial(p.slug);assert.ok(article,p.slug);
+  assert.ok(article.overview.length>30&&article.use.length>50&&article.selection.length>20,p.slug);
+  assert.ok(article.sourceUrls.includes(p.source),p.slug);
+  for(const url of article.sourceUrls)assert.equal(new URL(url).protocol,'https:');
+  for(const row of p.variants?.rows??[])assert.ok(!/(^| \/ )(品番|アイテム|型番)$/.test(row[0]),p.slug);
+ }
+ assert.equal(getGearProduct('shimano-nasci-c3000').variants.rows.length,12);
+ assert.match(getGearEditorial('shimano-nasci-c3000').overview,/インフィニティドライブ/);
+ const barchetta=gearCatalog.find(p=>p.name==='バルケッタ');assert.match(getGearEditorial(barchetta.slug).overview,/カウンター/);
+ const emeraldReel=gearCatalog.find(p=>p.kind==='reel'&&p.name.includes('エメラルダス AIR'));
+ if(emeraldReel)assert.doesNotMatch(getGearEditorial(emeraldReel.slug).overview,/ロッドシリーズ/);
+ assert.equal(getGearEditorial('not-a-product'),undefined);
+ // Long-form text must remain a detail-page dependency, not part of the search catalogue.
+ assert.doesNotMatch(fs.readFileSync(path.join(root,'lib/gear-catalog.ts'),'utf8'),/from ['"].*gear-editorial/);
+});

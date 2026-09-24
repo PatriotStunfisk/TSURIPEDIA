@@ -10,3 +10,5 @@
 .variantTable .colorModels{white-space:normal;min-width:220px;max-width:600px;overflow-wrap:anywhere}.content h3{font-size:17px;margin:6px 0;line-height:1.5}.inlineAmazon{display:block;margin:0 12px 14px;padding:9px 8px;border-radius:8px;background:#fff3d8;color:#704408;font-size:12px;text-align:center}@media(max-width:600px){.content h3{font-size:13px}.inlineAmazon{margin:0 8px 10px;font-size:11px}}
 
 .colorDetails{margin-top:16px}.colorDetails summary{cursor:pointer;font-size:14px;color:#176282;margin-bottom:12px}
+
+.reading{max-width:100%;overflow-wrap:anywhere}.reading .overview{font-size:16px;line-height:1.95}.reading>p{max-width:850px}.designGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}.designGrid article{border-left:3px solid #148bb0;padding:4px 16px;background:#f6fafc}.designGrid small{font-size:11px;color:#24718b}.designGrid h3{margin:6px 0 10px}.designGrid p{font-size:14px;margin:0 0 12px;line-height:1.9}@media(max-width:600px){.designGrid{grid-template-columns:1fr;gap:16px}.reading .overview{font-size:15px}.reading h3{font-size:16px}.reading>p{font-size:14px;line-height:1.95}}

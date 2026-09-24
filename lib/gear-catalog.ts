@@ -1,6 +1,7 @@
 import expansion from './gear-catalog-expansion.json';
 import series from './gear-catalog-series.json';
-export type GearProduct={slug:string;brand:string;name:string;kind:GearKind;subtype?:GearSubtype;summary:string;colors?:{name:string;models:string[]}[];specs:Record<string,string>;variants?:{headers:string[];rows:string[][]};methods:string[];fish:string[];source:string;relatedGear?:string[];asin?:string;amazonQuery?:string;line:string;query:string;accessory:string;accessoryQuery:string;check:string;image?:{src:string;alt:string;credit:string;permission:string;caption?:string;flipX?:boolean}};
+import reels from './gear-catalog-reels.json';
+export type GearProduct={slug:string;brand:string;name:string;kind:GearKind;subtype?:GearSubtype;summary:string;colors?:{name:string;models:string[]}[];specs:Record<string,string>;variants?:{headers:string[];rows:string[][]};methods:string[];fish:string[];source:string;sources?:{label:string;url:string}[];relatedGear?:string[];asin?:string;amazonQuery?:string;line:string;query:string;accessory:string;accessoryQuery:string;check:string;image?:{src:string;alt:string;credit:string;permission:string;caption?:string;flipX?:boolean}};
 export const gearKindLabels={rod:'ロッド',reel:'リール',lure:'ルアー',egi:'エギ',line:'ライン',cooler:'クーラー',tool:'小物',rig:'仕掛け・針',storage:'バッグ・ケース',net:'ランディング用品'} as const;
 export type GearKind=keyof typeof gearKindLabels;
 export const gearSubtypeLabels={minnow:'ミノー',metalJig:'メタルジグ',vibration:'バイブレーション',pencil:'ペンシル',popper:'ポッパー',crank:'クランク',spoon:'スプーン',spinner:'スピナー・スピナーベイト',worm:'ワーム',taiRubber:'タイラバ',otherLure:'その他ルアー',pe:'PEライン',nylon:'ナイロン',fluoro:'フロロカーボン',leader:'リーダー',otherLine:'金属・その他ライン'} as const;
@@ -86,15 +87,133 @@ export const gearCatalog:GearProduct[]=[
   {
     "slug": "shimano-nasci-c3000",
     "brand": "SHIMANO",
-    "name": "26 ナスキー C3000",
+    "name": "ナスキー",
     "kind": "reel",
-    "summary": "餌釣りと岸のルアー釣りを兼用したいときに。ノーマルギアのC3000を、使う道糸から選ぶ。",
+    "summary": "ナスキーの汎用スピニングシリーズ。小番手と大番手では適した糸量や重さが変わります。堤防の餌釣りとルアーで兼用する場合も、竿の適合ラインを先に確認します。",
     "specs": {
-      "自重": "235g",
-      "ギア比": "5.0",
-      "巻取り長さ": "73cm / ハンドル1回転",
-      "PE巻糸量": "1号 400m / 1.5号 270m",
-      "ナイロン巻糸量": "3号 150m"
+      "メーカー分類": "汎用スピニング",
+      "掲載単位": "製品シリーズ"
+    },
+    "variants": {
+      "headers": [
+        "番手・型番",
+        "ギア比",
+        "自重(g)",
+        "最大ドラグ(kg)",
+        "PE糸巻量(号-m)",
+        "ナイロン糸巻量(号-m)",
+        "最大巻上長(cm/回転)"
+      ],
+      "rows": [
+        [
+          "500",
+          "5.6",
+          "170",
+          "3",
+          "0.6-185, 0.8-140, 1-110",
+          "1-150, 1.5-90, 2-70",
+          "69"
+        ],
+        [
+          "1000",
+          "5",
+          "205",
+          "3",
+          "0.8-240, 1-190",
+          "1.5-130, 2-100, 2.5-85",
+          "66"
+        ],
+        [
+          "C2000S",
+          "5",
+          "210",
+          "3",
+          "0.6-150, 0.8-110, 1-80",
+          "-",
+          "66"
+        ],
+        [
+          "C2000SHG",
+          "6",
+          "210",
+          "3",
+          "0.6-150, 0.8-110, 1-80",
+          "-",
+          "79"
+        ],
+        [
+          "2500",
+          "5",
+          "235",
+          "9",
+          "1-320, 1.2-270, 1.5-220",
+          "2-170, 2.5-150, 3-120",
+          "73"
+        ],
+        [
+          "2500HG",
+          "6.2",
+          "235",
+          "9",
+          "1-320, 1.2-270, 1.5-220",
+          "2-170, 2.5-150, 3-120",
+          "91"
+        ],
+        [
+          "2500SHG",
+          "6.2",
+          "235",
+          "4",
+          "0.6-200, 0.8-150, 1-120",
+          "-",
+          "91"
+        ],
+        [
+          "C3000",
+          "5",
+          "235",
+          "9",
+          "1-400, 1.5-270, 2-200",
+          "2.5-180, 3-150, 4-100",
+          "73"
+        ],
+        [
+          "C3000HG",
+          "6.2",
+          "235",
+          "9",
+          "1-400, 1.5-270, 2-200",
+          "2.5-180, 3-150, 4-100",
+          "91"
+        ],
+        [
+          "4000",
+          "4.7",
+          "280",
+          "11",
+          "1-490, 1.5-320, 2-240",
+          "3.5-170, 4-150, 5-125",
+          "75"
+        ],
+        [
+          "4000XG",
+          "6.2",
+          "280",
+          "11",
+          "1-490, 1.5-320, 2-240",
+          "3.5-170, 4-150, 5-125",
+          "99"
+        ],
+        [
+          "C5000XG",
+          "6.2",
+          "300",
+          "11",
+          "1.5-400, 2-300, 3-200",
+          "4-190, 5-150, 6-125",
+          "105"
+        ]
+      ]
     },
     "methods": [
       "sabiki",
@@ -102,24 +221,23 @@ export const gearCatalog:GearProduct[]=[
       "seabass-lure"
     ],
     "fish": [
-      "aji",
-      "kisu",
       "suzuki"
     ],
     "source": "https://fish.shimano.com/ja-JP/product/reel/hanyouspinning/a075f00003slx0xqac.html",
-    "line": "堤防のサビキやちょい投げならナイロン2〜3号、ルアーなら対象魚に合わせたPE＋リーダーを組みます。",
-    "query": "釣り ナイロン 3号 150m",
-    "accessory": "PEを使うなら下巻きとリーダーを準備。竿の適合糸・ルアー重量と合わせて決めます。",
-    "accessoryQuery": "釣り PEライン ハサミ",
-    "check": "同名の旧モデルやC3000HGと混同しないよう、商品コード048134・JAN4969363048134を確認します。",
+    "relatedGear": [],
+    "line": "巻糸量の表で必要な号数・長さを確認。浅溝と深溝、ナイロンとPEの表示を分けて見ます。",
+    "query": "釣り PEライン リーダー",
+    "accessory": "下巻き糸、ライン用ハサミ、リールケース。左右ハンドルの仕様は購入する型番で確認します。",
+    "accessoryQuery": "釣り リールケース",
+    "check": "最大ドラグ力を常用する設定にはしません。結束部の強度と竿の許容範囲に合わせ、実釣前にドラグを調整します。",
     "image": {
       "src": "/images/gear/shimano-nasci-c3000.webp",
-      "alt": "SHIMANO ナスキー C3000シリーズの参考写真",
+      "alt": "SHIMANO ナスキーのシリーズ代表写真",
       "credit": "写真：SHIMANO",
       "permission": "User reports oral permission for product-photo republication on 2026-09-24",
-      "caption": "シリーズ参考写真"
+      "caption": "シリーズ代表写真"
     },
-    "amazonQuery": "シマノ 26 ナスキー C3000 048134"
+    "amazonQuery": "シマノ ナスキー"
   },
   {
     "slug": "majorcraft-solpara-spe-832m",
@@ -494,7 +612,7 @@ export const gearCatalog:GearProduct[]=[
     }
   }
 
-, ...expansion as GearProduct[], ...series as GearProduct[]];
+, ...expansion as GearProduct[], ...series as GearProduct[], ...reels as GearProduct[]];
 export const gearVerifiedAt='2026-09-24';
 export function getGearProduct(slug:string){return gearCatalog.find(p=>p.slug===slug)}
 export function filterGear(input:{q?:string;brand?:string;kind?:string;subtype?:string;method?:string;fish?:string}){const q=normalizeGearFilters(input);const terms=(q.q??'').normalize('NFKC').toLowerCase().trim().split(/\s+/).filter(Boolean);return gearCatalog.filter(p=>(!q.brand||p.brand===q.brand)&&(!q.kind||p.kind===q.kind)&&(!q.subtype||getGearSubtype(p)===q.subtype)&&(!q.method||p.methods.includes(q.method))&&(!q.fish||p.fish.includes(q.fish))&&terms.every(t=>`${p.brand} ${p.name} ${p.summary} ${gearKindLabels[p.kind]} ${getGearSubtype(p)?gearSubtypeLabels[getGearSubtype(p)!]:''} ${p.colors?.map(c=>c.name).join(' ')??''} ${p.variants?.rows.map(row=>row[0]).join(' ')??''}`.normalize('NFKC').toLowerCase().includes(t)))}
