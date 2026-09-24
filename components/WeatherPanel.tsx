@@ -3,7 +3,6 @@ import {useEffect,useState} from 'react';
 import {weatherCities,japanDate,type WeatherResult,type TideDay} from '@/lib/weather';
 import s from './WeatherPanel.module.css';
 import WeatherIcon from './WeatherIcon';
-import {describeWeather} from '@/lib/weather-display';
 export function TideGraph({tide,port,mini=false}:{tide:TideDay;port:string;mini?:boolean}){
  const values=tide.hours.filter((n):n is number=>n!==null),min=Math.min(...values)-10,max=Math.max(...values)+10;
  const y=(n:number)=>78-(n-min)/(max-min)*60;
@@ -30,10 +29,9 @@ function WeatherOverview(){
   <div className={s.cityGrid}>{overviewCities.map(city=>{
    const data=results[city.id],forecast=data?.forecast;
    return <a className={s.cityCard} href={`/weather?city=${city.id}`} key={city.id} aria-label={`${city.name}の天気・潮汐を詳しく見る`}>
-    <div className={s.cityTitle}><strong>{city.name}</strong>{forecast&&<WeatherIcon text={forecast.weather}/>}</div>
-    <div className={s.cityForecast} title={forecast?.weather}>{forecast?describeWeather(forecast.weather).label:data===undefined?'読み込み中…':'天気取得できず'}</div>
+    <div className={s.cityTitle}><strong>{city.name}</strong>{forecast?<span role="img" aria-label={forecast.weather} title={forecast.weather}><WeatherIcon text={forecast.weather}/></span>:<small>{data===undefined?'…':'—'}</small>}</div>
     {data?.tide?<TideGraph tide={data.tide} port={city.port} mini/>:<div className={s.miniPlaceholder}>{data===undefined?'潮汐を取得中…':'潮汐取得できず'}</div>}
-    <small className={s.port}>{city.port} · 予測潮位</small>
+    <small className={s.port}>{city.port}</small>
    </a>;
   })}</div>
   <div className={s.source}><a href="https://www.jma.go.jp/bosai/forecast/" target="_blank" rel="noreferrer">出典：気象庁</a><span>潮位は各港の今日0〜23時の予測。風・波・満干潮は詳細へ。</span></div>
