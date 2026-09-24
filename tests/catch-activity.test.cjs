@@ -121,3 +121,12 @@ test('boat aggregation uses explicit boat totals, excludes prose and does not tu
  assert.equal(r.length,3);assert.equal(r.find(r=>r.fishSlug==='buri').count,7);assert.equal(r.find(r=>r.fishSlug==='tachiuo').count,undefined);assert.equal(r.find(r=>r.fishSlug==='aji').count,3);assert.equal(r.find(r=>r.fishSlug==='aji').sizeCm,undefined);assert.ok(!JSON.stringify(r).includes('photo.jpg'));assert.ok(r.every(r=>r.fishSlug!=='madai'));assert.equal(parseFishingVision(html.replace('2026年9月20日','2025年9月20日'),'https://example.com','boat-uoe',now).length,0);
  assert.throws(()=>parseFishingVision('<html>blocked</html>','https://example.com','boat-uoe',now));
 });
+test('Amagasaki imports only the official whole-facility table, preserving ranges as unknown size',()=>{
+ const {parseFacility,facilityLinks}=require('../lib/catches/facility-parser');
+ const html='<title>2026年9月20日（日）</title><p>昨日はマダイ</p><table><tr><th>魚種</th><td>サイズ</td><td>匹数（全体）</td><td>釣り方</td></tr><tr><th>アジ</th><td>8～18cm</td><td>合計100匹</td><td>サビキ</td></tr><tr><th>チヌ</th><td>35cm</td><td>合計1匹</td><td>フカセ</td></tr><tr><th>サバ</th><td>20cm</td><td>0匹</td><td>サビキ</td></tr></table>';
+ const url='https://amagasaki-uoturikouen.com/fishing/20260920.html';
+ const r=parseFacility(html,url,'amagasaki-uoturi','amagasaki-html',now);
+ assert.equal(r.length,2);assert.equal(r[0].count,100);assert.equal(r[0].countScope,'facility');assert.equal(r[0].sizeCm,undefined);assert.equal(r[1].fishSlug,'chinu');assert.equal(r[1].sizeCm,35);
+ assert.throws(()=>parseFacility(html.replace('匹数（全体）','個人釣果'),url,'amagasaki-uoturi','amagasaki-html',now));
+ assert.deepEqual(facilityLinks('<a href="/fishing/20260920.html"></a><a href="https://other.example/fishing/20260920.html"></a>',url,'amagasaki-html'),[url]);
+});

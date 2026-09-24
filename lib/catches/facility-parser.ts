@@ -1,6 +1,6 @@
 import {getFishByName} from '../fish-registry';
 import {ageDays} from './activity';
-export type FacilityFormat='fukuoka-html'|'shimonoseki-html'|'hiraiso-html'|'ichihara-html'|'happy-html';
+export type FacilityFormat='amagasaki-html'|'fukuoka-html'|'shimonoseki-html'|'hiraiso-html'|'ichihara-html'|'happy-html';
 type Row={id:string;date:string;fishSlug:string;spotSlug:string;summary:string;sourceUrl:string;count?:number;countScope:'facility';sizeCm?:number};
 const plain=(s:string)=>s.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'').replace(/<[^>]+>/g,' ').replace(/&nbsp;|&#160;/g,' ').replace(/&amp;/g,'&').normalize('NFKC').replace(/\s+/g,' ').trim();
 const aliases:Record<string,string>={'バリ':'アイゴ','クロ':'メジナ','アジゴ':'マアジ','タイゴ':'マダイ','チャリコ':'マダイ','サンバソウ':'イシダイ','シマダイ':'イシダイ','マルハギ':'カワハギ','ウマズラハギ':'ウマヅラハギ'};
@@ -17,7 +17,15 @@ export function parseFacility(html:string,url:string,spotSlug:string,format:Faci
   if(old){old.count=old.count!==undefined&&count!==undefined?old.count+count:undefined;delete old.sizeCm;return;}
   rows.set(key,{id:key,date,fishSlug:fish.slug,spotSlug,summary:`${fish.name}の釣果記録。`,sourceUrl:url,countScope:'facility',...(count!==undefined?{count}:{}),...(cm&&count===1?{sizeCm:Number(cm[1])}:{})});
  }
- if(format==='fukuoka-html'){
+ if(format==='amagasaki-html'){
+  const date=dayOf(html.match(/<title[^>]*>([^<]*)<\/title>/i)?.[1]??'');
+  const table=[...html.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table>/g)].find(m=>/匹数[（(]全体[）)]/.test(plain(m[1])))?.[1];
+  if(!date||!table)throw Error('Official report structure changed');
+  for(const [row] of table.matchAll(/<tr\b[^>]*>[\s\S]*?<\/tr>/g)){
+   const cells=[...row.matchAll(/<t[hd]\b[^>]*>([\s\S]*?)<\/t[hd]>/g)].map(m=>plain(m[1]));
+   if(cells.length===4)add(date,cells[0],cells[1],cells[2]);
+  }
+ }else if(format==='fukuoka-html'){
   const blocks=html.split(/<div id="block184-\d+"/).slice(1);if(!blocks.length)throw Error('Official report structure changed');
   for(const block of blocks){const date=block.match(/data-switch="date">(\d{4}-\d{2}-\d{2})/);if(!date)continue;
    for(const part of block.split(/<br\s*\/?\s*>|<\/div>/i)){const line=plain(part),m=line.match(/^([^/]+)\/([^/]+)\/(\d+尾)\//);if(m)add(date[1],m[1],m[2],m[3]);}
@@ -50,6 +58,7 @@ export function parseFacility(html:string,url:string,spotSlug:string,format:Faci
 export function facilityLinks(html:string,endpoint:string,format:FacilityFormat){
  const links:string[]=[];for(const [tag,href,content] of html.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)){
   const url=new URL(href.replace(/&amp;/g,'&'),endpoint);if(url.origin!==new URL(endpoint).origin)continue;
+  if(format==='amagasaki-html'&&/^\/fishing\/\d{8}(?:_\d+)?\.html$/.test(url.pathname))links.push(url.href);
   if(format==='shimonoseki-html'&&/^\/fishing\/\d{8}\.html$/.test(url.pathname))links.push(url.href);
   if(format==='hiraiso-html'&&/^\/fishresult\/20\d{2}/.test(decodeURI(url.pathname)))links.push(url.href);
   if(format==='ichihara-html'&&/^\/fishing\/\d+$/.test(url.pathname)&&plain(content)==='釣れた魚の詳細を見る')links.push(url.href);

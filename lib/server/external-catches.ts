@@ -45,7 +45,7 @@ async function fetchSource(source:CatchSource){
   const rows=[];for(const url of anglersCandidates(body).slice(0,3)){const detail=await fetchText(source,url);const row=parseAnglersCatch(detail,url,source.areaId!,source.spotSlug!);if(row)rows.push(row);}
   return rows;
  }
- if(['fukuoka-html','shimonoseki-html','hiraiso-html','ichihara-html','happy-html'].includes(source.format)){
+ if(['amagasaki-html','fukuoka-html','shimonoseki-html','hiraiso-html','ichihara-html','happy-html'].includes(source.format)){
   const format=source.format as FacilityFormat;if(format==='fukuoka-html')return parseFacility(body,source.endpoint,source.spotSlug!,format);
   const rows=[];for(const url of facilityLinks(body,source.endpoint,format)){await new Promise(resolve=>setTimeout(resolve,1000));rows.push(...parseFacility(await fetchText(source,url),url,source.spotSlug!,format));}return rows;
  }

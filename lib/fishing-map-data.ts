@@ -1,3 +1,4 @@
+import {kansaiBoatSeptemberEntries} from './fishing-map-kansai-boats-20260924';
 import {coastReviewEntries} from './fishing-map-coast-review-20260921';
 import {rockReviewEntries} from './fishing-map-rock-review-20260924';
 import {septemberBoatEntries} from './fishing-map-boat-september';
@@ -159,6 +160,7 @@ const sourceEntries:FishingMapEntry[]=[
     tips:['港内ではサビキ・ちょい投げから始めやすい','ベイトが見えれば青物用ルアーも準備','根掛かりしやすい場所では胴突きや軽めの仕掛けで探る'],
     caution:['漁船・ロープ・荷揚げ作業を最優先','立入禁止や釣り禁止表示に従う','駐車場所は現地ルールを確認']
   }
+  ,...kansaiBoatSeptemberEntries
 ];
 
 // Resolve known aliases (e.g. アジ) without guessing ambiguous groups such as 青物.
