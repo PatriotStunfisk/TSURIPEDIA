@@ -27,3 +27,9 @@ export async function getHourlyWeather(city:keyof typeof weatherLocations,date:s
  return {date,city,sea:p.sea,...mergeHourly(date,met,waves)};
 }
 export function windDirection(degrees:number|null){return degrees===null?'—':['北','北北東','北東','東北東','東','東南東','南東','南南東','南','南南西','南西','西南西','西','西北西','北西','北北西'][Math.round(degrees/22.5)%16]}
+
+export async function getPlaceHourlyWeather(place:{id:string;lat:number;lon:number},date:string):Promise<HourlyResult>{
+ let met:unknown=null;
+ try{const r=await fetch(`https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${place.lat}&lon=${place.lon}`,{headers:{'User-Agent':'UOLINK/1.0 https://uolink.jp'},next:{revalidate:3600},signal:AbortSignal.timeout(12000)});if(r.ok)met=await r.json()}catch{/* Independent point forecast failure is shown as unavailable. */}
+ return {city:place.id,date,sea:'',...mergeHourly(date,met,null)};
+}

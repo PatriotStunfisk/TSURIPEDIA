@@ -41,3 +41,9 @@ test('hourly forecast aligns UTC to JST and retains missing data without inventi
  assert.equal(result.hours.length,24);assert.equal(result.hours[10].temperature,24);assert.equal(result.hours[10].weather,'雨');assert.equal(result.hours[10].wave,0.8);assert.equal(result.hours[11].wave,null);assert.equal(result.hours[0].wind,null);assert.equal(windDirection(90),'東');
  assert.equal(mergeHourly('2026-09-24',met,null,Date.parse('2026-09-26T03:00:00Z')).published,null);
 });
+
+test('weather place search reuses map coordinates and bounds results',()=>{
+ const {searchWeatherPlaces,getWeatherPlace}=require('../lib/weather-places');
+ assert.equal(searchWeatherPlaces(' ').length,0);assert.ok(searchWeatherPlaces('白浜').length);assert.ok(searchWeatherPlaces('八丈島').length);
+ const list=searchWeatherPlaces('大阪');assert.ok(list.length<=20&&list.length>0);const place=getWeatherPlace(list[0].id);assert.ok(Number.isFinite(place.lat)&&Number.isFinite(place.lon));assert.equal(getWeatherPlace('not-a-real-place'),undefined);
+});
