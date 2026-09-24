@@ -32,13 +32,14 @@ test('place-specific guidance references real entries and preserves local restri
 });
 test('researched guides carry dated sources and preserve current venue restrictions',()=>{
  const researched=require('../lib/spot-field-guides-researched.json');
- assert.equal(Object.keys(researched).length,15);
+ assert.equal(Object.keys(researched).length,25);
  for(const [slug,g] of Object.entries(researched)){
   assert.ok(fishingMapEntries.some(x=>x.slug===slug));
   assert.ok(g.features.length>=2&&g.approach.length>=3,slug);
   assert.match(g.reviewedAt,/^\d{4}-\d{2}-\d{2}$/);
   for(const source of g.sources)assert.equal(new URL(source.url).protocol,'https:');
  }
+ assert.match(researched['regional-tanoura-port'].beforeYouGo.join(''),/浪早ビーチ.*魚釣り禁止/);
  assert.match(researched['wakasu-fishing'].features.join(''),/2025年8月31日.*営業を終了/);
  assert.match(researched['naruohama'].beforeYouGo.join(''),/ルアー釣りは禁止/);
  assert.match(researched['nanko-fishing-park'].features.join(''),/ルアー釣りは可能/);

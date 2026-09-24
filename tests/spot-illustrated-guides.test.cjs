@@ -3,8 +3,8 @@ const root=path.resolve(__dirname,'..'),resolve=Module._resolveFilename;
 Module._resolveFilename=function(s,...a){return resolve.call(this,s.startsWith('@/')?path.join(root,s.slice(2)):s,...a)};
 require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{esModuleInterop:true,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,f);
 const records=require('../lib/spot-illustrated-guide-data.json'),{spotFieldGuides}=require('../lib/spot-field-guides.ts'),{fishingMapEntries}=require('../lib/fishing-map-data.ts'),{illustrationLessons}=require('../lib/spot-illustration-lessons.ts');
-test('300 existing places receive sourced diagrams without changing the surveyed plans',()=>{
- assert.equal(records.length,300);assert.equal(new Set(records.map(r=>r.slug)).size,300);
+test('309 existing places receive sourced diagrams without changing the surveyed plans',()=>{
+ assert.equal(records.length,309);assert.equal(new Set(records.map(r=>r.slug)).size,309);
  const prefectures=new Set();
  for(const r of records){const s=fishingMapEntries.find(s=>s.slug===r.slug),g=spotFieldGuides[r.slug];assert.ok(s&&!s.closed);prefectures.add(s.prefecture);assert.ok(s.methodSlugs.includes(r.method),r.slug);assert.equal(g.illustration.context,s.note);assert.ok(g.illustration.sources.length);assert.ok(g.illustration.localApproach.length);assert.ok(!g.sitePlan);assert.equal(illustrationLessons[r.topic].steps.length,3);}
  assert.ok(prefectures.size>=30);

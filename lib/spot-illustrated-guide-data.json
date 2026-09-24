@@ -1498,5 +1498,50 @@
     "slug": "coast-kanagawazaimokuzakaigann",
     "method": "surf-lure",
     "topic": "surf"
+  },
+  {
+    "slug": "fuke-port",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "regional-saigasaki-port",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "regional-tanoura-port",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "regional-suhara-port",
+    "method": "uki",
+    "topic": "float"
+  },
+  {
+    "slug": "regional-totsui-port",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "regional-ao-port",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "growth-azashi-port",
+    "method": "fukase",
+    "topic": "float"
+  },
+  {
+    "slug": "harbor-tunegamiogawa",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "harbor-tunegamimiko",
+    "method": "choinage",
+    "topic": "bottom"
   }
 ]
