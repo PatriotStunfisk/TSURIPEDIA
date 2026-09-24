@@ -32,3 +32,12 @@ test('weather icons summarize the main forecast without promoting localized exce
  assert.equal(describeWeather('くもり 後 雨').label,'曇り・雨');
  assert.deepEqual(describeWeather('雪').kinds,['snow']);
 });
+
+test('hourly forecast aligns UTC to JST and retains missing data without inventing values',()=>{
+ const {mergeHourly,windDirection}=require('../lib/weather-hourly');
+ const met={properties:{meta:{updated_at:'2026-09-24T00:00:00Z'},timeseries:[{time:'2026-09-24T01:00:00Z',data:{instant:{details:{air_temperature:24,wind_speed:3,wind_from_direction:90}},next_1_hours:{summary:{symbol_code:'lightrain'},details:{precipitation_amount:0.2}}}}]}};
+ const wave={table:{columnNames:['time','Thgt'],rows:[['2026-09-24T01:00:00Z',0.8],['2026-09-24T02:00:00Z',null],['2026-09-23T01:00:00Z',2]]}};
+ const result=mergeHourly('2026-09-24',met,wave,Date.parse('2026-09-24T03:00:00Z'));
+ assert.equal(result.hours.length,24);assert.equal(result.hours[10].temperature,24);assert.equal(result.hours[10].weather,'雨');assert.equal(result.hours[10].wave,0.8);assert.equal(result.hours[11].wave,null);assert.equal(result.hours[0].wind,null);assert.equal(windDirection(90),'東');
+ assert.equal(mergeHourly('2026-09-24',met,null,Date.parse('2026-09-26T03:00:00Z')).published,null);
+});
