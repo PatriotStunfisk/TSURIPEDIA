@@ -1,0 +1,980 @@
+[
+  {
+    "slug": "gamakatsu-uk8009",
+    "brand": "がまかつ",
+    "name": "うきまろ ウキウキはさみ",
+    "kind": "tool",
+    "summary": "ナイロン仕掛けの結び直し用。浮くマスコット付きで、家族の道具を見分けやすい。",
+    "specs": {
+      "全長": "100mm",
+      "重量": "約33g"
+    },
+    "methods": [
+      "sabiki",
+      "choinage",
+      "freshwater-float",
+      "uki",
+      "sayori-uki",
+      "ana"
+    ],
+    "fish": [],
+    "source": "https://www.gamakatsu.co.jp/products/uk8009/",
+    "line": "全長100mmの小型タイプです。子供が使う場合は大人が横で刃の向きと収納まで確認します。",
+    "query": "がまかつ うきまろ ウキウキはさみ",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "切った糸は回収し、使わないときは刃を閉じて収納。PE専用の切れ味は公表されていないため、PEには専用ハサミを選ぶ。",
+    "image": {
+      "src": "/images/gear/gamakatsu-uk8009.webp",
+      "alt": "がまかつ うきまろ ウキウキはさみ",
+      "credit": "写真：がまかつ",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "製品写真"
+    }
+  },
+  {
+    "slug": "gamakatsu-uk8010",
+    "brand": "がまかつ",
+    "name": "うきまろ ハリはずしプライヤー",
+    "kind": "tool",
+    "summary": "小型魚の針をつかんで外すためのプライヤー。魚の口へ指を入れずに作業する道具。",
+    "specs": {
+      "型番": "UK8010",
+      "重量": "約110g"
+    },
+    "methods": [
+      "sabiki",
+      "choinage",
+      "freshwater-float",
+      "uki",
+      "sayori-uki",
+      "ana",
+      "boat-kisu",
+      "kawahagi"
+    ],
+    "fish": [],
+    "source": "https://www.gamakatsu.co.jp/products/uk8010/",
+    "line": "針をつまむ用途の道具です。大型魚の口を無理に開く道具や、太いリングを広げる専用プライヤーとは使い分けます。",
+    "query": "がまかつ うきまろ ハリはずしプライヤー",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "子供の針外しは大人が補助する。浮く製品ではないので落下に注意。大型魚や強いスプリットリングの作業は専用工具を使う。",
+    "image": {
+      "src": "/images/gear/gamakatsu-uk8010.webp",
+      "alt": "がまかつ うきまろ ハリはずしプライヤー",
+      "credit": "写真：がまかつ",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "製品写真"
+    }
+  },
+  {
+    "slug": "gamakatsu-uk8020",
+    "brand": "がまかつ",
+    "name": "うきまろ らくらくロッドスタンド55cm",
+    "kind": "tool",
+    "summary": "仕掛け交換や休憩中に竿を地面から離して置く三脚。折り畳めるので家族の堤防釣りへ持ち運びやすい。",
+    "specs": {
+      "収納時": "D75×W115×H390mm",
+      "重量": "約598g",
+      "竿受け高": "最大55cm"
+    },
+    "methods": [
+      "sabiki",
+      "choinage",
+      "kago",
+      "nage"
+    ],
+    "fish": [],
+    "source": "https://www.gamakatsu.co.jp/products/uk8020/",
+    "line": "竿受け高は55cm。家族の足元に置きやすい反面、強風時や魚が引いている最中に竿を固定する用途ではありません。",
+    "query": "がまかつ うきまろ らくらくロッドスタンド55cm",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "平らな場所で脚を開き、通路を塞がない位置に設置。竿を置いたまま離れず、魚に引かれたときの転倒を防ぐ。船用の固定式竿受けとは別物。",
+    "image": {
+      "src": "/images/gear/gamakatsu-uk8020.webp",
+      "alt": "がまかつ うきまろ らくらくロッドスタンド55cm",
+      "credit": "写真：がまかつ",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "製品写真"
+    }
+  },
+  {
+    "slug": "gamakatsu-uk8012",
+    "brand": "がまかつ",
+    "name": "うきまろッド＆リールスピニング",
+    "kind": "rod",
+    "summary": "竿・スピニングリール・糸をまとめて用意できる入門セット。短いサビキやちょい投げに合わせやすい。",
+    "specs": {
+      "全長": "1.6・1.8・2.1・2.4m",
+      "リール付属糸": "3号130m",
+      "オモリ負荷": "5〜18号"
+    },
+    "methods": [
+      "sabiki",
+      "choinage"
+    ],
+    "fish": [],
+    "source": "https://www.gamakatsu.co.jp/products/uk8012/",
+    "line": "1.6〜2.4mから、使う仕掛けの全長と足場の高さに合わせます。子供が扱う場合は、実際に持って重さを確かめられると選びやすくなります。",
+    "query": "がまかつ うきまろッド＆リールスピニング",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "セットにリールと糸が含まれるため別購入は不要。短い竿には短い仕掛けを合わせる。オモリだけでなくカゴと餌を含む負荷を確認する。",
+    "image": {
+      "src": "/images/gear/gamakatsu-uk8012.webp",
+      "alt": "がまかつ うきまろッド＆リールスピニング",
+      "credit": "写真：がまかつ",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "シリーズ代表写真",
+      "flipX": true
+    },
+    "variants": {
+      "headers": [
+        "品名コード",
+        "標準全長",
+        "標準自重(g)",
+        "継数(本)",
+        "仕舞寸法(cm)",
+        "オモリ負荷"
+      ],
+      "rows": [
+        [
+          "UK8012",
+          "1.6m",
+          "100",
+          "5",
+          "44",
+          "5～18号(約15～70g)"
+        ],
+        [
+          "UK8012",
+          "1.8m",
+          "108",
+          "5",
+          "48",
+          "5～18号(約15～70g)"
+        ],
+        [
+          "UK8012",
+          "2.1m",
+          "146",
+          "5",
+          "56",
+          "5～18号(約15～70g)"
+        ],
+        [
+          "UK8012",
+          "2.4m",
+          "176",
+          "5",
+          "64",
+          "5～18号(約15～70g)"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "gamakatsu-uk8016",
+    "brand": "がまかつ",
+    "name": "うきまろ のべ竿",
+    "kind": "rod",
+    "summary": "リールを使わず、竿先から糸を出して小魚のウキ釣りを楽しむ携帯竿。狭い足元を探る釣りの入口に。",
+    "specs": {
+      "仕舞寸法": "29.5cm",
+      "掲載全長": "1.5・1.8・2.1m"
+    },
+    "methods": [
+      "freshwater-float"
+    ],
+    "fish": [],
+    "source": "https://www.gamakatsu.co.jp/products/uk8016/",
+    "line": "掲載モデルは1.5〜2.1m。届かせたい場所までの距離と頭上の枝を確認し、竿より長すぎない仕掛けから始めます。",
+    "query": "がまかつ うきまろ のべ竿",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "竿の長さで届く範囲が決まる。大型のコイや流れの強い本流用ではない。2.4mは公式で生産終了表記があるため現行候補から外している。",
+    "image": {
+      "src": "/images/gear/gamakatsu-uk8016.webp",
+      "alt": "がまかつ うきまろ のべ竿",
+      "credit": "写真：がまかつ",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "シリーズ代表写真"
+    },
+    "variants": {
+      "headers": [
+        "",
+        "品名コード",
+        "標準全長",
+        "標準自重(g)",
+        "継数(本)",
+        "仕舞寸法(cm)"
+      ],
+      "rows": [
+        [
+          "",
+          "UK8016",
+          "1.5m",
+          "26",
+          "7",
+          "29.5"
+        ],
+        [
+          "",
+          "UK8016",
+          "1.8m",
+          "32",
+          "8",
+          "29.5"
+        ],
+        [
+          "",
+          "UK8016",
+          "2.1m",
+          "46",
+          "10",
+          "29.5"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "gamakatsu-uk8002",
+    "brand": "がまかつ",
+    "name": "うきまろ お魚みえみえバケツ",
+    "kind": "tool",
+    "summary": "透明な側面から小魚を観察できる水汲みバケツ。手を洗う水の用意にも使える。",
+    "specs": {
+      "寸法": "直径180×高さ200mm",
+      "ロープ": "6m"
+    },
+    "methods": [
+      "sabiki",
+      "choinage",
+      "freshwater-float"
+    ],
+    "fish": [],
+    "source": "https://www.gamakatsu.co.jp/products/uk8002/",
+    "line": "18×20cm、ロープ6mの仕様です。水を入れると重くなるので、子供だけで高い岸壁から引き上げないようにします。",
+    "query": "がまかつ うきまろ お魚みえみえバケツ",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "足元から身を乗り出して水を汲まない。水温上昇や酸欠に注意し、小魚を長時間詰め込まない。持ち帰りの保冷にはクーラーを別に用意。",
+    "image": {
+      "src": "/images/gear/gamakatsu-uk8002.webp",
+      "alt": "がまかつ うきまろ お魚みえみえバケツ",
+      "credit": "写真：がまかつ",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "製品写真"
+    }
+  },
+  {
+    "slug": "gamakatsu-uk8008",
+    "brand": "がまかつ",
+    "name": "うきまろ くるくるリサイくる",
+    "kind": "storage",
+    "summary": "サビキや短い仕掛けを巻いて保管する仕掛け巻き。外した針と糸をばらばらに持ち歩かずに済む。",
+    "specs": {
+      "寸法": "直径80×厚さ15mm"
+    },
+    "methods": [
+      "sabiki",
+      "choinage",
+      "freshwater-float",
+      "herabuna-bottom",
+      "sayori-uki",
+      "uki"
+    ],
+    "fish": [],
+    "source": "https://www.gamakatsu.co.jp/products/uk8008/",
+    "line": "針数と仕掛けの長さに合わせて収納できるか確認します。大きなルアーやエギを丸ごとしまうケースの代わりにはしません。",
+    "query": "がまかつ うきまろ くるくるリサイくる",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "針先が飛び出していないか確認してケースへ収納。塩を落として乾燥させ、傷んだハリスや錆びた針は次回使わない。",
+    "image": {
+      "src": "/images/gear/gamakatsu-uk8008.webp",
+      "alt": "がまかつ うきまろ くるくるリサイくる",
+      "credit": "写真：がまかつ",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "製品写真"
+    }
+  },
+  {
+    "slug": "gamakatsu-uk8024",
+    "brand": "がまかつ",
+    "name": "うきまろ ピンオンリール メジャー",
+    "kind": "tool",
+    "summary": "小魚の大きさを記録しながら楽しめるメジャー。カラビナでバッグに取り付けられる。",
+    "specs": {
+      "メジャー": "100cm / 40inch"
+    },
+    "methods": [
+      "sabiki",
+      "choinage",
+      "freshwater-float"
+    ],
+    "fish": [],
+    "source": "https://www.gamakatsu.co.jp/products/uk8024/",
+    "line": "全長が100cmを超える魚には別のメジャーが必要です。海水が付いたら汚れを落とし、巻き込み部を乾燥させます。",
+    "query": "がまかつ うきまろ ピンオンリール メジャー",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "写真や釣果投稿の前に魚を平らに置いて測る。小物を取り付ける場合は重さを確認し、伸ばしたメジャーを勢いよく戻さない。",
+    "image": {
+      "src": "/images/gear/gamakatsu-uk8024.webp",
+      "alt": "がまかつ うきまろ ピンオンリール メジャー",
+      "credit": "写真：がまかつ",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "製品写真"
+    }
+  },
+  {
+    "slug": "gamakatsu-uk8025",
+    "brand": "がまかつ",
+    "name": "うきまろ ピンオンリール ダブル",
+    "kind": "tool",
+    "summary": "ハサミや糸切りなどの軽い小物を手元に置くための二口リトラクター。道具を探す手間を減らす。",
+    "specs": {
+      "コード長": "50cm"
+    },
+    "methods": [
+      "sabiki",
+      "choinage",
+      "freshwater-float"
+    ],
+    "fish": [],
+    "source": "https://www.gamakatsu.co.jp/products/uk8025/",
+    "line": "コード長は50cm。重い道具の落下防止や、人の体を支える安全具としては使用しません。",
+    "query": "がまかつ うきまろ ピンオンリール ダブル",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "竿や魚を吊るす器具ではない。刃物をむき出しで揺らさず、服や救命具の動きを邪魔しない位置に付ける。",
+    "image": {
+      "src": "/images/gear/gamakatsu-uk8025.webp",
+      "alt": "がまかつ うきまろ ピンオンリール ダブル",
+      "credit": "写真：がまかつ",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "製品写真"
+    }
+  },
+  {
+    "slug": "gamakatsu-uk8030",
+    "brand": "がまかつ",
+    "name": "うきまろ ふきふきタオル",
+    "kind": "tool",
+    "summary": "小さく持ち運べるタオル。餌を触った後の手洗いと組み合わせ、濡れた手元を整える。",
+    "specs": {
+      "タオル寸法": "300×300mm"
+    },
+    "methods": [
+      "sabiki",
+      "choinage",
+      "freshwater-float"
+    ],
+    "fish": [],
+    "source": "https://www.gamakatsu.co.jp/products/uk8030/",
+    "line": "30×30cmの大きさです。清潔な手拭き用と魚用を分けたい場合は、色や置き場所も変えて管理します。",
+    "query": "がまかつ うきまろ ふきふきタオル",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "魚を乾いた布で強く握るための道具ではない。リリースする魚は濡れた手で短時間扱う。使用後は洗って十分に乾かす。",
+    "image": {
+      "src": "/images/gear/gamakatsu-uk8030.webp",
+      "alt": "がまかつ うきまろ ふきふきタオル",
+      "credit": "写真：がまかつ",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "製品写真"
+    }
+  },
+  {
+    "slug": "gamakatsu-uk8017",
+    "brand": "がまかつ",
+    "name": "うきまろッド＆リール ブラクリ",
+    "kind": "rod",
+    "summary": "短い竿とリールで足元の隙間へブラクリを落とすセット。細かく竿を動かす場所に向く。",
+    "specs": {
+      "全長": "1.1m",
+      "オモリ負荷": "2〜15号",
+      "付属糸": "3号100m"
+    },
+    "methods": [
+      "ana"
+    ],
+    "fish": [],
+    "source": "https://www.gamakatsu.co.jp/products/uk8017/",
+    "line": "竿は1.1m、オモリ負荷は2〜15号。足元を安定して確保できる場所を選び、危険なテトラへ入る道具として紹介するものではありません。",
+    "query": "がまかつ うきまろッド＆リール ブラクリ",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "竿・リール・糸のセットで、ブラクリは別に用意する。子供との釣行ではテトラに乗らず、安全な護岸の足元を大人と探る。",
+    "image": {
+      "src": "/images/gear/gamakatsu-uk8017.webp",
+      "alt": "がまかつ うきまろッド＆リール ブラクリ",
+      "credit": "写真：がまかつ",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "シリーズ代表写真"
+    },
+    "variants": {
+      "headers": [
+        "品名コード",
+        "標準全長",
+        "標準自重(g)",
+        "継数(本)",
+        "仕舞寸法(cm)",
+        "オモリ負荷"
+      ],
+      "rows": [
+        [
+          "UK8017",
+          "1.1m",
+          "86",
+          "2",
+          "59",
+          "2～15号(7.5～56g)"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "gamakatsu-42733",
+    "brand": "がまかつ",
+    "name": "うきまろサビキ 3本鈎仕掛",
+    "kind": "rig",
+    "summary": "短い竿でも針を手元へ寄せやすい55cmの3本針仕掛け。針が多い長仕掛けを持て余す親子釣行に。",
+    "specs": {
+      "全長": "55cm",
+      "針数": "3本",
+      "針号数": "2〜6号",
+      "入数": "2組"
+    },
+    "methods": [
+      "sabiki"
+    ],
+    "fish": [],
+    "source": "https://www.gamakatsu.co.jp/products/42733/",
+    "line": "針サイズは2〜6号。狙う小魚の口の大きさに合わせ、小さい魚が多い時期は針を大きくしすぎないことが大切です。",
+    "query": "がまかつ うきまろサビキ 3本鈎仕掛",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "これは替え仕掛け。カゴ・オモリ・アミエビは別途必要。小さいアジには魚の口に合う小針から選び、針先を人へ向けない。",
+    "image": {
+      "src": "/images/gear/gamakatsu-42733.webp",
+      "alt": "がまかつ うきまろサビキ 3本鈎仕掛",
+      "credit": "写真：がまかつ",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "シリーズ代表写真"
+    },
+    "variants": {
+      "headers": [
+        "品名コード",
+        "号数",
+        "ハリス",
+        "幹糸",
+        "全長",
+        "入数"
+      ],
+      "rows": [
+        [
+          "UM-132",
+          "2",
+          "0.6",
+          "1.5",
+          "55cm",
+          "2組"
+        ],
+        [
+          "UM-132",
+          "3",
+          "0.6",
+          "1.5",
+          "55cm",
+          "2組"
+        ],
+        [
+          "UM-132",
+          "4",
+          "0.8",
+          "2",
+          "55cm",
+          "2組"
+        ],
+        [
+          "UM-132",
+          "5",
+          "1",
+          "2",
+          "55cm",
+          "2組"
+        ],
+        [
+          "UM-132",
+          "6",
+          "1.2",
+          "2",
+          "55cm",
+          "2組"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "gamakatsu-gm2590",
+    "brand": "がまかつ",
+    "name": "メタル・PEラインシザース（仕掛ハサミ）",
+    "kind": "tool",
+    "summary": "PEや細い仕掛け糸の結び直しに使う専用ハサミ。刃の加工で滑りやすい糸を捉える。",
+    "specs": {
+      "全長": "115mm",
+      "刃素材": "6Aステンレス"
+    },
+    "methods": [],
+    "fish": [],
+    "source": "https://www.gamakatsu.co.jp/products/gm2590/",
+    "line": "全長115mm。鮎用メタルライン対応を、石鯛やトローリングの太いワイヤー対応と取り違えないようにします。",
+    "query": "がまかつ メタル・PEラインシザース（仕掛ハサミ）",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "鮎用のメタル・複合ラインにも対応するが、一般のワイヤーを切る工具ではない。切った糸を回収し、針外しとは役割を分けて携行する。",
+    "image": {
+      "src": "/images/gear/gamakatsu-gm2590.webp",
+      "alt": "がまかつ メタル・PEラインシザース（仕掛ハサミ）",
+      "credit": "写真：がまかつ",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "製品写真"
+    }
+  },
+  {
+    "slug": "daiwa-7nnobuq",
+    "brand": "DAIWA",
+    "name": "アユイング X",
+    "kind": "rod",
+    "summary": "川の流れの中でルアーを安定させるアユイング専用竿。スピニング用とベイト用を一つのシリーズで比較できる。",
+    "specs": {
+      "釣法": "アユイング",
+      "代表型番": "90MLS-S"
+    },
+    "methods": [
+      "ayuing"
+    ],
+    "fish": [],
+    "source": "https://www.daiwa.com/jp/product/7nnobuq",
+    "line": "立つ岸から狙う筋までの距離、使用ルアーの重量、適合ラインを仕様表で照合します。入川先のアユイング可否も確認します。",
+    "query": "DAIWA アユイング X",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "まず手持ちのリール形式に合うモデルを選ぶ。川幅・流速・使うルアーの重さで長さとパワーを選択。遊漁券とアユルアーの許可区間も確認。",
+    "image": {
+      "src": "/images/gear/daiwa-7nnobuq.webp",
+      "alt": "DAIWA アユイング X",
+      "credit": "写真：DAIWA",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "シリーズ代表写真"
+    },
+    "variants": {
+      "headers": [
+        "アイテム",
+        "全長（m）",
+        "継数",
+        "仕舞寸法（cm）",
+        "標準自重（ｇ）",
+        "ルアー重量（ｇ）",
+        "適合ライン ナイロン （lb.）",
+        "適合ライン PE（号）",
+        "パワーランク"
+      ],
+      "rows": [
+        [
+          "ＡＹＵＩＮＧ　Ｘ　９０ＭＬＳ－Ｓ",
+          "2.74",
+          "2",
+          "141",
+          "97",
+          "3～21",
+          "3～10",
+          "0.4～0.8",
+          "ML"
+        ],
+        [
+          "ＡＹＵＩＮＧ　Ｘ　９０ＭＬＢ－Ｓ",
+          "2.74",
+          "2",
+          "141",
+          "95",
+          "3～21",
+          "3～10",
+          "0.4～0.8",
+          "ML"
+        ],
+        [
+          "ＡＹＵＩＮＧ　Ｘ　１００ＭＳ－Ｓ",
+          "3.05",
+          "2",
+          "157",
+          "111",
+          "4～23",
+          "4～10",
+          "0.4～1.0",
+          "M"
+        ],
+        [
+          "ＡＹＵＩＮＧ　Ｘ　１００ＭＢ－Ｓ",
+          "3.05",
+          "2",
+          "157",
+          "113",
+          "4～23",
+          "4～10",
+          "0.4～1.0",
+          "M"
+        ],
+        [
+          "ＡＹＵＩＮＧ　Ｘ　９９ＨＳ－Ｓ",
+          "2.97",
+          "2",
+          "153",
+          "114",
+          "5～28",
+          "5～12",
+          "0.4～1.2",
+          "H"
+        ],
+        [
+          "ＡＹＵＩＮＧ　Ｘ　９９ＨＢ－Ｓ",
+          "2.97",
+          "2",
+          "153",
+          "116",
+          "5～28",
+          "5～12",
+          "0.4～1.2",
+          "H"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "daiwa-o3f91q2",
+    "brand": "DAIWA",
+    "name": "陽舟",
+    "kind": "rod",
+    "summary": "管理池や野釣りのヘラブナに向けた並継ぎ竿。ポイントの距離や水深に応じて尺数を選ぶ。",
+    "specs": {
+      "釣法": "ヘラブナ釣り"
+    },
+    "methods": [
+      "herabuna-bottom"
+    ],
+    "fish": [],
+    "source": "https://www.daiwa.com/jp/product/2023/10/24/05/57/o3f91q2",
+    "line": "管理池の座席、水深、指定された竿の長さを先に確認します。短い竿で届く底なのかを踏まえ、尺数を選んでください。",
+    "query": "DAIWA 陽舟",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "底釣りはウキ下と底の状態を先に確認する。リールは取り付けず、穂先へ道糸を接続。大型コイ用のぶっこみ竿とは使い分ける。",
+    "image": {
+      "src": "/images/gear/daiwa-o3f91q2.webp",
+      "alt": "DAIWA 陽舟",
+      "credit": "写真：DAIWA",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "シリーズ代表写真"
+    },
+    "variants": {
+      "headers": [
+        "アイテム",
+        "全長（m）",
+        "継数",
+        "仕舞寸法（cm）",
+        "標準自重（ｇ）"
+      ],
+      "rows": [
+        [
+          "陽舟　７・Ｗ",
+          "2.1",
+          "3",
+          "77",
+          "41"
+        ],
+        [
+          "陽舟　８・Ｗ",
+          "2.4",
+          "3",
+          "87",
+          "46"
+        ],
+        [
+          "陽舟　９・Ｗ",
+          "2.7",
+          "3",
+          "97",
+          "57"
+        ],
+        [
+          "陽舟　１０・Ｗ",
+          "3",
+          "3",
+          "107",
+          "67"
+        ],
+        [
+          "陽舟　１１・Ｗ",
+          "3.3",
+          "3",
+          "117",
+          "76"
+        ],
+        [
+          "陽舟　１２・Ｗ",
+          "3.6",
+          "4",
+          "99",
+          "85"
+        ],
+        [
+          "陽舟　１３・Ｗ",
+          "3.9",
+          "4",
+          "108",
+          "94"
+        ],
+        [
+          "陽舟　１４・Ｗ",
+          "4.2",
+          "4",
+          "114",
+          "111"
+        ],
+        [
+          "陽舟　１５・Ｗ",
+          "4.5",
+          "5",
+          "102",
+          "107"
+        ],
+        [
+          "陽舟　１６・Ｗ",
+          "4.8",
+          "5",
+          "109",
+          "112"
+        ],
+        [
+          "陽舟　１８・Ｗ",
+          "5.4",
+          "5",
+          "121",
+          "120"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "daiwa-amlpwhx",
+    "brand": "DAIWA",
+    "name": "雪渓",
+    "kind": "rod",
+    "summary": "短く仕舞える渓流用のべ竿。木の枝や川幅に合わせて長さを選び、餌を流れに沿わせて使う。",
+    "specs": {
+      "釣法": "渓流餌釣り",
+      "仕舞寸法": "41.2cm"
+    },
+    "methods": [
+      "freshwater-bait"
+    ],
+    "fish": [],
+    "source": "https://www.daiwa.com/jp/product/amlpwhx",
+    "line": "全長だけでなく仕舞寸法も携行性に影響します。歩く距離、頭上の障害物、使うハリスに合わせて仕様を確認します。",
+    "query": "DAIWA 雪渓",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "竿の適合ハリスを超える太糸を安易に結ばない。岩の間で穂先をぶつけず、増水した流れに立ち込まない。リールは使わない。",
+    "image": {
+      "src": "/images/gear/daiwa-amlpwhx.webp",
+      "alt": "DAIWA 雪渓",
+      "credit": "写真：DAIWA",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "シリーズ代表写真"
+    },
+    "variants": {
+      "headers": [
+        "アイテム",
+        "全長（m）",
+        "継数",
+        "仕舞寸法（cm）",
+        "標準自重（ｇ）",
+        "適合ハリス ナイロン（号）"
+      ],
+      "rows": [
+        [
+          "雪渓　硬調　３９Ｍ・Ｒ",
+          "3.9",
+          "11",
+          "41.2",
+          "82",
+          "0.3～1.0"
+        ],
+        [
+          "雪渓　硬調　４６Ｍ・Ｒ",
+          "4.6",
+          "13",
+          "41.2",
+          "102",
+          "0.3～1.0"
+        ],
+        [
+          "雪渓　硬調　５３Ｍ・Ｒ",
+          "5.3",
+          "15",
+          "41.2",
+          "133",
+          "0.3～1.0"
+        ],
+        [
+          "雪渓　硬調　６０Ｍ・Ｒ",
+          "6",
+          "17",
+          "41.2",
+          "167",
+          "0.3～1.0"
+        ],
+        [
+          "雪渓　超硬　５３Ｍ・Ｒ",
+          "5.3",
+          "15",
+          "41.2",
+          "148",
+          "0.4～1.2"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "daiwa-3j5fk08",
+    "brand": "DAIWA",
+    "name": "プライム アユ",
+    "kind": "rod",
+    "summary": "オトリアユを操作する友釣り用のべ竿。取り回しと狙う距離のバランスで長さを比較できる。",
+    "specs": {
+      "釣法": "アユ友釣り",
+      "全長": "6.3・7.2・8.0m"
+    },
+    "methods": [
+      "ayu-tomozuri"
+    ],
+    "fish": [],
+    "source": "https://www.daiwa.com/jp/product/3j5fk08",
+    "line": "川幅と操作する距離に合わせて長さを選びます。頭上の電線や障害物を避け、指定漁期・遊漁券・入川条件を確認します。",
+    "query": "DAIWA プライム アユ",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "リール付きルアーロッドではない。水中糸・鼻カン・掛け針など友釣り専用仕掛けを別途用意し、竿の適合範囲と川の規則を確認する。",
+    "image": {
+      "src": "/images/gear/daiwa-3j5fk08.webp",
+      "alt": "DAIWA プライム アユ",
+      "credit": "写真：DAIWA",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "シリーズ代表写真"
+    },
+    "variants": {
+      "headers": [
+        "アイテム",
+        "全長（m）",
+        "継数",
+        "仕舞寸法（cm）",
+        "標準自重（ｇ）",
+        "錘負荷（号）",
+        "適合水中糸（メタルライン）",
+        "適合水中糸（ナイロン）"
+      ],
+      "rows": [
+        [
+          "プライム　アユ　６３",
+          "6.3",
+          "6",
+          "118",
+          "180",
+          "0～4",
+          "0.05～0.25",
+          "0.15～0.6"
+        ],
+        [
+          "プライム　アユ　７２",
+          "7.2",
+          "6",
+          "139",
+          "200",
+          "0～4",
+          "0.05～0.25",
+          "0.15～0.6"
+        ],
+        [
+          "プライム　アユ　８０",
+          "8.0",
+          "7",
+          "130",
+          "239",
+          "0～4",
+          "0.05～0.25",
+          "0.15～0.6"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "daiwa-g14s81m",
+    "brand": "DAIWA",
+    "name": "友舟 RX-450W",
+    "kind": "storage",
+    "summary": "川の流れに置き、オトリや釣れたアユを活かすための友舟。友釣りとアユイングで使える。",
+    "specs": {
+      "容量": "約4.5L"
+    },
+    "methods": [
+      "ayuing",
+      "ayu-tomozuri"
+    ],
+    "fish": [],
+    "source": "https://www.daiwa.com/jp/product/g14s81m",
+    "line": "容量4.5Lの製品です。持ち歩く距離と扱う魚の量を考え、入れすぎを避けて魚の状態を確認します。",
+    "query": "DAIWA 友舟 RX-450W",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "投入前に扉とロックを点検。増水・急流では舟を追いかけず安全を優先する。普通の保冷クーラーの代用ではない。",
+    "image": {
+      "src": "/images/gear/daiwa-g14s81m.webp",
+      "alt": "DAIWA 友舟 RX-450W",
+      "credit": "写真：DAIWA",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "製品写真"
+    }
+  },
+  {
+    "slug": "daiwa-nd7i5yi",
+    "brand": "DAIWA",
+    "name": "鮎ダモ V39F",
+    "kind": "net",
+    "summary": "取り込んだアユを水と一緒に短時間扱える袋ダモ。掛け針が絡みにくい構造を採用する。",
+    "specs": {
+      "枠径": "39cm",
+      "重量": "270g"
+    },
+    "methods": [
+      "ayuing",
+      "ayu-tomozuri"
+    ],
+    "fish": [],
+    "source": "https://www.daiwa.com/jp/product/nd7i5yi",
+    "line": "枠径39cm、重量270gの仕様です。自分の腕の届く範囲と取り込み方に合うか確認し、携行方法も決めておきます。",
+    "query": "DAIWA 鮎ダモ V39F",
+    "accessory": "使う仕掛けの針・糸・オモリを先に確認し、すでに持っている道具を活用してください。",
+    "accessoryQuery": "釣り 仕掛け 小物",
+    "check": "大型青物や堤防の高い足場から魚をすくう長柄タモではない。アユを移す間も針先を意識し、魚体を強くつかまない。",
+    "image": {
+      "src": "/images/gear/daiwa-nd7i5yi.webp",
+      "alt": "DAIWA 鮎ダモ V39F",
+      "credit": "写真：DAIWA",
+      "permission": "User reports oral permission for product-photo republication on 2026-09-24",
+      "caption": "製品写真"
+    }
+  }
+]

@@ -92,3 +92,33 @@ test('every gear detail has sourced reading content and tables contain only mode
  // Long-form text must remain a detail-page dependency, not part of the search catalogue.
  assert.doesNotMatch(fs.readFileSync(path.join(root,'lib/gear-catalog.ts'),'utf8'),/from ['"].*gear-editorial/);
 });
+
+test('method recommendations cover the registry with deliberate roles and reciprocal links',()=>{
+ const {methodSlugs}=require('../lib/method-registry');
+ const {methodGearPlans}=require('../lib/method-gear-plans');
+ const {selectRelatedGear,filterGear}=require('../lib/gear-catalog');
+ for(const method of methodSlugs){
+  const plan=methodGearPlans[method];assert.ok(plan,method);
+  const products=selectRelatedGear({method,limit:20});
+  assert.equal(products.length,plan.items.length,method);
+  assert.equal(new Set(products.map(p=>p.slug)).size,products.length,method);
+  assert.ok(products.length>=(method==='marlin-trolling'?3:6),method);
+  assert.ok(products.filter(p=>p.kind==='cooler').length<=1,method);
+  for(const product of products){assert.ok(filterGear({method}).some(p=>p.slug===product.slug));assert.ok(plan.items.find(p=>p.slug===product.slug).reason.length>15)}
+ }
+});
+test('sabiki recommendations are a family setup, not a collection of large coolers',()=>{
+ const {selectRelatedGear}=require('../lib/gear-catalog');
+ const products=selectRelatedGear({method:'sabiki',limit:20});
+ for(const slug of ['gamakatsu-uk8012','gamakatsu-42733','gamakatsu-uk8009','gamakatsu-uk8010','gamakatsu-uk8020'])assert.ok(products.some(p=>p.slug===slug));
+ assert.equal(products.filter(p=>p.kind==='cooler').length,1);
+ assert.equal(products.find(p=>p.kind==='cooler').slug,'daiwa-2ya8o4q');
+ for(const method of ['herabuna-bottom','freshwater-float','freshwater-bait','ayu-tomozuri'])assert.ok(!selectRelatedGear({method,limit:20}).some(p=>p.kind==='reel'),method);
+ assert.equal(selectRelatedGear({method:'omorig'})[0].slug,'daiwa-vupippr');
+});
+test('large offshore coolers are not tagged as family sabiki or boat-kisu recommendations',()=>{
+ const {getGearProduct}=require('../lib/gear-catalog');
+ for(const slug of ['daiwa-dwhqytk','daiwa-6qdtba8','daiwa-ttddw9c','daiwa-dial5ds','daiwa-98uklb4']){
+  const p=getGearProduct(slug);assert.ok(p);assert.ok(!p.methods.includes('sabiki'));assert.ok(!p.methods.includes('boat-kisu'));
+ }
+});

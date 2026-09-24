@@ -1,3 +1,5 @@
+import family from './gear-catalog-family.json';
+import {methodGearPlans} from './method-gear-plans';
 import expansion from './gear-catalog-expansion.json';
 import series from './gear-catalog-series.json';
 import reels from './gear-catalog-reels.json';
@@ -10,7 +12,7 @@ export function getGearSubtype(p:GearProduct):GearSubtype|undefined{return p.sub
 export const gearPageSize=24;
 export function paginateGear(products:GearProduct[],input:string|undefined){const totalPages=Math.max(1,Math.ceil(products.length/gearPageSize));const n=Number(input);const page=Number.isSafeInteger(n)?Math.min(totalPages,Math.max(1,n)):1;return {page,totalPages,items:products.slice((page-1)*gearPageSize,page*gearPageSize)}}
 
-export const gearCatalog:GearProduct[]=[
+const baseGearCatalog:GearProduct[]=[
   {
     "slug": "daiwa-revros-lt2500d",
     "brand": "DAIWA",
@@ -612,17 +614,24 @@ export const gearCatalog:GearProduct[]=[
     }
   }
 
-, ...expansion as GearProduct[], ...series as GearProduct[], ...reels as GearProduct[]];
+, ...expansion as GearProduct[], ...series as GearProduct[], ...reels as GearProduct[], ...family as unknown as GearProduct[]];
+const plannedMethods = new Map<string, string[]>();
+for (const [method, plan] of Object.entries(methodGearPlans)) {
+ for (const item of plan.items) plannedMethods.set(item.slug, [...(plannedMethods.get(item.slug) ?? []), method]);
+}
+export const gearCatalog: GearProduct[] = baseGearCatalog.map(product => ({...product, methods: [...new Set([...product.methods, ...(plannedMethods.get(product.slug) ?? [])])]}));
 export const gearVerifiedAt='2026-09-24';
 export function getGearProduct(slug:string){return gearCatalog.find(p=>p.slug===slug)}
 export function filterGear(input:{q?:string;brand?:string;kind?:string;subtype?:string;method?:string;fish?:string}){const q=normalizeGearFilters(input);const terms=(q.q??'').normalize('NFKC').toLowerCase().trim().split(/\s+/).filter(Boolean);return gearCatalog.filter(p=>(!q.brand||p.brand===q.brand)&&(!q.kind||p.kind===q.kind)&&(!q.subtype||getGearSubtype(p)===q.subtype)&&(!q.method||p.methods.includes(q.method))&&(!q.fish||p.fish.includes(q.fish))&&terms.every(t=>`${p.brand} ${p.name} ${p.summary} ${gearKindLabels[p.kind]} ${getGearSubtype(p)?gearSubtypeLabels[getGearSubtype(p)!]:''} ${p.colors?.map(c=>c.name).join(' ')??''} ${p.variants?.rows.map(row=>row[0]).join(' ')??''}`.normalize('NFKC').toLowerCase().includes(t)))}
 
 // Explicit product relationships only: never infer compatibility from a shared fish.
 export function selectRelatedGear({method,fish,limit=6}:{method?:string;fish?:string;limit?:number}){
+ const plan = method ? methodGearPlans[method] : undefined;
+ if (plan) return plan.items.map(item=>getGearProduct(item.slug)).filter((p):p is GearProduct=>!!p&&(!fish||p.fish.includes(fish))).slice(0,limit);
  const candidates=gearCatalog.filter(p=>(!method||p.methods.includes(method))&&(!fish||p.fish.includes(fish)));
  const selected:GearProduct[]=[];
  for(const kind of ['rod','reel','lure','egi','rig','line','tool','cooler','net','storage']){const p=candidates.find(p=>p.kind===kind);if(p)selected.push(p);if(selected.length>=limit)break}
- for(const p of candidates){if(selected.length>=limit)break;if(!selected.includes(p))selected.push(p)}
+ for(const p of candidates){if(selected.length>=limit)break;if(!selected.includes(p)&&selected.filter(item=>item.kind===p.kind).length<(p.kind==='tool'?2:1))selected.push(p)}
  return selected;
 }
 
