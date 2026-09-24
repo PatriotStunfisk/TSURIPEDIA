@@ -1,0 +1,310 @@
+{
+  "date": "2026-09-24",
+  "origin": "Original assets created with OpenAI image generation",
+  "notes": [
+    "Ten transparent fish cutouts and forty individual cooked-dish images.",
+    "Fish morphology and recipe-to-image matching reviewed. No external photos copied."
+  ],
+  "assets": [
+    {
+      "id": "murasoi",
+      "kind": "fish",
+      "path": "/images/fish/murasoi-profile-20260924.webp",
+      "generationFile": "exec-02d6a4c5-57b6-4125-954d-3ea04e2c3d3d.png"
+    },
+    {
+      "id": "takenokomebaru",
+      "kind": "fish",
+      "path": "/images/fish/takenokomebaru-profile-20260924.webp",
+      "generationFile": "exec-5e24459e-d332-4ebc-b62d-f27a406595c6.png"
+    },
+    {
+      "id": "kuromejina",
+      "kind": "fish",
+      "path": "/images/fish/kuromejina-profile-20260924.webp",
+      "generationFile": "exec-e42a48a8-3946-4125-9423-1f54819ea7e1.png"
+    },
+    {
+      "id": "chidai",
+      "kind": "fish",
+      "path": "/images/fish/chidai-profile-20260924.webp",
+      "generationFile": "exec-2610e2dc-c0bc-4022-ad6c-a99f4e689a09.png"
+    },
+    {
+      "id": "matoudai",
+      "kind": "fish",
+      "path": "/images/fish/matoudai-profile-20260924.webp",
+      "generationFile": "exec-cd677beb-13c1-425c-aa43-efd6794047d1.png"
+    },
+    {
+      "id": "akayagara",
+      "kind": "fish",
+      "path": "/images/fish/akayagara-profile-20260924.webp",
+      "generationFile": "exec-ab48433a-eb1b-43a9-a9bb-38c9226424bd.png"
+    },
+    {
+      "id": "hachibiki",
+      "kind": "fish",
+      "path": "/images/fish/hachibiki-profile-20260924.webp",
+      "generationFile": "exec-24418f9b-ff63-44f3-93cb-f2aeb8c6ce47.png"
+    },
+    {
+      "id": "chigodara",
+      "kind": "fish",
+      "path": "/images/fish/chigodara-profile-20260924.webp",
+      "generationFile": "exec-8bf3d238-2731-4ecb-bb1e-2a3e92a0f352.png"
+    },
+    {
+      "id": "himeji",
+      "kind": "fish",
+      "path": "/images/fish/himeji-profile-20260924.webp",
+      "generationFile": "exec-5674fbef-9c6b-4f6b-ac81-c295a96cc46e.png"
+    },
+    {
+      "id": "kanagashira",
+      "kind": "fish",
+      "path": "/images/fish/kanagashira-profile-20260924.webp",
+      "generationFile": "exec-d24c1244-61ed-4f41-acce-2683068d33a9.png"
+    },
+    {
+      "id": "murasoi-nitsuke",
+      "kind": "cooking",
+      "path": "/images/cooking/murasoi-nitsuke.webp",
+      "generationFile": "exec-190c76af-38dc-4dd4-b685-ef8b4eb61ae1.png"
+    },
+    {
+      "id": "murasoi-karaage",
+      "kind": "cooking",
+      "path": "/images/cooking/murasoi-karaage.webp",
+      "generationFile": "exec-5d1e7bb8-dc4a-4e22-a049-a76ae81df4ae.png"
+    },
+    {
+      "id": "murasoi-sakamushi",
+      "kind": "cooking",
+      "path": "/images/cooking/murasoi-sakamushi.webp",
+      "generationFile": "exec-3915c0ec-e636-4748-a929-c72ca6eee76b.png"
+    },
+    {
+      "id": "murasoi-ushiojiru",
+      "kind": "cooking",
+      "path": "/images/cooking/murasoi-ushiojiru.webp",
+      "generationFile": "exec-a26829d3-805f-4dc4-a7e4-e7bba60a76f4.png"
+    },
+    {
+      "id": "takenokomebaru-nitsuke",
+      "kind": "cooking",
+      "path": "/images/cooking/takenokomebaru-nitsuke.webp",
+      "generationFile": "exec-bae09de2-dc5b-4fc2-ab9f-00773ec068ed.png"
+    },
+    {
+      "id": "takenokomebaru-shioyaki",
+      "kind": "cooking",
+      "path": "/images/cooking/takenokomebaru-shioyaki.webp",
+      "generationFile": "exec-27d1d57a-b483-4f20-981d-695b53037afb.png"
+    },
+    {
+      "id": "takenokomebaru-sakamushi",
+      "kind": "cooking",
+      "path": "/images/cooking/takenokomebaru-sakamushi.webp",
+      "generationFile": "exec-f59587de-1cf4-4048-8281-604cc80d3b37.png"
+    },
+    {
+      "id": "takenokomebaru-karaage",
+      "kind": "cooking",
+      "path": "/images/cooking/takenokomebaru-karaage.webp",
+      "generationFile": "exec-4d9049ab-5b05-43ed-8973-c4643add9d77.png"
+    },
+    {
+      "id": "kuromejina-shioyaki",
+      "kind": "cooking",
+      "path": "/images/cooking/kuromejina-shioyaki.webp",
+      "generationFile": "exec-2fa8b3ee-d250-441e-afed-eb26ca186909.png"
+    },
+    {
+      "id": "kuromejina-nitsuke",
+      "kind": "cooking",
+      "path": "/images/cooking/kuromejina-nitsuke.webp",
+      "generationFile": "exec-b54d44c0-3c97-4e64-90a6-72869a86fa25.png"
+    },
+    {
+      "id": "kuromejina-meuniere",
+      "kind": "cooking",
+      "path": "/images/cooking/kuromejina-meuniere.webp",
+      "generationFile": "exec-627da0c6-383e-4d66-98d1-d14b1597cecb.png"
+    },
+    {
+      "id": "kuromejina-sakamushi",
+      "kind": "cooking",
+      "path": "/images/cooking/kuromejina-sakamushi.webp",
+      "generationFile": "exec-6efc04bb-ffc8-45d0-af6f-9c8b52f6d3ed.png"
+    },
+    {
+      "id": "chidai-shioyaki",
+      "kind": "cooking",
+      "path": "/images/cooking/chidai-shioyaki.webp",
+      "generationFile": "exec-ab20b92e-d767-432d-a227-15110d9cf78f.png"
+    },
+    {
+      "id": "chidai-sakamushi",
+      "kind": "cooking",
+      "path": "/images/cooking/chidai-sakamushi.webp",
+      "generationFile": "exec-267a9482-6f17-4953-8038-dc8365172536.png"
+    },
+    {
+      "id": "chidai-takikomi",
+      "kind": "cooking",
+      "path": "/images/cooking/chidai-takikomi.webp",
+      "generationFile": "exec-31b94609-d915-4100-94fc-ed72feb08d06.png"
+    },
+    {
+      "id": "chidai-ushiojiru",
+      "kind": "cooking",
+      "path": "/images/cooking/chidai-ushiojiru.webp",
+      "generationFile": "exec-1278ec48-b067-485f-a35a-d14b35c78278.png"
+    },
+    {
+      "id": "matoudai-meuniere",
+      "kind": "cooking",
+      "path": "/images/cooking/matoudai-meuniere.webp",
+      "generationFile": "exec-c9680ea8-96e6-4c08-84e7-bc78b3f7f205.png"
+    },
+    {
+      "id": "matoudai-fry",
+      "kind": "cooking",
+      "path": "/images/cooking/matoudai-fry.webp",
+      "generationFile": "exec-16620e39-0e7e-444e-92a8-621ce8aa160a.png"
+    },
+    {
+      "id": "matoudai-tomato",
+      "kind": "cooking",
+      "path": "/images/cooking/matoudai-tomato.webp",
+      "generationFile": "exec-187c7597-fa78-426c-84cb-28d6ebc97f0b.png"
+    },
+    {
+      "id": "matoudai-sakamushi",
+      "kind": "cooking",
+      "path": "/images/cooking/matoudai-sakamushi.webp",
+      "generationFile": "exec-f95de3e8-8dc8-46e2-82c8-69a6574adfaf.png"
+    },
+    {
+      "id": "akayagara-ushiojiru",
+      "kind": "cooking",
+      "path": "/images/cooking/akayagara-ushiojiru.webp",
+      "generationFile": "exec-36cc1149-850b-47be-8248-4b8919169584.png"
+    },
+    {
+      "id": "akayagara-sakamushi",
+      "kind": "cooking",
+      "path": "/images/cooking/akayagara-sakamushi.webp",
+      "generationFile": "exec-1ab9d731-0d1d-460d-b281-3a7a180ef909.png"
+    },
+    {
+      "id": "akayagara-tempura",
+      "kind": "cooking",
+      "path": "/images/cooking/akayagara-tempura.webp",
+      "generationFile": "exec-343eb1b0-f2cf-4b1f-a285-08df6ec07ed0.png"
+    },
+    {
+      "id": "akayagara-shioyaki",
+      "kind": "cooking",
+      "path": "/images/cooking/akayagara-shioyaki.webp",
+      "generationFile": "exec-36f11441-9fc8-4ce7-9f45-1ef4edcd7a6e.png"
+    },
+    {
+      "id": "hachibiki-tatsuta",
+      "kind": "cooking",
+      "path": "/images/cooking/hachibiki-tatsuta.webp",
+      "generationFile": "exec-bfb39a07-74e9-4249-9a2a-deb3ceba7042.png"
+    },
+    {
+      "id": "hachibiki-shioyaki",
+      "kind": "cooking",
+      "path": "/images/cooking/hachibiki-shioyaki.webp",
+      "generationFile": "exec-372c77b0-0b17-4731-a1a7-60581908661d.png"
+    },
+    {
+      "id": "hachibiki-misozuke",
+      "kind": "cooking",
+      "path": "/images/cooking/hachibiki-misozuke.webp",
+      "generationFile": "exec-0bf601f0-3a6e-4f4e-a2f3-14e191829f30.png"
+    },
+    {
+      "id": "hachibiki-nitsuke",
+      "kind": "cooking",
+      "path": "/images/cooking/hachibiki-nitsuke.webp",
+      "generationFile": "exec-24bedabd-1739-483e-ac5e-daa5b9e537e9.png"
+    },
+    {
+      "id": "chigodara-misoni",
+      "kind": "cooking",
+      "path": "/images/cooking/chigodara-misoni.webp",
+      "generationFile": "exec-3c668cfe-13ba-496c-b6fd-aa004a806183.png"
+    },
+    {
+      "id": "chigodara-ushiojiru",
+      "kind": "cooking",
+      "path": "/images/cooking/chigodara-ushiojiru.webp",
+      "generationFile": "exec-2c815f1e-bca3-48e5-8516-0b04ea6d0de2.png"
+    },
+    {
+      "id": "chigodara-karaage",
+      "kind": "cooking",
+      "path": "/images/cooking/chigodara-karaage.webp",
+      "generationFile": "exec-231a9908-6791-4419-87c4-af1ac74e2395.png"
+    },
+    {
+      "id": "chigodara-sakamushi",
+      "kind": "cooking",
+      "path": "/images/cooking/chigodara-sakamushi.webp",
+      "generationFile": "exec-4a2cc7c9-82ea-436e-987e-b1093ee0de62.png"
+    },
+    {
+      "id": "himeji-tempura",
+      "kind": "cooking",
+      "path": "/images/cooking/himeji-tempura.webp",
+      "generationFile": "exec-8bea8d77-28c6-431a-a97e-4187957056e5.png"
+    },
+    {
+      "id": "himeji-shioyaki",
+      "kind": "cooking",
+      "path": "/images/cooking/himeji-shioyaki.webp",
+      "generationFile": "exec-36cf4e88-6cc6-4f7a-bb01-15d55ba80127.png"
+    },
+    {
+      "id": "himeji-karaage",
+      "kind": "cooking",
+      "path": "/images/cooking/himeji-karaage.webp",
+      "generationFile": "exec-82b068c7-a7b4-4abd-8bc2-057f27fd147f.png"
+    },
+    {
+      "id": "himeji-nanban",
+      "kind": "cooking",
+      "path": "/images/cooking/himeji-nanban.webp",
+      "generationFile": "exec-136fa5cb-5f07-4b3f-9fd9-0566d8610821.png"
+    },
+    {
+      "id": "kanagashira-ushiojiru",
+      "kind": "cooking",
+      "path": "/images/cooking/kanagashira-ushiojiru.webp",
+      "generationFile": "exec-7eeabb29-5eb5-415b-a3d4-5759ba963edc.png"
+    },
+    {
+      "id": "kanagashira-nitsuke",
+      "kind": "cooking",
+      "path": "/images/cooking/kanagashira-nitsuke.webp",
+      "generationFile": "exec-8075ee4c-1e06-42b0-9b88-48e26cac9ae4.png"
+    },
+    {
+      "id": "kanagashira-karaage",
+      "kind": "cooking",
+      "path": "/images/cooking/kanagashira-karaage.webp",
+      "generationFile": "exec-e4815da9-61e5-4bc8-9f14-daba05751a81.png"
+    },
+    {
+      "id": "kanagashira-sakamushi",
+      "kind": "cooking",
+      "path": "/images/cooking/kanagashira-sakamushi.webp",
+      "generationFile": "exec-beeaf555-dc54-4212-98e9-428d4459fd08.png"
+    }
+  ]
+}
