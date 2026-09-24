@@ -32,7 +32,7 @@ export default function Home(){
         <h1>釣りが、もっと<br/>好きになる。</h1>
         <p className={s.heroSub}>魚を知り、釣り方を学び、フィールドへ。</p>
         <p className={s.lead}>UOLINKは、魚図鑑・釣り方・釣り場・釣具・魚料理をひとつにつなぐ釣りの総合ガイドです。</p>
-        <form action="/search" role="search" className={s.siteSearch}><label className="srOnly" htmlFor="home-search">サイト全体を検索</label><input id="home-search" name="q" type="search" placeholder="魚・釣り場・釣り方を検索" required maxLength={100}/><button type="submit">検索</button></form><WeatherPanel compact/>
+        <form action="/search" role="search" className={s.siteSearch}><label className="srOnly" htmlFor="home-search">サイト全体を検索</label><input id="home-search" name="q" type="search" placeholder="魚・釣り場・釣り方を検索" required maxLength={100}/><button type="submit" aria-label="検索"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button></form><WeatherPanel compact/>
         <nav className={s.heroQuick}>{quickLinks.map(x=><a href={x.href} key={x.href}><span>{x.icon}</span><b>{x.label}</b></a>)}</nav>
       </div>
     </section>
