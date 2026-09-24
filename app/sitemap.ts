@@ -17,6 +17,7 @@ export default function sitemap():MetadataRoute.Sitemap{
     {path:'/fish',priority:.95,changeFrequency:'weekly' as const},
     {path:'/methods',priority:.9,changeFrequency:'weekly' as const},
     {path:'/guide',priority:.92,changeFrequency:'weekly' as const},
+    {path:'/weather',priority:.7,changeFrequency:'daily' as const},
     {path:'/catches',priority:.7,changeFrequency:'daily' as const},
     {path:'/spots',priority:.8,changeFrequency:'weekly' as const},
     {path:'/gear',priority:.85,changeFrequency:'weekly' as const},

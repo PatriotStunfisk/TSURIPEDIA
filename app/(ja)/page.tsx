@@ -1,3 +1,4 @@
+import WeatherPanel from '@/components/WeatherPanel';
 import {pageSharing} from '@/lib/page-sharing';
 import {methods} from '@/lib/data';
 import {selectHomeFish,selectHomeGuides} from '@/lib/home-selection';
@@ -15,7 +16,8 @@ const quickLinks=[
   {href:'/gear',icon:'▣',label:'釣具'},
   {href:'/cooking',icon:'◇',label:'魚料理'},
   {href:'/quest',icon:'◈',label:'QUEST'},
-  {href:'/catches',icon:'▤',label:'新着釣果'}
+  {href:'/catches',icon:'▤',label:'新着釣果'},
+  {href:'/weather',icon:'☀',label:'天気・潮汐'}
 ];
 
 export default function Home(){
@@ -30,7 +32,7 @@ export default function Home(){
         <h1>釣りが、もっと<br/>好きになる。</h1>
         <p className={s.heroSub}>魚を知り、釣り方を学び、フィールドへ。</p>
         <p className={s.lead}>UOLINKは、魚図鑑・釣り方・釣り場・釣具・魚料理をひとつにつなぐ釣りの総合ガイドです。</p>
-        <div className={s.actions}><a className={s.primary} href="/fish">魚を探す</a><a className={s.secondary} href="/guide">釣りガイドを見る</a></div>
+        <form action="/search" role="search" className={s.siteSearch}><label className="srOnly" htmlFor="home-search">サイト全体を検索</label><input id="home-search" name="q" type="search" placeholder="魚・釣り場・釣り方を検索" required maxLength={100}/><button type="submit">検索</button></form><WeatherPanel compact/>
         <nav className={s.heroQuick}>{quickLinks.map(x=><a href={x.href} key={x.href}><span>{x.icon}</span><b>{x.label}</b></a>)}</nav>
       </div>
     </section>
