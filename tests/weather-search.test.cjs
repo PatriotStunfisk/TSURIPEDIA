@@ -47,3 +47,10 @@ test('weather place search reuses map coordinates and bounds results',()=>{
  assert.equal(searchWeatherPlaces(' ').length,0);assert.ok(searchWeatherPlaces('白浜').length);assert.ok(searchWeatherPlaces('八丈島').length);
  const list=searchWeatherPlaces('大阪');assert.ok(list.length<=20&&list.length>0);const place=getWeatherPlace(list[0].id);assert.ok(Number.isFinite(place.lat)&&Number.isFinite(place.lon));assert.equal(getWeatherPlace('not-a-real-place'),undefined);
 });
+
+test('weather map validates bounds and groups nationwide points without forecasts',()=>{
+ const {weatherMapPoints}=require('../lib/weather-places');
+ assert.equal(weatherMapPoints(NaN,120,50,155,5),null);assert.equal(weatherMapPoints(20,155,50,120,5),null);assert.equal(weatherMapPoints(20,120,50,155,19),null);
+ const wide=weatherMapPoints(20,120,50,155,5),local=weatherMapPoints(34.3,135,34.9,135.7,12);
+ assert.ok(wide.length<300);assert.ok(wide.reduce((s,p)=>s+p.count,0)>2000);assert.ok(local.some(p=>p.id));assert.ok(local.every(p=>p.lat>=34.3&&p.lat<=34.9));
+});

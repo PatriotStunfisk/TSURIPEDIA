@@ -1,7 +1,7 @@
 'use client';
 import {useState,useEffect} from 'react';
 import s from './WeatherPanel.module.css';
-export type WeatherPlace={id:string;name:string;area:string};
+export type WeatherPlace={id:string;name:string;area:string;lat:number;lon:number};
 export default function WeatherPlaceSearch({onSelect}:{onSelect:(p:WeatherPlace)=>void}){
  const [query,setQuery]=useState(''),[results,setResults]=useState<WeatherPlace[]>([]),[loading,setLoading]=useState(false),[error,setError]=useState(false);
  useEffect(()=>{const controller=new AbortController();setResults([]);setError(false);if(query.trim().length<2){setLoading(false);return}setLoading(true);const timer=setTimeout(()=>{fetch(`/api/weather/places?q=${encodeURIComponent(query)}`,{signal:controller.signal}).then(r=>{if(!r.ok)throw Error();return r.json()}).then(setResults).catch(e=>{if(e.name!=='AbortError')setError(true)}).finally(()=>{if(!controller.signal.aborted)setLoading(false)})},300);return()=>{clearTimeout(timer);controller.abort()}},[query]);
