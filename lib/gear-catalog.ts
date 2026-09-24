@@ -1,5 +1,13 @@
-export type GearProduct={slug:string;brand:string;name:string;kind:'rod'|'reel'|'lure'|'egi';summary:string;specs:Record<string,string>;methods:string[];fish:string[];source:string;relatedGear?:string[];asin?:string;amazonQuery?:string;line:string;query:string;accessory:string;accessoryQuery:string;check:string;image?:{src:string;alt:string;credit:string;permission:string;caption?:string}};
-export const gearKindLabels={rod:'ロッド',reel:'リール',lure:'ルアー',egi:'エギ'} as const;
+import expansion from './gear-catalog-expansion.json';
+export type GearProduct={slug:string;brand:string;name:string;kind:GearKind;subtype?:GearSubtype;summary:string;specs:Record<string,string>;variants?:{headers:string[];rows:string[][]};methods:string[];fish:string[];source:string;relatedGear?:string[];asin?:string;amazonQuery?:string;line:string;query:string;accessory:string;accessoryQuery:string;check:string;image?:{src:string;alt:string;credit:string;permission:string;caption?:string}};
+export const gearKindLabels={rod:'ロッド',reel:'リール',lure:'ルアー',egi:'エギ',line:'ライン',cooler:'クーラー',tool:'小物',rig:'仕掛け・針',storage:'バッグ・ケース',net:'ランディング用品'} as const;
+export type GearKind=keyof typeof gearKindLabels;
+export const gearSubtypeLabels={minnow:'ミノー',metalJig:'メタルジグ',vibration:'バイブレーション',pencil:'ペンシル',popper:'ポッパー',crank:'クランク',spoon:'スプーン',spinner:'スピナー・スピナーベイト',worm:'ワーム',taiRubber:'タイラバ',otherLure:'その他ルアー',pe:'PEライン',nylon:'ナイロン',fluoro:'フロロカーボン',leader:'リーダー',otherLine:'金属・その他ライン'} as const;
+export type GearSubtype=keyof typeof gearSubtypeLabels;
+export function getGearSubtype(p:GearProduct):GearSubtype|undefined{return p.subtype??(p.kind==='lure'?(p.slug.startsWith('jackall-bigbacker')?'vibration':'minnow'):undefined)}
+export const gearPageSize=24;
+export function paginateGear(products:GearProduct[],input:string|undefined){const totalPages=Math.max(1,Math.ceil(products.length/gearPageSize));const n=Number(input);const page=Number.isSafeInteger(n)?Math.min(totalPages,Math.max(1,n)):1;return {page,totalPages,items:products.slice((page-1)*gearPageSize,page*gearPageSize)}}
+
 export const gearCatalog:GearProduct[]=[
   {
     "slug": "daiwa-revros-lt2500d",
@@ -482,7 +490,7 @@ export const gearCatalog:GearProduct[]=[
     }
   }
 
-];
+, ...expansion as GearProduct[]];
 export const gearVerifiedAt='2026-09-24';
 export function getGearProduct(slug:string){return gearCatalog.find(p=>p.slug===slug)}
-export function filterGear(q:{q?:string;brand?:string;kind?:string;method?:string;fish?:string}){const terms=(q.q??'').normalize('NFKC').toLowerCase().trim().split(/\s+/).filter(Boolean);return gearCatalog.filter(p=>(!q.brand||p.brand===q.brand)&&(!q.kind||p.kind===q.kind)&&(!q.method||p.methods.includes(q.method))&&(!q.fish||p.fish.includes(q.fish))&&terms.every(t=>`${p.brand} ${p.name} ${p.summary}`.normalize('NFKC').toLowerCase().includes(t)))}
+export function filterGear(q:{q?:string;brand?:string;kind?:string;subtype?:string;method?:string;fish?:string}){const terms=(q.q??'').normalize('NFKC').toLowerCase().trim().split(/\s+/).filter(Boolean);return gearCatalog.filter(p=>(!q.brand||p.brand===q.brand)&&(!q.kind||p.kind===q.kind)&&(!q.subtype||getGearSubtype(p)===q.subtype)&&(!q.method||p.methods.includes(q.method))&&(!q.fish||p.fish.includes(q.fish))&&terms.every(t=>`${p.brand} ${p.name} ${p.summary} ${gearKindLabels[p.kind]} ${getGearSubtype(p)?gearSubtypeLabels[getGearSubtype(p)!]:''} ${p.variants?.rows.map(row=>row[0]).join(' ')??''}`.normalize('NFKC').toLowerCase().includes(t)))}

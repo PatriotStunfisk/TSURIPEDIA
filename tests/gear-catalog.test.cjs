@@ -16,3 +16,21 @@ test('expanded gear kinds can be filtered and explicit pairing exclusions are pr
  for(const p of gearCatalog)for(const slug of p.relatedGear??[])assert.ok(getGearProduct(slug));
  assert.deepEqual(getGearProduct('jackall-bigbacker-107-buri').relatedGear,[]);
 });
+test('gear subtype filters and pagination retain distinct models without invalid page offsets',()=>{
+ const {gearCatalog,filterGear,paginateGear,getGearSubtype}=require('../lib/gear-catalog');
+ const minnow=filterGear({kind:'lure',subtype:'minnow'});assert.ok(minnow.length);assert.ok(minnow.every(p=>getGearSubtype(p)==='minnow'));
+ assert.equal(filterGear({kind:'reel',subtype:'minnow'}).length,0);
+ for(const input of ['-1','0','NaN','1.2',undefined])assert.equal(paginateGear(gearCatalog,input).page,1);
+ assert.ok(paginateGear(gearCatalog,'999999').page<=Math.ceil(gearCatalog.length/24));
+ const many=Array.from({length:49},(_,i)=>({...gearCatalog[0],slug:String(i)}));
+ assert.equal(paginateGear(many,'2').items[0].slug,'24');assert.equal(paginateGear(many,'3').items.length,1);
+ for(const p of gearCatalog)if(p.variants){assert.ok(p.variants.headers.length>=2);for(const row of p.variants.rows)assert.equal(row.length,p.variants.headers.length,p.slug)}
+});
+test('series catalog validates taxonomy, sources, representative specifications and model search',()=>{
+ const {gearCatalog,gearKindLabels,gearSubtypeLabels,filterGear}=require('../lib/gear-catalog');
+ const sources=JSON.parse(fs.readFileSync(path.join(root,'docs/gear-image-sources.json'),'utf8'));
+ for(const p of gearCatalog){assert.ok(gearKindLabels[p.kind]);if(p.subtype)assert.ok(gearSubtypeLabels[p.subtype]);assert.equal(new URL(p.source).protocol,'https:');assert.ok(sources.some(s=>s.slug===p.slug));if(p.variants){assert.ok(p.variants.rows.length);assert.ok(p.variants.rows.length<=24);assert.ok(p.image.caption.includes('シリーズ'));assert.ok(!p.variants.headers.some(h=>/JAN|価格/.test(h)))}}
+ assert.ok(filterGear({q:'TGベイト250'}).some(p=>p.slug==='daiwa-huz2stf'));
+ assert.ok(filterGear({kind:'lure',subtype:'metalJig'}).length>=10);
+ for(const kind of ['line','cooler','tool','rig','storage','net'])assert.ok(filterGear({kind}).length>=5);
+});
