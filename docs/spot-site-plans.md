@@ -8,3 +8,11 @@
 - `spotFieldGuides` に結合し、個別ページとMAP詳細が同じ解説を表示する。MAP初期表示に全解説を積まず、既存の地点別guide APIで選択地点だけ取得する。小さいプレビューには図や長文を追加しない。
 - 追加時は出典・確認日、駐車場／公共交通／トイレ、到着後の動線、狙う層や構造、季節、回収方向まで記入する。未確認の水深や設備を推測しない。
 - PCと390px幅で地図タイル、図中リンク、文字の重なり、魚・釣法リンク、既存の釣果表示を確認する。
+
+## 300 additional illustrated lessons (2026-09-24)
+
+`spot-illustrated-guide-data.json` explicitly lists 300 existing spots not marked closed, a registered method and its teaching-diagram topic. `spot-illustrated-guides.ts` joins the existing place-specific notes, approach, sources and original verification date; these facts are not duplicated or represented as freshly checked. The batch spans 34 prefectures and prioritizes the available Kansai field guides.
+
+These are **technique schematics**, not surveyed site layouts. Eight original SVG lessons explain vertical layers, bottom searching, structure, surf coverage, egi fall, floats, estuary flow and herabuna depth setting. They accompany the location's own context, advice and a troubleshooting table. No reef, parking or depth coordinates are inferred. The seven explicitly researched facility site plans remain separate. Do not count the 300 lessons as 300 surveyed facility maps.
+
+Individual pages render the lesson as HTML/SVG; MAP fetches only the selected place's guide. Nothing from this registry belongs in the initial all-marker payload. To add a place, verify the reference material, add a real registered method and review the local description; do not select a method merely to reach a count.

@@ -1,6 +1,7 @@
 import type {FishingMapEntry} from './fishing-map-data';
 
 export type SpotFieldGuide={
+  illustration?:import('./spot-illustration-types').SpotIllustration;
   sitePlan?:import('./spot-site-plan-types').SpotSitePlan;
   sources?:{label:string;url:string}[];
   reviewedAt?:string;

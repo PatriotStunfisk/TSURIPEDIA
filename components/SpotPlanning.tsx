@@ -6,7 +6,7 @@ import s from './Submission.module.css';
 
 export default function SpotPlanning({spot,guide}:{spot:FishingMapEntry;guide?:SpotFieldGuide}){
  if(spot.closed)return null;
- const methods=getShoreMethodPlans(spot),checks=getSpotDepartureChecks(spot);
+ const methods=getShoreMethodPlans(spot).filter(m=>m.slug!==guide?.illustration?.method.slug),checks=getSpotDepartureChecks(spot);
  return <>
   {guide&&<div className={s.panel}><SpotFieldGuideContent guide={guide}/></div>}
   {!!methods.length&&<section aria-label="釣法別の始め方">

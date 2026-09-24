@@ -1,0 +1,1502 @@
+[
+  {
+    "slug": "ibaraki-shinike",
+    "method": "herabuna-bottom",
+    "topic": "pond"
+  },
+  {
+    "slug": "yodogawa-yagura-ryokuchi",
+    "method": "seabass-lure",
+    "topic": "flow"
+  },
+  {
+    "slug": "coast-oosakatajiri",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-oosakaokadaura",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-oosakatanigawagyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-tusimatiyakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-tusigotennbakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-tusikarasu",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-isesikouzakikaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-kyoutokotobikihama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-zzyosizaki",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-suzukasitiyozakikaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-tusikawagekaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-simasinannbarikaihinnkouenn",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-kyoutohakoisikaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-hyougomatuekaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-hyougooosiokaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-hyougosakosikaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-hyougomaruyamakaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-hyougoootukakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-hyougooohamakaisuiyoku",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-hyougoamannkaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-hyougofukiagehama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-hyougotaganohama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-oosakamisakikouennura",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-wakayamakirimekaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-wakayamasennrihama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-wakayamahikioohama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-wakayamaoujigahama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-kihokuhikimotokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-mieoozoneura",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-hyougohayasizaki",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-hyougoeigasima",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-hyougotakasagokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-hyougooosiojyuusanndannhato",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-hyougoiwasihamagyokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-hyougourakou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-hyougokamagutigyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-hyougosumotokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-hyougosinnkawaguti",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-hyougonigorogyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-hyougotuigyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-hyougominatokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-hyougotorikaigyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-hyougoeigyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-hyougogunnkekou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-mieoodomari",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-hyougoikuhagyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-hyougotosimagyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-hyougokasuminisikou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "port-wakayamakasiwagyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-aomoriusirogatagyokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-iwatehakozakisirahamagyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-miyagimurohamagyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-tibafutomikou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-sizuokausamigyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-eeinukuma",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-hirosimanyougakou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-toltutoriousakagyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-simanesudugyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-yamaguchinakanouragyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-ooitaarajirokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-kumamotoikusagauragyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kagosimaootoukou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-akitakamayahama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-ibarakinagahamakaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-kanagawamiurakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-niigatafuyakaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-toyamasimaokaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-fukusimahaltutatikaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-aichihinagagawakakou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-okayamasamikaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-kagawasiogoekaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-tokusimaootekaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-ehimesakuraikaihinnfureaihiroba",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-kochiookinohama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-fukuokaanegonohama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-miyazakihouzaikaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-sagahamasakikaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-nagasakisennrigahama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-aomoritairadategyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-iwatekariyadogyokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-miyagitukihamagyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-tibahamanamekawakou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-sizuokaitoukou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-eeanou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-hirosimayanaidukou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-toltutorimikuriyagyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-simanetutidagyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-yamaguchiaratakou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-ooitanisidomarikou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kumamotosakitugyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kagosimanomaikegyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-akitadetohama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-ibarakikitahamakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-kanagawawadanagahamakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-niigatakanngawakaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-toyamaiwasehama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-fukusimasinnmaikokaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-aitioonokaigann",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-okayamaaosabanakaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-kagawayokoutikaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-tokusimatukimigaoka",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-ehimesisimagaharakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-kochinasisikaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-fukuokaoogutikaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-miyazakinagahamakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-sagaoukanohama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-nagasakiyukinourakaihinnkouenn",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-aomorisunagamorigyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-iwatekuwanohamagyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-miyagitounagyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-tibayosiokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-sizuokaatagawateibou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-fukuiukugyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-hirosimasikina",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-toltutorihiratagyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-simaneiiuragyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-yamaguchikozukunohato",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-ooitamamotokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kumamotoonikikou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kagosimaurajirikou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-akitakisakatagyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-ibarakiakahamakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-kanagawaakiyakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-niigatasenamikaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-toyamayaeduhama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-fukusimanumanoutikaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-aichikennonourakaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-okayamausimadokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-kagawayamadakaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-tokusimakomatukaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-ehimekarakohama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-kochiawakaigann",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-fukuokanagahamakaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-miyazakiikurahama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-aomorioodomarigyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-iwatehiratagyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-miyaginobirukaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-tibakawadukou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-sizuokasamejimakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-eenisizu",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-hirosimaiwafunegyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-toltutoriyodoegyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-simanekuromatukaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-yamaguchiawanogyokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-ooitakamadokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kumamotomogusikou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kagosimamatugaurakou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-akitakosagawagyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-ibarakitakadomaehamakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-kanagawatukuihama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-niigatamuramatuhama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-toyamanamerikawakaihinnkouenn",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-fukusimausuisokaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-hanndakamesakikaihinn",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-okayamakobukarigyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-kagawaooyabukaigann",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-tokusimaoomikokaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-ehimeodagahama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-kochifujigahama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-fukuokamiyajihama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-miyazakitoorihamakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-aomoriimabetugyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-iwateozakisirahamagyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-miyagiiwanumakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-tibaiwawadakou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-hamanakobenntennjima",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-eeobama",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-hirosimanotoharakou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-toltutorihiedugyokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-simaneinasanohama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-yamaguchiigamigyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-ooitanatuikou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kumamotousibukagyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kagosimaookawagyokou",
+    "method": "uki",
+    "topic": "float"
+  },
+  {
+    "slug": "coast-ibarakitakahamakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-kanagawakanedakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-niigatasimamihama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-toyamaisidahama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-fukusimatoyomagoltusokaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-aichihigasiuramidorihamaryokuti",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-okayamahigasihoudenngyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-kagawaariakehama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-tokusimaawasimakaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-ehimekamoikekaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-kochikousogawakakou",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-fukuokasioirigawakakou",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-miyazakikagutihama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-aomorisitamaegyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-iwatetounigyokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-miyagioisehama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-tibaiwafunekou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-hamanakotudukikaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-fukuiokodu",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-hirosimatajirikou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-toltutorinakanokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-simanekotogahama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-yamaguchikakebutigyokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-ooitanabutokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kumamotokutamaurakou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kagosimacyogamizugyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-ibarakikujihamakoboutibana",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-kanagawaoourakaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-niigatakobarihama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-toyamamiyazakikaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-fukusimanakosokaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-hekinannsuma",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-okayamamukaihibikou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-kagawasinoogyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-tokusimakitanowakikaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-ehimehosinourakaihinnkouenn",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-kochikisimotokaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-fukuokadainyuugyokou",
+    "method": "uki",
+    "topic": "float"
+  },
+  {
+    "slug": "coast-miyazakitonndahama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-aomorisyarikigyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-iwatekojirahamagyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-miyagitorinoumikakou",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-tibamoriyakou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-sizuokaookurado",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-eewada",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-hirosimahisiogyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-toltutorihigasihamakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-simaneasarikaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-yamaguchikuharagyokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-ooitakazanasikou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kumamotofukamigyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kagosimayamakawakou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-ibarakiajigaurakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-kanagawailtusikikaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-niigatayotugouyahama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-fukusimahisanohamakou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-toyohasisihigasiakasawakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-okayamasibukawakou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-kagawaajigyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-tokusimatainohama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-ehimesi-ro-doyawatahama",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-kochikotogahama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-fukuokafukaegyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-miyazakikisakihama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-aomorikitakanegasawagyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-iwatearakawagyokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-miyagiwatanohagyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-tibahotakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-sizuokaaraikaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-fukuihibikigyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-hirosimaisidazousennnohato",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-toltutoriuradomekaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-simanetutidakitahamakaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-yamaguchioohibigyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-ooitafukiuragyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kumamotokamihirakou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kagosimauomikou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-ibarakitakihama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-kanagawamoritokaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-niigataurahama",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-toyohasisiikobekaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-okayamatanourakou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-tokusimaoosatokaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-ehimetunouragyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-kochiakikaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-fukuokakafurigyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-miyazakikazedahama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-aomoritanosawagyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-iwateooisigyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-miyagioohamagyokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-tibanamuyakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-sizuokamaisakakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-fukuiuwasegyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-hirosimaoourazakikaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-toltutoriiwatokaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-simanesannrigahama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-yamaguchinobasegyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-ooitaoosakikou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kumamotomiyanokawatikou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kagosimakokubugyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-ibarakiniltukawahama",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-kanagawazusikaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-niigatatanourakaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-toyohasisitakatukakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-okayamanatumekou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-tokusimafurumugigyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-ehimehiraigyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-fukuokasinnmatigyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-miyazakitotorokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-aomorikasosegyokou",
+    "method": "uki",
+    "topic": "float"
+  },
+  {
+    "slug": "coast-iwatesennzaigyokou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-miyagihamadagyokou",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-tibanunobikikaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-eeennsyuunada",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-fukuinamimatukaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  },
+  {
+    "slug": "coast-hirosimakajigahama",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-toltutorihakutokaigann",
+    "method": "choinage",
+    "topic": "bottom"
+  },
+  {
+    "slug": "coast-simanekohamagyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-yamaguchiyomenakigyokou",
+    "method": "sabiki",
+    "topic": "layers"
+  },
+  {
+    "slug": "coast-ooitahinourakou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kumamototurugiyamakou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-kagosimanakahamagyokou",
+    "method": "eging",
+    "topic": "fall"
+  },
+  {
+    "slug": "coast-ibarakihitatiousekou",
+    "method": "rockfish-lure",
+    "topic": "structure"
+  },
+  {
+    "slug": "coast-kanagawazaimokuzakaigann",
+    "method": "surf-lure",
+    "topic": "surf"
+  }
+]

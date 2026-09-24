@@ -34,7 +34,7 @@ test('new fish/method links and static sharing images resolve through the existi
 });
 test('48 existing locations gain two practical steps without replacing their original descriptions',()=>{
  const existing=Object.entries(coastalNextFieldGuides).filter(([id])=>!ids.has(id));assert.equal(existing.length,48);
- for(const [id,guide] of existing){assert.ok(fishingMapEntries.some(s=>s.slug===id));assert.ok(guide.features.length);assert.equal(guide.approach.length,2);assert.ok(guide.beforeYouGo.length);assert.deepEqual(spotFieldGuides[id],guide);}
+ for(const [id,guide] of existing){assert.ok(fishingMapEntries.some(s=>s.slug===id));assert.ok(guide.features.length);assert.equal(guide.approach.length,2);assert.ok(guide.beforeYouGo.length);for(const key of Object.keys(guide))assert.deepEqual(spotFieldGuides[id][key],guide[key]);}
 });
 test('coastal classifications do not turn ordinary parks into sea fishing parks or beach fishing into sabiki',()=>{
  const n=name=>coastalNextEntries.find(e=>e.name===name);

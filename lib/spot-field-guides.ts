@@ -1,3 +1,4 @@
+import {attachSpotIllustrations} from './spot-illustrated-guides';
 import {spotSitePlans} from './spot-site-plans';
 import researchedGuides from './spot-field-guides-researched.json';
 import {kansaiNationalFieldGuides} from './spot-field-guides-kansai-national';
@@ -251,3 +252,5 @@ for (const [slug, guide] of Object.entries(researchedGuides)) {
 for(const [slug,sitePlan] of Object.entries(spotSitePlans)){
  if(spotFieldGuides[slug])spotFieldGuides[slug]={...spotFieldGuides[slug],sitePlan};
 }
+
+attachSpotIllustrations(spotFieldGuides);
