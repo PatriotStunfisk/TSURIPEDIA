@@ -2,7 +2,7 @@ import {prefectures} from '@/lib/japan-regions';
 import {catchOptions} from '@/lib/catches/options';
 import {spotGuideIndex} from '@/lib/spot-guide-index';
 import {tackleShops} from '@/lib/tackle-shops';
-import {pageSharing} from '@/lib/page-sharing';
+import {mapSearchMetadata} from '@/lib/map-search-metadata';
 import {allGuides} from '@/lib/all-guides';
 import {getFishSpecies} from '@/lib/fish-species';
 import {fishCatalog,getFishByName} from '@/lib/fish-registry';
@@ -10,7 +10,10 @@ import {methodDetails} from '@/lib/method-registry';
 import {fishingMapEntries} from '@/lib/fishing-map-data';
 import SpotMap from '@/components/SpotMap';
 
-export const metadata=pageSharing("/spots","全国の釣り場・船宿MAP","全国の釣り場と船宿を地域・魚・釣法・施設タイプから検索。公式案内と最近の釣果を確認して釣行を計画。");
+type MapQuery={q?:string;prefecture?:string;type?:string;near?:string;shops?:string;favorites?:string;fish?:string;method?:string;recent?:string};
+export async function generateMetadata({searchParams}:{searchParams:Promise<MapQuery>}){
+ return mapSearchMetadata(await searchParams);
+}
 
 export default async function Page({searchParams}:{searchParams:Promise<{q?:string;prefecture?:string;type?:string;near?:string;shops?:string;favorites?:string;fish?:string;method?:string;recent?:string}>}){
   const query=await searchParams;
