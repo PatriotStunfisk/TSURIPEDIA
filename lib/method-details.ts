@@ -1,4 +1,5 @@
 export type MethodDetail={
+  sources?:{label:string;url:string}[];
   slug:string;name:string;subtitle:string;target:string[];season:string;places:string[];difficulty:number;
   overview:string;rod:string;reel:string;line:string;leader:string;rig:string;bait:string;
   steps:string[];tips:string[];mistakes:string[];safety:string[];checklist:string[];

@@ -8,6 +8,9 @@ const snap=part('スナップ','結束したら開閉と強度を確認','swivel
 const branchRig=(bait:string)=>[part('スナップ付きサルカン','仕掛け上端へ接続','swivel'),part('幹糸 → 枝ス → 針',bait,'hook','枝針'),part('一番下にオモリ','仕掛けの下端に接続。船では指定号数','weight')];
 const jigRig=[part('ソリッドリング','リーダーを結ぶ。結び目を割れ目へ掛けない','swivel'),part('スプリットリング → メタルジグ','アシストフックは上部リングへ。製品の接続図も確認','lure','アシストフック')];
 export const tackleRigs:Record<string,TackleRig>={
+ omorig:{variant:'オモリとエギを分ける',leaderInRig:true,parts:[part('PE → リーダー → 接続具','オモリグ用の接続具へ結ぶ','swivel','指定オモリ'),part('ハリス → エギ','オモリとは別の枝へ。製品指定の長さで接続','lure')],caution:'船長の投入方向とオモリ指定を優先。長いハリスとカンナを周囲へ振り回さない。'},
+ bachikon:{variant:'胴突き式バチコン',leaderInRig:true,parts:[part('PE → リーダー → 幹糸','接続部の結束と強度を確認','line'),part('枝ス → 軽量ジグヘッド・ワーム','ワームが曲がらないよう針へ通す','hook','枝スとワーム'),part('下端に指定オモリ','逆ダン式とは配置が異なる','weight')],caution:'胴突き式の例。逆ダン等は製品説明を確認し、オモリ号数と棚は船長指定を優先。'},
+ kago:{variant:'遊動ウキ・天秤カゴ',leaderInRig:true,parts:[part('ウキ止め → 遊動ウキ','ウキ下で狙う棚を設定','float'),part('からまん棒 → カゴ・天秤','ウキの浮力とカゴ負荷を合わせる','basket','天秤からハリス'),part('ハリス → 針・付け餌','対応仕掛けを使い、針を隣へ流さない','hook')],caution:'投げ釣り・撒き餌の可否を確認。後方・左右に人がいないことを確かめて投入。'},
  'sayori-uki':{variant:'小型ウキ・1本針',leaderInRig:true,parts:[part('小型ウキ / シモリウキ','道糸へ取り付け、完成仕掛けの固定方法を守る','float'),part('接続部 → ハリス','必要な小オモリで浮力を調整。付け餌は浅い層へ','swivel'),part('サヨリ針 ＋ 小さな付け餌','長い下あごの先ではなく小さな口へ餌を入れる','hook')],caution:'遠投カゴ式とは別の例です。投げる負荷と、まき餌の可否を確認。'},
  'ishidai-bottom':{variant:'遊動オモリの底物仕掛け',leaderInRig:true,parts:[part('遊動オモリ → 保護ビーズ','道糸を通す向きと負荷を確認','weight'),part('サルカン → 専用ハリス','ワイヤー等は製品指定の接続方法を守る','swivel'),part('イシダイ針 ＋ 貝・ウニ餌','専用針へ餌を固定する','hook')],caution:'磯の条件で仕掛けは変わります。経験者の案内と製品説明を優先。'},
  nage:{variant:'力糸・天秤の投げ仕掛け',leaderInRig:true,parts:[part('力糸','投擲時の負荷を受ける。傷と結束を確認','line'),part('天秤 ＋ 指定オモリ','道糸側とハリス側を間違えず接続','weight','天秤の腕からハリス'),part('カレイ用ハリス → 針 ＋ 虫餌','オモリの先に針を直列につながない','hook')],caution:'重いオモリは投げ竿の適合負荷以内で使用。後方と左右の安全確認が必須。'},

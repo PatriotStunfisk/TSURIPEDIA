@@ -1,3 +1,4 @@
+import {selectRelatedGear} from '@/lib/gear-catalog';
 import Link from 'next/link';
 import {getMethodTackle,type TacklePart} from '@/lib/method-tackle';
 import s from './TackleDiagram.module.css';
@@ -18,6 +19,6 @@ export default function TackleDiagram({slug,connectionsOnly=false}:{slug:string;
     {!rig.leaderInRig&&slug!=='fukase'&&<li><RigIcon kind="line"/><div><b>リーダー / ハリス</b><span>{connectionsOnly?"対象魚用の完成仕掛け・指定ハリスを使用":method.leader}</span></div></li>}
     {rig.parts.map((p,i)=><li key={`${i}-${p.label}`}><RigIcon kind={p.icon}/><div><b>{p.label}</b><span>{p.note}</span>{p.branch&&<em>↳ {p.branch}</em>}</div></li>)}
    </ol><figcaption>接続順を示す模式図です。長さ・大きさの比率は実物と異なります。</figcaption>
-  </figure>{!connectionsOnly&&<aside className={s.starter}><small>FIRST SET</small><h3>最初の1セット</h3><p>まず揃える道具と、選ぶ範囲の目安です。</p><dl>{specs.map(v=><div key={v.key}><dt>{v.label}</dt><dd>{v.value}</dd></div>)}</dl><p className={s.note}>{rig.caution}</p><p>サイズは地域・魚・潮・水深で変わります。釣り場と船宿の指定を優先してください。</p><Link href={`/gear?method=${slug}`}>このタックルを揃える →</Link><Link href="/guide/tackle-connection-basics">接続と結び目の確認方法 →</Link></aside>}</div>
+  </figure>{!connectionsOnly&&<aside className={s.starter}><small>FIRST SET</small><h3>最初の1セット</h3><p>まず揃える道具と、選ぶ範囲の目安です。</p><dl>{specs.map(v=><div key={v.key}><dt>{v.label}</dt><dd>{v.value}</dd></div>)}</dl><p className={s.note}>{rig.caution}</p><p>サイズは地域・魚・潮・水深で変わります。釣り場と船宿の指定を優先してください。</p><Link href={selectRelatedGear({method:slug,limit:1}).length?`/gear?method=${slug}`:"/gear"}>このタックルを揃える →</Link><Link href="/guide/tackle-connection-basics">接続と結び目の確認方法 →</Link></aside>}</div>
  </section>;
 }
