@@ -130,3 +130,11 @@ test('Amagasaki imports only the official whole-facility table, preserving range
  assert.throws(()=>parseFacility(html.replace('匹数（全体）','個人釣果'),url,'amagasaki-uoturi','amagasaki-html',now));
  assert.deepEqual(facilityLinks('<a href="/fishing/20260920.html"></a><a href="https://other.example/fishing/20260920.html"></a>',url,'amagasaki-html'),[url]);
 });
+
+test('public Amagasaki legacy report redirects are narrowly scoped',()=>{
+ const {catchSources,canFetchCatchSourceUrl}=require('../lib/catches/sources');
+ const source=catchSources.find(s=>s.id==='amagasaki-official');
+ assert.equal(canFetchCatchSourceUrl(source,new URL('http://amagasaki-uoturikouen.com/fishing/20260923.html')),true);
+ for(const url of ['http://amagasaki-uoturikouen.com/admin','http://amagasaki-uoturikouen.com/fishing/20260923.html?secret=x','http://elsewhere.example/fishing/20260923.html','https://user:password@amagasaki-uoturikouen.com/fishing/20260923.html'])assert.equal(canFetchCatchSourceUrl(source,new URL(url)),false);
+ assert.equal(canFetchCatchSourceUrl({...source,id:'another-source'},new URL('http://amagasaki-uoturikouen.com/fishing/20260923.html')),false);
+});

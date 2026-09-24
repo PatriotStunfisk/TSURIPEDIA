@@ -38,3 +38,10 @@ export const catchSources:CatchSource[]=[
  {id:'tottopark-official',name:'とっとパーク小島',sourceType:'official',format:'tottopark-html',endpoint:'https://minnaga.com/system/totopark/contents/fish/fish_listup.php',allowedHosts:['minnaga.com'],permissionUrl:'https://minnaga.com/robots.txt',enabled:true},
  {id:'naruohama-official',name:'鳴尾浜海づり広場',sourceType:'official',format:'naruohama-html',endpoint:'https://www.naruohama-park.com/choka/',allowedHosts:['www.naruohama-park.com'],permissionUrl:'https://www.naruohama-park.com/robots.txt',enabled:true},
 ];
+
+/** The official Amagasaki dated reports redirect to HTTP. Public facts only; never credentials. */
+export function canFetchCatchSourceUrl(source:CatchSource,url:URL):boolean {
+ if(!source.permissionUrl||!source.allowedHosts.includes(url.hostname)||url.username||url.password||url.port)return false;
+ if(url.protocol==='https:')return true;
+ return url.protocol==='http:'&&source.id==='amagasaki-official'&&source.format==='amagasaki-html'&&url.hostname==='amagasaki-uoturikouen.com'&&/^\/fishing\/\d{8}(?:_\d+)?\.html$/.test(url.pathname)&&!url.search;
+}

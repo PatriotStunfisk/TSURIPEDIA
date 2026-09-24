@@ -7,7 +7,7 @@ import {fishSlugs} from '../fish-registry';
 import {fishingMapEntries} from '../fishing-map-data';
 import {methodDetails} from '../method-registry';
 import {ageDays,canonicalSourceUrl} from '../catches/activity';
-import {catchSources,type CatchSource,type ExternalCatch} from '../catches/sources';
+import {canFetchCatchSourceUrl,catchSources,type CatchSource,type ExternalCatch} from '../catches/sources';
 import {storeRequest} from './catch-store';
 const fish=new Set(fishSlugs),spots=new Set(fishingMapEntries.map(s=>s.slug));
 const headers={'Content-Type':'application/json',Prefer:'resolution=merge-duplicates'};
@@ -25,7 +25,7 @@ const sourceRequests=new Map<string,number>();
 async function fetchText(source:CatchSource,endpoint=source.endpoint){
  let url=new URL(endpoint);let response:Response|undefined;
  for(let redirects=0;redirects<=2;redirects++){
-  if(url.protocol!=='https:'||!source.allowedHosts.includes(url.hostname)||!source.permissionUrl)throw Error('Source not authorized');
+  if(!canFetchCatchSourceUrl(source,url))throw Error('Source not authorized');
   if(source.format==='anglers-html'||source.format==='fishing-vision-html'){const interval=source.format==='anglers-html'?10000:2000;const due=Math.max(Date.now(),(sourceRequests.get(url.hostname)??0)+interval);sourceRequests.set(url.hostname,due);if(due>Date.now())await new Promise(resolve=>setTimeout(resolve,due-Date.now()));}
   response=await fetch(url,{redirect:'manual',signal:AbortSignal.timeout(10000),headers:{Accept:source.format==='json'?'application/json':'text/html','User-Agent':'UOLINK/1.0 (+https://uolink.jp)'},cache:'no-store'});
   if(![301,302,303,307,308].includes(response.status))break;
