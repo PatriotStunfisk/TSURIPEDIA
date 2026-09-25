@@ -1,0 +1,298 @@
+{
+  "date": "2026-09-25",
+  "generator": "Built-in image_gen",
+  "fish": [
+    {
+      "slug": "hamo",
+      "prompt": "Use case: scientific-educational. Create an original photorealistic natural-history fish encyclopedia cutout of ONE ハモ, Muraenesox cinereus. Anatomy: long slender gray bronze eel body pale belly, very long pointed narrow jaws with small visible sharp teeth, dorsal and anal fins continuous with tapered tail, small pectoral fins, gently curved entire body. Entire animal fully visible with 12 percent clear margin around every fin and arm. Fish head left, side view except specified cephalopod three quarter view. Real natural restrained color and skin texture, no exaggerated features. Genuinely transparent alpha background, no floor, no shadow, no scenery, no lettering or watermark. Landscape composition.",
+      "output": "/images/fish/hamo-profile-20260925.webp"
+    },
+    {
+      "slug": "mizudako",
+      "prompt": "Use case: scientific-educational. Create an original photorealistic natural-history fish encyclopedia cutout of ONE ミズダコ, Enteroctopus dofleini. Anatomy: large red orange mottled octopus bulbous mantle deeply textured skin, exactly eight long muscular tapering arms with two rows of suckers, naturally curled separate arm tips, small white skin papillae, whole animal relaxed. Entire animal fully visible with 12 percent clear margin around every fin and arm. Fish head left, side view except specified cephalopod three quarter view. Real natural restrained color and skin texture, no exaggerated features. Genuinely transparent alpha background, no floor, no shadow, no scenery, no lettering or watermark. Landscape composition.",
+      "output": "/images/fish/mizudako-profile-20260925.webp"
+    },
+    {
+      "slug": "karafutomasu",
+      "prompt": "Use case: scientific-educational. Create an original photorealistic natural-history fish encyclopedia cutout of ONE カラフトマス, Oncorhynchus gorbuscha. Anatomy: ocean phase silver salmon streamlined non breeding fish, blue gray back, many large oval black spots on back and both lobes of forked tail, tiny adipose fin behind dorsal, no hump, dark gums, silver scales. Entire animal fully visible with 12 percent clear margin around every fin and arm. Fish head left, side view except specified cephalopod three quarter view. Real natural restrained color and skin texture, no exaggerated features. Genuinely transparent alpha background, no floor, no shadow, no scenery, no lettering or watermark. Landscape composition.",
+      "output": "/images/fish/karafutomasu-profile-20260925.webp"
+    },
+    {
+      "slug": "iidako",
+      "prompt": "Use case: scientific-educational. Create an original photorealistic natural-history fish encyclopedia cutout of ONE イイダコ, Amphioctopus fangsiao. Anatomy: small compact brown mottled octopus, oval mantle, exactly eight short thick tapering arms with suckers, diagnostic golden ringed dark ocelli on both sides near arm bases, natural relaxed spread arms. Entire animal fully visible with 12 percent clear margin around every fin and arm. Fish head left, side view except specified cephalopod three quarter view. Real natural restrained color and skin texture, no exaggerated features. Genuinely transparent alpha background, no floor, no shadow, no scenery, no lettering or watermark. Landscape composition.",
+      "output": "/images/fish/iidako-profile-20260925.webp"
+    },
+    {
+      "slug": "kaminariika",
+      "prompt": "Use case: scientific-educational. Create an original photorealistic natural-history fish encyclopedia cutout of ONE カミナリイカ, Acanthosepion lycidas. Anatomy: broad oval thick cuttlefish mantle, cream brown intricate wavy tiger stripes and oval eye-like ring markings on dorsal mantle, narrow fin skirt around mantle, large eye, eight short arms and two slightly extended feeding tentacles, dorsal three quarter view head to left. Entire animal fully visible with 12 percent clear margin around every fin and arm. Fish head left, side view except specified cephalopod three quarter view. Real natural restrained color and skin texture, no exaggerated features. Genuinely transparent alpha background, no floor, no shadow, no scenery, no lettering or watermark. Landscape composition.",
+      "output": "/images/fish/kaminariika-profile-20260925.webp"
+    },
+    {
+      "slug": "hagatsuo",
+      "prompt": "Use case: scientific-educational. Create an original photorealistic natural-history fish encyclopedia cutout of ONE ハガツオ, Sarda orientalis. Anatomy: slender torpedo bonito blue gray back silver belly, several narrow dark longitudinal horizontal stripes along upper flank, elongated pointed head conspicuous teeth, closely spaced two dorsal fins followed by finlets, crescent tail, no belly stripes. Entire animal fully visible with 12 percent clear margin around every fin and arm. Fish head left, side view except specified cephalopod three quarter view. Real natural restrained color and skin texture, no exaggerated features. Genuinely transparent alpha background, no floor, no shadow, no scenery, no lettering or watermark. Landscape composition.",
+      "output": "/images/fish/hagatsuo-profile-20260925.webp"
+    },
+    {
+      "slug": "sujiara",
+      "prompt": "Use case: scientific-educational. Create an original photorealistic natural-history fish encyclopedia cutout of ONE スジアラ, Plectropomus leopardus. Anatomy: elongated coral red orange grouper with small bright blue round spots all over head body and fins, large mouth protruding lower jaw, truncate rounded tail, no bars, natural subdued red not neon. Entire animal fully visible with 12 percent clear margin around every fin and arm. Fish head left, side view except specified cephalopod three quarter view. Real natural restrained color and skin texture, no exaggerated features. Genuinely transparent alpha background, no floor, no shadow, no scenery, no lettering or watermark. Landscape composition.",
+      "output": "/images/fish/sujiara-profile-20260925.webp"
+    },
+    {
+      "slug": "hamadai",
+      "prompt": "Use case: scientific-educational. Create an original photorealistic natural-history fish encyclopedia cutout of ONE ハマダイ, Etelis coruscans. Anatomy: elongated bright rose red snapper silvery pink underside, large eye and mouth, deeply forked red tail with notably long slender upper lobe, dorsal fin separated by deep notch, entire long tail visible. Entire animal fully visible with 12 percent clear margin around every fin and arm. Fish head left, side view except specified cephalopod three quarter view. Real natural restrained color and skin texture, no exaggerated features. Genuinely transparent alpha background, no floor, no shadow, no scenery, no lettering or watermark. Landscape composition.",
+      "output": "/images/fish/hamadai-profile-20260925.webp"
+    },
+    {
+      "slug": "akoudai",
+      "prompt": "Use case: scientific-educational. Create an original photorealistic natural-history fish encyclopedia cutout of ONE アコウダイ, Sebastes matsubarae. Anatomy: deep robust scarlet red rockfish, large normal eyes not bulging, bony ridges on head, spiny dorsal fin, large mouth, pale silver pink belly, broad shallowly notched tail, no stripes or blue spots. Entire animal fully visible with 12 percent clear margin around every fin and arm. Fish head left, side view except specified cephalopod three quarter view. Real natural restrained color and skin texture, no exaggerated features. Genuinely transparent alpha background, no floor, no shadow, no scenery, no lettering or watermark. Landscape composition.",
+      "output": "/images/fish/akoudai-profile-20260925.webp"
+    },
+    {
+      "slug": "akatachi",
+      "prompt": "Use case: scientific-educational. Create an original photorealistic natural-history fish encyclopedia cutout of ONE アカタチ, Acanthocepola krusensternii. Anatomy: very long ribbon shaped compressed red orange fish with many tiny orange yellow round spots along flank, disproportionately short rounded head large eye upward oblique mouth, long continuous red dorsal and anal fins tapering to pointed tail, no black dorsal blotch, pale pink belly, all of long tail visible gently curved; do not depict Sumitsuki akatachi. Entire animal fully visible with 12 percent clear margin around every fin and arm. Fish head left, side view except specified cephalopod three quarter view. Real natural restrained color and skin texture, no exaggerated features. Genuinely transparent alpha background, no floor, no shadow, no scenery, no lettering or watermark. Landscape composition.",
+      "output": "/images/fish/akatachi-profile-20260925.webp"
+    }
+  ],
+  "cooking": [
+    {
+      "fish": "hamo",
+      "recipe": "tempura",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ハモ 天ぷら. Dish: light crisp pale-golden tempura pieces, delicate airy battered coating, green shiso leaf on side. Exact ingredient identity: pike conger already professionally bone-cut, pale white flesh with fine closely spaced cuts, NO large visible bones. Ingredients actually shown should match: 2人分：ハモ 専門店で骨切りされた食用の身250g; 天ぷら粉50g・冷水 製品指定量; 揚げ油 適量; 大葉・天つゆ 好みで. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/hamo-tempura.webp"
+    },
+    {
+      "fish": "iidako",
+      "recipe": "nitsuke",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe イイダコ しょうが煮. Dish: Japanese soy ginger braised cooked pieces in amber sauce. Exact ingredient identity: tiny whole prepared iidako octopuses, small oval mantle and short curled arms, NOT large octopus arm slices. Ingredients actually shown should match: 内臓・目・口を除き洗ったイイダコ250g; 水150ml・酒50ml; 醤油・みりん 各大さじ1.5・砂糖 小さじ2; しょうが1片. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/iidako-nitsuke.webp"
+    },
+    {
+      "fish": "hamo",
+      "recipe": "yubiki",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ハモ 湯引き・梅肉添え. Dish: white curled flower-like blanched bone-cut pike conger pieces with red plum sauce, visibly cooked opaque flesh. Exact ingredient identity: pike conger already professionally bone-cut, pale white flesh with fine closely spaced cuts, NO large visible bones. Ingredients actually shown should match: ハモ 骨切り済みの食用切り身200g; 塩 少量・湯 適量; 梅肉 大さじ1・だし 少量. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/hamo-yubiki.webp"
+    },
+    {
+      "fish": "iidako",
+      "recipe": "karaage",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe イイダコ 唐揚げ. Dish: small golden starch fried pieces with lemon. Exact ingredient identity: tiny whole prepared iidako octopuses, small oval mantle and short curled arms, NOT large octopus arm slices. Ingredients actually shown should match: 内臓・目・口を除き洗ったイイダコ200g; 片栗粉 大さじ3・醤油 小さじ2・しょうが 少々; 揚げ油 適量・レモン 好みで. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/iidako-karaage.webp"
+    },
+    {
+      "fish": "hamo",
+      "recipe": "nabe",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ハモ ハモと玉ねぎの鍋. Dish: small Japanese ceramic hot pot simmering with cooked fish pieces tofu and vegetables. Exact ingredient identity: pike conger already professionally bone-cut, pale white flesh with fine closely spaced cuts, NO large visible bones. Ingredients actually shown should match: 2人分：ハモ 専門店で骨切りされた食用の身250g; 昆布だし600ml; 玉ねぎ1個; 豆腐1/2丁; 酒 大さじ2・ポン酢 適量. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/hamo-nabe.webp"
+    },
+    {
+      "fish": "iidako",
+      "recipe": "takikomi",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe イイダコ 炊き込みご飯. Dish: Japanese rice bowl with small cooked octopus pieces and fine ginger throughout rice. Exact ingredient identity: tiny whole prepared iidako octopuses, small oval mantle and short curled arms, NOT large octopus arm slices. Ingredients actually shown should match: 内臓・目・口を除き洗ったイイダコ150g; 米2合・しょうが1片; 酒・醤油 各大さじ1・塩 少々. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/iidako-takikomi.webp"
+    },
+    {
+      "fish": "hamo",
+      "recipe": "teriyaki",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ハモ 照り焼き. Dish: glossy soy glazed cooked boneless fish portions. Exact ingredient identity: pike conger already professionally bone-cut, pale white flesh with fine closely spaced cuts, NO large visible bones. Ingredients actually shown should match: 2人分：ハモ 専門店で骨切りされた食用の身250g; 醤油・みりん・酒 各大さじ1; 砂糖 小さじ1; 油 小さじ2. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/hamo-teriyaki.webp"
+    },
+    {
+      "fish": "iidako",
+      "recipe": "sunomono",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe イイダコ きゅうりとの酢の物. Dish: small bowl of cooked octopus slices and thin cucumber in clear vinegar dressing. Exact ingredient identity: tiny whole prepared iidako octopuses, small oval mantle and short curled arms, NOT large octopus arm slices. Ingredients actually shown should match: 内臓・目・口を除き洗ったイイダコ150g; きゅうり1本・塩 少々; 酢 大さじ2・砂糖 小さじ2・醤油 小さじ1. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/iidako-sunomono.webp"
+    },
+    {
+      "fish": "kaminariika",
+      "recipe": "sashimi",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe カミナリイカ 刺身. Dish: fresh carefully sliced raw fish sashimi, daikon and shiso, no cooked skin. Exact ingredient identity: thick white cuttlefish mantle cut into strips or pieces, NOT fish with bones, do not include whole squid. Ingredients actually shown should match: カミナリイカ 生食用として処理された身200g; 大葉・大根のつま 適量; 醤油・わさび 好みで. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/kaminariika-sashimi.webp"
+    },
+    {
+      "fish": "kaminariika",
+      "recipe": "tempura",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe カミナリイカ 天ぷら. Dish: light crisp pale-golden tempura pieces, delicate airy battered coating, green shiso leaf on side. Exact ingredient identity: thick white cuttlefish mantle cut into strips or pieces, NOT fish with bones, do not include whole squid. Ingredients actually shown should match: 下処理したカミナリイカの胴・腕200g; 天ぷら粉50g・冷水 製品指定量; 揚げ油 適量・レモン 好みで. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/kaminariika-tempura.webp"
+    },
+    {
+      "fish": "mizudako",
+      "recipe": "sunomono",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ミズダコ きゅうりとの酢の物. Dish: small bowl of cooked octopus slices and thin cucumber in clear vinegar dressing. Exact ingredient identity: giant Pacific octopus arm portions, white center and purple red outer skin, visible suckers on some slices, NOT whole tiny octopus. Ingredients actually shown should match: 食用の加熱済みミズダコの腕150g; きゅうり1本・塩 少々; 酢 大さじ2・砂糖 小さじ2・醤油 小さじ1. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/mizudako-sunomono.webp"
+    },
+    {
+      "fish": "mizudako",
+      "recipe": "karaage",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ミズダコ 唐揚げ. Dish: small golden starch fried pieces with lemon. Exact ingredient identity: giant Pacific octopus arm portions, white center and purple red outer skin, visible suckers on some slices, NOT whole tiny octopus. Ingredients actually shown should match: 食用の加熱済みミズダコの腕200g; 片栗粉 大さじ3・醤油 小さじ2・しょうが 少々; 揚げ油 適量・レモン 好みで. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/mizudako-karaage.webp"
+    },
+    {
+      "fish": "mizudako",
+      "recipe": "butter",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ミズダコ バター醤油炒め. Dish: cooked seafood pieces lightly browned in butter soy sauce with spring onion. Exact ingredient identity: giant Pacific octopus arm portions, white center and purple red outer skin, visible suckers on some slices, NOT whole tiny octopus. Ingredients actually shown should match: 食用の加熱済みミズダコの腕200g; バター10g・醤油 小さじ2; にんにく1/2片・小ねぎ 適量. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/mizudako-butter.webp"
+    },
+    {
+      "fish": "kaminariika",
+      "recipe": "butter",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe カミナリイカ バター醤油炒め. Dish: cooked seafood pieces lightly browned in butter soy sauce with spring onion. Exact ingredient identity: thick white cuttlefish mantle cut into strips or pieces, NOT fish with bones, do not include whole squid. Ingredients actually shown should match: 下処理したカミナリイカの胴・腕200g; バター10g・醤油 小さじ2; にんにく1/2片・小ねぎ 適量. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/kaminariika-butter.webp"
+    },
+    {
+      "fish": "kaminariika",
+      "recipe": "karaage",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe カミナリイカ 唐揚げ. Dish: small golden starch fried pieces with lemon. Exact ingredient identity: thick white cuttlefish mantle cut into strips or pieces, NOT fish with bones, do not include whole squid. Ingredients actually shown should match: 下処理したカミナリイカの胴・腕200g; 片栗粉 大さじ3・醤油 小さじ2・しょうが 少々; 揚げ油 適量・レモン 好みで. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/kaminariika-karaage.webp"
+    },
+    {
+      "fish": "mizudako",
+      "recipe": "takikomi",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ミズダコ 炊き込みご飯. Dish: Japanese rice bowl with small cooked octopus pieces and fine ginger throughout rice. Exact ingredient identity: giant Pacific octopus arm portions, white center and purple red outer skin, visible suckers on some slices, NOT whole tiny octopus. Ingredients actually shown should match: 食用の加熱済みミズダコの腕150g; 米2合・しょうが1片; 酒・醤油 各大さじ1・塩 少々. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/mizudako-takikomi.webp"
+    },
+    {
+      "fish": "karafutomasu",
+      "recipe": "fry",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe カラフトマス フライ. Dish: golden panko breaded fried fish cutlets with lemon and shredded cabbage. Exact ingredient identity: pink salmon portions with pale salmon pink flesh and silver skin. Ingredients actually shown should match: 2人分：カラフトマス 皮と骨を用途に合わせて処理した切り身250g; 小麦粉・パン粉 適量; 卵1個; 塩 少々・揚げ油 適量; 千切りキャベツ・タルタルソース 適量. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/karafutomasu-fry.webp"
+    },
+    {
+      "fish": "karafutomasu",
+      "recipe": "misozuke",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe カラフトマス 味噌漬け焼き. Dish: grilled miso marinated fish portions, caramelized edges no pooled sauce. Exact ingredient identity: pink salmon portions with pale salmon pink flesh and silver skin. Ingredients actually shown should match: 2人分：カラフトマス 皮と骨を用途に合わせて処理した切り身250g; 味噌 大さじ2; 酒・みりん 各大さじ1. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/karafutomasu-misozuke.webp"
+    },
+    {
+      "fish": "hagatsuo",
+      "recipe": "sashimi",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ハガツオ 刺身. Dish: fresh carefully sliced raw fish sashimi, daikon and shiso, no cooked skin. Exact ingredient identity: striped bonito with pale pink red flesh when raw and tan pale cooked flesh, NOT bright tuna red. Ingredients actually shown should match: ハガツオ 生食用として処理された身200g; 大葉・大根のつま 適量; 醤油・わさび 好みで. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/hagatsuo-sashimi.webp"
+    },
+    {
+      "fish": "hagatsuo",
+      "recipe": "tatsuta",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ハガツオ 竜田揚げ. Dish: golden ginger soy marinated fried bonito chunks with light starch coating. Exact ingredient identity: striped bonito with pale pink red flesh when raw and tan pale cooked flesh, NOT bright tuna red. Ingredients actually shown should match: 2人分：ハガツオ 皮と骨を用途に合わせて処理した切り身250g; 醤油・酒 各大さじ1; しょうが 小さじ1; 片栗粉 大さじ3・揚げ油 適量. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/hagatsuo-tatsuta.webp"
+    },
+    {
+      "fish": "karafutomasu",
+      "recipe": "chancha",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe カラフトマス ちゃんちゃん焼き風. Dish: fully cooked pink salmon portions with cabbage onion carrot in miso butter sauce. Exact ingredient identity: pink salmon portions with pale salmon pink flesh and silver skin. Ingredients actually shown should match: カラフトマス 骨なし切り身250g; キャベツ150g・玉ねぎ1/2個・にんじん1/3本; 味噌 大さじ2・酒 大さじ2・砂糖 小さじ2; バター10g. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/karafutomasu-chancha.webp"
+    },
+    {
+      "fish": "karafutomasu",
+      "recipe": "shioyaki",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe カラフトマス 塩焼き. Dish: Japanese salt grilled small boneless fish portions with lightly browned skin, grated daikon. Exact ingredient identity: pink salmon portions with pale salmon pink flesh and silver skin. Ingredients actually shown should match: 2人分：カラフトマス 皮と骨を用途に合わせて処理した切り身250g; 塩 魚の重量の約1%; 大根おろし・レモン 適量. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/karafutomasu-shioyaki.webp"
+    },
+    {
+      "fish": "sujiara",
+      "recipe": "sakamushi",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe スジアラ 酒蒸し. Dish: cooked white fish fillet steamed with long onion and mushrooms in a shallow ceramic bowl. Exact ingredient identity: leopard coral grouper food-grade boneless white flesh, reddish skin only when cooked. Ingredients actually shown should match: 2人分：スジアラ 皮と骨を用途に合わせて処理した切り身250g; 酒 大さじ3・水 大さじ2; 昆布5cm角・しめじ1/2袋; 長ねぎ1/2本・塩 少々. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/sujiara-sakamushi.webp"
+    },
+    {
+      "fish": "hagatsuo",
+      "recipe": "teriyaki",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ハガツオ 照り焼き. Dish: glossy soy glazed cooked boneless fish portions. Exact ingredient identity: striped bonito with pale pink red flesh when raw and tan pale cooked flesh, NOT bright tuna red. Ingredients actually shown should match: 2人分：ハガツオ 皮と骨を用途に合わせて処理した切り身250g; 醤油・みりん・酒 各大さじ1; 砂糖 小さじ1; 油 小さじ2. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/hagatsuo-teriyaki.webp"
+    },
+    {
+      "fish": "hagatsuo",
+      "recipe": "nitsuke",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ハガツオ 煮付け. Dish: Japanese soy ginger braised cooked pieces in amber sauce. Exact ingredient identity: striped bonito with pale pink red flesh when raw and tan pale cooked flesh, NOT bright tuna red. Ingredients actually shown should match: 2人分：ハガツオ 皮と骨を用途に合わせて処理した切り身250g; 水150ml・酒100ml; 醤油・みりん 各大さじ2; 砂糖 大さじ1; しょうが 薄切り4枚. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/hagatsuo-nitsuke.webp"
+    },
+    {
+      "fish": "sujiara",
+      "recipe": "sashimi",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe スジアラ 刺身. Dish: fresh carefully sliced raw fish sashimi, daikon and shiso, no cooked skin. Exact ingredient identity: leopard coral grouper food-grade boneless white flesh, reddish skin only when cooked. Ingredients actually shown should match: スジアラ 生食用として処理された身200g; 大葉・大根のつま 適量; 醤油・わさび 好みで. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/sujiara-sashimi.webp"
+    },
+    {
+      "fish": "sujiara",
+      "recipe": "nitsuke",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe スジアラ 煮付け. Dish: Japanese soy ginger braised cooked pieces in amber sauce. Exact ingredient identity: leopard coral grouper food-grade boneless white flesh, reddish skin only when cooked. Ingredients actually shown should match: 2人分：スジアラ 皮と骨を用途に合わせて処理した切り身250g; 水150ml・酒100ml; 醤油・みりん 各大さじ2; 砂糖 大さじ1; しょうが 薄切り4枚. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/sujiara-nitsuke.webp"
+    },
+    {
+      "fish": "hamadai",
+      "recipe": "shioyaki",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ハマダイ 塩焼き. Dish: Japanese salt grilled small boneless fish portions with lightly browned skin, grated daikon. Exact ingredient identity: flame snapper white flesh pink skin when cooked. Ingredients actually shown should match: 2人分：ハマダイ 皮と骨を用途に合わせて処理した切り身250g; 塩 魚の重量の約1%; 大根おろし・レモン 適量. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/hamadai-shioyaki.webp"
+    },
+    {
+      "fish": "hamadai",
+      "recipe": "ushiojiru",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ハマダイ 潮汁. Dish: clear Japanese fish broth with small cooked boneless white fish pieces and sliced daikon. Exact ingredient identity: flame snapper white flesh pink skin when cooked. Ingredients actually shown should match: 2人分：ハマダイ 皮と骨を用途に合わせて処理した切り身250g; 水500ml・昆布5cm角; 大根100g・酒 大さじ2; 塩 小さじ1/3から調整・青ねぎ 適量. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/hamadai-ushiojiru.webp"
+    },
+    {
+      "fish": "sujiara",
+      "recipe": "karaage",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe スジアラ 唐揚げ. Dish: small golden starch fried pieces with lemon. Exact ingredient identity: leopard coral grouper food-grade boneless white flesh, reddish skin only when cooked. Ingredients actually shown should match: 2人分：スジアラ 皮と骨を用途に合わせて処理した切り身250g; 醤油・酒 各大さじ1; しょうが 小さじ1; 片栗粉 大さじ3・揚げ油 適量. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/sujiara-karaage.webp"
+    },
+    {
+      "fish": "akoudai",
+      "recipe": "sashimi",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe アコウダイ 刺身. Dish: fresh carefully sliced raw fish sashimi, daikon and shiso, no cooked skin. Exact ingredient identity: Japanese red rockfish white flesh with red skin when cooked. Ingredients actually shown should match: アコウダイ 生食用として処理された身200g; 大葉・大根のつま 適量; 醤油・わさび 好みで. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/akoudai-sashimi.webp"
+    },
+    {
+      "fish": "hamadai",
+      "recipe": "sashimi",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ハマダイ 刺身. Dish: fresh carefully sliced raw fish sashimi, daikon and shiso, no cooked skin. Exact ingredient identity: flame snapper white flesh pink skin when cooked. Ingredients actually shown should match: ハマダイ 生食用として処理された身200g; 大葉・大根のつま 適量; 醤油・わさび 好みで. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/hamadai-sashimi.webp"
+    },
+    {
+      "fish": "hamadai",
+      "recipe": "sakamushi",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe ハマダイ 酒蒸し. Dish: cooked white fish fillet steamed with long onion and mushrooms in a shallow ceramic bowl. Exact ingredient identity: flame snapper white flesh pink skin when cooked. Ingredients actually shown should match: 2人分：ハマダイ 皮と骨を用途に合わせて処理した切り身250g; 酒 大さじ3・水 大さじ2; 昆布5cm角・しめじ1/2袋; 長ねぎ1/2本・塩 少々. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/hamadai-sakamushi.webp"
+    },
+    {
+      "fish": "akoudai",
+      "recipe": "nitsuke",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe アコウダイ 煮付け. Dish: Japanese soy ginger braised cooked pieces in amber sauce. Exact ingredient identity: Japanese red rockfish white flesh with red skin when cooked. Ingredients actually shown should match: 2人分：アコウダイ 皮と骨を用途に合わせて処理した切り身250g; 水150ml・酒100ml; 醤油・みりん 各大さじ2; 砂糖 大さじ1; しょうが 薄切り4枚. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/akoudai-nitsuke.webp"
+    },
+    {
+      "fish": "akoudai",
+      "recipe": "nabe",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe アコウダイ 鍋. Dish: small Japanese ceramic hot pot simmering with cooked fish pieces tofu and vegetables. Exact ingredient identity: Japanese red rockfish white flesh with red skin when cooked. Ingredients actually shown should match: 2人分：アコウダイ 皮と骨を用途に合わせて処理した切り身250g; 昆布だし600ml; 白菜2枚・長ねぎ1/2本・しめじ1/2袋; 豆腐1/2丁; 酒 大さじ2・ポン酢 適量. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/akoudai-nabe.webp"
+    },
+    {
+      "fish": "akoudai",
+      "recipe": "misozuke",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe アコウダイ 味噌漬け焼き. Dish: grilled miso marinated fish portions, caramelized edges no pooled sauce. Exact ingredient identity: Japanese red rockfish white flesh with red skin when cooked. Ingredients actually shown should match: 2人分：アコウダイ 皮と骨を用途に合わせて処理した切り身250g; 味噌 大さじ2; 酒・みりん 各大さじ1. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/akoudai-misozuke.webp"
+    },
+    {
+      "fish": "akatachi",
+      "recipe": "tempura",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe アカタチ 天ぷら. Dish: light crisp pale-golden tempura pieces, delicate airy battered coating, green shiso leaf on side. Exact ingredient identity: red-spotted bandfish slender narrow delicate boneless white fish strips, reddish skin when cooked, not thick salmon or tuna steaks. Ingredients actually shown should match: 2人分：アカタチ 皮と骨を用途に合わせて処理した切り身250g; 天ぷら粉50g・冷水 製品指定量; 揚げ油 適量; 大葉・天つゆ 好みで. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/akatachi-tempura.webp"
+    },
+    {
+      "fish": "akatachi",
+      "recipe": "meuniere",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe アカタチ ムニエル. Dish: flour-dusted pan-fried fish fillets lightly golden, lemon and parsley. Exact ingredient identity: red-spotted bandfish slender narrow delicate boneless white fish strips, reddish skin when cooked, not thick salmon or tuna steaks. Ingredients actually shown should match: 2人分：アカタチ 皮と骨を用途に合わせて処理した切り身250g; 塩・こしょう 少々; 小麦粉 大さじ2; 油 小さじ2・バター15g; レモン・パセリ 適量. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/akatachi-meuniere.webp"
+    },
+    {
+      "fish": "akatachi",
+      "recipe": "shioyaki",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe アカタチ 塩焼き. Dish: Japanese salt grilled small boneless fish portions with lightly browned skin, grated daikon. Exact ingredient identity: red-spotted bandfish slender narrow delicate boneless white fish strips, reddish skin when cooked, not thick salmon or tuna steaks. Ingredients actually shown should match: 2人分：アカタチ 皮と骨を用途に合わせて処理した切り身250g; 塩 魚の重量の約1%; 大根おろし・レモン 適量. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/akatachi-shioyaki.webp"
+    },
+    {
+      "fish": "akatachi",
+      "recipe": "karaage",
+      "prompt": "Use case: photorealistic-natural. Original realistic Japanese home cooking food photograph for UOLINK recipe アカタチ 唐揚げ. Dish: small golden starch fried pieces with lemon. Exact ingredient identity: red-spotted bandfish slender narrow delicate boneless white fish strips, reddish skin when cooked, not thick salmon or tuna steaks. Ingredients actually shown should match: 2人分：アカタチ 皮と骨を用途に合わせて処理した切り身250g; 醤油・酒 各大さじ1; しょうが 小さじ1; 片栗粉 大さじ3・揚げ油 適量. One dish on a modest ceramic plate on a natural wood table, soft window daylight, appetizing realistic portion, slight natural irregularity, full dish in frame, no people, no text or logos, no collage. Three quarter overhead composition, horizontal. No raw garnish seafood on cooked dishes.",
+      "output": "/images/cooking/akatachi-karaage.webp"
+    }
+  ]
+}

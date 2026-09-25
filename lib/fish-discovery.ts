@@ -16,13 +16,13 @@ export function fishBrowseGroup(f:DiscoverableFish):string{
  if(/アジ科/.test(family))return 'アジ・青物';
  if(/サバ科/.test(family))return 'サバ・カツオ・マグロ';
  if(/イカ/.test(family))return 'イカ類';
- if(/タコ/.test(family))return 'タコ類';
+ if(/タコ|ダコ/.test(family))return 'タコ類';
  return family||'その他';
 }
 export function fishSearchTags(f:DiscoverableFish):string[]{
  const group=fishBrowseGroup(f),tags:string[]=[];
  if(group==='カレイ類')tags.push('カレイ','かれい');
- if(['katsuo','suma','hirasouda','marusouda'].includes(f.slug??''))tags.push('カツオ','鰹');
+ if(['katsuo','suma','hirasouda','marusouda','hagatsuo'].includes(f.slug??''))tags.push('カツオ','鰹');
  if(['hirasouda','marusouda'].includes(f.slug??''))tags.push('ソウダガツオ');
  if(group==='ハタ類')tags.push('ハタ');
  if(group==='淡水・サケマス')tags.push('淡水魚');
