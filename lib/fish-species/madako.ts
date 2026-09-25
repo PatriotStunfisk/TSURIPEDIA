@@ -134,6 +134,32 @@ export default defineFishSpecies({
       },
       {
         "slug": "karaage",
+        "stepImages": [
+  {
+    "step": 1,
+    "src": "/images/cooking/steps/madako-karaage-1.svg",
+    "alt": "マダコの唐揚げ：ゆでダコをそろえて切る",
+    "caption": "この料理はゆでダコを使います。太い腕は厚さをそろえ、水気をよく拭きます。"
+  },
+  {
+    "step": 2,
+    "src": "/images/cooking/steps/madako-karaage-2.svg",
+    "alt": "マダコの唐揚げ：短く下味を付ける",
+    "caption": "長く漬けすぎず、粉を付ける前に汁気を拭きます。吸盤の間の水分にも注意します。"
+  },
+  {
+    "step": 3,
+    "src": "/images/cooking/steps/madako-karaage-3.svg",
+    "alt": "マダコの唐揚げ：少量ずつ油へ",
+    "caption": "タコは油がはねやすいため水分を残さず、鍋へ顔を近づけないようにします。"
+  },
+  {
+    "step": 4,
+    "src": "/images/cooking/steps/madako-karaage-4.svg",
+    "alt": "マダコの唐揚げ：表面をカリッと仕上げる",
+    "caption": "ゆでダコでも中まで熱くなったことを確認し、網で油を切ります。"
+  }
+],
         "name": "唐揚げ",
         "summary": "ゆでダコを使い、表面を香ばしく仕上げる手軽なおつまみです。",
         "ingredients": [

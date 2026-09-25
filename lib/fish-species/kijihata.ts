@@ -109,6 +109,32 @@ export default defineFishSpecies({
     "recipes": [
       {
         "slug": "sakamushi",
+        "stepImages": [
+  {
+    "step": 1,
+    "src": "/images/cooking/steps/kijihata-sakamushi-1.svg",
+    "alt": "キジハタの酒蒸し：厚さをそろえ水分を拭く",
+    "caption": "キジハタの厚い身は加熱に差が出やすいため、大きさをそろえておきます。"
+  },
+  {
+    "step": 2,
+    "src": "/images/cooking/steps/kijihata-sakamushi-2.svg",
+    "alt": "キジハタの酒蒸し：昆布の上へ重ねず並べる",
+    "caption": "耐熱皿に魚と香味野菜を置き、酒と水を加えます。皿の深さに余裕を持たせます。"
+  },
+  {
+    "step": 3,
+    "src": "/images/cooking/steps/kijihata-sakamushi-3.svg",
+    "alt": "キジハタの酒蒸し：蒸気が上がってから蒸す",
+    "caption": "鍋の水がなくならないようにし、蓋を開ける時は蒸気を顔へ向けません。"
+  },
+  {
+    "step": 4,
+    "src": "/images/cooking/steps/kijihata-sakamushi-4.svg",
+    "alt": "キジハタの酒蒸し：蒸し汁と一緒に",
+    "caption": "身の中心まで火を通してから盛ります。ぽん酢は最初から大量に入れず、食べる時に調整します。"
+  }
+],
         "name": "酒蒸し",
         "image": "/images/fish/kijihata-sakamushi.png",
         "summary": "キジハタの身質を生かす酒蒸し。下処理と骨の確認を済ませ、家庭で作りやすい手順にまとめました。",

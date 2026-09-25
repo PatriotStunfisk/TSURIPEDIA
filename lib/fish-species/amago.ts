@@ -112,6 +112,32 @@ export default defineFishSpecies({
     "recipes": [
       {
         "slug": "shioyaki",
+        "stepImages": [
+  {
+    "step": 1,
+    "src": "/images/cooking/steps/amago-shioyaki-1.svg",
+    "alt": "アマゴの塩焼き：小型の丸魚を下処理",
+    "caption": "エラ・内臓を除いて洗い、腹の中も水気を拭きます。アマゴは中心まで加熱して食べます。"
+  },
+  {
+    "step": 2,
+    "src": "/images/cooking/steps/amago-shioyaki-2.svg",
+    "alt": "アマゴの塩焼き：薄く均一に塩",
+    "caption": "小型魚は塩が強くなりやすいので、分量を量って全体へ振ります。"
+  },
+  {
+    "step": 3,
+    "src": "/images/cooking/steps/amago-shioyaki-3.svg",
+    "alt": "アマゴの塩焼き：機器に合わせて焼く",
+    "caption": "片面焼きと両面焼きでは返す回数が異なります。尾が焦げるほど強火にせず焼きます。"
+  },
+  {
+    "step": 4,
+    "src": "/images/cooking/steps/amago-shioyaki-4.svg",
+    "alt": "アマゴの塩焼き：背骨の周りも確認",
+    "caption": "身をほぐし、加熱不足がないか確認します。小骨は食べる時に取り除きます。"
+  }
+],
         "name": "塩焼き",
         "image": "/images/fish/amago-shioyaki.png",
         "summary": "アマゴの身質を生かす塩焼き。下処理と骨の確認を済ませ、家庭で作りやすい手順にまとめました。",

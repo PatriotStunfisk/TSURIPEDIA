@@ -120,6 +120,78 @@ export default defineFishSpecies({
     "recipes": [
       {
         "slug": "shioyaki",
+        "stepImages": [
+  {
+    "step": 1,
+    "src": "/images/cooking/steps/nijimasu-shioyaki-1.svg",
+    "alt": "ニジマスの塩焼き：腹の中まで水分を拭く",
+    "caption": "エラ・内臓を除き、背骨沿いの血合いを洗い流してから水分を拭きます。"
+  },
+  {
+    "step": 2,
+    "src": "/images/cooking/steps/nijimasu-shioyaki-2.svg",
+    "alt": "ニジマスの塩焼き：塩を均一に振る",
+    "caption": "この料理は小型の丸魚が基本。大きいニジマスは切り身にすると加熱をそろえやすくなります。"
+  },
+  {
+    "step": 3,
+    "src": "/images/cooking/steps/nijimasu-shioyaki-3.svg",
+    "alt": "ニジマスの塩焼き：表面を焼きすぎない",
+    "caption": "焦げそうなら火を弱め、身に火が通る時間を確保します。"
+  },
+  {
+    "step": 4,
+    "src": "/images/cooking/steps/nijimasu-shioyaki-4.svg",
+    "alt": "ニジマスの塩焼き：厚い背側まで加熱",
+    "caption": "焼き色だけで判断せず中心を確認し、小骨を除きながら食べます。"
+  }
+],
+        "detail": {
+  "intro": "小型のニジマスは丸ごと焼くと皮を香ばしく、身をふっくら仕上げられます。時間だけで焼き上がりを決めず、いちばん厚い背側の火の通りを確かめるのがポイントです。",
+  "processImage": {
+    "src": "/images/cooking/nijimasu-grilling-process.webp",
+  "caption": "水気を拭く → 塩を振る → 中心まで焼く（工程イラスト）",
+    "alt": "ニジマスの塩焼きの工程イラスト。左から水気を拭く、塩を振る、グリルで焼く。"
+  },
+  "checkpoints": [
+    {
+      "title": "腹の内側まで水気を拭く",
+      "body": "表面だけでなく、内臓を取った腹の中もペーパーで押さえます。血合いが残っていれば流水で取り除き、洗った後はすぐに水気を拭きます。"
+    },
+    {
+      "title": "大きさをそろえて塩を振る",
+      "body": "この分量は小型の丸魚用です。大きな魚は切り身にすると加熱をそろえやすくなります。塩をした後に出た水分を拭き、焼く直前まで冷蔵庫で管理します。"
+    },
+    {
+      "title": "焼き色と中心の加熱は別に確認",
+      "body": "表面に焼き色が付いても背の厚い部分は加熱不足の場合があります。身を開いて中心を確認し、不透明になるまで十分に加熱。安全を確かめるには食品用温度計を使い、中心75℃で1分以上を目安にします。"
+    }
+  ],
+  "troubleshooting": [
+    {
+      "problem": "皮だけ先に焦げる",
+      "solution": "火力を下げて中心まで加熱します。使う機器の説明書に従い、魚を熱源へ近づけすぎないようにします。"
+    },
+    {
+      "problem": "裏返すと皮がはがれる",
+      "solution": "皮が固まる前に何度も動かさないこと。片面焼きでは身を支えて一度で返し、両面焼きは機器の手順を優先します。"
+    },
+    {
+      "problem": "食べる時に小骨が気になる",
+      "solution": "背と腹の身を分けて中骨を外し、小骨を確かめながら食べます。子どもには大人がほぐして取り分けます。"
+    }
+  ],
+  "sources": [
+    {
+      "label": "農林水産省：川魚の料理",
+      "url": "https://www.maff.go.jp/j/pr/aff/2308/spe1_02.html"
+    },
+    {
+      "label": "厚生労働省：家庭でできる食中毒予防",
+      "url": "https://www.mhlw.go.jp/www1/houdou/0903/h0331-1.html"
+    }
+  ]
+},
         "name": "塩焼き",
         "image": "/images/fish/nijimasu-shioyaki.png",
         "summary": "ニジマスの身質を生かす塩焼き。下処理と骨の確認を済ませ、家庭で作りやすい手順にまとめました。",

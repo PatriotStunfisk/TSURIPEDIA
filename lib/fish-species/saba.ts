@@ -163,6 +163,32 @@ export default defineFishSpecies({
       },
       {
         "slug": "misoni",
+        "stepImages": [
+  {
+    "step": 1,
+    "src": "/images/cooking/steps/saba-misoni-1.svg",
+    "alt": "マサバの味噌煮：表面を霜降りする",
+    "caption": "皮に浅い切れ目を入れ、熱湯をかけたら残った血や汚れを除きます。身を長く湯へ浸けすぎません。"
+  },
+  {
+    "step": 2,
+    "src": "/images/cooking/steps/saba-misoni-2.svg",
+    "alt": "マサバの味噌煮：しょうがを加えた煮汁へ",
+    "caption": "切り身は皮側を上にして重ならないように並べると、盛り付けまで扱いやすくなります。"
+  },
+  {
+    "step": 3,
+    "src": "/images/cooking/steps/saba-misoni-3.svg",
+    "alt": "マサバの味噌煮：落とし蓋で加熱",
+    "caption": "中心まで火が通るよう煮汁を回します。魚を何度も裏返さず、身を崩さないようにします。"
+  },
+  {
+    "step": 4,
+    "src": "/images/cooking/steps/saba-misoni-4.svg",
+    "alt": "マサバの味噌煮：味噌を溶いて仕上げ",
+    "caption": "味噌を煮汁で溶いてから加えるとだまになりにくくなります。焦げ付かない火力で仕上げます。"
+  }
+],
         "name": "味噌煮",
         "image": "/images/fish/saba-misoni.png",
         "summary": "味噌と生姜で濃厚に仕上げる、ご飯に合う王道料理。",

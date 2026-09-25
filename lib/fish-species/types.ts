@@ -21,7 +21,8 @@ export type LaunchFishExtra={
   spotFocus:string;
 };
 
-export type Recipe={preparation?:'raw'|'cooked';slug:string;name:string;image?:string;summary:string;ingredients:string[];steps:string[];tips:string[]};
+export type RecipeDetail={intro:string;processImage?:{src:string;alt:string;caption:string};checkpoints:{title:string;body:string}[];troubleshooting:{problem:string;solution:string}[];sources:{label:string;url:string}[]};
+export type Recipe={stepImages?:{step:number;src:string;alt:string;caption:string}[];detail?:RecipeDetail;preparation?:'raw'|'cooked';slug:string;name:string;image?:string;summary:string;ingredients:string[];steps:string[];tips:string[]};
 export type CookingFish={slug:string;name:string;prep:string[];prepImages?:{step:number;src:string;alt:string}[];recipes:Recipe[]};
 
 

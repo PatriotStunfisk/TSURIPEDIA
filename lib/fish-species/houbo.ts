@@ -124,6 +124,32 @@ export default defineFishSpecies({
     "recipes": [
       {
         "slug": "aquapazza",
+        "stepImages": [
+  {
+    "step": 1,
+    "src": "/images/cooking/steps/houbo-aquapazza-1.svg",
+    "alt": "ホウボウのアクアパッツァ：切り身と貝を準備",
+    "caption": "ホウボウの骨を確認し、水分を拭きます。あさりは砂抜き済みのものを使います。"
+  },
+  {
+    "step": 2,
+    "src": "/images/cooking/steps/houbo-aquapazza-2.svg",
+    "alt": "ホウボウのアクアパッツァ：皮側から焼き始める",
+    "caption": "身がフライパンへくっつくうちは無理に動かさず、焼き面が固まってから返します。"
+  },
+  {
+    "step": 3,
+    "src": "/images/cooking/steps/houbo-aquapazza-3.svg",
+    "alt": "ホウボウのアクアパッツァ：蓋をして蒸し煮",
+    "caption": "煮汁がなくならないように加熱します。魚の厚さに合わせて火を通します。"
+  },
+  {
+    "step": 4,
+    "src": "/images/cooking/steps/houbo-aquapazza-4.svg",
+    "alt": "ホウボウのアクアパッツァ：煮汁の塩気を確認",
+    "caption": "魚とあさりから味が出た後に味見して、塩を足すか判断します。"
+  }
+],
         "name": "アクアパッツァ",
         "image": "/images/fish/houbo-aquapazza.png",
         "summary": "ホウボウの身質を生かすアクアパッツァ。下処理と骨の確認を済ませ、家庭で作りやすい手順にまとめました。",

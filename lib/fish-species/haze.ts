@@ -118,6 +118,32 @@ export default defineFishSpecies({
     "recipes": [
       {
         "slug": "tempura",
+        "stepImages": [
+  {
+    "step": 1,
+    "src": "/images/cooking/steps/haze-tempura-1.svg",
+    "alt": "マハゼの天ぷら：開いた身の水分を拭く",
+    "caption": "小さいハゼも中骨・腹骨を確認します。ぬめりを落とした後の水分をしっかり拭きます。"
+  },
+  {
+    "step": 2,
+    "src": "/images/cooking/steps/haze-tempura-2.svg",
+    "alt": "マハゼの天ぷら：薄い衣で包む",
+    "caption": "小さな身へ衣を付けすぎないようにし、余分を切ってから油へ入れます。"
+  },
+  {
+    "step": 3,
+    "src": "/images/cooking/steps/haze-tempura-3.svg",
+    "alt": "マハゼの天ぷら：少しずつ離して入れる",
+    "caption": "魚同士がくっつかないように入れ、衣が固まるまで触りすぎません。"
+  },
+  {
+    "step": 4,
+    "src": "/images/cooking/steps/haze-tempura-4.svg",
+    "alt": "マハゼの天ぷら：揚げたてを盛る",
+    "caption": "網で油を切り、天つゆは食べる直前に付けると衣の軽さを保てます。"
+  }
+],
         "name": "天ぷら",
         "image": "/images/fish/haze-tempura.png",
         "summary": "マハゼの身質を生かす天ぷら。下処理と骨の確認を済ませ、家庭で作りやすい手順にまとめました。",

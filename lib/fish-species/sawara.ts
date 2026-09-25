@@ -106,6 +106,32 @@ export default defineFishSpecies({
     "recipes": [
       {
         "slug": "saikyo",
+        "stepImages": [
+  {
+    "step": 1,
+    "src": "/images/cooking/steps/sawara-saikyo-1.svg",
+    "alt": "サワラの西京焼き：塩をして水分を拭く",
+    "caption": "サワラは身が軟らかいため、ペーパーで押さえるように水気を取ります。"
+  },
+  {
+    "step": 2,
+    "src": "/images/cooking/steps/sawara-saikyo-2.svg",
+    "alt": "サワラの西京焼き：味噌床で冷蔵する",
+    "caption": "室温には置かず、密閉できる容器で冷蔵。漬けた魚を扱った味噌床を、そのまま薬味として食べないでください。"
+  },
+  {
+    "step": 3,
+    "src": "/images/cooking/steps/sawara-saikyo-3.svg",
+    "alt": "サワラの西京焼き：味噌をぬぐって弱火",
+    "caption": "味噌が厚く残ると身に火が通る前に焦げます。表面をぬぐってから焼きます。"
+  },
+  {
+    "step": 4,
+    "src": "/images/cooking/steps/sawara-saikyo-4.svg",
+    "alt": "サワラの西京焼き：焼き色より中心を確認",
+    "caption": "焦げを防ぐ覆いは機器が使用を認める方法で。魚の厚さに合わせて中心まで加熱します。"
+  }
+],
         "name": "西京焼き",
         "summary": "白みその甘味をまとわせた定番。焦がしすぎず中まで火を通します。",
         "ingredients": [

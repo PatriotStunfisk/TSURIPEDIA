@@ -168,6 +168,32 @@ export default defineFishSpecies({
       },
       {
         "slug": "butter",
+        "stepImages": [
+  {
+    "step": 1,
+    "src": "/images/cooking/steps/aoriika-butter-1.svg",
+    "alt": "アオリイカのバター醤油炒め：胴の表面に浅い切り目",
+    "caption": "胴を開いて皮・軟骨を取り、表面に浅く切れ目を入れます。切り離さないよう包丁を深く入れすぎません。"
+  },
+  {
+    "step": 2,
+    "src": "/images/cooking/steps/aoriika-butter-2.svg",
+    "alt": "アオリイカのバター醤油炒め：重ねず広げる",
+    "caption": "イカを詰め込むと水分が出て温度が下がります。多い時は分けて炒めます。"
+  },
+  {
+    "step": 3,
+    "src": "/images/cooking/steps/aoriika-butter-3.svg",
+    "alt": "アオリイカのバター醤油炒め：加熱してから味付け",
+    "caption": "厚い胴の中心まで火を通し、バターと醤油を絡めます。味付け後に長く炒め続けないようにします。"
+  },
+  {
+    "step": 4,
+    "src": "/images/cooking/steps/aoriika-butter-4.svg",
+    "alt": "アオリイカのバター醤油炒め：汁ごと盛り付ける",
+    "caption": "腕の吸盤やくちばしなど硬い部分の取り残しがないか、下処理の段階で確認します。"
+  }
+],
         "name": "バター醤油炒め",
         "summary": "切り込みを入れた身に香ばしいバター醤油が絡みます。ご飯にも合う加熱料理です。",
         "ingredients": [

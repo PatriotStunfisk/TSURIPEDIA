@@ -107,6 +107,32 @@ export default defineFishSpecies({
     "recipes": [
       {
         "slug": "teriyaki",
+        "stepImages": [
+  {
+    "step": 1,
+    "src": "/images/cooking/steps/kanpachi-teriyaki-1.svg",
+    "alt": "カンパチの照り焼き：皮付きの身を整える",
+    "caption": "血合い付近の骨も確かめ、切り身の厚さをできるだけそろえます。"
+  },
+  {
+    "step": 2,
+    "src": "/images/cooking/steps/kanpachi-teriyaki-2.svg",
+    "alt": "カンパチの照り焼き：両面を焼いて中まで加熱",
+    "caption": "厚い身は表面だけで判断せず、火を弱めて中心まで加熱します。"
+  },
+  {
+    "step": 3,
+    "src": "/images/cooking/steps/kanpachi-teriyaki-3.svg",
+    "alt": "カンパチの照り焼き：脂を拭いてたれを絡める",
+    "caption": "たれを入れる前に余分な油を拭くと、たれが身に絡みやすくなります。"
+  },
+  {
+    "step": 4,
+    "src": "/images/cooking/steps/kanpachi-teriyaki-4.svg",
+    "alt": "カンパチの照り焼き：煮詰めすぎず盛る",
+    "caption": "たれは冷めると濃く感じやすいので、鍋底で固まるまで詰めないようにします。"
+  }
+],
         "name": "照り焼き",
         "image": "/images/fish/kanpachi-teriyaki.png",
         "summary": "カンパチの身質を生かす照り焼き。下処理と骨の確認を済ませ、家庭で作りやすい手順にまとめました。",

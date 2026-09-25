@@ -163,6 +163,32 @@ export default defineFishSpecies({
       },
       {
         "slug": "fry",
+        "stepImages": [
+  {
+    "step": 1,
+    "src": "/images/cooking/steps/hirame-fry-1.svg",
+    "alt": "ヒラメのフライ：小骨と厚さを確認",
+    "caption": "薄い部分と厚い部分を分けておくと、揚がった順に取り出しやすくなります。"
+  },
+  {
+    "step": 2,
+    "src": "/images/cooking/steps/hirame-fry-2.svg",
+    "alt": "ヒラメのフライ：衣は薄く均一に",
+    "caption": "身が繊細なのでパン粉を強く押しつぶさず、表面に軽く密着させます。"
+  },
+  {
+    "step": 3,
+    "src": "/images/cooking/steps/hirame-fry-3.svg",
+    "alt": "ヒラメのフライ：触りすぎず揚げる",
+    "caption": "衣が固まるまでは何度も返さず、身が崩れないように支えて返します。"
+  },
+  {
+    "step": 4,
+    "src": "/images/cooking/steps/hirame-fry-4.svg",
+    "alt": "ヒラメのフライ：網で油を切る",
+    "caption": "平らに重ねず、余分な油と蒸気を逃がしてから盛ります。"
+  }
+],
         "name": "フライ",
         "summary": "骨を除いた白身をサクッと揚げる、取り分けやすい一皿です。",
         "ingredients": [

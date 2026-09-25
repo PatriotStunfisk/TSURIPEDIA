@@ -142,6 +142,32 @@ export default defineFishSpecies({
     "recipes": [
       {
         "slug": "nitsuke",
+        "stepImages": [
+  {
+    "step": 1,
+    "src": "/images/cooking/steps/kawahagi-nitsuke-1.svg",
+    "alt": "カワハギの煮付け：皮・内臓を除いた身を使う",
+    "caption": "この煮付けは下処理済みの身が基本です。肝を入れる場合も傷みのないものを使い、中心まで加熱します。"
+  },
+  {
+    "step": 2,
+    "src": "/images/cooking/steps/kawahagi-nitsuke-2.svg",
+    "alt": "カワハギの煮付け：煮汁が沸いてから入れる",
+    "caption": "魚を重ねずに並べられる浅い鍋を使います。大きな身は同じくらいの大きさにそろえます。"
+  },
+  {
+    "step": 3,
+    "src": "/images/cooking/steps/kawahagi-nitsuke-3.svg",
+    "alt": "カワハギの煮付け：身を返さず煮る",
+    "caption": "身が崩れやすいため、鍋を軽く揺らすか煮汁を回しかけます。時間は大きさに応じて調整します。"
+  },
+  {
+    "step": 4,
+    "src": "/images/cooking/steps/kawahagi-nitsuke-4.svg",
+    "alt": "カワハギの煮付け：煮汁を別に詰める",
+    "caption": "火の通った魚を先に取り出しておくと、煮汁の濃さだけを調整できます。"
+  }
+],
         "name": "煮付け",
         "summary": "身離れのよい白身を、しょうがの香る煮汁でふっくら仕上げます。",
         "ingredients": [

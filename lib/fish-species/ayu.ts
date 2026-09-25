@@ -123,6 +123,32 @@ export default defineFishSpecies({
     "recipes": [
       {
         "slug": "shioyaki",
+        "stepImages": [
+  {
+    "step": 1,
+    "src": "/images/cooking/steps/ayu-shioyaki-1.svg",
+    "alt": "アユの塩焼き：洗って水気を拭く",
+    "caption": "家庭では下処理済みのアユを使うと扱いやすくなります。腹の水分も拭いてから焼きます。"
+  },
+  {
+    "step": 2,
+    "src": "/images/cooking/steps/ayu-shioyaki-2.svg",
+    "alt": "アユの塩焼き：塩を振り出た水分を拭く",
+    "caption": "小型のアユに塩を付けすぎないよう、魚の重量を基準に量ります。"
+  },
+  {
+    "step": 3,
+    "src": "/images/cooking/steps/ayu-shioyaki-3.svg",
+    "alt": "アユの塩焼き：尾を焦がしすぎない",
+    "caption": "魚を熱源へ近づけすぎず、機器の指示に従って焼きます。"
+  },
+  {
+    "step": 4,
+    "src": "/images/cooking/steps/ayu-shioyaki-4.svg",
+    "alt": "アユの塩焼き：中心まで火を通す",
+    "caption": "身の厚い部分まで加熱し、硬い骨やひれを除きながら食べます。"
+  }
+],
         "name": "塩焼き",
         "image": "/images/fish/ayu-shioyaki.png",
         "summary": "アユの身質を生かす塩焼き。下処理と骨の確認を済ませ、家庭で作りやすい手順にまとめました。",

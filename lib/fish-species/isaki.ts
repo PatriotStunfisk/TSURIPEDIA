@@ -106,6 +106,32 @@ export default defineFishSpecies({
     "recipes": [
       {
         "slug": "shioyaki",
+        "stepImages": [
+  {
+    "step": 1,
+    "src": "/images/cooking/steps/isaki-shioyaki-1.svg",
+    "alt": "イサキの塩焼き：腹の中も拭く",
+    "caption": "エラ・内臓・血合いを除いた小型の丸魚を使います。大きい個体は切り身で焼く方法も選べます。"
+  },
+  {
+    "step": 2,
+    "src": "/images/cooking/steps/isaki-shioyaki-2.svg",
+    "alt": "イサキの塩焼き：全体に薄く塩",
+    "caption": "皮だけに塩が偏らないように振り、出た水分を拭き取ります。"
+  },
+  {
+    "step": 3,
+    "src": "/images/cooking/steps/isaki-shioyaki-3.svg",
+    "alt": "イサキの塩焼き：背の厚い部分を意識",
+    "caption": "焦げそうなら火を弱めます。尾だけが焦げる場合の保護はグリルの説明書に従います。"
+  },
+  {
+    "step": 4,
+    "src": "/images/cooking/steps/isaki-shioyaki-4.svg",
+    "alt": "イサキの塩焼き：身を開いて確認",
+    "caption": "皮に色が付いていても、背骨の近くまで火が通っているか確認してから盛ります。"
+  }
+],
         "name": "塩焼き",
         "image": "/images/fish/isaki-shioyaki.png",
         "summary": "イサキの身質を生かす塩焼き。下処理と骨の確認を済ませ、家庭で作りやすい手順にまとめました。",
