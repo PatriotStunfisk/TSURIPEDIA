@@ -31,7 +31,7 @@ test('twenty species retain image-backed recipes and resolvable contextual conne
   const links=getFishConnections(slug);assert.equal(links.methods.length,f.methodSlugs.length,slug);assert.ok(links.guides.length,slug);for(const id of f.guideSlugs)assert.ok(getGuide(id),slug+': '+id);assert.equal(links.related.length,f.relatedSlugs.length,slug);
   assert.ok(s.quest.sizeRange[0]<s.quest.sizeRange[1],slug);
  }
- assert.deepEqual(fishSlugs.slice(-20),slugs,'existing added order stays intact');
+ assert.deepEqual(fishSlugs.slice(148,168),slugs,'existing added order stays intact');
 });
 test('freshwater methods and identities are not conflated with marine lookalikes',()=>{
  assert.deepEqual(getFishProfile('biwamasu').methodSlugs,['lake-trolling']);assert.ok(getFishProfile('himemasu').methodSlugs.includes('himemasu-sabiki')); assert.ok(!getFishProfile('himemasu').methodSlugs.includes('sabiki'));

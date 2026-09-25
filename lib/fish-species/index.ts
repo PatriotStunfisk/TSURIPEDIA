@@ -1,3 +1,25 @@
+import hamafuefuki from './hamafuefuki';
+import fuedai from './fuedai';
+import yokosujifuedai from './yokosujifuedai';
+import kurohoshifuedai from './kurohoshifuedai';
+import tamagashira from './tamagashira';
+import chairomaruhata from './chairomaruhata';
+import kasumiaji from './kasumiaji';
+import gingameaji from './gingameaji';
+import itohikiaji from './itohikiaji';
+import usumebaru from './usumebaru';
+import hatsume from './hatsume';
+import shimazoi from './shimazoi';
+import matsukawa from './matsukawa';
+import babagarei from './babagarei';
+import numagarei from './numagarei';
+import nigoi from './nigoi';
+import kamatsuka from './kamatsuka';
+import motsugo from './motsugo';
+import tamoroko from './tamoroko';
+import honmoroko from './honmoroko';
+import muroaji from './muroaji';
+import umeiro from './umeiro';
 import hiiragi from './hiiragi';
 import nezumigochi from './nezumigochi';
 import anahaze from './anahaze';
@@ -171,7 +193,7 @@ import type {FishSpeciesDefinition} from './types';
 
 // Add one import and one entry here for a new full species profile.
 // Keep this order stable: it preserves the historical added order; the catalog default groups relatives.
-export const fishSpecies:FishSpeciesDefinition[]=[tachiuo,aji,madai,buri,kisu,kasago,saba,iwashi,suzuki,chinu,kawahagi,hirame,mebaru,aoriika,madako,kanpachi,sawara,amago,nijimasu,ayu,unagi,anago,isaki,magochi,mejina,haze,ainame,kijihata,akahata,oomonhata,houbo,itoyoridai,kouika,yariika,akakamas,katakuchi,urume,konoshiro,bora,shiira,makogarei,umazurahagi,kidai,kensakiika,sayori,gomasaba,kurosoi,ishidai,ishigarei,akaamadai,kinmedai,akamutsu,kuromutsu,medai,kusafugu,aigo,gonzui,haokoze,oniokoze,minokasago,akaei,yamame,wakasagi,iwana,shimaaji,hiramasa,kaiwari,maruaji,takabe,shiroamadai,suma,hirasouda,marusouda,usubahagi,maeso,datsu,blackbass,bluegill,rouninaji,kihada,itou,akame,kurokajiki,herabuna,koi,oikawa,chika,umitanago,shiroguchi,magarei,hokke,kurogashiragarei,komai,nishin,ezomebaru,kibire,katsuo,madara,surumeika,sunagarei,suzumedai,hoshisasanoha,akasasanoha,kyusen,sappa,shimagatsuo,kobudai,utsubo,kuromaguro,browntrout,koshoudai,nenbutsudai,murasoi,takenokomebaru,kuromejina,chidai,matoudai,akayagara,hachibiki,chigodara,himeji,kanagashira,hirasuzuki,aohata,kue,mahata,hedai,korodai,mutsu,nibe,souhachi,akagarei,nizadai,onikasago,izukasago,ishigakidai,kiamadai,okizayori,sake,ginzake,kitamakura,komonfugu,shimafugu,torafugu,hakofugu,aobudai,soushihagi,hyoumondako,hiiragi,nezumigochi,anahaze,kujime,ginpo,yamatokamasu,tenjikudai,tsumuburi,meaji,oonibe,ibodai,chikamekintoki,yumekasago,akaisaki,namazu,ugui,ginbuna,kawamutsu,biwamasu,himemasu];
+export const fishSpecies:FishSpeciesDefinition[]=[tachiuo,aji,madai,buri,kisu,kasago,saba,iwashi,suzuki,chinu,kawahagi,hirame,mebaru,aoriika,madako,kanpachi,sawara,amago,nijimasu,ayu,unagi,anago,isaki,magochi,mejina,haze,ainame,kijihata,akahata,oomonhata,houbo,itoyoridai,kouika,yariika,akakamas,katakuchi,urume,konoshiro,bora,shiira,makogarei,umazurahagi,kidai,kensakiika,sayori,gomasaba,kurosoi,ishidai,ishigarei,akaamadai,kinmedai,akamutsu,kuromutsu,medai,kusafugu,aigo,gonzui,haokoze,oniokoze,minokasago,akaei,yamame,wakasagi,iwana,shimaaji,hiramasa,kaiwari,maruaji,takabe,shiroamadai,suma,hirasouda,marusouda,usubahagi,maeso,datsu,blackbass,bluegill,rouninaji,kihada,itou,akame,kurokajiki,herabuna,koi,oikawa,chika,umitanago,shiroguchi,magarei,hokke,kurogashiragarei,komai,nishin,ezomebaru,kibire,katsuo,madara,surumeika,sunagarei,suzumedai,hoshisasanoha,akasasanoha,kyusen,sappa,shimagatsuo,kobudai,utsubo,kuromaguro,browntrout,koshoudai,nenbutsudai,murasoi,takenokomebaru,kuromejina,chidai,matoudai,akayagara,hachibiki,chigodara,himeji,kanagashira,hirasuzuki,aohata,kue,mahata,hedai,korodai,mutsu,nibe,souhachi,akagarei,nizadai,onikasago,izukasago,ishigakidai,kiamadai,okizayori,sake,ginzake,kitamakura,komonfugu,shimafugu,torafugu,hakofugu,aobudai,soushihagi,hyoumondako,hiiragi,nezumigochi,anahaze,kujime,ginpo,yamatokamasu,tenjikudai,tsumuburi,meaji,oonibe,ibodai,chikamekintoki,yumekasago,akaisaki,namazu,ugui,ginbuna,kawamutsu,biwamasu,himemasu,hamafuefuki,fuedai,yokosujifuedai,kurohoshifuedai,tamagashira,chairomaruhata,kasumiaji,gingameaji,itohikiaji,usumebaru,hatsume,shimazoi,matsukawa,babagarei,numagarei,nigoi,kamatsuka,motsugo,tamoroko,honmoroko,muroaji,umeiro];
 uniqueFishSlugs(fishSpecies.map(species=>species.base));
 const speciesBySlug=new Map(fishSpecies.map(species=>[species.base.slug,species]));
 export function getFishSpecies(slug:string){return speciesBySlug.get(slug)}

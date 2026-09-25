@@ -4,9 +4,10 @@ type DiscoverableFish={slug?:string;name:string;waterTypes?:readonly string[];de
 export const coreFishOrder=['tachiuo','aji','saba','buri','kisu','kasago','madai','kawahagi','aoriika','mebaru'] as const;
 export function fishBrowseGroup(f:DiscoverableFish):string{
  const family=f.detail?.family??'';
+ // Estuary fish such as starry flounder still belong with flatfish in browsing/search.
+ if(/カレイ科/.test(family))return 'カレイ類';
  if(f.waterTypes?.includes('fresh')||/サケ科|コイ科/.test(family))return '淡水・サケマス';
  if(/ハタ科/.test(family))return 'ハタ類';
- if(/カレイ科/.test(family))return 'カレイ類';
  if(/アマダイ科/.test(family))return 'アマダイ類';
  if(/タイ科/.test(family))return 'タイ類';
  if(/フグ科|ハリセンボン科/.test(family))return 'フグ類';

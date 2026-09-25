@@ -1,0 +1,756 @@
+{
+  "date": "2026-09-25",
+  "kind": "original-generated-illustrations",
+  "fish": [
+    {
+      "slug": "hamafuefuki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-89610fa6-0071-4971-add4-ba7e0203d96e.png",
+      "output": "/images/fish/hamafuefuki-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful ハマフエフキ (Lethrinus nebulosus, Spangled emperor). long sloping pointed snout, thick lips, golden olive-gray body with tiny blue scale spots and blue lines on cheeks, slightly forked tail. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "chairomaruhata",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-534a74ae-7861-4ed8-bff9-40904c4aa7f3.png",
+      "output": "/images/fish/chairomaruhata-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful チャイロマルハタ (Epinephelus coioides, Orange-spotted grouper). elongate robust grouper large mouth, rounded tail, fine rusty orange-brown spots across pale gray olive body, five broad darker blotchy saddles. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "fuedai",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-650748d1-5d1c-43bf-9f6a-737f892925e8.png",
+      "output": "/images/fish/fuedai-profile-20260925.webp",
+      "prompt": "Change only the fins from red to muted golden yellow/ochre, natural adult Lutjanus stellatus colors. Preserve the reddish brown body and single white spot."
+    },
+    {
+      "slug": "kasumiaji",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-1423413c-504e-4a52-9571-701a0e0ba79c.png",
+      "output": "/images/fish/kasumiaji-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful カスミアジ (Caranx melampygus, Bluefin trevally). adult silver blue-gold compressed jack, vivid blue dorsal anal tail fins, small blue and black spots on sides, strongly forked tail. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "yokosujifuedai",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-b2f3f464-c381-4cea-bacc-b8dac56e155b.png",
+      "output": "/images/fish/yokosujifuedai-profile-20260925.webp",
+      "prompt": "Correct the diagnostic marking: there must be ONE dark brown stripe from eye toward tail, with an oval widening ON that stripe in the posterior half of the body. Remove the separate black spot above the stripe; the dark oval is contiguous with the stripe. Preserve fish shape, colors, transparent background."
+    },
+    {
+      "slug": "gingameaji",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-55e7c4e8-6cde-4e59-8cd1-4e81e8ef89c9.png",
+      "output": "/images/fish/gingameaji-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful ギンガメアジ (Caranx sexfasciatus, Bigeye trevally). adult deep silvery oval trevally, large eye with adipose eyelid, black spot at upper gill cover, darker back, pale anal fin, no blue spots. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "kurohoshifuedai",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-cba15bd0-15f8-4cea-a177-0c350b733c84.png",
+      "output": "/images/fish/kurohoshifuedai-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful クロホシフエダイ (Lutjanus russellii, Russell's snapper). silvery bronze oval body, single rounded black spot on upper rear flank intersecting lateral line, subtle gold thin horizontal stripes, yellowish fins. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "itohikiaji",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-0c9790f5-4943-43fa-a031-506cd665a9f3.png",
+      "output": "/images/fish/itohikiaji-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful イトヒキアジ (Alectis ciliaris, African pompano). juvenile diamond-shaped very deep silver body, steep forehead, very long filamentous first rays of soft dorsal and anal fins flowing backward, forked tail; all long filaments fully in frame. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "tamagashira",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-d6b60d4c-022e-4f07-8cbc-3e936999fc19.png",
+      "output": "/images/fish/tamagashira-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful タマガシラ (Parascolopsis inermis, Unarmed dwarf monocle bream). small pink-red sea fish with large round eye, four or five broad faded reddish vertical bands across pink silver sides, low spiny dorsal, forked pink tail. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "usumebaru",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-954d7b20-36d4-4e6f-95ee-70565e29faab.png",
+      "output": "/images/fish/usumebaru-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful ウスメバル (Sebastes thompsoni, Goldeye rockfish). pale orange pink brown rockfish, very large gold rim eyes, several irregular dark brown blotches high on flank under spiny dorsal, rounded pectoral fins. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "hatsume",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-f0011056-8165-4988-9df6-e80abd4e097d.png",
+      "output": "/images/fish/hatsume-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful ハツメ (Sebastes owstoni, Owston's rockfish). slender pink orange rockfish, very large eye, subtle brown lengthwise stripe on upper side, slender caudal peduncle, no bold spots or vertical bands. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "shimazoi",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-b2248eb1-17cf-4db2-a790-39a594b896c7.png",
+      "output": "/images/fish/shimazoi-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful シマゾイ (Sebastes trivittatus, Threestripe rockfish). dark brown stout rockfish with three broad pale cream longitudinal stripes running from head toward tail, spiny dorsal and rounded pectoral fins. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "matsukawa",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-0286bdc9-dce4-455b-b331-300cf286b270.png",
+      "output": "/images/fish/matsukawa-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful マツカワ (Verasper moseri, Barfin flounder). oval right-eyed flatfish viewed from pigmented side, rough gray-brown body with dark blotches, obvious rectangular black and cream alternating bands on dorsal anal and tail fins; flat anatomy with both eyes on same side. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "babagarei",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-d8b3bd0b-7fb9-4b0a-968f-0088e3e977d6.png",
+      "output": "/images/fish/babagarei-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful ババガレイ (Microstomus achne, Slime flounder). thick oval right-eyed flatfish, smoothly slimy dull olive-brown pigmented side, very small mouth thick lips, small darker mottling, no black fin bars; both eyes on same side. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "tamoroko",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-df524580-36e4-4a89-a962-fb6845d69621.png",
+      "output": "/images/fish/tamoroko-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful タモロコ (Gnathopogon elongatus, Willow shiner). small plump silver bronze freshwater fish with dark lateral band, short snout and small terminal mouth with one pair barbels, clear fins and forked tail. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "numagarei",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-673a34de-b8cb-4f09-9a8a-8809688632aa.png",
+      "output": "/images/fish/numagarei-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful ヌマガレイ (Platichthys stellatus, Starry flounder). left-eyed flatfish eyed-side visible, dark rough plate-like patches on olive brown skin and striking alternating black and yellow cream bars on dorsal anal tail fins; both eyes on same side. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "muroaji",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-3cb75cbe-9472-43fc-8239-071f963b37e6.png",
+      "output": "/images/fish/muroaji-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful ムロアジ (Decapterus muroadsi, Amberstripe scad). elongated cigar-shaped silver scad, thin yellow lateral band, olive-blue back, yellow upper tail lobe dark lower lobe, tiny isolated finlets behind soft dorsal and anal fins. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "nigoi",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-96055035-8ec9-4ac7-96a6-c6255d5519fe.png",
+      "output": "/images/fish/nigoi-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful ニゴイ (Hemibarbus barbus, Barbel steed). elongated silver-bronze freshwater cyprinid, long conical snout, downturned mouth with one pair short barbels, high triangular dorsal fin, forked tail, large scales. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "honmoroko",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-7e1418a1-f68c-4d56-ab4d-860fa5e61182.png",
+      "output": "/images/fish/honmoroko-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful ホンモロコ (Gnathopogon caerulescens, Honmoroko). small slender Lake Biwa silver olive freshwater minnow, narrow body, slightly upturned small mouth with very short barbels, subtle lateral stripe, transparent forked tail. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "kamatsuka",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-e654a136-cf36-4e36-8ca8-a59c90e95efd.png",
+      "output": "/images/fish/kamatsuka-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful カマツカ (Pseudogobio esocinus, Japanese gudgeon). slender sandy tan freshwater bottom fish, flattened tapering head long snout, inferior mouth with one pair barbels, irregular dark blotches across body and dotted transparent fins. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "umeiro",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-dd32e8b8-1048-4ef9-8309-7c31c08b2de1.png",
+      "output": "/images/fish/umeiro-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful ウメイロ (Paracaesio xanthura, Yellowtail blue snapper). deep oval blue-violet fish, bright yellow golden patch across upper rear back extending to yellow forked tail, lower body pale silvery lavender, moderately large eye. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    },
+    {
+      "slug": "motsugo",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-78f414f8-62d9-4bfe-8d09-63c29975f9b2.png",
+      "output": "/images/fish/motsugo-profile-20260925.webp",
+      "prompt": "Use case: scientific-educational. Original UOLINK fish encyclopedia cutout. A single anatomically faithful モツゴ (Pseudorasbora parva, Topmouth gudgeon). tiny slim silver olive freshwater cyprinid, very small sharply upturned mouth, dark horizontal stripe through side, no barbels, transparent short fins forked tail. Photorealistic natural specimen illustration, true lateral/eyed-side view, head LEFT, tail RIGHT. Entire fish including all fins and filaments comfortably inside frame with 12% empty padding. Authentic subtle colors and scale detail, not a cartoon. Isolated genuinely transparent alpha background, no shadow, no ground, no props, no water, no text, no labels. Landscape composition."
+    }
+  ],
+  "cooking": [
+    {
+      "fish": "hamafuefuki",
+      "recipe": "sashimi",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-763446ea-8054-459e-9862-413467d85388.png",
+      "output": "/images/cooking/hamafuefuki-sashimi.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ハマフエフキ (Lethrinus nebulosus) sashimi. Dish: sashimi, raw translucent thin white fish slices neatly fanned on a ceramic plate, shiso and fine daikon beside, separate small soy saucer, no rice. Fish serving form: skinless boneless thin slices. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: long sloping pointed snout, thick lips, golden olive-gray body with tiny blue scale spots and blue lines on cheeks, slightly forked tail. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "hamafuefuki",
+      "recipe": "sakamushi",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-ecd45b71-12a6-4f4a-b415-23c5df150565.png",
+      "output": "/images/cooking/hamafuefuki-sakamushi.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ハマフエフキ (Lethrinus nebulosus) sakamushi. Dish: Japanese sake-steamed fish with thin leek, ginger and mushrooms in a shallow bowl, moist pale cooked flesh, no red sauce. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: long sloping pointed snout, thick lips, golden olive-gray body with tiny blue scale spots and blue lines on cheeks, slightly forked tail. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "fuedai",
+      "recipe": "shioyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-fd2caf31-63a5-4cb7-ac3b-f2da84f9c1f0.png",
+      "output": "/images/cooking/fuedai-shioyaki.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe フエダイ (Lutjanus stellatus) shioyaki. Dish: Japanese salt grilled fish with golden lightly blistered skin and white cooked flesh, daikon and citrus on a ceramic plate. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: deep reddish brown bronze oval body, distinct small whitish spot on upper flank beneath rear dorsal fin, thick lips and large mouth, reddish fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "hamafuefuki",
+      "recipe": "shioyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-a6e89157-cac6-43ae-8c48-077141ee7bc2.png",
+      "output": "/images/cooking/hamafuefuki-shioyaki.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ハマフエフキ (Lethrinus nebulosus) shioyaki. Dish: Japanese salt grilled fish with golden lightly blistered skin and white cooked flesh, daikon and citrus on a ceramic plate. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: long sloping pointed snout, thick lips, golden olive-gray body with tiny blue scale spots and blue lines on cheeks, slightly forked tail. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "fuedai",
+      "recipe": "karaage",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-01ef2542-b44d-4de9-a600-668edf7296d5.png",
+      "output": "/images/cooking/fuedai-karaage.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe フエダイ (Lutjanus stellatus) karaage. Dish: Japanese fish karaage, bite-size deboned fish with thin golden starch crust, lemon wedge. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: deep reddish brown bronze oval body, distinct small whitish spot on upper flank beneath rear dorsal fin, thick lips and large mouth, reddish fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "hamafuefuki",
+      "recipe": "ushiojiru",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-01e5ffd3-eb6f-4be2-88a8-6df6be996417.png",
+      "output": "/images/cooking/hamafuefuki-ushiojiru.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ハマフエフキ (Lethrinus nebulosus) ushiojiru. Dish: Japanese clear fish soup with fully cooked boneless white fish pieces, daikon and chopped green onion in a small bowl, clear broth. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: long sloping pointed snout, thick lips, golden olive-gray body with tiny blue scale spots and blue lines on cheeks, slightly forked tail. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "yokosujifuedai",
+      "recipe": "sashimi",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-7f23771b-8762-4d36-9b4c-35a9740a2eab.png",
+      "output": "/images/cooking/yokosujifuedai-sashimi.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ヨコスジフエダイ (Lutjanus ophuysenii) sashimi. Dish: sashimi, raw translucent thin white fish slices neatly fanned on a ceramic plate, shiso and fine daikon beside, separate small soy saucer, no rice. Fish serving form: skinless boneless thin slices. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: silvery pink tapered body with distinct dark brown horizontal band from snout through eye to tail, dark blotch below soft dorsal fin, pink yellow fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "fuedai",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-a99943cb-eca7-4d8a-9ba1-ce237dd0e698.png",
+      "output": "/images/cooking/fuedai-nitsuke.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe フエダイ (Lutjanus stellatus) nitsuke. Dish: Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: deep reddish brown bronze oval body, distinct small whitish spot on upper flank beneath rear dorsal fin, thick lips and large mouth, reddish fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "kurohoshifuedai",
+      "recipe": "sakamushi",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-6ce852df-aa2f-4ff5-987b-a9094b1a89b3.png",
+      "output": "/images/cooking/kurohoshifuedai-sakamushi.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe クロホシフエダイ (Lutjanus russellii) sakamushi. Dish: Japanese sake-steamed fish with thin leek, ginger and mushrooms in a shallow bowl, moist pale cooked flesh, no red sauce. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: silvery bronze oval body, single rounded black spot on upper rear flank intersecting lateral line, subtle gold thin horizontal stripes, yellowish fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "yokosujifuedai",
+      "recipe": "sakamushi",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-4ee7f25a-f4aa-463e-91fd-14efb8f09f9f.png",
+      "output": "/images/cooking/yokosujifuedai-sakamushi.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ヨコスジフエダイ (Lutjanus ophuysenii) sakamushi. Dish: Japanese sake-steamed fish with thin leek, ginger and mushrooms in a shallow bowl, moist pale cooked flesh, no red sauce. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: silvery pink tapered body with distinct dark brown horizontal band from snout through eye to tail, dark blotch below soft dorsal fin, pink yellow fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "fuedai",
+      "recipe": "sashimi",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-13e45799-7532-4c3a-8d76-a80309fbe475.png",
+      "output": "/images/cooking/fuedai-sashimi.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe フエダイ (Lutjanus stellatus) sashimi. Dish: sashimi, raw translucent thin white fish slices neatly fanned on a ceramic plate, shiso and fine daikon beside, separate small soy saucer, no rice. Fish serving form: skinless boneless thin slices. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: deep reddish brown bronze oval body, distinct small whitish spot on upper flank beneath rear dorsal fin, thick lips and large mouth, reddish fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "kurohoshifuedai",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-f0f3e038-a794-4cd5-92a4-d5030fd669d6.png",
+      "output": "/images/cooking/kurohoshifuedai-nitsuke.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe クロホシフエダイ (Lutjanus russellii) nitsuke. Dish: Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: silvery bronze oval body, single rounded black spot on upper rear flank intersecting lateral line, subtle gold thin horizontal stripes, yellowish fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "yokosujifuedai",
+      "recipe": "fry",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-0973a558-6314-4c08-9e4d-11870bcbf6b2.png",
+      "output": "/images/cooking/yokosujifuedai-fry.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ヨコスジフエダイ (Lutjanus ophuysenii) fry. Dish: Japanese panko crumb fried boneless fish fillets, golden breadcrumbs, shredded cabbage and small tartar sauce beside. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: silvery pink tapered body with distinct dark brown horizontal band from snout through eye to tail, dark blotch below soft dorsal fin, pink yellow fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "kurohoshifuedai",
+      "recipe": "shioyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-fc261b55-e4fb-45b2-831b-4b45fcac2ecb.png",
+      "output": "/images/cooking/kurohoshifuedai-shioyaki.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe クロホシフエダイ (Lutjanus russellii) shioyaki. Dish: Japanese salt grilled fish with golden lightly blistered skin and white cooked flesh, daikon and citrus on a ceramic plate. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: silvery bronze oval body, single rounded black spot on upper rear flank intersecting lateral line, subtle gold thin horizontal stripes, yellowish fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "yokosujifuedai",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-d44bbee6-acf6-43d5-94f2-7a690335f5d4.png",
+      "output": "/images/cooking/yokosujifuedai-nitsuke.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ヨコスジフエダイ (Lutjanus ophuysenii) nitsuke. Dish: Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: silvery pink tapered body with distinct dark brown horizontal band from snout through eye to tail, dark blotch below soft dorsal fin, pink yellow fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "kurohoshifuedai",
+      "recipe": "ushiojiru",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-c997e01b-e71e-4b8e-9ad9-7064282b9470.png",
+      "output": "/images/cooking/kurohoshifuedai-ushiojiru.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe クロホシフエダイ (Lutjanus russellii) ushiojiru. Dish: Japanese clear fish soup with fully cooked boneless white fish pieces, daikon and chopped green onion in a small bowl, clear broth. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: silvery bronze oval body, single rounded black spot on upper rear flank intersecting lateral line, subtle gold thin horizontal stripes, yellowish fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "tamagashira",
+      "recipe": "ushiojiru",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-c7de00d9-555d-4184-b08d-4809e8f705fe.png",
+      "output": "/images/cooking/tamagashira-ushiojiru.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe タマガシラ (Parascolopsis inermis) ushiojiru. Dish: Japanese clear fish soup with fully cooked boneless white fish pieces, daikon and chopped green onion in a small bowl, clear broth. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: small pink-red sea fish with large round eye, four or five broad faded reddish vertical bands across pink silver sides, low spiny dorsal, forked pink tail. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "chairomaruhata",
+      "recipe": "sakamushi",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-79cc66cb-a560-414d-bcb1-5873358ff036.png",
+      "output": "/images/cooking/chairomaruhata-sakamushi.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe チャイロマルハタ (Epinephelus coioides) sakamushi. Dish: Japanese sake-steamed fish with thin leek, ginger and mushrooms in a shallow bowl, moist pale cooked flesh, no red sauce. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: elongate robust grouper large mouth, rounded tail, fine rusty orange-brown spots across pale gray olive body, five broad darker blotchy saddles. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "tamagashira",
+      "recipe": "tempura",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-be1a0311-85fd-4b0b-8470-22c32c0ffcd3.png",
+      "output": "/images/cooking/tamagashira-tempura.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe タマガシラ (Parascolopsis inermis) tempura. Dish: Japanese fish tempura, light pale-golden lacy batter, shiso tempura, dipping sauce beside. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: small pink-red sea fish with large round eye, four or five broad faded reddish vertical bands across pink silver sides, low spiny dorsal, forked pink tail. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "tamagashira",
+      "recipe": "karaage",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-710f8b9c-9f21-418e-8021-d91432139125.png",
+      "output": "/images/cooking/tamagashira-karaage.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe タマガシラ (Parascolopsis inermis) karaage. Dish: Japanese fish karaage, bite-size deboned fish with thin golden starch crust, lemon wedge. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: small pink-red sea fish with large round eye, four or five broad faded reddish vertical bands across pink silver sides, low spiny dorsal, forked pink tail. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "chairomaruhata",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-e1621c3a-d750-4560-bd59-d653e295a7d9.png",
+      "output": "/images/cooking/chairomaruhata-nitsuke.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe チャイロマルハタ (Epinephelus coioides) nitsuke. Dish: Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: elongate robust grouper large mouth, rounded tail, fine rusty orange-brown spots across pale gray olive body, five broad darker blotchy saddles. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "chairomaruhata",
+      "recipe": "ushiojiru",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-5e7b7cca-2c19-4a07-9816-464cb127b3c6.png",
+      "output": "/images/cooking/chairomaruhata-ushiojiru.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe チャイロマルハタ (Epinephelus coioides) ushiojiru. Dish: Japanese clear fish soup with fully cooked boneless white fish pieces, daikon and chopped green onion in a small bowl, clear broth. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: elongate robust grouper large mouth, rounded tail, fine rusty orange-brown spots across pale gray olive body, five broad darker blotchy saddles. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "chairomaruhata",
+      "recipe": "karaage",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-5062d1c6-dcc4-4f0c-8e05-3eeefd07febb.png",
+      "output": "/images/cooking/chairomaruhata-karaage.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe チャイロマルハタ (Epinephelus coioides) karaage. Dish: Japanese fish karaage, bite-size deboned fish with thin golden starch crust, lemon wedge. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: elongate robust grouper large mouth, rounded tail, fine rusty orange-brown spots across pale gray olive body, five broad darker blotchy saddles. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "kasumiaji",
+      "recipe": "shioyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-ba17809b-0f71-4c4e-80b3-3fe37918c633.png",
+      "output": "/images/cooking/kasumiaji-shioyaki.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe カスミアジ (Caranx melampygus) shioyaki. Dish: Japanese salt grilled fish with golden lightly blistered skin and white cooked flesh, daikon and citrus on a ceramic plate. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: adult silver blue-gold compressed jack, vivid blue dorsal anal tail fins, small blue and black spots on sides, strongly forked tail. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "tamagashira",
+      "recipe": "sakamushi",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-ec34f3b6-b632-4e70-9692-f7642413f847.png",
+      "output": "/images/cooking/tamagashira-sakamushi.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe タマガシラ (Parascolopsis inermis) sakamushi. Dish: Japanese sake-steamed fish with thin leek, ginger and mushrooms in a shallow bowl, moist pale cooked flesh, no red sauce. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: small pink-red sea fish with large round eye, four or five broad faded reddish vertical bands across pink silver sides, low spiny dorsal, forked pink tail. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "gingameaji",
+      "recipe": "shioyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-cbcc280d-fcb8-4fb1-8ece-fd76e785eb6d.png",
+      "output": "/images/cooking/gingameaji-shioyaki.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ギンガメアジ (Caranx sexfasciatus) shioyaki. Dish: Japanese salt grilled fish with golden lightly blistered skin and white cooked flesh, daikon and citrus on a ceramic plate. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: adult deep silvery oval trevally, large eye with adipose eyelid, black spot at upper gill cover, darker back, pale anal fin, no blue spots. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "gingameaji",
+      "recipe": "fry",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-eee199c9-6f44-4641-9281-0016037059a0.png",
+      "output": "/images/cooking/gingameaji-fry.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ギンガメアジ (Caranx sexfasciatus) fry. Dish: Japanese panko crumb fried boneless fish fillets, golden breadcrumbs, shredded cabbage and small tartar sauce beside. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: adult deep silvery oval trevally, large eye with adipose eyelid, black spot at upper gill cover, darker back, pale anal fin, no blue spots. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "kasumiaji",
+      "recipe": "fry",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-266200f6-ef87-4b62-9961-02982fc71a0f.png",
+      "output": "/images/cooking/kasumiaji-fry.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe カスミアジ (Caranx melampygus) fry. Dish: Japanese panko crumb fried boneless fish fillets, golden breadcrumbs, shredded cabbage and small tartar sauce beside. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: adult silver blue-gold compressed jack, vivid blue dorsal anal tail fins, small blue and black spots on sides, strongly forked tail. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "gingameaji",
+      "recipe": "teriyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-068edcc5-b73b-4e74-8ef5-ffdc39bf85f8.png",
+      "output": "/images/cooking/gingameaji-teriyaki.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ギンガメアジ (Caranx sexfasciatus) teriyaki. Dish: Japanese fish teriyaki, grilled thick white-fish portions lacquered with dark shiny soy glaze. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: adult deep silvery oval trevally, large eye with adipose eyelid, black spot at upper gill cover, darker back, pale anal fin, no blue spots. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "gingameaji",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-07ddf5c4-1617-4586-978b-9c126c137ba6.png",
+      "output": "/images/cooking/gingameaji-nitsuke.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ギンガメアジ (Caranx sexfasciatus) nitsuke. Dish: Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: adult deep silvery oval trevally, large eye with adipose eyelid, black spot at upper gill cover, darker back, pale anal fin, no blue spots. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "kasumiaji",
+      "recipe": "teriyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-649fba8b-9bab-42f9-8db0-e28fe1dc4180.png",
+      "output": "/images/cooking/kasumiaji-teriyaki.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe カスミアジ (Caranx melampygus) teriyaki. Dish: Japanese fish teriyaki, grilled thick white-fish portions lacquered with dark shiny soy glaze. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: adult silver blue-gold compressed jack, vivid blue dorsal anal tail fins, small blue and black spots on sides, strongly forked tail. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "itohikiaji",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-cb875e62-9df1-4d50-a3a2-fd377050b5ff.png",
+      "output": "/images/cooking/itohikiaji-nitsuke.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe イトヒキアジ (Alectis ciliaris) nitsuke. Dish: Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: juvenile diamond-shaped very deep silver body, steep forehead, very long filamentous first rays of soft dorsal and anal fins flowing backward, forked tail; all long filaments fully in frame. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "kasumiaji",
+      "recipe": "nanban",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-1d7604a7-a989-43f0-8438-eb9b570c0e69.png",
+      "output": "/images/cooking/kasumiaji-nanban.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe カスミアジ (Caranx melampygus) nanban. Dish: Japanese nanbanzuke, fully cooked lightly fried fish in light vinegar marinade with fine onion and carrot slivers, not sashimi. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: adult silver blue-gold compressed jack, vivid blue dorsal anal tail fins, small blue and black spots on sides, strongly forked tail. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "usumebaru",
+      "recipe": "shioyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-06522447-2a22-489b-9058-e0b77b2806c2.png",
+      "output": "/images/cooking/usumebaru-shioyaki.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ウスメバル (Sebastes thompsoni) shioyaki. Dish: Japanese salt grilled fish with golden lightly blistered skin and white cooked flesh, daikon and citrus on a ceramic plate. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: pale orange pink brown rockfish, very large gold rim eyes, several irregular dark brown blotches high on flank under spiny dorsal, rounded pectoral fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "itohikiaji",
+      "recipe": "shioyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-cd3f6fd9-db91-4426-b1da-198b3d9f4664.png",
+      "output": "/images/cooking/itohikiaji-shioyaki.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe イトヒキアジ (Alectis ciliaris) shioyaki. Dish: Japanese salt grilled fish with golden lightly blistered skin and white cooked flesh, daikon and citrus on a ceramic plate. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: juvenile diamond-shaped very deep silver body, steep forehead, very long filamentous first rays of soft dorsal and anal fins flowing backward, forked tail; all long filaments fully in frame. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "usumebaru",
+      "recipe": "karaage",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-9110a4b7-cc87-4eba-a6cc-aa821ccd3ebc.png",
+      "output": "/images/cooking/usumebaru-karaage.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ウスメバル (Sebastes thompsoni) karaage. Dish: Japanese fish karaage, bite-size deboned fish with thin golden starch crust, lemon wedge. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: pale orange pink brown rockfish, very large gold rim eyes, several irregular dark brown blotches high on flank under spiny dorsal, rounded pectoral fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "itohikiaji",
+      "recipe": "meuniere",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-19cae828-0c6d-45b7-b6d5-b6b4a7bbcab7.png",
+      "output": "/images/cooking/itohikiaji-meuniere.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe イトヒキアジ (Alectis ciliaris) meuniere. Dish: fish meuniere, lightly flour-coated fillet browned in butter with lemon and parsley. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: juvenile diamond-shaped very deep silver body, steep forehead, very long filamentous first rays of soft dorsal and anal fins flowing backward, forked tail; all long filaments fully in frame. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "usumebaru",
+      "recipe": "sashimi",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-32570364-cb2c-4ae7-8c3b-0c7a7ca1be05.png",
+      "output": "/images/cooking/usumebaru-sashimi.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ウスメバル (Sebastes thompsoni) sashimi. Dish: sashimi, raw translucent thin white fish slices neatly fanned on a ceramic plate, shiso and fine daikon beside, separate small soy saucer, no rice. Fish serving form: skinless boneless thin slices. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: pale orange pink brown rockfish, very large gold rim eyes, several irregular dark brown blotches high on flank under spiny dorsal, rounded pectoral fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "itohikiaji",
+      "recipe": "fry",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-41313d72-6fda-4c67-8371-bd7ba5e6be48.png",
+      "output": "/images/cooking/itohikiaji-fry.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe イトヒキアジ (Alectis ciliaris) fry. Dish: Japanese panko crumb fried boneless fish fillets, golden breadcrumbs, shredded cabbage and small tartar sauce beside. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: juvenile diamond-shaped very deep silver body, steep forehead, very long filamentous first rays of soft dorsal and anal fins flowing backward, forked tail; all long filaments fully in frame. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "hatsume",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-092f84ca-cfff-42be-84b0-6b55b5fad226.png",
+      "output": "/images/cooking/hatsume-nitsuke.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ハツメ (Sebastes owstoni) nitsuke. Dish: Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: slender pink orange rockfish, very large eye, subtle brown lengthwise stripe on upper side, slender caudal peduncle, no bold spots or vertical bands. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "usumebaru",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-9871cc14-0626-489d-be82-71695a49e78f.png",
+      "output": "/images/cooking/usumebaru-nitsuke.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ウスメバル (Sebastes thompsoni) nitsuke. Dish: Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: pale orange pink brown rockfish, very large gold rim eyes, several irregular dark brown blotches high on flank under spiny dorsal, rounded pectoral fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "shimazoi",
+      "recipe": "karaage",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-8b9b1d2b-9407-40e5-8e78-706c7085d0b6.png",
+      "output": "/images/cooking/shimazoi-karaage.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe シマゾイ (Sebastes trivittatus) karaage. Dish: Japanese fish karaage, bite-size deboned fish with thin golden starch crust, lemon wedge. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: dark brown stout rockfish with three broad pale cream longitudinal stripes running from head toward tail, spiny dorsal and rounded pectoral fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "hatsume",
+      "recipe": "shioyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-948d8995-90ad-4933-9be9-21681039b268.png",
+      "output": "/images/cooking/hatsume-shioyaki.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ハツメ (Sebastes owstoni) shioyaki. Dish: Japanese salt grilled fish with golden lightly blistered skin and white cooked flesh, daikon and citrus on a ceramic plate. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: slender pink orange rockfish, very large eye, subtle brown lengthwise stripe on upper side, slender caudal peduncle, no bold spots or vertical bands. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "hatsume",
+      "recipe": "karaage",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-e1cc91cb-4c6e-49bf-88b7-8ab97585a238.png",
+      "output": "/images/cooking/hatsume-karaage.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ハツメ (Sebastes owstoni) karaage. Dish: Japanese fish karaage, bite-size deboned fish with thin golden starch crust, lemon wedge. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: slender pink orange rockfish, very large eye, subtle brown lengthwise stripe on upper side, slender caudal peduncle, no bold spots or vertical bands. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "shimazoi",
+      "recipe": "shioyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-d8fa260b-4051-4fa6-9bf9-c42aa0fd85a6.png",
+      "output": "/images/cooking/shimazoi-shioyaki.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe シマゾイ (Sebastes trivittatus) shioyaki. Dish: Japanese salt grilled fish with golden lightly blistered skin and white cooked flesh, daikon and citrus on a ceramic plate. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: dark brown stout rockfish with three broad pale cream longitudinal stripes running from head toward tail, spiny dorsal and rounded pectoral fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "matsukawa",
+      "recipe": "sashimi",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-4fc9c374-ae08-493a-b5b5-46f3fa32f6a3.png",
+      "output": "/images/cooking/matsukawa-sashimi.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe マツカワ (Verasper moseri) sashimi. Dish: sashimi, raw translucent thin white fish slices neatly fanned on a ceramic plate, shiso and fine daikon beside, separate small soy saucer, no rice. Fish serving form: skinless boneless thin slices. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: oval right-eyed flatfish viewed from pigmented side, rough gray-brown body with dark blotches, obvious rectangular black and cream alternating bands on dorsal anal and tail fins; flat anatomy with both eyes on same side. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "shimazoi",
+      "recipe": "ushiojiru",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-ddca2aee-d6bd-4dd9-af08-64e088d8f7cc.png",
+      "output": "/images/cooking/shimazoi-ushiojiru.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe シマゾイ (Sebastes trivittatus) ushiojiru. Dish: Japanese clear fish soup with fully cooked boneless white fish pieces, daikon and chopped green onion in a small bowl, clear broth. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: dark brown stout rockfish with three broad pale cream longitudinal stripes running from head toward tail, spiny dorsal and rounded pectoral fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "hatsume",
+      "recipe": "ushiojiru",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-28df5853-0ea3-42ea-9b80-81963e6bd682.png",
+      "output": "/images/cooking/hatsume-ushiojiru.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ハツメ (Sebastes owstoni) ushiojiru. Dish: Japanese clear fish soup with fully cooked boneless white fish pieces, daikon and chopped green onion in a small bowl, clear broth. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: slender pink orange rockfish, very large eye, subtle brown lengthwise stripe on upper side, slender caudal peduncle, no bold spots or vertical bands. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "matsukawa",
+      "recipe": "meuniere",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-361f71ee-b448-4f7e-b164-acd06e4ff331.png",
+      "output": "/images/cooking/matsukawa-meuniere.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe マツカワ (Verasper moseri) meuniere. Dish: fish meuniere, lightly flour-coated fillet browned in butter with lemon and parsley. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: oval right-eyed flatfish viewed from pigmented side, rough gray-brown body with dark blotches, obvious rectangular black and cream alternating bands on dorsal anal and tail fins; flat anatomy with both eyes on same side. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "shimazoi",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-95b12bca-a7b4-4b61-a8f7-7ffe48faab24.png",
+      "output": "/images/cooking/shimazoi-nitsuke.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe シマゾイ (Sebastes trivittatus) nitsuke. Dish: Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: dark brown stout rockfish with three broad pale cream longitudinal stripes running from head toward tail, spiny dorsal and rounded pectoral fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "matsukawa",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-7ef4f735-1e7f-4662-8ca0-7289dc208571.png",
+      "output": "/images/cooking/matsukawa-nitsuke.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe マツカワ (Verasper moseri) nitsuke. Dish: Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: oval right-eyed flatfish viewed from pigmented side, rough gray-brown body with dark blotches, obvious rectangular black and cream alternating bands on dorsal anal and tail fins; flat anatomy with both eyes on same side. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "matsukawa",
+      "recipe": "karaage",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-fbd5b6cb-bc20-4f0d-a019-6c399cc2cfa3.png",
+      "output": "/images/cooking/matsukawa-karaage.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe マツカワ (Verasper moseri) karaage. Dish: Japanese fish karaage, bite-size deboned fish with thin golden starch crust, lemon wedge. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: oval right-eyed flatfish viewed from pigmented side, rough gray-brown body with dark blotches, obvious rectangular black and cream alternating bands on dorsal anal and tail fins; flat anatomy with both eyes on same side. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "babagarei",
+      "recipe": "meuniere",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-58a0fb22-97b4-46ce-aa90-b4a3414824b7.png",
+      "output": "/images/cooking/babagarei-meuniere.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ババガレイ (Microstomus achne) meuniere. Dish: fish meuniere, lightly flour-coated fillet browned in butter with lemon and parsley. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: thick oval right-eyed flatfish, smoothly slimy dull olive-brown pigmented side, very small mouth thick lips, small darker mottling, no black fin bars; both eyes on same side. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "numagarei",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-c389551c-aef3-443f-83f5-77bc87e0a996.png",
+      "output": "/images/cooking/numagarei-nitsuke.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ヌマガレイ (Platichthys stellatus) nitsuke. Dish: Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: left-eyed flatfish eyed-side visible, dark rough plate-like patches on olive brown skin and striking alternating black and yellow cream bars on dorsal anal tail fins; both eyes on same side. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "babagarei",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-33e68ad9-8801-4a21-bd0d-ee73af77c2bb.png",
+      "output": "/images/cooking/babagarei-nitsuke.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ババガレイ (Microstomus achne) nitsuke. Dish: Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: thick oval right-eyed flatfish, smoothly slimy dull olive-brown pigmented side, very small mouth thick lips, small darker mottling, no black fin bars; both eyes on same side. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "numagarei",
+      "recipe": "fry",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-475e8669-fad5-4787-a1fd-2d152e813902.png",
+      "output": "/images/cooking/numagarei-fry.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ヌマガレイ (Platichthys stellatus) fry. Dish: Japanese panko crumb fried boneless fish fillets, golden breadcrumbs, shredded cabbage and small tartar sauce beside. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: left-eyed flatfish eyed-side visible, dark rough plate-like patches on olive brown skin and striking alternating black and yellow cream bars on dorsal anal tail fins; both eyes on same side. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "nigoi",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-682540fe-b473-4e12-964c-dd96e52a0617.png",
+      "output": "/images/cooking/nigoi-nitsuke.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ニゴイ (Hemibarbus barbus) nitsuke. Dish: Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: elongated silver-bronze freshwater cyprinid, long conical snout, downturned mouth with one pair short barbels, high triangular dorsal fin, forked tail, large scales. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "babagarei",
+      "recipe": "karaage",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-1b7aa64f-be90-4295-840b-295437f6db47.png",
+      "output": "/images/cooking/babagarei-karaage.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ババガレイ (Microstomus achne) karaage. Dish: Japanese fish karaage, bite-size deboned fish with thin golden starch crust, lemon wedge. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: thick oval right-eyed flatfish, smoothly slimy dull olive-brown pigmented side, very small mouth thick lips, small darker mottling, no black fin bars; both eyes on same side. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "numagarei",
+      "recipe": "meuniere",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-898d66e0-30aa-4cb5-815e-8db2ae5fa282.png",
+      "output": "/images/cooking/numagarei-meuniere.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ヌマガレイ (Platichthys stellatus) meuniere. Dish: fish meuniere, lightly flour-coated fillet browned in butter with lemon and parsley. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: left-eyed flatfish eyed-side visible, dark rough plate-like patches on olive brown skin and striking alternating black and yellow cream bars on dorsal anal tail fins; both eyes on same side. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "numagarei",
+      "recipe": "karaage",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-c0d79ae9-0086-4839-9088-f56397ca0eb0.png",
+      "output": "/images/cooking/numagarei-karaage.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ヌマガレイ (Platichthys stellatus) karaage. Dish: Japanese fish karaage, bite-size deboned fish with thin golden starch crust, lemon wedge. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: left-eyed flatfish eyed-side visible, dark rough plate-like patches on olive brown skin and striking alternating black and yellow cream bars on dorsal anal tail fins; both eyes on same side. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "nigoi",
+      "recipe": "misoni",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-44d3fc19-5d38-4200-bf84-2ed6cc01d4a2.png",
+      "output": "/images/cooking/nigoi-misoni.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ニゴイ (Hemibarbus barbus) misoni. Dish: Japanese fish simmered in light brown miso ginger sauce. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: elongated silver-bronze freshwater cyprinid, long conical snout, downturned mouth with one pair short barbels, high triangular dorsal fin, forked tail, large scales. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "babagarei",
+      "recipe": "sakamushi",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-4edd4697-9436-48f2-90c0-dfe9e932040c.png",
+      "output": "/images/cooking/babagarei-sakamushi.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ババガレイ (Microstomus achne) sakamushi. Dish: Japanese sake-steamed fish with thin leek, ginger and mushrooms in a shallow bowl, moist pale cooked flesh, no red sauce. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: thick oval right-eyed flatfish, smoothly slimy dull olive-brown pigmented side, very small mouth thick lips, small darker mottling, no black fin bars; both eyes on same side. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "nigoi",
+      "recipe": "shioyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-0a016ca3-764b-4394-95ec-1fc241440e5a.png",
+      "output": "/images/cooking/nigoi-shioyaki.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ニゴイ (Hemibarbus barbus) shioyaki. Dish: Japanese salt grilled fish with golden lightly blistered skin and white cooked flesh, daikon and citrus on a ceramic plate. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: elongated silver-bronze freshwater cyprinid, long conical snout, downturned mouth with one pair short barbels, high triangular dorsal fin, forked tail, large scales. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "nigoi",
+      "recipe": "karaage",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-de20815e-d1fe-4e83-b025-9bcdb7778edc.png",
+      "output": "/images/cooking/nigoi-karaage.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe ニゴイ (Hemibarbus barbus) karaage. Dish: Japanese fish karaage, bite-size deboned fish with thin golden starch crust, lemon wedge. Fish serving form: boneless fillet portions, NO whole head or tail. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: elongated silver-bronze freshwater cyprinid, long conical snout, downturned mouth with one pair short barbels, high triangular dorsal fin, forked tail, large scales. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "kamatsuka",
+      "recipe": "shioyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-13201a20-aa5b-45b0-b9b5-f60b2dbe5cc9.png",
+      "output": "/images/cooking/kamatsuka-shioyaki.webp",
+      "prompt": "Use case: photorealistic-natural. Original food photograph illustration for UOLINK recipe カマツカ (Pseudogobio esocinus) shioyaki. Dish: Japanese salt grilled fish with golden lightly blistered skin and white cooked flesh, daikon and citrus on a ceramic plate. Fish serving form: one or two small whole fish 12 cm long. Correct species flesh: pale white cooked fish (or translucent white if sashimi), not orange salmon or red tuna. If skin is visible, use this species' pattern: slender sandy tan freshwater bottom fish, flattened tapering head long snout, inferior mouth with one pair barbels, irregular dark blotches across body and dotted transparent fins. Appetizing realistic Japanese home cooking, single dish on tasteful ceramic crockery, natural window light on quiet table, no text, no labels, no collage, no watermark, no hands. Landscape 4:3 crop with the plate fully inside the frame. Realistic modest portions."
+    },
+    {
+      "fish": "kamatsuka",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-0b7d5727-13e6-40f4-97f5-3ded018346a2.png",
+      "output": "/images/cooking/kamatsuka-nitsuke.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: カマツカ (Pseudogobio esocinus), nitsuke. Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Serving: one or two small whole fish 12 cm long. Species appearance if visible: slender sandy tan freshwater bottom fish, flattened tapering head long snout, inferior mouth with one pair barbels, irregular dark blotches across body and dotted transparent fins. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "kamatsuka",
+      "recipe": "tempura",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-64232e37-73a9-4171-9129-4628c4b55fdd.png",
+      "output": "/images/cooking/kamatsuka-tempura.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: カマツカ (Pseudogobio esocinus), tempura. Japanese fish tempura, light pale-golden lacy batter, shiso tempura, dipping sauce beside. Serving: boneless fillet portions, NO whole head or tail. Species appearance if visible: slender sandy tan freshwater bottom fish, flattened tapering head long snout, inferior mouth with one pair barbels, irregular dark blotches across body and dotted transparent fins. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "motsugo",
+      "recipe": "karaage",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-239def67-8c77-4dde-994e-a2a94f1a6808.png",
+      "output": "/images/cooking/motsugo-karaage.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: モツゴ (Pseudorasbora parva), karaage. Japanese fish karaage, bite-size deboned fish with thin golden starch crust, lemon wedge. Serving: small whole fish about 6–10 cm each. Species appearance if visible: tiny slim silver olive freshwater cyprinid, very small sharply upturned mouth, dark horizontal stripe through side, no barbels, transparent short fins forked tail. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "motsugo",
+      "recipe": "tempura",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-b5aa7a01-4ae0-4dfd-b29b-c95ebae736ab.png",
+      "output": "/images/cooking/motsugo-tempura.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: モツゴ (Pseudorasbora parva), tempura. Japanese fish tempura, light pale-golden lacy batter, shiso tempura, dipping sauce beside. Serving: small whole fish about 6–10 cm each. Species appearance if visible: tiny slim silver olive freshwater cyprinid, very small sharply upturned mouth, dark horizontal stripe through side, no barbels, transparent short fins forked tail. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "kamatsuka",
+      "recipe": "karaage",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-ef3892d5-dceb-4240-91a4-5509e2658320.png",
+      "output": "/images/cooking/kamatsuka-karaage.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: カマツカ (Pseudogobio esocinus), karaage. Japanese fish karaage, bite-size deboned fish with thin golden starch crust, lemon wedge. Serving: boneless fillet portions, NO whole head or tail. Species appearance if visible: slender sandy tan freshwater bottom fish, flattened tapering head long snout, inferior mouth with one pair barbels, irregular dark blotches across body and dotted transparent fins. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "tamoroko",
+      "recipe": "kanroni",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-c2311189-a539-46ed-9a7e-5dd6d1df1703.png",
+      "output": "/images/cooking/tamoroko-kanroni.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: タモロコ (Gnathopogon elongatus), kanroni. Japanese kanroni, small whole freshwater fish simmered in dark glossy sweet soy glaze, no raw fish. Serving: small whole fish about 6–10 cm each. Species appearance if visible: small plump silver bronze freshwater fish with dark lateral band, short snout and small terminal mouth with one pair barbels, clear fins and forked tail. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "motsugo",
+      "recipe": "nanban",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-e18deebc-ca07-4c2c-a4a4-3a32dcc237d8.png",
+      "output": "/images/cooking/motsugo-nanban.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: モツゴ (Pseudorasbora parva), nanban. Japanese nanbanzuke, fully cooked lightly fried fish in light vinegar marinade with fine onion and carrot slivers, not sashimi. Serving: small whole fish about 6–10 cm each. Species appearance if visible: tiny slim silver olive freshwater cyprinid, very small sharply upturned mouth, dark horizontal stripe through side, no barbels, transparent short fins forked tail. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "motsugo",
+      "recipe": "kanroni",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-ef3783c7-ca13-430b-b0cb-819f47303777.png",
+      "output": "/images/cooking/motsugo-kanroni.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: モツゴ (Pseudorasbora parva), kanroni. Japanese kanroni, small whole freshwater fish simmered in dark glossy sweet soy glaze, no raw fish. Serving: small whole fish about 6–10 cm each. Species appearance if visible: tiny slim silver olive freshwater cyprinid, very small sharply upturned mouth, dark horizontal stripe through side, no barbels, transparent short fins forked tail. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "tamoroko",
+      "recipe": "tempura",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-a0f97496-0465-47ba-808a-563f581a37b8.png",
+      "output": "/images/cooking/tamoroko-tempura.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: タモロコ (Gnathopogon elongatus), tempura. Japanese fish tempura, light pale-golden lacy batter, shiso tempura, dipping sauce beside. Serving: small whole fish about 6–10 cm each. Species appearance if visible: small plump silver bronze freshwater fish with dark lateral band, short snout and small terminal mouth with one pair barbels, clear fins and forked tail. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "tamoroko",
+      "recipe": "karaage",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-43c78030-3906-4d27-8d4d-25b9f70f75ce.png",
+      "output": "/images/cooking/tamoroko-karaage.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: タモロコ (Gnathopogon elongatus), karaage. Japanese fish karaage, bite-size deboned fish with thin golden starch crust, lemon wedge. Serving: small whole fish about 6–10 cm each. Species appearance if visible: small plump silver bronze freshwater fish with dark lateral band, short snout and small terminal mouth with one pair barbels, clear fins and forked tail. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "tamoroko",
+      "recipe": "nanban",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-a4346a67-3d15-4b07-8af2-884a3f2196aa.png",
+      "output": "/images/cooking/tamoroko-nanban.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: タモロコ (Gnathopogon elongatus), nanban. Japanese nanbanzuke, fully cooked lightly fried fish in light vinegar marinade with fine onion and carrot slivers, not sashimi. Serving: small whole fish about 6–10 cm each. Species appearance if visible: small plump silver bronze freshwater fish with dark lateral band, short snout and small terminal mouth with one pair barbels, clear fins and forked tail. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "honmoroko",
+      "recipe": "suyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-7f450f76-0ac5-42f6-a6f9-de4ee0bd4636.png",
+      "output": "/images/cooking/honmoroko-suyaki.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: ホンモロコ (Gnathopogon caerulescens), suyaki. Japanese honmoroko plain grilling, six tiny slender silvery minnows grilled until cooked and lightly charred, on rectangular ceramic plate, small bowl vinegar miso beside. Serving: small whole fish about 6–10 cm each. Species appearance if visible: small slender Lake Biwa silver olive freshwater minnow, narrow body, slightly upturned small mouth with very short barbels, subtle lateral stripe, transparent forked tail. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "honmoroko",
+      "recipe": "nanban",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-9bd90cdc-88c0-45c7-b43a-8a78da7a4d48.png",
+      "output": "/images/cooking/honmoroko-nanban.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: ホンモロコ (Gnathopogon caerulescens), nanban. Japanese nanbanzuke, fully cooked lightly fried fish in light vinegar marinade with fine onion and carrot slivers, not sashimi. Serving: small whole fish about 6–10 cm each. Species appearance if visible: small slender Lake Biwa silver olive freshwater minnow, narrow body, slightly upturned small mouth with very short barbels, subtle lateral stripe, transparent forked tail. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "honmoroko",
+      "recipe": "tempura",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-5dc12be9-4b02-4aab-98e8-7f4d24519947.png",
+      "output": "/images/cooking/honmoroko-tempura.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: ホンモロコ (Gnathopogon caerulescens), tempura. Japanese fish tempura, light pale-golden lacy batter, shiso tempura, dipping sauce beside. Serving: small whole fish about 6–10 cm each. Species appearance if visible: small slender Lake Biwa silver olive freshwater minnow, narrow body, slightly upturned small mouth with very short barbels, subtle lateral stripe, transparent forked tail. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "muroaji",
+      "recipe": "sashimi",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-1ed60a54-c750-445c-8096-0f6725cf2e6b.png",
+      "output": "/images/cooking/muroaji-sashimi.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: ムロアジ (Decapterus muroadsi), sashimi. sashimi, raw translucent thin white fish slices neatly fanned on a ceramic plate, shiso and fine daikon beside, separate small soy saucer, no rice. Serving: skinless boneless thin slices. Species appearance if visible: elongated cigar-shaped silver scad, thin yellow lateral band, olive-blue back, yellow upper tail lobe dark lower lobe, tiny isolated finlets behind soft dorsal and anal fins. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "honmoroko",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-2af16b24-caec-44d7-ac94-418de613f370.png",
+      "output": "/images/cooking/honmoroko-nitsuke.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: ホンモロコ (Gnathopogon caerulescens), nitsuke. Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Serving: small whole fish about 6–10 cm each. Species appearance if visible: small slender Lake Biwa silver olive freshwater minnow, narrow body, slightly upturned small mouth with very short barbels, subtle lateral stripe, transparent forked tail. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "muroaji",
+      "recipe": "fry",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-f1249942-3545-4aff-b4a3-ce5ae07f01f2.png",
+      "output": "/images/cooking/muroaji-fry.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: ムロアジ (Decapterus muroadsi), fry. Japanese panko crumb fried boneless fish fillets, golden breadcrumbs, shredded cabbage and small tartar sauce beside. Serving: boneless fillet portions, NO whole head or tail. Species appearance if visible: elongated cigar-shaped silver scad, thin yellow lateral band, olive-blue back, yellow upper tail lobe dark lower lobe, tiny isolated finlets behind soft dorsal and anal fins. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "muroaji",
+      "recipe": "tatsuta",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-9ae1e9f9-fe94-403a-b783-c4c8b28a9067.png",
+      "output": "/images/cooking/muroaji-tatsuta.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: ムロアジ (Decapterus muroadsi), tatsuta. Japanese tatsuta-age, ginger soy marinated boneless fish chunks with white-gold potato starch crust. Serving: boneless fillet portions, NO whole head or tail. Species appearance if visible: elongated cigar-shaped silver scad, thin yellow lateral band, olive-blue back, yellow upper tail lobe dark lower lobe, tiny isolated finlets behind soft dorsal and anal fins. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "umeiro",
+      "recipe": "sashimi",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-44069d2f-77e3-4a75-b68c-94d1cb44d70c.png",
+      "output": "/images/cooking/umeiro-sashimi.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: ウメイロ (Paracaesio xanthura), sashimi. sashimi, raw translucent thin white fish slices neatly fanned on a ceramic plate, shiso and fine daikon beside, separate small soy saucer, no rice. Serving: skinless boneless thin slices. Species appearance if visible: deep oval blue-violet fish, bright yellow golden patch across upper rear back extending to yellow forked tail, lower body pale silvery lavender, moderately large eye. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "muroaji",
+      "recipe": "shioyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-d93ddbc9-5e81-4062-a72c-146a5a2a0dc5.png",
+      "output": "/images/cooking/muroaji-shioyaki.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: ムロアジ (Decapterus muroadsi), shioyaki. Japanese salt grilled fish with golden lightly blistered skin and white cooked flesh, daikon and citrus on a ceramic plate. Serving: boneless fillet portions, NO whole head or tail. Species appearance if visible: elongated cigar-shaped silver scad, thin yellow lateral band, olive-blue back, yellow upper tail lobe dark lower lobe, tiny isolated finlets behind soft dorsal and anal fins. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "umeiro",
+      "recipe": "shioyaki",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-6a99988b-5f0f-497e-b61f-299839e9f600.png",
+      "output": "/images/cooking/umeiro-shioyaki.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: ウメイロ (Paracaesio xanthura), shioyaki. Japanese salt grilled fish with golden lightly blistered skin and white cooked flesh, daikon and citrus on a ceramic plate. Serving: boneless fillet portions, NO whole head or tail. Species appearance if visible: deep oval blue-violet fish, bright yellow golden patch across upper rear back extending to yellow forked tail, lower body pale silvery lavender, moderately large eye. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "umeiro",
+      "recipe": "meuniere",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-254a92e5-ac32-4291-bbef-671d3a21e7d6.png",
+      "output": "/images/cooking/umeiro-meuniere.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: ウメイロ (Paracaesio xanthura), meuniere. fish meuniere, lightly flour-coated fillet browned in butter with lemon and parsley. Serving: boneless fillet portions, NO whole head or tail. Species appearance if visible: deep oval blue-violet fish, bright yellow golden patch across upper rear back extending to yellow forked tail, lower body pale silvery lavender, moderately large eye. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    },
+    {
+      "fish": "umeiro",
+      "recipe": "nitsuke",
+      "original": "/Users/atsunoumi/.codex/generated_images/01a094f3-564c-78b0-bbbe-74436ce3263f/exec-2c1f2c9d-f10b-4b4d-9b72-0ba656f7a063.png",
+      "output": "/images/cooking/umeiro-nitsuke.webp",
+      "prompt": "Original realistic Japanese food photograph for UOLINK: ウメイロ (Paracaesio xanthura), nitsuke. Japanese simmered fish in a shallow glossy brown soy and ginger broth, cooked white flesh, restrained garnish. Serving: boneless fillet portions, NO whole head or tail. Species appearance if visible: deep oval blue-violet fish, bright yellow golden patch across upper rear back extending to yellow forked tail, lower body pale silvery lavender, moderately large eye. Pale fish flesh, natural window light, tasteful ceramic plate fully framed, modest portions, no text, no labels, no watermark, landscape 4:3."
+    }
+  ]
+}
