@@ -93,25 +93,25 @@ export default defineFishSpecies({
     "step": 1,
     "src": "/images/cooking/steps/madai-nitsuke-1.svg",
     "alt": "マダイの煮付け：アラの表面を洗う",
-    "caption": "熱湯をかけた後は冷水で残ったウロコと血を除きます。頭の周りにもウロコが残りやすいので確認します。"
+    "caption": "熱湯をかけた後は冷水で残ったウロコと血を除く。頭の周りにもウロコが残りやすいので確認する。"
   },
   {
     "step": 2,
     "src": "/images/cooking/steps/madai-nitsuke-2.svg",
     "alt": "マダイの煮付け：煮汁を先に温める",
-    "caption": "魚を入れる前に煮汁を沸かし、しょうがを加えます。鍋は魚が重ならず収まる大きさを選びます。"
+    "caption": "魚を入れる前に煮汁を沸かし、しょうがを加える。鍋は魚が重ならず収まる大きさを選ぶ。"
   },
   {
     "step": 3,
     "src": "/images/cooking/steps/madai-nitsuke-3.svg",
     "alt": "マダイの煮付け：落とし蓋で煮汁を回す",
-    "caption": "煮崩れを防ぐため、途中で何度も裏返しません。煮汁が少なければスプーンで上側へ回しかけます。"
+    "caption": "煮崩れを防ぐため、途中で何度も裏返さない。煮汁が少なければスプーンで上側へ回しかける。"
   },
   {
     "step": 4,
     "src": "/images/cooking/steps/madai-nitsuke-4.svg",
     "alt": "マダイの煮付け：照りを見て仕上げる",
-    "caption": "魚を取り出してから煮汁を煮詰めると、身を崩さず濃さを調整できます。"
+    "caption": "魚を取り出してから煮汁を煮詰めると、身を崩さず濃さを調整できる。"
   }
 ],name:'煮付け',image:'/images/madai-nitsuke-new.png',
         summary:'しょうがを効かせた甘辛い煮汁で、身とアラの旨味をしっかり味わう。',

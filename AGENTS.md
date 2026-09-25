@@ -31,6 +31,7 @@
 - Keep server-rendered routes as server components unless browser state or APIs require a client component. Use `'use client'` at browser-interaction boundaries.
 - Use existing CSS modules for scoped styles and `app/globals.css` for shared styles; no utility CSS framework is configured.
 - Keep Japanese user-facing copy, meaningful alt text, semantic links/buttons, and accessible controls.
+- Use concise plain Japanese for editorial explanations and instructions (「拭く」「火を弱める」). Add practical decisions, tables, and correctly matched process visuals rather than repetitive prose. Keep lists compact; expand detail on the individual page.
 - When adding content, update the appropriate source collection and registry wiring, then check list pages, detail pages, related links, metadata, and sitemap coverage against the shared content architecture.
 - Keep browser-only Three.js work inside client lifecycle code and clean up animation frames, listeners, observers, and GPU resources. Preserve a usable fallback when rendering fails.
 - Keep branding, canonical URLs, structured data, sitemap, and robots consistent when changing site identity. `lib/site-url.ts` is the canonical production origin shared by metadata, sitemap, robots, structured data, and social links; `.env.example` does not override it.

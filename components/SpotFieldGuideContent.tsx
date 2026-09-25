@@ -7,7 +7,7 @@ export default function SpotFieldGuideContent({guide}:{guide:SpotFieldGuide}){
  return <section aria-label="この釣り場の地形と狙い方" style={{lineHeight:1.85}}>
   {guide.sitePlan&&<SpotSitePlan plan={guide.sitePlan}/>}
   {guide.illustration&&<SpotIllustratedGuide guide={guide.illustration}/>}
-  {!!guide.choices?.length&&<section><h3>目的別・現地での組み立て方</h3><table className={styles.table}><thead><tr><th scope="col">狙い・目的</th><th scope="col">最初にすること</th><th scope="col">次の判断</th></tr></thead><tbody>{guide.choices.map(row=><tr key={row.target}><th scope="row">{row.target}</th><td>{row.start}</td><td>{row.adjust}</td></tr>)}</tbody></table></section>}
+  {!!guide.choices?.length&&<section><h3>目的別・現地での組み立て方</h3><table className={styles.table}><thead><tr><th scope="col">狙い・目的</th><th scope="col">始め方・次の判断</th></tr></thead><tbody>{guide.choices.map(row=><tr key={row.target}><th scope="row">{row.target}</th><td>{row.start}<br/><small>{row.adjust}</small></td></tr>)}</tbody></table></section>}
   <details open={!guide.sitePlan&&!guide.illustration}><summary style={{fontWeight:700,cursor:'pointer',padding:'12px 0'}}>{guide.sitePlan||guide.illustration?'設備・現地での探り方をさらに読む':'釣り場を詳しく知る'}</summary>
   {!!guide.features.length&&<><h3>場所の特徴・設備</h3><ul>{guide.features.map(x=><li key={x}>{x}</li>)}</ul></>}
   {!guide.illustration&&<><h3>現地での探り方</h3><ol>{guide.approach.map(x=><li key={x}>{x}</li>)}</ol></>}

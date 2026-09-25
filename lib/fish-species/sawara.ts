@@ -111,7 +111,7 @@ export default defineFishSpecies({
     "step": 1,
     "src": "/images/cooking/steps/sawara-saikyo-1.svg",
     "alt": "サワラの西京焼き：塩をして水分を拭く",
-    "caption": "サワラは身が軟らかいため、ペーパーで押さえるように水気を取ります。"
+    "caption": "サワラは身が軟らかいため、ペーパーで押さえるように水気を取る。"
   },
   {
     "step": 2,
@@ -123,13 +123,13 @@ export default defineFishSpecies({
     "step": 3,
     "src": "/images/cooking/steps/sawara-saikyo-3.svg",
     "alt": "サワラの西京焼き：味噌をぬぐって弱火",
-    "caption": "味噌が厚く残ると身に火が通る前に焦げます。表面をぬぐってから焼きます。"
+    "caption": "味噌が厚く残ると身に火が通る前に焦げる。表面をぬぐってから焼く。"
   },
   {
     "step": 4,
     "src": "/images/cooking/steps/sawara-saikyo-4.svg",
     "alt": "サワラの西京焼き：焼き色より中心を確認",
-    "caption": "焦げを防ぐ覆いは機器が使用を認める方法で。魚の厚さに合わせて中心まで加熱します。"
+    "caption": "焦げを防ぐ覆いは機器が使用を認める方法で。魚の厚さに合わせて中心まで加熱する。"
   }
 ],
         "name": "西京焼き",

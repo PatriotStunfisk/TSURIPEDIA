@@ -147,25 +147,25 @@ export default defineFishSpecies({
     "step": 1,
     "src": "/images/cooking/steps/kawahagi-nitsuke-1.svg",
     "alt": "カワハギの煮付け：皮・内臓を除いた身を使う",
-    "caption": "この煮付けは下処理済みの身が基本です。肝を入れる場合も傷みのないものを使い、中心まで加熱します。"
+    "caption": "この煮付けは下処理済みの身が基本。肝を入れる場合も傷みのないものを使い、中心まで加熱する。"
   },
   {
     "step": 2,
     "src": "/images/cooking/steps/kawahagi-nitsuke-2.svg",
     "alt": "カワハギの煮付け：煮汁が沸いてから入れる",
-    "caption": "魚を重ねずに並べられる浅い鍋を使います。大きな身は同じくらいの大きさにそろえます。"
+    "caption": "魚を重ねずに並べられる浅い鍋を使う。大きな身は同じくらいの大きさにそろえる。"
   },
   {
     "step": 3,
     "src": "/images/cooking/steps/kawahagi-nitsuke-3.svg",
     "alt": "カワハギの煮付け：身を返さず煮る",
-    "caption": "身が崩れやすいため、鍋を軽く揺らすか煮汁を回しかけます。時間は大きさに応じて調整します。"
+    "caption": "身が崩れやすいため、鍋を軽く揺らすか煮汁を回しかける。時間は大きさに応じて調整する。"
   },
   {
     "step": 4,
     "src": "/images/cooking/steps/kawahagi-nitsuke-4.svg",
     "alt": "カワハギの煮付け：煮汁を別に詰める",
-    "caption": "火の通った魚を先に取り出しておくと、煮汁の濃さだけを調整できます。"
+    "caption": "火の通った魚を先に取り出しておくと、煮汁の濃さだけを調整できる。"
   }
 ],
         "name": "煮付け",

@@ -558,7 +558,38 @@
         "url": "https://mukogawa-tosen.com/"
       }
     ],
-    "reviewedAt": "2026-09-25"
+    "reviewedAt": "2026-09-25",
+    "choices": [
+      {
+        "target": "サビキで小アジを探す",
+        "start": "底を確認し、少し浮かせてコマセを出す。掛かった針の位置を覚える。",
+        "adjust": "同じ棚で続かなければ上下へ探る。ノマセ用に残す魚は過密にせず活かす。"
+      },
+      {
+        "target": "ルアーで青物・サワラ類",
+        "start": "表層・中層・底付近を分け、釣れた深さと巻き方を記録。",
+        "adjust": "餌の大きさと糸の傷を確認。群れを追って隣の釣り座へ投げ込まない。"
+      },
+      {
+        "target": "ノマセへ切り替える",
+        "start": "活き餌の状態、流す方向、タモを出せる位置を先に確認。",
+        "adjust": "餌が弱ったら交換。流れ過ぎた仕掛けは一度回収し、隣との絡みを避ける。"
+      }
+    ],
+    "nextLinks": [
+      {
+        "label": "サビキの棚と仕掛け",
+        "href": "/methods/sabiki"
+      },
+      {
+        "label": "ノマセの食い込みと取り込み",
+        "href": "/methods/nomase"
+      },
+      {
+        "label": "釣ったアジを料理する",
+        "href": "/cooking/aji"
+      }
+    ]
   },
   "tottopark-kojima": {
     "features": [
@@ -588,7 +619,34 @@
         "url": "https://minnaga.com/totopark/kisoku.html"
       }
     ],
-    "reviewedAt": "2026-09-25"
+    "reviewedAt": "2026-09-25",
+    "choices": [
+      {
+        "target": "初めてのサビキ",
+        "start": "釣り座から魚礁の位置を確認し、底から少し上を探る。",
+        "adjust": "掛かった針が上か下かを見る。魚礁上で仕掛けを引きずらない。"
+      },
+      {
+        "target": "大きな魚を狙う",
+        "start": "柵越しに届くタモを準備し、取り込みの場所を決める。",
+        "adjust": "足元へ寄せてからタモを探さず、同行者と役割を決めておく。"
+      },
+      {
+        "target": "根掛かりが続く",
+        "start": "公式の漁礁配置図と釣り座を照合。底へ置く時間を短くする。",
+        "adjust": "強くあおらず、引く向きを変える。仕掛けが外れて飛ぶ方向に人がいないか確認。"
+      }
+    ],
+    "nextLinks": [
+      {
+        "label": "サビキの釣り方",
+        "href": "/methods/sabiki"
+      },
+      {
+        "label": "ノマセの道具と手順",
+        "href": "/methods/nomase"
+      }
+    ]
   },
   "yura-wakayama-park": {
     "features": [

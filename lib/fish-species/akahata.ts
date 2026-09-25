@@ -113,25 +113,25 @@ export default defineFishSpecies({
     "step": 1,
     "src": "/images/cooking/steps/akahata-nitsuke-1.svg",
     "alt": "アカハタの煮付け：霜降りしてウロコを確認",
-    "caption": "ひれの付け根や腹側にウロコが残りやすいため、霜降り後にもう一度確認します。"
+    "caption": "ひれの付け根や腹側にウロコが残りやすいため、霜降り後にもう一度確認する。"
   },
   {
     "step": 2,
     "src": "/images/cooking/steps/akahata-nitsuke-2.svg",
     "alt": "アカハタの煮付け：浅い鍋で煮汁を沸かす",
-    "caption": "身が収まり、少ない煮汁でも落とし蓋で回せる鍋を選びます。"
+    "caption": "身が収まり、少ない煮汁でも落とし蓋で回せる鍋を選ぶ。"
   },
   {
     "step": 3,
     "src": "/images/cooking/steps/akahata-nitsuke-3.svg",
     "alt": "アカハタの煮付け：厚い身まで加熱",
-    "caption": "丸魚と切り身では時間が変わります。煮崩れを避けて返さず、上から煮汁をかけます。"
+    "caption": "丸魚と切り身では時間が変わる。煮崩れを避けて返さず、上から煮汁をかける。"
   },
   {
     "step": 4,
     "src": "/images/cooking/steps/akahata-nitsuke-4.svg",
     "alt": "アカハタの煮付け：身を支えて取り出す",
-    "caption": "箸で強くつままず、へらなどで下から支えて器へ移します。"
+    "caption": "箸で強くつままず、へらなどで下から支えて器へ移す。"
   }
 ],
         "name": "煮付け",

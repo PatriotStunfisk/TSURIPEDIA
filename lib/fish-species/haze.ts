@@ -123,25 +123,25 @@ export default defineFishSpecies({
     "step": 1,
     "src": "/images/cooking/steps/haze-tempura-1.svg",
     "alt": "マハゼの天ぷら：開いた身の水分を拭く",
-    "caption": "小さいハゼも中骨・腹骨を確認します。ぬめりを落とした後の水分をしっかり拭きます。"
+    "caption": "小さいハゼも中骨・腹骨を確認する。ぬめりを落とした後の水分をしっかり拭く。"
   },
   {
     "step": 2,
     "src": "/images/cooking/steps/haze-tempura-2.svg",
     "alt": "マハゼの天ぷら：薄い衣で包む",
-    "caption": "小さな身へ衣を付けすぎないようにし、余分を切ってから油へ入れます。"
+    "caption": "小さな身へ衣を付けすぎないようにし、余分を切ってから油へ入れる。"
   },
   {
     "step": 3,
     "src": "/images/cooking/steps/haze-tempura-3.svg",
     "alt": "マハゼの天ぷら：少しずつ離して入れる",
-    "caption": "魚同士がくっつかないように入れ、衣が固まるまで触りすぎません。"
+    "caption": "魚同士がくっつかないように入れ、衣が固まるまで触りすぎない。"
   },
   {
     "step": 4,
     "src": "/images/cooking/steps/haze-tempura-4.svg",
     "alt": "マハゼの天ぷら：揚げたてを盛る",
-    "caption": "網で油を切り、天つゆは食べる直前に付けると衣の軽さを保てます。"
+    "caption": "網で油を切り、天つゆは食べる直前に付けると衣の軽さを保てる。"
   }
 ],
         "name": "天ぷら",

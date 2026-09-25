@@ -193,25 +193,25 @@ export default defineFishSpecies({
     "step": 1,
     "src": "/images/cooking/steps/mebaru-aquapazza-1.svg",
     "alt": "メバルのアクアパッツァ：切り込みと水気の処理",
-    "caption": "メバルの厚い身に切り込みを入れます。あさりは砂抜き済みのものを使い、殻も洗います。"
+    "caption": "メバルの厚い身に切り込みを入れる。あさりは砂抜き済みのものを使い、殻も洗う。"
   },
   {
     "step": 2,
     "src": "/images/cooking/steps/mebaru-aquapazza-2.svg",
     "alt": "メバルのアクアパッツァ：表面に焼き色",
-    "caption": "小型でも鍋の縁へ無理に押し込まず、魚が収まるフライパンを使います。"
+    "caption": "小型でも鍋の縁へ無理に押し込まず、魚が収まるフライパンを使う。"
   },
   {
     "step": 3,
     "src": "/images/cooking/steps/mebaru-aquapazza-3.svg",
     "alt": "メバルのアクアパッツァ：魚と貝を蒸し煮",
-    "caption": "水分を入れたら蓋をして加熱します。焦げ付きそうなら少量の水を足し、煮汁を切らさないようにします。"
+    "caption": "水分を入れたら蓋をして加熱する。焦げ付きそうなら少量の水を足し、煮汁を切らさないようにする。"
   },
   {
     "step": 4,
     "src": "/images/cooking/steps/mebaru-aquapazza-4.svg",
     "alt": "メバルのアクアパッツァ：塩は最後に調整",
-    "caption": "あさりから塩気が出るため、最後に煮汁を味見してから足します。魚の中心まで火を通します。"
+    "caption": "あさりから塩気が出るため、最後に煮汁を味見してから足す。魚の中心まで火を通す。"
   }
 ],
         "name": "アクアパッツァ",

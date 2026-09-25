@@ -37,11 +37,17 @@ test('100 original process diagrams have valid recipe steps, files and captions'
   assert.equal(new Set(recipe.stepImages.map(x=>x.step)).size,recipe.stepImages.length);
   for(const image of recipe.stepImages){
    assert.ok(image.step>=1&&image.step<=recipe.steps.length,fish.slug);
-   assert.ok(image.caption.length>=25);assert.ok(image.alt.includes(fish.name));
+   assert.ok(image.caption.length>=20);assert.ok(image.alt.includes(fish.name));
    const svg=fs.readFileSync(path.join(root,'public',image.src),'utf8');
    assert.match(svg,/<svg/);assert.match(svg,/工程図/);assert.doesNotMatch(svg,/<script|<foreignObject|href="https?:/);
    images.push(image.src);
   }
  }
  assert.equal(recipes,25);assert.equal(images.length,100);assert.equal(new Set(images).size,100);
+});
+
+test('concise practical additions connect existing methods, venues and recipe pages',()=>{
+ for(const slug of ['sabiki','ajing','tai-rubber','tachiuo-tenya']){const rows=methodDetails[slug].troubleshooting;assert.equal(rows.length,3);assert.equal(new Set(rows.map(r=>r.problem)).size,3);for(const r of rows)assert.ok(r.action&&r.check);}
+ for(const slug of ['mukogawa-ichimonji','tottopark-kojima']){const g=spotFieldGuides[slug];assert.equal(g.choices.length,3);for(const {href} of g.nextLinks){const [,section,id]=href.split('/');assert.ok(section==='methods'?methodDetails[id]:getCookingFish(id),href);}}
+ for(const [fish,recipe] of [['nijimasu','meuniere'],['sappa','nanban']]){const r=getCookingFish(fish).recipes.find(r=>r.slug===recipe);assert.equal(r.detail.checkpoints.length,3);assert.equal(r.detail.troubleshooting.length,3);}
 });

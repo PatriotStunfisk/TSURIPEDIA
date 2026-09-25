@@ -119,25 +119,25 @@ export default defineFishSpecies({
     "step": 1,
     "src": "/images/cooking/steps/suzuki-meuniere-1.svg",
     "alt": "スズキのムニエル：薄い粉で表面を整える",
-    "caption": "スズキの切り身は水気を拭き、小麦粉を薄く付けます。皮側も粉がだまにならないようにします。"
+    "caption": "スズキの切り身は水気を拭き、小麦粉を薄く付ける。皮側も粉がだまにならないようにする。"
   },
   {
     "step": 2,
     "src": "/images/cooking/steps/suzuki-meuniere-2.svg",
     "alt": "スズキのムニエル：皮側から焼く",
-    "caption": "皮側を下にして入れ、焼き面が固まるまで触りすぎません。返した後は火を弱めます。"
+    "caption": "皮側を下にして入れ、焼き面が固まるまで触りすぎない。返した後は火を弱める。"
   },
   {
     "step": 3,
     "src": "/images/cooking/steps/suzuki-meuniere-3.svg",
     "alt": "スズキのムニエル：魚を出してソースを作る",
-    "caption": "バターを高温のまま入れると焦げやすいため、火を弱めてからレモン汁と合わせます。"
+    "caption": "バターを高温のまま入れると焦げやすいため、火を弱めてからレモン汁と合わせる。"
   },
   {
     "step": 4,
     "src": "/images/cooking/steps/suzuki-meuniere-4.svg",
     "alt": "スズキのムニエル：ソースは食べる直前に",
-    "caption": "皮の香ばしさを残したい場合は、身側や皿へソースをかけて仕上げます。"
+    "caption": "皮の香ばしさを残したい場合は、身側や皿へソースをかけて仕上げる。"
   }
 ],
         "name": "ムニエル",

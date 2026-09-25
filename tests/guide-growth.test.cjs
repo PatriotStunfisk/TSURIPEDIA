@@ -34,7 +34,7 @@ test('a registered bait-only spot is not sent to lure guides through its fish re
 });
 test('fish practical notes remain in the species registry and original rich data remains intact',()=>{
  for(const slug of ['aji','kisu','aoriika','suzuki','madai','nijimasu','kasago','kawahagi']){
-  const f=getFishProfile(slug);assert.equal(f.fieldNotes.length,2);assert.ok(f.detail.body);assert.ok(f.cooking.recipes.length>=4);
+  const f=getFishProfile(slug);assert.ok(f.fieldNotes.length>=2&&f.fieldNotes.length<=3);assert.ok(f.detail.body);assert.ok(f.cooking.recipes.length>=4);
  }
  for(const slug of ['casting-rod-tip-wrap','sabiki-cage-empty','tackle-spec-reading'])assert.ok(getGuide(slug));
  for(const slug of ['rod-tip-tangle-before-cast','sabiki-cage-overfilled','sinker-unit-grams-go'])assert.ok(!getGuide(slug),'duplicate topic should stay in original URL');

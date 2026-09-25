@@ -126,25 +126,25 @@ export default defineFishSpecies({
     "step": 1,
     "src": "/images/cooking/steps/magochi-karaage-1.svg",
     "alt": "マゴチの唐揚げ：骨を除いて一口大",
-    "caption": "硬い頭や骨はこの身の唐揚げには混ぜず、同じくらいの大きさの身にそろえます。"
+    "caption": "硬い頭や骨はこの身の唐揚げには混ぜず、同じくらいの大きさの身にそろえる。"
   },
   {
     "step": 2,
     "src": "/images/cooking/steps/magochi-karaage-2.svg",
     "alt": "マゴチの唐揚げ：下味の後に汁気を拭く",
-    "caption": "漬け汁ごと粉へ入れず、余分な汁を切ってから衣を付けます。"
+    "caption": "漬け汁ごと粉へ入れず、余分な汁を切ってから衣を付ける。"
   },
   {
     "step": 3,
     "src": "/images/cooking/steps/magochi-karaage-3.svg",
     "alt": "マゴチの唐揚げ：厚い身まで火を通す",
-    "caption": "粉を薄く付け、少量ずつ揚げます。厚い一片を確認して中心の加熱を確かめます。"
+    "caption": "粉を薄く付け、少量ずつ揚げる。厚い一片を確認して中心の加熱を確かめる。"
   },
   {
     "step": 4,
     "src": "/images/cooking/steps/magochi-karaage-4.svg",
     "alt": "マゴチの唐揚げ：網で蒸気を逃がす",
-    "caption": "揚げた身は網に取り、重ねずに油を切ってから盛り付けます。"
+    "caption": "揚げた身は網に取り、重ねずに油を切ってから盛り付ける。"
   }
 ],
         "name": "唐揚げ",
