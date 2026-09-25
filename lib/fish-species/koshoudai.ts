@@ -121,7 +121,7 @@ export default defineFishSpecies({
         "slug": "sashimi",
         "name": "刺身",
         "preparation": "raw",
-        "summary": "生食用に処理された身を、包丁で長く引いて切ります。",
+        "summary": "コショウダイの生食用の柵を、繊維を断つ向きに切る刺身。冷たい身の水気を拭き、最初の一切れで厚さを調整。皮・小骨を残さず、食べる直前に盛り付ける。",
         "ingredients": [
           "生食用コショウダイの柵 200g",
           "しょうゆ・わさび 適量",
@@ -136,7 +136,51 @@ export default defineFishSpecies({
         "tips": [
           "常温で置かず、食べる直前に切ります。生食の注意は共通案内を確認してください。"
         ],
-        "image": "/images/cooking/koshoudai-sashimi.webp"
+        "image": "/images/cooking/koshoudai-sashimi.webp",
+        "detail": {
+          "intro": "大きな魚ほど柵に厚みが出る。盛り付ける枚数よりも、口へ入れたときに噛み切りやすい厚さと幅を先に決める。",
+          "checkpoints": [
+            {
+              "title": "柵の状態で小骨を確認",
+              "body": "皮を引いた生食用の柵を使う。指の腹で身の中央をなぞり、骨が残っていないか確かめる。"
+            },
+            {
+              "title": "繊維を断って切る",
+              "body": "身の筋目と交差する向きに包丁を入れる。一切れ目を薄めにし、硬さに合わせて調整する。"
+            },
+            {
+              "title": "切る直前まで冷やす",
+              "body": "盛り付ける量だけ取り出す。皿も冷やしておき、切った身を常温で長く待たせない。"
+            }
+          ],
+          "troubleshooting": [
+            {
+              "problem": "一切れが大きすぎる",
+              "solution": "柵を扱いやすい幅へ整えてから切る。厚さを薄くするだけでなく、口へ入る大きさもそろえる。"
+            },
+            {
+              "problem": "切り口がつぶれる",
+              "solution": "身の水分を拭き、刃元から長く引く。切れない包丁で強く押し込まない。"
+            },
+            {
+              "problem": "生食用の処理が不明",
+              "solution": "鮮度の見た目だけで決めず、加熱料理へ切り替える。釣った魚も同様に扱う。"
+            }
+          ],
+          "sources": []
+        },
+        "nextLinks": [
+          {
+            "label": "コショウダイの加熱料理",
+            "href": "/cooking/koshoudai",
+            "reason": "刺身向けでない身や、余った部位の調理法を選ぶ。"
+          },
+          {
+            "label": "コショウダイの模様を確認",
+            "href": "/fish/koshoudai",
+            "reason": "似た魚との違いと、釣れた場所での扱いを確認する。"
+          }
+        ]
       },
       {
         "slug": "meuniere",

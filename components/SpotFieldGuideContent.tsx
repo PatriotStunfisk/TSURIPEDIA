@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import NextReading from './NextReading';
 import styles from './RecipeDeepDive.module.css';
 import SpotIllustratedGuide from './SpotIllustratedGuide';
 import SpotSitePlan from './SpotSitePlan';
@@ -14,6 +14,6 @@ export default function SpotFieldGuideContent({guide}:{guide:SpotFieldGuide}){
   {!!guide.beforeYouGo.length&&<details><summary>利用条件・準備の補足</summary><ul>{guide.beforeYouGo.map(x=><li key={x}>{x}</li>)}</ul></details>}
   {!!guide.sources?.length&&<p style={{fontSize:12,color:'#617482'}}>参考：{guide.sources.map((x,i)=><span key={x.url}>{i>0?' / ':''}<a href={x.url} target="_blank" rel="noopener noreferrer">{x.label} ↗</a></span>)}{guide.reviewedAt&&`（確認 ${guide.reviewedAt}）`}</p>}
   </details>
-  {!!guide.nextLinks?.length&&<nav aria-label="釣行と料理をつなぐ" className="chips" style={{marginTop:16}}>{guide.nextLinks.map(link=><Link key={link.href} href={link.href}>{link.label} →</Link>)}</nav>}
+  {!!guide.nextLinks?.length&&<NextReading links={guide.nextLinks} title="釣行の続きを組み立てる"/>}
  </section>;
 }

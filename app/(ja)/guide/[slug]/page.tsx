@@ -1,3 +1,4 @@
+import NextReading from '@/components/NextReading';
 import {siteUrl as base} from '@/lib/site-url';
 import {guideTopics} from '@/lib/guide-taxonomy';
 import {getFish} from '@/lib/data';
@@ -63,7 +64,7 @@ export default async function GuideArticlePage({params}:{params:Promise<{slug:st
   {getRelatedGuides(slug).length>0&&<section className="detailGrid"><article><h2>あわせて読みたいGUIDE</h2>{getRelatedGuides(slug).map(g=><p key={g.slug}><Link href={`/guide/${g.slug}`}>{g.title} →</Link></p>)}</article></section>}
   {customTools?<GuideTripTools slug={slug}/>:hasAffiliatePicks(slug)?<GuideAffiliatePicks slug={slug}/>:hasAffiliateExtras(slug)?<GuideAffiliateExtras slug={slug}/>:<AffiliateProducts methods={guideMethods} limit={2} title="この記事の釣り方に合う道具候補"/>}
   <GuideProductCards slug={slug} hideExternal={customTools||curatedTools}/>
-  <section style={{margin:'34px 0 10px',padding:'24px',borderRadius:20,background:'#edf6fb'}}><span style={{fontSize:12,fontWeight:900,color:'#087bc4'}}>RELATED</span><h2 style={{margin:'5px 0 14px'}}>次に見る</h2><div style={{display:'grid',gap:10}}>{a.related.map(r=><Link key={r.href} href={r.href} className="methodLink"><div><b>{r.label}</b><small>UOLINK内で詳しく見る</small></div><em>→</em></Link>)}</div></section>
+  <NextReading links={a.related} title="次に読む・釣行へ進む"/>
   <p style={{fontSize:12,lineHeight:1.7,opacity:.62,marginTop:22}}>※季節・魚種・仕掛けは海況や地域で変わる。現地ルールと直近情報を優先。</p>
  </div>
 }

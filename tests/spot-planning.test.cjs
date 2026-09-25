@@ -32,7 +32,7 @@ test('place-specific guidance references real entries and preserves local restri
 });
 test('researched guides carry dated sources and preserve current venue restrictions',()=>{
  const researched=require('../lib/spot-field-guides-researched.json');
- assert.equal(Object.keys(researched).length,40);
+ assert.equal(Object.keys(researched).length,43);
  for(const [slug,g] of Object.entries(researched)){
   assert.ok(fishingMapEntries.some(x=>x.slug===slug));
   assert.ok(g.features.length>=2&&g.approach.length>=3,slug);

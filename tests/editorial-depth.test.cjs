@@ -48,6 +48,6 @@ test('100 original process diagrams have valid recipe steps, files and captions'
 
 test('concise practical additions connect existing methods, venues and recipe pages',()=>{
  for(const slug of ['sabiki','ajing','tai-rubber','tachiuo-tenya']){const rows=methodDetails[slug].troubleshooting;assert.equal(rows.length,3);assert.equal(new Set(rows.map(r=>r.problem)).size,3);for(const r of rows)assert.ok(r.action&&r.check);}
- for(const slug of ['mukogawa-ichimonji','tottopark-kojima']){const g=spotFieldGuides[slug];assert.equal(g.choices.length,3);for(const {href} of g.nextLinks){const [,section,id]=href.split('/');assert.ok(section==='methods'?methodDetails[id]:getCookingFish(id),href);}}
+ for(const slug of ['mukogawa-ichimonji','tottopark-kojima']){const g=spotFieldGuides[slug];assert.equal(g.choices.length,3);for(const {href} of g.nextLinks){const url=new URL(href,'https://uolink.jp');const [,section,id]=url.pathname.split('/');assert.ok(section==='methods'?methodDetails[id]:section==='catches'?fishingMapEntries.some(s=>s.slug===url.searchParams.get('spot')):getCookingFish(id),href);}}
  for(const [fish,recipe] of [['nijimasu','meuniere'],['sappa','nanban']]){const r=getCookingFish(fish).recipes.find(r=>r.slug===recipe);assert.equal(r.detail.checkpoints.length,3);assert.equal(r.detail.troubleshooting.length,3);}
 });

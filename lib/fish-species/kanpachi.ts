@@ -108,34 +108,34 @@ export default defineFishSpecies({
       {
         "slug": "teriyaki",
         "stepImages": [
-  {
-    "step": 1,
-    "src": "/images/cooking/steps/kanpachi-teriyaki-1.svg",
-    "alt": "カンパチの照り焼き：皮付きの身を整える",
-    "caption": "血合い付近の骨も確かめ、切り身の厚さをできるだけそろえる。"
-  },
-  {
-    "step": 2,
-    "src": "/images/cooking/steps/kanpachi-teriyaki-2.svg",
-    "alt": "カンパチの照り焼き：両面を焼いて中まで加熱",
-    "caption": "厚い身は表面だけで判断せず、火を弱めて中心まで加熱する。"
-  },
-  {
-    "step": 3,
-    "src": "/images/cooking/steps/kanpachi-teriyaki-3.svg",
-    "alt": "カンパチの照り焼き：脂を拭いてたれを絡める",
-    "caption": "たれを入れる前に余分な油を拭くと、たれが身に絡みやすくなる。"
-  },
-  {
-    "step": 4,
-    "src": "/images/cooking/steps/kanpachi-teriyaki-4.svg",
-    "alt": "カンパチの照り焼き：煮詰めすぎず盛る",
-    "caption": "たれは冷めると濃く感じやすいので、鍋底で固まるまで詰めないようにする。"
-  }
-],
+          {
+            "step": 1,
+            "src": "/images/cooking/steps/kanpachi-teriyaki-1.svg",
+            "alt": "カンパチの照り焼き：皮付きの身を整える",
+            "caption": "血合い付近の骨も確かめ、切り身の厚さをできるだけそろえる。"
+          },
+          {
+            "step": 2,
+            "src": "/images/cooking/steps/kanpachi-teriyaki-2.svg",
+            "alt": "カンパチの照り焼き：両面を焼いて中まで加熱",
+            "caption": "厚い身は表面だけで判断せず、火を弱めて中心まで加熱する。"
+          },
+          {
+            "step": 3,
+            "src": "/images/cooking/steps/kanpachi-teriyaki-3.svg",
+            "alt": "カンパチの照り焼き：脂を拭いてたれを絡める",
+            "caption": "たれを入れる前に余分な油を拭くと、たれが身に絡みやすくなる。"
+          },
+          {
+            "step": 4,
+            "src": "/images/cooking/steps/kanpachi-teriyaki-4.svg",
+            "alt": "カンパチの照り焼き：煮詰めすぎず盛る",
+            "caption": "たれは冷めると濃く感じやすいので、鍋底で固まるまで詰めないようにする。"
+          }
+        ],
         "name": "照り焼き",
         "image": "/images/fish/kanpachi-teriyaki.png",
-        "summary": "カンパチの身質を生かす照り焼き。下処理と骨の確認を済ませ、家庭で作りやすい手順にまとめました。",
+        "summary": "カンパチを先に焼いて中心まで加熱し、余分な脂を拭いてから甘辛だれを絡める。たれを焦がさず照りを出す手順と、厚い切り身が硬くなるときの見直し方。",
         "ingredients": [
           "2人分：カンパチ 骨を除いた切り身250g",
           "醤油・みりん・酒 各大さじ2",
@@ -151,6 +151,50 @@ export default defineFishSpecies({
         "tips": [
           "たれは焦げやすいため、魚への加熱を済ませてから加えます。",
           "調理前後の魚は低温で保管し、生魚を扱った器具は洗って加熱後の料理と分けます。"
+        ],
+        "detail": {
+          "intro": "照りを付ける工程と魚へ火を通す工程を分けると、厚いカンパチでも焦げを抑えやすい。たれは煮詰まるほど濃くなるため、最後の数十秒は火から離れない。",
+          "checkpoints": [
+            {
+              "title": "切り身の水気を取る",
+              "body": "骨を確かめ、表面の水分をペーパーで拭く。水分が多いと焼き色が付きにくく、油も跳ねやすい。"
+            },
+            {
+              "title": "先に魚へ火を通す",
+              "body": "両面を焼いた後、厚い身は弱火で中心まで加熱する。たれを加えてから火通りを待つと、糖分が先に焦げる。"
+            },
+            {
+              "title": "たれを加える前に余分な脂を拭く",
+              "body": "魚を崩さないように油を拭き、合わせ調味料を加える。弱火でスプーンなどを使って表面へかけ、薄いとろみで止める。"
+            }
+          ],
+          "troubleshooting": [
+            {
+              "problem": "たれが黒く焦げる",
+              "solution": "いったん火を弱める。すでに焦げたたれは苦味が残るため、鍋をきれいにして新しいたれを合わせる。"
+            },
+            {
+              "problem": "たれが魚へ絡まない",
+              "solution": "余分な油と水分を拭いてから加える。魚に火が通っていれば一度取り出し、たれだけ調整して戻す。"
+            },
+            {
+              "problem": "身が硬い",
+              "solution": "厚さをそろえ、中心まで火が通った後は長く焼き続けない。たれが煮詰まるのを魚入りのまま待ちすぎない。"
+            }
+          ],
+          "sources": []
+        },
+        "nextLinks": [
+          {
+            "label": "同じ切り身で竜田揚げ",
+            "href": "/cooking/kanpachi/tatsuta",
+            "reason": "しょうが醤油で下味を付け、衣の食感を楽しみたいときに。"
+          },
+          {
+            "label": "カンパチの釣り方と季節",
+            "href": "/fish/kanpachi",
+            "reason": "船・岸での狙い方と、必要な道具へ進む。"
+          }
         ]
       },
       {

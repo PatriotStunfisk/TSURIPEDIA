@@ -1,0 +1,30 @@
+{
+  "observedAt": "2026-09-26",
+  "property": "sc-domain:uolink.jp",
+  "report": "Google Search Console / Web / last 28 days",
+  "availableChartDates": ["2026-09-17", "2026-09-23"],
+  "note": "28日フィルターを選択。プロパティ移行直後のため、画面のチャートに表示されたデータ期間は9月17〜23日。28日分が揃った実績や月間推定として扱わない。少数データのためCTR・順位は暫定的な選定材料。",
+  "totals": {"clicks":133,"impressions":3124,"ctrPercent":4.3,"position":12.6},
+  "pages": [
+    {"path":"/cooking/sappa/sunomono","clicks":7,"impressions":79,"ctrPercent":8.9,"position":4.8},
+    {"path":"/cooking/akahata/sakamushi","clicks":2,"impressions":56,"ctrPercent":3.6,"position":2.5},
+    {"path":"/cooking/bora/karaage","clicks":2,"impressions":53,"ctrPercent":3.8,"position":2.2},
+    {"path":"/cooking/kanpachi/teriyaki","clicks":2,"impressions":52,"ctrPercent":3.8,"position":2.7},
+    {"path":"/cooking/kijihata/sashimi","clicks":3,"impressions":42,"ctrPercent":7.1,"position":3.0},
+    {"path":"/cooking/mejina/sashimi","clicks":1,"impressions":40,"ctrPercent":2.5,"position":8.1},
+    {"path":"/cooking/hiramasa/kama-shioyaki","clicks":0,"impressions":39,"ctrPercent":0,"position":1.5},
+    {"path":"/cooking/nijimasu/shioyaki","clicks":3,"impressions":32,"ctrPercent":9.4,"position":5.6},
+    {"path":"/cooking/oomonhata/sakamushi","clicks":1,"impressions":31,"ctrPercent":3.2,"position":5.1},
+    {"path":"/cooking/koshoudai/sashimi","clicks":1,"impressions":28,"ctrPercent":3.6,"position":6.3},
+    {"path":"/guide/tachiuo-shore-tenya-weight","clicks":1,"impressions":35,"ctrPercent":2.9,"position":7.4},
+    {"path":"/guide/landing-net-length","clicks":0,"impressions":32,"ctrPercent":0,"position":9.7},
+    {"path":"/guide/osakabay-october-fish","clicks":0,"impressions":28,"ctrPercent":0,"position":6.5},
+    {"path":"/guide/sabiki-amiebi-amount","clicks":0,"impressions":28,"ctrPercent":0,"position":8.9},
+    {"path":"/spots/kasaoka-akou","clicks":0,"impressions":90,"ctrPercent":0,"position":5.8},
+    {"path":"/spots/tsuruga-zuishomaru","clicks":0,"impressions":88,"ctrPercent":0,"position":6.4},
+    {"path":"/spots/growth-haruna-fish-farm","clicks":1,"impressions":44,"ctrPercent":2.3,"position":9.7},
+    {"path":"/spots/harbor-tokusimamusa","clicks":4,"impressions":32,"ctrPercent":12.5,"position":7.3},
+    {"path":"/spots/growth-senjogataki-farm","clicks":4,"impressions":15,"ctrPercent":26.7,"position":4.5},
+    {"path":"/spots/mukogawa-ichimonji","clicks":1,"impressions":8,"ctrPercent":12.5,"position":19.6}
+  ]
+}
