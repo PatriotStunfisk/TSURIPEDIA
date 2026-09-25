@@ -286,7 +286,8 @@ test('map facilities are unique and verified closures are excluded from normal r
 });
 
 test('hazard cooking policy controls all registries and sitemap, including direct routes',()=>{
- const danger=registry.fishCatalog.filter(f=>f.hazard);assert.equal(danger.length,8);
+ const danger=registry.fishCatalog.filter(f=>f.hazard);
+ for(const slug of ['kusafugu','aigo','gonzui','haokoze','oniokoze','minokasago','akaei','utsubo'])assert.ok(danger.some(f=>f.slug===slug),slug);
  const paths=sitemap().map(x=>new URL(x.url).pathname);
  for(const f of danger){
   assert.ok(f.hazard.sources.length);assert.ok(f.hazard.identify.length>=3);
@@ -413,4 +414,25 @@ test('hundred-species milestone has complete new fish and sourced Kansai entries
  for(const entry of entries){assert.ok(entry.sources.length>=2);assert.ok(entry.lat&&entry.lng);assert.ok(entry.verifiedAt);}
  const kamome=entries.find(e=>e.slug==='kamome-bridge-wavebreak');assert.equal(kamome.parking,false);assert.ok(!kamome.closed);assert.ok(kamome.sources.some(s=>s.url.includes('DauDz8oP8t0')));
  assert.ok(entries.find(e=>e.slug==='jgreen-offshore-wall').access.includes('渡船'));
+});
+
+
+test('148-species expansion keeps hazardous fish out of home cooking and connects edible profiles',()=>{
+ const {getFishSpecies}=require('../lib/fish-species/index.ts');
+ const {englishFish}=require('../lib/i18n/fish.ts');
+ const danger=['kitamakura','komonfugu','shimafugu','torafugu','hakofugu','aobudai','soushihagi','hyoumondako'];
+ const edible=['nizadai','onikasago','izukasago','ishigakidai','kiamadai','okizayori','sake','ginzake'];
+ const paths=new Set(sitemap().map(x=>new URL(x.url).pathname));
+ for(const slug of [...danger,...edible]){
+  const f=getFishSpecies(slug);assert.ok(f?.detail&&f.launch,slug);
+  assert.ok(englishFish[slug]?.overview,slug+' English');
+  assert.ok(fs.existsSync(path.join(root,'public',f.media.image)),slug+' image');
+  assert.ok(paths.has('/fish/'+slug)&&paths.has('/en/fish/'+slug),slug+' sitemap');
+  for(const m of f.base.methodSlugs)assert.ok(methodDetails[m],m);
+  for(const g of f.base.guideSlugs)assert.ok(allGuides.some(x=>x.slug===g),g);
+ }
+ for(const slug of danger){const f=getFishSpecies(slug);assert.equal(f.hazard.cookingEnabled,false);assert.equal(f.quest.enabled,false);assert.equal(f.cooking,undefined);assert.ok(!paths.has('/cooking/'+slug));}
+ for(const slug of edible){const f=getFishSpecies(slug);assert.equal(f.representativeRecipes.length,4);assert.equal(f.cooking.recipes.length,4);for(const recipe of f.cooking.recipes){assert.ok(fs.existsSync(path.join(root,'public',recipe.image)),recipe.image);assert.ok(paths.has('/cooking/'+slug+'/'+recipe.slug));}}
+ assert.notEqual(getFishSpecies('onikasago').base.scientific,getFishSpecies('izukasago').base.scientific);
+ assert.equal(registry.getFishByName('白鮭').slug,'sake');assert.equal(registry.getFishByName('銀鮭').slug,'ginzake');
 });
