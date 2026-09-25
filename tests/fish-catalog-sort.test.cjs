@@ -24,3 +24,29 @@ test('fish catalog sorting preserves stable defaults and filters independently',
  assert.deepEqual(sortFishCatalog(items,'season',9).map(f=>f.name),['ブリ','カサゴ','アジ']);
  assert.equal(items[0].name,'ブリ');assert.equal(parseFishSort('invalid'),'default');
  });
+
+
+test('default groups relatives after the core ten while added order is preserved',()=>{
+ const {fishCatalog}=require('../lib/fish-registry.ts');
+ const {sortFishCatalog}=require('../lib/fish-catalog-sort.ts');
+ const {coreFishOrder,fishBrowseGroup}=require('../lib/fish-discovery.ts');
+ const ordered=sortFishCatalog(fishCatalog,'default');
+ assert.deepEqual(ordered.slice(0,10).map(f=>f.slug),coreFishOrder);
+ assert.deepEqual(sortFishCatalog(fishCatalog,'added'),fishCatalog);
+ const closed=new Set();let previous;
+ for(const f of ordered.slice(10)){
+  const group=fishBrowseGroup(f);
+  if(group!==previous){assert.ok(!closed.has(group),group+' separated');if(previous)closed.add(previous);previous=group;}
+ }
+});
+
+test('general fish names find relatives without changing exact-name resolution',()=>{
+ const {fishCatalog,getFishByName}=require('../lib/fish-registry.ts');
+ const {fishMatchesSearch}=require('../lib/fish-aliases.ts');
+ const names=q=>fishCatalog.filter(f=>fishMatchesSearch(f,q)).map(f=>f.slug);
+ for(const slug of ['katsuo','suma','hirasouda','marusouda'])assert.ok(names('カツオ').includes(slug),slug);
+ assert.ok(!names('カツオ').includes('saba'));
+ for(const f of fishCatalog.filter(f=>f.detail?.family.includes('カレイ科')))assert.ok(names('カレイ').includes(f.slug),f.slug);
+ assert.equal(getFishByName('カツオ')?.slug,'katsuo');
+ assert.equal(getFishByName('ガシラ')?.slug,'kasago');
+});

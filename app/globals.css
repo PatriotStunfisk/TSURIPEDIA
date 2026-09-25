@@ -19,3 +19,6 @@
 @media(max-width:360px){.header{padding-inline:10px;gap:4px 6px}.header .brand{flex-basis:100px}.header .brand img{width:100px}.header .mobileQuest{font-size:10px;padding:8px}.header .mobileNavigation{font-size:10px}}
 
 .header .languageSwitch{margin-left:auto}
+
+/* Compact index-page titles on phones; preserve desktop spacing. */
+@media(max-width:600px){.section.pageTop{padding-top:22px}.pageTop>.pageHero{padding:8px 0 20px;min-height:0}.pageTop>.pageHero h1{margin:5px 0 8px}.pageTop>.pageHero p{margin:8px 0 0;line-height:1.65}.pageTop>h1:first-child{margin:4px 0 14px;font-size:30px;line-height:1.35}.pageTop>.cookingIndexSections{margin-top:12px!important}}
