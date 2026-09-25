@@ -1,3 +1,4 @@
+import {species168Guides} from './guide-articles-species-168';
 import {species132Guides} from './guide-articles-species-132';
 import {workshop700Guides} from './guide-articles-workshop-700';
 import {species122Guides} from './guide-articles-species-122';
@@ -45,7 +46,7 @@ import {extraGuideArticles6} from '@/lib/guide-articles-extra6';
 import {extraGuideArticles7} from '@/lib/guide-articles-extra7';
 
 const sourceGuides=[
- ...species132Guides,
+ ...species168Guides,...species132Guides,
  ...species122Guides,
   ...guides500Squid,
   ...guides500Livebait,

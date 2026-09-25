@@ -155,7 +155,27 @@
     "hakofugu",
     "aobudai",
     "soushihagi",
-    "hyoumondako"
+    "hyoumondako",
+    "hiiragi",
+    "nezumigochi",
+    "anahaze",
+    "kujime",
+    "ginpo",
+    "yamatokamasu",
+    "tenjikudai",
+    "tsumuburi",
+    "meaji",
+    "oonibe",
+    "ibodai",
+    "chikamekintoki",
+    "yumekasago",
+    "akaisaki",
+    "namazu",
+    "ugui",
+    "ginbuna",
+    "kawamutsu",
+    "biwamasu",
+    "himemasu"
   ],
   "methods": [
     "herabuna-bottom",
@@ -210,7 +230,10 @@
     "medai-komase",
     "omorig",
     "bachikon",
-    "kago"
+    "kago",
+    "namazu-topwater",
+    "lake-trolling",
+    "himemasu-sabiki"
   ],
   "guides": [
     "aji-sabiki-depth",

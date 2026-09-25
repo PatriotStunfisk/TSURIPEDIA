@@ -1,0 +1,682 @@
+[
+  {
+    "species": "hiiragi",
+    "file": "public/images/fish/hiiragi-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "nezumigochi",
+    "file": "public/images/fish/nezumigochi-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "anahaze",
+    "file": "public/images/fish/anahaze-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "kujime",
+    "file": "public/images/fish/kujime-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "ginpo",
+    "file": "public/images/fish/ginpo-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "yamatokamasu",
+    "file": "public/images/fish/yamatokamasu-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "tenjikudai",
+    "file": "public/images/fish/tenjikudai-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "tsumuburi",
+    "file": "public/images/fish/tsumuburi-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "meaji",
+    "file": "public/images/fish/meaji-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "oonibe",
+    "file": "public/images/fish/oonibe-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "ibodai",
+    "file": "public/images/fish/ibodai-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "chikamekintoki",
+    "file": "public/images/fish/chikamekintoki-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "yumekasago",
+    "file": "public/images/fish/yumekasago-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "akaisaki",
+    "file": "public/images/fish/akaisaki-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "namazu",
+    "file": "public/images/fish/namazu-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "ugui",
+    "file": "public/images/fish/ugui-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "ginbuna",
+    "file": "public/images/fish/ginbuna-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "kawamutsu",
+    "file": "public/images/fish/kawamutsu-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "biwamasu",
+    "file": "public/images/fish/biwamasu-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "himemasu",
+    "file": "public/images/fish/himemasu-profile-20260925.webp",
+    "kind": "fish",
+    "generation": "Original transparent scientific side-view illustration, head left; generated 2026-09-25."
+  },
+  {
+    "species": "hiiragi",
+    "file": "public/images/cooking/hiiragi-nitsuke.webp",
+    "kind": "recipe",
+    "recipe": "nitsuke",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "hiiragi",
+    "file": "public/images/cooking/hiiragi-ushiojiru.webp",
+    "kind": "recipe",
+    "recipe": "ushiojiru",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "hiiragi",
+    "file": "public/images/cooking/hiiragi-karaage.webp",
+    "kind": "recipe",
+    "recipe": "karaage",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "hiiragi",
+    "file": "public/images/cooking/hiiragi-nanban.webp",
+    "kind": "recipe",
+    "recipe": "nanban",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "nezumigochi",
+    "file": "public/images/cooking/nezumigochi-karaage.webp",
+    "kind": "recipe",
+    "recipe": "karaage",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "nezumigochi",
+    "file": "public/images/cooking/nezumigochi-tempura.webp",
+    "kind": "recipe",
+    "recipe": "tempura",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "nezumigochi",
+    "file": "public/images/cooking/nezumigochi-nitsuke.webp",
+    "kind": "recipe",
+    "recipe": "nitsuke",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "nezumigochi",
+    "file": "public/images/cooking/nezumigochi-nanban.webp",
+    "kind": "recipe",
+    "recipe": "nanban",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "anahaze",
+    "file": "public/images/cooking/anahaze-karaage.webp",
+    "kind": "recipe",
+    "recipe": "karaage",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "anahaze",
+    "file": "public/images/cooking/anahaze-nitsuke.webp",
+    "kind": "recipe",
+    "recipe": "nitsuke",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "anahaze",
+    "file": "public/images/cooking/anahaze-tempura.webp",
+    "kind": "recipe",
+    "recipe": "tempura",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "anahaze",
+    "file": "public/images/cooking/anahaze-ushiojiru.webp",
+    "kind": "recipe",
+    "recipe": "ushiojiru",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "kujime",
+    "file": "public/images/cooking/kujime-nitsuke.webp",
+    "kind": "recipe",
+    "recipe": "nitsuke",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "kujime",
+    "file": "public/images/cooking/kujime-karaage.webp",
+    "kind": "recipe",
+    "recipe": "karaage",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "kujime",
+    "file": "public/images/cooking/kujime-shioyaki.webp",
+    "kind": "recipe",
+    "recipe": "shioyaki",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "kujime",
+    "file": "public/images/cooking/kujime-ushiojiru.webp",
+    "kind": "recipe",
+    "recipe": "ushiojiru",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ginpo",
+    "file": "public/images/cooking/ginpo-tempura.webp",
+    "kind": "recipe",
+    "recipe": "tempura",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ginpo",
+    "file": "public/images/cooking/ginpo-karaage.webp",
+    "kind": "recipe",
+    "recipe": "karaage",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ginpo",
+    "file": "public/images/cooking/ginpo-teriyaki.webp",
+    "kind": "recipe",
+    "recipe": "teriyaki",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ginpo",
+    "file": "public/images/cooking/ginpo-nitsuke.webp",
+    "kind": "recipe",
+    "recipe": "nitsuke",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "yamatokamasu",
+    "file": "public/images/cooking/yamatokamasu-shioyaki.webp",
+    "kind": "recipe",
+    "recipe": "shioyaki",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "yamatokamasu",
+    "file": "public/images/cooking/yamatokamasu-fry.webp",
+    "kind": "recipe",
+    "recipe": "fry",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "yamatokamasu",
+    "file": "public/images/cooking/yamatokamasu-tempura.webp",
+    "kind": "recipe",
+    "recipe": "tempura",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "yamatokamasu",
+    "file": "public/images/cooking/yamatokamasu-meuniere.webp",
+    "kind": "recipe",
+    "recipe": "meuniere",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "tenjikudai",
+    "file": "public/images/cooking/tenjikudai-karaage.webp",
+    "kind": "recipe",
+    "recipe": "karaage",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "tenjikudai",
+    "file": "public/images/cooking/tenjikudai-nanban.webp",
+    "kind": "recipe",
+    "recipe": "nanban",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "tenjikudai",
+    "file": "public/images/cooking/tenjikudai-tempura.webp",
+    "kind": "recipe",
+    "recipe": "tempura",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "tenjikudai",
+    "file": "public/images/cooking/tenjikudai-nitsuke.webp",
+    "kind": "recipe",
+    "recipe": "nitsuke",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "tsumuburi",
+    "file": "public/images/cooking/tsumuburi-teriyaki.webp",
+    "kind": "recipe",
+    "recipe": "teriyaki",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "tsumuburi",
+    "file": "public/images/cooking/tsumuburi-tatsuta.webp",
+    "kind": "recipe",
+    "recipe": "tatsuta",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "tsumuburi",
+    "file": "public/images/cooking/tsumuburi-shioyaki.webp",
+    "kind": "recipe",
+    "recipe": "shioyaki",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "tsumuburi",
+    "file": "public/images/cooking/tsumuburi-misozuke.webp",
+    "kind": "recipe",
+    "recipe": "misozuke",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "meaji",
+    "file": "public/images/cooking/meaji-fry.webp",
+    "kind": "recipe",
+    "recipe": "fry",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "meaji",
+    "file": "public/images/cooking/meaji-shioyaki.webp",
+    "kind": "recipe",
+    "recipe": "shioyaki",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "meaji",
+    "file": "public/images/cooking/meaji-nanban.webp",
+    "kind": "recipe",
+    "recipe": "nanban",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "meaji",
+    "file": "public/images/cooking/meaji-nitsuke.webp",
+    "kind": "recipe",
+    "recipe": "nitsuke",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "oonibe",
+    "file": "public/images/cooking/oonibe-fry.webp",
+    "kind": "recipe",
+    "recipe": "fry",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "oonibe",
+    "file": "public/images/cooking/oonibe-meuniere.webp",
+    "kind": "recipe",
+    "recipe": "meuniere",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "oonibe",
+    "file": "public/images/cooking/oonibe-sakamushi.webp",
+    "kind": "recipe",
+    "recipe": "sakamushi",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "oonibe",
+    "file": "public/images/cooking/oonibe-nitsuke.webp",
+    "kind": "recipe",
+    "recipe": "nitsuke",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ibodai",
+    "file": "public/images/cooking/ibodai-shioyaki.webp",
+    "kind": "recipe",
+    "recipe": "shioyaki",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ibodai",
+    "file": "public/images/cooking/ibodai-nitsuke.webp",
+    "kind": "recipe",
+    "recipe": "nitsuke",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ibodai",
+    "file": "public/images/cooking/ibodai-meuniere.webp",
+    "kind": "recipe",
+    "recipe": "meuniere",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ibodai",
+    "file": "public/images/cooking/ibodai-fry.webp",
+    "kind": "recipe",
+    "recipe": "fry",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "chikamekintoki",
+    "file": "public/images/cooking/chikamekintoki-nitsuke.webp",
+    "kind": "recipe",
+    "recipe": "nitsuke",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "chikamekintoki",
+    "file": "public/images/cooking/chikamekintoki-sakamushi.webp",
+    "kind": "recipe",
+    "recipe": "sakamushi",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "chikamekintoki",
+    "file": "public/images/cooking/chikamekintoki-ushiojiru.webp",
+    "kind": "recipe",
+    "recipe": "ushiojiru",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "chikamekintoki",
+    "file": "public/images/cooking/chikamekintoki-karaage.webp",
+    "kind": "recipe",
+    "recipe": "karaage",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "yumekasago",
+    "file": "public/images/cooking/yumekasago-nitsuke.webp",
+    "kind": "recipe",
+    "recipe": "nitsuke",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "yumekasago",
+    "file": "public/images/cooking/yumekasago-shioyaki.webp",
+    "kind": "recipe",
+    "recipe": "shioyaki",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "yumekasago",
+    "file": "public/images/cooking/yumekasago-karaage.webp",
+    "kind": "recipe",
+    "recipe": "karaage",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "yumekasago",
+    "file": "public/images/cooking/yumekasago-ushiojiru.webp",
+    "kind": "recipe",
+    "recipe": "ushiojiru",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "akaisaki",
+    "file": "public/images/cooking/akaisaki-shioyaki.webp",
+    "kind": "recipe",
+    "recipe": "shioyaki",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "akaisaki",
+    "file": "public/images/cooking/akaisaki-nitsuke.webp",
+    "kind": "recipe",
+    "recipe": "nitsuke",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "akaisaki",
+    "file": "public/images/cooking/akaisaki-fry.webp",
+    "kind": "recipe",
+    "recipe": "fry",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "akaisaki",
+    "file": "public/images/cooking/akaisaki-meuniere.webp",
+    "kind": "recipe",
+    "recipe": "meuniere",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "namazu",
+    "file": "public/images/cooking/namazu-tempura.webp",
+    "kind": "recipe",
+    "recipe": "tempura",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "namazu",
+    "file": "public/images/cooking/namazu-kabayaki.webp",
+    "kind": "recipe",
+    "recipe": "kabayaki",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "namazu",
+    "file": "public/images/cooking/namazu-fry.webp",
+    "kind": "recipe",
+    "recipe": "fry",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "namazu",
+    "file": "public/images/cooking/namazu-tatsuta.webp",
+    "kind": "recipe",
+    "recipe": "tatsuta",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ugui",
+    "file": "public/images/cooking/ugui-kanroni.webp",
+    "kind": "recipe",
+    "recipe": "kanroni",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ugui",
+    "file": "public/images/cooking/ugui-tatsuta.webp",
+    "kind": "recipe",
+    "recipe": "tatsuta",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ugui",
+    "file": "public/images/cooking/ugui-nanban.webp",
+    "kind": "recipe",
+    "recipe": "nanban",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ugui",
+    "file": "public/images/cooking/ugui-misoni.webp",
+    "kind": "recipe",
+    "recipe": "misoni",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ginbuna",
+    "file": "public/images/cooking/ginbuna-kanroni.webp",
+    "kind": "recipe",
+    "recipe": "kanroni",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ginbuna",
+    "file": "public/images/cooking/ginbuna-misoni.webp",
+    "kind": "recipe",
+    "recipe": "misoni",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ginbuna",
+    "file": "public/images/cooking/ginbuna-tatsuta.webp",
+    "kind": "recipe",
+    "recipe": "tatsuta",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "ginbuna",
+    "file": "public/images/cooking/ginbuna-nanban.webp",
+    "kind": "recipe",
+    "recipe": "nanban",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "kawamutsu",
+    "file": "public/images/cooking/kawamutsu-karaage.webp",
+    "kind": "recipe",
+    "recipe": "karaage",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "kawamutsu",
+    "file": "public/images/cooking/kawamutsu-nanban.webp",
+    "kind": "recipe",
+    "recipe": "nanban",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "kawamutsu",
+    "file": "public/images/cooking/kawamutsu-kanroni.webp",
+    "kind": "recipe",
+    "recipe": "kanroni",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "kawamutsu",
+    "file": "public/images/cooking/kawamutsu-tempura.webp",
+    "kind": "recipe",
+    "recipe": "tempura",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "biwamasu",
+    "file": "public/images/cooking/biwamasu-shioyaki.webp",
+    "kind": "recipe",
+    "recipe": "shioyaki",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "biwamasu",
+    "file": "public/images/cooking/biwamasu-meuniere.webp",
+    "kind": "recipe",
+    "recipe": "meuniere",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "biwamasu",
+    "file": "public/images/cooking/biwamasu-takikomi.webp",
+    "kind": "recipe",
+    "recipe": "takikomi",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "biwamasu",
+    "file": "public/images/cooking/biwamasu-fry.webp",
+    "kind": "recipe",
+    "recipe": "fry",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "himemasu",
+    "file": "public/images/cooking/himemasu-shioyaki.webp",
+    "kind": "recipe",
+    "recipe": "shioyaki",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "himemasu",
+    "file": "public/images/cooking/himemasu-meuniere.webp",
+    "kind": "recipe",
+    "recipe": "meuniere",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "himemasu",
+    "file": "public/images/cooking/himemasu-fry.webp",
+    "kind": "recipe",
+    "recipe": "fry",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  },
+  {
+    "species": "himemasu",
+    "file": "public/images/cooking/himemasu-misozuke.webp",
+    "kind": "recipe",
+    "recipe": "misozuke",
+    "generation": "Original cooked-dish illustration for this species and recipe; generated 2026-09-25."
+  }
+]

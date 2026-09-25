@@ -2,6 +2,113 @@ export type MethodGearPick={slug:string;role:string;reason:string};
 export type MethodGearPlan={note:string;items:MethodGearPick[]};
 /** Editorial picks are also the source of reciprocal catalogue method links. */
 export const methodGearPlans:Record<string,MethodGearPlan>={
+
+  "namazu-topwater": {
+    "note": "ここでは取り込みと準備の小物を紹介します。専用ロッドと水面ルアーは本文の負荷・針仕様に合うものを別に選び、細い管理釣り場用タックルは代用しません。",
+    "items": [
+      {
+        "slug": "daiwa-4t8wkyo",
+        "role": "PEライン",
+        "reason": "竿とリールが対応する3〜4号を候補に、障害物や結束強度を確認。掲載代表仕様の細号数をそのまま選ばないでください。"
+      },
+      {
+        "slug": "daiwa-yz567lq",
+        "role": "取り込み用の網",
+        "reason": "魚の全長に合う枠と柄を選択。高い護岸では届く長さを事前確認してください。"
+      },
+      {
+        "slug": "daiwa-trk81yk",
+        "role": "針外し",
+        "reason": "口へ指を入れず針を外すための工具。針をつかめる先端サイズを選びます。"
+      },
+      {
+        "slug": "gamakatsu-gm2590",
+        "role": "ラインを切る",
+        "reason": "PEやリーダーの端糸を処理するハサミ。使った端糸は回収して持ち帰ります。"
+      },
+      {
+        "slug": "daiwa-5tof98i",
+        "role": "全長を確認する",
+        "reason": "持ち帰り判断や釣果記録用。魚は濡らした面で短時間に測り、規則に従って判断。"
+      },
+      {
+        "slug": "daiwa-v4zk56m",
+        "role": "小物をまとめる",
+        "reason": "予備の針・工具を船内で散らさず収納。針先を保護して入れます。"
+      }
+    ]
+  },
+  "lake-trolling": {
+    "note": "専用ロッド・リール・潜行器・ラインはガイド船の指定品またはレンタルを利用。海のジギング用具で代用せず、下記は持参する補助用品の候補です。",
+    "items": [
+      {
+        "slug": "daiwa-yz567lq",
+        "role": "取り込み用の網",
+        "reason": "魚の全長に合う枠と柄を選択。高い護岸では届く長さを事前確認してください。"
+      },
+      {
+        "slug": "daiwa-trk81yk",
+        "role": "針外し",
+        "reason": "口へ指を入れず針を外すための工具。針をつかめる先端サイズを選びます。"
+      },
+      {
+        "slug": "gamakatsu-gm2590",
+        "role": "ラインを切る",
+        "reason": "PEやリーダーの端糸を処理するハサミ。使った端糸は回収して持ち帰ります。"
+      },
+      {
+        "slug": "daiwa-5tof98i",
+        "role": "全長を確認する",
+        "reason": "持ち帰り判断や釣果記録用。魚は濡らした面で短時間に測り、規則に従って判断。"
+      },
+      {
+        "slug": "daiwa-v4zk56m",
+        "role": "小物をまとめる",
+        "reason": "予備の針・工具を船内で散らさず収納。針先を保護して入れます。"
+      },
+      {
+        "slug": "daiwa-2ya8o4q",
+        "role": "保冷用クーラー",
+        "reason": "少量の切り身・小型魚の持ち帰り用。大型魚を丸ごと入れる場合は内寸が足りません。"
+      }
+    ]
+  },
+  "himemasu-sabiki": {
+    "note": "専用仕掛けと柔らかい竿は湖の貸しボート店に確認。カウンター付きリールは指定糸の巻量とオモリ負荷に合わせます。",
+    "items": [
+      {
+        "slug": "shimano-a075f00003jfwpvqa3",
+        "role": "棚を記録するリール",
+        "reason": "カウンターで前に釣れた深さを再現。船店指定の道糸が収まる番手を選び、口切れしないドラグに調整します。"
+      },
+      {
+        "slug": "daiwa-yz567lq",
+        "role": "取り込み用の網",
+        "reason": "魚の全長に合う枠と柄を選択。高い護岸では届く長さを事前確認してください。"
+      },
+      {
+        "slug": "gamakatsu-uk8010",
+        "role": "小針を外す",
+        "reason": "小さな針を外す細身の工具。濡らした網の上で魚を支え、針先を指へ向けないよう扱います。"
+      },
+      {
+        "slug": "gamakatsu-gm2590",
+        "role": "ラインを切る",
+        "reason": "PEやリーダーの端糸を処理するハサミ。使った端糸は回収して持ち帰ります。"
+      },
+      {
+        "slug": "daiwa-5tof98i",
+        "role": "全長を確認する",
+        "reason": "持ち帰り判断や釣果記録用。魚は濡らした面で短時間に測り、規則に従って判断。"
+      },
+      {
+        "slug": "daiwa-2ya8o4q",
+        "role": "保冷用クーラー",
+        "reason": "少量の切り身・小型魚の持ち帰り用。大型魚を丸ごと入れる場合は内寸が足りません。"
+      }
+    ]
+  }
+,
   "sabiki": {
     "note": "足元で小アジを狙う親子釣行の候補です。竿・リールセットと短い仕掛けを軸に、手持ち品で足りる小物は買い足さなくて構いません。",
     "items": [
