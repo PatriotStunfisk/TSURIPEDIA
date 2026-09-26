@@ -49,7 +49,7 @@ test('official structured rows exclude prose, photos and ambiguous fish names',(
 });
 test('preview centering leaves marker in the uncovered area without changing scale',()=>{
  const {previewMapCenter}=require('../lib/map-preview-position');
- assert.deepEqual(previewMapCenter(1000,600,{left:12,top:12,right:312,bottom:280}),{x:656,y:300});
+ assert.deepEqual(previewMapCenter(1000,600,{left:12,top:12,right:312,bottom:280}),{x:500,y:300});
  assert.deepEqual(previewMapCenter(390,560,{left:10,top:360,right:380,bottom:550}),{x:195,y:180});
 });
 

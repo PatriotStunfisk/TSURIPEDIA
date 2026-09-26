@@ -17,7 +17,7 @@ const quickLinks=[
   {href:'/cooking',icon:'◇',label:'魚料理'},
   {href:'/quest',icon:'◈',label:'QUEST'},
   {href:'/catches',icon:'▤',label:'新着釣果'},
-  {href:'/weather',icon:'☀',label:'天気・潮汐'}
+  {href:'/weather',icon:'☀︎',label:'天気・潮汐'}
 ];
 
 export default function Home(){
