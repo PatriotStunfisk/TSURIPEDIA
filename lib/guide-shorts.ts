@@ -2,6 +2,7 @@ import {getGuide} from './all-guides';
 import {getFishProfile} from './fish-registry';
 import {getFishImage} from './fish-images';
 import {siteUrl} from './site-url';
+import {motionShortEdits} from './guide-shorts-motion';
 
 /** Short-form edits reference the GUIDE; fish, article and image data stay in their registries. */
 export const shortEdits = [
@@ -25,7 +26,7 @@ export function shortUrl(slug:string,platform:ShortPlatform,id:string){
  url.searchParams.set('utm_campaign','guide-shorts');url.searchParams.set('utm_content',id);
  return url.toString();
 }
-export function getShortPlans(){return shortEdits.map(edit=>{
+export function getShortPlans(){const cards=shortEdits.map(edit=>{
  const guide=getGuide(edit.slug);if(!guide)throw new Error(`Unknown GUIDE: ${edit.slug}`);
  const source=JSON.stringify(guide);for(const anchor of edit.anchors)if(!source.includes(anchor))throw new Error(`GUIDE changed; recheck ${edit.slug}: ${anchor}`);
  const fishSlug=guide.related.find(l=>l.href.startsWith('/fish/'))?.href.split('/')[2];
@@ -33,6 +34,18 @@ export function getShortPlans(){return shortEdits.map(edit=>{
  const image=(fish?getFishImage(fish):undefined)??'/social/tackle-illustration.svg';
  const id=`${edit.slug}--tips-v1`;
  const scenes=[{label:'釣りの疑問',text:edit.hook,seconds:4},...edit.tips.map((text,i)=>({label:`POINT ${i+1}`,text,seconds:7})),{label:'続きはUOLINK',text:'詳しい解説は\nウオリンクで検索',seconds:5}];
- return {id,guideSlug:edit.slug,guideTitle:guide.title,guideUrl:new URL(`/guide/${guide.slug}`,siteUrl).toString(),image,sourceAnchors:edit.anchors,scenes,duration:scenes.reduce((n,s)=>n+s.seconds,0),
+ return {id,renderStyle:'cards-v1',guideSlug:edit.slug,guideTitle:guide.title,guideUrl:new URL(`/guide/${guide.slug}`,siteUrl).toString(),image,sourceAnchors:edit.anchors,scenes,duration:scenes.reduce((n,s)=>n+s.seconds,0),
   platforms:Object.fromEntries((['youtube','tiktok'] as const).map(platform=>[platform,{title:edit.hook.replace(/\n/g,''),url:shortUrl(guide.slug,platform,id),caption:`${edit.hook.replace(/\n/g,'')}\n${edit.tips.map((tip,i)=>`${i+1}. ${tip.replace(/\n/g,'')}`).join('\n')}\n\n詳しい手順：UOLINK「${guide.query}」で検索\n${shortUrl(guide.slug,platform,id)}\n#釣り #釣り初心者 #UOLINK`,status:'draft'}]))};
- });}
+ });
+ const motion=motionShortEdits.map(edit=>{
+  const base=cards.find(p=>p.guideSlug===edit.slug)!;
+  const id=`${edit.slug}--motion-v2`;
+  const scenes=[{label:'3つで見直す',text:edit.hook,caption:edit.promise,seconds:2,phase:'hook',item:0},
+   ...edit.items.flatMap((item,i)=>[{label:`NG ${i+1} / 3`,text:item.ng,caption:item.ngCaption,seconds:3,phase:'ng',item:i},{label:`こう直す ${i+1} / 3`,text:item.fix,caption:item.fixCaption,seconds:3,phase:'fix',item:i}]),
+   {label:'次の釣行で試す',text:edit.recap,caption:'3つを覚えて、現場で見直す',seconds:3,phase:'recap',item:2},
+   {label:'UOLINK',text:'詳しい手順は\nウオリンクで検索',caption:'仕掛け・釣り場・道具までつながる',seconds:2,phase:'cta',item:2}];
+  return {...base,id,renderStyle:'motion-v2',topic:edit.topic,music:{id:'uolink-pulse-120-v1',bpm:120,origin:'locally-synthesized-original'},scenes,duration:scenes.reduce((n,s)=>n+s.seconds,0),
+   platforms:Object.fromEntries((['youtube','tiktok'] as const).map(platform=>[platform,{title:edit.hook.replace(/\n/g,''),url:shortUrl(edit.slug,platform,id),caption:`${edit.hook.replace(/\n/g,'')}\n${edit.items.map((item,i)=>`${i+1}. ${item.ng.replace(/\n/g,'')} → ${item.fix.replace(/\n/g,'')}`).join('\n')}\n\n詳しい手順はウオリンクで検索\n${shortUrl(edit.slug,platform,id)}\n#釣り #釣り初心者 #UOLINK`,status:'draft'}]))};
+ });
+ return [...motion,...cards];
+}

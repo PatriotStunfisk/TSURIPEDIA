@@ -1,6 +1,10 @@
 const crypto=require('node:crypto');
 const platforms=['youtube','tiktok'];
-function fingerprint(plan){return crypto.createHash('sha256').update(JSON.stringify(plan)).digest('hex');}
+function fingerprint(plan){
+ // Explicitly naming the legacy renderer must not invalidate past publication records.
+ const value=plan.renderStyle==='cards-v1'?Object.fromEntries(Object.entries(plan).filter(([key])=>key!=='renderStyle')):plan;
+ return crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex');
+}
 function transition(previous,action,url){
  const status=previous?.status??'draft';
  if(action==='reviewed'&&status==='draft')return {status:'reviewed'};
