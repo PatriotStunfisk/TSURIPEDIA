@@ -14,6 +14,7 @@ export default async function GuidePage({searchParams}:{searchParams:Promise<Gui
  const methods=Object.values(methodDetails).filter(m=>allGuides.some(g=>g.methodTags.includes(m.slug)));
  return <div className="section pageTop">
   <div className="pageHero"><span>UOLINK GUIDE</span><h1>釣りガイド</h1><p>釣り方を最初から学ぶ。今の疑問をすぐ解決する。どちらもここから探せます。</p></div>
+  <div className="chips"><Link href="/guide?q=%E8%B3%BC%E5%85%A5%E5%89%8D%E3%81%AE%E9%81%93%E5%85%B7%E9%81%B8%E3%81%B3">購入前の道具選び →</Link></div>
   <form action="/guide" className={s.search}>
    <label className={s.searchText}>知りたいこと<input name="q" defaultValue={params.q??''} placeholder="アジ・棚・仕掛け・結び目など"/></label>
    <label>並び順<select name="sort" defaultValue={params.sort??'recommended'}>{Object.entries(guideSorts).map(([id,label])=><option key={id} value={id}>{label}</option>)}</select></label>

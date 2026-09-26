@@ -1,13 +1,13 @@
 // Static crawler-friendly JPEG cards generated from the same public registries.
 const fs=require('fs'),path=require('path'),Module=require('module'),ts=require('typescript'),crypto=require('crypto');
 const root=path.resolve(__dirname,'..'),resolve=Module._resolveFilename;Module._resolveFilename=function(s,...a){return resolve.call(this,s.startsWith('@/')?path.join(root,s.slice(2)):s,...a)};
-require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,f);
+require.extensions['.ts']=(m,f)=>m._compile(ts.transpileModule(fs.readFileSync(f,'utf8'),{compilerOptions:{esModuleInterop:true,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText,f);
 const sharp=require(process.env.SHARP_MODULE||'sharp'),{ImageResponse}=require('next/og'),{createElement:h}=require('react');
 const {fishCatalog}=require('../lib/fish-registry.ts'),{getFishImage}=require('../lib/fish-images.ts'),{allGuides}=require('../lib/all-guides.ts'),{fishingMapEntries}=require('../lib/fishing-map-data.ts');
 async function main(){const entries=[
  ['/', '魚から、釣りへつながる','UOLINK',getFishImage(fishCatalog[0])],['/fish','釣れた魚を、もっと知る','魚図鑑',getFishImage(fishCatalog[1])],['/guide','釣りの疑問を、実釣の力に','GUIDE / QUICK GUIDE',getFishImage(fishCatalog[2])],['/spots','全国の釣り場と船宿を探す','UOLINK MAP'],['/cooking','釣った後の食卓まで','魚料理',getFishImage(fishCatalog[1])],['/identify','この魚なに？','写真から魚の候補を調べる',getFishImage(fishCatalog[1])],
  ...fishCatalog.flatMap(f=>[[`/fish/${f.slug}`,f.name,'特徴・見分け方・釣り方',getFishImage(f)],...(f.cooking?[[`/cooking/${f.slug}`,`${f.name}の料理`,'下処理・材料・レシピ',getFishImage(f)],...f.cooking.recipes.map(r=>[`/cooking/${f.slug}/${r.slug}`,`${f.name}の${r.name}`,'UOLINK RECIPE',r.image??getFishImage(f)])]:[])]),
- ...allGuides.map(g=>[`/guide/${g.slug}`,g.title,g.articleType,getFishImage(fishCatalog.find(f=>g.fishTags.includes(f.slug))??fishCatalog[0])]),
+ ...allGuides.map(g=>[`/guide/${g.slug}`,g.title,g.buying?'購入前の道具選び':g.articleType,g.buying?undefined:getFishImage(fishCatalog.find(f=>g.fishTags.includes(f.slug))??fishCatalog[0])]),
  ...fishingMapEntries.map(s=>[`/spots/${s.slug}`,s.name,`${s.prefecture??s.area} · ${s.type==='boat'?'釣船・船宿':'釣り場ガイド'}`])];
  const chars=[...new Set(Array.from('UOLINKuo_link魚から釣りへつながる'+entries.map(e=>e[1]+e[2]).join('')))].sort().join('');const cache=path.join(root,'.next/cache/social-font');fs.mkdirSync(cache,{recursive:true});const fontFile=path.join(cache,crypto.createHash('sha256').update(chars).digest('hex')+'.ttf');
  if(!fs.existsSync(fontFile)){const css=await fetch('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&text='+encodeURIComponent(chars));if(!css.ok)throw Error('Font CSS '+css.status);const url=(await css.text()).match(/src: url\(([^)]+)\)/)?.[1];if(!url)throw Error('Font missing');const r=await fetch(url);if(!r.ok)throw Error('Font failed');fs.writeFileSync(fontFile,Buffer.from(await r.arrayBuffer()));}
