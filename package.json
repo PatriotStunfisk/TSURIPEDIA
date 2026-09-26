@@ -10,7 +10,9 @@
     "test:content": "node --test tests/content-registry.test.cjs",
     "test:quest": "node --test tests/quest.test.cjs",
     "test": "node --test tests/*.test.cjs",
-    "social:export": "node scripts/export-social.cjs"
+    "social:export": "node scripts/export-social.cjs",
+    "shorts:export": "node scripts/export-shorts.cjs export",
+    "shorts:render": "node scripts/export-shorts.cjs render"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.7",
