@@ -16,7 +16,7 @@ test('nearby ranking is stable, never mutates catalog and puts missing positions
 });
 test('affiliate links point to verified product IDs with the authorized store tag',()=>{
  assert.equal(new Set(affiliateProducts.map(p=>p.asin)).size,affiliateProducts.length);
- for(const p of affiliateProducts){const u=new URL(amazonProductUrl(p.asin));assert.equal(u.hostname,'www.amazon.co.jp');assert.equal(u.protocol,'https:');assert.equal(u.searchParams.get('tag'),'uolink-22');assert.equal(u.pathname,`/dp/${p.asin}/ref=nosim`);assert.ok(p.reason&&p.check&&p.checkedAt);}
+ for(const p of affiliateProducts){const u=new URL(amazonProductUrl(p.asin));assert.equal(u.hostname,'www.amazon.co.jp');assert.equal(u.protocol,'https:');assert.equal(u.searchParams.get('tag'),'uolink.jp-22');assert.equal(u.pathname,`/dp/${p.asin}/ref=nosim`);assert.ok(p.reason&&p.check&&p.checkedAt);}
  assert.throws(()=>amazonProductUrl('../bad'));
  assert.ok(productsForMethods(['sabiki']).length);assert.deepEqual(productsForMethods(['ayu-tomozuri']),[]);
  assert.equal(productsForMethods(['sabiki','eging']).filter(p=>p.asin==='B0DCKBP14Z').length,1);
@@ -32,5 +32,5 @@ test('legacy QUEST records merge without losing catches rewards or best size',()
 });
 test('Amazon category searches encode terms and retain the public tracking ID',()=>{
  const {amazonSearchUrl}=require('../lib/affiliate-products.ts');const url=new URL(amazonSearchUrl('PE 0.8号 & リーダー'));
- assert.equal(url.hostname,'www.amazon.co.jp');assert.equal(url.searchParams.get('k'),'PE 0.8号 & リーダー');assert.equal(url.searchParams.get('tag'),'uolink-22');
+ assert.equal(url.hostname,'www.amazon.co.jp');assert.equal(url.searchParams.get('k'),'PE 0.8号 & リーダー');assert.equal(url.searchParams.get('tag'),'uolink.jp-22');
 });

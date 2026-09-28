@@ -1,5 +1,5 @@
 // Public tracking ID only. No account credentials or product API secrets belong here.
-export const amazonStoreId='uolink-22';
+export const amazonStoreId='uolink.jp-22';
 export const affiliateDisclosure='Amazonのアソシエイトとして、UOLINKは適格販売により収入を得ています。';
 export type AffiliateProduct={asin:string;name:string;methods:readonly string[];reason:string;check:string;checkedAt:string};
 // Selected variants checked on Amazon.co.jp; prices, ratings and availability are intentionally not copied.

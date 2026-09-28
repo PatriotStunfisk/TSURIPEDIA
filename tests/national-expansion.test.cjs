@@ -57,7 +57,7 @@ test('nationwide filters compose without showing closed or unverified matches',(
 test('tackle data handles branch rigs, float leader position and central sponsored searches',()=>{
  for(const slug of ['sabiki','eging','ajing','mebaring','tai-rubber','jigging','shore-jigging','nomase','tachiuo-tenya','kawahagi','douzuki','ana','choinage','fukase','hitotsu-tenya','sayori-uki','ishidai-bottom','nage','amadai-tenbin','deepsea-douzuki','medai-komase']){
   const d=getMethodTackle(slug);assert.ok(d.rig,slug);assert.equal(d.specs.length,6);
-  for(const spec of d.specs){assert.ok(spec.value);assert.equal(new URL(spec.shop).searchParams.get('tag'),'uolink-22')}
+  for(const spec of d.specs){assert.ok(spec.value);assert.equal(new URL(spec.shop).searchParams.get('tag'),'uolink.jp-22')}
  }
  assert.ok(getMethodTackle('douzuki').rig.parts.some(p=>p.branch));assert.equal(getMethodTackle('douzuki').rig.parts.at(-1).icon,'weight');
  const float=getMethodTackle('fukase').rig.parts;assert.ok(float.findIndex(p=>p.icon==='float')<float.findIndex(p=>p.label.includes('ハリス')));

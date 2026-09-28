@@ -44,7 +44,7 @@ test('buying routes retain valid fish/method references and nonempty gear choice
   }
   const amazon=new URL(amazonSearchUrl(g.buying.query));
   assert.equal(amazon.host,'www.amazon.co.jp');
-  assert.equal(amazon.searchParams.get('tag'),'uolink-22');
+  assert.equal(amazon.searchParams.get('tag'),'uolink.jp-22');
   assert.equal(amazon.searchParams.get('k'),g.buying.query);
  }
 });
