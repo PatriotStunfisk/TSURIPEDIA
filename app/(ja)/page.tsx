@@ -60,7 +60,7 @@ export default function Home(){
 
     <section className={s.section}>
       <div className={s.head}><div><div className={s.eyebrow}>SEARCH GUIDE</div><h2>釣りに行くための実践GUIDE</h2></div><a href="/guide">釣りガイドをすべて見る →</a></div>
-      <p>{month}月の釣行準備に役立つ編集セレクト。時期は地域・水温で前後するため、直近の釣果と現地ルールを確認してください。</p><div className={s.guideGrid}>{guidePicks.map(a=><a key={a.slug} href={`/guide/${a.slug}`} className={s.guideCard}><small>{a.query}</small><h3>{a.title}</h3><p>{a.answer}</p><b>答えを見る →</b></a>)}</div>
+      <p>{month}月の釣行準備に役立つ編集セレクト。時期は地域・水温で前後するため、直近の釣果と現地ルールを確認してください。</p>{month===10&&<p><a href="/guide/osakabay-october-fish">大阪湾の10月の釣行プランを見る →</a><br/>サビキ・タチウオ・青物から、魚と時間帯に合わせて釣り方を選びましょう。</p>}<div className={s.guideGrid}>{guidePicks.map(a=><a key={a.slug} href={`/guide/${a.slug}`} className={s.guideCard}><small>{a.query}</small><h3>{a.title}</h3><p>{a.answer}</p><b>答えを見る →</b></a>)}</div>
     </section>
 
     <section className={`${s.section} ${s.flow}`}>
