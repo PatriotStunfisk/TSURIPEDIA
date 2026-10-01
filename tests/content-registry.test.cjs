@@ -5,6 +5,7 @@ const path=require('node:path');
 const Module=require('node:module');
 const ts=require('typescript');
 const root=path.resolve(__dirname,'..');
+const {collectModelFiles}=require('../scripts/generate-model-manifest.cjs');
 
 // Load the actual TypeScript data modules without a second set of test fixtures.
 const resolve=Module._resolveFilename;
@@ -187,11 +188,11 @@ test('a missing model stays 2D and a subsequently added model is discovered',()=
  const os=require('node:os');const temp=fs.mkdtempSync(path.join(os.tmpdir(),'uolink-model-'));
  const {getSpeciesModelSrc}=require('../lib/fish-media.ts');
  try{
-  assert.equal(getSpeciesModelSrc('test-model',temp),undefined);
+  assert.equal(getSpeciesModelSrc('test-model',collectModelFiles(temp)),undefined);
   fs.mkdirSync(path.join(temp,'models'));fs.writeFileSync(path.join(temp,'models/test-model.glb'),'test-only');
-  assert.equal(getSpeciesModelSrc('test-model',temp),'/models/test-model.glb');
-  assert.equal(getSpeciesModelSrc('../test-model',temp),undefined);
-  fs.writeFileSync(path.join(temp,'models/Upper.glb'),'test-only');assert.equal(getSpeciesModelSrc('upper',temp),undefined);
+  assert.equal(getSpeciesModelSrc('test-model',collectModelFiles(temp)),'/models/test-model.glb');
+  assert.equal(getSpeciesModelSrc('../test-model',collectModelFiles(temp)),undefined);
+  fs.writeFileSync(path.join(temp,'models/Upper.glb'),'test-only');assert.equal(getSpeciesModelSrc('upper',collectModelFiles(temp)),undefined);
  }finally{fs.rmSync(temp,{recursive:true,force:true})}
 });
 
@@ -338,7 +339,7 @@ test('GUIDE related links resolve to public routes, including historical fish al
 
 test('uploaded model spelling aliases preserve canonical fish slugs',()=>{
  const fs=require('node:fs'),os=require('node:os'),path=require('node:path');const dir=fs.mkdtempSync(path.join(os.tmpdir(),'uolink-model-alias-'));
- try{fs.mkdirSync(path.join(dir,'models'));for(const [slug,file] of [['akakamas','akakamasu'],['katakuchi','katakuchiiwashi'],['urume','urumeiwashi']]){fs.writeFileSync(path.join(dir,'models',`${file}.glb`),'fixture');assert.equal(require('../lib/fish-media.ts').getSpeciesModelSrc(slug,dir),`/models/${file}.glb`);}}
+ try{fs.mkdirSync(path.join(dir,'models'));for(const [slug,file] of [['akakamas','akakamasu'],['katakuchi','katakuchiiwashi'],['urume','urumeiwashi']]){fs.writeFileSync(path.join(dir,'models',`${file}.glb`),'fixture');assert.equal(require('../lib/fish-media.ts').getSpeciesModelSrc(slug,collectModelFiles(dir)),`/models/${file}.glb`);}}
  finally{fs.rmSync(dir,{recursive:true,force:true});}
 });
 

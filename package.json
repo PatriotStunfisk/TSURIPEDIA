@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node scripts/generate-model-manifest.cjs && next dev",
+    "build": "node scripts/generate-model-manifest.cjs && next build",
+    "models:manifest": "node scripts/generate-model-manifest.cjs",
     "start": "next start",
     "lint": "eslint .",
     "test:content": "node --test tests/content-registry.test.cjs",

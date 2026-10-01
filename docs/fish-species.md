@@ -58,6 +58,7 @@
 
 - `media.image` に実在する図鑑画像のURLを登録。図鑑一覧・トップ・詳細に共通で反映します。
 - `public/models/<slug>.glb` が存在すると、次のbuildで共通の2D/3D切替が有効になります。モデルがないときは2Dのみです。
+- `dev` / `build` の開始時に `scripts/generate-model-manifest.cjs` がモデルのファイル名だけを `lib/generated/model-files.json` に生成します。画像やモデル本体をFunctionへ同梱しないため、ページから `public` をファイルシステムで走査しないでください。モデルを追加・削除した際は `pnpm models:manifest` でも更新でき、生成JSONを変更と一緒にコミットします。起動済みのdevでは再生成または再起動が必要です。公開URL・モデルの別名・既知の不適合isakiモデルを除外する判定は維持します。
 - `launch` に見分け方等、`cooking` に下処理と原則4レシピを登録します。画像は原則 `public/images/fish/<slug>-<recipe>.png`。
 - 新しい料理カードのための `tableGuide` は不要です。既存の編集用カードでも名前・画像はレシピを正として反映し、説明文だけ保持します。
 - `base.methodSlugs` と必要に応じて `base.guideSlugs`・`base.relatedSlugs` で既存のページへ接続。存在しないリンクは追加しません。
