@@ -8,3 +8,5 @@ node_modules/
 
 # Local video deliverables and publication ledger; never part of the web bundle.
 /artifacts/shorts/
+
+.vercel/

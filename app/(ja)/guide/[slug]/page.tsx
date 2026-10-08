@@ -1,3 +1,4 @@
+import ArticleAd from '@/components/ArticleAd';
 import GuideBuyingLinks from '@/components/GuideBuyingLinks';
 import NextReading from '@/components/NextReading';
 import {siteUrl as base} from '@/lib/site-url';
@@ -57,6 +58,7 @@ export default async function GuideArticlePage({params}:{params:Promise<{slug:st
   <section className="factsGrid"><article><span>この記事で分かること</span><b>{a.query}</b></article><article><span>カテゴリ</span><b>{guideTopics[a.topic]}</b></article><article><span>読む目安</span><b>約{a.readingMinutes}分</b></article><article><span>UOLINK</span><b>釣行前の疑問解決</b></article></section>
   <nav style={{margin:'20px 0 0',padding:'18px 20px',borderRadius:14,background:'#f4f8fa'}}><b style={{display:'block',marginBottom:8}}>この記事のポイント</b><div style={{display:'flex',gap:10,flexWrap:'wrap'}}>{a.sections.map((s,i)=><a key={s.heading} href={`#p${i+1}`} style={{fontSize:12,fontWeight:800,color:'#087bc4'}}>0{i+1} {s.heading}</a>)}</div></nav>
   <div style={{display:'grid',gap:18,marginTop:28}}>{a.sections.map((section,index)=><GuideSection key={section.heading} section={section} index={index}/>)}</div>
+  <ArticleAd key={slug}/>
   {a.buying&&<GuideBuyingLinks buying={a.buying}/>}
   {advice&&!a.featured&&a.articleType==='GUIDE'&&<section style={{margin:'20px 0 0',padding:'24px',borderRadius:18,background:'#fff8e8',border:'1px solid #f0ddb1'}}><span style={{fontSize:12,fontWeight:900,color:'#9a6b00'}}>PRACTICAL NOTE</span><h2 style={{margin:'6px 0 10px'}}>{advice.title}</h2><p style={{lineHeight:1.9}}>{advice.body}</p><div style={{display:'grid',gap:8}}>{advice.points.map(p=><div key={p} style={{padding:'10px 12px',background:'#fff',borderRadius:10,fontWeight:800}}>・{p}</div>)}</div></section>}
   {a.sources?.length&&<section className="detailGrid"><article><h2>参考・確認先</h2><p>確認日：{a.verifiedAt}。製品仕様・利用条件は各案内元の最新情報をご確認ください。</p>{a.sources.map(source=><p key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a></p>)}</article></section>}

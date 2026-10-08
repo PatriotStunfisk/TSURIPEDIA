@@ -6,6 +6,7 @@ import '../globals.css';
 import Header from '@/components/Header';import Footer from '@/components/Footer';
 
 export const metadata:Metadata={
+  other:{'google-adsense-account':'ca-pub-9276686549248163'},
   ...pageSharing('/','UOLINK｜魚から、釣りへつながる','魚図鑑・釣り方・釣り場・料理・釣具をつなぐ釣り総合ガイド。'),
   metadataBase:new URL(siteUrl),
   title:{default:'UOLINK（ウオリンク）｜魚図鑑・釣り方・釣り場・釣具',template:'%s｜UOLINK（ウオリンク）'},

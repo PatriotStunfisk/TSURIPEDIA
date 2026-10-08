@@ -1,3 +1,4 @@
+import {purchaseCompatibilityGuides} from './guide-articles-purchase-compatibility';
 import {buyingGuides} from './guide-articles-buying';
 import {species190Guides} from './guide-articles-species-190';
 import {species168Guides} from './guide-articles-species-168';
@@ -48,6 +49,7 @@ import {extraGuideArticles6} from '@/lib/guide-articles-extra6';
 import {extraGuideArticles7} from '@/lib/guide-articles-extra7';
 
 const sourceGuides=[
+ ...purchaseCompatibilityGuides,
  ...buyingGuides,
  ...species190Guides,...species168Guides,...species132Guides,
  ...species122Guides,

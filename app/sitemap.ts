@@ -13,6 +13,7 @@ import {cookingFish} from '@/lib/cooking-data';
 export default function sitemap():MetadataRoute.Sitemap{
   const now=new Date();
   const staticPages=[
+    {path:'/privacy',priority:.2,changeFrequency:'yearly' as const},
     {path:'',priority:1,changeFrequency:'weekly' as const},
     {path:'/identify',priority:.7,changeFrequency:'monthly' as const},
     {path:'/fish',priority:.95,changeFrequency:'weekly' as const},
