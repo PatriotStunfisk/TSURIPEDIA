@@ -58,7 +58,7 @@ export default defineFishSpecies({
     related: ['チダイ','キダイ','クロダイ'],
     methodLinks: [
       {label:'タイラバ',href:'/methods/tai-rubber'},
-      {label:'ひとつテンヤ',href:'/methods'},
+      {label:'ひとつテンヤ',href:'/methods/hitotsu-tenya'},
       {label:'コマセ釣り',href:'/methods'}
     ],
     spotFocus: '明石・瀬戸内・和歌山'

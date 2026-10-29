@@ -57,8 +57,8 @@ export default defineFishSpecies({
     related: ['サワラ','カマス','アナゴ'],
     methodLinks: [
       {label:'船タチウオテンヤ',href:'/methods/tachiuo-tenya'},
-      {label:'ジギング',href:'/methods'},
-      {label:'ウキ釣り',href:'/methods'}
+      {label:'ジギング',href:'/methods/jigging'},
+      {label:'ウキ釣り',href:'/methods/uki'}
     ],
     spotFocus: '大阪湾・明石・和歌山の船釣り'
   },

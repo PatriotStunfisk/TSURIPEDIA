@@ -79,7 +79,7 @@ test('one base fish entry supplies the registry, sitemap and shared-method links
   }finally{fish.pop();for(const name of modules)delete require.cache[require.resolve(name)];}
 });
 
-// Migration snapshots preserve original recipe text; additive process illustrations are tested separately.
+// Migration snapshots preserve original recipe text; additive process illustrations and editorial details are tested separately.
 // Migration snapshots cover pre-existing species only; new species need no edits here.
 const crypto=require('node:crypto');
 const stable=value=>Array.isArray(value)?value.map(stable):value&&typeof value==='object'
@@ -102,7 +102,7 @@ const migratedSnapshots={
   details:Object.fromEntries(Object.entries({...details,hamachi:archivedHamachi.detail,...(archivedGashira.detail?{gashira:archivedGashira.detail}:{})}).filter(([slug])=>originalFish.includes(slug)&&!['anago','isaki'].includes(slug))),
   launch:Object.fromEntries(featuredFish.map(slug=>[slug,featured.launchFish[slug]])),
   launchSlugs:featured.launchFishSlugs.filter(slug=>featuredFish.includes(slug)),
-  cooking:cookingFish.filter(f=>f.slug==='saba').map(({prepImages,...f})=>({...f,recipes:f.recipes.map(({preparation,stepImages,...recipe})=>recipe)})),
+  cooking:cookingFish.filter(f=>f.slug==='saba').map(({prepImages,...f})=>({...f,recipes:f.recipes.map(({preparation,stepImages,detail,...recipe})=>recipe)})),
   tableGuides:Object.fromEntries(tableFish.map(slug=>[slug,registry.getFishProfile(slug).tableGuide])),
 };
 const originalDigests={
@@ -110,7 +110,8 @@ const originalDigests={
   fish:'a395b1040d0526313d1f07a961d8109059d48deb8e2984809ea4ee22e9635d33',
   // 2026-09-20: add the common フッコ alias to スズキ for official catch matching.
   details:'7a107c9cef5d1170a358217eb67c5fc2394e86cfbc0bd4ac4e43a6abe1a02fa1',
-  launch:'035a14df86692faa3770972f5dcf4c622e89955ba3aa37026b8a455775640721',
+  // 2026-10-29: ten existing method labels now open their registered detail pages.
+  launch:'0581fbbbae652b2ff6e1bf0dd434973232c123cf73c417ccfc1af7b84bf44203',
   launchSlugs:'109affa8f8a322f03f9af2a53acd6001574169cdd039aa6e7f101516fab0e706',
   cooking:'9b06856019b55b157bd735946e563667983c39d114fe5181a7247822b2f0302f',
   tableGuides:'73ec5e849118895d164dfc559bcc5f4bd4d2d60e30d1ffab36bc252dd2db4924',
@@ -201,7 +202,7 @@ test('editing a recipe identity updates editorial cards without duplicate edits'
  const card=getSpeciesTableGuide(species).dishes[0];assert.equal(card.name,'new name');assert.equal(card.src,'/new.png');assert.equal(card.desc,'editorial description');
 });
 
-test('the established seven species retain all user-authored recipes',()=>assert.equal(digest(cookingFish.filter(f=>featuredFish.includes(f.slug)).map(({prepImages,...f})=>({...f,recipes:f.recipes.map(({preparation,stepImages,...recipe})=>recipe)}))),'a38dc13f0b5bb83190d62d7b3a22799f5490d37cfc8c0cccdf9560aab8ac8506'));
+test('the established seven species retain all user-authored recipes',()=>assert.equal(digest(cookingFish.filter(f=>featuredFish.includes(f.slug)).map(({prepImages,...f})=>({...f,recipes:f.recipes.map(({preparation,stepImages,detail,...recipe})=>recipe)}))),'a38dc13f0b5bb83190d62d7b3a22799f5490d37cfc8c0cccdf9560aab8ac8506'));
 
 
 test('new full profiles keep four original recipe assets, guides and method routes',()=>{
@@ -437,4 +438,12 @@ test('148-species expansion keeps hazardous fish out of home cooking and connect
  for(const slug of edible){const f=getFishSpecies(slug);assert.equal(f.representativeRecipes.length,4);assert.equal(f.cooking.recipes.length,4);for(const recipe of f.cooking.recipes){assert.ok(fs.existsSync(path.join(root,'public',recipe.image)),recipe.image);assert.ok(paths.has('/cooking/'+slug+'/'+recipe.slug));}}
  assert.notEqual(getFishSpecies('onikasago').base.scientific,getFishSpecies('izukasago').base.scientific);
  assert.equal(registry.getFishByName('白鮭').slug,'sake');assert.equal(registry.getFishByName('銀鮭').slug,'ginzake');
+});
+
+
+test('featured fish method links resolve to registered method detail routes',()=>{
+ for(const slug of featuredFish)for(const link of featured.launchFish[slug].methodLinks){
+  if(link.href==='/methods')continue; // No dedicated madai komase article exists yet.
+  assert.ok(methodDetails[link.href.replace('/methods/','')],`${slug}: ${link.href}`);
+ }
 });

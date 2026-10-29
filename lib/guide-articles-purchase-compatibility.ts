@@ -6,7 +6,7 @@ export const purchaseCompatibilityGuides:GuideArticle[]=[
   query:'電動リール バッテリー 船電源 レンタル 選び方 電圧',category:'道具の適合・比較',
   summary:'船電源があればバッテリーは不要とは限らない。電圧・端子・釣行頻度を比較して、購入前に確認する順番を整理する。',
   answer:'初回は船宿に電源設備と貸しバッテリーを確認する。持参品を買う場合は、容量より先にリールの指定電圧・対応電源・コードの適合を合わせる。端子がつながるだけでは使用可能とは判断できない。',
-  inheritContext:false,editorial:{articleType:'QUICK GUIDE',topic:'tackle',gearTags:['reel','tools'],parentGuide:'tachiuo-tenya-reel-choice'},
+  inheritContext:false,editorial:{articleType:'QUICK GUIDE',topic:'tackle',gearTags:['reel','tools'],parentGuide:'tachiuo-tenya-action'},
   buying:{kind:'tool',method:'tachiuo-tenya',query:'電動リール 専用 バッテリー'},
   verifiedAt:'2026-10-08',sources:[{label:'シマノ：電動リールQ&A',url:'https://fish.shimano.com/ja-JP/content/special_contents/dendo-reel/qa.html'}],
   sections:[
