@@ -41,7 +41,7 @@ export default defineFishSpecies({
     identify: ['尾の付け根に硬いゼイゴが並ぶ','体側に黄色味のある線が見えることがある','胸びれが比較的長い','細身でよく泳ぐ回遊魚らしい体型'],
     imageNotes: ['全身：ゼイゴと体側線を確認','尾部：マアジ特有のゼイゴを拡大','生息：港湾から沖の中層を群れで回遊','食味：刺身・塩焼き・フライ・なめろうまで万能'],
     related: ['マサバ','マイワシ','メバル'],
-    methodLinks: [{label:'サビキ釣り',href:'/methods/sabiki'},{label:'アジング',href:'/methods'},{label:'船の胴突き',href:'/methods'}],
+    methodLinks: [{label:'サビキ釣り',href:'/methods/sabiki'},{label:'アジング',href:'/methods/ajing'},{label:'船の胴突き',href:'/methods/douzuki'}],
     spotFocus: '大阪湾・和歌山・全国の港'
   },
   cooking: {
